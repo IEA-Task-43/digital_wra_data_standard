@@ -1,4 +1,4 @@
-name: Deploy Form App on GitHub Pages
+name: Deploy Form App to GitHub Pages
 
 on:
   push:
