@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/jsonforms-react-seed/static/css/main.0e04eb83.chunk.css",
+    "main.js": "/jsonforms-react-seed/static/js/main.25137378.chunk.js",
+    "main.js.map": "/jsonforms-react-seed/static/js/main.25137378.chunk.js.map",
+    "runtime-main.js": "/jsonforms-react-seed/static/js/runtime-main.bb604be4.js",
+    "runtime-main.js.map": "/jsonforms-react-seed/static/js/runtime-main.bb604be4.js.map",
+    "static/js/2.133a68c4.chunk.js": "/jsonforms-react-seed/static/js/2.133a68c4.chunk.js",
+    "static/js/2.133a68c4.chunk.js.map": "/jsonforms-react-seed/static/js/2.133a68c4.chunk.js.map",
+    "index.html": "/jsonforms-react-seed/index.html",
+    "precache-manifest.4fcc37da7f2a2a4680c0808acd7749ea.js": "/jsonforms-react-seed/precache-manifest.4fcc37da7f2a2a4680c0808acd7749ea.js",
+    "service-worker.js": "/jsonforms-react-seed/service-worker.js",
+    "static/css/main.0e04eb83.chunk.css.map": "/jsonforms-react-seed/static/css/main.0e04eb83.chunk.css.map"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.bb604be4.js",
+    "static/js/2.133a68c4.chunk.js",
+    "static/css/main.0e04eb83.chunk.css",
+    "static/js/main.25137378.chunk.js"
+  ]
+}
