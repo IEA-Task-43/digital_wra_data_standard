@@ -4,6 +4,8 @@ on:
   push:
     branches:
       - json_sample
+    paths:
+      - 'schema/**'
 
 jobs:
   compile:
