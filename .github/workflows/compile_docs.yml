@@ -25,7 +25,7 @@ jobs:
         run: npm install -g @adobe/jsonschema2md
 
       - name: Clear docs folder
-        run: rm -r docs
+        run: rm -rf docs
 
       - name: Compile docs to Markdown
         run: jsonschema2md -d schema -o docs -h false
