@@ -2,7 +2,7 @@
   "name": "jsonforms-react-seed",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://flrs-edf.github.io/jsonforms-react-seed",
+  "homepage": "https://iea-task-43.github.io/digital_wra_data_standard",
   "dependencies": {
     "@jsonforms/core": "^2.4.0",
     "@jsonforms/material-renderers": "^2.4.0",
