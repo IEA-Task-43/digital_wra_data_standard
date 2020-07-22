@@ -3,7 +3,7 @@ name: Compile Documentation to Markdown
 on:
   push:
     branches:
-      - json_sample
+      - master
     paths:
       - 'schema/**'
 
