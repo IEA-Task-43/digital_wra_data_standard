@@ -1,0 +1,41 @@
+name: Deploy Form App to GitHub Pages
+
+on:
+  push:
+    branches:
+      - json_sample
+    paths:
+      - 'schema/**'
+
+jobs:
+  deploy:
+    runs-on: ubuntu-18.04
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Copy schema
+        run: cp ./schema/iea43_wra_data_model.schema.json ./app/src/schema.json
+
+      - name: Setup Node
+        uses: actions/setup-node@v2-beta
+        with:
+          node-version: '12'
+
+      - name: Cache dependencies
+        uses: actions/cache@v2
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+
+      - run: npm ci
+        working-directory: ./app
+      - run: npm run build
+        working-directory: ./app
+
+      - name: deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+          publish_dir: ./app/build

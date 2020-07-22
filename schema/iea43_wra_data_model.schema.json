@@ -1,0 +1,59 @@
+{
+  "type": "object",
+  "title": "Measurement Mast",
+  "properties": {
+    "measurement_location": {
+      "title": "Measurement Location",
+      "type": "object",
+      "properties": {
+        "latitude_ddeg": {
+          "title": "Latitude [ddeg]",
+          "description": "Latitude coordinate in the Geographic Coordinate System using the WGS84 datum. Latitude lines are parallel to the equator where their position ranges from -90 degress at the south pole to 90 degrees at the north pole.",
+          "type": "number",
+          "examples": [
+            87.567
+          ],
+          "minimum": -90,
+          "maximum": 90
+        },
+        "longitude_ddeg": {
+          "title": "Longitude [ddeg]",
+          "description": "Longitude coordinate in the Geographic Coordinate System using the WGS84 datum. Longitude lines are perpendicular to the equator where their position ranges from 0° at Greenwich Mean Time increasing to +180° as you move eastward and decreasing to −180° as you move westward.",
+          "type": "number",
+          "examples": [
+            -124.234
+          ],
+          "minimum": -180,
+          "maximum": 180
+        },
+        "measurement_station_type_id": {
+          "title": "Measurement Station Type ID",
+          "description": "The type of measurement station. This must be one of either Mast, LiDAR or SoDAR.",
+          "type": "string",
+          "enum": [
+            "Mast",
+            "Lidar",
+            "Sodar"
+          ],
+          "examples": [
+            "Mast"
+          ]
+        }
+      }
+    },
+    "measurement_point": {
+      "title": "Measurement Point",
+      "type": "object",
+      "properties": {
+        "name": {
+          "title": "Name",
+          "description": "The name the measurement point is commonly referred to. This is the name that is used to refer to the data in an analysis and reporting.",
+          "type": "string",
+          "examples": [
+            "0542"
+          ]
+        }
+      }
+    }
+  }
+}
