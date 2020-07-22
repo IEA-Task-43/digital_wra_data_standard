@@ -3,7 +3,7 @@ name: Deploy Form App to GitHub Pages
 on:
   push:
     branches:
-      - json_sample
+      - master
     paths:
       - 'schema/**'
 
