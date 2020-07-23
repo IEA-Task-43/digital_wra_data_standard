@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/digital_wra_data_standard/static/css/main.0e04eb83.chunk.css",
-    "main.js": "/digital_wra_data_standard/static/js/main.c66d0c27.chunk.js",
-    "main.js.map": "/digital_wra_data_standard/static/js/main.c66d0c27.chunk.js.map",
+    "main.js": "/digital_wra_data_standard/static/js/main.0297a984.chunk.js",
+    "main.js.map": "/digital_wra_data_standard/static/js/main.0297a984.chunk.js.map",
     "runtime-main.js": "/digital_wra_data_standard/static/js/runtime-main.f22f640b.js",
     "runtime-main.js.map": "/digital_wra_data_standard/static/js/runtime-main.f22f640b.js.map",
     "static/js/2.133a68c4.chunk.js": "/digital_wra_data_standard/static/js/2.133a68c4.chunk.js",
     "static/js/2.133a68c4.chunk.js.map": "/digital_wra_data_standard/static/js/2.133a68c4.chunk.js.map",
     "index.html": "/digital_wra_data_standard/index.html",
-    "precache-manifest.2a5403c985b795a6ffea2c492e1b61e1.js": "/digital_wra_data_standard/precache-manifest.2a5403c985b795a6ffea2c492e1b61e1.js",
+    "precache-manifest.73d3be9be39ae2b791172024135f7ff8.js": "/digital_wra_data_standard/precache-manifest.73d3be9be39ae2b791172024135f7ff8.js",
     "service-worker.js": "/digital_wra_data_standard/service-worker.js",
     "static/css/main.0e04eb83.chunk.css.map": "/digital_wra_data_standard/static/css/main.0e04eb83.chunk.css.map"
   },
@@ -16,6 +16,6 @@
     "static/js/runtime-main.f22f640b.js",
     "static/js/2.133a68c4.chunk.js",
     "static/css/main.0e04eb83.chunk.css",
-    "static/js/main.c66d0c27.chunk.js"
+    "static/js/main.0297a984.chunk.js"
   ]
 }
