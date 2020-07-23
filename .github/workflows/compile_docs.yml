@@ -6,6 +6,7 @@ on:
       - master
     paths:
       - 'schema/**'
+      - '.github/workflows/compile_docs.yml'
 
 jobs:
   compile:
