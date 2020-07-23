@@ -1,6 +1,6 @@
 ## measurement_station_type_id Type
 
-`string` ([Measurement Station Type ID](iea43_wra_data_model-properties-measurement-location-properties-measurement-station-type-id.md))
+`string` ([Measurement Station Type](iea43_wra_data_model-properties-measurement-location-items-properties-measurement-station-type.md))
 
 ## measurement_station_type_id Constraints
 
@@ -8,12 +8,12 @@
 
 | Value     | Explanation |
 | :-------- | ----------- |
-| `"Mast"`  |             |
-| `"Lidar"` |             |
-| `"Sodar"` |             |
+| `"mast"`  |             |
+| `"lidar"` |             |
+| `"sodar"` |             |
 
 ## measurement_station_type_id Examples
 
 ```json
-"Mast"
+"mast"
 ```

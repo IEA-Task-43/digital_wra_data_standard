@@ -1,6 +1,6 @@
 ## latitude_ddeg Type
 
-`number` ([Latitude \[ddeg\]](iea43_wra_data_model-properties-measurement-location-properties-latitude-ddeg.md))
+`number` ([Latitude \[ddeg\]](iea43_wra_data_model-properties-measurement-location-items-properties-latitude-ddeg.md))
 
 ## latitude_ddeg Constraints
 
@@ -11,5 +11,5 @@
 ## latitude_ddeg Examples
 
 ```json
-87.567
+52.973
 ```
