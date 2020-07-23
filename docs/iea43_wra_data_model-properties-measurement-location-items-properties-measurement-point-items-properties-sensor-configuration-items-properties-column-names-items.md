@@ -10,7 +10,7 @@
 | [metric_id](#metric_id)     | `string`     | Required | cannot be null | [IEA Wind Resource Assessment Data Model](iea43_wra_data_model-properties-measurement-location-items-properties-measurement-point-items-properties-sensor-configuration-items-properties-column-names-items-properties-metric.md "https&#x3A;//github.com/IEA-Task-43/digital_wra_data_standard/tree/master/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/measurement_point/items/properties/sensor_config/items/properties/column_name/items/properties/metric_id")        |
 | [is_ignored](#is_ignored)   | `boolean`    | Required | cannot be null | [IEA Wind Resource Assessment Data Model](iea43_wra_data_model-properties-measurement-location-items-properties-measurement-point-items-properties-sensor-configuration-items-properties-column-names-items-properties-is-ignored.md "https&#x3A;//github.com/IEA-Task-43/digital_wra_data_standard/tree/master/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/measurement_point/items/properties/sensor_config/items/properties/column_name/items/properties/is_ignored")   |
 | [notes](#notes)             | Unknown Type | Optional | can be null    | [IEA Wind Resource Assessment Data Model](iea43_wra_data_model-definitions-notes.md "https&#x3A;//github.com/IEA-Task-43/digital_wra_data_standard/tree/master/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/measurement_point/items/properties/sensor_config/items/properties/column_name/items/properties/notes")                                                                                                                                                         |
-| [update_at](#update_at)     | `string`     | Required | cannot be null | [IEA Wind Resource Assessment Data Model](iea43_wra_data_model-definitions-date-of-update.md "https&#x3A;//github.com/IEA-Task-43/digital_wra_data_standard/tree/master/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/measurement_point/items/properties/sensor_config/items/properties/column_name/items/properties/update_at")                                                                                                                                            |
+| [update_at](#update_at)     | `string`     | Optional | cannot be null | [IEA Wind Resource Assessment Data Model](iea43_wra_data_model-definitions-date-of-update.md "https&#x3A;//github.com/IEA-Task-43/digital_wra_data_standard/tree/master/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/measurement_point/items/properties/sensor_config/items/properties/column_name/items/properties/update_at")                                                                                                                                            |
 
 ## column_name
 
@@ -30,7 +30,7 @@ The column name in the data file which relates to this sensor configuration.
 
 ## metric_id
 
-The metric e.g. 'average', 'maximum' that this column records.
+The metric or aggregation function e.g. 'average' or 'maximum' that this column records.
 
 
 `metric_id`
@@ -48,15 +48,18 @@ The metric e.g. 'average', 'maximum' that this column records.
 
 **enum**: the value of this property must be equal to one of the following values:
 
-| Value     | Explanation |
-| :-------- | ----------- |
-| `"avg"`   |             |
-| `"sd"`    |             |
-| `"max"`   |             |
-| `"min"`   |             |
-| `"count"` |             |
-| `"sum"`   |             |
-| `"text"`  |             |
+| Value      | Explanation |
+| :--------- | ----------- |
+| `"avg"`    |             |
+| `"sd"`     |             |
+| `"max"`    |             |
+| `"min"`    |             |
+| `"count"`  |             |
+| `"sum"`    |             |
+| `"median"` |             |
+| `"mode"`   |             |
+| `"range"`  |             |
+| `"text"`   |             |
 
 ## is_ignored
 
@@ -97,7 +100,7 @@ The date these properties were last updated.
 
 `update_at`
 
--   is required
+-   is optional
 -   Type: `string` ([Date of Update](iea43_wra_data_model-definitions-date-of-update.md))
 -   cannot be null
 -   defined in: [IEA Wind Resource Assessment Data Model](iea43_wra_data_model-definitions-date-of-update.md "https&#x3A;//github.com/IEA-Task-43/digital_wra_data_standard/tree/master/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/measurement_point/items/properties/sensor_config/items/properties/column_name/items/properties/update_at")

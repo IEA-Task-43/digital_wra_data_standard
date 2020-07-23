@@ -68,7 +68,7 @@ The date this file was created.
 
 ## version
 
-The version of the IEA WRA Data Model his file is based on.
+The version of the IEA WRA Data Model his file is based on. The format of this follows Semantic Versioning with the year and month tag on after. E.g. 1.1.1-2020.07
 
 
 `version`
@@ -81,6 +81,22 @@ The version of the IEA WRA Data Model his file is based on.
 ### version Type
 
 `string` ([Version](iea43_wra_data_model-properties-version.md))
+
+### version Constraints
+
+**pattern**: the string must match the following regular expression: 
+
+```regexp
+^([0-9]{1,2})[.]([0-9]{1,2})[.]([0-9]{1,2})-([0-9]{4})[.]([0-9]{2})$
+```
+
+[try pattern](https://regexr.com/?expression=%5E(%5B0-9%5D%7B1%2C2%7D)%5B.%5D(%5B0-9%5D%7B1%2C2%7D)%5B.%5D(%5B0-9%5D%7B1%2C2%7D)-(%5B0-9%5D%7B4%7D)%5B.%5D(%5B0-9%5D%7B2%7D)%24 "try regular expression with regexr.com")
+
+### version Examples
+
+```json
+"1.1.1-2020.07"
+```
 
 ## plant_name
 
@@ -146,6 +162,59 @@ This is the geographic location of the meteorological measurement station i.e. a
 `object[]` ([Details](iea43_wra_data_model-properties-measurement-location-items.md))
 
 # IEA Wind Resource Assessment Data Model Definitions
+
+## Definitions group date_from
+
+Reference this group by using
+
+```json
+{"$ref":"https://github.com/IEA-Task-43/digital_wra_data_standard/tree/master/iea43_wra_data_model.schema.json#/definitions/date_from"}
+```
+
+The date from when these properties are active. If these properties follow a change, then this Date From should equal the previous Date To.
+
+
+`date_from`
+
+-   is optional
+-   Type: `string` ([Date From](iea43_wra_data_model-definitions-date-from.md))
+-   cannot be null
+-   defined in: [IEA Wind Resource Assessment Data Model](iea43_wra_data_model-definitions-date-from.md "https&#x3A;//github.com/IEA-Task-43/digital_wra_data_standard/tree/master/iea43_wra_data_model.schema.json#/definitions/date_from")
+
+### date_from Type
+
+`string` ([Date From](iea43_wra_data_model-definitions-date-from.md))
+
+### date_from Constraints
+
+**date time**: the string must be a date time string, according to [RFC 3339, section 5.6](https://tools.ietf.org/html/rfc3339 "check the specification")
+
+## Definitions group date_to
+
+Reference this group by using
+
+```json
+{"$ref":"https://github.com/IEA-Task-43/digital_wra_data_standard/tree/master/iea43_wra_data_model.schema.json#/definitions/date_to"}
+```
+
+
+
+
+`date_to`
+
+-   is optional
+-   Type: merged type ([Details](iea43_wra_data_model-definitions-date_to.md))
+-   cannot be null
+-   defined in: [IEA Wind Resource Assessment Data Model](iea43_wra_data_model-definitions-date_to.md "https&#x3A;//github.com/IEA-Task-43/digital_wra_data_standard/tree/master/iea43_wra_data_model.schema.json#/definitions/date_to")
+
+### date_to Type
+
+merged type ([Details](iea43_wra_data_model-definitions-date_to.md))
+
+any of
+
+-   [Date To](iea43_wra_data_model-definitions-date_to-anyof-date-to.md "check type definition")
+-   [Untitled null in IEA Wind Resource Assessment Data Model](iea43_wra_data_model-definitions-date_to-anyof-1.md "check type definition")
 
 ## Definitions group notes
 

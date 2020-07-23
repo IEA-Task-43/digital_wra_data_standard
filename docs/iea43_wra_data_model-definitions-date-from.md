@@ -1,6 +1,6 @@
 ## date_from Type
 
-`string` ([Date From](iea43_wra_data_model-properties-measurement-location-items-properties-measurement-point-items-properties-sensor-configuration-items-properties-date-from.md))
+`string` ([Date From](iea43_wra_data_model-definitions-date-from.md))
 
 ## date_from Constraints
 

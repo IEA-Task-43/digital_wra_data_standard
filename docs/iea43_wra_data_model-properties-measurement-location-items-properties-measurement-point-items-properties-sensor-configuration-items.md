@@ -6,17 +6,17 @@
 
 | Property                                  | Type         | Required | Nullable       | Defined by                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
 | :---------------------------------------- | ------------ | -------- | -------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| [slope](#slope)                           | Unknown Type | Required | can be null    | [IEA Wind Resource Assessment Data Model](iea43_wra_data_model-properties-measurement-location-items-properties-measurement-point-items-properties-sensor-configuration-items-properties-logger-slope.md "https&#x3A;//github.com/IEA-Task-43/digital_wra_data_standard/tree/master/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/measurement_point/items/properties/sensor_config/items/properties/slope")                    |
-| [offset](#offset)                         | Unknown Type | Required | can be null    | [IEA Wind Resource Assessment Data Model](iea43_wra_data_model-properties-measurement-location-items-properties-measurement-point-items-properties-sensor-configuration-items-properties-logger-offset.md "https&#x3A;//github.com/IEA-Task-43/digital_wra_data_standard/tree/master/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/measurement_point/items/properties/sensor_config/items/properties/offset")                  |
-| [sensitivity](#sensitivity)               | Unknown Type | Required | can be null    | [IEA Wind Resource Assessment Data Model](iea43_wra_data_model-properties-measurement-location-items-properties-measurement-point-items-properties-sensor-configuration-items-properties-logger-sensitivity.md "https&#x3A;//github.com/IEA-Task-43/digital_wra_data_standard/tree/master/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/measurement_point/items/properties/sensor_config/items/properties/sensitivity")        |
+| [slope](#slope)                           | Unknown Type | Optional | can be null    | [IEA Wind Resource Assessment Data Model](iea43_wra_data_model-properties-measurement-location-items-properties-measurement-point-items-properties-sensor-configuration-items-properties-logger-slope.md "https&#x3A;//github.com/IEA-Task-43/digital_wra_data_standard/tree/master/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/measurement_point/items/properties/sensor_config/items/properties/slope")                    |
+| [offset](#offset)                         | Unknown Type | Optional | can be null    | [IEA Wind Resource Assessment Data Model](iea43_wra_data_model-properties-measurement-location-items-properties-measurement-point-items-properties-sensor-configuration-items-properties-logger-offset.md "https&#x3A;//github.com/IEA-Task-43/digital_wra_data_standard/tree/master/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/measurement_point/items/properties/sensor_config/items/properties/offset")                  |
+| [sensitivity](#sensitivity)               | Unknown Type | Optional | can be null    | [IEA Wind Resource Assessment Data Model](iea43_wra_data_model-properties-measurement-location-items-properties-measurement-point-items-properties-sensor-configuration-items-properties-logger-sensitivity.md "https&#x3A;//github.com/IEA-Task-43/digital_wra_data_standard/tree/master/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/measurement_point/items/properties/sensor_config/items/properties/sensitivity")        |
 | [measurement_units](#measurement_units)   | `string`     | Required | cannot be null | [IEA Wind Resource Assessment Data Model](iea43_wra_data_model-properties-measurement-location-items-properties-measurement-point-items-properties-sensor-configuration-items-properties-measurement-units.md "https&#x3A;//github.com/IEA-Task-43/digital_wra_data_standard/tree/master/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/measurement_point/items/properties/sensor_config/items/properties/measurement_units")   |
-| [height_m](#height_m)                     | Unknown Type | Required | can be null    | [IEA Wind Resource Assessment Data Model](iea43_wra_data_model-properties-measurement-location-items-properties-measurement-point-items-properties-sensor-configuration-items-properties-logger-height-m.md "https&#x3A;//github.com/IEA-Task-43/digital_wra_data_standard/tree/master/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/measurement_point/items/properties/sensor_config/items/properties/height_m")              |
-| [serial_number](#serial_number)           | Unknown Type | Required | can be null    | [IEA Wind Resource Assessment Data Model](iea43_wra_data_model-properties-measurement-location-items-properties-measurement-point-items-properties-sensor-configuration-items-properties-serial-number.md "https&#x3A;//github.com/IEA-Task-43/digital_wra_data_standard/tree/master/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/measurement_point/items/properties/sensor_config/items/properties/serial_number")           |
-| [connection_channel](#connection_channel) | Unknown Type | Required | can be null    | [IEA Wind Resource Assessment Data Model](iea43_wra_data_model-properties-measurement-location-items-properties-measurement-point-items-properties-sensor-configuration-items-properties-connection-channel.md "https&#x3A;//github.com/IEA-Task-43/digital_wra_data_standard/tree/master/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/measurement_point/items/properties/sensor_config/items/properties/connection_channel") |
-| [date_from](#date_from)                   | `string`     | Required | cannot be null | [IEA Wind Resource Assessment Data Model](iea43_wra_data_model-properties-measurement-location-items-properties-measurement-point-items-properties-sensor-configuration-items-properties-date-from.md "https&#x3A;//github.com/IEA-Task-43/digital_wra_data_standard/tree/master/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/measurement_point/items/properties/sensor_config/items/properties/date_from")                   |
-| [date_to](#date_to)                       | Merged       | Required | cannot be null | [IEA Wind Resource Assessment Data Model](iea43_wra_data_model-properties-measurement-location-items-properties-measurement-point-items-properties-sensor-configuration-items-properties-date_to.md "https&#x3A;//github.com/IEA-Task-43/digital_wra_data_standard/tree/master/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/measurement_point/items/properties/sensor_config/items/properties/date_to")                       |
+| [height_m](#height_m)                     | Unknown Type | Optional | can be null    | [IEA Wind Resource Assessment Data Model](iea43_wra_data_model-properties-measurement-location-items-properties-measurement-point-items-properties-sensor-configuration-items-properties-logger-height-m.md "https&#x3A;//github.com/IEA-Task-43/digital_wra_data_standard/tree/master/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/measurement_point/items/properties/sensor_config/items/properties/height_m")              |
+| [serial_number](#serial_number)           | Unknown Type | Optional | can be null    | [IEA Wind Resource Assessment Data Model](iea43_wra_data_model-properties-measurement-location-items-properties-measurement-point-items-properties-sensor-configuration-items-properties-serial-number.md "https&#x3A;//github.com/IEA-Task-43/digital_wra_data_standard/tree/master/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/measurement_point/items/properties/sensor_config/items/properties/serial_number")           |
+| [connection_channel](#connection_channel) | Unknown Type | Optional | can be null    | [IEA Wind Resource Assessment Data Model](iea43_wra_data_model-properties-measurement-location-items-properties-measurement-point-items-properties-sensor-configuration-items-properties-connection-channel.md "https&#x3A;//github.com/IEA-Task-43/digital_wra_data_standard/tree/master/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/measurement_point/items/properties/sensor_config/items/properties/connection_channel") |
+| [date_from](#date_from)                   | `string`     | Required | cannot be null | [IEA Wind Resource Assessment Data Model](iea43_wra_data_model-definitions-date-from.md "https&#x3A;//github.com/IEA-Task-43/digital_wra_data_standard/tree/master/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/measurement_point/items/properties/sensor_config/items/properties/date_from")                                                                                                                                 |
+| [date_to](#date_to)                       | Merged       | Required | cannot be null | [IEA Wind Resource Assessment Data Model](iea43_wra_data_model-definitions-date_to.md "https&#x3A;//github.com/IEA-Task-43/digital_wra_data_standard/tree/master/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/measurement_point/items/properties/sensor_config/items/properties/date_to")                                                                                                                                     |
 | [notes](#notes)                           | Unknown Type | Optional | can be null    | [IEA Wind Resource Assessment Data Model](iea43_wra_data_model-definitions-notes.md "https&#x3A;//github.com/IEA-Task-43/digital_wra_data_standard/tree/master/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/measurement_point/items/properties/sensor_config/items/properties/notes")                                                                                                                                         |
-| [update_at](#update_at)                   | `string`     | Required | cannot be null | [IEA Wind Resource Assessment Data Model](iea43_wra_data_model-definitions-date-of-update.md "https&#x3A;//github.com/IEA-Task-43/digital_wra_data_standard/tree/master/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/measurement_point/items/properties/sensor_config/items/properties/update_at")                                                                                                                            |
+| [update_at](#update_at)                   | `string`     | Optional | cannot be null | [IEA Wind Resource Assessment Data Model](iea43_wra_data_model-definitions-date-of-update.md "https&#x3A;//github.com/IEA-Task-43/digital_wra_data_standard/tree/master/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/measurement_point/items/properties/sensor_config/items/properties/update_at")                                                                                                                            |
 | [column_name](#column_name)               | `array`      | Required | cannot be null | [IEA Wind Resource Assessment Data Model](iea43_wra_data_model-properties-measurement-location-items-properties-measurement-point-items-properties-sensor-configuration-items-properties-column-names.md "https&#x3A;//github.com/IEA-Task-43/digital_wra_data_standard/tree/master/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/measurement_point/items/properties/sensor_config/items/properties/column_name")              |
 
 ## slope
@@ -26,7 +26,7 @@ The slope programmed into the logger.
 
 `slope`
 
--   is required
+-   is optional
 -   Type: `number` ([Logger Slope](iea43_wra_data_model-properties-measurement-location-items-properties-measurement-point-items-properties-sensor-configuration-items-properties-logger-slope.md))
 -   can be null
 -   defined in: [IEA Wind Resource Assessment Data Model](iea43_wra_data_model-properties-measurement-location-items-properties-measurement-point-items-properties-sensor-configuration-items-properties-logger-slope.md "https&#x3A;//github.com/IEA-Task-43/digital_wra_data_standard/tree/master/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/measurement_point/items/properties/sensor_config/items/properties/slope")
@@ -42,7 +42,7 @@ The offset programmed into the logger.
 
 `offset`
 
--   is required
+-   is optional
 -   Type: `number` ([Logger Offset](iea43_wra_data_model-properties-measurement-location-items-properties-measurement-point-items-properties-sensor-configuration-items-properties-logger-offset.md))
 -   can be null
 -   defined in: [IEA Wind Resource Assessment Data Model](iea43_wra_data_model-properties-measurement-location-items-properties-measurement-point-items-properties-sensor-configuration-items-properties-logger-offset.md "https&#x3A;//github.com/IEA-Task-43/digital_wra_data_standard/tree/master/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/measurement_point/items/properties/sensor_config/items/properties/offset")
@@ -58,7 +58,7 @@ The sensitivity programmed into the logger.
 
 `sensitivity`
 
--   is required
+-   is optional
 -   Type: `number` ([Logger Sensitivity](iea43_wra_data_model-properties-measurement-location-items-properties-measurement-point-items-properties-sensor-configuration-items-properties-logger-sensitivity.md))
 -   can be null
 -   defined in: [IEA Wind Resource Assessment Data Model](iea43_wra_data_model-properties-measurement-location-items-properties-measurement-point-items-properties-sensor-configuration-items-properties-logger-sensitivity.md "https&#x3A;//github.com/IEA-Task-43/digital_wra_data_standard/tree/master/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/measurement_point/items/properties/sensor_config/items/properties/sensitivity")
@@ -91,10 +91,21 @@ The measurement units of the values the sensor records.
 | :-------- | ----------- |
 | `"m/s"`   |             |
 | `"deg"`   |             |
-| `"deg_c"` |             |
+| `"deg_C"` |             |
+| `"deg_F"` |             |
+| `"K"`     |             |
 | `"%"`     |             |
-| `"mb"`    |             |
-| `"v"`     |             |
+| `"mbar"`  |             |
+| `"hPa"`   |             |
+| `"V"`     |             |
+| `"mA"`    |             |
+| `"ohm"`   |             |
+| `"Hz"`    |             |
+| `"mm"`    |             |
+| `"W/m^2"` |             |
+| `"m/s^2"` |             |
+| `"lux"`   |             |
+| `"-"`     |             |
 
 ## height_m
 
@@ -103,7 +114,7 @@ The height (in meters) programmed into the logger.
 
 `height_m`
 
--   is required
+-   is optional
 -   Type: `number` ([Logger Height \[m\]](iea43_wra_data_model-properties-measurement-location-items-properties-measurement-point-items-properties-sensor-configuration-items-properties-logger-height-m.md))
 -   can be null
 -   defined in: [IEA Wind Resource Assessment Data Model](iea43_wra_data_model-properties-measurement-location-items-properties-measurement-point-items-properties-sensor-configuration-items-properties-logger-height-m.md "https&#x3A;//github.com/IEA-Task-43/digital_wra_data_standard/tree/master/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/measurement_point/items/properties/sensor_config/items/properties/height_m")
@@ -119,7 +130,7 @@ The serial number of the sensor programmed into the logger.
 
 `serial_number`
 
--   is required
+-   is optional
 -   Type: `string` ([Serial Number](iea43_wra_data_model-properties-measurement-location-items-properties-measurement-point-items-properties-sensor-configuration-items-properties-serial-number.md))
 -   can be null
 -   defined in: [IEA Wind Resource Assessment Data Model](iea43_wra_data_model-properties-measurement-location-items-properties-measurement-point-items-properties-sensor-configuration-items-properties-serial-number.md "https&#x3A;//github.com/IEA-Task-43/digital_wra_data_standard/tree/master/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/measurement_point/items/properties/sensor_config/items/properties/serial_number")
@@ -135,7 +146,7 @@ The connection channel the sensor is wired into on the logger.
 
 `connection_channel`
 
--   is required
+-   is optional
 -   Type: `string` ([Connection Channel](iea43_wra_data_model-properties-measurement-location-items-properties-measurement-point-items-properties-sensor-configuration-items-properties-connection-channel.md))
 -   can be null
 -   defined in: [IEA Wind Resource Assessment Data Model](iea43_wra_data_model-properties-measurement-location-items-properties-measurement-point-items-properties-sensor-configuration-items-properties-connection-channel.md "https&#x3A;//github.com/IEA-Task-43/digital_wra_data_standard/tree/master/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/measurement_point/items/properties/sensor_config/items/properties/connection_channel")
@@ -146,19 +157,19 @@ The connection channel the sensor is wired into on the logger.
 
 ## date_from
 
-The date from when these properties are active. If these properties follow a change then this Date From should equal the previous Date To.
+The date from when these properties are active. If these properties follow a change, then this Date From should equal the previous Date To.
 
 
 `date_from`
 
 -   is required
--   Type: `string` ([Date From](iea43_wra_data_model-properties-measurement-location-items-properties-measurement-point-items-properties-sensor-configuration-items-properties-date-from.md))
+-   Type: `string` ([Date From](iea43_wra_data_model-definitions-date-from.md))
 -   cannot be null
--   defined in: [IEA Wind Resource Assessment Data Model](iea43_wra_data_model-properties-measurement-location-items-properties-measurement-point-items-properties-sensor-configuration-items-properties-date-from.md "https&#x3A;//github.com/IEA-Task-43/digital_wra_data_standard/tree/master/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/measurement_point/items/properties/sensor_config/items/properties/date_from")
+-   defined in: [IEA Wind Resource Assessment Data Model](iea43_wra_data_model-definitions-date-from.md "https&#x3A;//github.com/IEA-Task-43/digital_wra_data_standard/tree/master/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/measurement_point/items/properties/sensor_config/items/properties/date_from")
 
 ### date_from Type
 
-`string` ([Date From](iea43_wra_data_model-properties-measurement-location-items-properties-measurement-point-items-properties-sensor-configuration-items-properties-date-from.md))
+`string` ([Date From](iea43_wra_data_model-definitions-date-from.md))
 
 ### date_from Constraints
 
@@ -172,18 +183,18 @@ The date from when these properties are active. If these properties follow a cha
 `date_to`
 
 -   is required
--   Type: merged type ([Details](iea43_wra_data_model-properties-measurement-location-items-properties-measurement-point-items-properties-sensor-configuration-items-properties-date_to.md))
+-   Type: merged type ([Details](iea43_wra_data_model-definitions-date_to.md))
 -   cannot be null
--   defined in: [IEA Wind Resource Assessment Data Model](iea43_wra_data_model-properties-measurement-location-items-properties-measurement-point-items-properties-sensor-configuration-items-properties-date_to.md "https&#x3A;//github.com/IEA-Task-43/digital_wra_data_standard/tree/master/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/measurement_point/items/properties/sensor_config/items/properties/date_to")
+-   defined in: [IEA Wind Resource Assessment Data Model](iea43_wra_data_model-definitions-date_to.md "https&#x3A;//github.com/IEA-Task-43/digital_wra_data_standard/tree/master/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/measurement_point/items/properties/sensor_config/items/properties/date_to")
 
 ### date_to Type
 
-merged type ([Details](iea43_wra_data_model-properties-measurement-location-items-properties-measurement-point-items-properties-sensor-configuration-items-properties-date_to.md))
+merged type ([Details](iea43_wra_data_model-definitions-date_to.md))
 
 any of
 
--   [Date From](iea43_wra_data_model-properties-measurement-location-items-properties-measurement-point-items-properties-sensor-configuration-items-properties-date_to-anyof-date-from.md "check type definition")
--   [Untitled null in IEA Wind Resource Assessment Data Model](iea43_wra_data_model-properties-measurement-location-items-properties-measurement-point-items-properties-sensor-configuration-items-properties-date_to-anyof-1.md "check type definition")
+-   [Date To](iea43_wra_data_model-definitions-date_to-anyof-date-to.md "check type definition")
+-   [Untitled null in IEA Wind Resource Assessment Data Model](iea43_wra_data_model-definitions-date_to-anyof-1.md "check type definition")
 
 ## notes
 
@@ -208,7 +219,7 @@ The date these properties were last updated.
 
 `update_at`
 
--   is required
+-   is optional
 -   Type: `string` ([Date of Update](iea43_wra_data_model-definitions-date-of-update.md))
 -   cannot be null
 -   defined in: [IEA Wind Resource Assessment Data Model](iea43_wra_data_model-definitions-date-of-update.md "https&#x3A;//github.com/IEA-Task-43/digital_wra_data_standard/tree/master/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/measurement_point/items/properties/sensor_config/items/properties/update_at")
