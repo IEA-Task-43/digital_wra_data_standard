@@ -20,8 +20,12 @@ jobs:
       - name: Remove first 2 lines (id and schema) of schema to make it renderable as form
         run: sed  '2,3d' ./app/src/schema.json >  ./app/src/schema.json
       
+      - name: Read schema
+        id: vars
+        run: echo ::set-output name=schema::$(cat ./app/src/schema.json)
+        
       - name: Show schema
-        run: cat ./app/src/schema.json
+        run: echo ${{ steps.vars.outputs.schema }}
 
       - name: Setup Node
         uses: actions/setup-node@v2-beta
