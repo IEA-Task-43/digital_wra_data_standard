@@ -15,10 +15,10 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Copy schema
-        run: cp ./schema/iea43_wra_data_model.schema.json ./app/src/schema.json
+        run: cp ./schema/iea43_wra_data_model.schema.json ./app/src/schema_raw.json
         
       - name: Remove first 2 lines (id and schema) of schema to make it renderable as form
-        run: sed  '2,3d' ./app/src/schema.json >  ./app/src/schema.json
+        run: sed '2,3d' ./app/src/schema_raw.json > ./app/src/schema.json
       
       - name: Read schema
         id: vars
