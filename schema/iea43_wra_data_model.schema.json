@@ -66,12 +66,18 @@
       "pattern": "^([0-9]{1,2})[.]([0-9]{1,2})[.]([0-9]{1,2})-([0-9]{4})[.]([0-9]{2})$"
     },
     "plant_name": {
-      "type": "string",
+      "type": [
+        "string",
+        "null"
+      ],
       "title": "Plant Name",
       "description": "The name of the wind farm this met mast is associated with."
     },
     "plant_type": {
-      "type": "string",
+      "type": [
+        "string",
+        "null"
+      ],
       "title": "Plant Type",
       "description": "The type of renewable generation plant it is.",
       "enum": [
@@ -517,16 +523,16 @@
               ]
             }
           }
-        }
-      },
-      "additionalProperties": false,
-      "required": [
-        "name",
-        "latitude_ddeg",
-        "longitude_ddeg",
-        "measurement_station_type_id",
-        "measurement_point"
-      ]
+        },
+        "additionalProperties": false,
+        "required": [
+          "name",
+          "latitude_ddeg",
+          "longitude_ddeg",
+          "measurement_station_type_id",
+          "measurement_point"
+        ]
+      }
     }
   },
   "additionalProperties": false,
