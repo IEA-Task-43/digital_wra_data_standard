@@ -6,7 +6,7 @@ on:
       - master
     paths:
       - 'schema/**'
-      - '.github/workflows/deploy_app.yaml'
+      - '.github/workflows/deploy_app.yml'
 
 jobs:
   deploy:
