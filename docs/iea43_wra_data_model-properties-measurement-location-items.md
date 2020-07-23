@@ -190,7 +190,7 @@ unknown
 
 ## measurement_point
 
-This table represents a point in space where a measurement takes place.
+This represents a point in space where a measurement takes place.
 
 
 `measurement_point`

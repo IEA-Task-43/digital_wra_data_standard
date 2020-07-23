@@ -6,12 +6,15 @@
 
 **enum**: the value of this property must be equal to one of the following values:
 
-| Value     | Explanation |
-| :-------- | ----------- |
-| `"avg"`   |             |
-| `"sd"`    |             |
-| `"max"`   |             |
-| `"min"`   |             |
-| `"count"` |             |
-| `"sum"`   |             |
-| `"text"`  |             |
+| Value      | Explanation |
+| :--------- | ----------- |
+| `"avg"`    |             |
+| `"sd"`     |             |
+| `"max"`    |             |
+| `"min"`    |             |
+| `"count"`  |             |
+| `"sum"`    |             |
+| `"median"` |             |
+| `"mode"`   |             |
+| `"range"`  |             |
+| `"text"`   |             |
