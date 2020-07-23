@@ -6,6 +6,7 @@ on:
       - master
     paths:
       - 'schema/**'
+      - '.github/workflows/deploy_app.yml'
 
 jobs:
   deploy:
@@ -14,7 +15,17 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Copy schema
-        run: cp ./schema/iea43_wra_data_model.schema.json ./app/src/schema.json
+        run: cp ./schema/iea43_wra_data_model.schema.json ./app/src/schema_raw.json
+        
+      - name: Remove first 2 lines (id and schema) of schema to make it renderable as form
+        run: sed '2,3d' ./app/src/schema_raw.json > ./app/src/schema.json
+      
+      - name: Read schema
+        id: vars
+        run: echo ::set-output name=schema::$(cat ./app/src/schema.json)
+        
+      - name: Show schema
+        run: echo ${{ steps.vars.outputs.schema }}
 
       - name: Setup Node
         uses: actions/setup-node@v2-beta
