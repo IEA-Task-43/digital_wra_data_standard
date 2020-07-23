@@ -19,6 +19,9 @@ jobs:
         
       - name: Remove first 2 lines (id and schema) of schema to make it renderable as form
         run: sed  '2,2d' ./app/src/schema.json
+      
+      - name: Show schema
+        run: cat ./app/src/schema.json
 
       - name: Setup Node
         uses: actions/setup-node@v2-beta
