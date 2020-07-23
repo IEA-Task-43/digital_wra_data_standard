@@ -1,59 +1,367 @@
 {
-  "type": "object",
-  "title": "Measurement Mast",
-  "properties": {
-    "measurement_location": {
-      "title": "Measurement Location",
-      "type": "object",
-      "properties": {
-        "latitude_ddeg": {
-          "title": "Latitude [ddeg]",
-          "description": "Latitude coordinate in the Geographic Coordinate System using the WGS84 datum. Latitude lines are parallel to the equator where their position ranges from -90 degress at the south pole to 90 degrees at the north pole.",
-          "type": "number",
-          "examples": [
-            87.567
-          ],
-          "minimum": -90,
-          "maximum": 90
-        },
-        "longitude_ddeg": {
-          "title": "Longitude [ddeg]",
-          "description": "Longitude coordinate in the Geographic Coordinate System using the WGS84 datum. Longitude lines are perpendicular to the equator where their position ranges from 0° at Greenwich Mean Time increasing to +180° as you move eastward and decreasing to −180° as you move westward.",
-          "type": "number",
-          "examples": [
-            -124.234
-          ],
-          "minimum": -180,
-          "maximum": 180
-        },
-        "measurement_station_type_id": {
-          "title": "Measurement Station Type ID",
-          "description": "The type of measurement station. This must be one of either Mast, LiDAR or SoDAR.",
-          "type": "string",
-          "enum": [
-            "Mast",
-            "Lidar",
-            "Sodar"
-          ],
-          "examples": [
-            "Mast"
-          ]
-        }
-      }
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://github.com/IEA-Task-43/digital_wra_data_standard/tree/master/iea43_wra_data_model.schema.json",
+  "definitions": {
+    "notes": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Notes",
+      "description": "Notes relating to these properties."
     },
-    "measurement_point": {
-      "title": "Measurement Point",
-      "type": "object",
-      "properties": {
-        "name": {
-          "title": "Name",
-          "description": "The name the measurement point is commonly referred to. This is the name that is used to refer to the data in an analysis and reporting.",
-          "type": "string",
-          "examples": [
-            "0542"
-          ]
-        }
-      }
+    "update_at": {
+      "type": "string",
+      "format": "date-time",
+      "title": "Date of Update",
+      "description": "The date these properties were last updated."
     }
-  }
+  },
+  "type": "object",
+  "title": "IEA Wind Resource Assessment Data Model",
+  "description": "This Data Model schema is a digital representation of a meteorological mast used for measureing the wind resource of a potential wind farm.",
+  "properties": {
+    "author": {
+      "type": "string",
+      "title": "Author",
+      "description": "The person who created this file."
+    },
+    "organisation": {
+      "type": "string",
+      "title": "Organisation",
+      "description": "The organisation the Author is from."
+    },
+    "date": {
+      "type": "string",
+      "format": "date-time",
+      "title": "Date",
+      "description": "The date this file was created."
+    },
+    "version": {
+      "type": "string",
+      "title": "Version",
+      "description": "The version of the IEA WRA Data Model his file is based on."
+    },
+    "plant_name": {
+      "type": "string",
+      "title": "Plant Name",
+      "description": "The name of the wind farm this met mast is associated with."
+    },
+    "plant_type": {
+      "type": "string",
+      "title": "Plant Type",
+      "description": "The type of renewable generation plant it is.",
+      "enum": [
+        "onshore_wind",
+        "offshore_wind"
+      ],
+      "examples": [
+        "onshore_wind"
+      ]
+    },
+    "measurement_location": {
+      "type": "array",
+      "title": "Measurement Location",
+      "description": "This is the geographic location of the meteorological measurement station i.e. a met mast/tower or remote sensing device.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "title": "Name",
+            "description": "The name given to the measurement location i.e. to the met mast or remote sensing device."
+          },
+          "latitude_ddeg": {
+            "type": "number",
+            "title": "Latitude [ddeg]",
+            "description": "Latitude coordinate in the Geographic Coordinate System using the WGS84 datum in decimal degrees. Latitude lines are parallel to the equator where their position ranges from -90 degrees at the south pole to 90 degrees at the north pole.",
+            "examples": [
+              52.973
+            ],
+            "minimum": -90,
+            "maximum": 90
+          },
+          "longitude_ddeg": {
+            "type": "number",
+            "title": "Longitude [ddeg]",
+            "description": "Longitude coordinate in the Geographic Coordinate System using the WGS84 datum in decimal degrees. Longitude lines are perpendicular to the equator where their position ranges from 0° at Greenwich Mean Time increasing to +180° as you move eastward and decreasing to −180° as you move westward.",
+            "examples": [
+              -9.431
+            ],
+            "minimum": -180,
+            "maximum": 180
+          },
+          "measurement_station_type_id": {
+            "title": "Measurement Station Type",
+            "description": "The type of measurement station. This must be one of either mast, lidar or sodar.",
+            "type": "string",
+            "enum": [
+              "mast",
+              "lidar",
+              "sodar"
+            ],
+            "examples": [
+              "mast"
+            ]
+          },
+          "notes": {
+            "$ref": "#/definitions/notes"
+          },
+          "update_at": {
+            "$ref": "#/definitions/update_at"
+          },
+          "mast_properties": {},
+          "logger_main_config": {},
+          "measurement_point": {
+            "type": "array",
+            "title": "Measurement Point",
+            "description": "This table represents a point in space where a measurement takes place.",
+            "items": {
+              "type": "object",
+              "properties": {
+                "name": {
+                    "type": "string",
+                    "title": "Name",
+                    "description": "The name the measurement point is commonly referred to. This is the name that is used to refer to the data in an analysis and reporting."
+                },
+                "measurement_type_id": {
+                  "type": "string",
+                  "title": "Measurement Type",
+                  "description": "The type of measurement been made.",
+                  "enum": [
+                    "wind_speed",
+                    "wind_direction",
+                    "temperature",
+                    "air_pressure",
+                    "relative_humidity",
+                    "voltage",
+                    "current",
+                    "solar_irradiation",
+                    "vertical_wind_speed"
+                  ],
+                  "examples": [
+                    "wind_speed"
+                  ]
+                },
+                "height_m": {
+                  "type": [
+                    "number",
+                    "null"
+                  ],
+                  "title": "Height [m]",
+                  "description": "The height (in meters) above ground level the measurement is taking place."
+                },
+                "notes": {
+                  "$ref": "#/definitions/notes"
+                },
+                "update_at": {
+                  "$ref": "#/definitions/update_at"
+                },
+                "sensor_config": {
+                  "type": "array",
+                  "title": "Sensor Configuration",
+                  "description": "The sensor configuration that is programmed into the logging device.",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "slope": {
+                        "type": [
+                          "number",
+                          "null"
+                        ],
+                        "title": "Logger Slope",
+                        "description": "The slope programmed into the logger."
+                      },
+                      "offset": {
+                        "type": [
+                          "number",
+                          "null"
+                        ],
+                        "title": "Logger Offset",
+                        "description": "The offset programmed into the logger."
+                      },
+                      "sensitivity": {
+                        "type": [
+                          "number",
+                          "null"
+                        ],
+                        "title": "Logger Sensitivity",
+                        "description": "The sensitivity programmed into the logger."
+                      },
+                      "measurement_units": {
+                        "type": "string",
+                        "title": "Measurement Units",
+                        "description": "The measurement units of the values the sensor records.",
+                        "enum": [
+                          "m/s",
+                          "deg",
+                          "deg_c",
+                          "%",
+                          "mb",
+                          "v"
+                        ]
+                      },
+                      "height_m": {
+                        "type": [
+                          "number",
+                          "null"
+                        ],
+                        "title": "Logger Height [m]",
+                        "description": "The height (in meters) programmed into the logger."
+                      },
+                      "serial_number": {
+                        "type": [
+                          "string",
+                          "null"
+                        ],
+                        "title": "Serial Number",
+                        "description": "The serial number of the sensor programmed into the logger."
+                      },
+                      "connection_channel": {
+                        "type": [
+                          "string",
+                          "null"
+                        ],
+                        "title": "Connection Channel",
+                        "description": "The connection channel the sensor is wired into on the logger."
+                      },
+                      "date_from": {
+                        "type": "string",
+                        "format": "date-time",
+                        "title": "Date From",
+                        "description": "The date from when these properties are active. If these properties follow a change then this Date From should equal the previous Date To."
+                      },
+                      "date_to": {
+                        "anyOf": [
+                          {
+                            "type": "string",
+                            "format": "date-time",
+                            "title": "Date From",
+                            "description": "The date to when these properties are active."
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ]
+                      },
+                      "notes": {
+                        "$ref": "#/definitions/notes"
+                      },
+                      "update_at": {
+                        "$ref": "#/definitions/update_at"
+                      },
+                      "column_name": {
+                        "type": "array",
+                        "title": "Column Names",
+                        "description": "The group of column names in the data file which relates to this sensor configuration.",
+                        "items": {
+                          "type": "object",
+                          "properties": {
+                            "column_name": {
+                              "type": "string",
+                              "title": "Column Name",
+                              "description": "The column name in the data file which relates to this sensor configuration."
+                            },
+                            "metric_id": {
+                              "type": "string",
+                              "title": "Metric",
+                              "description": "The metric e.g. 'average', 'maximum' that this column records.",
+                              "enum": [
+                                "avg",
+                                "sd",
+                                "max",
+                                "min",
+                                "count",
+                                "sum",
+                                "text"
+                              ]
+                            },
+                            "is_ignored": {
+                              "type": "boolean",
+                              "title": "Is Ignored",
+                              "description": "If you want to ignore this column name, set to True."
+                            },
+                            "notes": {
+                              "$ref": "#/definitions/notes"
+                            },
+                            "update_at": {
+                              "$ref": "#/definitions/update_at"
+                            }
+                          },
+                          "required": [
+                            "column_name",
+                            "is_ignored",
+                            "metric_id",
+                            "update_at"
+                          ]
+                        }
+                      }
+                    },
+                    "required": [
+                      "column_name",
+                      "connection_channel",
+                      "date_from",
+                      "date_to",
+                      "height_m",
+                      "measurement_units",
+                      "offset",
+                      "sensitivity",
+                      "serial_number",
+                      "slope",
+                      "update_at"
+                    ]
+                  }
+                },
+                "sensor": {
+                  "type": "array",
+                  "items": {
+
+                  }
+                },
+                "mounting_arrangement": {
+                  "anyOf": [
+                    {
+                      "type": "array",
+                      "items": {
+
+                      }
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                }
+              },
+              "required": [
+                "name",
+                "measurement_type_id",
+                "height_m",
+                "update_at",
+                "sensor",
+                "sensor_config",
+                "mounting_arrangement"
+              ]
+            }
+          }
+        }
+      },
+      "required": [
+        "name",
+        "latitude_ddeg",
+        "longitude_ddeg",
+        "measurement_station_type_id",
+        "logger_main_config",
+        "mast_properties",
+        "measurement_point",
+        "update_at"
+      ]
+    }
+  },
+  "required": [
+    "author",
+    "organisation",
+    "date",
+    "version",
+    "measurement_location"
+  ]
 }
