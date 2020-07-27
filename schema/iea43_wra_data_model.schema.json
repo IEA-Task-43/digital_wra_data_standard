@@ -9,17 +9,13 @@
       "description": "The date from when these properties are active. If these properties follow a change, then this Date From should equal the previous Date To."
     },
     "date_to": {
-      "anyOf": [
-        {
-          "type": "string",
-          "format": "date-time",
-          "title": "Date To",
-          "description": "The date to when these properties are active."
-        },
-        {
-          "type": "null"
-        }
-      ]
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time",
+      "title": "Date To",
+      "description": "The date to when these properties are active."
     },
     "notes": {
       "type": [
