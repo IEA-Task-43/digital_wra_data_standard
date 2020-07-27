@@ -91,7 +91,6 @@
       "items": {
         "type": "object",
         "title": "Measurement Location",
-        "description": "This is the geographic location of the meteorological measurement station i.e. a met mast/tower or remote sensing device.",
         "properties": {
           "name": {
             "type": "string",
@@ -145,6 +144,7 @@
             "description": "This represents a point in space where a measurement takes place.",
             "items": {
               "type": "object",
+              "title": "Measurement Point",
               "properties": {
                 "name": {
                   "type": "string",
@@ -202,6 +202,7 @@
                   "description": "The sensor configuration that is programmed into the logging device.",
                   "items": {
                     "type": "object",
+                    "title": "Sensor Configuration",
                     "properties": {
                       "slope": {
                         "type": [
@@ -293,6 +294,7 @@
                         "description": "The group of column names in the data file which relates to this sensor configuration.",
                         "items": {
                           "type": "object",
+                          "title": "Column Names",
                           "properties": {
                             "column_name": {
                               "type": "string",
@@ -361,6 +363,7 @@
                   "description": "This describes how the sensor is mounted onto the met mast.",
                   "items": {
                     "type": "object",
+                    "title": "Mounting Arrangement",
                     "additionalProperties": false,
                     "properties": {
                       "mast_section_geometry_uuid": {
