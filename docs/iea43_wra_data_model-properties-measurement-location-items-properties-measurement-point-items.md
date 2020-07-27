@@ -4,16 +4,16 @@
 
 # undefined Properties
 
-| Property                                      | Type         | Required | Nullable       | Defined by                                                                                                                                                                                                                                                                                                                                                                                         |
-| :-------------------------------------------- | ------------ | -------- | -------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [name](#name)                                 | `string`     | Required | cannot be null | [IEA Wind Resource Assessment Data Model](iea43_wra_data_model-properties-measurement-location-items-properties-measurement-point-items-properties-name.md "https&#x3A;//github.com/IEA-Task-43/digital_wra_data_standard/tree/master/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/measurement_point/items/properties/name")                                 |
-| [measurement_type_id](#measurement_type_id)   | `string`     | Required | cannot be null | [IEA Wind Resource Assessment Data Model](iea43_wra_data_model-properties-measurement-location-items-properties-measurement-point-items-properties-measurement-type.md "https&#x3A;//github.com/IEA-Task-43/digital_wra_data_standard/tree/master/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/measurement_point/items/properties/measurement_type_id")      |
-| [height_m](#height_m)                         | Unknown Type | Required | can be null    | [IEA Wind Resource Assessment Data Model](iea43_wra_data_model-properties-measurement-location-items-properties-measurement-point-items-properties-height-m.md "https&#x3A;//github.com/IEA-Task-43/digital_wra_data_standard/tree/master/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/measurement_point/items/properties/height_m")                         |
-| [notes](#notes)                               | Unknown Type | Optional | can be null    | [IEA Wind Resource Assessment Data Model](iea43_wra_data_model-definitions-notes.md "https&#x3A;//github.com/IEA-Task-43/digital_wra_data_standard/tree/master/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/measurement_point/items/properties/notes")                                                                                                       |
-| [update_at](#update_at)                       | `string`     | Optional | cannot be null | [IEA Wind Resource Assessment Data Model](iea43_wra_data_model-definitions-date-of-update.md "https&#x3A;//github.com/IEA-Task-43/digital_wra_data_standard/tree/master/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/measurement_point/items/properties/update_at")                                                                                          |
-| [sensor_config](#sensor_config)               | `array`      | Required | cannot be null | [IEA Wind Resource Assessment Data Model](iea43_wra_data_model-properties-measurement-location-items-properties-measurement-point-items-properties-sensor-configuration.md "https&#x3A;//github.com/IEA-Task-43/digital_wra_data_standard/tree/master/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/measurement_point/items/properties/sensor_config")        |
-| [sensor](#sensor)                             | `array`      | Required | cannot be null | [IEA Wind Resource Assessment Data Model](iea43_wra_data_model-properties-measurement-location-items-properties-measurement-point-items-properties-sensor.md "https&#x3A;//github.com/IEA-Task-43/digital_wra_data_standard/tree/master/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/measurement_point/items/properties/sensor")                             |
-| [mounting_arrangement](#mounting_arrangement) | Unknown Type | Optional | can be null    | [IEA Wind Resource Assessment Data Model](iea43_wra_data_model-properties-measurement-location-items-properties-measurement-point-items-properties-mounting-arrangement.md "https&#x3A;//github.com/IEA-Task-43/digital_wra_data_standard/tree/master/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/measurement_point/items/properties/mounting_arrangement") |
+| Property                                      | Type         | Required | Nullable       | Defined by                                                                                                                                                                                                                                                                                                                                                                                                          |
+| :-------------------------------------------- | ------------ | -------- | -------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| [name](#name)                                 | `string`     | Required | cannot be null | [IEA Wind Resource Assessment Data Model](iea43_wra_data_model-properties-measurement-location-items-properties-measurement-point-items-properties-name.md "https&#x3A;//raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/measurement_point/items/properties/name")                                 |
+| [measurement_type_id](#measurement_type_id)   | `string`     | Required | cannot be null | [IEA Wind Resource Assessment Data Model](iea43_wra_data_model-properties-measurement-location-items-properties-measurement-point-items-properties-measurement-type.md "https&#x3A;//raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/measurement_point/items/properties/measurement_type_id")      |
+| [height_m](#height_m)                         | Unknown Type | Required | can be null    | [IEA Wind Resource Assessment Data Model](iea43_wra_data_model-properties-measurement-location-items-properties-measurement-point-items-properties-height-m.md "https&#x3A;//raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/measurement_point/items/properties/height_m")                         |
+| [notes](#notes)                               | Unknown Type | Optional | can be null    | [IEA Wind Resource Assessment Data Model](iea43_wra_data_model-definitions-notes.md "https&#x3A;//raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/measurement_point/items/properties/notes")                                                                                                       |
+| [update_at](#update_at)                       | `string`     | Optional | cannot be null | [IEA Wind Resource Assessment Data Model](iea43_wra_data_model-definitions-date-of-update.md "https&#x3A;//raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/measurement_point/items/properties/update_at")                                                                                          |
+| [sensor_config](#sensor_config)               | `array`      | Required | cannot be null | [IEA Wind Resource Assessment Data Model](iea43_wra_data_model-properties-measurement-location-items-properties-measurement-point-items-properties-sensor-configuration.md "https&#x3A;//raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/measurement_point/items/properties/sensor_config")        |
+| [sensor](#sensor)                             | `array`      | Required | cannot be null | [IEA Wind Resource Assessment Data Model](iea43_wra_data_model-properties-measurement-location-items-properties-measurement-point-items-properties-sensor.md "https&#x3A;//raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/measurement_point/items/properties/sensor")                             |
+| [mounting_arrangement](#mounting_arrangement) | Unknown Type | Optional | can be null    | [IEA Wind Resource Assessment Data Model](iea43_wra_data_model-properties-measurement-location-items-properties-measurement-point-items-properties-mounting-arrangement.md "https&#x3A;//raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/measurement_point/items/properties/mounting_arrangement") |
 
 ## name
 
@@ -25,7 +25,7 @@ The name the measurement point is commonly referred to. This is the name that is
 -   is required
 -   Type: `string` ([Name](iea43_wra_data_model-properties-measurement-location-items-properties-measurement-point-items-properties-name.md))
 -   cannot be null
--   defined in: [IEA Wind Resource Assessment Data Model](iea43_wra_data_model-properties-measurement-location-items-properties-measurement-point-items-properties-name.md "https&#x3A;//github.com/IEA-Task-43/digital_wra_data_standard/tree/master/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/measurement_point/items/properties/name")
+-   defined in: [IEA Wind Resource Assessment Data Model](iea43_wra_data_model-properties-measurement-location-items-properties-measurement-point-items-properties-name.md "https&#x3A;//raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/measurement_point/items/properties/name")
 
 ### name Type
 
@@ -41,7 +41,7 @@ The type of measurement been made.
 -   is required
 -   Type: `string` ([Measurement Type](iea43_wra_data_model-properties-measurement-location-items-properties-measurement-point-items-properties-measurement-type.md))
 -   cannot be null
--   defined in: [IEA Wind Resource Assessment Data Model](iea43_wra_data_model-properties-measurement-location-items-properties-measurement-point-items-properties-measurement-type.md "https&#x3A;//github.com/IEA-Task-43/digital_wra_data_standard/tree/master/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/measurement_point/items/properties/measurement_type_id")
+-   defined in: [IEA Wind Resource Assessment Data Model](iea43_wra_data_model-properties-measurement-location-items-properties-measurement-point-items-properties-measurement-type.md "https&#x3A;//raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/measurement_point/items/properties/measurement_type_id")
 
 ### measurement_type_id Type
 
@@ -91,7 +91,7 @@ The height (in meters) above ground level the measurement is taking place.
 -   is required
 -   Type: `number` ([Height \[m\]](iea43_wra_data_model-properties-measurement-location-items-properties-measurement-point-items-properties-height-m.md))
 -   can be null
--   defined in: [IEA Wind Resource Assessment Data Model](iea43_wra_data_model-properties-measurement-location-items-properties-measurement-point-items-properties-height-m.md "https&#x3A;//github.com/IEA-Task-43/digital_wra_data_standard/tree/master/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/measurement_point/items/properties/height_m")
+-   defined in: [IEA Wind Resource Assessment Data Model](iea43_wra_data_model-properties-measurement-location-items-properties-measurement-point-items-properties-height-m.md "https&#x3A;//raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/measurement_point/items/properties/height_m")
 
 ### height_m Type
 
@@ -107,7 +107,7 @@ Notes relating to these properties.
 -   is optional
 -   Type: `string` ([Notes](iea43_wra_data_model-definitions-notes.md))
 -   can be null
--   defined in: [IEA Wind Resource Assessment Data Model](iea43_wra_data_model-definitions-notes.md "https&#x3A;//github.com/IEA-Task-43/digital_wra_data_standard/tree/master/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/measurement_point/items/properties/notes")
+-   defined in: [IEA Wind Resource Assessment Data Model](iea43_wra_data_model-definitions-notes.md "https&#x3A;//raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/measurement_point/items/properties/notes")
 
 ### notes Type
 
@@ -123,7 +123,7 @@ The date these properties were last updated.
 -   is optional
 -   Type: `string` ([Date of Update](iea43_wra_data_model-definitions-date-of-update.md))
 -   cannot be null
--   defined in: [IEA Wind Resource Assessment Data Model](iea43_wra_data_model-definitions-date-of-update.md "https&#x3A;//github.com/IEA-Task-43/digital_wra_data_standard/tree/master/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/measurement_point/items/properties/update_at")
+-   defined in: [IEA Wind Resource Assessment Data Model](iea43_wra_data_model-definitions-date-of-update.md "https&#x3A;//raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/measurement_point/items/properties/update_at")
 
 ### update_at Type
 
@@ -143,7 +143,7 @@ The sensor configuration that is programmed into the logging device.
 -   is required
 -   Type: `object[]` ([Details](iea43_wra_data_model-properties-measurement-location-items-properties-measurement-point-items-properties-sensor-configuration-items.md))
 -   cannot be null
--   defined in: [IEA Wind Resource Assessment Data Model](iea43_wra_data_model-properties-measurement-location-items-properties-measurement-point-items-properties-sensor-configuration.md "https&#x3A;//github.com/IEA-Task-43/digital_wra_data_standard/tree/master/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/measurement_point/items/properties/sensor_config")
+-   defined in: [IEA Wind Resource Assessment Data Model](iea43_wra_data_model-properties-measurement-location-items-properties-measurement-point-items-properties-sensor-configuration.md "https&#x3A;//raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/measurement_point/items/properties/sensor_config")
 
 ### sensor_config Type
 
@@ -159,7 +159,7 @@ The sensor configuration that is programmed into the logging device.
 -   is required
 -   Type: unknown\[]
 -   cannot be null
--   defined in: [IEA Wind Resource Assessment Data Model](iea43_wra_data_model-properties-measurement-location-items-properties-measurement-point-items-properties-sensor.md "https&#x3A;//github.com/IEA-Task-43/digital_wra_data_standard/tree/master/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/measurement_point/items/properties/sensor")
+-   defined in: [IEA Wind Resource Assessment Data Model](iea43_wra_data_model-properties-measurement-location-items-properties-measurement-point-items-properties-sensor.md "https&#x3A;//raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/measurement_point/items/properties/sensor")
 
 ### sensor Type
 
@@ -175,7 +175,7 @@ This describes how the sensor is mounted onto the met mast.
 -   is optional
 -   Type: `object[]` ([Details](iea43_wra_data_model-properties-measurement-location-items-properties-measurement-point-items-properties-mounting-arrangement-items.md))
 -   can be null
--   defined in: [IEA Wind Resource Assessment Data Model](iea43_wra_data_model-properties-measurement-location-items-properties-measurement-point-items-properties-mounting-arrangement.md "https&#x3A;//github.com/IEA-Task-43/digital_wra_data_standard/tree/master/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/measurement_point/items/properties/mounting_arrangement")
+-   defined in: [IEA Wind Resource Assessment Data Model](iea43_wra_data_model-properties-measurement-location-items-properties-measurement-point-items-properties-mounting-arrangement.md "https&#x3A;//raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/measurement_point/items/properties/mounting_arrangement")
 
 ### mounting_arrangement Type
 
