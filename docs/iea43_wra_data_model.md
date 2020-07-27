@@ -4,15 +4,15 @@
 
 # IEA Wind Resource Assessment Data Model Properties
 
-| Property                                      | Type     | Required | Nullable       | Defined by                                                                                                                                                                                                                                       |
-| :-------------------------------------------- | -------- | -------- | -------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [author](#author)                             | `string` | Required | cannot be null | [IEA Wind Resource Assessment Data Model](iea43_wra_data_model-properties-author.md "https&#x3A;//github.com/IEA-Task-43/digital_wra_data_standard/tree/master/iea43_wra_data_model.schema.json#/properties/author")                             |
-| [organisation](#organisation)                 | `string` | Required | cannot be null | [IEA Wind Resource Assessment Data Model](iea43_wra_data_model-properties-organisation.md "https&#x3A;//github.com/IEA-Task-43/digital_wra_data_standard/tree/master/iea43_wra_data_model.schema.json#/properties/organisation")                 |
-| [date](#date)                                 | `string` | Required | cannot be null | [IEA Wind Resource Assessment Data Model](iea43_wra_data_model-properties-date.md "https&#x3A;//github.com/IEA-Task-43/digital_wra_data_standard/tree/master/iea43_wra_data_model.schema.json#/properties/date")                                 |
-| [version](#version)                           | `string` | Required | cannot be null | [IEA Wind Resource Assessment Data Model](iea43_wra_data_model-properties-version.md "https&#x3A;//github.com/IEA-Task-43/digital_wra_data_standard/tree/master/iea43_wra_data_model.schema.json#/properties/version")                           |
-| [plant_name](#plant_name)                     | `string` | Optional | cannot be null | [IEA Wind Resource Assessment Data Model](iea43_wra_data_model-properties-plant-name.md "https&#x3A;//github.com/IEA-Task-43/digital_wra_data_standard/tree/master/iea43_wra_data_model.schema.json#/properties/plant_name")                     |
-| [plant_type](#plant_type)                     | `string` | Optional | cannot be null | [IEA Wind Resource Assessment Data Model](iea43_wra_data_model-properties-plant-type.md "https&#x3A;//github.com/IEA-Task-43/digital_wra_data_standard/tree/master/iea43_wra_data_model.schema.json#/properties/plant_type")                     |
-| [measurement_location](#measurement_location) | `array`  | Required | cannot be null | [IEA Wind Resource Assessment Data Model](iea43_wra_data_model-properties-measurement-location.md "https&#x3A;//github.com/IEA-Task-43/digital_wra_data_standard/tree/master/iea43_wra_data_model.schema.json#/properties/measurement_location") |
+| Property                                      | Type         | Required | Nullable       | Defined by                                                                                                                                                                                                                                       |
+| :-------------------------------------------- | ------------ | -------- | -------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [author](#author)                             | `string`     | Required | cannot be null | [IEA Wind Resource Assessment Data Model](iea43_wra_data_model-properties-author.md "https&#x3A;//github.com/IEA-Task-43/digital_wra_data_standard/tree/master/iea43_wra_data_model.schema.json#/properties/author")                             |
+| [organisation](#organisation)                 | `string`     | Required | cannot be null | [IEA Wind Resource Assessment Data Model](iea43_wra_data_model-properties-organisation.md "https&#x3A;//github.com/IEA-Task-43/digital_wra_data_standard/tree/master/iea43_wra_data_model.schema.json#/properties/organisation")                 |
+| [date](#date)                                 | `string`     | Required | cannot be null | [IEA Wind Resource Assessment Data Model](iea43_wra_data_model-properties-date.md "https&#x3A;//github.com/IEA-Task-43/digital_wra_data_standard/tree/master/iea43_wra_data_model.schema.json#/properties/date")                                 |
+| [version](#version)                           | `string`     | Required | cannot be null | [IEA Wind Resource Assessment Data Model](iea43_wra_data_model-properties-version.md "https&#x3A;//github.com/IEA-Task-43/digital_wra_data_standard/tree/master/iea43_wra_data_model.schema.json#/properties/version")                           |
+| [plant_name](#plant_name)                     | Unknown Type | Optional | can be null    | [IEA Wind Resource Assessment Data Model](iea43_wra_data_model-properties-plant-name.md "https&#x3A;//github.com/IEA-Task-43/digital_wra_data_standard/tree/master/iea43_wra_data_model.schema.json#/properties/plant_name")                     |
+| [plant_type](#plant_type)                     | Unknown Type | Optional | can be null    | [IEA Wind Resource Assessment Data Model](iea43_wra_data_model-properties-plant-type.md "https&#x3A;//github.com/IEA-Task-43/digital_wra_data_standard/tree/master/iea43_wra_data_model.schema.json#/properties/plant_type")                     |
+| [measurement_location](#measurement_location) | `array`      | Required | cannot be null | [IEA Wind Resource Assessment Data Model](iea43_wra_data_model-properties-measurement-location.md "https&#x3A;//github.com/IEA-Task-43/digital_wra_data_standard/tree/master/iea43_wra_data_model.schema.json#/properties/measurement_location") |
 
 ## author
 
@@ -107,7 +107,7 @@ The name of the wind farm this met mast is associated with.
 
 -   is optional
 -   Type: `string` ([Plant Name](iea43_wra_data_model-properties-plant-name.md))
--   cannot be null
+-   can be null
 -   defined in: [IEA Wind Resource Assessment Data Model](iea43_wra_data_model-properties-plant-name.md "https&#x3A;//github.com/IEA-Task-43/digital_wra_data_standard/tree/master/iea43_wra_data_model.schema.json#/properties/plant_name")
 
 ### plant_name Type
@@ -123,7 +123,7 @@ The type of renewable generation plant it is.
 
 -   is optional
 -   Type: `string` ([Plant Type](iea43_wra_data_model-properties-plant-type.md))
--   cannot be null
+-   can be null
 -   defined in: [IEA Wind Resource Assessment Data Model](iea43_wra_data_model-properties-plant-type.md "https&#x3A;//github.com/IEA-Task-43/digital_wra_data_standard/tree/master/iea43_wra_data_model.schema.json#/properties/plant_type")
 
 ### plant_type Type
