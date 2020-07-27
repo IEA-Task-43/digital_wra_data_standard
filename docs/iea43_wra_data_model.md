@@ -153,13 +153,13 @@ This is the geographic location of the meteorological measurement station i.e. a
 `measurement_location`
 
 -   is required
--   Type: unknown\[]
+-   Type: `object[]` ([Measurement Location](iea43_wra_data_model-properties-measurement-location-measurement-location.md))
 -   cannot be null
 -   defined in: [IEA Wind Resource Assessment Data Model](iea43_wra_data_model-properties-measurement-location.md "https&#x3A;//raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location")
 
 ### measurement_location Type
 
-unknown\[]
+`object[]` ([Measurement Location](iea43_wra_data_model-properties-measurement-location-measurement-location.md))
 
 # IEA Wind Resource Assessment Data Model Definitions
 
