@@ -89,6 +89,9 @@
       "title": "Measurement Location",
       "description": "This is the geographic location of the meteorological measurement station i.e. a met mast/tower or remote sensing device.",
       "items": {
+        "type": "object",
+        "title": "Measurement Location",
+        "description": "This is the geographic location of the meteorological measurement station i.e. a met mast/tower or remote sensing device.",
         "properties": {
           "name": {
             "type": "string",
