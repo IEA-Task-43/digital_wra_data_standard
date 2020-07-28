@@ -54,24 +54,36 @@
     "author": {
       "type": "string",
       "title": "Author",
-      "description": "The person who created this file."
+      "description": "The person who created this file.",
+      "examples": [
+        "Stephen Holleran",
+        "Joe Bloggs"
+      ]
     },
     "organisation": {
       "type": "string",
       "title": "Organisation",
-      "description": "The organisation the Author is from."
+      "description": "The organisation the Author is from.",
+      "examples": [
+        "brightwind",
+        "Wind Developer Ltd."
+      ]
     },
     "date": {
       "type": "string",
-      "format": "date-time",
+      "format": "date",
       "title": "Date",
-      "description": "The date this file was created."
+      "description": "The date this file was created.",
+      "examples": [
+        "2020-07-28"
+      ]
     },
     "version": {
       "type": "string",
       "title": "Version",
       "description": "The version of the IEA WRA Data Model his file is based on. The format of this follows Semantic Versioning with the year and month tag on after. E.g. 1.1.1-2020.07",
       "examples": [
+        "0.1.0-2020.06",
         "1.1.1-2020.07"
       ],
       "pattern": "^([0-9]{1,2})[.]([0-9]{1,2})[.]([0-9]{1,2})-([0-9]{4})[.]([0-9]{2})$"
@@ -82,7 +94,10 @@
         "null"
       ],
       "title": "Plant Name",
-      "description": "The name of the wind farm this met mast is associated with."
+      "description": "The name of the wind farm this met mast is associated with.",
+      "examples": [
+        "A Name of Wind Farm"
+      ]
     },
     "plant_type": {
       "type": [
