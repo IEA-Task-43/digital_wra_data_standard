@@ -8,11 +8,6 @@
 
 | Value             | Explanation |
 | :---------------- | ----------- |
+| `"null"`          |             |
 | `"onshore_wind"`  |             |
 | `"offshore_wind"` |             |
-
-## plant_type Examples
-
-```json
-"onshore_wind"
-```

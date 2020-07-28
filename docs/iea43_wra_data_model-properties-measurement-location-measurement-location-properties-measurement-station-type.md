@@ -11,9 +11,3 @@
 | `"mast"`  |             |
 | `"lidar"` |             |
 | `"sodar"` |             |
-
-## measurement_station_type_id Examples
-
-```json
-"mast"
-```
