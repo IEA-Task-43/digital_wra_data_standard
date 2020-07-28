@@ -767,11 +767,11 @@
                             },
                             "calibration_uncertainty": {
                               "type": "array",
-                              "title": "Calibration",
+                              "title": "Calibration Uncertainty",
                               "description": "The sensor calibration details.",
                               "items": {
                                 "type": "object",
-                                "title": "Calibration",
+                                "title": "Calibration Uncertainty",
                                 "properties": {
                                   "reference_bin": {
                                     "type": [
