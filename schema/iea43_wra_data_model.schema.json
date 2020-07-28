@@ -96,7 +96,10 @@
           "name": {
             "type": "string",
             "title": "Name",
-            "description": "The name given to the measurement location i.e. to the met mast or remote sensing device."
+            "description": "The name given to the measurement location i.e. to the met mast or remote sensing device.",
+            "examples": [
+              "AName_MM1"
+            ]
           },
           "latitude_ddeg": {
             "type": "number",
@@ -134,8 +137,197 @@
           "update_at": {
             "$ref": "#/definitions/update_at"
           },
-          "mast_properties": {},
-          "logger_main_config": {},
+          "mast_properties": {
+
+          },
+          "logger_main_config": {
+            "type": "array",
+            "title": "Logger Configuration",
+            "description": "This represents how the logger's main settings are configured. For example, it's sampling rate or averaging period.",
+            "items": {
+              "type": "object",
+              "title": "Logger Configuration",
+              "properties": {
+                "logger_oem_id": {
+                  "type": "string",
+                  "title": "Logger OEM Id",
+                  "description": "This is the logger manufacturer id as defined by the IEA Wind Resource Assessment Data Model Schema.",
+                  "enum": [
+                    "US-VT-05461",
+                    "NRG Systems",
+                    "Ammonit",
+                    "Campbell Scientific",
+                    "Vaisala",
+                    "SecondWind",
+                    "Kintech",
+                    "Unidata",
+                    "WindLogger",
+                    "Other"
+                  ]
+                },
+                "logger_model": {
+                  "type": [
+                    "string",
+                    "null"
+                  ],
+                  "title": "Logger Model",
+                  "description": "This is the logger model.",
+                  "examples": [
+                    "Symphonie Plus3",
+                    "CR1000",
+                    "Meteo-40M"
+                  ]
+                },
+                "logger_serial_number": {
+                  "type": "string",
+                  "title": "Logger Serial Number",
+                  "description": "The logger serial number. This is sometimes different from the logger id."
+                },
+                "logger_id": {
+                  "type": [
+                    "string",
+                    "null"
+                  ],
+                  "title": "Logger Id",
+                  "description": "This is the logger id. It may be set by the logger programmer and may be different from the logger serial number.",
+                  "examples": [
+                    "4321",
+                    "D123456"
+                  ]
+                },
+                "logger_name": {
+                  "type": [
+                    "string",
+                    "null"
+                  ],
+                  "title": "Logger Name",
+                  "description": "The logger name assigned to the logger in the logger programme.",
+                  "examples": [
+                    "AName_MM1"
+                  ]
+                },
+                "date_from": {
+                  "$ref": "#/definitions/date_from"
+                },
+                "date_to": {
+                  "$ref": "#/definitions/date_to"
+                },
+                "encryption_pin_or_key": {
+                  "type": [
+                    "string",
+                    "null"
+                  ],
+                  "title": "Encryption PIN or Key",
+                  "description": "The encryption PIN or key used to encrypt the data.",
+                  "examples": [
+                    "9876",
+                    "KkocDuSCk3v5tw4kRveHGQvuD1kYVVbU"
+                  ]
+                },
+                "enclosure_lock_details": {
+                  "type": [
+                    "string",
+                    "null"
+                  ],
+                  "title": "Enclosure Lock Details",
+                  "description": "Details about how to open the logger enclosure box when on site.",
+                  "examples": [
+                    "Combination lock PIN 54321.",
+                    "Physical key has id 54321."
+                  ]
+                },
+                "data_transfer_details": {
+                  "type": [
+                    "string",
+                    "null"
+                  ],
+                  "title": "Data Transfer Details",
+                  "description": "Details about how the data is transferred from the logger to the recipient.",
+                  "examples": [
+                    "Logger emails to data@developername.com",
+                    "Retrieve data via LoggerNet."
+                  ]
+                },
+                "offset_from_utc_hrs": {
+                  "type": [
+                    "number",
+                    "null"
+                  ],
+                  "title": "Offset From UTC [hr]",
+                  "description": "The number of hours that the logger clock is offset from UTC.",
+                  "examples": [
+                    "-5 for Eastern Standard Time",
+                    "1 for Central European Time",
+                    "5.5 for India Standard Time"
+                  ]
+                },
+                "sampling_rate_sec": {
+                  "type": [
+                    "integer",
+                    "null"
+                  ],
+                  "title": "Sampling Rate [s]",
+                  "description": "The number of seconds the logger samples data.",
+                  "examples": [
+                    "1 s",
+                    "2 s"
+                  ]
+                },
+                "averaging_period_minutes": {
+                  "type": [
+                    "integer",
+                    "null"
+                  ],
+                  "title": "Averaging Period [min]",
+                  "description": "The number of minutes the logger aggregates the data over.",
+                  "examples": [
+                    "10 min",
+                    "60 min"
+                  ]
+                },
+                "timestamp_is_end_of_period": {
+                  "type": [
+                    "boolean",
+                    "null"
+                  ],
+                  "title": "Timestamp at End of Period",
+                  "description": "Does the timestamp represent the end of the averaging period.",
+                  "examples": [
+                    "true for timestamp to represent the end of the averaging period.",
+                    "false for timestamp to represent the start of the averaging period."
+                  ]
+                },
+                "clock_is_auto_synced": {
+                  "type": [
+                    "boolean",
+                    "null"
+                  ],
+                  "title": "Clock is Auto-Synced",
+                  "description": "Is the logger clock auto-synced with an internet time server to keep accurate time.",
+                  "examples": [
+                    "true for logger clock to be auto-synced.",
+                    "false for logger clock not to be auto-synced."
+                  ]
+                },
+                "notes": {
+                  "$ref": "#/definitions/notes"
+                },
+                "update_at": {
+                  "$ref": "#/definitions/update_at"
+                }
+              },
+              "additionalProperties": false,
+              "required": [
+                "date_from",
+                "date_to",
+                "logger_model",
+                "logger_oem_id",
+                "logger_serial_number"
+              ]
+            },
+            "additionalItems": false,
+            "uniqueItems": true
+          },
           "measurement_point": {
             "type": "array",
             "title": "Measurement Point",
