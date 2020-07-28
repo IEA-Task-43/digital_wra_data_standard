@@ -6,7 +6,10 @@
       "type": "string",
       "format": "date-time",
       "title": "Date From",
-      "description": "The date from when these properties are active. If these properties follow a change, then this Date From should equal the previous Date To."
+      "description": "The date from when these properties are active. If these properties follow a change, then this Date From should equal the previous Date To.",
+      "examples": [
+        "2020-07-28T20:00:00"
+      ]
     },
     "date_to": {
       "type": [
@@ -15,7 +18,10 @@
       ],
       "format": "date-time",
       "title": "Date To",
-      "description": "The date to when these properties are active."
+      "description": "The date to when these properties are active.",
+      "examples": [
+        "2020-07-28T20:00:00"
+      ]
     },
     "notes": {
       "type": [
@@ -23,7 +29,10 @@
         "null"
       ],
       "title": "Notes",
-      "description": "Notes relating to these properties."
+      "description": "Notes relating to these properties.",
+      "examples": [
+        "I can write anything I want here."
+      ]
     },
     "update_at": {
       "type": [
@@ -32,7 +41,10 @@
       ],
       "format": "date-time",
       "title": "Date of Update",
-      "description": "The date these properties were last updated."
+      "description": "The date these properties were last updated.",
+      "examples": [
+        "2020-07-28T20:49:13"
+      ]
     }
   },
   "type": "object",
@@ -532,8 +544,7 @@
                     "required": [
                       "column_name",
                       "date_from",
-                      "date_to",
-                      "measurement_units"
+                      "date_to"
                     ]
                   },
                   "additionalItems": false,
@@ -541,8 +552,277 @@
                 },
                 "sensor": {
                   "type": "array",
+                  "title": "Sensor",
+                  "description": "This represents information about the sensor taking the measurements.",
                   "items": {
-
+                    "type": "object",
+                    "title": "Sensor",
+                    "properties": {
+                      "oem": {
+                        "type": [
+                          "string",
+                          "null"
+                        ],
+                        "title": "Sensor OEM",
+                        "description": "The measurement sensor manufacturer.",
+                        "examples": [
+                          "Vector",
+                          "NRG Systems",
+                          "Thies"
+                        ]
+                      },
+                      "model": {
+                        "type": [
+                          "string",
+                          "null"
+                        ],
+                        "title": "Sensor Model",
+                        "description": "The measurement sensor model.",
+                        "examples": [
+                          "#200P",
+                          "First Class Advanced",
+                          "A100L2"
+                        ]
+                      },
+                      "serial_number": {
+                        "type": [
+                          "string",
+                          "null"
+                        ],
+                        "title": "Serial Number",
+                        "description": "The serial number of the sensor installed."
+                      },
+                      "sensor_type_id": {
+                        "type": [
+                          "string",
+                          "null"
+                        ],
+                        "title": "Sensor Type",
+                        "description": "The measurement sensor type e.g. anemometer.",
+                        "enum": [
+                          "anemometer",
+                          "wind_vane",
+                          "thermometer",
+                          "barometer",
+                          "hygrometer",
+                          "voltmeter",
+                          "ammeter",
+                          "pyranometer",
+                          "pyrheliometer",
+                          "2d_ultrasonic",
+                          "3d_ultrasonic",
+                          "propeller_anemometer",
+                          "gill_propeller",
+                          "rain_gauge",
+                          "ice_detection_sensor",
+                          "fog_sensor",
+                          "gps",
+                          "illuminance_sensor",
+                          "compass",
+                          "other"
+                        ]
+                      },
+                      "instrument_height_mm": {
+                        "type": [
+                          "integer",
+                          "null"
+                        ],
+                        "title": "Instrument Height [mm]",
+                        "description": "This is the height dimension of the sensor to aid IEC mounting calculations."
+                      },
+                      "is_heated": {
+                        "type": [
+                          "boolean",
+                          "null"
+                        ],
+                        "title": "Is Heated",
+                        "description": "Is the sensor heated to reduce the effect of icing.",
+                        "examples": [
+                          "true, for the sensor is heated.",
+                          "false, for the sensor is not heated."
+                        ]
+                      },
+                      "date_from": {
+                        "$ref": "#/definitions/date_from"
+                      },
+                      "date_to": {
+                        "$ref": "#/definitions/date_to"
+                      },
+                      "notes": {
+                        "$ref": "#/definitions/notes"
+                      },
+                      "update_at": {
+                        "$ref": "#/definitions/update_at"
+                      },
+                      "calibration": {
+                        "type": [
+                          "array",
+                          "null"
+                        ],
+                        "title": "Calibration",
+                        "description": "The sensor calibration details.",
+                        "items": {
+                          "type": "object",
+                          "title": "Calibration",
+                          "properties": {
+                            "slope": {
+                              "type": [
+                                "number",
+                                "null"
+                              ],
+                              "title": "Calibration Slope",
+                              "description": "The slope programmed into the logger."
+                            },
+                            "offset": {
+                              "type": [
+                                "number",
+                                "null"
+                              ],
+                              "title": "Calibration Offset",
+                              "description": "The offset programmed into the logger."
+                            },
+                            "sensitivity": {
+                              "type": [
+                                "number",
+                                "null"
+                              ],
+                              "title": "Calibration Sensitivity",
+                              "description": "The sensitivity programmed into the logger."
+                            },
+                            "report_file_name": {
+                              "type": [
+                                "string",
+                                "null"
+                              ],
+                              "title": "Report File Name",
+                              "description": "The file name of the calibration report.",
+                              "examples": [
+                                "A12345_calibration.pdf"
+                              ]
+                            },
+                            "report_link": {
+                              "type": [
+                                "string",
+                                "null"
+                              ],
+                              "title": "Report Link",
+                              "description": "A link to the calibration report.",
+                              "examples": [
+                                "https://www.dropbox.com/bw/7dzu7xzb/AAN-BNsa?dl=0"
+                              ]
+                            },
+                            "date_of_calibration": {
+                              "type": [
+                                "string",
+                                "null"
+                              ],
+                              "format": "date",
+                              "title": "Date of Calibration",
+                              "description": "The date the sensor calibration took place.",
+                              "examples": [
+                                "2019-12-06"
+                              ]
+                            },
+                            "calibration_organisation": {
+                              "type": [
+                                "string",
+                                "null"
+                              ],
+                              "title": "Calibration Organisation",
+                              "description": "The organisation who performed the calibration.",
+                              "examples": [
+                                "Deutsche WindGuard",
+                                "Ammonit Wind Tunnel GmbH"
+                              ]
+                            },
+                            "place_of_calibration": {
+                              "type": [
+                                "string",
+                                "null"
+                              ],
+                              "title": "Place of Calibration",
+                              "description": "The place or wind tunnel where the calibration took place.",
+                              "examples": [
+                                "Windtunnel of Deutsche WindGuard WindTunnel Services GmbH, Varel",
+                                "AWT Bargeshagen"
+                              ]
+                            },
+                            "uncertainty_k_factor": {
+                              "type": [
+                                "integer",
+                                "null"
+                              ],
+                              "title": "Uncertainty K Factor",
+                              "description": "The uncertainty k factor stated in the calibration report.",
+                              "examples": [
+                                2
+                              ]
+                            },
+                            "notes": {
+                              "$ref": "#/definitions/notes"
+                            },
+                            "update_at": {
+                              "$ref": "#/definitions/update_at"
+                            },
+                            "calibration_uncertainty": {
+                              "type": "array",
+                              "title": "Calibration",
+                              "description": "The sensor calibration details.",
+                              "items": {
+                                "type": "object",
+                                "title": "Calibration",
+                                "properties": {
+                                  "reference_bin": {
+                                    "type": [
+                                      "number",
+                                      "null"
+                                    ],
+                                    "title": "Reference Bin",
+                                    "description": "The reference bin for the calibration.",
+                                    "examples": [
+                                      5.93
+                                    ]
+                                  },
+                                  "reference_unit": {
+                                    "type": [
+                                      "string",
+                                      "null"
+                                    ],
+                                    "title": "Reference Unit",
+                                    "description": "The reference bin and uncertainty units.",
+                                    "examples": [
+                                      "m/s"
+                                    ]
+                                  },
+                                  "uncertainty": {
+                                    "type": [
+                                      "number",
+                                      "null"
+                                    ],
+                                    "title": "Reference Unit",
+                                    "description": "The uncertainty associated with this reference bin.",
+                                    "examples": [
+                                      0.1
+                                    ]
+                                  }
+                                },
+                                "additionalProperties": false
+                              },
+                              "additionalItems": false,
+                              "uniqueItems": true
+                            }
+                          },
+                          "additionalProperties": false
+                        },
+                        "additionalItems": false,
+                        "uniqueItems": true
+                      }
+                    },
+                    "additionalProperties": false,
+                    "required": [
+                      "date_from",
+                      "date_to"
+                    ]
                   },
                   "additionalItems": false,
                   "uniqueItems": true
@@ -714,7 +994,6 @@
                 "name",
                 "measurement_type_id",
                 "height_m",
-                "sensor",
                 "sensor_config"
               ]
             },
