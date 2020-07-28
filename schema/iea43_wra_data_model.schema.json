@@ -83,9 +83,6 @@
         "null",
         "onshore_wind",
         "offshore_wind"
-      ],
-      "examples": [
-        "onshore_wind"
       ]
     },
     "measurement_location": {
@@ -129,9 +126,6 @@
               "mast",
               "lidar",
               "sodar"
-            ],
-            "examples": [
-              "mast"
             ]
           },
           "notes": {
@@ -181,9 +175,6 @@
                     "status",
                     "counter",
                     "other"
-                  ],
-                  "examples": [
-                    "wind_speed"
                   ]
                 },
                 "height_m": {
