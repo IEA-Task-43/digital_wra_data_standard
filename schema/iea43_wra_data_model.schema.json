@@ -26,14 +26,17 @@
       "description": "Notes relating to these properties."
     },
     "update_at": {
-      "type": "string",
+      "type": [
+        "string",
+        "null"
+      ],
       "format": "date-time",
       "title": "Date of Update",
       "description": "The date these properties were last updated."
     }
   },
   "type": "object",
-  "title": "IEA Wind Resource Assessment Data Model",
+  "title": "IEA Wind Resource Assessment - Data Model",
   "description": "This Data Model schema is a digital representation of a meteorological mast used for measureing the wind resource of a potential wind farm.",
   "properties": {
     "author": {
@@ -77,6 +80,7 @@
       "title": "Plant Type",
       "description": "The type of renewable generation plant it is.",
       "enum": [
+        "null",
         "onshore_wind",
         "offshore_wind"
       ],
@@ -336,7 +340,8 @@
                             "is_ignored",
                             "metric_id"
                           ]
-                        }
+                        },
+                        "additionalItems": false
                       }
                     },
                     "additionalProperties": false,
@@ -346,7 +351,8 @@
                       "date_to",
                       "measurement_units"
                     ]
-                  }
+                  },
+                  "additionalItems": false
                 },
                 "sensor": {
                   "type": "array",
@@ -511,7 +517,8 @@
                       "date_from",
                       "date_to"
                     ]
-                  }
+                  },
+                  "additionalItems": false
                 }
               },
               "additionalProperties": false,
@@ -522,7 +529,8 @@
                 "sensor",
                 "sensor_config"
               ]
-            }
+            },
+            "additionalItems": false
           }
         },
         "additionalProperties": false,
@@ -533,7 +541,8 @@
           "measurement_station_type_id",
           "measurement_point"
         ]
-      }
+      },
+      "additionalItems": false
     }
   },
   "additionalProperties": false,
