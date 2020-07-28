@@ -1707,7 +1707,7 @@
         "oem": null,
         "model": null,
         "serial_number": null,
-        "sensor_type_id": "volt_meter",
+        "sensor_type_id": "voltmeter",
         "instrument_height_mm": null,
         "is_heated": false,
         "date_from": "2020-04-12T12:00:00",
