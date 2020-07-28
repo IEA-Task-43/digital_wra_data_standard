@@ -341,7 +341,8 @@
                             "metric_id"
                           ]
                         },
-                        "additionalItems": false
+                        "additionalItems": false,
+                        "uniqueItems": true
                       }
                     },
                     "additionalProperties": false,
@@ -352,13 +353,16 @@
                       "measurement_units"
                     ]
                   },
-                  "additionalItems": false
+                  "additionalItems": false,
+                  "uniqueItems": true
                 },
                 "sensor": {
                   "type": "array",
                   "items": {
 
-                  }
+                  },
+                  "additionalItems": false,
+                  "uniqueItems": true
                 },
                 "mounting_arrangement": {
                   "type": [
@@ -518,7 +522,8 @@
                       "date_to"
                     ]
                   },
-                  "additionalItems": false
+                  "additionalItems": false,
+                  "uniqueItems": true
                 }
               },
               "additionalProperties": false,
@@ -530,7 +535,8 @@
                 "sensor_config"
               ]
             },
-            "additionalItems": false
+            "additionalItems": false,
+            "uniqueItems": true
           }
         },
         "additionalProperties": false,
@@ -542,7 +548,8 @@
           "measurement_point"
         ]
       },
-      "additionalItems": false
+      "additionalItems": false,
+      "uniqueItems": true
     }
   },
   "additionalProperties": false,
