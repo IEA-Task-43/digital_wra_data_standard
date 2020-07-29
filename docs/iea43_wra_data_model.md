@@ -30,6 +30,16 @@ The person who created this file.
 
 `string` ([Author](iea43_wra_data_model-properties-author.md))
 
+### author Examples
+
+```json
+"Stephen Holleran"
+```
+
+```json
+"Joe Bloggs"
+```
+
 ## organisation
 
 The organisation the Author is from.
@@ -45,6 +55,16 @@ The organisation the Author is from.
 ### organisation Type
 
 `string` ([Organisation](iea43_wra_data_model-properties-organisation.md))
+
+### organisation Examples
+
+```json
+"brightwind"
+```
+
+```json
+"Wind Developer Ltd."
+```
 
 ## date
 
@@ -64,7 +84,13 @@ The date this file was created.
 
 ### date Constraints
 
-**date time**: the string must be a date time string, according to [RFC 3339, section 5.6](https://tools.ietf.org/html/rfc3339 "check the specification")
+**date**: the string must be a date string, according to [RFC 3339, section 5.6](https://tools.ietf.org/html/rfc3339 "check the specification")
+
+### date Examples
+
+```json
+"2020-07-28"
+```
 
 ## version
 
@@ -95,6 +121,10 @@ The version of the IEA WRA Data Model his file is based on. The format of this f
 ### version Examples
 
 ```json
+"0.1.0-2020.06"
+```
+
+```json
 "1.1.1-2020.07"
 ```
 
@@ -113,6 +143,12 @@ The name of the wind farm this met mast is associated with.
 ### plant_name Type
 
 `string` ([Plant Name](iea43_wra_data_model-properties-plant-name.md))
+
+### plant_name Examples
+
+```json
+"A Name of Wind Farm"
+```
 
 ## plant_type
 
