@@ -165,7 +165,209 @@
             "$ref": "#/definitions/update_at"
           },
           "mast_properties": {
+            "type": [
+              "object",
+              "null"
+            ],
+            "title": "Mast Properties",
+            "description": "The properties of the installed met mast/tower.",
+            "properties": {
+              "mast_geometry_id": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "title": "Mast Geometry",
+                "description": "The type of mast geometry e.g. lattice or pole.",
+                "enum": [
+                  "lattice_triangle",
+                  "lattice_square",
+                  "pole"
+                ]
+              },
+              "mast_oem": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "title": "Mast OEM",
+                "description": "The manufacturer of the met mast.",
+                "examples": [
+                  "NRG Systems",
+                  "Galetech Energy Services"
+                ]
+              },
+              "mast_serial_number": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "title": "Mast Serial Number",
+                "description": "The manufacturer's serial number of the mast.",
+                "examples": [
+                  "XHD12345",
+                  "MM01234"
+                ]
+              },
+              "mast_model": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "title": "Mast Model",
+                "description": "The model of the mast.",
+                "examples": [
+                  "80m XHD TallTower",
+                  "SLX80m"
+                ]
+              },
+              "mast_height_m": {
+                "type": [
+                  "number",
+                  "null"
+                ],
+                "title": "Mast Height [m]",
+                "description": "The height of the mast itself, not necessarily the top anemometer height.",
+                "examples": [
+                  81.3
+                ]
+              },
+              "notes": {
+                "$ref": "#/definitions/notes"
+              },
+              "update_at": {
+                "$ref": "#/definitions/update_at"
+              },
+              "mast_section_geometry": {
+                "type": [
+                  "array",
+                  "null"
+                ],
+                "title": "Mast Section Geometry",
+                "description": "This properties of each mast section.",
+                "items": {
+                  "type": "object",
+                  "title": "Mast Section Geometry",
+                  "properties": {
+                    "uuid": {
+                      "type": [
+                        "string",
+                        "null"
+                      ],
+                      "format": "uuid",
+                      "title": "UUID",
+                      "description": "The unique id to relate this mast section to the mounting arrangement.",
+                      "examples": [
+                        "bf078172-bbb6-48fe-ac1f-c6605dffb1b5"
+                      ]
+                    },
+                    "pole_diameter_mm": {
+                      "type": [
+                        "integer",
+                        "null"
+                      ],
+                      "title": "Pole Diameter [mm]",
+                      "description": "If a pole mast is used, it's diameter in mm.",
+                      "examples": [
+                        203
+                      ]
+                    },
+                    "lattice_face_width_at_bottom_mm": {
+                      "type": [
+                        "integer",
+                        "null"
+                      ],
+                      "title": "Lattice Face Width at Bottom [mm]",
+                      "description": "The lattice section bottom face width.",
+                      "examples": [
+                        500
+                      ]
+                    },
+                    "lattice_face_width_at_top_mm": {
+                      "type": [
+                        "integer",
+                        "null"
+                      ],
+                      "title": "Lattice Face Width at Top [mm]",
+                      "description": "The lattice section top face width.",
+                      "examples": [
+                        500
+                      ]
+                    },
+                    "lattice_leg_width_mm": {
+                      "type": [
+                        "integer",
+                        "null"
+                      ],
+                      "title": "Lattice Leg Width [mm]",
+                      "description": "The lattice leg diameter for a round leg or width for a square cross section leg.",
+                      "examples": [
+                        50
+                      ]
+                    },
+                    "lattice_leg_is_round_cross_section": {
+                      "type": [
+                        "boolean",
+                        "null"
+                      ],
+                      "title": "Lattice Leg is Round Cross Section",
+                      "description": "The lattice leg is a round or square cross section.",
+                      "examples": [
+                        "true - for a round leg cross section",
+                        "false - for a square leg cross section"
+                      ]
+                    },
+                    "lattice_bracing_member_diameter_mm": {
+                      "type": [
+                        "integer",
+                        "null"
+                      ],
+                      "title": "Lattice Bracing Member Diameter [mm]",
+                      "description": "The lattice diagonal bracing member diameter.",
+                      "examples": [
+                        12
+                      ]
+                    },
+                    "lattice_number_of_diagonal_bracing_members": {
+                      "type": [
+                        "integer",
+                        "null"
+                      ],
+                      "title": "Lattice Number of Bracing Members",
+                      "description": "The number of lattice diagonal bracing members.",
+                      "examples": [
+                        1,
+                        2
+                      ]
+                    },
+                    "lattice_bracing_member_height_mm": {
+                      "type": [
+                        "integer",
+                        "null"
+                      ],
+                      "title": "Lattice Bracing Member Height [mm]",
+                      "description": "The height of the lattice diagonal bracing members.",
+                      "examples": [
+                        900
+                      ]
+                    },
+                    "notes": {
+                      "$ref": "#/definitions/notes"
+                    },
+                    "update_at": {
+                      "$ref": "#/definitions/update_at"
+                    }
+                  },
+                  "additionalProperties": false,
+                  "required": [
 
+                  ]
+                },
+                "additionalItems": false,
+                "uniqueItems": true
+              }
+            },
+            "additionalProperties": false
           },
           "logger_main_config": {
             "type": "array",
