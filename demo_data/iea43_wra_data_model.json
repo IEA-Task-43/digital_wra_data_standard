@@ -17,7 +17,7 @@
       "mast_oem": "A Mast Manufacturer",
       "mast_serial_number": "MM01234",
       "mast_model": "SLX80m",
-      "mast_height_m": "78",
+      "mast_height_m": 78.5,
       "notes": "I can write anything I want here.",
       "update_at": "2020-04-18T18:13:00",
       "mast_section_geometry": [{
