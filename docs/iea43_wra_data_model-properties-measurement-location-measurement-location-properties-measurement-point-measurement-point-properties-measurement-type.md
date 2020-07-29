@@ -15,7 +15,6 @@
 | `"relative_humidity"`     |             |
 | `"voltage"`               |             |
 | `"current"`               |             |
-| `"solar_irradiation"`     |             |
 | `"vertical_wind_speed"`   |             |
 | `"wind_speed_turbulence"` |             |
 | `"precipitation"`         |             |
