@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "e97fbab9ae64a1f712ef4cb14e7228e3",
+    "revision": "042075c292e4314d62339c3f15e0da12",
     "url": "/digital_wra_data_standard/index.html"
   },
   {
-    "revision": "2d3a5d8cb4cadd4eab47",
+    "revision": "b049444524544aafe139",
     "url": "/digital_wra_data_standard/static/css/main.0e04eb83.chunk.css"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/digital_wra_data_standard/static/js/2.133a68c4.chunk.js"
   },
   {
-    "revision": "2d3a5d8cb4cadd4eab47",
-    "url": "/digital_wra_data_standard/static/js/main.cd104137.chunk.js"
+    "revision": "b049444524544aafe139",
+    "url": "/digital_wra_data_standard/static/js/main.1a110779.chunk.js"
   },
   {
     "revision": "b122ce7f3b427e9298c9",
