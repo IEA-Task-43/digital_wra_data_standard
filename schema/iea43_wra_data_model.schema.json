@@ -982,7 +982,10 @@
                               "$ref": "#/definitions/update_at"
                             },
                             "calibration_uncertainty": {
-                              "type": "array",
+                              "type": [
+                                "array",
+                                "null"
+                              ],
                               "title": "Calibration Uncertainty",
                               "description": "The sensor calibration details.",
                               "items": {
