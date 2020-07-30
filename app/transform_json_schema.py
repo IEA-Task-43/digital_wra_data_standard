@@ -11,7 +11,7 @@ if __name__ == '__main__':
 
     schema = re.sub(r'[\s]+"\$schema": "[^"]+",\n','',schema)
     schema = re.sub(r'[\s]+"\$id": "[^"]+",\n', '', schema)
-    schema = re.sub(r'[\s]*,[\s]*\n[\s]*"null"','', schema)
+    schema = re.sub(r'\"type\": \[[\s]*\n[\s]*"([\w]+)",\n[\s]+"null"\n[\s]+\]',r'"type": "\g<1>"', schema)
 
     with open(schema_path, 'w') as file:
         file.write(schema)
