@@ -21,7 +21,9 @@
       "description": "The date to when these properties are active.",
       "examples": [
         "2020-07-28T20:00:00"
-      ]
+      ],
+      "default": "2100-01-01T00:00:00",
+      "$comment": "### This default set to 2100-01-01T00:00:00 is to fix the JSON Form App. If we move away from that this should be removed. ###"
     },
     "notes": {
       "type": [
@@ -604,7 +606,9 @@
                     "null"
                   ],
                   "title": "Height [m]",
-                  "description": "The height (in meters) above ground level the measurement is taking place."
+                  "description": "The height (in meters) above ground level the measurement is taking place.",
+                  "default": -999,
+                  "$comment": "### This default set to -999 is to fix the JSON Form App. If we move away from that this should be removed. ###"
                 },
                 "notes": {
                   "$ref": "#/definitions/notes"
