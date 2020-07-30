@@ -6,6 +6,14 @@
 
 **date time**: the string must be a date time string, according to [RFC 3339, section 5.6](https://tools.ietf.org/html/rfc3339 "check the specification")
 
+## date_to Default Value
+
+The default value is:
+
+```json
+"2100-01-01T00:00:00"
+```
+
 ## date_to Examples
 
 ```json

@@ -210,6 +210,9 @@ The date from when these properties are active. If these properties follow a cha
 The date to when these properties are active.
 
 
+> ### This default set to 2100-01-01T00:00:00 is to fix the JSON Form App. If we move away from that this should be removed.
+>
+
 `date_to`
 
 -   is required
@@ -224,6 +227,14 @@ The date to when these properties are active.
 ### date_to Constraints
 
 **date time**: the string must be a date time string, according to [RFC 3339, section 5.6](https://tools.ietf.org/html/rfc3339 "check the specification")
+
+### date_to Default Value
+
+The default value is:
+
+```json
+"2100-01-01T00:00:00"
+```
 
 ### date_to Examples
 

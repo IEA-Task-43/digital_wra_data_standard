@@ -79,6 +79,9 @@ The type of measurement been made.
 The height (in meters) above ground level the measurement is taking place.
 
 
+> ### This default set to -999 is to fix the JSON Form App. If we move away from that this should be removed.
+>
+
 `height_m`
 
 -   is required
@@ -89,6 +92,14 @@ The height (in meters) above ground level the measurement is taking place.
 ### height_m Type
 
 `number` ([Height \[m\]](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-measurement-point-measurement-point-properties-height-m.md))
+
+### height_m Default Value
+
+The default value is:
+
+```json
+-999
+```
 
 ## notes
 

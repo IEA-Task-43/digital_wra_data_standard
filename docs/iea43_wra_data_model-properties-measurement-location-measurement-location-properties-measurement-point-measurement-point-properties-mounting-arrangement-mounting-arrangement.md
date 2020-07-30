@@ -7,8 +7,8 @@
 | Property                                                            | Type         | Required | Nullable       | Defined by                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 | :------------------------------------------------------------------ | ------------ | -------- | -------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [mast_section_geometry_uuid](#mast_section_geometry_uuid)           | Unknown Type | Optional | can be null    | [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-measurement-point-measurement-point-properties-mounting-arrangement-mounting-arrangement-properties-mast-section-geometry-uuid.md "https&#x3A;//raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/measurement_point/items/properties/mounting_arrangement/items/properties/mast_section_geometry_uuid")         |
-| [mounting_type_id](#mounting_type_id)                               | Unknown Type | Required | can be null    | [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-measurement-point-measurement-point-properties-mounting-arrangement-mounting-arrangement-properties-mounting-type.md "https&#x3A;//raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/measurement_point/items/properties/mounting_arrangement/items/properties/mounting_type_id")                                |
-| [boom_orientation_deg](#boom_orientation_deg)                       | Unknown Type | Required | can be null    | [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-measurement-point-measurement-point-properties-mounting-arrangement-mounting-arrangement-properties-boom-orientation-deg.md "https&#x3A;//raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/measurement_point/items/properties/mounting_arrangement/items/properties/boom_orientation_deg")                     |
+| [mounting_type_id](#mounting_type_id)                               | Unknown Type | Optional | can be null    | [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-measurement-point-measurement-point-properties-mounting-arrangement-mounting-arrangement-properties-mounting-type.md "https&#x3A;//raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/measurement_point/items/properties/mounting_arrangement/items/properties/mounting_type_id")                                |
+| [boom_orientation_deg](#boom_orientation_deg)                       | Unknown Type | Optional | can be null    | [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-measurement-point-measurement-point-properties-mounting-arrangement-mounting-arrangement-properties-boom-orientation-deg.md "https&#x3A;//raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/measurement_point/items/properties/mounting_arrangement/items/properties/boom_orientation_deg")                     |
 | [vane_dead_band_orientation_deg](#vane_dead_band_orientation_deg)   | Unknown Type | Optional | can be null    | [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-measurement-point-measurement-point-properties-mounting-arrangement-mounting-arrangement-properties-vane-dead-band-orientation-deg.md "https&#x3A;//raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/measurement_point/items/properties/mounting_arrangement/items/properties/vane_dead_band_orientation_deg") |
 | [orientation_reference_id](#orientation_reference_id)               | Unknown Type | Optional | can be null    | [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-measurement-point-measurement-point-properties-mounting-arrangement-mounting-arrangement-properties-orientation-reference.md "https&#x3A;//raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/measurement_point/items/properties/mounting_arrangement/items/properties/orientation_reference_id")                |
 | [tilt_angle_deg](#tilt_angle_deg)                                   | Unknown Type | Optional | can be null    | [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-measurement-point-measurement-point-properties-mounting-arrangement-mounting-arrangement-properties-tilt-angle-deg.md "https&#x3A;//raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/measurement_point/items/properties/mounting_arrangement/items/properties/tilt_angle_deg")                                 |
@@ -51,7 +51,7 @@ The mounting type the sensor is mounted onto the mast e.g. an anemometer top mou
 
 `mounting_type_id`
 
--   is required
+-   is optional
 -   Type: `string` ([Mounting Type](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-measurement-point-measurement-point-properties-mounting-arrangement-mounting-arrangement-properties-mounting-type.md))
 -   can be null
 -   defined in: [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-measurement-point-measurement-point-properties-mounting-arrangement-mounting-arrangement-properties-mounting-type.md "https&#x3A;//raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/measurement_point/items/properties/mounting_arrangement/items/properties/mounting_type_id")
@@ -77,7 +77,7 @@ The boom orientation of the horizontal boom the sensor is mounted on.
 
 `boom_orientation_deg`
 
--   is required
+-   is optional
 -   Type: `integer` ([Boom Orientation \[deg\]](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-measurement-point-measurement-point-properties-mounting-arrangement-mounting-arrangement-properties-boom-orientation-deg.md))
 -   can be null
 -   defined in: [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-measurement-point-measurement-point-properties-mounting-arrangement-mounting-arrangement-properties-boom-orientation-deg.md "https&#x3A;//raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/measurement_point/items/properties/mounting_arrangement/items/properties/boom_orientation_deg")
@@ -325,6 +325,9 @@ The date from when these properties are active. If these properties follow a cha
 The date to when these properties are active.
 
 
+> ### This default set to 2100-01-01T00:00:00 is to fix the JSON Form App. If we move away from that this should be removed.
+>
+
 `date_to`
 
 -   is required
@@ -339,6 +342,14 @@ The date to when these properties are active.
 ### date_to Constraints
 
 **date time**: the string must be a date time string, according to [RFC 3339, section 5.6](https://tools.ietf.org/html/rfc3339 "check the specification")
+
+### date_to Default Value
+
+The default value is:
+
+```json
+"2100-01-01T00:00:00"
+```
 
 ### date_to Examples
 
