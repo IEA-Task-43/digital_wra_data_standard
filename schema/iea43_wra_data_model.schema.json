@@ -1200,7 +1200,6 @@
                     },
                     "required": [
                       "boom_orientation_deg",
-                      "mounting_type_id",
                       "date_from",
                       "date_to"
                     ]
