@@ -737,7 +737,8 @@
                             "is_ignored": {
                               "type": "boolean",
                               "title": "Is Ignored",
-                              "description": "If you want to ignore this column name, set to True."
+                              "description": "If you want to ignore this column name, set to True.",
+                              "default": false
                             },
                             "notes": {
                               "$ref": "#/definitions/notes"
@@ -749,7 +750,6 @@
                           "additionalProperties": false,
                           "required": [
                             "column_name",
-                            "is_ignored",
                             "metric_id"
                           ]
                         },
