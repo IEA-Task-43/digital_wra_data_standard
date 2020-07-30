@@ -7,6 +7,7 @@ on:
     paths:
       - 'schema/**'
       - '.github/workflows/deploy_app.yml'
+  workflow_dispatch:
 
 jobs:
   deploy:
