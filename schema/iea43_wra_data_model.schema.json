@@ -1199,7 +1199,6 @@
                       }
                     },
                     "required": [
-                      "boom_orientation_deg",
                       "date_from",
                       "date_to"
                     ]
