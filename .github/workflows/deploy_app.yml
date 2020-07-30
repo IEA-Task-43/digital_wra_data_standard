@@ -15,10 +15,15 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Copy schema
-        run: cp ./schema/iea43_wra_data_model.schema.json ./app/src/schema_raw.json
+        run: cp ./schema/iea43_wra_data_model.schema.json ./app/src/schema.json
+      
+      - name: Setup Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.x'
         
-      - name: Remove first 2 lines (id and schema) of schema to make it renderable as form
-        run: sed '2,3d' ./app/src/schema_raw.json > ./app/src/schema.json
+      - name: Clean up JSON schema for use with Form App
+        run: python ./app/transform_json_schema.py ./app/src/schema.json
       
       - name: Read schema
         id: vars
