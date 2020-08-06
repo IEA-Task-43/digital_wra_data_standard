@@ -1,6 +1,6 @@
 ## uncertainty_k_factor Type
 
-`integer` ([Uncertainty K Factor](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-measurement-point-measurement-point-properties-sensor-sensor-properties-calibration-calibration-properties-uncertainty-k-factor.md))
+`number` ([Uncertainty K Factor](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-measurement-point-measurement-point-properties-sensor-sensor-properties-calibration-calibration-properties-uncertainty-k-factor.md))
 
 ## uncertainty_k_factor Examples
 

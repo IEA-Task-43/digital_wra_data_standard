@@ -1,6 +1,6 @@
 ## vane_dead_band_orientation_deg Type
 
-`integer` ([Vane Dead Band Orientation \[deg\]](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-measurement-point-measurement-point-properties-mounting-arrangement-mounting-arrangement-properties-vane-dead-band-orientation-deg.md))
+`number` ([Vane Dead Band Orientation \[deg\]](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-measurement-point-measurement-point-properties-mounting-arrangement-mounting-arrangement-properties-vane-dead-band-orientation-deg.md))
 
 ## vane_dead_band_orientation_deg Constraints
 

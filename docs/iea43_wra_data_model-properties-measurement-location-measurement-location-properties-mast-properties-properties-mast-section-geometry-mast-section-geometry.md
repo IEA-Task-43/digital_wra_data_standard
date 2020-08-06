@@ -7,14 +7,14 @@
 | Property                                                                                  | Type      | Required | Nullable    | Defined by                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
 | :---------------------------------------------------------------------------------------- | --------- | -------- | ----------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [uuid](#uuid)                                                                             | `string`  | Optional | can be null | [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-mast-properties-properties-mast-section-geometry-mast-section-geometry-properties-uuid.md "https&#x3A;//raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/mast_properties/properties/mast_section_geometry/items/properties/uuid")                                                                    |
-| [pole_diameter_mm](#pole_diameter_mm)                                                     | `integer` | Optional | can be null | [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-mast-properties-properties-mast-section-geometry-mast-section-geometry-properties-pole-diameter-mm.md "https&#x3A;//raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/mast_properties/properties/mast_section_geometry/items/properties/pole_diameter_mm")                                            |
-| [lattice_face_width_at_bottom_mm](#lattice_face_width_at_bottom_mm)                       | `integer` | Optional | can be null | [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-mast-properties-properties-mast-section-geometry-mast-section-geometry-properties-lattice-face-width-at-bottom-mm.md "https&#x3A;//raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/mast_properties/properties/mast_section_geometry/items/properties/lattice_face_width_at_bottom_mm")              |
-| [lattice_face_width_at_top_mm](#lattice_face_width_at_top_mm)                             | `integer` | Optional | can be null | [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-mast-properties-properties-mast-section-geometry-mast-section-geometry-properties-lattice-face-width-at-top-mm.md "https&#x3A;//raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/mast_properties/properties/mast_section_geometry/items/properties/lattice_face_width_at_top_mm")                    |
-| [lattice_leg_width_mm](#lattice_leg_width_mm)                                             | `integer` | Optional | can be null | [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-mast-properties-properties-mast-section-geometry-mast-section-geometry-properties-lattice-leg-width-mm.md "https&#x3A;//raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/mast_properties/properties/mast_section_geometry/items/properties/lattice_leg_width_mm")                                    |
+| [pole_diameter_mm](#pole_diameter_mm)                                                     | `number`  | Optional | can be null | [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-mast-properties-properties-mast-section-geometry-mast-section-geometry-properties-pole-diameter-mm.md "https&#x3A;//raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/mast_properties/properties/mast_section_geometry/items/properties/pole_diameter_mm")                                            |
+| [lattice_face_width_at_bottom_mm](#lattice_face_width_at_bottom_mm)                       | `number`  | Optional | can be null | [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-mast-properties-properties-mast-section-geometry-mast-section-geometry-properties-lattice-face-width-at-bottom-mm.md "https&#x3A;//raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/mast_properties/properties/mast_section_geometry/items/properties/lattice_face_width_at_bottom_mm")              |
+| [lattice_face_width_at_top_mm](#lattice_face_width_at_top_mm)                             | `number`  | Optional | can be null | [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-mast-properties-properties-mast-section-geometry-mast-section-geometry-properties-lattice-face-width-at-top-mm.md "https&#x3A;//raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/mast_properties/properties/mast_section_geometry/items/properties/lattice_face_width_at_top_mm")                    |
+| [lattice_leg_width_mm](#lattice_leg_width_mm)                                             | `number`  | Optional | can be null | [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-mast-properties-properties-mast-section-geometry-mast-section-geometry-properties-lattice-leg-width-mm.md "https&#x3A;//raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/mast_properties/properties/mast_section_geometry/items/properties/lattice_leg_width_mm")                                    |
 | [lattice_leg_is_round_cross_section](#lattice_leg_is_round_cross_section)                 | `boolean` | Optional | can be null | [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-mast-properties-properties-mast-section-geometry-mast-section-geometry-properties-lattice-leg-is-round-cross-section.md "https&#x3A;//raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/mast_properties/properties/mast_section_geometry/items/properties/lattice_leg_is_round_cross_section")        |
-| [lattice_bracing_member_diameter_mm](#lattice_bracing_member_diameter_mm)                 | `integer` | Optional | can be null | [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-mast-properties-properties-mast-section-geometry-mast-section-geometry-properties-lattice-bracing-member-diameter-mm.md "https&#x3A;//raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/mast_properties/properties/mast_section_geometry/items/properties/lattice_bracing_member_diameter_mm")        |
+| [lattice_bracing_member_diameter_mm](#lattice_bracing_member_diameter_mm)                 | `number`  | Optional | can be null | [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-mast-properties-properties-mast-section-geometry-mast-section-geometry-properties-lattice-bracing-member-diameter-mm.md "https&#x3A;//raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/mast_properties/properties/mast_section_geometry/items/properties/lattice_bracing_member_diameter_mm")        |
 | [lattice_number_of_diagonal_bracing_members](#lattice_number_of_diagonal_bracing_members) | `integer` | Optional | can be null | [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-mast-properties-properties-mast-section-geometry-mast-section-geometry-properties-lattice-number-of-bracing-members.md "https&#x3A;//raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/mast_properties/properties/mast_section_geometry/items/properties/lattice_number_of_diagonal_bracing_members") |
-| [lattice_bracing_member_height_mm](#lattice_bracing_member_height_mm)                     | `integer` | Optional | can be null | [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-mast-properties-properties-mast-section-geometry-mast-section-geometry-properties-lattice-bracing-member-height-mm.md "https&#x3A;//raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/mast_properties/properties/mast_section_geometry/items/properties/lattice_bracing_member_height_mm")            |
+| [lattice_bracing_member_height_mm](#lattice_bracing_member_height_mm)                     | `number`  | Optional | can be null | [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-mast-properties-properties-mast-section-geometry-mast-section-geometry-properties-lattice-bracing-member-height-mm.md "https&#x3A;//raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/mast_properties/properties/mast_section_geometry/items/properties/lattice_bracing_member_height_mm")            |
 | [notes](#notes)                                                                           | `string`  | Optional | can be null | [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-definitions-notes.md "https&#x3A;//raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/mast_properties/properties/mast_section_geometry/items/properties/notes")                                                                                                                                                                                                        |
 | [update_at](#update_at)                                                                   | `string`  | Optional | can be null | [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-definitions-date-of-update.md "https&#x3A;//raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/mast_properties/properties/mast_section_geometry/items/properties/update_at")                                                                                                                                                                                           |
 
@@ -52,13 +52,13 @@ If a pole mast is used, it's diameter in mm.
 `pole_diameter_mm`
 
 -   is optional
--   Type: `integer` ([Pole Diameter \[mm\]](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-mast-properties-properties-mast-section-geometry-mast-section-geometry-properties-pole-diameter-mm.md))
+-   Type: `number` ([Pole Diameter \[mm\]](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-mast-properties-properties-mast-section-geometry-mast-section-geometry-properties-pole-diameter-mm.md))
 -   can be null
 -   defined in: [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-mast-properties-properties-mast-section-geometry-mast-section-geometry-properties-pole-diameter-mm.md "https&#x3A;//raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/mast_properties/properties/mast_section_geometry/items/properties/pole_diameter_mm")
 
 ### pole_diameter_mm Type
 
-`integer` ([Pole Diameter \[mm\]](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-mast-properties-properties-mast-section-geometry-mast-section-geometry-properties-pole-diameter-mm.md))
+`number` ([Pole Diameter \[mm\]](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-mast-properties-properties-mast-section-geometry-mast-section-geometry-properties-pole-diameter-mm.md))
 
 ### pole_diameter_mm Examples
 
@@ -74,13 +74,13 @@ The lattice section bottom face width.
 `lattice_face_width_at_bottom_mm`
 
 -   is optional
--   Type: `integer` ([Lattice Face Width at Bottom \[mm\]](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-mast-properties-properties-mast-section-geometry-mast-section-geometry-properties-lattice-face-width-at-bottom-mm.md))
+-   Type: `number` ([Lattice Face Width at Bottom \[mm\]](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-mast-properties-properties-mast-section-geometry-mast-section-geometry-properties-lattice-face-width-at-bottom-mm.md))
 -   can be null
 -   defined in: [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-mast-properties-properties-mast-section-geometry-mast-section-geometry-properties-lattice-face-width-at-bottom-mm.md "https&#x3A;//raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/mast_properties/properties/mast_section_geometry/items/properties/lattice_face_width_at_bottom_mm")
 
 ### lattice_face_width_at_bottom_mm Type
 
-`integer` ([Lattice Face Width at Bottom \[mm\]](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-mast-properties-properties-mast-section-geometry-mast-section-geometry-properties-lattice-face-width-at-bottom-mm.md))
+`number` ([Lattice Face Width at Bottom \[mm\]](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-mast-properties-properties-mast-section-geometry-mast-section-geometry-properties-lattice-face-width-at-bottom-mm.md))
 
 ### lattice_face_width_at_bottom_mm Examples
 
@@ -96,13 +96,13 @@ The lattice section top face width.
 `lattice_face_width_at_top_mm`
 
 -   is optional
--   Type: `integer` ([Lattice Face Width at Top \[mm\]](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-mast-properties-properties-mast-section-geometry-mast-section-geometry-properties-lattice-face-width-at-top-mm.md))
+-   Type: `number` ([Lattice Face Width at Top \[mm\]](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-mast-properties-properties-mast-section-geometry-mast-section-geometry-properties-lattice-face-width-at-top-mm.md))
 -   can be null
 -   defined in: [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-mast-properties-properties-mast-section-geometry-mast-section-geometry-properties-lattice-face-width-at-top-mm.md "https&#x3A;//raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/mast_properties/properties/mast_section_geometry/items/properties/lattice_face_width_at_top_mm")
 
 ### lattice_face_width_at_top_mm Type
 
-`integer` ([Lattice Face Width at Top \[mm\]](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-mast-properties-properties-mast-section-geometry-mast-section-geometry-properties-lattice-face-width-at-top-mm.md))
+`number` ([Lattice Face Width at Top \[mm\]](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-mast-properties-properties-mast-section-geometry-mast-section-geometry-properties-lattice-face-width-at-top-mm.md))
 
 ### lattice_face_width_at_top_mm Examples
 
@@ -118,13 +118,13 @@ The lattice leg diameter for a round leg or width for a square cross section leg
 `lattice_leg_width_mm`
 
 -   is optional
--   Type: `integer` ([Lattice Leg Width \[mm\]](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-mast-properties-properties-mast-section-geometry-mast-section-geometry-properties-lattice-leg-width-mm.md))
+-   Type: `number` ([Lattice Leg Width \[mm\]](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-mast-properties-properties-mast-section-geometry-mast-section-geometry-properties-lattice-leg-width-mm.md))
 -   can be null
 -   defined in: [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-mast-properties-properties-mast-section-geometry-mast-section-geometry-properties-lattice-leg-width-mm.md "https&#x3A;//raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/mast_properties/properties/mast_section_geometry/items/properties/lattice_leg_width_mm")
 
 ### lattice_leg_width_mm Type
 
-`integer` ([Lattice Leg Width \[mm\]](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-mast-properties-properties-mast-section-geometry-mast-section-geometry-properties-lattice-leg-width-mm.md))
+`number` ([Lattice Leg Width \[mm\]](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-mast-properties-properties-mast-section-geometry-mast-section-geometry-properties-lattice-leg-width-mm.md))
 
 ### lattice_leg_width_mm Examples
 
@@ -166,13 +166,13 @@ The lattice diagonal bracing member diameter.
 `lattice_bracing_member_diameter_mm`
 
 -   is optional
--   Type: `integer` ([Lattice Bracing Member Diameter \[mm\]](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-mast-properties-properties-mast-section-geometry-mast-section-geometry-properties-lattice-bracing-member-diameter-mm.md))
+-   Type: `number` ([Lattice Bracing Member Diameter \[mm\]](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-mast-properties-properties-mast-section-geometry-mast-section-geometry-properties-lattice-bracing-member-diameter-mm.md))
 -   can be null
 -   defined in: [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-mast-properties-properties-mast-section-geometry-mast-section-geometry-properties-lattice-bracing-member-diameter-mm.md "https&#x3A;//raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/mast_properties/properties/mast_section_geometry/items/properties/lattice_bracing_member_diameter_mm")
 
 ### lattice_bracing_member_diameter_mm Type
 
-`integer` ([Lattice Bracing Member Diameter \[mm\]](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-mast-properties-properties-mast-section-geometry-mast-section-geometry-properties-lattice-bracing-member-diameter-mm.md))
+`number` ([Lattice Bracing Member Diameter \[mm\]](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-mast-properties-properties-mast-section-geometry-mast-section-geometry-properties-lattice-bracing-member-diameter-mm.md))
 
 ### lattice_bracing_member_diameter_mm Examples
 
@@ -214,13 +214,13 @@ The height of the lattice diagonal bracing members.
 `lattice_bracing_member_height_mm`
 
 -   is optional
--   Type: `integer` ([Lattice Bracing Member Height \[mm\]](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-mast-properties-properties-mast-section-geometry-mast-section-geometry-properties-lattice-bracing-member-height-mm.md))
+-   Type: `number` ([Lattice Bracing Member Height \[mm\]](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-mast-properties-properties-mast-section-geometry-mast-section-geometry-properties-lattice-bracing-member-height-mm.md))
 -   can be null
 -   defined in: [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-mast-properties-properties-mast-section-geometry-mast-section-geometry-properties-lattice-bracing-member-height-mm.md "https&#x3A;//raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/mast_properties/properties/mast_section_geometry/items/properties/lattice_bracing_member_height_mm")
 
 ### lattice_bracing_member_height_mm Type
 
-`integer` ([Lattice Bracing Member Height \[mm\]](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-mast-properties-properties-mast-section-geometry-mast-section-geometry-properties-lattice-bracing-member-height-mm.md))
+`number` ([Lattice Bracing Member Height \[mm\]](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-mast-properties-properties-mast-section-geometry-mast-section-geometry-properties-lattice-bracing-member-height-mm.md))
 
 ### lattice_bracing_member_height_mm Examples
 

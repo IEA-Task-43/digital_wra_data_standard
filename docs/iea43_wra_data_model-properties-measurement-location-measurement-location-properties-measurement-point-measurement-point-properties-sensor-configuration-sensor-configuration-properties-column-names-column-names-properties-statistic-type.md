@@ -1,8 +1,8 @@
-## metric_id Type
+## statistic_type_id Type
 
-`string` ([Metric](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-measurement-point-measurement-point-properties-sensor-configuration-sensor-configuration-properties-column-names-column-names-properties-metric.md))
+`string` ([Statistic Type](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-measurement-point-measurement-point-properties-sensor-configuration-sensor-configuration-properties-column-names-column-names-properties-statistic-type.md))
 
-## metric_id Constraints
+## statistic_type_id Constraints
 
 **enum**: the value of this property must be equal to one of the following values:
 
@@ -17,4 +17,5 @@
 | `"median"` |             |
 | `"mode"`   |             |
 | `"range"`  |             |
+| `"gust"`   |             |
 | `"text"`   |             |
