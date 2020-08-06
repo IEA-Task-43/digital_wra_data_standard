@@ -74,25 +74,25 @@
         "column_name": [
           {
             "column_name": "CH1Avg",
-            "metric_id": "avg",
+            "statistic_type_id": "avg",
             "is_ignored": false,
             "notes": "I can write anything I want here.",
             "update_at": "2020-04-18T18:13:00"
           },{
             "column_name": "CH1SD",
-            "metric_id": "sd",
+            "statistic_type_id": "sd",
             "is_ignored": false,
             "notes": "I can write anything I want here.",
             "update_at": "2020-04-18T18:13:00"
           },{
             "column_name": "CH1Min",
-            "metric_id": "min",
+            "statistic_type_id": "min",
             "is_ignored": false,
             "notes": "I can write anything I want here.",
             "update_at": "2020-04-18T18:13:00"
           },{
             "column_name": "CH1Max",
-            "metric_id": "max",
+            "statistic_type_id": "max",
             "is_ignored": false,
             "notes": "I can write anything I want here.",
             "update_at": "2020-04-18T18:13:00"
@@ -112,25 +112,25 @@
         "column_name": [
           {
             "column_name": "CH1Avg",
-            "metric_id": "avg",
+            "statistic_type_id": "avg",
             "is_ignored": false,
             "notes": "I can write anything I want here.",
             "update_at": "2020-04-18T18:13:00"
           },{
             "column_name": "CH1SD",
-            "metric_id": "sd",
+            "statistic_type_id": "sd",
             "is_ignored": false,
             "notes": "I can write anything I want here.",
             "update_at": "2020-04-18T18:13:00"
           },{
             "column_name": "CH1Min",
-            "metric_id": "min",
+            "statistic_type_id": "min",
             "is_ignored": false,
             "notes": "I can write anything I want here.",
             "update_at": "2020-04-18T18:13:00"
           },{
             "column_name": "CH1Max",
-            "metric_id": "max",
+            "statistic_type_id": "max",
             "is_ignored": false,
             "notes": "I can write anything I want here.",
             "update_at": "2020-04-18T18:13:00"
@@ -254,25 +254,25 @@
         "column_name": [
           {
             "column_name": "CH2Avg",
-            "metric_id": "avg",
+            "statistic_type_id": "avg",
             "is_ignored": false,
             "notes": "I can write anything I want here.",
             "update_at": "2020-04-18T18:13:00"
           },{
             "column_name": "CH2SD",
-            "metric_id": "sd",
+            "statistic_type_id": "sd",
             "is_ignored": false,
             "notes": "I can write anything I want here.",
             "update_at": "2020-04-18T18:13:00"
           },{
             "column_name": "CH2Min",
-            "metric_id": "min",
+            "statistic_type_id": "min",
             "is_ignored": false,
             "notes": "I can write anything I want here.",
             "update_at": "2020-04-18T18:13:00"
           },{
             "column_name": "CH2Max",
-            "metric_id": "max",
+            "statistic_type_id": "max",
             "is_ignored": false,
             "notes": "I can write anything I want here.",
             "update_at": "2020-04-18T18:13:00"
@@ -292,25 +292,25 @@
         "column_name": [
           {
             "column_name": "CH2Avg",
-            "metric_id": "avg",
+            "statistic_type_id": "avg",
             "is_ignored": false,
             "notes": "I can write anything I want here.",
             "update_at": "2020-04-18T18:13:00"
           },{
             "column_name": "CH2SD",
-            "metric_id": "sd",
+            "statistic_type_id": "sd",
             "is_ignored": false,
             "notes": "I can write anything I want here.",
             "update_at": "2020-04-18T18:13:00"
           },{
             "column_name": "CH2Min",
-            "metric_id": "min",
+            "statistic_type_id": "min",
             "is_ignored": false,
             "notes": "I can write anything I want here.",
             "update_at": "2020-04-18T18:13:00"
           },{
             "column_name": "CH2Max",
-            "metric_id": "max",
+            "statistic_type_id": "max",
             "is_ignored": false,
             "notes": "I can write anything I want here.",
             "update_at": "2020-04-18T18:13:00"
@@ -511,25 +511,25 @@
         "column_name": [
           {
             "column_name": "CH3Avg",
-            "metric_id": "avg",
+            "statistic_type_id": "avg",
             "is_ignored": false,
             "notes": "I can write anything I want here.",
             "update_at": "2020-04-18T18:13:00"
           },{
             "column_name": "CH3SD",
-            "metric_id": "sd",
+            "statistic_type_id": "sd",
             "is_ignored": false,
             "notes": "I can write anything I want here.",
             "update_at": "2020-04-18T18:13:00"
           },{
             "column_name": "CH3Min",
-            "metric_id": "min",
+            "statistic_type_id": "min",
             "is_ignored": false,
             "notes": "I can write anything I want here.",
             "update_at": "2020-04-18T18:13:00"
           },{
             "column_name": "CH3Max",
-            "metric_id": "max",
+            "statistic_type_id": "max",
             "is_ignored": false,
             "notes": "I can write anything I want here.",
             "update_at": "2020-04-18T18:13:00"
@@ -653,25 +653,25 @@
         "column_name": [
           {
             "column_name": "CH4Avg",
-            "metric_id": "avg",
+            "statistic_type_id": "avg",
             "is_ignored": false,
             "notes": "I can write anything I want here.",
             "update_at": "2020-04-18T18:13:00"
           },{
             "column_name": "CH4SD",
-            "metric_id": "sd",
+            "statistic_type_id": "sd",
             "is_ignored": false,
             "notes": "I can write anything I want here.",
             "update_at": "2020-04-18T18:13:00"
           },{
             "column_name": "CH4Min",
-            "metric_id": "min",
+            "statistic_type_id": "min",
             "is_ignored": false,
             "notes": "I can write anything I want here.",
             "update_at": "2020-04-18T18:13:00"
           },{
             "column_name": "CH4Max",
-            "metric_id": "max",
+            "statistic_type_id": "max",
             "is_ignored": false,
             "notes": "I can write anything I want here.",
             "update_at": "2020-04-18T18:13:00"
@@ -795,25 +795,25 @@
         "column_name": [
           {
             "column_name": "CH5Avg",
-            "metric_id": "avg",
+            "statistic_type_id": "avg",
             "is_ignored": false,
             "notes": "I can write anything I want here.",
             "update_at": "2020-04-18T18:13:00"
           },{
             "column_name": "CH5SD",
-            "metric_id": "sd",
+            "statistic_type_id": "sd",
             "is_ignored": false,
             "notes": "I can write anything I want here.",
             "update_at": "2020-04-18T18:13:00"
           },{
             "column_name": "CH5Min",
-            "metric_id": "min",
+            "statistic_type_id": "min",
             "is_ignored": false,
             "notes": "I can write anything I want here.",
             "update_at": "2020-04-18T18:13:00"
           },{
             "column_name": "CH5Max",
-            "metric_id": "max",
+            "statistic_type_id": "max",
             "is_ignored": false,
             "notes": "I can write anything I want here.",
             "update_at": "2020-04-18T18:13:00"
@@ -833,25 +833,25 @@
         "column_name": [
           {
             "column_name": "CH14Avg",
-            "metric_id": "avg",
+            "statistic_type_id": "avg",
             "is_ignored": false,
             "notes": "I can write anything I want here.",
             "update_at": "2020-04-18T18:13:00"
           },{
             "column_name": "CH14SD",
-            "metric_id": "sd",
+            "statistic_type_id": "sd",
             "is_ignored": false,
             "notes": "I can write anything I want here.",
             "update_at": "2020-04-18T18:13:00"
           },{
             "column_name": "CH14Min",
-            "metric_id": "min",
+            "statistic_type_id": "min",
             "is_ignored": false,
             "notes": "I can write anything I want here.",
             "update_at": "2020-04-18T18:13:00"
           },{
             "column_name": "CH14Max",
-            "metric_id": "max",
+            "statistic_type_id": "max",
             "is_ignored": false,
             "notes": "I can write anything I want here.",
             "update_at": "2020-04-18T18:13:00"
@@ -975,25 +975,25 @@
         "column_name": [
           {
             "column_name": "CH6Avg",
-            "metric_id": "avg",
+            "statistic_type_id": "avg",
             "is_ignored": false,
             "notes": "I can write anything I want here.",
             "update_at": "2020-04-18T18:13:00"
           },{
             "column_name": "CH6SD",
-            "metric_id": "sd",
+            "statistic_type_id": "sd",
             "is_ignored": false,
             "notes": "I can write anything I want here.",
             "update_at": "2020-04-18T18:13:00"
           },{
             "column_name": "CH6Min",
-            "metric_id": "min",
+            "statistic_type_id": "min",
             "is_ignored": false,
             "notes": "I can write anything I want here.",
             "update_at": "2020-04-18T18:13:00"
           },{
             "column_name": "CH6Max",
-            "metric_id": "max",
+            "statistic_type_id": "max",
             "is_ignored": false,
             "notes": "I can write anything I want here.",
             "update_at": "2020-04-18T18:13:00"
@@ -1117,25 +1117,25 @@
         "column_name": [
           {
             "column_name": "CH13Avg",
-            "metric_id": "avg",
+            "statistic_type_id": "avg",
             "is_ignored": false,
             "notes": "I can write anything I want here.",
             "update_at": "2020-04-18T18:13:00"
           },{
             "column_name": "CH13SD",
-            "metric_id": "sd",
+            "statistic_type_id": "sd",
             "is_ignored": false,
             "notes": "I can write anything I want here.",
             "update_at": "2020-04-18T18:13:00"
           },{
             "column_name": "CH13Min",
-            "metric_id": "min",
+            "statistic_type_id": "min",
             "is_ignored": false,
             "notes": "I can write anything I want here.",
             "update_at": "2020-04-18T18:13:00"
           },{
             "column_name": "CH13Max",
-            "metric_id": "max",
+            "statistic_type_id": "max",
             "is_ignored": false,
             "notes": "I can write anything I want here.",
             "update_at": "2020-04-18T18:13:00"
@@ -1259,25 +1259,25 @@
         "column_name": [
           {
             "column_name": "CH7Avg",
-            "metric_id": "avg",
+            "statistic_type_id": "avg",
             "is_ignored": false,
             "notes": "I can write anything I want here.",
             "update_at": "2020-04-18T18:13:00"
           },{
             "column_name": "CH7SD",
-            "metric_id": "sd",
+            "statistic_type_id": "sd",
             "is_ignored": false,
             "notes": "I can write anything I want here.",
             "update_at": "2020-04-18T18:13:00"
           },{
             "column_name": "CH7Min",
-            "metric_id": "min",
+            "statistic_type_id": "min",
             "is_ignored": false,
             "notes": "I can write anything I want here.",
             "update_at": "2020-04-18T18:13:00"
           },{
             "column_name": "CH7Max",
-            "metric_id": "max",
+            "statistic_type_id": "max",
             "is_ignored": false,
             "notes": "I can write anything I want here.",
             "update_at": "2020-04-18T18:13:00"
@@ -1336,25 +1336,25 @@
         "column_name": [
           {
             "column_name": "CH8Avg",
-            "metric_id": "avg",
+            "statistic_type_id": "avg",
             "is_ignored": false,
             "notes": "I can write anything I want here.",
             "update_at": "2020-04-18T18:13:00"
           },{
             "column_name": "CH8SD",
-            "metric_id": "sd",
+            "statistic_type_id": "sd",
             "is_ignored": false,
             "notes": "I can write anything I want here.",
             "update_at": "2020-04-18T18:13:00"
           },{
             "column_name": "CH8Min",
-            "metric_id": "min",
+            "statistic_type_id": "min",
             "is_ignored": false,
             "notes": "I can write anything I want here.",
             "update_at": "2020-04-18T18:13:00"
           },{
             "column_name": "CH8Max",
-            "metric_id": "max",
+            "statistic_type_id": "max",
             "is_ignored": false,
             "notes": "I can write anything I want here.",
             "update_at": "2020-04-18T18:13:00"
@@ -1443,25 +1443,25 @@
         "column_name": [
           {
             "column_name": "CH9Avg",
-            "metric_id": "avg",
+            "statistic_type_id": "avg",
             "is_ignored": false,
             "notes": "I can write anything I want here.",
             "update_at": "2020-04-18T18:13:00"
           },{
             "column_name": "CH9SD",
-            "metric_id": "sd",
+            "statistic_type_id": "sd",
             "is_ignored": false,
             "notes": "I can write anything I want here.",
             "update_at": "2020-04-18T18:13:00"
           },{
             "column_name": "CH9Min",
-            "metric_id": "min",
+            "statistic_type_id": "min",
             "is_ignored": false,
             "notes": "I can write anything I want here.",
             "update_at": "2020-04-18T18:13:00"
           },{
             "column_name": "CH9Max",
-            "metric_id": "max",
+            "statistic_type_id": "max",
             "is_ignored": false,
             "notes": "I can write anything I want here.",
             "update_at": "2020-04-18T18:13:00"
@@ -1502,25 +1502,25 @@
         "column_name": [
           {
             "column_name": "CH10Avg",
-            "metric_id": "avg",
+            "statistic_type_id": "avg",
             "is_ignored": false,
             "notes": "I can write anything I want here.",
             "update_at": "2020-04-18T18:13:00"
           },{
             "column_name": "CH10SD",
-            "metric_id": "sd",
+            "statistic_type_id": "sd",
             "is_ignored": false,
             "notes": "I can write anything I want here.",
             "update_at": "2020-04-18T18:13:00"
           },{
             "column_name": "CH10Min",
-            "metric_id": "min",
+            "statistic_type_id": "min",
             "is_ignored": false,
             "notes": "I can write anything I want here.",
             "update_at": "2020-04-18T18:13:00"
           },{
             "column_name": "CH10Max",
-            "metric_id": "max",
+            "statistic_type_id": "max",
             "is_ignored": false,
             "notes": "I can write anything I want here.",
             "update_at": "2020-04-18T18:13:00"
@@ -1561,25 +1561,25 @@
         "column_name": [
           {
             "column_name": "CH11Avg",
-            "metric_id": "avg",
+            "statistic_type_id": "avg",
             "is_ignored": false,
             "notes": "I can write anything I want here.",
             "update_at": "2020-04-18T18:13:00"
           },{
             "column_name": "CH11SD",
-            "metric_id": "sd",
+            "statistic_type_id": "sd",
             "is_ignored": false,
             "notes": "I can write anything I want here.",
             "update_at": "2020-04-18T18:13:00"
           },{
             "column_name": "CH11Min",
-            "metric_id": "min",
+            "statistic_type_id": "min",
             "is_ignored": false,
             "notes": "I can write anything I want here.",
             "update_at": "2020-04-18T18:13:00"
           },{
             "column_name": "CH11Max",
-            "metric_id": "max",
+            "statistic_type_id": "max",
             "is_ignored": false,
             "notes": "I can write anything I want here.",
             "update_at": "2020-04-18T18:13:00"
@@ -1620,25 +1620,25 @@
         "column_name": [
           {
             "column_name": "CH12Avg",
-            "metric_id": "avg",
+            "statistic_type_id": "avg",
             "is_ignored": false,
             "notes": "I can write anything I want here.",
             "update_at": "2020-04-18T18:13:00"
           },{
             "column_name": "CH12SD",
-            "metric_id": "sd",
+            "statistic_type_id": "sd",
             "is_ignored": false,
             "notes": "I can write anything I want here.",
             "update_at": "2020-04-18T18:13:00"
           },{
             "column_name": "CH12Min",
-            "metric_id": "min",
+            "statistic_type_id": "min",
             "is_ignored": false,
             "notes": "I can write anything I want here.",
             "update_at": "2020-04-18T18:13:00"
           },{
             "column_name": "CH12Max",
-            "metric_id": "max",
+            "statistic_type_id": "max",
             "is_ignored": false,
             "notes": "I can write anything I want here.",
             "update_at": "2020-04-18T18:13:00"
@@ -1679,25 +1679,25 @@
         "column_name": [
           {
             "column_name": "CH15Avg",
-            "metric_id": "avg",
+            "statistic_type_id": "avg",
             "is_ignored": false,
             "notes": "I can write anything I want here.",
             "update_at": "2020-04-18T18:13:00"
           },{
             "column_name": "CH15SD",
-            "metric_id": "sd",
+            "statistic_type_id": "sd",
             "is_ignored": false,
             "notes": "I can write anything I want here.",
             "update_at": "2020-04-18T18:13:00"
           },{
             "column_name": "CH15Min",
-            "metric_id": "min",
+            "statistic_type_id": "min",
             "is_ignored": false,
             "notes": "I can write anything I want here.",
             "update_at": "2020-04-18T18:13:00"
           },{
             "column_name": "CH15Max",
-            "metric_id": "max",
+            "statistic_type_id": "max",
             "is_ignored": false,
             "notes": "I can write anything I want here.",
             "update_at": "2020-04-18T18:13:00"

@@ -718,10 +718,10 @@
                               "title": "Column Name",
                               "description": "The column name in the data file which relates to this sensor configuration."
                             },
-                            "metric_id": {
+                            "statistic_type_id": {
                               "type": "string",
-                              "title": "Metric",
-                              "description": "The metric or aggregation function e.g. 'average' or 'maximum' that this column records.",
+                              "title": "Statistic Type",
+                              "description": "The statistic, aggregation function or signal e.g. 'average' or 'maximum' that this column records.",
                               "enum": [
                                 "avg",
                                 "sd",
@@ -732,6 +732,7 @@
                                 "median",
                                 "mode",
                                 "range",
+                                "gust",
                                 "text"
                               ]
                             },
@@ -751,7 +752,7 @@
                           "additionalProperties": false,
                           "required": [
                             "column_name",
-                            "metric_id"
+                            "statistic_type_id"
                           ]
                         },
                         "additionalItems": false,
