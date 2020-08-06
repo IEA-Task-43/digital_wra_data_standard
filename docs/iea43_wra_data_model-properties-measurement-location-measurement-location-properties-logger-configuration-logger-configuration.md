@@ -6,7 +6,7 @@
 
 | Property                                                  | Type      | Required | Nullable       | Defined by                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
 | :-------------------------------------------------------- | --------- | -------- | -------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| [logger_oem_id](#logger_oem_id)                           | `string`  | Required | cannot be null | [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-logger-configuration-logger-configuration-properties-logger-oem-id.md "https&#x3A;//raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/logger_main_config/items/properties/logger_oem_id")                           |
+| [logger_oem_id](#logger_oem_id)                           | `string`  | Required | cannot be null | [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-logger-configuration-logger-configuration-properties-logger-oem.md "https&#x3A;//raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/logger_main_config/items/properties/logger_oem_id")                              |
 | [logger_model](#logger_model)                             | `string`  | Required | can be null    | [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-logger-configuration-logger-configuration-properties-logger-model.md "https&#x3A;//raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/logger_main_config/items/properties/logger_model")                             |
 | [logger_serial_number](#logger_serial_number)             | `string`  | Required | cannot be null | [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-logger-configuration-logger-configuration-properties-logger-serial-number.md "https&#x3A;//raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/logger_main_config/items/properties/logger_serial_number")             |
 | [logger_id](#logger_id)                                   | `string`  | Optional | can be null    | [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-logger-configuration-logger-configuration-properties-logger-id.md "https&#x3A;//raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/logger_main_config/items/properties/logger_id")                                   |
@@ -32,13 +32,13 @@ This is the logger manufacturer id as defined by the IEA Wind Resource Assessmen
 `logger_oem_id`
 
 -   is required
--   Type: `string` ([Logger OEM Id](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-logger-configuration-logger-configuration-properties-logger-oem-id.md))
+-   Type: `string` ([Logger OEM](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-logger-configuration-logger-configuration-properties-logger-oem.md))
 -   cannot be null
--   defined in: [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-logger-configuration-logger-configuration-properties-logger-oem-id.md "https&#x3A;//raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/logger_main_config/items/properties/logger_oem_id")
+-   defined in: [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-logger-configuration-logger-configuration-properties-logger-oem.md "https&#x3A;//raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/logger_main_config/items/properties/logger_oem_id")
 
 ### logger_oem_id Type
 
-`string` ([Logger OEM Id](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-logger-configuration-logger-configuration-properties-logger-oem-id.md))
+`string` ([Logger OEM](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-logger-configuration-logger-configuration-properties-logger-oem.md))
 
 ### logger_oem_id Constraints
 
@@ -46,7 +46,6 @@ This is the logger manufacturer id as defined by the IEA Wind Resource Assessmen
 
 | Value                   | Explanation |
 | :---------------------- | ----------- |
-| `"US-VT-05461"`         |             |
 | `"NRG Systems"`         |             |
 | `"Ammonit"`             |             |
 | `"Campbell Scientific"` |             |
@@ -60,7 +59,7 @@ This is the logger manufacturer id as defined by the IEA Wind Resource Assessmen
 
 ## logger_model
 
-This is the logger model.
+This is the logger model. This is usually stated in the data files from the logger in either the header or footer.
 
 
 `logger_model`

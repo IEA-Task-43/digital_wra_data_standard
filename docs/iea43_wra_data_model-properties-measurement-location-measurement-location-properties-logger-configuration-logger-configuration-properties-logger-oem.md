@@ -1,6 +1,6 @@
 ## logger_oem_id Type
 
-`string` ([Logger OEM Id](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-logger-configuration-logger-configuration-properties-logger-oem-id.md))
+`string` ([Logger OEM](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-logger-configuration-logger-configuration-properties-logger-oem.md))
 
 ## logger_oem_id Constraints
 
@@ -8,7 +8,6 @@
 
 | Value                   | Explanation |
 | :---------------------- | ----------- |
-| `"US-VT-05461"`         |             |
 | `"NRG Systems"`         |             |
 | `"Ammonit"`             |             |
 | `"Campbell Scientific"` |             |
