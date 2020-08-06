@@ -380,10 +380,9 @@
               "properties": {
                 "logger_oem_id": {
                   "type": "string",
-                  "title": "Logger OEM Id",
+                  "title": "Logger OEM",
                   "description": "This is the logger manufacturer id as defined by the IEA Wind Resource Assessment Data Model Schema.",
                   "enum": [
-                    "US-VT-05461",
                     "NRG Systems",
                     "Ammonit",
                     "Campbell Scientific",
@@ -402,7 +401,7 @@
                     "null"
                   ],
                   "title": "Logger Model",
-                  "description": "This is the logger model.",
+                  "description": "This is the logger model. This is usually stated in the data files from the logger in either the header or footer.",
                   "examples": [
                     "Symphonie Plus3",
                     "CR1000",
