@@ -264,7 +264,7 @@
                     },
                     "pole_diameter_mm": {
                       "type": [
-                        "integer",
+                        "number",
                         "null"
                       ],
                       "title": "Pole Diameter [mm]",
@@ -275,7 +275,7 @@
                     },
                     "lattice_face_width_at_bottom_mm": {
                       "type": [
-                        "integer",
+                        "number",
                         "null"
                       ],
                       "title": "Lattice Face Width at Bottom [mm]",
@@ -286,7 +286,7 @@
                     },
                     "lattice_face_width_at_top_mm": {
                       "type": [
-                        "integer",
+                        "number",
                         "null"
                       ],
                       "title": "Lattice Face Width at Top [mm]",
@@ -297,7 +297,7 @@
                     },
                     "lattice_leg_width_mm": {
                       "type": [
-                        "integer",
+                        "number",
                         "null"
                       ],
                       "title": "Lattice Leg Width [mm]",
@@ -320,7 +320,7 @@
                     },
                     "lattice_bracing_member_diameter_mm": {
                       "type": [
-                        "integer",
+                        "number",
                         "null"
                       ],
                       "title": "Lattice Bracing Member Diameter [mm]",
@@ -343,7 +343,7 @@
                     },
                     "lattice_bracing_member_height_mm": {
                       "type": [
-                        "integer",
+                        "number",
                         "null"
                       ],
                       "title": "Lattice Bracing Member Height [mm]",
@@ -494,7 +494,7 @@
                 },
                 "sampling_rate_sec": {
                   "type": [
-                    "integer",
+                    "number",
                     "null"
                   ],
                   "title": "Sampling Rate [s]",
@@ -843,7 +843,7 @@
                       },
                       "instrument_height_mm": {
                         "type": [
-                          "integer",
+                          "number",
                           "null"
                         ],
                         "title": "Instrument Height [mm]",
@@ -968,7 +968,7 @@
                             },
                             "uncertainty_k_factor": {
                               "type": [
-                                "integer",
+                                "number",
                                 "null"
                               ],
                               "title": "Uncertainty K Factor",
@@ -1085,7 +1085,7 @@
                       },
                       "boom_orientation_deg": {
                         "type": [
-                          "integer",
+                          "number",
                           "null"
                         ],
                         "title": "Boom Orientation [deg]",
@@ -1095,7 +1095,7 @@
                       },
                       "vane_dead_band_orientation_deg": {
                         "type": [
-                          "integer",
+                          "number",
                           "null"
                         ],
                         "title": "Vane Dead Band Orientation [deg]",
@@ -1118,7 +1118,7 @@
                       },
                       "tilt_angle_deg": {
                         "type": [
-                          "integer",
+                          "number",
                           "null"
                         ],
                         "title": "Tilt Angle [deg]",
@@ -1144,7 +1144,7 @@
                       },
                       "upstand_height_mm": {
                         "type": [
-                          "integer",
+                          "number",
                           "null"
                         ],
                         "title": "Upstand Height [mm]",
@@ -1153,7 +1153,7 @@
                       },
                       "upstand_diameter_mm": {
                         "type": [
-                          "integer",
+                          "number",
                           "null"
                         ],
                         "title": "Upstand Diameter [mm]",
@@ -1162,7 +1162,7 @@
                       },
                       "boom_diameter_mm": {
                         "type": [
-                          "integer",
+                          "number",
                           "null"
                         ],
                         "title": "Boom Diameter [mm]",
@@ -1171,7 +1171,7 @@
                       },
                       "boom_length_mm": {
                         "type": [
-                          "integer",
+                          "number",
                           "null"
                         ],
                         "title": "Boom Length [mm]",
@@ -1180,7 +1180,7 @@
                       },
                       "distance_from_mast_to_sensor_mm": {
                         "type": [
-                          "integer",
+                          "number",
                           "null"
                         ],
                         "title": "Distance Mast to Sensor [mm]",
