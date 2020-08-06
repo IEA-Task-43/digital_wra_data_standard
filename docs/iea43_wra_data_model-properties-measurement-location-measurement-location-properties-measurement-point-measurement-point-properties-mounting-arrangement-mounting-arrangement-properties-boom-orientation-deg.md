@@ -1,6 +1,6 @@
 ## boom_orientation_deg Type
 
-`integer` ([Boom Orientation \[deg\]](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-measurement-point-measurement-point-properties-mounting-arrangement-mounting-arrangement-properties-boom-orientation-deg.md))
+`number` ([Boom Orientation \[deg\]](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-measurement-point-measurement-point-properties-mounting-arrangement-mounting-arrangement-properties-boom-orientation-deg.md))
 
 ## boom_orientation_deg Constraints
 

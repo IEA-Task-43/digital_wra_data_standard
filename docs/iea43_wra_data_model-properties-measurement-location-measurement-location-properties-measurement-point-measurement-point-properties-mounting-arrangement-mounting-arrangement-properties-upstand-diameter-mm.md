@@ -1,6 +1,6 @@
 ## upstand_diameter_mm Type
 
-`integer` ([Upstand Diameter \[mm\]](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-measurement-point-measurement-point-properties-mounting-arrangement-mounting-arrangement-properties-upstand-diameter-mm.md))
+`number` ([Upstand Diameter \[mm\]](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-measurement-point-measurement-point-properties-mounting-arrangement-mounting-arrangement-properties-upstand-diameter-mm.md))
 
 ## upstand_diameter_mm Constraints
 
