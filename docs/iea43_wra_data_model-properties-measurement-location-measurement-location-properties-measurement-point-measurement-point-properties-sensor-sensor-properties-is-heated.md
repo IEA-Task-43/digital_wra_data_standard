@@ -5,9 +5,9 @@
 ## is_heated Examples
 
 ```json
-"true, for the sensor is heated."
+"true, if the sensor is heated."
 ```
 
 ```json
-"false, for the sensor is not heated."
+"false, if the sensor is not heated."
 ```
