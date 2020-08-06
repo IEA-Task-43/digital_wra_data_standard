@@ -139,7 +139,7 @@ The measurement sensor type e.g. anemometer.
 
 ## instrument_height_mm
 
-This is the height dimension of the sensor to aid IEC mounting calculations.
+This is the physical height dimension, in mm, of the sensor to aid IEC mounting calculations. It is not the height above ground level at which it is deployed.
 
 
 `instrument_height_mm`
@@ -155,7 +155,7 @@ This is the height dimension of the sensor to aid IEC mounting calculations.
 
 ## is_heated
 
-Is the sensor heated to reduce the effect of icing.
+Is the sensor heated to reduce the effect of icing. This is usually relevant for wind speed and wind vane sensors.
 
 
 `is_heated`
@@ -172,16 +172,16 @@ Is the sensor heated to reduce the effect of icing.
 ### is_heated Examples
 
 ```json
-"true, for the sensor is heated."
+"true, if the sensor is heated."
 ```
 
 ```json
-"false, for the sensor is not heated."
+"false, if the sensor is not heated."
 ```
 
 ## date_from
 
-The date from when these properties are active. If these properties follow a change, then this Date From should equal the previous Date To.
+The date from when these properties are active. If these properties follow a change, then this Date From should equal the previous Date To. The format of this date should follow ISO 8601 with the 'T' required. It is advised that timezones should not be used.
 
 
 `date_from`
@@ -207,7 +207,7 @@ The date from when these properties are active. If these properties follow a cha
 
 ## date_to
 
-The date to when these properties are active. If these properties are currently active please use null. If null is not allowed please use 2100-01-01T00:00:00.
+The final end date for when these properties are active. The format of this should follow If these properties are currently active please use null. If null is not allowed please use 2100-01-01T00:00:00. The format of this date should follow ISO 8601 with the 'T' required. It is advised that timezones should not be used.
 
 
 `date_to`

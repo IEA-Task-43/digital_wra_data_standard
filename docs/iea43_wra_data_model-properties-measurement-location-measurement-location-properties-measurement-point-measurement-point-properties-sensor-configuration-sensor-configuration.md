@@ -53,7 +53,7 @@ The offset programmed into the logger.
 
 ## sensitivity
 
-The sensitivity programmed into the logger.
+The sensitivity programmed into the logger. Usually used for pyranometers. It is the same as 1/slope with zero for offset.
 
 
 `sensitivity`
@@ -109,7 +109,7 @@ The measurement units of the values the sensor records.
 
 ## height_m
 
-The height (in meters) programmed into the logger.
+The height above ground level in meters at which the sensor is deployed as programmed into the logger.
 
 
 `height_m`
@@ -157,7 +157,7 @@ The connection channel the sensor is wired into on the logger.
 
 ## date_from
 
-The date from when these properties are active. If these properties follow a change, then this Date From should equal the previous Date To.
+The date from when these properties are active. If these properties follow a change, then this Date From should equal the previous Date To. The format of this date should follow ISO 8601 with the 'T' required. It is advised that timezones should not be used.
 
 
 `date_from`
@@ -183,7 +183,7 @@ The date from when these properties are active. If these properties follow a cha
 
 ## date_to
 
-The date to when these properties are active. If these properties are currently active please use null. If null is not allowed please use 2100-01-01T00:00:00.
+The final end date for when these properties are active. The format of this should follow If these properties are currently active please use null. If null is not allowed please use 2100-01-01T00:00:00. The format of this date should follow ISO 8601 with the 'T' required. It is advised that timezones should not be used.
 
 
 `date_to`
