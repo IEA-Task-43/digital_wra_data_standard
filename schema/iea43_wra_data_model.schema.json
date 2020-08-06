@@ -6,7 +6,7 @@
       "type": "string",
       "format": "date-time",
       "title": "Date From",
-      "description": "The date from when these properties are active. If these properties follow a change, then this Date From should equal the previous Date To.",
+      "description": "The date from when these properties are active. If these properties follow a change, then this Date From should equal the previous Date To. The format of this date should follow ISO 8601 with the 'T' required. It is advised that timezones should not be used.",
       "examples": [
         "2020-07-28T20:00:00"
       ]
@@ -18,7 +18,7 @@
       ],
       "format": "date-time",
       "title": "Date To",
-      "description": "The date to when these properties are active. If these properties are currently active please use null. If null is not allowed please use 2100-01-01T00:00:00.",
+      "description": "The final end date for when these properties are active. The format of this should follow If these properties are currently active please use null. If null is not allowed please use 2100-01-01T00:00:00. The format of this date should follow ISO 8601 with the 'T' required. It is advised that timezones should not be used.",
       "examples": [
         "2020-07-28T20:00:00",
         "2100-01-01T00:00:00"
@@ -643,7 +643,7 @@
                           "null"
                         ],
                         "title": "Logger Sensitivity",
-                        "description": "The sensitivity programmed into the logger."
+                        "description": "The sensitivity programmed into the logger. Usually used for pyranometers. It is the same as 1/slope with zero for offset."
                       },
                       "measurement_units": {
                         "type": "string",
@@ -675,7 +675,7 @@
                           "null"
                         ],
                         "title": "Logger Height [m]",
-                        "description": "The height (in meters) programmed into the logger."
+                        "description": "The height above ground level in meters at which the sensor is deployed as programmed into the logger."
                       },
                       "serial_number": {
                         "type": [
@@ -846,7 +846,7 @@
                           "null"
                         ],
                         "title": "Instrument Height [mm]",
-                        "description": "This is the height dimension of the sensor to aid IEC mounting calculations."
+                        "description": "This is the physical height dimension, in mm, of the sensor to aid IEC mounting calculations. It is not the height above ground level at which it is deployed."
                       },
                       "is_heated": {
                         "type": [
@@ -854,10 +854,10 @@
                           "null"
                         ],
                         "title": "Is Heated",
-                        "description": "Is the sensor heated to reduce the effect of icing.",
+                        "description": "Is the sensor heated to reduce the effect of icing. This is usually relevant for wind speed and wind vane sensors.",
                         "examples": [
-                          "true, for the sensor is heated.",
-                          "false, for the sensor is not heated."
+                          "true, if the sensor is heated.",
+                          "false, if the sensor is not heated."
                         ]
                       },
                       "date_from": {
