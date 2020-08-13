@@ -395,13 +395,13 @@
                     "Other"
                   ]
                 },
-                "logger_model": {
+                "logger_model_name": {
                   "type": [
                     "string",
                     "null"
                   ],
-                  "title": "Logger Model",
-                  "description": "This is the logger model. This is usually stated in the data files from the logger in either the header or footer.",
+                  "title": "Logger Model Name",
+                  "description": "This is the logger model name. This is usually stated in the data files from the logger in either the header or footer.",
                   "examples": [
                     "Symphonie Plus3",
                     "CR1000",
