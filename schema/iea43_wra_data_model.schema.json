@@ -626,7 +626,7 @@
                           "null"
                         ],
                         "title": "Logger Slope",
-                        "description": "The slope programmed into the logger."
+                        "description": "The slope programmed into the logger for this measurement. This is typically expected for anemometers and wind vanes, but not necessarily required for other sensor types."
                       },
                       "offset": {
                         "type": [
@@ -634,7 +634,7 @@
                           "null"
                         ],
                         "title": "Logger Offset",
-                        "description": "The offset programmed into the logger."
+                        "description": "The offset programmed into the logger. This is typically expected for anemometers and wind vanes, but not necessarily required for other sensor types."
                       },
                       "sensitivity": {
                         "type": [
@@ -878,7 +878,7 @@
                           "null"
                         ],
                         "title": "Calibration",
-                        "description": "The sensor calibration details.",
+                        "description": "The sensor calibration details. This is typically expected for anemometers, but not necessarily required for other sensor types.",
                         "items": {
                           "type": "object",
                           "title": "Calibration",
