@@ -7,7 +7,7 @@
 | Property                                                  | Type      | Required | Nullable       | Defined by                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
 | :-------------------------------------------------------- | --------- | -------- | -------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | [logger_oem_id](#logger_oem_id)                           | `string`  | Required | cannot be null | [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-logger-configuration-logger-configuration-properties-logger-oem.md "https&#x3A;//raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/logger_main_config/items/properties/logger_oem_id")                              |
-| [logger_model](#logger_model)                             | `string`  | Required | can be null    | [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-logger-configuration-logger-configuration-properties-logger-model.md "https&#x3A;//raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/logger_main_config/items/properties/logger_model")                             |
+| [logger_model_name](#logger_model_name)                   | `string`  | Optional | can be null    | [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-logger-configuration-logger-configuration-properties-logger-model-name.md "https&#x3A;//raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/logger_main_config/items/properties/logger_model_name")                   |
 | [logger_serial_number](#logger_serial_number)             | `string`  | Required | cannot be null | [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-logger-configuration-logger-configuration-properties-logger-serial-number.md "https&#x3A;//raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/logger_main_config/items/properties/logger_serial_number")             |
 | [logger_id](#logger_id)                                   | `string`  | Optional | can be null    | [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-logger-configuration-logger-configuration-properties-logger-id.md "https&#x3A;//raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/logger_main_config/items/properties/logger_id")                                   |
 | [logger_name](#logger_name)                               | `string`  | Optional | can be null    | [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-logger-configuration-logger-configuration-properties-logger-name.md "https&#x3A;//raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/logger_main_config/items/properties/logger_name")                               |
@@ -57,23 +57,23 @@ This is the logger manufacturer id as defined by the IEA Wind Resource Assessmen
 | `"WindLogger"`          |             |
 | `"Other"`               |             |
 
-## logger_model
+## logger_model_name
 
-This is the logger model. This is usually stated in the data files from the logger in either the header or footer.
+This is the logger model name. This is usually stated in the data files from the logger in either the header or footer.
 
 
-`logger_model`
+`logger_model_name`
 
--   is required
--   Type: `string` ([Logger Model](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-logger-configuration-logger-configuration-properties-logger-model.md))
+-   is optional
+-   Type: `string` ([Logger Model Name](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-logger-configuration-logger-configuration-properties-logger-model-name.md))
 -   can be null
--   defined in: [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-logger-configuration-logger-configuration-properties-logger-model.md "https&#x3A;//raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/logger_main_config/items/properties/logger_model")
+-   defined in: [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-logger-configuration-logger-configuration-properties-logger-model-name.md "https&#x3A;//raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/logger_main_config/items/properties/logger_model_name")
 
-### logger_model Type
+### logger_model_name Type
 
-`string` ([Logger Model](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-logger-configuration-logger-configuration-properties-logger-model.md))
+`string` ([Logger Model Name](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-logger-configuration-logger-configuration-properties-logger-model-name.md))
 
-### logger_model Examples
+### logger_model_name Examples
 
 ```json
 "Symphonie Plus3"
@@ -179,7 +179,7 @@ The date from when these properties are active. If these properties follow a cha
 
 ## date_to
 
-The final end date for when these properties are active. The format of this should follow If these properties are currently active please use null. If null is not allowed please use 2100-01-01T00:00:00. The format of this date should follow ISO 8601 with the 'T' required. It is advised that timezones should not be used.
+The final end date for when these properties are active. If these properties are currently active please use null. If null is not allowed please use 2100-01-01T00:00:00. The format of this date should follow ISO 8601 with the 'T' required. It is advised that timezones should not be used.
 
 
 `date_to`

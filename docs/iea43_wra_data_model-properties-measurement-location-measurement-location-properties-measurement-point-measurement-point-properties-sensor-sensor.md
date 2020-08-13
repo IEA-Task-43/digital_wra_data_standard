@@ -207,7 +207,7 @@ The date from when these properties are active. If these properties follow a cha
 
 ## date_to
 
-The final end date for when these properties are active. The format of this should follow If these properties are currently active please use null. If null is not allowed please use 2100-01-01T00:00:00. The format of this date should follow ISO 8601 with the 'T' required. It is advised that timezones should not be used.
+The final end date for when these properties are active. If these properties are currently active please use null. If null is not allowed please use 2100-01-01T00:00:00. The format of this date should follow ISO 8601 with the 'T' required. It is advised that timezones should not be used.
 
 
 `date_to`
@@ -285,7 +285,7 @@ The date these properties were last updated.
 
 ## calibration
 
-The sensor calibration details.
+The sensor calibration details. This is typically expected for anemometers, but not necessarily required for other sensor types.
 
 
 `calibration`

@@ -16,7 +16,7 @@
 
 ## author
 
-The person who created this file.
+The person or system who created this data model representing a specific mast.
 
 
 `author`
@@ -68,7 +68,7 @@ The organisation the Author is from.
 
 ## date
 
-The date this file was created.
+The date this file was created. Format should be YYYY-MM-DD
 
 
 `date`
@@ -94,7 +94,7 @@ The date this file was created.
 
 ## version
 
-The version of the IEA WRA Data Model his file is based on. The format of this follows Semantic Versioning with the year and month tag on after. E.g. 1.1.1-2020.07
+The version of the IEA WRA Data Model this file is based on. The format of this follows Semantic Versioning with the year and month tagged on after. E.g. 1.1.1-2020.07
 
 
 `version`
