@@ -55,7 +55,7 @@
     "author": {
       "type": "string",
       "title": "Author",
-      "description": "The person who created this file.",
+      "description": "The person or system who created this data model representing a specific mast.",
       "examples": [
         "Stephen Holleran",
         "Joe Bloggs"
@@ -74,7 +74,7 @@
       "type": "string",
       "format": "date",
       "title": "Date",
-      "description": "The date this file was created.",
+      "description": "The date this file was created. Format should be YYYY-MM-DD",
       "examples": [
         "2020-07-28"
       ]
@@ -82,7 +82,7 @@
     "version": {
       "type": "string",
       "title": "Version",
-      "description": "The version of the IEA WRA Data Model his file is based on. The format of this follows Semantic Versioning with the year and month tag on after. E.g. 1.1.1-2020.07",
+      "description": "The version of the IEA WRA Data Model this file is based on. The format of this follows Semantic Versioning with the year and month tagged on after. E.g. 1.1.1-2020.07",
       "examples": [
         "0.1.0-2020.06",
         "1.1.1-2020.07"
