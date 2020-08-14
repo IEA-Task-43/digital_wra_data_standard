@@ -49,13 +49,13 @@ work is fully covered. -->
 
 ## Coding Style
 
-This code follows the PEP 8 style guide and uses the ``pycodestyle`` linter to check for compliance.
+This code follows the PEP 8 style guide <!---and uses the ``pycodestyle`` linter to check for compliance.
 The only exception is the line length limit of 120 characters.
 
 ```
 pylint --max-line-length=120 operational_analysis
 ```
-
+-->
 ## Documentation Style
 TBD
 D<!--- ocumentation is written using RST, and is located both inline and within the /sphinx directory.
@@ -65,13 +65,13 @@ create new tickets in this repository towards implementing the change.-->
 ## Testing
 TBD
 <!--- All code should be paired with a corresponding unit or integration test.
-OpenOA uses pytest and the built in unittest framework.
-For instructions on running tests, please see the [Readme](https://github.com/NREL/OpenOA/tree/develop#Testing).-->
+digital_wra_data_standard uses pytest and the built in unittest framework.
+For instructions on running tests, please see the [Readme](testing link).-->
 
 ## Deploying a Package to PyPi
 TBD
 <!--- The repository is equipped with a github action to build and publish new versions to PyPi.
-A maintainer can invoke this workflow by pushing a tag to the NREL/OpenOA reposiory with prefix "v", such as "v1.1.0".
+A maintainer can invoke this workflow by pushing a tag to the IEA Task 43 digital_wra_data_standard repository with prefix "v", such as "v1.1.0".
 The action is defined in `.github/workflows/tags-to-pypi.yml`.
 
 ```
