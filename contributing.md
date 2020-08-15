@@ -16,7 +16,7 @@ The digital WRA digital_wra_data_standard repository is hosted on Github, and lo
 This repository is organized using a modified git-flow system. Branches are organized as follows:
 
 - master: Stable release version. Must have good test coverage and may not have all the newest features.
-- develop: Development branch which contains the newest features. Tests must pass, but code may be unstable.
+- dev: Development branch which contains the newest features. Tests must pass, but code may be unstable.
 - feature/xxx: Branch from develop, should reference a github issue number.
 
 To work on a feature, please fork digital_wra_data_standard first and then create a feature branch in your own fork.
@@ -42,39 +42,17 @@ Tests are automatically run through Github Actions for any pull request or push 
 **Documentation:** TBD
 <!---Include any relevant changes to inline documentation, as well as any changes to the RST files located in /sphinx.--->
 
-**Coverage:** TBD <!--- The testing framework (described below) will generate a coverage report. Please ensure that your
-work is fully covered. -->
-
 **Changelog:** For pull requests that encapsulate a user-facing feature, or is significant to users of digital_wra_data_standard for some other reason, please add a line to CHANGELOG.md in the [Unreleased] section.
 
-## Coding Style
 
-This code follows the PEP 8 style guide <!---and uses the ``pycodestyle`` linter to check for compliance.
-The only exception is the line length limit of 120 characters.
-
-```
-pylint --max-line-length=120 operational_analysis
-```
--->
 ## Documentation Style
 TBD
-D<!--- ocumentation is written using RST, and is located both inline and within the /sphinx directory.
+<!--- Documentation is written using RST, and is located both inline and within the /sphinx directory.
 Any changes to the analysis methodology should be discussed there or offline. Once a methodology change is decided,
 create new tickets in this repository towards implementing the change.-->
 
 ## Testing
-TBD
+TBD but may define guidelines for validating the schema 
 <!--- All code should be paired with a corresponding unit or integration test.
 digital_wra_data_standard uses pytest and the built in unittest framework.
 For instructions on running tests, please see the [Readme](testing link).-->
-
-## Deploying a Package to PyPi
-TBD
-<!--- The repository is equipped with a github action to build and publish new versions to PyPi.
-A maintainer can invoke this workflow by pushing a tag to the IEA Task 43 digital_wra_data_standard repository with prefix "v", such as "v1.1.0".
-The action is defined in `.github/workflows/tags-to-pypi.yml`.
-
-```
-git tag -a v1.2.3 -m "Tag messgae for v1.2.3"
-git push origin v1.2.3
-``` -->
