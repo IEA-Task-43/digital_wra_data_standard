@@ -36,8 +36,11 @@ It is greatly preferable to submit three small pull requests than it is to submi
 Write a complete description of these changes in the pull request body.
 
 **Tests:** TBD
-<!---Must pass all tests. Pull requests will be rejected if tests do not pass.
-Tests are automatically run through Github Actions for any pull request or push to the master or develop branches.-->
+For any changes to the JSON schema, the contributor should
+
+* Make sure that the changes result in a valid JSON schema
+* Adjust the [demo file](https://github.com/IEA-Task-43/digital_wra_data_standard/blob/master/demo_data/iea43_wra_data_model.json) to reflect the changes
+Tools like [jsonschemavalidator](https://www.jsonschemavalidator.net/) can help with these tasks
 
 **Documentation:** TBD
 <!---Include any relevant changes to inline documentation, as well as any changes to the RST files located in /sphinx.--->
@@ -52,7 +55,7 @@ Any changes to the analysis methodology should be discussed there or offline. On
 create new tickets in this repository towards implementing the change.-->
 
 ## Testing
-TBD but may define guidelines for validating the schema 
+TBD but may define guidelines for validating the schema
 <!--- All code should be paired with a corresponding unit or integration test.
 digital_wra_data_standard uses pytest and the built in unittest framework.
 For instructions on running tests, please see the [Readme](testing link).-->
