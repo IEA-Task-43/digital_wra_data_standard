@@ -35,7 +35,7 @@ In addition, code coverage should not be negatively affected by the pull request
 It is greatly preferable to submit three small pull requests than it is to submit one large pull request.
 Write a complete description of these changes in the pull request body.
 
-**Tests:** TBD
+**Tests:**
 For any changes to the JSON schema, the contributor should
 
 * Make sure that the changes result in a valid JSON schema
@@ -48,14 +48,14 @@ Tools like [jsonschemavalidator](https://www.jsonschemavalidator.net/) can help 
 **Changelog:** For pull requests that encapsulate a user-facing feature, or is significant to users of digital_wra_data_standard for some other reason, please add a line to CHANGELOG.md in the [Unreleased] section.
 
 
-## Documentation Style
+<!--- ## Documentation Style
 TBD
-<!--- Documentation is written using RST, and is located both inline and within the /sphinx directory.
+Documentation is written using RST, and is located both inline and within the /sphinx directory.
 Any changes to the analysis methodology should be discussed there or offline. Once a methodology change is decided,
 create new tickets in this repository towards implementing the change.-->
 
-## Testing
+<!--- ## Testing
 TBD but may define guidelines for validating the schema
-<!--- All code should be paired with a corresponding unit or integration test.
+All code should be paired with a corresponding unit or integration test.
 digital_wra_data_standard uses pytest and the built in unittest framework.
 For instructions on running tests, please see the [Readme](testing link).-->
