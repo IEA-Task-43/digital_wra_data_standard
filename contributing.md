@@ -17,11 +17,11 @@ This repository is organized using a modified git-flow system. Branches are orga
 
 - master: Stable release version. Must have good test coverage and may not have all the newest features.
 - dev: Development branch which contains the newest features. Tests must pass, but code may be unstable.
-- feature/xxx: Branch from develop, should reference a github issue number.
+- feature/xxx: Branch from dev, should reference a github issue number.
 
 To work on a feature, please fork digital_wra_data_standard first and then create a feature branch in your own fork.
 Work out of this feature branch before submitting a pull request.
-Be sure to periodically synchronize the upstream develop branch into your feature branch to avoid conflicts in the pull request.
+Be sure to periodically synchronize the upstream dev branch into your feature branch to avoid conflicts in the pull request.
 
 When the feature branch is ready, make a pull request to IEA-Task-43/digital_wra_data_standard through the Github.com UI.
 

@@ -1,6 +1,6 @@
 # digital_wra_data_standard
 
-This repository is for the work on standardizing digital tools in wind resource assessment(WRA). This standard data model and associated tools are intended as universal building blocks for Wind Energy Resource Assessment applications.  Our goals for the project are to make the WRA process more efficient, more repeatable and more scalable.
+This repository is for the work on standardizing digital tools in wind resource assessment (WRA). This standard data model and associated tools are intended as universal building blocks for Wind Energy Resource Assessment applications.  Our goals for the project are to make the WRA process more efficient, more repeatable and more scalable.
 
 ## Standardized Measurement Data Model
 
