@@ -1,7 +1,8 @@
--- These SQL statements are a relational database representation of the
---
+-- These PostgresSQL statements are a relational database representation of the
+-- IEA Wind Task 43 Wind Energy Digitalization Standardized Data Model
 
--- create table enum statements:
+
+-- ** create enum tables **
 CREATE TABLE IF NOT EXISTS plant_type (
     id text PRIMARY KEY
 );
@@ -43,7 +44,7 @@ CREATE TABLE IF NOT EXISTS orientation_reference (
 );
 
 
--- insert enum values:
+-- ** insert enum values **
 INSERT INTO plant_type (id) VALUES
     ('onshore_wind'),
     ('offshore_wind');
@@ -157,67 +158,47 @@ INSERT INTO orientation_reference (id) VALUES
     ('grid_north');
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
--- main tables
+-- ** Create main tables **
 CREATE TABLE IF NOT EXISTS plant (
     uuid UUID PRIMARY KEY,
     name text,
-    plant_type_id text REFERENCES plant_type(id)
-
+    plant_type_id text,
+    FOREIGN KEY (plant_type_id) REFERENCES plant_type (id)
 );
 
-CREATE TABLE measurement_location(
-    uuid UUID primary key,
-    name varchar not null,
-    plant_uuid UUID, -- this could be a reference dataset and so not part of a plant.
-    latitude_ddeg decimal NOT NULL,
-    longitude decimal not null,
-    measurement_station_type varchar not null,
-    updated_at timestamp without time zone default (now() at time zone 'utc'),
-    updated_by UUID not null  --references person(uuid)
+CREATE TABLE IF NOT EXISTS measurement_location(
+    uuid UUID PRIMARY KEY,
+    name text NOT NULL,
+    plant_uuid UUID,
+    latitude_ddeg decimal NOT NULL CHECK (latitude_ddeg >= -90 AND latitude_ddeg <= 90),
+    longitude_ddeg decimal NOT NULL CHECK (longitude_ddeg >= -180 AND longitude_ddeg <= 180),
+    measurement_station_type_id text NOT NULL,
+    notes text,
+    update_at timestamp default (now() at time zone 'utc'),
+    updated_by UUID,
+    FOREIGN KEY (plant_uuid) REFERENCES plant (uuid)
 );
 
 
 CREATE TABLE measurement_point(
-uuid UUID primary key,
-measurement_location_uuid UUID references measurement_location(uuid),
-name varchar not null,
-measurementurement_type varchar not null,
+uuid UUID PRIMARY KEY,
+measurement_location_uuid UUID REFERENCES measurement_location(uuid),
+name text NOT NULL,
+measurementurement_type text NOT NULL,
 mounting_arrangement jsonb,
 updated_at timestamp without time zone default (now() at time zone 'utc'), 
-updated_by UUID not null  --references person(uuid)
+updated_by UUID NOT NULL  --REFERENCES person(uuid)
 );
 
 CREATE TABLE logger_main_config(
-uuid UUID primary key,
-logger_id varchar not null,
-logger_oem varchar not null,
-logger_model varchar not null,
-name varchar not null,
-serial_no varchar,
-measurement_location_uuid UUID references measurement_location(uuid),
-date_from timestamp not null,
+uuid UUID PRIMARY KEY,
+logger_id text NOT NULL,
+logger_oem text NOT NULL,
+logger_model text NOT NULL,
+name text NOT NULL,
+serial_no text,
+measurement_location_uuid UUID REFERENCES measurement_location(uuid),
+date_from timestamp NOT NULL,
 date_to timestamp,
 encryption jsonb,
 data_transfer_details jsonb,
@@ -226,37 +207,37 @@ sampling_rate_sec decimal,
 averaging_period_minutes decimal,
 is_obsolete boolean default(false),
 updated_at timestamp without time zone default (now() at time zone 'utc'), 
-updated_by UUID not null  --references person(uuid)
+updated_by UUID NOT NULL  --REFERENCES person(uuid)
 );
 
 CREATE TABLE sensor(
-uuid UUID primary key,
-oem varchar not null,
-model varchar,
-serial_no varchar,
-sensor_type varchar,
+uuid UUID PRIMARY KEY,
+oem text NOT NULL,
+model text,
+serial_no text,
+sensor_type text,
 calibration jsonb,
 updated_at timestamp without time zone default (now() at time zone 'utc'), 
-updated_by UUID not null  --references person(uuid)
+updated_by UUID NOT NULL  --REFERENCES person(uuid)
 );
 
 CREATE TABLE logger_sensor_config(
-uuid UUID primary key,
-measurement_point_uuid UUID references measurement_point(uuid),
-date_from timestamp not null,
+uuid UUID PRIMARY KEY,
+measurement_point_uuid UUID REFERENCES measurement_point(uuid),
+date_from timestamp NOT NULL,
 date_to timestamp,
 sensor_uuid UUID,
 logger_config jsonb,
 desired_adj jsonb,
-metrics jsonb not null,
+metrics jsonb NOT NULL,
 updated_at timestamp without time zone default (now() at time zone 'utc'), 
-updated_by UUID not null  --references person(uuid)
+updated_by UUID NOT NULL  --REFERENCES person(uuid)
 );
 
 CREATE TABLE logger_sensor_mapping(
-logger_sensor_config_uuid UUID references logger_sensor_config(uuid),
-logger_main_config_uuid UUID references logger_main_config(uuid),
+logger_sensor_config_uuid UUID REFERENCES logger_sensor_config(uuid),
+logger_main_config_uuid UUID REFERENCES logger_main_config(uuid),
 updated_at timestamp without time zone default (now() at time zone 'utc'), 
-updated_by UUID not null,  --references person(uuid)
+updated_by UUID NOT NULL,  --REFERENCES person(uuid)
 PRIMARY KEY (logger_sensor_config_uuid, logger_main_config_uuid)
 );
