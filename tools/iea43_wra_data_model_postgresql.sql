@@ -206,6 +206,26 @@ CREATE TABLE IF NOT EXISTS measurement_location_mast_properties(
     FOREIGN KEY (mast_properties_uuid) REFERENCES mast_properties (uuid)
 );
 
+CREATE TABLE IF NOT EXISTS mast_section_geometry(
+    uuid UUID PRIMARY KEY,
+    mast_properties_uuid UUID,
+    pole_diameter_mm decimal,
+    lattice_face_width_at_bottom_mm decimal,
+    lattice_face_width_at_top_mm decimal,
+    lattice_leg_width_mm decimal,
+    lattice_leg_is_round_cross_section boolean,
+    lattice_bracing_member_diameter_mm decimal,
+    lattice_number_of_diagonal_bracing_members integer,
+    lattice_bracing_member_height_mm decimal,
+    notes text,
+    update_at timestamp DEFAULT (now()),
+    updated_by UUID,
+    FOREIGN KEY (mast_properties_uuid) REFERENCES mast_properties (uuid)
+);
+
+
+
+
 
 
 
