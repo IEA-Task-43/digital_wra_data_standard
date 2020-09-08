@@ -185,6 +185,31 @@ CREATE TABLE IF NOT EXISTS measurement_location(
     FOREIGN KEY (plant_uuid) REFERENCES plant (uuid)
 );
 
+CREATE TABLE IF NOT EXISTS mast_properties(
+    uuid UUID PRIMARY KEY,
+    mast_geometry_id text,
+    mast_oem text,
+    mast_serial_number text,
+    mast_model text,
+    mast_height_m decimal,
+    notes text,
+    update_at timestamp DEFAULT (now()),
+    updated_by UUID,
+    FOREIGN KEY (mast_geometry_id) REFERENCES mast_geometry (id)
+);
+
+CREATE TABLE IF NOT EXISTS measurement_location_mast_properties(
+    measurement_location_uuid UUID,
+    mast_properties_uuid UUID,
+    PRIMARY KEY (measurement_location_uuid, mast_properties_uuid),
+    FOREIGN KEY (measurement_location_uuid) REFERENCES measurement_location (uuid),
+    FOREIGN KEY (mast_properties_uuid) REFERENCES mast_properties (uuid)
+);
+
+
+
+
+
 CREATE TABLE measurement_point(
     uuid UUID PRIMARY KEY,
     measurement_location_uuid UUID NOT NULL,
