@@ -1,5 +1,8 @@
--- These PostgresSQL statements are a relational database representation of the
+-- These PostgreSQL statements are a relational database representation of the
 -- IEA Wind Task 43 Wind Energy Digitalization Standardized Data Model
+
+-- Running these SQL statements in a PostgreSQL database will create the database
+-- schema and insert named reference values (enums).
 
 
 -- ** create enum tables **
