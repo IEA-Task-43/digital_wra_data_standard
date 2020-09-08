@@ -165,7 +165,10 @@ INSERT INTO orientation_reference (id) VALUES
 CREATE TABLE IF NOT EXISTS plant (
     uuid UUID PRIMARY KEY,
     name text,
-    plant_type_id text,
+    plant_type_id text NOT NULL,
+    notes text,
+    update_at timestamp DEFAULT (now()),
+    updated_by UUID,
     FOREIGN KEY (plant_type_id) REFERENCES plant_type (id)
 );
 
@@ -177,20 +180,22 @@ CREATE TABLE IF NOT EXISTS measurement_location(
     longitude_ddeg decimal NOT NULL CHECK (longitude_ddeg >= -180 AND longitude_ddeg <= 180),
     measurement_station_type_id text NOT NULL,
     notes text,
-    update_at timestamp default (now() at time zone 'utc'),
+    update_at timestamp DEFAULT (now()),
     updated_by UUID,
     FOREIGN KEY (plant_uuid) REFERENCES plant (uuid)
 );
 
-
 CREATE TABLE measurement_point(
-uuid UUID PRIMARY KEY,
-measurement_location_uuid UUID REFERENCES measurement_location(uuid),
-name text NOT NULL,
-measurementurement_type text NOT NULL,
-mounting_arrangement jsonb,
-updated_at timestamp without time zone default (now() at time zone 'utc'), 
-updated_by UUID NOT NULL  --REFERENCES person(uuid)
+    uuid UUID PRIMARY KEY,
+    measurement_location_uuid UUID NOT NULL,
+    name text NOT NULL,
+    measurement_type_id text NOT NULL,
+    height_m decimal,
+    notes text,
+    update_at timestamp DEFAULT (now()),
+    updated_by UUID,
+    FOREIGN KEY (measurement_location_uuid) REFERENCES measurement_location (uuid),
+    FOREIGN KEY (measurement_type_id) REFERENCES measurement_type (id)
 );
 
 CREATE TABLE logger_main_config(
@@ -209,8 +214,9 @@ time_zone decimal,
 sampling_rate_sec decimal,
 averaging_period_minutes decimal,
 is_obsolete boolean default(false),
-updated_at timestamp without time zone default (now() at time zone 'utc'), 
-updated_by UUID NOT NULL  --REFERENCES person(uuid)
+    notes text,
+    update_at timestamp default (now() at time zone 'utc'),
+    updated_by UUID,
 );
 
 CREATE TABLE sensor(
@@ -220,8 +226,9 @@ model text,
 serial_no text,
 sensor_type text,
 calibration jsonb,
-updated_at timestamp without time zone default (now() at time zone 'utc'), 
-updated_by UUID NOT NULL  --REFERENCES person(uuid)
+    notes text,
+    update_at timestamp default (now() at time zone 'utc'),
+    updated_by UUID,
 );
 
 CREATE TABLE logger_sensor_config(
@@ -233,14 +240,16 @@ sensor_uuid UUID,
 logger_config jsonb,
 desired_adj jsonb,
 metrics jsonb NOT NULL,
-updated_at timestamp without time zone default (now() at time zone 'utc'), 
-updated_by UUID NOT NULL  --REFERENCES person(uuid)
+    notes text,
+    update_at timestamp default (now() at time zone 'utc'),
+    updated_by UUID,
 );
 
 CREATE TABLE logger_sensor_mapping(
 logger_sensor_config_uuid UUID REFERENCES logger_sensor_config(uuid),
 logger_main_config_uuid UUID REFERENCES logger_main_config(uuid),
-updated_at timestamp without time zone default (now() at time zone 'utc'), 
-updated_by UUID NOT NULL,  --REFERENCES person(uuid)
+    notes text,
+    update_at timestamp default (now() at time zone 'utc'),
+    updated_by UUID,
 PRIMARY KEY (logger_sensor_config_uuid, logger_main_config_uuid)
 );
