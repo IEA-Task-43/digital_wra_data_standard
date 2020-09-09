@@ -431,7 +431,7 @@
                     "null"
                   ],
                   "title": "Logger Name",
-                  "description": "The logger name assigned to the logger in the logger programme.",
+                  "description": "The logger (or mast name) name assigned to the logger in the logger programme.",
                   "examples": [
                     "AName_MM1"
                   ]
@@ -493,7 +493,7 @@
                 },
                 "sampling_rate_sec": {
                   "type": [
-                    "number",
+                    "integer",
                     "null"
                   ],
                   "title": "Sampling Rate [s]",
@@ -550,7 +550,7 @@
               "required": [
                 "date_from",
                 "date_to",
-                "logger_model",
+                "logger_model_name",
                 "logger_oem_id",
                 "logger_serial_number"
               ]
@@ -644,7 +644,7 @@
                         "title": "Logger Sensitivity",
                         "description": "The sensitivity programmed into the logger. Usually used for pyranometers. It is the same as 1/slope with zero for offset."
                       },
-                      "measurement_units": {
+                      "measurement_units_id": {
                         "type": "string",
                         "title": "Measurement Units",
                         "description": "The measurement units of the values the sensor records.",
