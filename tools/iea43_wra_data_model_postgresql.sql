@@ -167,7 +167,7 @@ CREATE TABLE IF NOT EXISTS plant (
     name text,
     plant_type_id text NOT NULL,
     notes text,
-    update_at timestamp DEFAULT (now()),
+    update_at timestamp WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
     updated_by UUID,
     FOREIGN KEY (plant_type_id) REFERENCES plant_type (id)
 );
@@ -180,7 +180,7 @@ CREATE TABLE IF NOT EXISTS measurement_location(
     longitude_ddeg decimal NOT NULL CHECK (longitude_ddeg >= -180 AND longitude_ddeg <= 180),
     measurement_station_type_id text NOT NULL,
     notes text,
-    update_at timestamp DEFAULT (now()),
+    update_at timestamp WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
     updated_by UUID,
     FOREIGN KEY (plant_uuid) REFERENCES plant (uuid)
 );
@@ -193,7 +193,7 @@ CREATE TABLE IF NOT EXISTS mast_properties(
     mast_model text,
     mast_height_m decimal,
     notes text,
-    update_at timestamp DEFAULT (now()),
+    update_at timestamp WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
     updated_by UUID,
     FOREIGN KEY (mast_geometry_id) REFERENCES mast_geometry (id)
 );
@@ -218,11 +218,36 @@ CREATE TABLE IF NOT EXISTS mast_section_geometry(
     lattice_number_of_diagonal_bracing_members integer,
     lattice_bracing_member_height_mm decimal,
     notes text,
-    update_at timestamp DEFAULT (now()),
+    update_at timestamp WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
     updated_by UUID,
     FOREIGN KEY (mast_properties_uuid) REFERENCES mast_properties (uuid)
 );
 
+
+CREATE TABLE IF NOT EXISTS logger_main_config(
+    uuid UUID PRIMARY KEY,
+    measurement_location_uuid UUID NOT NULL,
+    logger_oem_id text NOT NULL,
+    logger_model_name text,
+    logger_serial_number text NOT NULL,
+    logger_id text,
+    logger_name text,
+    date_from timestamp WITHOUT TIME ZONE NOT NULL,
+    date_to timestamp WITHOUT TIME ZONE,
+    encryption_pin_or_key text,
+    enclosure_lock_details text,
+    data_transfer_details text,
+    offset_from_utc_hrs decimal,
+    sampling_rate_sec integer,
+    averaging_period_minutes integer,
+    timestamp_is_end_of_period boolean,
+    clock_is_auto_synced boolean,
+    notes text,
+    update_at timestamp WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
+    updated_by UUID,
+    FOREIGN KEY (measurement_location_uuid) REFERENCES measurement_location (uuid),
+    FOREIGN KEY (logger_oem_id) REFERENCES logger_oem (id)
+);
 
 
 
