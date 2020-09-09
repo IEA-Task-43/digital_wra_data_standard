@@ -1,6 +1,6 @@
 ## sampling_rate_sec Type
 
-`number` ([Sampling Rate \[s\]](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-logger-configuration-logger-configuration-properties-sampling-rate-s.md))
+`integer` ([Sampling Rate \[s\]](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-logger-configuration-logger-configuration-properties-sampling-rate-s.md))
 
 ## sampling_rate_sec Examples
 
