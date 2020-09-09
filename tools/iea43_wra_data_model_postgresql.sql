@@ -4,6 +4,7 @@
 -- Running these SQL statements in a PostgreSQL database will create the database
 -- schema and insert named reference values (enums).
 
+-- The SQL standard has tried to be used as much as possible.
 
 -- ** create enum tables **
 CREATE TABLE IF NOT EXISTS plant_type (
@@ -249,45 +250,62 @@ CREATE TABLE IF NOT EXISTS logger_main_config(
     FOREIGN KEY (logger_oem_id) REFERENCES logger_oem (id)
 );
 
-
-
-
-
-
-
-CREATE TABLE measurement_point(
+CREATE TABLE IF NOT EXISTS measurement_point(
     uuid UUID PRIMARY KEY,
     measurement_location_uuid UUID NOT NULL,
     name text NOT NULL,
     measurement_type_id text NOT NULL,
     height_m decimal,
     notes text,
-    update_at timestamp DEFAULT (now()),
+    update_at timestamp WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
     updated_by UUID,
     FOREIGN KEY (measurement_location_uuid) REFERENCES measurement_location (uuid),
     FOREIGN KEY (measurement_type_id) REFERENCES measurement_type (id)
 );
 
-CREATE TABLE logger_main_config(
-uuid UUID PRIMARY KEY,
-logger_id text NOT NULL,
-logger_oem text NOT NULL,
-logger_model text NOT NULL,
-name text NOT NULL,
-serial_no text,
-measurement_location_uuid UUID REFERENCES measurement_location(uuid),
-date_from timestamp NOT NULL,
-date_to timestamp,
-encryption jsonb,
-data_transfer_details jsonb,
-time_zone decimal,
-sampling_rate_sec decimal,
-averaging_period_minutes decimal,
-is_obsolete boolean default(false),
+CREATE TABLE IF NOT EXISTS sensor_config(
+    uuid UUID PRIMARY KEY,
+    measurement_point_uuid UUID NOT NULL,
+    slope decimal,
+    "offset" decimal,  -- offset is a SQL reserved word so needs to be escaped
+    sensitivity decimal,
+    measurement_units_id text NOT NULL,
+    height_m decimal,
+    serial_number text,
+    connection_channel text,
+    date_from timestamp WITHOUT TIME ZONE NOT NULL,
+    date_to timestamp WITHOUT TIME ZONE,
     notes text,
-    update_at timestamp default (now() at time zone 'utc'),
+    update_at timestamp WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
     updated_by UUID,
+    FOREIGN KEY (measurement_point_uuid) REFERENCES measurement_point (uuid),
+    FOREIGN KEY (measurement_units_id) REFERENCES measurement_units (id)
 );
+
+CREATE TABLE IF NOT EXISTS column_name(
+    uuid UUID PRIMARY KEY,
+    sensor_config_uuid UUID NOT NULL,
+    column_name text NOT NULL,
+    statistic_type_id text NOT NULL,
+    is_ignored boolean NOT NULL DEFAULT false,
+    notes text,
+    update_at timestamp WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (sensor_config_uuid) REFERENCES sensor_config (uuid),
+    FOREIGN KEY (statistic_type_id) REFERENCES statistic_type (id)
+);
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 CREATE TABLE sensor(
 uuid UUID PRIMARY KEY,
