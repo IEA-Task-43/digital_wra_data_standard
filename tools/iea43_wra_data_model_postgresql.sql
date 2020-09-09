@@ -290,54 +290,63 @@ CREATE TABLE IF NOT EXISTS column_name(
     is_ignored boolean NOT NULL DEFAULT false,
     notes text,
     update_at timestamp WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
+    updated_by UUID,
     FOREIGN KEY (sensor_config_uuid) REFERENCES sensor_config (uuid),
     FOREIGN KEY (statistic_type_id) REFERENCES statistic_type (id)
 );
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-CREATE TABLE sensor(
-uuid UUID PRIMARY KEY,
-oem text NOT NULL,
-model text,
-serial_no text,
-sensor_type text,
-calibration jsonb,
+CREATE TABLE IF NOT EXISTS sensor(
+    uuid UUID PRIMARY KEY,
+    oem text,
+    model text,
+    serial_number text,
+    sensor_type_id text,
+    instrument_height_mm decimal,
+    is_heated boolean,
+    date_from timestamp WITHOUT TIME ZONE NOT NULL,
+    date_to timestamp WITHOUT TIME ZONE,
     notes text,
-    update_at timestamp default (now() at time zone 'utc'),
+    update_at timestamp WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
     updated_by UUID,
+    FOREIGN KEY (sensor_type_id) REFERENCES sensor_type (id)
 );
 
-CREATE TABLE logger_sensor_config(
-uuid UUID PRIMARY KEY,
-measurement_point_uuid UUID REFERENCES measurement_point(uuid),
-date_from timestamp NOT NULL,
-date_to timestamp,
-sensor_uuid UUID,
-logger_config jsonb,
-desired_adj jsonb,
-metrics jsonb NOT NULL,
-    notes text,
-    update_at timestamp default (now() at time zone 'utc'),
-    updated_by UUID,
+CREATE TABLE IF NOT EXISTS measurement_point_sensor(
+    measurement_point_uuid UUID,
+    sensor_uuid UUID,
+    PRIMARY KEY (measurement_point_uuid, sensor_uuid),
+    FOREIGN KEY (measurement_point_uuid) REFERENCES measurement_point (uuid),
+    FOREIGN KEY (sensor_uuid) REFERENCES sensor (uuid)
 );
 
-CREATE TABLE logger_sensor_mapping(
-logger_sensor_config_uuid UUID REFERENCES logger_sensor_config(uuid),
-logger_main_config_uuid UUID REFERENCES logger_main_config(uuid),
+CREATE TABLE IF NOT EXISTS calibration(
+    uuid UUID PRIMARY KEY,
+    sensor_uuid UUID NOT NULL,
+    slope decimal,
+    "offset" decimal,  -- offset is a SQL reserved word so needs to be escaped
+    sensitivity decimal,
+    report_file_name text NOT NULL,
+    report_link text,
+    date_of_calibration date,
+    calibration_organisation text,
+    place_of_calibration text,
+    uncertainty_k_factor decimal,
     notes text,
-    update_at timestamp default (now() at time zone 'utc'),
+    update_at timestamp WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
     updated_by UUID,
-PRIMARY KEY (logger_sensor_config_uuid, logger_main_config_uuid)
+    FOREIGN KEY (sensor_uuid) REFERENCES sensor (uuid)
 );
+
+CREATE TABLE IF NOT EXISTS calibration_uncertainty(
+    uuid UUID PRIMARY KEY,
+    calibration_uuid UUID NOT NULL,
+    reference_bin decimal,
+    reference_unit text,
+    uncertainty decimal,
+    FOREIGN KEY (calibration_uuid) REFERENCES calibration (uuid),
+    FOREIGN KEY (reference_unit) REFERENCES measurement_units (id)
+);
+
+
+
+
