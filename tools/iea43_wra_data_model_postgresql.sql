@@ -347,6 +347,30 @@ CREATE TABLE IF NOT EXISTS calibration_uncertainty(
     FOREIGN KEY (reference_unit) REFERENCES measurement_units (id)
 );
 
-
+CREATE TABLE IF NOT EXISTS mounting_arrangement(
+    uuid UUID PRIMARY KEY,
+    measurement_point_uuid UUID NOT NULL,
+    mast_section_geometry_uuid UUID,
+    mounting_type_id text,
+    boom_orientation_deg decimal CHECK (boom_orientation_deg >= 0 AND boom_orientation_deg <= 360),
+    vane_dead_band_orientation_deg decimal CHECK (vane_dead_band_orientation_deg >= 0 AND vane_dead_band_orientation_deg <= 360),
+    orientation_reference_id text,
+    tilt_angle_deg decimal CHECK (tilt_angle_deg >= -90 AND tilt_angle_deg <= 90),
+    boom_oem text,
+    boom_model text,
+    upstand_height_mm decimal,
+    upstand_diameter_mm decimal,
+    boom_diameter_mm decimal,
+    boom_length_mm decimal,
+    distance_from_mast_to_sensor_mm decimal,
+    date_from timestamp WITHOUT TIME ZONE NOT NULL,
+    date_to timestamp WITHOUT TIME ZONE,
+    notes text,
+    update_at timestamp WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
+    updated_by UUID,
+    FOREIGN KEY (measurement_point_uuid) REFERENCES measurement_point (uuid),
+    FOREIGN KEY (mast_section_geometry_uuid) REFERENCES mast_section_geometry (uuid),
+    FOREIGN KEY (orientation_reference_id) REFERENCES orientation_reference (id)
+);
 
 
