@@ -183,7 +183,8 @@ CREATE TABLE IF NOT EXISTS measurement_location(
     notes text,
     update_at timestamp WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
     updated_by UUID,
-    FOREIGN KEY (plant_uuid) REFERENCES plant (uuid)
+    FOREIGN KEY (plant_uuid) REFERENCES plant (uuid),
+    FOREIGN KEY (measurement_station_type_id) REFERENCES measurement_station_type (id)
 );
 
 CREATE TABLE IF NOT EXISTS mast_properties(
@@ -370,6 +371,7 @@ CREATE TABLE IF NOT EXISTS mounting_arrangement(
     updated_by UUID,
     FOREIGN KEY (measurement_point_uuid) REFERENCES measurement_point (uuid),
     FOREIGN KEY (mast_section_geometry_uuid) REFERENCES mast_section_geometry (uuid),
+    FOREIGN KEY (mounting_type_id) REFERENCES mounting_type (id),
     FOREIGN KEY (orientation_reference_id) REFERENCES orientation_reference (id)
 );
 
