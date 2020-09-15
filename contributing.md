@@ -23,7 +23,10 @@ To work on a feature, please fork digital_wra_data_standard first and then creat
 Work out of this feature branch before submitting a pull request.
 Be sure to periodically synchronize the upstream dev branch into your feature branch to avoid conflicts in the pull request.
 
-When the feature branch is ready, make a pull request to IEA-Task-43/digital_wra_data_standard through the Github.com UI.
+When the feature branch is ready, make a pull request to IEA-Task-43/digital_wra_data_standard through the Github.com UI.  You will need to accept the Contributor License Agreement(CLA) for pull requests greater than 20 lines in length. [CLA Language](https://gist.github.com/Dynorat/231c6d3bc1e75b4e44bcb8b241686e93)
+
+[![CLA assistant](https://cla-assistant.io/readme/badge/IEA-Task-43/digital_wra_data_standard)](https://cla-assistant.io/IEA-Task-43/digital_wra_data_standard)
+
 
 ## Pull Request
 
