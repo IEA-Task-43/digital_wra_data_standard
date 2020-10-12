@@ -4,26 +4,27 @@ Contributing
 ## Issue Tracking
 
 New feature requests, changes, enhancements, non-methodology features, and bug reports can be filed as new issues in the
-[Github.com issue tracker](https://github.com/IEA-Task-43/digital_wra_data_standard/issues) at any time. Please be sure to fully describe the
+[GitHub.com issue tracker](https://github.com/IEA-Task-43/digital_wra_data_standard/issues) at any time. Please be sure to fully describe the
 issue.
 
 <!---For other issues, please email the Task 43 distribution list at `xx`.--->
 
 ## Repository
 
-The digital WRA digital_wra_data_standard repository is hosted on Github, and located here: https://github.com/IEA-Task-43/digital_wra_data_standard
+The digital WRA digital_wra_data_standard repository is hosted on GitHub, and located here: https://github.com/IEA-Task-43/digital_wra_data_standard
 
 This repository is organized using a modified git-flow system. Branches are organized as follows:
 
 - master: Stable release version. Must have good test coverage and may not have all the newest features.
 - dev: Development branch which contains the newest features. Tests must pass, but code may be unstable.
-- feature/xxx: Branch from dev, should reference a github issue number.
+- feature/xxx: Branch from dev, should reference a GitHub issue number.
 
-To work on a feature, please fork digital_wra_data_standard first and then create a feature branch in your own fork.
-Work out of this feature branch before submitting a pull request.
-Be sure to periodically synchronize the upstream dev branch into your feature branch to avoid conflicts in the pull request.
+To work on a feature, please fork digital_wra_data_standard first. Then clone your fork locally when you are ready to get to work. If your git status is unclean after you clone  (e.g., lots of untracked files and changes), chances are you are dealing with a Unicode normalization issue (specifically, the Unicode decomposition of filenames under macOS). This can be an issue on project with contributors using a mix of MacOS, Linux, and Windows. To resolve it, delete your clone. Then issue `git config --global core.precomposeunicode true` and clone your fork again. 
 
-When the feature branch is ready, make a pull request to IEA-Task-43/digital_wra_data_standard through the Github.com UI.  You will need to accept the Contributor License Agreement(CLA) for pull requests greater than 20 lines in length. [CLA Language](https://gist.github.com/Dynorat/231c6d3bc1e75b4e44bcb8b241686e93)
+Once you have successfully cloned your fork, create a feature branch. Work out of this feature branch and push changes to your fork before submitting a pull request.
+Be sure to periodically synchronize the upstream dev branch into your feature branch to avoid conflicts in the pull request. GitHub will prompt you to create a pull request back to the original project after the first push from your feature branch to your fork. You can continue to iterate on your feature branch until you are ready to submit your pull request.
+
+When the feature branch is ready, make a pull request to IEA-Task-43/digital_wra_data_standard through the GitHub.com UI. You will need to accept the Contributor License Agreement(CLA) for pull requests greater than 20 lines in length. [CLA Language](https://gist.github.com/Dynorat/231c6d3bc1e75b4e44bcb8b241686e93)
 
 [![CLA assistant](https://cla-assistant.io/readme/badge/IEA-Task-43/digital_wra_data_standard)](https://cla-assistant.io/IEA-Task-43/digital_wra_data_standard)
 
