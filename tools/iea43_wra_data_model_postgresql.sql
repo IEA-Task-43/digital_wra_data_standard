@@ -302,7 +302,7 @@ CREATE TABLE IF NOT EXISTS sensor(
     model text,
     serial_number text,
     sensor_type_id text,
-    instrument_height_mm decimal,
+    instrument_poi_height_mm decimal,
     is_heated boolean,
     date_from timestamp WITHOUT TIME ZONE NOT NULL,
     date_to timestamp WITHOUT TIME ZONE,
