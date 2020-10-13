@@ -352,6 +352,18 @@
                         900
                       ]
                     },
+                    "lattice_has_horizontal_member": {
+					           "type": [
+					             "boolean",
+					             "null"
+					             ],
+					             "title": "Does the tower have horizontal braces?",
+					             "description": "This represents masts that have horizontal braces.",
+					             "examples": [
+						             "true for towers with horizontal braces.",
+						             "false for towers without horizontal braces."
+                       ]
+                    },	
                     "notes": {
                       "$ref": "#/definitions/notes"
                     },
