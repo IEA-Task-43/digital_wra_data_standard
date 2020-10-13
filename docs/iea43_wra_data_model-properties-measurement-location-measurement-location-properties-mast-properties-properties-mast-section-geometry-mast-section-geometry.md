@@ -15,6 +15,7 @@
 | [lattice_bracing_member_diameter_mm](#lattice_bracing_member_diameter_mm)                 | `number`  | Optional | can be null | [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-mast-properties-properties-mast-section-geometry-mast-section-geometry-properties-lattice-bracing-member-diameter-mm.md "https&#x3A;//raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/mast_properties/properties/mast_section_geometry/items/properties/lattice_bracing_member_diameter_mm")        |
 | [lattice_number_of_diagonal_bracing_members](#lattice_number_of_diagonal_bracing_members) | `integer` | Optional | can be null | [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-mast-properties-properties-mast-section-geometry-mast-section-geometry-properties-lattice-number-of-bracing-members.md "https&#x3A;//raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/mast_properties/properties/mast_section_geometry/items/properties/lattice_number_of_diagonal_bracing_members") |
 | [lattice_bracing_member_height_mm](#lattice_bracing_member_height_mm)                     | `number`  | Optional | can be null | [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-mast-properties-properties-mast-section-geometry-mast-section-geometry-properties-lattice-bracing-member-height-mm.md "https&#x3A;//raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/mast_properties/properties/mast_section_geometry/items/properties/lattice_bracing_member_height_mm")            |
+| [lattice_has_horizontal_member](#lattice_has_horizontal_member)                           | `boolean` | Optional | can be null | [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-mast-properties-properties-mast-section-geometry-mast-section-geometry-properties-does-the-tower-have-horizontal-braces.md "https&#x3A;//raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/mast_properties/properties/mast_section_geometry/items/properties/lattice_has_horizontal_member")          |
 | [notes](#notes)                                                                           | `string`  | Optional | can be null | [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-definitions-notes.md "https&#x3A;//raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/mast_properties/properties/mast_section_geometry/items/properties/notes")                                                                                                                                                                                                        |
 | [update_at](#update_at)                                                                   | `string`  | Optional | can be null | [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-definitions-date-of-update.md "https&#x3A;//raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/mast_properties/properties/mast_section_geometry/items/properties/update_at")                                                                                                                                                                                           |
 
@@ -226,6 +227,32 @@ The height of the lattice diagonal bracing members.
 
 ```json
 900
+```
+
+## lattice_has_horizontal_member
+
+This represents masts that have horizontal braces.
+
+
+`lattice_has_horizontal_member`
+
+-   is optional
+-   Type: `boolean` ([Does the tower have horizontal braces?](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-mast-properties-properties-mast-section-geometry-mast-section-geometry-properties-does-the-tower-have-horizontal-braces.md))
+-   can be null
+-   defined in: [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-mast-properties-properties-mast-section-geometry-mast-section-geometry-properties-does-the-tower-have-horizontal-braces.md "https&#x3A;//raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/mast_properties/properties/mast_section_geometry/items/properties/lattice_has_horizontal_member")
+
+### lattice_has_horizontal_member Type
+
+`boolean` ([Does the tower have horizontal braces?](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-mast-properties-properties-mast-section-geometry-mast-section-geometry-properties-does-the-tower-have-horizontal-braces.md))
+
+### lattice_has_horizontal_member Examples
+
+```json
+"true for towers with horizontal braces."
+```
+
+```json
+"false for towers without horizontal braces."
 ```
 
 ## notes
