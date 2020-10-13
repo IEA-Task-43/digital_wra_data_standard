@@ -30,6 +30,7 @@
         "lattice_bracing_member_diameter_mm": 12,
         "lattice_number_of_diagonal_bracing_members": 2,
         "lattice_bracing_member_height_mm": 900,
+        "lattice_has_horizontal_member": false,
         "notes": "I can write anything I want here.",
         "update_at": "2020-04-18T18:13:00"
       }]
