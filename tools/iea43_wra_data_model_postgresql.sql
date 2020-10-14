@@ -219,6 +219,7 @@ CREATE TABLE IF NOT EXISTS mast_section_geometry(
     lattice_bracing_member_diameter_mm decimal,
     lattice_number_of_diagonal_bracing_members integer,
     lattice_bracing_member_height_mm decimal,
+    lattice_has_horizontal_member boolean,
     notes text,
     update_at timestamp WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
     updated_by UUID,
