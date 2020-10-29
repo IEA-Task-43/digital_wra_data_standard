@@ -38,35 +38,35 @@ INSERT INTO logger_main_config
      'Emails to data@developername.com', -5, 3, 10, false, true, null, 'be6f56e6-83f6-4460-a8b8-84c457238c86');
 
 INSERT INTO measurement_point
-    (uuid, measurement_location_uuid, name, measurement_type_id, height_m, notes, updated_by) VALUES
+    (uuid, measurement_location_uuid, name, measurement_type_id, height_m, height_reference, notes, updated_by) VALUES
     ('390bc20e-acb2-4ad2-adfa-65eadeb2346b', '7faab396-bc55-4732-a5c5-0254047ae5ed', 'Spd_80.1_315', 'wind_speed',
-     80.1, null, 'be6f56e6-83f6-4460-a8b8-84c457238c86'),
+     80.1, 'ground_level', null, 'be6f56e6-83f6-4460-a8b8-84c457238c86'),
     ('3f074548-aa9f-4e98-94c5-745ec2e26c73', '7faab396-bc55-4732-a5c5-0254047ae5ed', 'Spd_80mSE', 'wind_speed',
-     80.2, null, 'be6f56e6-83f6-4460-a8b8-84c457238c86'),
+     80.2, 'ground_level', null, 'be6f56e6-83f6-4460-a8b8-84c457238c86'),
     ('436cd366-5e5d-443d-a6e4-364f26c1a988', '7faab396-bc55-4732-a5c5-0254047ae5ed', 'Spd_60mNW', 'wind_speed',
-     60.1, null, 'be6f56e6-83f6-4460-a8b8-84c457238c86'),
+     60.1, 'ground_level', null, 'be6f56e6-83f6-4460-a8b8-84c457238c86'),
     ('f73b6f03-1314-4ea9-9055-c37eb09364a1', '7faab396-bc55-4732-a5c5-0254047ae5ed', 'Spd_60mSE', 'wind_speed',
-     60.2, null, 'be6f56e6-83f6-4460-a8b8-84c457238c86'),
+     60.2, 'ground_level', null, 'be6f56e6-83f6-4460-a8b8-84c457238c86'),
     ('bf383124-0433-44fb-b492-252e70316b89', '7faab396-bc55-4732-a5c5-0254047ae5ed', 'Spd_40mNW', 'wind_speed',
-     40.1, null, 'be6f56e6-83f6-4460-a8b8-84c457238c86'),
+     40.1, 'ground_level', null, 'be6f56e6-83f6-4460-a8b8-84c457238c86'),
     ('e0301253-6d5e-48bd-aed2-a3f91764f593', '7faab396-bc55-4732-a5c5-0254047ae5ed', 'Spd_30mNW', 'wind_speed',
-     30.1, null, 'be6f56e6-83f6-4460-a8b8-84c457238c86'),
+     30.1, 'ground_level', null, 'be6f56e6-83f6-4460-a8b8-84c457238c86'),
     ('abdaf4b0-c4e3-4f72-9dc2-0755b0a756be', '7faab396-bc55-4732-a5c5-0254047ae5ed', 'Spd_40mSE', 'wind_speed',
-     40.2, 'Anemometer put in wrong place. Moved to 40m.', 'be6f56e6-83f6-4460-a8b8-84c457238c86'),
+     40.2, 'ground_level', 'Anemometer put in wrong place. Moved to 40m.', 'be6f56e6-83f6-4460-a8b8-84c457238c86'),
     ('c30c9556-af82-44b9-bce9-07f325288a3e', '7faab396-bc55-4732-a5c5-0254047ae5ed', 'Dir_76mNW', 'wind_direction',
-     76.1, null, 'be6f56e6-83f6-4460-a8b8-84c457238c86'),
+     76.1, 'ground_level', null, 'be6f56e6-83f6-4460-a8b8-84c457238c86'),
     ('7db58460-52ce-410c-b35a-5e9d04aaab71', '7faab396-bc55-4732-a5c5-0254047ae5ed', 'Dir_56mNW', 'wind_direction',
-     56.1, null, 'be6f56e6-83f6-4460-a8b8-84c457238c86'),
+     56.1, 'ground_level', null, 'be6f56e6-83f6-4460-a8b8-84c457238c86'),
     ('4eef9b29-2e5e-4a5b-aadc-847d92c882a4', '7faab396-bc55-4732-a5c5-0254047ae5ed', 'Tmp_78m', 'temperature',
-     78, null, 'be6f56e6-83f6-4460-a8b8-84c457238c86'),
+     78, 'ground_level', null, 'be6f56e6-83f6-4460-a8b8-84c457238c86'),
     ('3b3379c8-9d59-4b42-997c-875a062c0ead', '7faab396-bc55-4732-a5c5-0254047ae5ed', 'Tmp_5m', 'temperature',
-     5, null, 'be6f56e6-83f6-4460-a8b8-84c457238c86'),
+     5, 'ground_level', null, 'be6f56e6-83f6-4460-a8b8-84c457238c86'),
     ('f0447093-f4ac-44fc-ab29-80a4aa1bd937', '7faab396-bc55-4732-a5c5-0254047ae5ed', 'RH_5m', 'relative_humidity',
-     5, null, 'be6f56e6-83f6-4460-a8b8-84c457238c86'),
+     5, 'ground_level', null, 'be6f56e6-83f6-4460-a8b8-84c457238c86'),
     ('8b6d44ca-da42-400b-996f-d8567ef94d82', '7faab396-bc55-4732-a5c5-0254047ae5ed', 'Prs_76m', 'air_pressure',
-     76, null, 'be6f56e6-83f6-4460-a8b8-84c457238c86'),
+     76, 'ground_level', null, 'be6f56e6-83f6-4460-a8b8-84c457238c86'),
     ('bfe53c3c-6196-400a-afef-f32aa936b375', '7faab396-bc55-4732-a5c5-0254047ae5ed', 'Logger_V', 'voltage',
-     null, null, 'be6f56e6-83f6-4460-a8b8-84c457238c86');
+     null, 'ground_level', null, 'be6f56e6-83f6-4460-a8b8-84c457238c86');
 
 INSERT INTO sensor_config
     (uuid, measurement_point_uuid, slope, "offset", sensitivity, measurement_units_id, height_m,
