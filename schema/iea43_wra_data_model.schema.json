@@ -616,7 +616,7 @@
                     "null"
                   ],
                   "title": "Height [m]",
-                  "description": "The height (in meters) typically above ground level that measurement is taking place. If you do not yet know the height please use null. If null is not allowed please use -999."
+                  "description": "The height (in meters) typically above ground level that measurement is taking place. If you do not yet know the height please use null."
                 },
                 "height_reference": {
                   "type": [
