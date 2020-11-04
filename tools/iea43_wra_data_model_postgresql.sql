@@ -268,7 +268,7 @@ CREATE TABLE IF NOT EXISTS measurement_point(
     name text NOT NULL,
     measurement_type_id text NOT NULL,
     height_m decimal,
-    height_reference_id text,
+    height_reference_id text DEFAULT 'ground_level',
     notes text,
     update_at timestamp WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
     updated_by UUID,
