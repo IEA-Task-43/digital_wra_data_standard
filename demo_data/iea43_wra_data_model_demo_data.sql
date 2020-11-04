@@ -38,7 +38,7 @@ INSERT INTO logger_main_config
      'Emails to data@developername.com', -5, 3, 10, false, true, null, 'be6f56e6-83f6-4460-a8b8-84c457238c86');
 
 INSERT INTO measurement_point
-    (uuid, measurement_location_uuid, name, measurement_type_id, height_m, height_reference, notes, updated_by) VALUES
+    (uuid, measurement_location_uuid, name, measurement_type_id, height_m, height_reference_id, notes, updated_by) VALUES
     ('390bc20e-acb2-4ad2-adfa-65eadeb2346b', '7faab396-bc55-4732-a5c5-0254047ae5ed', 'Spd_80.1_315', 'wind_speed',
      80.1, 'ground_level', null, 'be6f56e6-83f6-4460-a8b8-84c457238c86'),
     ('3f074548-aa9f-4e98-94c5-745ec2e26c73', '7faab396-bc55-4732-a5c5-0254047ae5ed', 'Spd_80mSE', 'wind_speed',

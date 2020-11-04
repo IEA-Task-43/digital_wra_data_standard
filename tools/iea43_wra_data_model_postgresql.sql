@@ -268,12 +268,13 @@ CREATE TABLE IF NOT EXISTS measurement_point(
     name text NOT NULL,
     measurement_type_id text NOT NULL,
     height_m decimal,
-    height_reference text,
+    height_reference_id text,
     notes text,
     update_at timestamp WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
     updated_by UUID,
     FOREIGN KEY (measurement_location_uuid) REFERENCES measurement_location (uuid),
-    FOREIGN KEY (measurement_type_id) REFERENCES measurement_type (id)
+    FOREIGN KEY (measurement_type_id) REFERENCES measurement_type (id),
+    FOREIGN KEY (height_reference_id) REFERENCES height_reference (id)
 );
 
 CREATE TABLE IF NOT EXISTS sensor_config(
