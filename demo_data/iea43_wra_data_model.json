@@ -58,6 +58,7 @@
       "name": "Spd_80.1_315",
       "measurement_type_id": "wind_speed",
       "height_m": 80.1,
+      "height_reference_id": "ground_level",
       "notes": "I can write anything I want here.",
       "update_at": "2020-04-18T18:13:00",
       "sensor_config": [{
@@ -238,6 +239,7 @@
       "name": "Spd_80mSE",
       "measurement_type_id": "wind_speed",
       "height_m": 80.2,
+      "height_reference_id": "ground_level",
       "notes": "I can write anything I want here.",
       "update_at": "2020-04-18T18:13:00",
       "sensor_config": [{
@@ -495,6 +497,7 @@
       "name": "Spd_60mNW",
       "measurement_type_id": "wind_speed",
       "height_m": 60.1,
+      "height_reference_id": "ground_level",
       "notes": "I can write anything I want here.",
       "update_at": "2020-04-18T18:13:00",
       "sensor_config": [{
@@ -637,6 +640,7 @@
       "name": "Spd_60mSE",
       "measurement_type_id": "wind_speed",
       "height_m": 60.2,
+      "height_reference_id": "ground_level",
       "notes": "I can write anything I want here.",
       "update_at": "2020-04-18T18:13:00",
       "sensor_config": [{
@@ -779,6 +783,7 @@
       "name": "Spd_40mNW",
       "measurement_type_id": "wind_speed",
       "height_m": 40.1,
+      "height_reference_id": "ground_level",
       "notes": "I can write anything I want here.",
       "update_at": "2020-04-18T18:13:00",
       "sensor_config": [{
@@ -959,6 +964,7 @@
       "name": "Spd_30mNW",
       "measurement_type_id": "wind_speed",
       "height_m": 30.1,
+      "height_reference_id": "ground_level",
       "notes": "I can write anything I want here.",
       "update_at": "2020-04-18T18:13:00",
       "sensor_config": [{
@@ -1101,6 +1107,7 @@
       "name": "Spd_40mSE",
       "measurement_type_id": "wind_speed",
       "height_m": 40.2,
+      "height_reference_id": "ground_level",
       "notes": "Anemometer put in wrong place. Moved to 40m.",
       "update_at": "2020-04-18T18:13:00",
       "sensor_config": [{
@@ -1243,6 +1250,7 @@
       "name": "Dir_76mNW",
       "measurement_type_id": "wind_direction",
       "height_m": 76.1,
+      "height_reference_id": "ground_level",
       "notes": "I can write anything I want here.",
       "update_at": "2020-04-18T18:13:00",
       "sensor_config": [{
@@ -1320,6 +1328,7 @@
       "name": "Dir_56mNW",
       "measurement_type_id": "wind_direction",
       "height_m": 56.1,
+      "height_reference_id": "ground_level",
       "notes": "I can write anything I want here.",
       "update_at": "2020-04-18T18:13:00",
       "sensor_config": [{
@@ -1427,6 +1436,7 @@
       "name": "Tmp_78m",
       "measurement_type_id": "temperature",
       "height_m": 78,
+      "height_reference_id": "ground_level",
       "notes": "I can write anything I want here.",
       "update_at": "2020-04-18T18:13:00",
       "sensor_config": [{
@@ -1486,6 +1496,7 @@
       "name": "Tmp_5m",
       "measurement_type_id": "temperature",
       "height_m": 5,
+      "height_reference_id": "ground_level",
       "notes": "I can write anything I want here.",
       "update_at": "2020-04-18T18:13:00",
       "sensor_config": [{
@@ -1545,6 +1556,7 @@
       "name": "RH_5m",
       "measurement_type_id": "relative_humidity",
       "height_m": 5,
+      "height_reference_id": "ground_level",
       "notes": "I can write anything I want here.",
       "update_at": "2020-04-18T18:13:00",
       "sensor_config": [{
@@ -1604,6 +1616,7 @@
       "name": "Prs_76m",
       "measurement_type_id": "air_pressure",
       "height_m": 76,
+      "height_reference_id": "ground_level",
       "notes": "I can write anything I want here.",
       "update_at": "2020-04-18T18:13:00",
       "sensor_config": [{
@@ -1663,6 +1676,7 @@
       "name": "Logger_V",
       "measurement_type_id": "voltage",
       "height_m": null,
+      "height_reference_id": "ground_level",
       "notes": "I can write anything I want here.",
       "update_at": "2020-04-18T18:13:00",
       "sensor_config": [{

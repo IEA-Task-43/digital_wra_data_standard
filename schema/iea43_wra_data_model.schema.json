@@ -616,7 +616,22 @@
                     "null"
                   ],
                   "title": "Height [m]",
-                  "description": "The height (in meters) above ground level the measurement is taking place. If you do not yet know the height please use null. If null is not allowed please use -999."
+                  "description": "The height (in meters) typically above ground level that measurement is taking place. If you do not yet know the height please use null."
+                },
+                "height_reference_id": {
+                  "type": [
+                    "string",
+                    "null"
+                  ],
+                  "title": "Height Reference",
+                  "description": "The height reference frame that is used to measure the height of the measurement point. E.g. onshore this is ground level i.e. the anemometer is 80 m above ground level. Offshore is a bit different as it can be 80 m above mean sea level or 80 m above lowest astronomical tide.",
+                  "enum": [
+                    "ground_level",
+                    "mean_sea_level",
+                    "lowest_astronomical_tide",
+                    "other"
+                  ],
+                  "default": "ground_level"
                 },
                 "notes": {
                   "$ref": "#/definitions/notes"

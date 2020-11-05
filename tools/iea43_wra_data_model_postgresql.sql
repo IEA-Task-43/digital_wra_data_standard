@@ -27,6 +27,10 @@ CREATE TABLE IF NOT EXISTS measurement_type (
     id text PRIMARY KEY
 );
 
+CREATE TABLE IF NOT EXISTS height_reference (
+    id text PRIMARY KEY
+);
+
 CREATE TABLE IF NOT EXISTS measurement_units (
     id text PRIMARY KEY
 );
@@ -95,6 +99,12 @@ INSERT INTO measurement_type (id) VALUES
     ('illuminance'),
     ('status'),
     ('counter'),
+    ('other');
+
+INSERT INTO height_reference (id) VALUES
+    ('ground_level'),
+    ('mean_sea_level'),
+    ('lowest_astronomical_tide'),
     ('other');
 
 INSERT INTO measurement_units (id) VALUES
@@ -258,11 +268,13 @@ CREATE TABLE IF NOT EXISTS measurement_point(
     name text NOT NULL,
     measurement_type_id text NOT NULL,
     height_m decimal,
+    height_reference_id text DEFAULT 'ground_level',
     notes text,
     update_at timestamp WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
     updated_by UUID,
     FOREIGN KEY (measurement_location_uuid) REFERENCES measurement_location (uuid),
-    FOREIGN KEY (measurement_type_id) REFERENCES measurement_type (id)
+    FOREIGN KEY (measurement_type_id) REFERENCES measurement_type (id),
+    FOREIGN KEY (height_reference_id) REFERENCES height_reference (id)
 );
 
 CREATE TABLE IF NOT EXISTS sensor_config(
