@@ -78,6 +78,10 @@ INSERT INTO logger_oem (id) VALUES
     ('Wilmers'),
     ('Unidata'),
     ('WindLogger'),
+    ("Leosphere"),
+    ("ZX Lidars"),
+    ("AXYS Technologies"),
+    ("AQSystem"),
     ('other');
 
 INSERT INTO measurement_type (id) VALUES

@@ -386,7 +386,7 @@
           "logger_main_config": {
             "type": "array",
             "title": "Logger Configuration",
-            "description": "This represents how the logger's main settings are configured. For example, it's sampling rate or averaging period.",
+            "description": "This represents how the logger's main settings are configured. For example, it's sampling rate or averaging period. For remote sensing devices, such as lidar's, the device itself is considered as a logger and so these logger configuration attributes should be used to describe the lidar.",
             "items": {
               "type": "object",
               "title": "Logger Configuration",
@@ -394,7 +394,7 @@
                 "logger_oem_id": {
                   "type": "string",
                   "title": "Logger OEM",
-                  "description": "This is the logger manufacturer id as defined by the IEA Wind Resource Assessment Data Model Schema.",
+                  "description": "This is the logger or remote sensing device manufacturer id as defined by the IEA Wind Resource Assessment Data Model Schema.",
                   "enum": [
                     "NRG Systems",
                     "Ammonit",
@@ -405,6 +405,10 @@
                     "Wilmers",
                     "Unidata",
                     "WindLogger",
+                    "Leosphere",
+                    "ZX Lidars",
+                    "AXYS Technologies",
+                    "AQSystem",
                     "Other"
                   ]
                 },
@@ -414,17 +418,18 @@
                     "null"
                   ],
                   "title": "Logger Model Name",
-                  "description": "This is the logger model name. This is usually stated in the data files from the logger in either the header or footer.",
+                  "description": "This is the logger or remote sensing device model name. This is usually stated in the data files from the logger in either the header or footer.",
                   "examples": [
                     "Symphonie Plus3",
                     "CR1000",
-                    "Meteo-40M"
+                    "Meteo-40M",
+                    "WindCube v2"
                   ]
                 },
                 "logger_serial_number": {
                   "type": "string",
                   "title": "Logger Serial Number",
-                  "description": "The logger serial number. This is sometimes different from the logger id."
+                  "description": "The logger or remote sensing device serial number. This is sometimes different from the logger id."
                 },
                 "logger_id": {
                   "type": [
@@ -432,7 +437,7 @@
                     "null"
                   ],
                   "title": "Logger Id",
-                  "description": "This is the logger id. It may be set by the logger programmer and may be different from the logger serial number.",
+                  "description": "This is the logger or remote sensing device id. It may be set by the logger programmer and may be different from the logger serial number.",
                   "examples": [
                     "4321",
                     "D123456"
