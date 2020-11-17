@@ -78,10 +78,10 @@ INSERT INTO logger_oem (id) VALUES
     ('Wilmers'),
     ('Unidata'),
     ('WindLogger'),
-    ("Leosphere"),
-    ("ZX Lidars"),
-    ("AXYS Technologies"),
-    ("AQSystem"),
+    ('Leosphere'),
+    ('ZX Lidars'),
+    ('AXYS Technologies'),
+    ('AQSystem'),
     ('other');
 
 INSERT INTO measurement_type (id) VALUES
@@ -265,6 +265,16 @@ CREATE TABLE IF NOT EXISTS logger_main_config(
     updated_by UUID,
     FOREIGN KEY (measurement_location_uuid) REFERENCES measurement_location (uuid),
     FOREIGN KEY (logger_oem_id) REFERENCES logger_oem (id)
+);
+
+CREATE TABLE IF NOT EXISTS lidar_config(
+    uuid UUID PRIMARY KEY,
+    logger_main_config_uuid UUID,
+    flow_corrections_applied boolean,
+    notes text,
+    update_at timestamp WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
+    updated_by UUID,
+    FOREIGN KEY (logger_main_config_uuid) REFERENCES logger_main_config (uuid)
 );
 
 CREATE TABLE IF NOT EXISTS measurement_point(

@@ -562,6 +562,40 @@
                 },
                 "update_at": {
                   "$ref": "#/definitions/update_at"
+                },
+                "lidar_config": {
+                  "type": "array",
+                  "title": "Lidar Specific Configuration",
+                  "description": "The lidar specific configuration represents how the lidar's specific settings are configured. For example, if FCR is turned on.",
+                  "items": {
+                    "type": "object",
+                    "title": "Lidar Specific  Configuration",
+                    "properties": {
+                      "flow_corrections_applied": {
+                        "type": [
+                          "boolean",
+                          "null"
+                        ],
+                        "title": "Flow Corrections Applied",
+                        "description": "Is there any flow corrections applied to the measured data by the lidar unit, e.g. FCR for WindCubes?",
+                        "examples": [
+                          "true for any flow corrections applied.",
+                          "false for no flow corrections applied."
+                        ]
+                      },
+                      "notes": {
+                        "$ref": "#/definitions/notes"
+                      },
+                      "update_at": {
+                        "$ref": "#/definitions/update_at"
+                      }
+                    },
+                    "additionalProperties": false,
+                    "required": [
+                    ]
+                  },
+                  "additionalItems": false,
+                  "uniqueItems": true
                 }
               },
               "additionalProperties": false,
