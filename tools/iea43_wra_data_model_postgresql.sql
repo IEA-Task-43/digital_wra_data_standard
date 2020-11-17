@@ -60,7 +60,8 @@ INSERT INTO plant_type (id) VALUES
 INSERT INTO measurement_station_type (id) VALUES
     ('mast'),
     ('lidar'),
-    ('sodar');
+    ('sodar'),
+    ('flidar');
 
 INSERT INTO mast_geometry (id) VALUES
     ('lattice_triangle'),

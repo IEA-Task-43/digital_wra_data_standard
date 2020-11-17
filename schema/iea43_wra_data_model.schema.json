@@ -151,12 +151,13 @@
           },
           "measurement_station_type_id": {
             "title": "Measurement Station Type",
-            "description": "The type of measurement station. This must be one of either mast, lidar or sodar.",
+            "description": "The type of measurement station. This must be one of either met mast, lidar, sodar or flidar (floating lidar).",
             "type": "string",
             "enum": [
               "mast",
               "lidar",
-              "sodar"
+              "sodar",
+              "flidar"
             ]
           },
           "notes": {
