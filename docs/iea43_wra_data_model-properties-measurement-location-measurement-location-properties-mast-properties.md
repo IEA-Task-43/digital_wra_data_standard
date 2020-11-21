@@ -17,7 +17,7 @@
 
 ## mast_geometry_id
 
-The type of mast geometry e.g. lattice or pole.
+The type of mast geometry e.g. lattice with a triangular profile or pole. The IEC specifies two square lattice towers as having rounded edges for their members or sharp edges.
 
 
 `mast_geometry_id`
@@ -35,11 +35,12 @@ The type of mast geometry e.g. lattice or pole.
 
 **enum**: the value of this property must be equal to one of the following values:
 
-| Value                | Explanation |
-| :------------------- | ----------- |
-| `"lattice_triangle"` |             |
-| `"lattice_square"`   |             |
-| `"pole"`             |             |
+| Value                          | Explanation |
+| :----------------------------- | ----------- |
+| `"lattice_triangle"`           |             |
+| `"lattice_square_round_edges"` |             |
+| `"lattice_square_sharp_edges"` |             |
+| `"pole"`                       |             |
 
 ## mast_oem
 
