@@ -64,7 +64,8 @@ INSERT INTO measurement_station_type (id) VALUES
 
 INSERT INTO mast_geometry (id) VALUES
     ('lattice_triangle'),
-    ('lattice_square'),
+    ('lattice_square_round_edges'),
+    ('lattice_square_sharp_edges'),
     ('pole');
 
 INSERT INTO logger_oem (id) VALUES
