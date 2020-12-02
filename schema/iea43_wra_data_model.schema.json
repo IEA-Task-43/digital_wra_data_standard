@@ -383,6 +383,87 @@
             },
             "additionalProperties": false
           },
+          "vertical_profiling_properties":{
+            "type": [
+              "array",
+              "null"
+            ],
+            "title": "Vertical Profiling Properties",
+            "description": "Vertical profiling remote sensing devices installation specific properties.",
+            "items": {
+              "type": "object",
+              "title": "Vertical Profiling Properties",
+              "properties": {
+                "window_height_m": {
+                  "type": [
+                    "number",
+                    "null"
+                  ],
+                  "title": "Window Height [m]",
+                  "description": "The window height of the lidar device. This is usually the height of window above ground level however it may be above sea level or above a platform level.",
+                  "examples": [
+                    0.5,
+                    1
+                  ]
+                },
+                "height_reference_id": {
+                  "type": [
+                    "string",
+                    "null"
+                  ],
+                  "title": "Height Reference",
+                  "description": "The height reference frame that is used to measure the height of the window. E.g. onshore this is ground level i.e. the window is 0.5 m above ground level. Offshore is a bit different as it can be 20 m above mean sea level or 20 m above lowest astronomical tide.",
+                  "enum": [
+                    "ground_level",
+                    "mean_sea_level",
+                    "lowest_astronomical_tide",
+                    "other"
+                  ],
+                  "default": "ground_level"
+                },
+                "device_orientation_deg": {
+                  "type": [
+                    "number",
+                    "null"
+                  ],
+                  "title": "Device Orientation [deg]",
+                  "description": "The orientation that the remote sensing device is installed relative to north.",
+                  "minimum": 0,
+                  "maximum": 360
+                },
+                "orientation_reference_id": {
+                  "type": [
+                    "string",
+                    "null"
+                  ],
+                  "title": "Orientation Reference",
+                  "description": "The orientation reference the remote sensing device is measured against. E.g. magnetic north.",
+                  "enum": [
+                    "magnetic_north",
+                    "true_north",
+                    "grid_north"
+                  ]
+                },
+                "date_from": {
+                  "$ref": "#/definitions/date_from"
+                },
+                "date_to": {
+                  "$ref": "#/definitions/date_to"
+                },
+                "notes": {
+                  "$ref": "#/definitions/notes"
+                },
+                "update_at": {
+                  "$ref": "#/definitions/update_at"
+                }
+              },
+              "additionalProperties": false,
+              "required": [
+              ]
+            },
+            "additionalItems": false,
+            "uniqueItems": true
+          },
           "logger_main_config": {
             "type": "array",
             "title": "Logger Configuration",
@@ -564,7 +645,10 @@
                   "$ref": "#/definitions/update_at"
                 },
                 "lidar_config": {
-                  "type": "array",
+                  "type": [
+                    "array",
+                    "null"
+                  ],
                   "title": "Lidar Specific Configuration",
                   "description": "The lidar specific configuration represents how the lidar's specific settings are configured. For example, if FCR is turned on.",
                   "items": {
@@ -582,6 +666,12 @@
                           "true for any flow corrections applied.",
                           "false for no flow corrections applied."
                         ]
+                      },
+                      "date_from": {
+                        "$ref": "#/definitions/date_from"
+                      },
+                      "date_to": {
+                        "$ref": "#/definitions/date_to"
                       },
                       "notes": {
                         "$ref": "#/definitions/notes"

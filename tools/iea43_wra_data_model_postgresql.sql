@@ -241,6 +241,22 @@ CREATE TABLE IF NOT EXISTS mast_section_geometry(
     FOREIGN KEY (mast_properties_uuid) REFERENCES mast_properties (uuid)
 );
 
+CREATE TABLE IF NOT EXISTS vertical_profiling_properties(
+    uuid UUID PRIMARY KEY,
+    measurement_location_uuid UUID,
+    window_height_m decimal,
+    height_reference_id text DEFAULT 'ground_level',
+    device_orientation_deg decimal CHECK (device_orientation_deg >= 0 AND device_orientation_deg <= 360),
+    orientation_reference_id text,
+    date_from timestamp WITHOUT TIME ZONE NOT NULL,
+    date_to timestamp WITHOUT TIME ZONE,
+    notes text,
+    update_at timestamp WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
+    updated_by UUID,
+    FOREIGN KEY (measurement_location_uuid) REFERENCES measurement_location (uuid),
+    FOREIGN KEY (height_reference_id) REFERENCES height_reference (id),
+    FOREIGN KEY (orientation_reference_id) REFERENCES orientation_reference (id)
+);
 
 CREATE TABLE IF NOT EXISTS logger_main_config(
     uuid UUID PRIMARY KEY,
