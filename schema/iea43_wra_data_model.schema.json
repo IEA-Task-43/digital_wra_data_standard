@@ -406,6 +406,18 @@
                     1
                   ]
                 },
+                "device_base_height_m": {
+                  "type": [
+                    "number",
+                    "null"
+                  ],
+                  "title": "Device Base Height [m]",
+                  "description": "The height of the base of the remote sensing device e.g. above ground level. This is usually the height above ground level at which the remote sensing device is mounted however it may be above sea level or above a platform level.",
+                  "examples": [
+                    0.5,
+                    1
+                  ]
+                },
                 "height_reference_id": {
                   "type": [
                     "string",

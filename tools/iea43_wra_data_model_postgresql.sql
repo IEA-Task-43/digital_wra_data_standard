@@ -245,6 +245,7 @@ CREATE TABLE IF NOT EXISTS vertical_profiling_properties(
     uuid UUID PRIMARY KEY,
     measurement_location_uuid UUID,
     window_height_m decimal,
+    device_base_height_m decimal,
     height_reference_id text DEFAULT 'ground_level',
     device_orientation_deg decimal CHECK (device_orientation_deg >= 0 AND device_orientation_deg <= 360),
     orientation_reference_id text,
