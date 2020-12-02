@@ -383,16 +383,16 @@
             },
             "additionalProperties": false
           },
-          "vertical_profiling_properties":{
+          "vertical_profiler_properties":{
             "type": [
               "array",
               "null"
             ],
-            "title": "Vertical Profiling Properties",
-            "description": "Vertical profiling remote sensing devices installation specific properties.",
+            "title": "Vertical Profiler Properties",
+            "description": "Vertical profiler remote sensing devices installation specific properties.",
             "items": {
               "type": "object",
-              "title": "Vertical Profiling Properties",
+              "title": "Vertical Profiler Properties",
               "properties": {
                 "window_height_m": {
                   "type": [

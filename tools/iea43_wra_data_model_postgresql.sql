@@ -241,7 +241,7 @@ CREATE TABLE IF NOT EXISTS mast_section_geometry(
     FOREIGN KEY (mast_properties_uuid) REFERENCES mast_properties (uuid)
 );
 
-CREATE TABLE IF NOT EXISTS vertical_profiling_properties(
+CREATE TABLE IF NOT EXISTS vertical_profiler_properties(
     uuid UUID PRIMARY KEY,
     measurement_location_uuid UUID,
     window_height_m decimal,
