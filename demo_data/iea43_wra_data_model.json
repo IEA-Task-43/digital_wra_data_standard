@@ -234,6 +234,16 @@
         "date_to": null,
         "notes": "I can write anything I want here.",
         "update_at": "2020-04-18T18:13:00"
+      }],
+      "interference_structures": [{
+        "structure_type_id": "lightning_finial",
+        "orientation_from_mast_centre_deg": 45,
+        "orientation_reference_id": "magnetic_north",
+        "distance_from_mast_centre_mm": 900,
+        "date_from": "2020-04-12T12:00:00",
+        "date_to": null,
+        "notes": "I can write anything I want here.",
+        "update_at": "2020-04-18T18:13:00"
       }]
     },{
       "name": "Spd_80mSE",
@@ -488,6 +498,16 @@
         "boom_diameter_mm": 25,
         "boom_length_mm": 2470,
         "distance_from_mast_to_sensor_mm": 2470,
+        "date_from": "2020-04-12T12:00:00",
+        "date_to": null,
+        "notes": "I can write anything I want here.",
+        "update_at": "2020-04-18T18:13:00"
+      }],
+      "interference_structures": [{
+        "structure_type_id": "lightning_finial",
+        "orientation_from_mast_centre_deg": 45,
+        "orientation_reference_id": "magnetic_north",
+        "distance_from_mast_centre_mm": 900,
         "date_from": "2020-04-12T12:00:00",
         "date_to": null,
         "notes": "I can write anything I want here.",
