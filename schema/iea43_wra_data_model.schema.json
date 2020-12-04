@@ -874,7 +874,7 @@
                           "null"
                         ],
                         "title": "Instrument Point of Interest Height [mm]",
-                        "description": "This is the physical height dimension, in mm, of the sensor's point of interest, i.e. point of measurement. This is to aid IEC mounting calculations. It is not the height above ground level at which it is deployed. For example, if the sensor is an anemometer it is the height from the bottom of the instrument to the center of the cups. For a sonic anemometer it is the center of the sampling volume. For a horizontal propeller anemometer it is the axis of rotation of the propellers. For a wind vane it is the top of the vane.",
+                        "description": "This is the physical height dimension, in mm, of the sensor's point of interest, i.e. point of measurement. This is to aid IEC mounting calculations. It is not the height above ground level at which it is deployed. For example, if the sensor is an anemometer it is the height from the bottom of the instrument to the centre of the cups. For a sonic anemometer it is the centre of the sampling volume. For a horizontal propeller anemometer it is the axis of rotation of the propellers. For a wind vane it is the top of the vane.",
                         "examples": [
                           "169 mm for a Vector A100 anemometer (https://www.windspeed.co.uk/ws/index.php?option=displaypage&op=page&Itemid=48#dimensions)."
                         ]
@@ -1214,7 +1214,7 @@
                           "null"
                         ],
                         "title": "Distance Mast to Sensor [mm]",
-                        "description": "The distance, measured in millimeters, of edge of the mast to the center of the sensor.",
+                        "description": "The distance, measured in millimeters, of edge of the mast to the centre of the sensor.",
                         "minimum": 0
                       },
                       "date_from": {
@@ -1233,6 +1233,87 @@
                     "required": [
                       "date_from",
                       "date_to"
+                    ]
+                  },
+                  "additionalItems": false,
+                  "uniqueItems": true
+                },
+                "interference_structures": {
+                  "type": [
+                    "array",
+                    "null"
+                  ],
+                  "title": "Interference Structures",
+                  "description": "",
+                  "items": {
+                    "type": "object",
+                    "title": "Interference Structures",
+                    "properties":{
+                      "structure_type_id":{
+                        "type": [
+                          "string",
+                          "null"
+                        ],
+                        "title": "Structure Type",
+                        "description": "The type of structure that is causing an interference in the sensor's measurements.",
+                        "enum": [
+                          "lightning_finial",
+                          "aviation_light",
+                          "guy_wires",
+                          "other"
+                        ]
+                      },
+                      "orientation_from_mast_centre_deg": {
+                        "type": [
+                          "number",
+                          "null"
+                        ],
+                        "title": "Orientation from Mast Centre [deg]",
+                        "description": "The orientation of the interference structure, relative to the centre of the mast, causing an impact on the sensor's measurements.",
+                        "minimum": 0,
+                        "maximum": 360
+                      },
+                      "orientation_reference_id": {
+                        "type": [
+                          "string",
+                          "null"
+                        ],
+                        "title": "Orientation Reference",
+                        "description": "The orientation reference the interference structure is measured against. E.g. magnetic north.",
+                        "enum": [
+                          "magnetic_north",
+                          "true_north",
+                          "grid_north"
+                        ]
+                      },
+                      "distance_from_mast_centre_mm": {
+                        "type": [
+                          "number",
+                          "null"
+                        ],
+                        "title": "Distance from Mast Centre [mm]",
+                        "description": "The distance from the mast centre to the interference structure causing an impact on the sensor's measurements.",
+                        "examples": [
+                          900
+                        ]
+                      },
+                      "date_from": {
+                        "$ref": "#/definitions/date_from"
+                      },
+                      "date_to": {
+                        "$ref": "#/definitions/date_to"
+                      },
+                      "notes": {
+                        "$ref": "#/definitions/notes"
+                      },
+                      "update_at": {
+                        "$ref": "#/definitions/update_at"
+                      }
+                    },
+                    "additionalProperties": false,
+                    "required": [
+                      "structure_type_id",
+                      "date_from"
                     ]
                   },
                   "additionalItems": false,

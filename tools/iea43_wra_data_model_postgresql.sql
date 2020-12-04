@@ -51,6 +51,9 @@ CREATE TABLE IF NOT EXISTS orientation_reference (
     id text PRIMARY KEY
 );
 
+CREATE TABLE IF NOT EXISTS structure_type (
+    id text PRIMARY KEY
+);
 
 -- ** insert enum values **
 INSERT INTO plant_type (id) VALUES
@@ -171,6 +174,12 @@ INSERT INTO orientation_reference (id) VALUES
     ('magnetic_north'),
     ('true_north'),
     ('grid_north');
+
+INSERT INTO structure_type (id) VALUES
+    ('lightning_finial'),
+    ('aviation_light'),
+    ('guy_wires'),
+    ('other');
 
 
 -- ** Create main tables **
@@ -389,4 +398,26 @@ CREATE TABLE IF NOT EXISTS mounting_arrangement(
     FOREIGN KEY (orientation_reference_id) REFERENCES orientation_reference (id)
 );
 
+CREATE TABLE IF NOT EXISTS interference_structures(
+    uuid UUID PRIMARY KEY,
+    structure_type_id text NOT NULL,
+    orientation_from_mast_centre_deg decimal CHECK (orientation_from_mast_centre_deg >= 0 AND orientation_from_mast_centre_deg <= 360),
+    orientation_reference_id text,
+    distance_from_mast_centre_mm decimal,
+    date_from timestamp WITHOUT TIME ZONE NOT NULL,
+    date_to timestamp WITHOUT TIME ZONE,
+    notes text,
+    update_at timestamp WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
+    updated_by UUID,
+    FOREIGN KEY (structure_type_id) REFERENCES structure_type (id),
+    FOREIGN KEY (orientation_reference_id) REFERENCES orientation_reference (id)
+);
+
+CREATE TABLE IF NOT EXISTS measurement_point_interference_structures(
+    measurement_point_uuid UUID,
+    interference_structures_uuid UUID,
+    PRIMARY KEY (measurement_point_uuid, interference_structures_uuid),
+    FOREIGN KEY (measurement_point_uuid) REFERENCES measurement_point (uuid),
+    FOREIGN KEY (interference_structures_uuid) REFERENCES interference_structures (uuid)
+);
 
