@@ -276,7 +276,7 @@ The length, measured in millimeters, of the boom.
 
 ## distance_from_mast_to_sensor_mm
 
-The distance, measured in millimeters, of edge of the mast to the center of the sensor.
+The distance, measured in millimeters, of edge of the mast to the centre of the sensor.
 
 
 `distance_from_mast_to_sensor_mm`

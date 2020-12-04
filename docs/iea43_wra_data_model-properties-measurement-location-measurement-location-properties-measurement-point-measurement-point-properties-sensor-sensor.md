@@ -139,7 +139,7 @@ The measurement sensor type e.g. anemometer.
 
 ## instrument_poi_height_mm
 
-This is the physical height dimension, in mm, of the sensor's point of interest, i.e. point of measurement. This is to aid IEC mounting calculations. It is not the height above ground level at which it is deployed. For example, if the sensor is an anemometer it is the height from the bottom of the instrument to the center of the cups. For a sonic anemometer it is the center of the sampling volume. For a horizontal propeller anemometer it is the axis of rotation of the propellers. For a wind vane it is the top of the vane.
+This is the physical height dimension, in mm, of the sensor's point of interest, i.e. point of measurement. This is to aid IEC mounting calculations. It is not the height above ground level at which it is deployed. For example, if the sensor is an anemometer it is the height from the bottom of the instrument to the centre of the cups. For a sonic anemometer it is the centre of the sampling volume. For a horizontal propeller anemometer it is the axis of rotation of the propellers. For a wind vane it is the top of the vane.
 
 
 `instrument_poi_height_mm`
