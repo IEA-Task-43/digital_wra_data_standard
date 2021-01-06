@@ -151,7 +151,7 @@
           },
           "measurement_station_type_id": {
             "title": "Measurement Station Type",
-            "description": "The type of measurement station. This must be one of either met mast, lidar, sodar or flidar (floating lidar).",
+            "description": "The type of measurement station. This must be one of either met mast, lidar (a vertical profiler), sodar (also a vertical profiler) or flidar (floating vertical profiler lidar).",
             "type": "string",
             "enum": [
               "mast",
@@ -389,30 +389,18 @@
               "null"
             ],
             "title": "Vertical Profiler Properties",
-            "description": "Vertical profiler remote sensing devices installation specific properties.",
+            "description": "Vertical profiler remote sensing devices (e.g. lidar, sodar and flidar) installation specific properties.",
             "items": {
               "type": "object",
               "title": "Vertical Profiler Properties",
               "properties": {
-                "window_height_m": {
+                "device_datum_plane_height_m": {
                   "type": [
                     "number",
                     "null"
                   ],
-                  "title": "Window Height [m]",
-                  "description": "The window height of the lidar device. This is usually the height of window above ground level however it may be above sea level or above a platform level.",
-                  "examples": [
-                    0.5,
-                    1
-                  ]
-                },
-                "device_base_height_m": {
-                  "type": [
-                    "number",
-                    "null"
-                  ],
-                  "title": "Device Base Height [m]",
-                  "description": "The height of the base of the remote sensing device e.g. above ground level. This is usually the height above ground level at which the remote sensing device is mounted however it may be above sea level or above a platform level.",
+                  "title": "Device Datum Plane Height [m]",
+                  "description": "The datum plane height of the remote sensing device where the datum feature is defined here: https://data.windenergy.dtu.dk/ontologies/view/IEATask32Glossary/en/page/parameters.datum_feature . For lidars the datum feature is usually the window and for sodars it is usually the base of the device. These datum plane heights are also usually referred to as above ground level however it may be above sea level or above a platform level.",
                   "examples": [
                     0.5,
                     1
@@ -424,7 +412,7 @@
                     "null"
                   ],
                   "title": "Height Reference",
-                  "description": "The height reference frame that is used to measure the height of the window. E.g. onshore this is ground level i.e. the window is 0.5 m above ground level. Offshore is a bit different as it can be 20 m above mean sea level or 20 m above lowest astronomical tide.",
+                  "description": "The height reference frame that is used to measure the device datum plane height. E.g. onshore this is ground level i.e. the datum feature is 0.5 m above ground level. Offshore is a bit different as it can be 20 m above mean sea level or 20 m above lowest astronomical tide.",
                   "enum": [
                     "ground_level",
                     "mean_sea_level",
@@ -502,6 +490,7 @@
                     "ZX Lidars",
                     "AXYS Technologies",
                     "AQSystem",
+                    "Pentaluum",
                     "Other"
                   ]
                 },
@@ -533,7 +522,8 @@
                   "description": "This is the logger or remote sensing device id. It may be set by the logger programmer and may be different from the logger serial number.",
                   "examples": [
                     "4321",
-                    "D123456"
+                    "D123456",
+                    "WLS7-999"
                   ]
                 },
                 "logger_name": {
@@ -665,7 +655,7 @@
                   "description": "The lidar specific configuration represents how the lidar's specific settings are configured. For example, if FCR is turned on.",
                   "items": {
                     "type": "object",
-                    "title": "Lidar Specific  Configuration",
+                    "title": "Lidar Specific Configuration",
                     "properties": {
                       "flow_corrections_applied": {
                         "type": [
@@ -673,10 +663,10 @@
                           "null"
                         ],
                         "title": "Flow Corrections Applied",
-                        "description": "Is there any flow corrections applied to the measured data by the lidar unit, e.g. FCR for WindCubes?",
+                        "description": "Is there any flow corrections applied to the measured data by the lidar unit, e.g. Flow Complexity Recognition (FCR) for WindCubes?",
                         "examples": [
-                          "true for any flow corrections applied.",
-                          "false for no flow corrections applied."
+                          "true (for any flow corrections applied)",
+                          "false (for no flow corrections applied)"
                         ]
                       },
                       "date_from": {

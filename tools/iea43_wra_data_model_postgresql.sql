@@ -82,6 +82,7 @@ INSERT INTO logger_oem (id) VALUES
     ('ZX Lidars'),
     ('AXYS Technologies'),
     ('AQSystem'),
+    ('Pentaluum'),
     ('other');
 
 INSERT INTO measurement_type (id) VALUES
@@ -244,8 +245,7 @@ CREATE TABLE IF NOT EXISTS mast_section_geometry(
 CREATE TABLE IF NOT EXISTS vertical_profiler_properties(
     uuid UUID PRIMARY KEY,
     measurement_location_uuid UUID,
-    window_height_m decimal,
-    device_base_height_m decimal,
+    device_datum_plane_height_m decimal,
     height_reference_id text DEFAULT 'ground_level',
     device_orientation_deg decimal CHECK (device_orientation_deg >= 0 AND device_orientation_deg <= 360),
     orientation_reference_id text,
