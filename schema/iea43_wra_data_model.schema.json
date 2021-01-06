@@ -748,7 +748,7 @@
                     "null"
                   ],
                   "title": "Height [m]",
-                  "description": "The height (in meters) typically above ground level that measurement is taking place. If you do not yet know the height please use null."
+                  "description": "The height (in meters) typically above ground level that the measurement is taking place. If you do not yet know the height please use null."
                 },
                 "height_reference_id": {
                   "type": [
@@ -833,7 +833,7 @@
                           "null"
                         ],
                         "title": "Logger Height [m]",
-                        "description": "The height above ground level in meters at which the sensor is deployed as programmed into the logger."
+                        "description": "The height in meters at which the sensor is deployed, as programmed into the logger. For remote sensing devices such as lidars and sodars this is the measurement height programmed into the device where the measurement height is defined here: http://data.windenergy.dtu.dk/controlled-terminology/IEAWindTask32/parameters.measurement_height"
                       },
                       "serial_number": {
                         "type": [
