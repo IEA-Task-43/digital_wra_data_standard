@@ -105,6 +105,10 @@ INSERT INTO measurement_type (id) VALUES
     ('illuminance'),
     ('status'),
     ('counter'),
+    ('availability'),
+    ('quality'),
+    ('carrier_to_noise_ratio'),
+    ('doppler_spectral_broadening'),
     ('other');
 
 INSERT INTO height_reference (id) VALUES
@@ -130,6 +134,7 @@ INSERT INTO measurement_units (id) VALUES
     ('W/m^2'),
     ('m/s^2'),
     ('lux'),
+    ('dB'),
     ('-');
 
 INSERT INTO statistic_type (id) VALUES
@@ -138,11 +143,14 @@ INSERT INTO statistic_type (id) VALUES
     ('max'),
     ('min'),
     ('count'),
+    ('availability'),
+    ('quality'),
     ('sum'),
     ('median'),
     ('mode'),
     ('range'),
     ('gust'),
+    ('ti'),
     ('text');
 
 INSERT INTO sensor_type (id) VALUES

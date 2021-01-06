@@ -739,6 +739,10 @@
                     "illuminance",
                     "status",
                     "counter",
+                    "availability",
+                    "quality",
+                    "carrier_to_noise_ratio",
+                    "doppler_spectral_broadening",
                     "other"
                   ]
                 },
@@ -824,6 +828,7 @@
                           "W/m^2",
                           "m/s^2",
                           "lux",
+                          "dB",
                           "-"
                         ]
                       },
@@ -886,11 +891,14 @@
                                 "max",
                                 "min",
                                 "count",
+                                "availability",
+                                "quality",
                                 "sum",
                                 "median",
                                 "mode",
                                 "range",
                                 "gust",
+                                "ti",
                                 "text"
                               ]
                             },
