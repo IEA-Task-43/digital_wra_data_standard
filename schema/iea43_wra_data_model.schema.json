@@ -151,12 +151,13 @@
           },
           "measurement_station_type_id": {
             "title": "Measurement Station Type",
-            "description": "The type of measurement station. This must be one of either mast, lidar or sodar.",
+            "description": "The type of measurement station. This must be one of either met mast, lidar (a vertical profiler), sodar (also a vertical profiler) or flidar (floating vertical profiler lidar).",
             "type": "string",
             "enum": [
               "mast",
               "lidar",
-              "sodar"
+              "sodar",
+              "flidar"
             ]
           },
           "notes": {
@@ -383,10 +384,91 @@
             },
             "additionalProperties": false
           },
+          "vertical_profiler_properties":{
+            "type": [
+              "array",
+              "null"
+            ],
+            "title": "Vertical Profiler Properties",
+            "description": "Vertical profiler remote sensing devices (e.g. lidar, sodar and flidar) installation specific properties.",
+            "items": {
+              "type": "object",
+              "title": "Vertical Profiler Properties",
+              "properties": {
+                "device_datum_plane_height_m": {
+                  "type": [
+                    "number",
+                    "null"
+                  ],
+                  "title": "Device Datum Plane Height [m]",
+                  "description": "The datum plane height of the remote sensing device where the datum feature is defined here: https://data.windenergy.dtu.dk/ontologies/view/IEATask32Glossary/en/page/parameters.datum_feature . For lidars the datum feature is usually the window and for sodars it is usually the base of the device. These datum plane heights are also usually referred to as above ground level however it may be above sea level or above a platform level.",
+                  "examples": [
+                    0.5,
+                    1
+                  ]
+                },
+                "height_reference_id": {
+                  "type": [
+                    "string",
+                    "null"
+                  ],
+                  "title": "Height Reference",
+                  "description": "The height reference frame that is used to measure the device datum plane height. E.g. onshore this is ground level i.e. the datum feature is 0.5 m above ground level. Offshore is a bit different as it can be 20 m above mean sea level or 20 m above lowest astronomical tide.",
+                  "enum": [
+                    "ground_level",
+                    "mean_sea_level",
+                    "lowest_astronomical_tide",
+                    "other"
+                  ],
+                  "default": "ground_level"
+                },
+                "device_orientation_deg": {
+                  "type": [
+                    "number",
+                    "null"
+                  ],
+                  "title": "Device Orientation [deg]",
+                  "description": "The orientation that the remote sensing device is installed relative to north.",
+                  "minimum": 0,
+                  "maximum": 360
+                },
+                "orientation_reference_id": {
+                  "type": [
+                    "string",
+                    "null"
+                  ],
+                  "title": "Orientation Reference",
+                  "description": "The orientation reference the remote sensing device is measured against. E.g. magnetic north.",
+                  "enum": [
+                    "magnetic_north",
+                    "true_north",
+                    "grid_north"
+                  ]
+                },
+                "date_from": {
+                  "$ref": "#/definitions/date_from"
+                },
+                "date_to": {
+                  "$ref": "#/definitions/date_to"
+                },
+                "notes": {
+                  "$ref": "#/definitions/notes"
+                },
+                "update_at": {
+                  "$ref": "#/definitions/update_at"
+                }
+              },
+              "additionalProperties": false,
+              "required": [
+              ]
+            },
+            "additionalItems": false,
+            "uniqueItems": true
+          },
           "logger_main_config": {
             "type": "array",
             "title": "Logger Configuration",
-            "description": "This represents how the logger's main settings are configured. For example, it's sampling rate or averaging period.",
+            "description": "This represents how the logger's main settings are configured. For example, it's sampling rate or averaging period. For remote sensing devices, such as lidar's, the device itself is considered as a logger and so these logger configuration attributes should be used to describe the lidar.",
             "items": {
               "type": "object",
               "title": "Logger Configuration",
@@ -394,7 +476,7 @@
                 "logger_oem_id": {
                   "type": "string",
                   "title": "Logger OEM",
-                  "description": "This is the logger manufacturer id as defined by the IEA Wind Resource Assessment Data Model Schema.",
+                  "description": "This is the logger or remote sensing device manufacturer id as defined by the IEA Wind Resource Assessment Data Model Schema.",
                   "enum": [
                     "NRG Systems",
                     "Ammonit",
@@ -405,6 +487,11 @@
                     "Wilmers",
                     "Unidata",
                     "WindLogger",
+                    "Leosphere",
+                    "ZX Lidars",
+                    "AXYS Technologies",
+                    "AQSystem",
+                    "Pentaluum",
                     "Other"
                   ]
                 },
@@ -414,17 +501,18 @@
                     "null"
                   ],
                   "title": "Logger Model Name",
-                  "description": "This is the logger model name. This is usually stated in the data files from the logger in either the header or footer.",
+                  "description": "This is the logger or remote sensing device model name. This is usually stated in the data files from the logger in either the header or footer.",
                   "examples": [
                     "Symphonie Plus3",
                     "CR1000",
-                    "Meteo-40M"
+                    "Meteo-40M",
+                    "WindCube v2"
                   ]
                 },
                 "logger_serial_number": {
                   "type": "string",
                   "title": "Logger Serial Number",
-                  "description": "The logger serial number. This is sometimes different from the logger id."
+                  "description": "The logger or remote sensing device serial number. This is sometimes different from the logger id."
                 },
                 "logger_id": {
                   "type": [
@@ -432,10 +520,11 @@
                     "null"
                   ],
                   "title": "Logger Id",
-                  "description": "This is the logger id. It may be set by the logger programmer and may be different from the logger serial number.",
+                  "description": "This is the logger or remote sensing device id. It may be set by the logger programmer and may be different from the logger serial number.",
                   "examples": [
                     "4321",
-                    "D123456"
+                    "D123456",
+                    "WLS7-999"
                   ]
                 },
                 "logger_name": {
@@ -557,6 +646,49 @@
                 },
                 "update_at": {
                   "$ref": "#/definitions/update_at"
+                },
+                "lidar_config": {
+                  "type": [
+                    "array",
+                    "null"
+                  ],
+                  "title": "Lidar Specific Configuration",
+                  "description": "The lidar specific configuration represents how the lidar's specific settings are configured. For example, if FCR is turned on.",
+                  "items": {
+                    "type": "object",
+                    "title": "Lidar Specific Configuration",
+                    "properties": {
+                      "flow_corrections_applied": {
+                        "type": [
+                          "boolean",
+                          "null"
+                        ],
+                        "title": "Flow Corrections Applied",
+                        "description": "Is there any flow corrections applied to the measured data by the lidar unit, e.g. Flow Complexity Recognition (FCR) for WindCubes?",
+                        "examples": [
+                          "true (for any flow corrections applied)",
+                          "false (for no flow corrections applied)"
+                        ]
+                      },
+                      "date_from": {
+                        "$ref": "#/definitions/date_from"
+                      },
+                      "date_to": {
+                        "$ref": "#/definitions/date_to"
+                      },
+                      "notes": {
+                        "$ref": "#/definitions/notes"
+                      },
+                      "update_at": {
+                        "$ref": "#/definitions/update_at"
+                      }
+                    },
+                    "additionalProperties": false,
+                    "required": [
+                    ]
+                  },
+                  "additionalItems": false,
+                  "uniqueItems": true
                 }
               },
               "additionalProperties": false,
@@ -608,6 +740,10 @@
                     "illuminance",
                     "status",
                     "counter",
+                    "availability",
+                    "quality",
+                    "carrier_to_noise_ratio",
+                    "doppler_spectral_broadening",
                     "other"
                   ]
                 },
@@ -617,7 +753,7 @@
                     "null"
                   ],
                   "title": "Height [m]",
-                  "description": "The height (in meters) typically above ground level that measurement is taking place. If you do not yet know the height please use null."
+                  "description": "The height (in meters) typically above ground level that the measurement is taking place. If you do not yet know the height please use null."
                 },
                 "height_reference_id": {
                   "type": [
@@ -693,6 +829,7 @@
                           "W/m^2",
                           "m/s^2",
                           "lux",
+                          "dB",
                           "-"
                         ]
                       },
@@ -702,7 +839,7 @@
                           "null"
                         ],
                         "title": "Logger Height [m]",
-                        "description": "The height above ground level in meters at which the sensor is deployed as programmed into the logger."
+                        "description": "The height in meters at which the sensor is deployed, as programmed into the logger. For remote sensing devices such as lidars and sodars this is the measurement height programmed into the device where the measurement height is defined here: http://data.windenergy.dtu.dk/controlled-terminology/IEAWindTask32/parameters.measurement_height"
                       },
                       "serial_number": {
                         "type": [
@@ -755,11 +892,14 @@
                                 "max",
                                 "min",
                                 "count",
+                                "availability",
+                                "quality",
                                 "sum",
                                 "median",
                                 "mode",
                                 "range",
                                 "gust",
+                                "ti",
                                 "text"
                               ]
                             },

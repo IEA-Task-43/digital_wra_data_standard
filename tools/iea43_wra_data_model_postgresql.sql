@@ -63,7 +63,8 @@ INSERT INTO plant_type (id) VALUES
 INSERT INTO measurement_station_type (id) VALUES
     ('mast'),
     ('lidar'),
-    ('sodar');
+    ('sodar'),
+    ('flidar');
 
 INSERT INTO mast_geometry (id) VALUES
     ('lattice_triangle'),
@@ -81,6 +82,11 @@ INSERT INTO logger_oem (id) VALUES
     ('Wilmers'),
     ('Unidata'),
     ('WindLogger'),
+    ('Leosphere'),
+    ('ZX Lidars'),
+    ('AXYS Technologies'),
+    ('AQSystem'),
+    ('Pentaluum'),
     ('other');
 
 INSERT INTO measurement_type (id) VALUES
@@ -103,6 +109,10 @@ INSERT INTO measurement_type (id) VALUES
     ('illuminance'),
     ('status'),
     ('counter'),
+    ('availability'),
+    ('quality'),
+    ('carrier_to_noise_ratio'),
+    ('doppler_spectral_broadening'),
     ('other');
 
 INSERT INTO height_reference (id) VALUES
@@ -128,6 +138,7 @@ INSERT INTO measurement_units (id) VALUES
     ('W/m^2'),
     ('m/s^2'),
     ('lux'),
+    ('dB'),
     ('-');
 
 INSERT INTO statistic_type (id) VALUES
@@ -136,11 +147,14 @@ INSERT INTO statistic_type (id) VALUES
     ('max'),
     ('min'),
     ('count'),
+    ('availability'),
+    ('quality'),
     ('sum'),
     ('median'),
     ('mode'),
     ('range'),
     ('gust'),
+    ('ti'),
     ('text');
 
 INSERT INTO sensor_type (id) VALUES
@@ -246,6 +260,22 @@ CREATE TABLE IF NOT EXISTS mast_section_geometry(
     FOREIGN KEY (mast_properties_uuid) REFERENCES mast_properties (uuid)
 );
 
+CREATE TABLE IF NOT EXISTS vertical_profiler_properties(
+    uuid UUID PRIMARY KEY,
+    measurement_location_uuid UUID,
+    device_datum_plane_height_m decimal,
+    height_reference_id text DEFAULT 'ground_level',
+    device_orientation_deg decimal CHECK (device_orientation_deg >= 0 AND device_orientation_deg <= 360),
+    orientation_reference_id text,
+    date_from timestamp WITHOUT TIME ZONE NOT NULL,
+    date_to timestamp WITHOUT TIME ZONE,
+    notes text,
+    update_at timestamp WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
+    updated_by UUID,
+    FOREIGN KEY (measurement_location_uuid) REFERENCES measurement_location (uuid),
+    FOREIGN KEY (height_reference_id) REFERENCES height_reference (id),
+    FOREIGN KEY (orientation_reference_id) REFERENCES orientation_reference (id)
+);
 
 CREATE TABLE IF NOT EXISTS logger_main_config(
     uuid UUID PRIMARY KEY,
@@ -270,6 +300,18 @@ CREATE TABLE IF NOT EXISTS logger_main_config(
     updated_by UUID,
     FOREIGN KEY (measurement_location_uuid) REFERENCES measurement_location (uuid),
     FOREIGN KEY (logger_oem_id) REFERENCES logger_oem (id)
+);
+
+CREATE TABLE IF NOT EXISTS lidar_config(
+    uuid UUID PRIMARY KEY,
+    logger_main_config_uuid UUID,
+    flow_corrections_applied boolean,
+    date_from timestamp WITHOUT TIME ZONE NOT NULL,
+    date_to timestamp WITHOUT TIME ZONE,
+    notes text,
+    update_at timestamp WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
+    updated_by UUID,
+    FOREIGN KEY (logger_main_config_uuid) REFERENCES logger_main_config (uuid)
 );
 
 CREATE TABLE IF NOT EXISTS measurement_point(
