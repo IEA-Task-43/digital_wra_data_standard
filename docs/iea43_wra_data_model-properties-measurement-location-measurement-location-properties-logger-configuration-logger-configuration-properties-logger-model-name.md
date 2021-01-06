@@ -15,3 +15,7 @@
 ```json
 "Meteo-40M"
 ```
+
+```json
+"WindCube v2"
+```

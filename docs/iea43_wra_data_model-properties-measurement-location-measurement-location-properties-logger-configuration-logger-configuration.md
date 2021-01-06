@@ -23,10 +23,11 @@
 | [clock_is_auto_synced](#clock_is_auto_synced)             | `boolean` | Optional | can be null    | [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-logger-configuration-logger-configuration-properties-clock-is-auto-synced.md "https&#x3A;//raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/logger_main_config/items/properties/clock_is_auto_synced")             |
 | [notes](#notes)                                           | `string`  | Optional | can be null    | [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-definitions-notes.md "https&#x3A;//raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/logger_main_config/items/properties/notes")                                                                                                                                                    |
 | [update_at](#update_at)                                   | `string`  | Optional | can be null    | [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-definitions-date-of-update.md "https&#x3A;//raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/logger_main_config/items/properties/update_at")                                                                                                                                       |
+| [lidar_config](#lidar_config)                             | `array`   | Optional | can be null    | [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-logger-configuration-logger-configuration-properties-lidar-specific-configuration.md "https&#x3A;//raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/logger_main_config/items/properties/lidar_config")             |
 
 ## logger_oem_id
 
-This is the logger manufacturer id as defined by the IEA Wind Resource Assessment Data Model Schema.
+This is the logger or remote sensing device manufacturer id as defined by the IEA Wind Resource Assessment Data Model Schema.
 
 
 `logger_oem_id`
@@ -55,11 +56,16 @@ This is the logger manufacturer id as defined by the IEA Wind Resource Assessmen
 | `"Wilmers"`             |             |
 | `"Unidata"`             |             |
 | `"WindLogger"`          |             |
+| `"Leosphere"`           |             |
+| `"ZX Lidars"`           |             |
+| `"AXYS Technologies"`   |             |
+| `"AQSystem"`            |             |
+| `"Pentaluum"`           |             |
 | `"Other"`               |             |
 
 ## logger_model_name
 
-This is the logger model name. This is usually stated in the data files from the logger in either the header or footer.
+This is the logger or remote sensing device model name. This is usually stated in the data files from the logger in either the header or footer.
 
 
 `logger_model_name`
@@ -87,9 +93,13 @@ This is the logger model name. This is usually stated in the data files from the
 "Meteo-40M"
 ```
 
+```json
+"WindCube v2"
+```
+
 ## logger_serial_number
 
-The logger serial number. This is sometimes different from the logger id.
+The logger or remote sensing device serial number. This is sometimes different from the logger id.
 
 
 `logger_serial_number`
@@ -105,7 +115,7 @@ The logger serial number. This is sometimes different from the logger id.
 
 ## logger_id
 
-This is the logger id. It may be set by the logger programmer and may be different from the logger serial number.
+This is the logger or remote sensing device id. It may be set by the logger programmer and may be different from the logger serial number.
 
 
 `logger_id`
@@ -127,6 +137,10 @@ This is the logger id. It may be set by the logger programmer and may be differe
 
 ```json
 "D123456"
+```
+
+```json
+"WLS7-999"
 ```
 
 ## logger_name
@@ -466,3 +480,23 @@ The date these properties were last updated.
 ```json
 "2020-07-28T20:49:13"
 ```
+
+## lidar_config
+
+The lidar specific configuration represents how the lidar's specific settings are configured. For example, if FCR is turned on.
+
+
+`lidar_config`
+
+-   is optional
+-   Type: `object[]` ([Lidar Specific Configuration](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-logger-configuration-logger-configuration-properties-lidar-specific-configuration-lidar-specific-configuration.md))
+-   can be null
+-   defined in: [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-logger-configuration-logger-configuration-properties-lidar-specific-configuration.md "https&#x3A;//raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/logger_main_config/items/properties/lidar_config")
+
+### lidar_config Type
+
+`object[]` ([Lidar Specific Configuration](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-logger-configuration-logger-configuration-properties-lidar-specific-configuration-lidar-specific-configuration.md))
+
+### lidar_config Constraints
+
+**unique items**: all items in this array must be unique. Duplicates are not allowed.

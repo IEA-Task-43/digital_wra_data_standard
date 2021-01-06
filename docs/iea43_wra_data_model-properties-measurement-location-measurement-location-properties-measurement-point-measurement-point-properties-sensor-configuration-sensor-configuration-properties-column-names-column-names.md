@@ -48,19 +48,22 @@ The statistic, aggregation function or signal e.g. 'average' or 'maximum' that t
 
 **enum**: the value of this property must be equal to one of the following values:
 
-| Value      | Explanation |
-| :--------- | ----------- |
-| `"avg"`    |             |
-| `"sd"`     |             |
-| `"max"`    |             |
-| `"min"`    |             |
-| `"count"`  |             |
-| `"sum"`    |             |
-| `"median"` |             |
-| `"mode"`   |             |
-| `"range"`  |             |
-| `"gust"`   |             |
-| `"text"`   |             |
+| Value            | Explanation |
+| :--------------- | ----------- |
+| `"avg"`          |             |
+| `"sd"`           |             |
+| `"max"`          |             |
+| `"min"`          |             |
+| `"count"`        |             |
+| `"availability"` |             |
+| `"quality"`      |             |
+| `"sum"`          |             |
+| `"median"`       |             |
+| `"mode"`         |             |
+| `"range"`        |             |
+| `"gust"`         |             |
+| `"ti"`           |             |
+| `"text"`         |             |
 
 ## is_ignored
 

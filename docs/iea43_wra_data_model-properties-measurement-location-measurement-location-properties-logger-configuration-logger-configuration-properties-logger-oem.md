@@ -17,4 +17,9 @@
 | `"Wilmers"`             |             |
 | `"Unidata"`             |             |
 | `"WindLogger"`          |             |
+| `"Leosphere"`           |             |
+| `"ZX Lidars"`           |             |
+| `"AXYS Technologies"`   |             |
+| `"AQSystem"`            |             |
+| `"Pentaluum"`           |             |
 | `"Other"`               |             |

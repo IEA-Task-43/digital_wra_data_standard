@@ -105,11 +105,12 @@ The measurement units of the values the sensor records.
 | `"W/m^2"` |             |
 | `"m/s^2"` |             |
 | `"lux"`   |             |
+| `"dB"`    |             |
 | `"-"`     |             |
 
 ## height_m
 
-The height above ground level in meters at which the sensor is deployed as programmed into the logger.
+The height in meters at which the sensor is deployed, as programmed into the logger. For remote sensing devices such as lidars and sodars this is the measurement height programmed into the device where the measurement height is defined here: <http://data.windenergy.dtu.dk/controlled-terminology/IEAWindTask32/parameters.measurement_height>
 
 
 `height_m`

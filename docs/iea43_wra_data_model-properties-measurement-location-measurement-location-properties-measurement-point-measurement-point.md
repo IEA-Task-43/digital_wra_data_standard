@@ -53,32 +53,36 @@ The type of measurement been made.
 
 **enum**: the value of this property must be equal to one of the following values:
 
-| Value                     | Explanation |
-| :------------------------ | ----------- |
-| `"wind_speed"`            |             |
-| `"wind_direction"`        |             |
-| `"temperature"`           |             |
-| `"air_pressure"`          |             |
-| `"relative_humidity"`     |             |
-| `"voltage"`               |             |
-| `"current"`               |             |
-| `"vertical_wind_speed"`   |             |
-| `"wind_speed_turbulence"` |             |
-| `"precipitation"`         |             |
-| `"ice_detection"`         |             |
-| `"solar_irradiation"`     |             |
-| `"soiling_loss_index"`    |             |
-| `"fog"`                   |             |
-| `"compass_direction"`     |             |
-| `"gps_coordinates"`       |             |
-| `"illuminance"`           |             |
-| `"status"`                |             |
-| `"counter"`               |             |
-| `"other"`                 |             |
+| Value                           | Explanation |
+| :------------------------------ | ----------- |
+| `"wind_speed"`                  |             |
+| `"wind_direction"`              |             |
+| `"temperature"`                 |             |
+| `"air_pressure"`                |             |
+| `"relative_humidity"`           |             |
+| `"voltage"`                     |             |
+| `"current"`                     |             |
+| `"vertical_wind_speed"`         |             |
+| `"wind_speed_turbulence"`       |             |
+| `"precipitation"`               |             |
+| `"ice_detection"`               |             |
+| `"solar_irradiation"`           |             |
+| `"soiling_loss_index"`          |             |
+| `"fog"`                         |             |
+| `"compass_direction"`           |             |
+| `"gps_coordinates"`             |             |
+| `"illuminance"`                 |             |
+| `"status"`                      |             |
+| `"counter"`                     |             |
+| `"availability"`                |             |
+| `"quality"`                     |             |
+| `"carrier_to_noise_ratio"`      |             |
+| `"doppler_spectral_broadening"` |             |
+| `"other"`                       |             |
 
 ## height_m
 
-The height (in meters) typically above ground level that measurement is taking place. If you do not yet know the height please use null.
+The height (in meters) typically above ground level that the measurement is taking place. If you do not yet know the height please use null.
 
 
 `height_m`
