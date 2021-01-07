@@ -21,7 +21,7 @@ This repository is organized using a modified git-flow system. Branches are orga
 
 To work on a feature, please fork digital_wra_data_standard first. Then clone your fork locally when you are ready to get to work. If your git status is unclean after you clone  (e.g., lots of untracked files and changes), chances are you are dealing with a Unicode normalization issue (specifically, the Unicode decomposition of filenames under macOS). This can be an issue on project with contributors using a mix of MacOS, Linux, and Windows. To resolve it, delete your clone. Then issue `git config --global core.precomposeunicode true` and clone your fork again. 
 
-Once you have successfully cloned your fork, create a feature branch. Work out of this feature branch and push changes to your fork before submitting a pull request.
+Once you have successfully cloned your fork, create a feature branch from the dev branch. Work out of this feature branch and push changes to your fork before submitting a pull request.
 Be sure to periodically synchronize the upstream dev branch into your feature branch to avoid conflicts in the pull request. GitHub will prompt you to create a pull request back to the original project after the first push from your feature branch to your fork. You can continue to iterate on your feature branch until you are ready to submit your pull request.
 
 When the feature branch is ready, make a pull request to IEA-Task-43/digital_wra_data_standard through the GitHub.com UI. You will need to accept the Contributor License Agreement(CLA) for pull requests greater than 20 lines in length. [CLA Language](https://gist.github.com/Dynorat/231c6d3bc1e75b4e44bcb8b241686e93)
