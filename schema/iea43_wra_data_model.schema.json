@@ -259,7 +259,7 @@
                       ],
                       "format": "uuid",
                       "title": "UUID",
-                      "description": "The unique id to relate this mast section to the mounting arrangement.",
+                      "description": "The unique id to relate this mast section to the mounting arrangement. A UUID can be generated here https://www.uuidgenerator.net/",
                       "examples": [
                         "bf078172-bbb6-48fe-ac1f-c6605dffb1b5"
                       ]
@@ -314,10 +314,10 @@
                         "null"
                       ],
                       "title": "Lattice Leg is Round Cross Section",
-                      "description": "The lattice leg is a round or square cross section.",
+                      "description": "The lattice leg is a round or square cross section. True is for a round leg cross section and false is for a square leg cross section.",
                       "examples": [
-                        "true - for a round leg cross section",
-                        "false - for a square leg cross section"
+                        "true (for a round leg cross section)",
+                        "false (for a square leg cross section)"
                       ]
                     },
                     "lattice_bracing_member_diameter_mm": {
@@ -360,10 +360,10 @@
                         "null"
                       ],
                       "title": "Does the tower have horizontal braces?",
-                      "description": "This represents masts that have horizontal braces.",
+                      "description": "This represents masts that have horizontal braces. True is for towers with horizontal braces and false is for towers without horizontal braces.",
                       "examples": [
-                        "true for towers with horizontal braces.",
-                        "false for towers without horizontal braces."
+                        "true (for towers with horizontal braces)",
+                        "false (for towers without horizontal braces)"
                       ]
                     },	
                     "notes": {
@@ -586,11 +586,11 @@
                     "null"
                   ],
                   "title": "Offset From UTC [hr]",
-                  "description": "The number of hours that the logger clock is offset from UTC.",
+                  "description": "The number of hours that the logger clock is offset from UTC. E.g. -5 for Eastern Standard Time",
                   "examples": [
-                    "-5 for Eastern Standard Time",
-                    "1 for Central European Time",
-                    "5.5 for India Standard Time"
+                    "-5 (for Eastern Standard Time)",
+                    "1 (for Central European Time)",
+                    "5.5 (for India Standard Time)"
                   ]
                 },
                 "sampling_rate_sec": {
@@ -601,8 +601,8 @@
                   "title": "Sampling Rate [s]",
                   "description": "The number of seconds the logger samples data.",
                   "examples": [
-                    "1 s",
-                    "2 s"
+                    "1",
+                    "2"
                   ]
                 },
                 "averaging_period_minutes": {
@@ -613,8 +613,8 @@
                   "title": "Averaging Period [min]",
                   "description": "The number of minutes the logger aggregates the data over.",
                   "examples": [
-                    "10 min",
-                    "60 min"
+                    "10",
+                    "60"
                   ]
                 },
                 "timestamp_is_end_of_period": {
@@ -623,10 +623,10 @@
                     "null"
                   ],
                   "title": "Timestamp at End of Period",
-                  "description": "Does the timestamp represent the end of the averaging period.",
+                  "description": "Does the timestamp represent the end of the averaging period. True is for timestamp to represent the end of the averaging period and false is for timestamp to represent the start of the averaging period.",
                   "examples": [
-                    "true for timestamp to represent the end of the averaging period.",
-                    "false for timestamp to represent the start of the averaging period."
+                    "true (for timestamp to represent the end of the averaging period)",
+                    "false (for timestamp to represent the start of the averaging period)"
                   ]
                 },
                 "clock_is_auto_synced": {
@@ -635,10 +635,10 @@
                     "null"
                   ],
                   "title": "Clock is Auto-Synced",
-                  "description": "Is the logger clock auto-synced with an internet time server to keep accurate time.",
+                  "description": "Is the logger clock auto-synced with an internet time server to keep accurate time. True is for when the logger clock is auto-synced and false is for when the logger clock is not auto-synced.",
                   "examples": [
-                    "true for logger clock to be auto-synced.",
-                    "false for logger clock not to be auto-synced."
+                    "true (for when the logger clock is auto-synced)",
+                    "false (for when the logger clock is not auto-synced)"
                   ]
                 },
                 "notes": {
@@ -1025,10 +1025,10 @@
                           "null"
                         ],
                         "title": "Is Heated",
-                        "description": "Is the sensor heated to reduce the effect of icing. This is usually relevant for wind speed and wind vane sensors.",
+                        "description": "Is the sensor heated to reduce the effect of icing. This is usually relevant for wind speed and wind vane sensors. True is for when the sensor is heated and false is for when the sensor is not heated.",
                         "examples": [
-                          "true, if the sensor is heated.",
-                          "false, if the sensor is not heated."
+                          "true (if the sensor is heated)",
+                          "false (if the sensor is not heated)"
                         ]
                       },
                       "date_from": {
@@ -1238,7 +1238,7 @@
                         ],
                         "format": "uuid",
                         "title": "Mast Section Geometry UUID",
-                        "description": "The uuid to link this Measurement Point's mounting arrangement to the Mast Section Geometry."
+                        "description": "The uuid to link this Measurement Point's mounting arrangement to the Mast Section Geometry. A UUID can be generated here https://www.uuidgenerator.net/"
                       },
                       "mounting_type_id": {
                         "type": [
