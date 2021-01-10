@@ -113,6 +113,15 @@ INSERT INTO measurement_type (id) VALUES
     ('quality'),
     ('carrier_to_noise_ratio'),
     ('doppler_spectral_broadening'),
+    ('true_north_offset'),
+    ('orientation'),
+    ('tilt_x'),
+    ('tilt_y'),
+    ('tilt_z'),
+    ('elevation'),
+    ('altitude'),
+    ('azimuth'),
+    ('timestamp'),
     ('other');
 
 INSERT INTO height_reference (id) VALUES
