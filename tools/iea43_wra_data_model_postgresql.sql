@@ -6,6 +6,10 @@
 
 -- The SQL standard has tried to be used as much as possible.
 
+
+-- ** load plugin that generates uuids **:
+CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
+
 -- ** create enum tables **
 CREATE TABLE IF NOT EXISTS plant_type (
     id text PRIMARY KEY
@@ -198,7 +202,7 @@ INSERT INTO structure_type (id) VALUES
 
 -- ** Create main tables **
 CREATE TABLE IF NOT EXISTS plant (
-    uuid UUID PRIMARY KEY,
+    uuid UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
     name text,
     plant_type_id text NOT NULL,
     notes text,
@@ -208,7 +212,7 @@ CREATE TABLE IF NOT EXISTS plant (
 );
 
 CREATE TABLE IF NOT EXISTS measurement_location(
-    uuid UUID PRIMARY KEY,
+    uuid UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
     name text NOT NULL,
     plant_uuid UUID,
     latitude_ddeg decimal NOT NULL CHECK (latitude_ddeg >= -90 AND latitude_ddeg <= 90),
@@ -222,7 +226,7 @@ CREATE TABLE IF NOT EXISTS measurement_location(
 );
 
 CREATE TABLE IF NOT EXISTS mast_properties(
-    uuid UUID PRIMARY KEY,
+    uuid UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
     mast_geometry_id text,
     mast_oem text,
     mast_serial_number text,
@@ -243,7 +247,7 @@ CREATE TABLE IF NOT EXISTS measurement_location_mast_properties(
 );
 
 CREATE TABLE IF NOT EXISTS mast_section_geometry(
-    uuid UUID PRIMARY KEY,
+    uuid UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
     mast_properties_uuid UUID,
     pole_diameter_mm decimal,
     lattice_face_width_at_bottom_mm decimal,
@@ -261,7 +265,7 @@ CREATE TABLE IF NOT EXISTS mast_section_geometry(
 );
 
 CREATE TABLE IF NOT EXISTS vertical_profiler_properties(
-    uuid UUID PRIMARY KEY,
+    uuid UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
     measurement_location_uuid UUID,
     device_datum_plane_height_m decimal,
     height_reference_id text DEFAULT 'ground_level',
@@ -278,7 +282,7 @@ CREATE TABLE IF NOT EXISTS vertical_profiler_properties(
 );
 
 CREATE TABLE IF NOT EXISTS logger_main_config(
-    uuid UUID PRIMARY KEY,
+    uuid UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
     measurement_location_uuid UUID NOT NULL,
     logger_oem_id text NOT NULL,
     logger_model_name text,
@@ -303,7 +307,7 @@ CREATE TABLE IF NOT EXISTS logger_main_config(
 );
 
 CREATE TABLE IF NOT EXISTS lidar_config(
-    uuid UUID PRIMARY KEY,
+    uuid UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
     logger_main_config_uuid UUID,
     flow_corrections_applied boolean,
     date_from timestamp WITHOUT TIME ZONE NOT NULL,
@@ -315,7 +319,7 @@ CREATE TABLE IF NOT EXISTS lidar_config(
 );
 
 CREATE TABLE IF NOT EXISTS measurement_point(
-    uuid UUID PRIMARY KEY,
+    uuid UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
     measurement_location_uuid UUID NOT NULL,
     name text NOT NULL,
     measurement_type_id text NOT NULL,
@@ -330,7 +334,7 @@ CREATE TABLE IF NOT EXISTS measurement_point(
 );
 
 CREATE TABLE IF NOT EXISTS sensor_config(
-    uuid UUID PRIMARY KEY,
+    uuid UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
     measurement_point_uuid UUID NOT NULL,
     slope decimal,
     "offset" decimal,  -- offset is a SQL reserved word so needs to be escaped
@@ -349,7 +353,7 @@ CREATE TABLE IF NOT EXISTS sensor_config(
 );
 
 CREATE TABLE IF NOT EXISTS column_name(
-    uuid UUID PRIMARY KEY,
+    uuid UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
     sensor_config_uuid UUID NOT NULL,
     column_name text NOT NULL,
     statistic_type_id text NOT NULL,
@@ -362,7 +366,7 @@ CREATE TABLE IF NOT EXISTS column_name(
 );
 
 CREATE TABLE IF NOT EXISTS sensor(
-    uuid UUID PRIMARY KEY,
+    uuid UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
     oem text,
     model text,
     serial_number text,
@@ -386,7 +390,7 @@ CREATE TABLE IF NOT EXISTS measurement_point_sensor(
 );
 
 CREATE TABLE IF NOT EXISTS calibration(
-    uuid UUID PRIMARY KEY,
+    uuid UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
     sensor_uuid UUID NOT NULL,
     slope decimal,
     "offset" decimal,  -- offset is a SQL reserved word so needs to be escaped
@@ -404,7 +408,7 @@ CREATE TABLE IF NOT EXISTS calibration(
 );
 
 CREATE TABLE IF NOT EXISTS calibration_uncertainty(
-    uuid UUID PRIMARY KEY,
+    uuid UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
     calibration_uuid UUID NOT NULL,
     reference_bin decimal,
     reference_unit text,
@@ -414,7 +418,7 @@ CREATE TABLE IF NOT EXISTS calibration_uncertainty(
 );
 
 CREATE TABLE IF NOT EXISTS mounting_arrangement(
-    uuid UUID PRIMARY KEY,
+    uuid UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
     measurement_point_uuid UUID NOT NULL,
     mast_section_geometry_uuid UUID,
     mounting_type_id text,
@@ -441,7 +445,7 @@ CREATE TABLE IF NOT EXISTS mounting_arrangement(
 );
 
 CREATE TABLE IF NOT EXISTS interference_structures(
-    uuid UUID PRIMARY KEY,
+    uuid UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
     structure_type_id text NOT NULL,
     orientation_from_mast_centre_deg decimal CHECK (orientation_from_mast_centre_deg >= 0 AND orientation_from_mast_centre_deg <= 360),
     orientation_reference_id text,
