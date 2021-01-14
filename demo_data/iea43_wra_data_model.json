@@ -1454,7 +1454,7 @@
       }]
     },{
       "name": "Tmp_78m",
-      "measurement_type_id": "temperature",
+      "measurement_type_id": "air_temperature",
       "height_m": 78,
       "height_reference_id": "ground_level",
       "notes": "I can write anything I want here.",
@@ -1514,7 +1514,7 @@
       "mounting_arrangement": null
     },{
       "name": "Tmp_5m",
-      "measurement_type_id": "temperature",
+      "measurement_type_id": "air_temperature",
       "height_m": 5,
       "height_reference_id": "ground_level",
       "notes": "I can write anything I want here.",
