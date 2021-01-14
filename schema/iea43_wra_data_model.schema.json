@@ -799,7 +799,7 @@
                     "azimuth (is the angle of the sun around the horizon, in the northern hemisphere this is usually measured from north and increasing eastward whereas in the southern hemisphere it can be measured from the south and increasing westward)",
                     "timestamp (the timestamp of when a measurement value was recorded)",
                     "other"
-                  ],
+                  ]
                 },
                 "height_m": {
                   "type": [
