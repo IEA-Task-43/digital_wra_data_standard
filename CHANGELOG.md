@@ -11,5 +11,6 @@ Additional labels for pre-release and build metadata are available as extensions
 
 ## [Unreleased]
 - Initial release
+- Allow additional properties for header section of schema.
 
 ## [0.1.0-YYYY.MM]
