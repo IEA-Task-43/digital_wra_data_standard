@@ -11,5 +11,6 @@ Additional labels for pre-release and build metadata are available as extensions
 
 ## [Unreleased]
 - Initial release
+- Correct 'Uncertainty' property spelling under Calibration Uncertainty.
 
 ## [0.1.0-YYYY.MM]
