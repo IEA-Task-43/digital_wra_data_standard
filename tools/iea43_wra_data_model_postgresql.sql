@@ -62,7 +62,8 @@ CREATE TABLE IF NOT EXISTS structure_type (
 -- ** insert enum values **
 INSERT INTO plant_type (id) VALUES
     ('onshore_wind'),
-    ('offshore_wind');
+    ('offshore_wind'),
+    ('solar');
 
 INSERT INTO measurement_station_type (id) VALUES
     ('mast'),

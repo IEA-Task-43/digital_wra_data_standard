@@ -110,7 +110,8 @@
       "enum": [
         "null",
         "onshore_wind",
-        "offshore_wind"
+        "offshore_wind",
+        "solar"
       ]
     },
     "measurement_location": {

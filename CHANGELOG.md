@@ -11,5 +11,5 @@ Additional labels for pre-release and build metadata are available as extensions
 
 ## [Unreleased]
 - Initial release
-
+- Add solar to the list of plant types.
 ## [0.1.0-YYYY.MM]
