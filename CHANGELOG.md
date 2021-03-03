@@ -12,4 +12,17 @@ Additional labels for pre-release and build metadata are available as extensions
 ## [Unreleased]
 - Initial release
 - Add solar to the list of plant types.
+- Measurement types, add:
+    - air_density
+    - resistance
+    - power
+    - energy
+    - albedo
+- Measurement Units, add:
+    - kg/m^2
+    - A
+    - W, kW, MW
+    - kWh, MWh
+- Sensor types, add:
+    - albedometer
 ## [0.1.0-YYYY.MM]
