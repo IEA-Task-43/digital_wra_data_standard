@@ -1246,7 +1246,7 @@
                                       "number",
                                       "null"
                                     ],
-                                    "title": "Reference Unit",
+                                    "title": "Uncertainty",
                                     "description": "The uncertainty associated with this reference bin.",
                                     "examples": [
                                       0.1

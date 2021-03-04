@@ -9,8 +9,11 @@ Given a version number MAJOR.MINOR.PATCH, increment the:
 
 Additional labels for pre-release and build metadata are available as extensions to the MAJOR.MINOR.PATCH format.
 
-## [0.1.X-YYYY.MM]
+
+## [Unreleased]
 - Add version tag to schema
+- Correct 'Uncertainty' property spelling under Calibration Uncertainty.
+
 
 ## [0.1.0-2021.01]
 - Initial release
