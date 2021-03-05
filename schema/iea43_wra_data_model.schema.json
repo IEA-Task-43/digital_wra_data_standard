@@ -1540,7 +1540,7 @@
       "uniqueItems": true
     }
   },
-  "additionalProperties": false,
+  "additionalProperties": true,
   "required": [
     "author",
     "organisation",

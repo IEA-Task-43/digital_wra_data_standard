@@ -11,6 +11,7 @@ Additional labels for pre-release and build metadata are available as extensions
 
 
 ## [Unreleased]
+- Allow additional properties for header section of schema.
 - Add version tag to schema
 - Correct 'Uncertainty' property spelling under Calibration Uncertainty.
 
