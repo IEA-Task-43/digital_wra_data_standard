@@ -403,7 +403,7 @@
                     "null"
                   ],
                   "title": "Device Datum Plane Height [m]",
-                  "description": "The datum plane height of the remote sensing device where the datum feature is defined here: https://data.windenergy.dtu.dk/ontologies/view/IEATask32Glossary/en/page/parameters.datum_feature . For lidars the datum feature is usually the window and for sodars it is usually the base of the device. These datum plane heights are also usually referred to as above ground level however it may be above sea level or above a platform level.",
+                  "description": "The datum plane height of the remote sensing device where the datum feature is defined here: http://data.windenergy.dtu.dk/ontologies/view/ontolidar/en/page/DatumFeature . For lidars the datum feature is usually the window and for sodars it is usually the base of the device. These datum plane heights are also usually referred to as above ground level however it may be above sea level or above a platform level.",
                   "examples": [
                     0.5,
                     1
