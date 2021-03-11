@@ -802,7 +802,7 @@
                     "doppler_spectral_broadening (as measured by lidar devices)",
                     "orientation (the direction something points or faces relative to north or other specified positions)",
                     "compass_direction (the direction as measured by a compass, therefore referenced to magnetic north)",
-                    "true_north_offset (the offset something points or faces relative to true north, e.g. from a Geovane)",
+                    "true_north_offset (the offset something points or faces relative to true north, e.g. from a solar compass such as a Geovane)",
                     "tilt_x (the tilt of an object relative to the x-axis)",
                     "tilt_y (the tilt of an object relative to the y-axis)",
                     "tilt_z (the tilt of an object relative to the z-axis)",
@@ -1079,6 +1079,7 @@
                           "gps",
                           "illuminance_sensor",
                           "compass",
+                          "solar_compass",
                           "other"
                         ]
                       },

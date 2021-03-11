@@ -209,6 +209,7 @@ INSERT INTO sensor_type (id) VALUES
     ('gps'),
     ('illuminance_sensor'),
     ('compass'),
+    ('solar_compass'),
     ('other');
 
 INSERT INTO mounting_type (id) VALUES

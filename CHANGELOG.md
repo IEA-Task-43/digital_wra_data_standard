@@ -28,6 +28,7 @@ Additional labels for pre-release and build metadata are available as extensions
     - kWh, MWh
 - Sensor types, add:
     - albedometer
+    - solar_compass
 
 ## [0.1.0-2021.01]
 - Initial release
