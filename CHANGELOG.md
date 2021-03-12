@@ -10,7 +10,7 @@ Given a version number MAJOR.MINOR.PATCH, increment the:
 Additional labels for pre-release and build metadata are available as extensions to the MAJOR.MINOR.PATCH format.
 
 
-## [0.1.1-YYYY.MM]
+## [0.1.1-2021.03]
 - Allow additional properties for header section of schema.
 - Add version tag to schema
 - Correct 'Uncertainty' property spelling under Calibration Uncertainty.
@@ -29,6 +29,7 @@ Additional labels for pre-release and build metadata are available as extensions
 - Sensor types, add:
     - albedometer
     - solar_compass
+- Add Zenodo webhook
 
 ## [0.1.0-2021.01]
 - Initial release
