@@ -1,0 +1,312 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"$id": "TBD",
+	"title": "IEA Wind TCP Task 43 Anemometer Calibration Certificate",
+	"description": "JSON Schema for IEC61400-12-1:2017 complient anemometer calibration certificates.",
+	"type": "object",
+	"properties": {
+		"calibration_id": {
+			"description": "Unique number assigned to the calibration by the calibration lab",
+			"type": "string"
+		},
+		"calibration_lab": {
+			"description": "General information about the calibration lab",
+			"type": "object",
+			"properties": {
+				"contact": {
+					"$ref": "#/definitions/contact"
+				},
+				"accreditation_id": {
+					"description": "The accreditation / calibration lab id if applicable",
+					"type": "string"
+				}
+			},
+			"required": [
+				"contact"
+			]
+		},
+		"customer": {
+			"description": "General information about the customer",
+			"type": "object",
+			"properties": {
+				"contact": {
+					"$ref": "#/definitions/contact"
+				},
+				"reference": {
+					"description": "the reference / order code supplied by the customer",
+					"type": "string"
+				}
+			},
+			"required": [
+				"contact"
+			]
+		},
+		"test_item": {
+			"description": "Information about the test item (DUT)",
+			"type": "object",
+			"properties": {
+				"model": {
+					"description": "the model number of the test item.",
+					"type": "string",
+					"examples": [
+						"Anemometer model X"
+					]
+				},
+				"serial_number": {
+					"title": "serial",
+					"description": "Serial number(s) or similiar.",
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
+				},
+				"description": {
+					"description": "General description of the test item.",
+					"type": "string",
+					"examples": [
+						"Cup Anemometer",
+						"3D Ultrasonic Anemometer",
+						"Cup Anemometer with converter box"
+					]
+				},
+				"manufacturer": {
+					"$ref": "#/definitions/contact"
+				}
+			},
+			"required": [
+				"model",
+				"serial_number",
+				"description",
+				"manufacturer"
+			]
+		},
+		"setup": {
+			"description": "Setup information specific to the calibration.",
+			"type": "object",
+			"properties": {
+				"date_of_calibration": {
+					"description": "The date the calibration took place.",
+					"type": "string",
+					"format": "date"
+				},
+				"procedure": {
+					"description": "The calibration procedure used for the calibration.",
+					"type": "string",
+					"examples": [
+						"IEC 61400-12-1:2017"
+					]
+				},
+				"wind_tunnel": {
+					"description": "Identification of the wind tunnel the calibration took place",
+					"type": "string"
+				},
+				"mounting_diameter": {
+					"description": "The diameter of the mounting tube.",
+					"$ref": "#/definitions/quantity"
+				},
+				"mounting_orientation": {
+					"description": "The yaw orientation during calibration for yaw sensitive devices.",
+					"$ref": "#/definitions/quantity"
+				},
+				"ambient_conditions": {
+					"description": "Ambient conditions during the calibration.",
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/ambient_condition"
+					}
+				}
+			},
+			"required": [
+				"date_of_calibration",
+				"procedure",
+				"wind_tunnel",
+				"mounting_diameter",
+				"ambient_conditions"
+			]
+		},
+		"result": {
+			"type": "object",
+			"properties": {
+				"table": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/column_IEC61400-12-1:2017_AnnexF"
+					}
+				},
+				"linear_regression": {
+					"type": "object",
+					"properties": {
+						"slope": {
+							"$ref": "#/definitions/quantity",
+							"description": "Slope/Gain of the regression line."
+						},
+						"offset": {
+							"$ref": "#/definitions/quantity",
+							"description": "Offset/Intercept of the regression line."
+						},
+						"rsd": {
+							"$ref": "#/definitions/quantity",
+							"description": "Residual standard deviation (RSD)."
+						},
+						"corr_coeff": {
+							"$ref": "#/definitions/quantity",
+							"description": "Correlation coefficient."
+						}
+					}
+				}
+			},
+			"required": [
+				"table",
+				"linear_regression"
+			]
+		},
+		"date_of_issue": {
+			"description": "Issue date of the certificate.",
+			"type": "string",
+			"format": "date"
+		},
+		"revision": {
+			"description": "Revision information if applicable.",
+			"type": "string"
+		}
+	},
+	"required": [
+		"calibration_id",
+		"calibration_lab",
+		"customer",
+		"test_item",
+		"setup",
+		"result",
+		"date_of_issue",
+		"revision"
+	],
+	"definitions": {
+		"contact": {
+			"title": "contact",
+			"$comment": "contact information of the customer",
+			"type": "object",
+			"properties": {
+				"first_name": {
+					"type": "string"
+				},
+				"last_name": {
+					"type": "string"
+				},
+				"company_name": {
+					"type": "string"
+				},
+				"phone": {
+					"type": "string"
+				},
+				"email": {
+					"type": "string",
+					"format": "email"
+				},
+				"address": {
+					"title": "address",
+					"type": "object",
+					"properties": {
+						"street": {
+							"type": "string"
+						},
+						"postal_code": {
+							"type": "string"
+						},
+						"city": {
+							"type": "string"
+						},
+						"country_code": {
+							"type": "string"
+						}
+					}
+				}
+			}
+		},
+		"ambient_condition": {
+			"title": "ambient_condition",
+			"type": "object",
+			"properties": {
+				"name": {
+					"description": "Name of the ambient condition.",
+					"type": "string",
+					"enum": [
+						"temperature",
+						"baro_pressure",
+						"humidity"
+					]
+				},
+				"min": {
+					"$ref": "#/definitions/quantity"
+				},
+				"avg": {
+					"$ref": "#/definitions/quantity"
+				},
+				"max": {
+					"$ref": "#/definitions/quantity"
+				}
+			},
+			"required": [
+				"name"
+			]
+		},
+		"quantity": {
+			"type": "object",
+			"properties": {
+				"value": {
+					"description": "Magnitude of the quantity.",
+					"type": "number"
+				},
+				"unit": {
+					"description": "Measurement unit.",
+					"type": "string",
+					"examples": [
+						"m/s"
+					]
+				},
+				"uncertainty": {
+					"$ref": "#/definitions/uncertainty"
+				}
+			},
+			"required": [
+				"value",
+				"unit"
+			],
+			"additionalProperties": false
+		},
+		"uncertainty": {
+			"title": "uncertainty",
+			"type": "object",
+			"properties": {
+				"value": {
+					"description": "Magnitude of the uncertainty.",
+					"type": "number"
+				},
+				"coverage_factor": {
+					"description": "coverage factor k associated with the uncertainty (VIM 2.38).",
+					"type": "number",
+					"examples": [
+						1,
+						2
+					]
+				}
+			}
+		},
+		"column_IEC61400-12-1:2017_AnnexF": {
+			"type": "object",
+			"properties": {
+				"index": {
+					"type": "number"
+				},
+				"reference": {
+					"$ref": "#/definitions/quantity"
+				},
+				"test_item": {
+					"$ref": "#/definitions/quantity"
+				},
+				"deviation": {
+					"$ref": "#/definitions/quantity"
+				}
+			}
+		}
+	}
+}
