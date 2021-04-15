@@ -6,24 +6,22 @@
 	"type": "object",
 	"properties": {
 		"calibration_id": {
-			"description": "Unique number assigned to the calibration by the calibration lab",
+			"description": "Unique number assigned to the calibration/certificate by the calibration lab. Also called 'calibration mark', etc.",
 			"type": "string"
 		},
 		"calibration_lab": {
 			"description": "General information about the calibration lab",
 			"type": "object",
 			"properties": {
-				"contact": {
-					"$ref": "#/definitions/contact"
-				},
 				"accreditation_id": {
 					"description": "The accreditation / calibration lab id if applicable",
 					"type": "string"
+				},
+				"company_name": {
+				},
+				"address": {
 				}
-			},
-			"required": [
-				"contact"
-			]
+			}
 		},
 		"customer": {
 			"description": "General information about the customer",
