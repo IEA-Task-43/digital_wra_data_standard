@@ -1,6 +1,6 @@
 ## date_to Type
 
-`string` ([Date To](iea43_wra_data_model-definitions-date-to.md))
+`string` ([Date To](iea43\_wra_data_model-definitions-date-to.md))
 
 ## date_to Constraints
 

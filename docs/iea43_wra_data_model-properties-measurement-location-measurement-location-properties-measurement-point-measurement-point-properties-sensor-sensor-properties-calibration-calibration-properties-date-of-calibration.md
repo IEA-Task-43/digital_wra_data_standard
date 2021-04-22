@@ -1,6 +1,6 @@
 ## date_of_calibration Type
 
-`string` ([Date of Calibration](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-measurement-point-measurement-point-properties-sensor-sensor-properties-calibration-calibration-properties-date-of-calibration.md))
+`string` ([Date of Calibration](iea43\_wra_data_model-properties-measurement-location-measurement-location-properties-measurement-point-measurement-point-properties-sensor-sensor-properties-calibration-calibration-properties-date-of-calibration.md))
 
 ## date_of_calibration Constraints
 

@@ -1,6 +1,6 @@
 ## organisation Type
 
-`string` ([Organisation](iea43_wra_data_model-properties-organisation.md))
+`string` ([Organisation](iea43\_wra_data_model-properties-organisation.md))
 
 ## organisation Examples
 
