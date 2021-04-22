@@ -842,13 +842,13 @@
                 "update_at": {
                   "$ref": "#/definitions/update_at"
                 },
-                "sensor_config": {
+                "logger_measurement_config": {
                   "type": "array",
-                  "title": "Sensor Configuration",
-                  "description": "The sensor configuration that is programmed into the logging device.",
+                  "title": "Logger Measurement Configuration",
+                  "description": "The measurement configuration that is programmed into the logging device.",
                   "items": {
                     "type": "object",
-                    "title": "Sensor Configuration",
+                    "title": "Logger Measurement Configuration",
                     "properties": {
                       "slope": {
                         "type": [
@@ -1540,7 +1540,7 @@
                 "name",
                 "measurement_type_id",
                 "height_m",
-                "sensor_config"
+                "logger_measurement_config"
               ]
             },
             "additionalItems": false,
