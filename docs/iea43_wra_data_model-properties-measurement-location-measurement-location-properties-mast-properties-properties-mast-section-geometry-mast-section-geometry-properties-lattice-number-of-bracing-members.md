@@ -1,6 +1,6 @@
 ## lattice_number_of_diagonal_bracing_members Type
 
-`integer` ([Lattice Number of Bracing Members](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-mast-properties-properties-mast-section-geometry-mast-section-geometry-properties-lattice-number-of-bracing-members.md))
+`integer` ([Lattice Number of Bracing Members](iea43\_wra_data_model-properties-measurement-location-measurement-location-properties-mast-properties-properties-mast-section-geometry-mast-section-geometry-properties-lattice-number-of-bracing-members.md))
 
 ## lattice_number_of_diagonal_bracing_members Examples
 
