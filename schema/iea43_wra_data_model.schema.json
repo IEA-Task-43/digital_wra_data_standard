@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$version": "0.1.1-2021.04",
+  "$version": "0.1.2-2021.XX",
   "$id": "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json",
   "definitions": {
     "date_from": {
@@ -588,7 +588,7 @@
                     "null"
                   ],
                   "title": "Offset From UTC [hr]",
-                  "description": "The number of hours that the logger clock is offset from UTC. E.g. -5 for Eastern Standard Time",
+                  "description": "The number of hours that the logger clock is offset from UTC. E.g. -5 for Eastern Standard Time. This could also be used to capture an incorrect time programmed into the logger. E.g. a logger might be installed in upstate New York and have a UTC offset of -5. Unfortunately the mast installer programmed the incorrect time into the logger by +15 mins. Therefore the offset from UTC is -4.75.",
                   "examples": [
                     "-5 (for Eastern Standard Time)",
                     "1 (for Central European Time)",
