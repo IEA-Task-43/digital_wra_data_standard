@@ -9,6 +9,10 @@ Given a version number MAJOR.MINOR.PATCH, increment the:
 
 Additional labels for pre-release and build metadata are available as extensions to the MAJOR.MINOR.PATCH format.
 
+## [0.1.2-2021.XX]
+- Measurement types, add:
+    - flag
+    - tilt
 
 ## [0.1.1-2021.04]
 - Allow additional properties for header section of schema.
