@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$version": "0.1.1-2021.04",
+  "$version": "0.2.0-2021.XX",
   "$id": "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json",
   "definitions": {
     "date_from": {
@@ -842,13 +842,13 @@
                 "update_at": {
                   "$ref": "#/definitions/update_at"
                 },
-                "sensor_config": {
+                "logger_measurement_config": {
                   "type": "array",
-                  "title": "Sensor Configuration",
-                  "description": "The sensor configuration that is programmed into the logging device.",
+                  "title": "Logger Measurement Configuration",
+                  "description": "The measurement configuration that is programmed into the logging device.",
                   "items": {
                     "type": "object",
-                    "title": "Sensor Configuration",
+                    "title": "Logger Measurement Configuration",
                     "properties": {
                       "slope": {
                         "type": [
@@ -1540,7 +1540,7 @@
                 "name",
                 "measurement_type_id",
                 "height_m",
-                "sensor_config"
+                "logger_measurement_config"
               ]
             },
             "additionalItems": false,

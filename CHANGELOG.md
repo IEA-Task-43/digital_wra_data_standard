@@ -9,6 +9,8 @@ Given a version number MAJOR.MINOR.PATCH, increment the:
 
 Additional labels for pre-release and build metadata are available as extensions to the MAJOR.MINOR.PATCH format.
 
+## [0.2.0-2021.XX]
+- Rename `sensor_config` to `logger_measurement_config`
 
 ## [0.1.1-2021.04]
 - Allow additional properties for header section of schema.

@@ -362,7 +362,7 @@ CREATE TABLE IF NOT EXISTS measurement_point(
     FOREIGN KEY (height_reference_id) REFERENCES height_reference (id)
 );
 
-CREATE TABLE IF NOT EXISTS sensor_config(
+CREATE TABLE IF NOT EXISTS logger_measurement_config(
     uuid UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
     measurement_point_uuid UUID NOT NULL,
     slope decimal,
@@ -383,14 +383,14 @@ CREATE TABLE IF NOT EXISTS sensor_config(
 
 CREATE TABLE IF NOT EXISTS column_name(
     uuid UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
-    sensor_config_uuid UUID NOT NULL,
+    logger_measurement_config_uuid UUID NOT NULL,
     column_name text NOT NULL,
     statistic_type_id text NOT NULL,
     is_ignored boolean NOT NULL DEFAULT false,
     notes text,
     update_at timestamp WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
     updated_by UUID,
-    FOREIGN KEY (sensor_config_uuid) REFERENCES sensor_config (uuid),
+    FOREIGN KEY (logger_measurement_config_uuid) REFERENCES logger_measurement_config (uuid),
     FOREIGN KEY (statistic_type_id) REFERENCES statistic_type (id)
 );
 
