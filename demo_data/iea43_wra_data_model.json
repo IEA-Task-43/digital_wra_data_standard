@@ -2,7 +2,7 @@
   "author": "Stephen Holleran",
   "organisation": "brightwind",
   "date": "2020-06-07",
-  "version": "0.1.0-2021.01",
+  "version": "0.2.0-2021.XX",
   "plant_name": "A Name of Wind Farm",
   "plant_type": "onshore_wind",
   "measurement_location": [{
@@ -61,7 +61,7 @@
       "height_reference_id": "ground_level",
       "notes": "I can write anything I want here.",
       "update_at": "2020-04-18T18:13:00",
-      "sensor_config": [{
+      "logger_measurement_config": [{
         "slope": 0.04573,
         "offset": 0.2419,
         "sensitivity": null,
@@ -252,7 +252,7 @@
       "height_reference_id": "ground_level",
       "notes": "I can write anything I want here.",
       "update_at": "2020-04-18T18:13:00",
-      "sensor_config": [{
+      "logger_measurement_config": [{
         "slope": 0.04568,
         "offset": 0.2487,
         "sensitivity": null,
@@ -520,7 +520,7 @@
       "height_reference_id": "ground_level",
       "notes": "I can write anything I want here.",
       "update_at": "2020-04-18T18:13:00",
-      "sensor_config": [{
+      "logger_measurement_config": [{
         "slope": 0.04666,
         "offset": 0.2416,
         "sensitivity": null,
@@ -663,7 +663,7 @@
       "height_reference_id": "ground_level",
       "notes": "I can write anything I want here.",
       "update_at": "2020-04-18T18:13:00",
-      "sensor_config": [{
+      "logger_measurement_config": [{
         "slope": 0.04777,
         "offset": 0.2417,
         "sensitivity": null,
@@ -806,7 +806,7 @@
       "height_reference_id": "ground_level",
       "notes": "I can write anything I want here.",
       "update_at": "2020-04-18T18:13:00",
-      "sensor_config": [{
+      "logger_measurement_config": [{
         "slope": 0.04888,
         "offset": 0.2418,
         "sensitivity": null,
@@ -987,7 +987,7 @@
       "height_reference_id": "ground_level",
       "notes": "I can write anything I want here.",
       "update_at": "2020-04-18T18:13:00",
-      "sensor_config": [{
+      "logger_measurement_config": [{
         "slope": 0.04999,
         "offset": 0.2419,
         "sensitivity": null,
@@ -1130,7 +1130,7 @@
       "height_reference_id": "ground_level",
       "notes": "Anemometer put in wrong place. Moved to 40m.",
       "update_at": "2020-04-18T18:13:00",
-      "sensor_config": [{
+      "logger_measurement_config": [{
         "slope": 0.04999,
         "offset": 0.2419,
         "sensitivity": null,
@@ -1273,7 +1273,7 @@
       "height_reference_id": "ground_level",
       "notes": "I can write anything I want here.",
       "update_at": "2020-04-18T18:13:00",
-      "sensor_config": [{
+      "logger_measurement_config": [{
         "slope": 0.351,
         "offset": null,
         "sensitivity": null,
@@ -1351,7 +1351,7 @@
       "height_reference_id": "ground_level",
       "notes": "I can write anything I want here.",
       "update_at": "2020-04-18T18:13:00",
-      "sensor_config": [{
+      "logger_measurement_config": [{
         "slope": 0.351,
         "offset": null,
         "sensitivity": null,
@@ -1459,7 +1459,7 @@
       "height_reference_id": "ground_level",
       "notes": "I can write anything I want here.",
       "update_at": "2020-04-18T18:13:00",
-      "sensor_config": [{
+      "logger_measurement_config": [{
         "slope": 0.136,
         "offset": -86.383,
         "sensitivity": null,
@@ -1519,7 +1519,7 @@
       "height_reference_id": "ground_level",
       "notes": "I can write anything I want here.",
       "update_at": "2020-04-18T18:13:00",
-      "sensor_config": [{
+      "logger_measurement_config": [{
         "slope": 100,
         "offset": -30,
         "sensitivity": null,
@@ -1579,7 +1579,7 @@
       "height_reference_id": "ground_level",
       "notes": "I can write anything I want here.",
       "update_at": "2020-04-18T18:13:00",
-      "sensor_config": [{
+      "logger_measurement_config": [{
         "slope": 100,
         "offset": 0,
         "sensitivity": null,
@@ -1639,7 +1639,7 @@
       "height_reference_id": "ground_level",
       "notes": "I can write anything I want here.",
       "update_at": "2020-04-18T18:13:00",
-      "sensor_config": [{
+      "logger_measurement_config": [{
         "slope": 0.4255,
         "offset": 650,
         "sensitivity": null,
@@ -1699,7 +1699,7 @@
       "height_reference_id": "ground_level",
       "notes": "I can write anything I want here.",
       "update_at": "2020-04-18T18:13:00",
-      "sensor_config": [{
+      "logger_measurement_config": [{
         "slope": 0.021,
         "offset": 0,
         "sensitivity": null,
