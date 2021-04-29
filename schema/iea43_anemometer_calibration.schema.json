@@ -18,17 +18,25 @@
 					"type": "string"
 				},
 				"company_name": {
+					"type": "string"
 				},
 				"address": {
+					"type": "string"
 				}
-			}
+			},
+			"required": [
+				"company_name"
+			]
 		},
 		"customer": {
 			"description": "General information about the customer",
 			"type": "object",
 			"properties": {
-				"contact": {
-					"$ref": "#/definitions/contact"
+				"company_name": {
+					"type": "string"
+				},
+				"address": {
+					"type": "string"
 				},
 				"reference": {
 					"description": "the reference / order code supplied by the customer",
@@ -36,7 +44,7 @@
 				}
 			},
 			"required": [
-				"contact"
+				"company_name"
 			]
 		},
 		"test_item": {
@@ -52,11 +60,8 @@
 				},
 				"serial_number": {
 					"title": "serial",
-					"description": "Serial number(s) or similiar.",
-					"type": "array",
-					"items": {
-						"type": "string"
-					}
+					"description": "Serial number(s) or similiar, seperated by a ',' e.G. <body>,<cup>",
+					"type": "string"
 				},
 				"description": {
 					"description": "General description of the test item.",
