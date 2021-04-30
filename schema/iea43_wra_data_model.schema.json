@@ -588,7 +588,7 @@
                     "null"
                   ],
                   "title": "Offset From UTC [hr]",
-                  "description": "The number of hours that the logger clock is offset from UTC. E.g. -5 for Eastern Standard Time",
+                  "description": "The number of hours that the logger clock is offset from UTC. E.g. -5 for Eastern Standard Time. This could also be used to capture an incorrect time programmed into the logger. E.g. a logger might be installed in upstate New York and have a UTC offset of -5. Unfortunately the mast installer programmed the incorrect time into the logger by +15 mins. Therefore the offset from UTC is -4.75.",
                   "examples": [
                     "-5 (for Eastern Standard Time)",
                     "1 (for Central European Time)",
