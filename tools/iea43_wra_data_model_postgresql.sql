@@ -402,8 +402,6 @@ CREATE TABLE IF NOT EXISTS sensor(
     sensor_type_id text,
     instrument_poi_height_mm decimal,
     is_heated boolean,
-    date_from timestamp WITHOUT TIME ZONE NOT NULL,
-    date_to timestamp WITHOUT TIME ZONE,
     notes text,
     update_at timestamp WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
     updated_by UUID,
@@ -413,6 +411,8 @@ CREATE TABLE IF NOT EXISTS sensor(
 CREATE TABLE IF NOT EXISTS measurement_point_sensor(
     measurement_point_uuid UUID,
     sensor_uuid UUID,
+    date_from timestamp WITHOUT TIME ZONE NOT NULL,
+    date_to timestamp WITHOUT TIME ZONE,
     PRIMARY KEY (measurement_point_uuid, sensor_uuid),
     FOREIGN KEY (measurement_point_uuid) REFERENCES measurement_point (uuid),
     FOREIGN KEY (sensor_uuid) REFERENCES sensor (uuid)
