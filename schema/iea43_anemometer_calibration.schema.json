@@ -72,15 +72,27 @@
 						"Cup Anemometer with converter box"
 					]
 				},
-				"manufacturer": {
-					"$ref": "#/definitions/contact"
+				"oem": {
+					"description": "General information about the OEM",
+					"type": "object",
+					"properties": {
+						"company_name": {
+							"type": "string"
+						},
+						"address": {
+							"type": "string"
+						}
+					},
+					"required": [
+						"company_name"
+					]
 				}
 			},
 			"required": [
 				"model",
 				"serial_number",
 				"description",
-				"manufacturer"
+				"oem"
 			]
 		},
 		"setup": {
@@ -99,7 +111,7 @@
 						"IEC 61400-12-1:2017"
 					]
 				},
-				"wind_tunnel": {
+				"wind_tunnel_id": {
 					"description": "Identification of the wind tunnel the calibration took place",
 					"type": "string"
 				},
@@ -122,7 +134,7 @@
 			"required": [
 				"date_of_calibration",
 				"procedure",
-				"wind_tunnel",
+				"wind_tunnel_id",
 				"mounting_diameter",
 				"ambient_conditions"
 			]
