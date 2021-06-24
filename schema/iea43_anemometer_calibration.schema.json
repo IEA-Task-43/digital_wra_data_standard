@@ -123,6 +123,21 @@
 					"description": "The yaw orientation/direction of the DUT during calibration.",
 					"$ref": "#/definitions/quantity"
 				},
+				"notes": {
+					"description": "Note down anything thats non-standard",
+					"type": "string"
+				}
+			},
+			"required": [
+				"date_of_calibration",
+				"procedure",
+				"wind_tunnel_id",
+				"mounting_diameter"
+			]
+		},
+		"result": {
+			"type": "object",
+			"properties": {
 				"ambient_conditions": {
 					"description": "Ambient conditions during the calibration.",
 					"type": "object",
@@ -138,22 +153,6 @@
 						}
 					}
 				},
-				"notes": {
-					"description": "Note down anything thats non-standard",
-					"type": "string"
-				}
-			},
-			"required": [
-				"date_of_calibration",
-				"procedure",
-				"wind_tunnel_id",
-				"mounting_diameter",
-				"ambient_conditions"
-			]
-		},
-		"result": {
-			"type": "object",
-			"properties": {
 				"table": {
 					"type": "array",
 					"items": {
@@ -183,6 +182,7 @@
 				}
 			},
 			"required": [
+				"ambient_conditions",
 				"table",
 				"linear_regression"
 			]
@@ -274,29 +274,29 @@
 				"unit": {
 					"description": "Measurement unit.",
 					"type": "string",
+					"enum": [
+						"m/s",
+						"deg",
+						"deg_C",
+						"deg_F",
+						"K",
+						"%",
+						"mbar",
+						"hPa",
+						"V",
+						"mA",
+						"ohm",
+						"Hz",
+						"mm",
+						"W/m^2",
+						"m/s^2",
+						"lux",
+						"dB",
+						"-"
+					],
 					"examples": [
 						"m/s"
-					],
-					"enum": [
-                          "m/s",
-                          "deg",
-                          "deg_C",
-                          "deg_F",
-                          "K",
-                          "%",
-                          "mbar",
-                          "hPa",
-                          "V",
-                          "mA",
-                          "ohm",
-                          "Hz",
-                          "mm",
-                          "W/m^2",
-                          "m/s^2",
-                          "lux",
-                          "dB",
-                          "-"
-                        ]
+					]
 				},
 				"uncertainty": {
 					"$ref": "#/definitions/uncertainty"
