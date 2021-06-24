@@ -120,15 +120,27 @@
 					"$ref": "#/definitions/quantity"
 				},
 				"mounting_orientation": {
-					"description": "The yaw orientation during calibration for yaw sensitive devices.",
+					"description": "The yaw orientation/direction of the DUT during calibration.",
 					"$ref": "#/definitions/quantity"
 				},
 				"ambient_conditions": {
 					"description": "Ambient conditions during the calibration.",
-					"type": "array",
-					"items": {
-						"$ref": "#/definitions/ambient_condition"
+					"type": "object",
+					"properties": {
+						"air_temperature": {
+							"$ref": "#/definitions/ambient_condition"
+						},
+						"humidity": {
+							"$ref": "#/definitions/ambient_condition"
+						},
+						"air_pressure": {
+							"$ref": "#/definitions/ambient_condition"
+						}
 					}
+				},
+				"notes": {
+					"description": "Note down anything thats non-standard",
+					"type": "string"
 				}
 			},
 			"required": [
@@ -241,15 +253,6 @@
 			"title": "ambient_condition",
 			"type": "object",
 			"properties": {
-				"name": {
-					"description": "Name of the ambient condition.",
-					"type": "string",
-					"enum": [
-						"temperature",
-						"baro_pressure",
-						"humidity"
-					]
-				},
 				"min": {
 					"$ref": "#/definitions/quantity"
 				},
@@ -259,10 +262,7 @@
 				"max": {
 					"$ref": "#/definitions/quantity"
 				}
-			},
-			"required": [
-				"name"
-			]
+			}
 		},
 		"quantity": {
 			"type": "object",
@@ -276,7 +276,27 @@
 					"type": "string",
 					"examples": [
 						"m/s"
-					]
+					],
+					"enum": [
+                          "m/s",
+                          "deg",
+                          "deg_C",
+                          "deg_F",
+                          "K",
+                          "%",
+                          "mbar",
+                          "hPa",
+                          "V",
+                          "mA",
+                          "ohm",
+                          "Hz",
+                          "mm",
+                          "W/m^2",
+                          "m/s^2",
+                          "lux",
+                          "dB",
+                          "-"
+                        ]
 				},
 				"uncertainty": {
 					"$ref": "#/definitions/uncertainty"
