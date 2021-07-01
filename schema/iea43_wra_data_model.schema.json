@@ -159,7 +159,8 @@
               "mast",
               "lidar",
               "sodar",
-              "flidar"
+              "flidar",
+              "solar"
             ]
           },
           "notes": {
