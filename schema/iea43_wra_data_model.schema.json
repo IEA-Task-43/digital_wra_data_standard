@@ -1175,6 +1175,18 @@
                                 "https://www.dropbox.com/bw/7dzu7xzb/AAN-BNsa?dl=0"
                               ]
                             },
+                            "calibration_id": {
+                              "type": [
+                                "string",
+                                "null"
+                              ],
+                              "title": "Calibration ID",
+                              "description": "The calibration ID that the calibration organisation uses to identify a particular calibration. It may be referred to as Certificate number by some organisations or be listed in the header or footer of the pdf certificate.",
+                              "examples": [
+                                "1234567",
+                                "CERT1234"
+                              ]
+                            },
                             "date_of_calibration": {
                               "type": [
                                 "string",
