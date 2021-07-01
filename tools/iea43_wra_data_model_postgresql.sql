@@ -202,6 +202,7 @@ INSERT INTO sensor_type (id) VALUES
     ('albedometer'),
     ('2d_ultrasonic'),
     ('3d_ultrasonic'),
+    ('vertical_anemometer'),
     ('propeller_anemometer'),
     ('gill_propeller'),
     ('rain_gauge'),
