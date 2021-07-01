@@ -9,7 +9,9 @@ Given a version number MAJOR.MINOR.PATCH, increment the:
 
 Additional labels for pre-release and build metadata are available as extensions to the MAJOR.MINOR.PATCH format.
 
-## [0.1.2-2021.XX]
+## [0.2.0-2021.XX]
+- Rename `sensor_config` to `logger_measurement_config`
+- In the create table SQL statements contained in file 'iea43_wra_data_model_postgresql.sql' move `date_from` and `date_to` from the `sensor` table into the `measurement_point_sensor` table. Note: This has no impact on the JSON Schema.
 - Measurement types, add:
     - flag
     - tilt
