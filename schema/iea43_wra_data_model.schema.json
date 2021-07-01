@@ -1181,7 +1181,7 @@
                                 "null"
                               ],
                               "title": "Calibration ID",
-                              "description": "The calibration ID that the calibration organisation uses to identify a particular calibration. It may be referred to as Certificate number by some organisations or be listed in the header or footer of the pdf certificate.",
+                              "description": "The calibration ID is the unique number that the calibration organisation uses to identify a particular calibration. It may be referred to as Certificate number or Calibration Mark by some organisations.",
                               "examples": [
                                 "1234567",
                                 "CERT1234"
