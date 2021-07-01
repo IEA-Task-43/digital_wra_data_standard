@@ -12,6 +12,8 @@ Additional labels for pre-release and build metadata are available as extensions
 ## [0.2.0-2021.XX]
 - Rename `sensor_config` to `logger_measurement_config`
 - In the create table SQL statements contained in file 'iea43_wra_data_model_postgresql.sql' move `date_from` and `date_to` from the `sensor` table into the `measurement_point_sensor` table. Note: This has no impact on the JSON Schema.
+- Add to `sensor_type`
+   - thermohygrometer
 
 ## [0.1.1-2021.04]
 - Allow additional properties for header section of schema.

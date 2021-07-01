@@ -194,6 +194,7 @@ INSERT INTO sensor_type (id) VALUES
     ('thermometer'),
     ('barometer'),
     ('hygrometer'),
+    ('thermohygrometer'),
     ('voltmeter'),
     ('ammeter'),
     ('pyranometer'),

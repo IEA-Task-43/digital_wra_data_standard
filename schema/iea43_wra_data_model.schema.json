@@ -1064,6 +1064,7 @@
                           "thermometer",
                           "barometer",
                           "hygrometer",
+                          "thermohygrometer",
                           "voltmeter",
                           "ammeter",
                           "pyranometer",
