@@ -15,6 +15,7 @@ Additional labels for pre-release and build metadata are available as extensions
 - Measurement types, add:
     - flag
     - tilt
+- Add `solar` to `measurement_type_id`
 
 ## [0.1.1-2021.04]
 - Allow additional properties for header section of schema.
