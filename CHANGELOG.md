@@ -20,6 +20,8 @@ Additional labels for pre-release and build metadata are available as extensions
    - vertical_anemometer
 - To `measurement_station_type` enum, add:
    - solar
+- Converted `measurement_type_id` to a definition.
+- To `calibration` object, added `measurement_type_id` reference.
 
 ## [0.1.1-2021.04]
 - Allow additional properties for header section of schema.

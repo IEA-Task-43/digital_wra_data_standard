@@ -1137,6 +1137,9 @@
                           "type": "object",
                           "title": "Calibration",
                           "properties": {
+                            "measurement_type_id": {
+                              "$ref": "#/definitions/measurement_type"
+                            },
                             "slope": {
                               "type": [
                                 "number",
