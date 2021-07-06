@@ -1180,6 +1180,18 @@
                                 "https://www.dropbox.com/bw/7dzu7xzb/AAN-BNsa?dl=0"
                               ]
                             },
+                            "calibration_id": {
+                              "type": [
+                                "string",
+                                "null"
+                              ],
+                              "title": "Calibration ID",
+                              "description": "The calibration ID is the unique number that the calibration organisation uses to identify a particular calibration. It may be referred to as Certificate number or Calibration Mark by some organisations.",
+                              "examples": [
+                                "1234567",
+                                "CERT1234"
+                              ]
+                            },
                             "date_of_calibration": {
                               "type": [
                                 "string",
