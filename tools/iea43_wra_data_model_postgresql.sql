@@ -432,6 +432,7 @@ CREATE TABLE IF NOT EXISTS calibration(
     sensitivity decimal,
     report_file_name text NOT NULL,
     report_link text,
+    calibration_id text,
     date_of_calibration date,
     calibration_organisation text,
     place_of_calibration text,
