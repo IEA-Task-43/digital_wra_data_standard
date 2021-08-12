@@ -1,6 +1,6 @@
 ## longitude_ddeg Type
 
-`number` ([Longitude \[ddeg\]](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-longitude-ddeg.md))
+`number` ([Longitude \[ddeg\]](iea43\_wra_data_model-properties-measurement-location-measurement-location-properties-longitude-ddeg.md))
 
 ## longitude_ddeg Constraints
 

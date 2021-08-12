@@ -1,6 +1,6 @@
 ## vertical_profiler_properties Type
 
-`object[]` ([Vertical Profiler Properties](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-vertical-profiler-properties-vertical-profiler-properties.md))
+`object[]` ([Vertical Profiler Properties](iea43\_wra_data_model-properties-measurement-location-measurement-location-properties-vertical-profiler-properties-vertical-profiler-properties.md))
 
 ## vertical_profiler_properties Constraints
 

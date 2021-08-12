@@ -1,6 +1,6 @@
 ## author Type
 
-`string` ([Author](iea43_wra_data_model-properties-author.md))
+`string` ([Author](iea43\_wra_data_model-properties-author.md))
 
 ## author Examples
 

@@ -1,21 +1,25 @@
 ## measurement_type_id Type
 
-`string` ([Measurement Type](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-measurement-point-measurement-point-properties-measurement-type.md))
+`string` ([Measurement Type](iea43\_wra_data_model-properties-measurement-location-measurement-location-properties-measurement-point-measurement-point-properties-measurement-type.md))
 
 ## measurement_type_id Constraints
 
 **enum**: the value of this property must be equal to one of the following values:
 
 | Value                             | Explanation |
-| :-------------------------------- | ----------- |
+| :-------------------------------- | :---------- |
 | `"wind_speed"`                    |             |
 | `"wind_direction"`                |             |
 | `"air_temperature"`               |             |
 | `"temperature"`                   |             |
 | `"air_pressure"`                  |             |
+| `"air_density"`                   |             |
 | `"relative_humidity"`             |             |
 | `"voltage"`                       |             |
 | `"current"`                       |             |
+| `"resistance"`                    |             |
+| `"power"`                         |             |
+| `"energy"`                        |             |
 | `"vertical_wind_speed"`           |             |
 | `"wind_speed_turbulence"`         |             |
 | `"precipitation"`                 |             |
@@ -25,6 +29,7 @@
 | `"diffuse_horizontal_irradiance"` |             |
 | `"global_tilted_irradiance"`      |             |
 | `"global_normal_irradiance"`      |             |
+| `"albedo"`                        |             |
 | `"soiling_loss_index"`            |             |
 | `"illuminance"`                   |             |
 | `"fog"`                           |             |
@@ -70,6 +75,10 @@
 ```
 
 ```json
+"air_density (the density of air)"
+```
+
+```json
 "relative_humidity (outdoor relative humidity of the air"
 ```
 
@@ -79,6 +88,18 @@
 
 ```json
 "current (electrical current, typically the logger battery current)"
+```
+
+```json
+"resistance (electrical resistance, the raw or basic measurement from many different sensors)"
+```
+
+```json
+"power (the amount of energy transferred or converted per unit of time)"
+```
+
+```json
+"energy (in physics, is the capacity for doing work. It may exist in potential, kinetic, thermal, electrical, chemical, nuclear, or other various forms.)"
 ```
 
 ```json
@@ -115,6 +136,10 @@
 
 ```json
 "global_normal_irradiance (the total power or instantaneous rate of energy from the sun received by a surface on Earth perpendicular to the sun)"
+```
+
+```json
+"albedo (or reflected solar radiation from the earth's surface, is defined as the ratio between the reflected energy and the incident energy over a unit area)"
 ```
 
 ```json
@@ -166,7 +191,7 @@
 ```
 
 ```json
-"true_north_offset (the offset something points or faces relative to true north, e.g. from a Geovane)"
+"true_north_offset (the offset something points or faces relative to true north, e.g. from a solar compass such as a Geovane)"
 ```
 
 ```json

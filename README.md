@@ -25,8 +25,14 @@ A working group focuses on standardizing measurement data headers. The following
 | Documentation | ![Compile Documentation to Markdown](https://github.com/IEA-Task-43/digital_wra_data_standard/workflows/Compile%20Documentation%20to%20Markdown/badge.svg) | [Documentation](./docs/README.md) |
 | Form App | ![Deploy Form App to GitHub Pages](https://github.com/IEA-Task-43/digital_wra_data_standard/workflows/Deploy%20Form%20App%20to%20GitHub%20Pages/badge.svg) | [Form App](https://iea-task-43.github.io/digital_wra_data_standard/) |
 
-## Contributing to the code
+## Contributing
 
 We welcome all contributions including issue reporting, new features and bug fixes.   For full details see the contributing document here:
 
 - [Contributing](./contributing.md)
+
+## Getting Help
+
+Please file a new issue in this repository with questions or concerns you might have. If you would like to chat directly with the contributors, please join our Slack channel at [ieawinddigitalization.slack.com](https://ieawinddigitalization.slack.com/).
+
+You can find out more about the IEA's Wind Task 43 working group at [ieawindtask43.org](https://www.ieawindtask43.org/work-package-4-digital-wra).
