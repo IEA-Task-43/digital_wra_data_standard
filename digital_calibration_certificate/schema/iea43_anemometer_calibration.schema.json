@@ -330,7 +330,7 @@
 			"type": "object",
 			"properties": {
 				"index": {
-					"type": "number"
+					"type": "string"
 				},
 				"reference": {
 					"$ref": "#/definitions/quantity"

@@ -47,8 +47,11 @@ if __name__ == '__main__':
     # Setup #
     #########
     cwd = os.getcwd()
-    file_path = os.path.relpath(r'..\\demo_data\\anemometer_calibration_certificate.json', cwd)
+    # file_path = os.path.relpath(r'..\\demo_data\\anemometer_calibration_certificate.json', cwd)
+    file_path = os.path.relpath(r'..\\demo_data\\2112487_06215125.json', cwd)
     iea_calibration_schema_path = os.path.relpath(r'..\\schema\\iea43_anemometer_calibration.schema.json', cwd)
+    
+    
     iea_wra_schema_path = os.path.relpath(r'..\\schema\\iea43_wra_data_model.schema.json', cwd)
 
     with open(file_path, 'r') as f:
@@ -61,9 +64,11 @@ if __name__ == '__main__':
         wra_schema = json.load(f)
 
 
+    # embed()
     ###################################################
     # Validate sample data against calibration schema #
     ###################################################
+    # jsonschema.validate(sample_cal, calibration_schema)
     try:
         jsonschema.validate(sample_cal, calibration_schema)
     except jsonschema.ValidationError:
@@ -86,8 +91,8 @@ if __name__ == '__main__':
         'offset': sample_cal['result']['linear_regression']['offset']['value'],
         'report_file_name': sample_cal['calibration_id'],
         'date_of_calibration': sample_cal['setup']['date_of_calibration'],
-        'calibration_organisation': sample_cal['calibration_lab']['contact']['company_name'],
-        'place_of_calibration': sample_cal['setup']['wind_tunnel'],
+        'calibration_organisation': sample_cal['calibration_lab']['company_name'],
+        'place_of_calibration': sample_cal['setup']['wind_tunnel_id'],
         'uncertainty_k_factor': min([elem['deviation']['uncertainty']['coverage_factor'] for elem in sample_cal['result']['table']]),    # lowest value of table? should be the same for the whole table
         }
 
