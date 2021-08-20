@@ -1,0 +1,3 @@
+## city Type
+
+`string`
