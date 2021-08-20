@@ -1,6 +1,6 @@
 ## ambient_conditions Type
 
-`object` ([Details](iea43\_anemometer_calibration-properties-result-properties-ambient_conditions.md))
+`object` ([Ambient Conditions](iea43\_anemometer_calibration-properties-result-properties-ambient-conditions.md))
 
 # ambient_conditions Properties
 

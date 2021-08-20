@@ -1,3 +1,0 @@
-## street Type
-
-`string`

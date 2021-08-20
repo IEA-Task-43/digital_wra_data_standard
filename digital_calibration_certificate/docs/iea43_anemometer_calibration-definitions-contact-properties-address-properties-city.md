@@ -1,3 +1,0 @@
-## city Type
-
-`string`

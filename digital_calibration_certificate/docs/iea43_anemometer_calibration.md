@@ -6,13 +6,13 @@
 
 | Property                            | Type     | Required | Nullable       | Defined by                                                                                                                                                                                                                                                                                                                     |
 | :---------------------------------- | :------- | :------- | :------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [calibration_id](#calibration_id)   | `string` | Required | cannot be null | [IEA Wind TCP Task 43 Anemometer Calibration Certificate](iea43_anemometer_calibration-properties-calibration_id.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/calibration_schema/digital_calibration_certificate/schema/iea43_anemometer_calibration.schema.json#/properties/calibration_id")   |
-| [calibration_lab](#calibration_lab) | `object` | Required | cannot be null | [IEA Wind TCP Task 43 Anemometer Calibration Certificate](iea43_anemometer_calibration-properties-calibration_lab.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/calibration_schema/digital_calibration_certificate/schema/iea43_anemometer_calibration.schema.json#/properties/calibration_lab") |
+| [calibration_id](#calibration_id)   | `string` | Required | cannot be null | [IEA Wind TCP Task 43 Anemometer Calibration Certificate](iea43_anemometer_calibration-properties-calibration-id.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/calibration_schema/digital_calibration_certificate/schema/iea43_anemometer_calibration.schema.json#/properties/calibration_id")   |
+| [calibration_lab](#calibration_lab) | `object` | Required | cannot be null | [IEA Wind TCP Task 43 Anemometer Calibration Certificate](iea43_anemometer_calibration-properties-calibration-lab.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/calibration_schema/digital_calibration_certificate/schema/iea43_anemometer_calibration.schema.json#/properties/calibration_lab") |
 | [customer](#customer)               | `object` | Required | cannot be null | [IEA Wind TCP Task 43 Anemometer Calibration Certificate](iea43_anemometer_calibration-properties-customer.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/calibration_schema/digital_calibration_certificate/schema/iea43_anemometer_calibration.schema.json#/properties/customer")               |
-| [test_item](#test_item)             | `object` | Required | cannot be null | [IEA Wind TCP Task 43 Anemometer Calibration Certificate](iea43_anemometer_calibration-properties-test_item.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/calibration_schema/digital_calibration_certificate/schema/iea43_anemometer_calibration.schema.json#/properties/test_item")             |
+| [test_item](#test_item)             | `object` | Required | cannot be null | [IEA Wind TCP Task 43 Anemometer Calibration Certificate](iea43_anemometer_calibration-properties-test-item.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/calibration_schema/digital_calibration_certificate/schema/iea43_anemometer_calibration.schema.json#/properties/test_item")             |
 | [setup](#setup)                     | `object` | Required | cannot be null | [IEA Wind TCP Task 43 Anemometer Calibration Certificate](iea43_anemometer_calibration-properties-setup.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/calibration_schema/digital_calibration_certificate/schema/iea43_anemometer_calibration.schema.json#/properties/setup")                     |
 | [result](#result)                   | `object` | Required | cannot be null | [IEA Wind TCP Task 43 Anemometer Calibration Certificate](iea43_anemometer_calibration-properties-result.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/calibration_schema/digital_calibration_certificate/schema/iea43_anemometer_calibration.schema.json#/properties/result")                   |
-| [date_of_issue](#date_of_issue)     | `string` | Required | cannot be null | [IEA Wind TCP Task 43 Anemometer Calibration Certificate](iea43_anemometer_calibration-properties-date_of_issue.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/calibration_schema/digital_calibration_certificate/schema/iea43_anemometer_calibration.schema.json#/properties/date_of_issue")     |
+| [date_of_issue](#date_of_issue)     | `string` | Required | cannot be null | [IEA Wind TCP Task 43 Anemometer Calibration Certificate](iea43_anemometer_calibration-properties-date-of-issue.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/calibration_schema/digital_calibration_certificate/schema/iea43_anemometer_calibration.schema.json#/properties/date_of_issue")     |
 | [revision](#revision)               | `string` | Required | cannot be null | [IEA Wind TCP Task 43 Anemometer Calibration Certificate](iea43_anemometer_calibration-properties-revision.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/calibration_schema/digital_calibration_certificate/schema/iea43_anemometer_calibration.schema.json#/properties/revision")               |
 
 ## calibration_id
@@ -23,15 +23,15 @@ Unique number assigned to the calibration/certificate by the calibration lab. Al
 
 *   is required
 
-*   Type: `string`
+*   Type: `string` ([Calibration ID](iea43\_anemometer_calibration-properties-calibration-id.md))
 
 *   cannot be null
 
-*   defined in: [IEA Wind TCP Task 43 Anemometer Calibration Certificate](iea43\_anemometer_calibration-properties-calibration_id.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/calibration_schema/digital_calibration_certificate/schema/iea43\_anemometer_calibration.schema.json#/properties/calibration_id")
+*   defined in: [IEA Wind TCP Task 43 Anemometer Calibration Certificate](iea43\_anemometer_calibration-properties-calibration-id.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/calibration_schema/digital_calibration_certificate/schema/iea43\_anemometer_calibration.schema.json#/properties/calibration_id")
 
 ### calibration_id Type
 
-`string`
+`string` ([Calibration ID](iea43\_anemometer_calibration-properties-calibration-id.md))
 
 ## calibration_lab
 
@@ -41,15 +41,15 @@ General information about the calibration lab
 
 *   is required
 
-*   Type: `object` ([Details](iea43\_anemometer_calibration-properties-calibration_lab.md))
+*   Type: `object` ([Calibration Lab](iea43\_anemometer_calibration-properties-calibration-lab.md))
 
 *   cannot be null
 
-*   defined in: [IEA Wind TCP Task 43 Anemometer Calibration Certificate](iea43\_anemometer_calibration-properties-calibration_lab.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/calibration_schema/digital_calibration_certificate/schema/iea43\_anemometer_calibration.schema.json#/properties/calibration_lab")
+*   defined in: [IEA Wind TCP Task 43 Anemometer Calibration Certificate](iea43\_anemometer_calibration-properties-calibration-lab.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/calibration_schema/digital_calibration_certificate/schema/iea43\_anemometer_calibration.schema.json#/properties/calibration_lab")
 
 ### calibration_lab Type
 
-`object` ([Details](iea43\_anemometer_calibration-properties-calibration_lab.md))
+`object` ([Calibration Lab](iea43\_anemometer_calibration-properties-calibration-lab.md))
 
 ## customer
 
@@ -59,7 +59,7 @@ General information about the customer
 
 *   is required
 
-*   Type: `object` ([Details](iea43\_anemometer_calibration-properties-customer.md))
+*   Type: `object` ([Customer](iea43\_anemometer_calibration-properties-customer.md))
 
 *   cannot be null
 
@@ -67,7 +67,7 @@ General information about the customer
 
 ### customer Type
 
-`object` ([Details](iea43\_anemometer_calibration-properties-customer.md))
+`object` ([Customer](iea43\_anemometer_calibration-properties-customer.md))
 
 ## test_item
 
@@ -77,15 +77,15 @@ Information about the test item (DUT)
 
 *   is required
 
-*   Type: `object` ([Details](iea43\_anemometer_calibration-properties-test_item.md))
+*   Type: `object` ([Test Item](iea43\_anemometer_calibration-properties-test-item.md))
 
 *   cannot be null
 
-*   defined in: [IEA Wind TCP Task 43 Anemometer Calibration Certificate](iea43\_anemometer_calibration-properties-test_item.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/calibration_schema/digital_calibration_certificate/schema/iea43\_anemometer_calibration.schema.json#/properties/test_item")
+*   defined in: [IEA Wind TCP Task 43 Anemometer Calibration Certificate](iea43\_anemometer_calibration-properties-test-item.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/calibration_schema/digital_calibration_certificate/schema/iea43\_anemometer_calibration.schema.json#/properties/test_item")
 
 ### test_item Type
 
-`object` ([Details](iea43\_anemometer_calibration-properties-test_item.md))
+`object` ([Test Item](iea43\_anemometer_calibration-properties-test-item.md))
 
 ## setup
 
@@ -95,7 +95,7 @@ Setup information specific to the calibration.
 
 *   is required
 
-*   Type: `object` ([Details](iea43\_anemometer_calibration-properties-setup.md))
+*   Type: `object` ([Setup](iea43\_anemometer_calibration-properties-setup.md))
 
 *   cannot be null
 
@@ -103,7 +103,7 @@ Setup information specific to the calibration.
 
 ### setup Type
 
-`object` ([Details](iea43\_anemometer_calibration-properties-setup.md))
+`object` ([Setup](iea43\_anemometer_calibration-properties-setup.md))
 
 ## result
 
@@ -113,7 +113,7 @@ Setup information specific to the calibration.
 
 *   is required
 
-*   Type: `object` ([Details](iea43\_anemometer_calibration-properties-result.md))
+*   Type: `object` ([Result](iea43\_anemometer_calibration-properties-result.md))
 
 *   cannot be null
 
@@ -121,7 +121,7 @@ Setup information specific to the calibration.
 
 ### result Type
 
-`object` ([Details](iea43\_anemometer_calibration-properties-result.md))
+`object` ([Result](iea43\_anemometer_calibration-properties-result.md))
 
 ## date_of_issue
 
@@ -131,15 +131,15 @@ Issue date of the certificate.
 
 *   is required
 
-*   Type: `string`
+*   Type: `string` ([Date of Issue](iea43\_anemometer_calibration-properties-date-of-issue.md))
 
 *   cannot be null
 
-*   defined in: [IEA Wind TCP Task 43 Anemometer Calibration Certificate](iea43\_anemometer_calibration-properties-date_of_issue.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/calibration_schema/digital_calibration_certificate/schema/iea43\_anemometer_calibration.schema.json#/properties/date_of_issue")
+*   defined in: [IEA Wind TCP Task 43 Anemometer Calibration Certificate](iea43\_anemometer_calibration-properties-date-of-issue.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/calibration_schema/digital_calibration_certificate/schema/iea43\_anemometer_calibration.schema.json#/properties/date_of_issue")
 
 ### date_of_issue Type
 
-`string`
+`string` ([Date of Issue](iea43\_anemometer_calibration-properties-date-of-issue.md))
 
 ### date_of_issue Constraints
 
@@ -153,7 +153,7 @@ Revision information if applicable.
 
 *   is required
 
-*   Type: `string`
+*   Type: `string` ([Revision](iea43\_anemometer_calibration-properties-revision.md))
 
 *   cannot be null
 
@@ -161,138 +161,9 @@ Revision information if applicable.
 
 ### revision Type
 
-`string`
+`string` ([Revision](iea43\_anemometer_calibration-properties-revision.md))
 
 # IEA Wind TCP Task 43 Anemometer Calibration Certificate Definitions
-
-## Definitions group contact
-
-Reference this group by using
-
-```json
-{"$ref":"https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/calibration_schema/digital_calibration_certificate/schema/iea43_anemometer_calibration.schema.json#/definitions/contact"}
-```
-
-| Property                      | Type     | Required | Nullable       | Defined by                                                                                                                                                                                                                                                                                                                                                       |
-| :---------------------------- | :------- | :------- | :------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [first_name](#first_name)     | `string` | Optional | cannot be null | [IEA Wind TCP Task 43 Anemometer Calibration Certificate](iea43_anemometer_calibration-definitions-contact-properties-first_name.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/calibration_schema/digital_calibration_certificate/schema/iea43_anemometer_calibration.schema.json#/definitions/contact/properties/first_name")     |
-| [last_name](#last_name)       | `string` | Optional | cannot be null | [IEA Wind TCP Task 43 Anemometer Calibration Certificate](iea43_anemometer_calibration-definitions-contact-properties-last_name.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/calibration_schema/digital_calibration_certificate/schema/iea43_anemometer_calibration.schema.json#/definitions/contact/properties/last_name")       |
-| [company_name](#company_name) | `string` | Optional | cannot be null | [IEA Wind TCP Task 43 Anemometer Calibration Certificate](iea43_anemometer_calibration-definitions-contact-properties-company_name.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/calibration_schema/digital_calibration_certificate/schema/iea43_anemometer_calibration.schema.json#/definitions/contact/properties/company_name") |
-| [phone](#phone)               | `string` | Optional | cannot be null | [IEA Wind TCP Task 43 Anemometer Calibration Certificate](iea43_anemometer_calibration-definitions-contact-properties-phone.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/calibration_schema/digital_calibration_certificate/schema/iea43_anemometer_calibration.schema.json#/definitions/contact/properties/phone")               |
-| [email](#email)               | `string` | Optional | cannot be null | [IEA Wind TCP Task 43 Anemometer Calibration Certificate](iea43_anemometer_calibration-definitions-contact-properties-email.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/calibration_schema/digital_calibration_certificate/schema/iea43_anemometer_calibration.schema.json#/definitions/contact/properties/email")               |
-| [address](#address)           | `object` | Optional | cannot be null | [IEA Wind TCP Task 43 Anemometer Calibration Certificate](iea43_anemometer_calibration-definitions-contact-properties-address.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/calibration_schema/digital_calibration_certificate/schema/iea43_anemometer_calibration.schema.json#/definitions/contact/properties/address")           |
-
-### first_name
-
-
-
-`first_name`
-
-*   is optional
-
-*   Type: `string`
-
-*   cannot be null
-
-*   defined in: [IEA Wind TCP Task 43 Anemometer Calibration Certificate](iea43\_anemometer_calibration-definitions-contact-properties-first_name.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/calibration_schema/digital_calibration_certificate/schema/iea43\_anemometer_calibration.schema.json#/definitions/contact/properties/first_name")
-
-#### first_name Type
-
-`string`
-
-### last_name
-
-
-
-`last_name`
-
-*   is optional
-
-*   Type: `string`
-
-*   cannot be null
-
-*   defined in: [IEA Wind TCP Task 43 Anemometer Calibration Certificate](iea43\_anemometer_calibration-definitions-contact-properties-last_name.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/calibration_schema/digital_calibration_certificate/schema/iea43\_anemometer_calibration.schema.json#/definitions/contact/properties/last_name")
-
-#### last_name Type
-
-`string`
-
-### company_name
-
-
-
-`company_name`
-
-*   is optional
-
-*   Type: `string`
-
-*   cannot be null
-
-*   defined in: [IEA Wind TCP Task 43 Anemometer Calibration Certificate](iea43\_anemometer_calibration-definitions-contact-properties-company_name.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/calibration_schema/digital_calibration_certificate/schema/iea43\_anemometer_calibration.schema.json#/definitions/contact/properties/company_name")
-
-#### company_name Type
-
-`string`
-
-### phone
-
-
-
-`phone`
-
-*   is optional
-
-*   Type: `string`
-
-*   cannot be null
-
-*   defined in: [IEA Wind TCP Task 43 Anemometer Calibration Certificate](iea43\_anemometer_calibration-definitions-contact-properties-phone.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/calibration_schema/digital_calibration_certificate/schema/iea43\_anemometer_calibration.schema.json#/definitions/contact/properties/phone")
-
-#### phone Type
-
-`string`
-
-### email
-
-
-
-`email`
-
-*   is optional
-
-*   Type: `string`
-
-*   cannot be null
-
-*   defined in: [IEA Wind TCP Task 43 Anemometer Calibration Certificate](iea43\_anemometer_calibration-definitions-contact-properties-email.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/calibration_schema/digital_calibration_certificate/schema/iea43\_anemometer_calibration.schema.json#/definitions/contact/properties/email")
-
-#### email Type
-
-`string`
-
-#### email Constraints
-
-**email**: the string must be an email address, according to [RFC 5322, section 3.4.1](https://tools.ietf.org/html/rfc5322 "check the specification")
-
-### address
-
-
-
-`address`
-
-*   is optional
-
-*   Type: `object` ([address](iea43\_anemometer_calibration-definitions-contact-properties-address.md))
-
-*   cannot be null
-
-*   defined in: [IEA Wind TCP Task 43 Anemometer Calibration Certificate](iea43\_anemometer_calibration-definitions-contact-properties-address.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/calibration_schema/digital_calibration_certificate/schema/iea43\_anemometer_calibration.schema.json#/definitions/contact/properties/address")
-
-#### address Type
-
-`object` ([address](iea43\_anemometer_calibration-definitions-contact-properties-address.md))
 
 ## Definitions group ambient_condition
 
@@ -370,11 +241,11 @@ Reference this group by using
 {"$ref":"https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/calibration_schema/digital_calibration_certificate/schema/iea43_anemometer_calibration.schema.json#/definitions/quantity"}
 ```
 
-| Property                    | Type     | Required | Nullable       | Defined by                                                                                                                                                                                                                                                                                                                                           |
-| :-------------------------- | :------- | :------- | :------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [value](#value)             | `number` | Required | cannot be null | [IEA Wind TCP Task 43 Anemometer Calibration Certificate](iea43_anemometer_calibration-definitions-quantity-properties-value.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/calibration_schema/digital_calibration_certificate/schema/iea43_anemometer_calibration.schema.json#/definitions/quantity/properties/value") |
-| [unit](#unit)               | `string` | Required | cannot be null | [IEA Wind TCP Task 43 Anemometer Calibration Certificate](iea43_anemometer_calibration-definitions-quantity-properties-unit.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/calibration_schema/digital_calibration_certificate/schema/iea43_anemometer_calibration.schema.json#/definitions/quantity/properties/unit")   |
-| [uncertainty](#uncertainty) | `object` | Optional | cannot be null | [IEA Wind TCP Task 43 Anemometer Calibration Certificate](iea43_anemometer_calibration-definitions-uncertainty.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/calibration_schema/digital_calibration_certificate/schema/iea43_anemometer_calibration.schema.json#/definitions/quantity/properties/uncertainty")         |
+| Property                    | Type     | Required | Nullable       | Defined by                                                                                                                                                                                                                                                                                                                                                       |
+| :-------------------------- | :------- | :------- | :------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [value](#value)             | `number` | Required | cannot be null | [IEA Wind TCP Task 43 Anemometer Calibration Certificate](iea43_anemometer_calibration-definitions-quantity-properties-value.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/calibration_schema/digital_calibration_certificate/schema/iea43_anemometer_calibration.schema.json#/definitions/quantity/properties/value")             |
+| [unit](#unit)               | `string` | Required | cannot be null | [IEA Wind TCP Task 43 Anemometer Calibration Certificate](iea43_anemometer_calibration-definitions-quantity-properties-unit.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/calibration_schema/digital_calibration_certificate/schema/iea43_anemometer_calibration.schema.json#/definitions/quantity/properties/unit")               |
+| [uncertainty](#uncertainty) | `object` | Optional | cannot be null | [IEA Wind TCP Task 43 Anemometer Calibration Certificate](iea43_anemometer_calibration-definitions-quantity-properties-uncertainty.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/calibration_schema/digital_calibration_certificate/schema/iea43_anemometer_calibration.schema.json#/definitions/quantity/properties/uncertainty") |
 
 ### value
 
@@ -384,7 +255,7 @@ Magnitude of the quantity.
 
 *   is required
 
-*   Type: `number`
+*   Type: `number` ([Value](iea43\_anemometer_calibration-definitions-quantity-properties-value.md))
 
 *   cannot be null
 
@@ -392,7 +263,7 @@ Magnitude of the quantity.
 
 #### value Type
 
-`number`
+`number` ([Value](iea43\_anemometer_calibration-definitions-quantity-properties-value.md))
 
 ### unit
 
@@ -402,7 +273,7 @@ Measurement unit.
 
 *   is required
 
-*   Type: `string`
+*   Type: `string` ([Unit](iea43\_anemometer_calibration-definitions-quantity-properties-unit.md))
 
 *   cannot be null
 
@@ -410,7 +281,7 @@ Measurement unit.
 
 #### unit Type
 
-`string`
+`string` ([Unit](iea43\_anemometer_calibration-definitions-quantity-properties-unit.md))
 
 #### unit Constraints
 
@@ -451,74 +322,15 @@ Measurement unit.
 
 *   is optional
 
-*   Type: `object` ([uncertainty](iea43\_anemometer_calibration-definitions-uncertainty.md))
+*   Type: `object` ([Uncertainty](iea43\_anemometer_calibration-definitions-quantity-properties-uncertainty.md))
 
 *   cannot be null
 
-*   defined in: [IEA Wind TCP Task 43 Anemometer Calibration Certificate](iea43\_anemometer_calibration-definitions-uncertainty.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/calibration_schema/digital_calibration_certificate/schema/iea43\_anemometer_calibration.schema.json#/definitions/quantity/properties/uncertainty")
+*   defined in: [IEA Wind TCP Task 43 Anemometer Calibration Certificate](iea43\_anemometer_calibration-definitions-quantity-properties-uncertainty.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/calibration_schema/digital_calibration_certificate/schema/iea43\_anemometer_calibration.schema.json#/definitions/quantity/properties/uncertainty")
 
 #### uncertainty Type
 
-`object` ([uncertainty](iea43\_anemometer_calibration-definitions-uncertainty.md))
-
-## Definitions group uncertainty
-
-Reference this group by using
-
-```json
-{"$ref":"https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/calibration_schema/digital_calibration_certificate/schema/iea43_anemometer_calibration.schema.json#/definitions/uncertainty"}
-```
-
-| Property                            | Type     | Required | Nullable       | Defined by                                                                                                                                                                                                                                                                                                                                                                     |
-| :---------------------------------- | :------- | :------- | :------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [value](#value-1)                   | `number` | Optional | cannot be null | [IEA Wind TCP Task 43 Anemometer Calibration Certificate](iea43_anemometer_calibration-definitions-uncertainty-properties-value.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/calibration_schema/digital_calibration_certificate/schema/iea43_anemometer_calibration.schema.json#/definitions/uncertainty/properties/value")                     |
-| [coverage_factor](#coverage_factor) | `number` | Optional | cannot be null | [IEA Wind TCP Task 43 Anemometer Calibration Certificate](iea43_anemometer_calibration-definitions-uncertainty-properties-coverage_factor.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/calibration_schema/digital_calibration_certificate/schema/iea43_anemometer_calibration.schema.json#/definitions/uncertainty/properties/coverage_factor") |
-
-### value
-
-Magnitude of the uncertainty.
-
-`value`
-
-*   is optional
-
-*   Type: `number`
-
-*   cannot be null
-
-*   defined in: [IEA Wind TCP Task 43 Anemometer Calibration Certificate](iea43\_anemometer_calibration-definitions-uncertainty-properties-value.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/calibration_schema/digital_calibration_certificate/schema/iea43\_anemometer_calibration.schema.json#/definitions/uncertainty/properties/value")
-
-#### value Type
-
-`number`
-
-### coverage_factor
-
-coverage factor k associated with the uncertainty (VIM 2.38).
-
-`coverage_factor`
-
-*   is optional
-
-*   Type: `number`
-
-*   cannot be null
-
-*   defined in: [IEA Wind TCP Task 43 Anemometer Calibration Certificate](iea43\_anemometer_calibration-definitions-uncertainty-properties-coverage_factor.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/calibration_schema/digital_calibration_certificate/schema/iea43\_anemometer_calibration.schema.json#/definitions/uncertainty/properties/coverage_factor")
-
-#### coverage_factor Type
-
-`number`
-
-#### coverage_factor Examples
-
-```json
-1
-```
-
-```json
-2
-```
+`object` ([Uncertainty](iea43\_anemometer_calibration-definitions-quantity-properties-uncertainty.md))
 
 ## Definitions group column_IEC61400-12-1:2017\_AnnexF
 
@@ -537,13 +349,13 @@ Reference this group by using
 
 ### index
 
-
+The index of the calibration point
 
 `index`
 
 *   is optional
 
-*   Type: `string`
+*   Type: `string` ([Index](iea43\_anemometer_calibration-definitions-column_iec61400-12-12017\_annexf-properties-index.md))
 
 *   cannot be null
 
@@ -551,17 +363,17 @@ Reference this group by using
 
 #### index Type
 
-`string`
+`string` ([Index](iea43\_anemometer_calibration-definitions-column_iec61400-12-12017\_annexf-properties-index.md))
 
 ### reference
 
-
+The reference or measurement standard, in this case air velocity
 
 `reference`
 
 *   is optional
 
-*   Type: `object` ([Details](iea43\_anemometer_calibration-definitions-quantity.md))
+*   Type: `object` ([Reference](iea43\_anemometer_calibration-definitions-quantity.md))
 
 *   cannot be null
 
@@ -569,17 +381,17 @@ Reference this group by using
 
 #### reference Type
 
-`object` ([Details](iea43\_anemometer_calibration-definitions-quantity.md))
+`object` ([Reference](iea43\_anemometer_calibration-definitions-quantity.md))
 
 ### test_item
 
-
+The test item output
 
 `test_item`
 
 *   is optional
 
-*   Type: `object` ([Details](iea43\_anemometer_calibration-definitions-quantity.md))
+*   Type: `object` ([Test Item](iea43\_anemometer_calibration-definitions-quantity.md))
 
 *   cannot be null
 
@@ -587,17 +399,17 @@ Reference this group by using
 
 #### test_item Type
 
-`object` ([Details](iea43\_anemometer_calibration-definitions-quantity.md))
+`object` ([Test Item](iea43\_anemometer_calibration-definitions-quantity.md))
 
 ### deviation
 
-
+The deviation between the reference and test item
 
 `deviation`
 
 *   is optional
 
-*   Type: `object` ([Details](iea43\_anemometer_calibration-definitions-quantity.md))
+*   Type: `object` ([Deviation](iea43\_anemometer_calibration-definitions-quantity.md))
 
 *   cannot be null
 
@@ -605,4 +417,4 @@ Reference this group by using
 
 #### deviation Type
 
-`object` ([Details](iea43\_anemometer_calibration-definitions-quantity.md))
+`object` ([Deviation](iea43\_anemometer_calibration-definitions-quantity.md))
