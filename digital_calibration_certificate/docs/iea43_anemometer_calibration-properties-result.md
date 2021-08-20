@@ -4,11 +4,11 @@
 
 # result Properties
 
-| Property                                  | Type     | Required | Nullable       | Defined by                                                                                                                                                                                        |
-| :---------------------------------------- | :------- | :------- | :------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| [ambient_conditions](#ambient_conditions) | `object` | Required | cannot be null | [IEA Wind TCP Task 43 Anemometer Calibration Certificate](iea43_anemometer_calibration-properties-result-properties-ambient_conditions.md "TBD#/properties/result/properties/ambient_conditions") |
-| [table](#table)                           | `array`  | Required | cannot be null | [IEA Wind TCP Task 43 Anemometer Calibration Certificate](iea43_anemometer_calibration-properties-result-properties-table.md "TBD#/properties/result/properties/table")                           |
-| [linear_regression](#linear_regression)   | `object` | Required | cannot be null | [IEA Wind TCP Task 43 Anemometer Calibration Certificate](iea43_anemometer_calibration-properties-result-properties-linear_regression.md "TBD#/properties/result/properties/linear_regression")   |
+| Property                                  | Type     | Required | Nullable       | Defined by                                                                                                                                                                                                                                                                                                                                                               |
+| :---------------------------------------- | :------- | :------- | :------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [ambient_conditions](#ambient_conditions) | `object` | Required | cannot be null | [IEA Wind TCP Task 43 Anemometer Calibration Certificate](iea43_anemometer_calibration-properties-result-properties-ambient_conditions.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/calibration_schema/digital_calibration_certificate/schema/iea43_anemometer_calibration.schema.json#/properties/result/properties/ambient_conditions") |
+| [table](#table)                           | `array`  | Required | cannot be null | [IEA Wind TCP Task 43 Anemometer Calibration Certificate](iea43_anemometer_calibration-properties-result-properties-table.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/calibration_schema/digital_calibration_certificate/schema/iea43_anemometer_calibration.schema.json#/properties/result/properties/table")                           |
+| [linear_regression](#linear_regression)   | `object` | Required | cannot be null | [IEA Wind TCP Task 43 Anemometer Calibration Certificate](iea43_anemometer_calibration-properties-result-properties-linear_regression.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/calibration_schema/digital_calibration_certificate/schema/iea43_anemometer_calibration.schema.json#/properties/result/properties/linear_regression")   |
 
 ## ambient_conditions
 
@@ -22,7 +22,7 @@ Ambient conditions during the calibration.
 
 *   cannot be null
 
-*   defined in: [IEA Wind TCP Task 43 Anemometer Calibration Certificate](iea43\_anemometer_calibration-properties-result-properties-ambient_conditions.md "TBD#/properties/result/properties/ambient_conditions")
+*   defined in: [IEA Wind TCP Task 43 Anemometer Calibration Certificate](iea43\_anemometer_calibration-properties-result-properties-ambient_conditions.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/calibration_schema/digital_calibration_certificate/schema/iea43\_anemometer_calibration.schema.json#/properties/result/properties/ambient_conditions")
 
 ### ambient_conditions Type
 
@@ -40,7 +40,7 @@ Ambient conditions during the calibration.
 
 *   cannot be null
 
-*   defined in: [IEA Wind TCP Task 43 Anemometer Calibration Certificate](iea43\_anemometer_calibration-properties-result-properties-table.md "TBD#/properties/result/properties/table")
+*   defined in: [IEA Wind TCP Task 43 Anemometer Calibration Certificate](iea43\_anemometer_calibration-properties-result-properties-table.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/calibration_schema/digital_calibration_certificate/schema/iea43\_anemometer_calibration.schema.json#/properties/result/properties/table")
 
 ### table Type
 
@@ -58,7 +58,7 @@ Ambient conditions during the calibration.
 
 *   cannot be null
 
-*   defined in: [IEA Wind TCP Task 43 Anemometer Calibration Certificate](iea43\_anemometer_calibration-properties-result-properties-linear_regression.md "TBD#/properties/result/properties/linear_regression")
+*   defined in: [IEA Wind TCP Task 43 Anemometer Calibration Certificate](iea43\_anemometer_calibration-properties-result-properties-linear_regression.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/calibration_schema/digital_calibration_certificate/schema/iea43\_anemometer_calibration.schema.json#/properties/result/properties/linear_regression")
 
 ### linear_regression Type
 

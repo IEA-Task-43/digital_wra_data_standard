@@ -4,11 +4,11 @@
 
 # ambient_conditions Properties
 
-| Property                            | Type     | Required | Nullable       | Defined by                                                                                                                                                                                                 |
-| :---------------------------------- | :------- | :------- | :------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [air_temperature](#air_temperature) | `object` | Optional | cannot be null | [IEA Wind TCP Task 43 Anemometer Calibration Certificate](iea43_anemometer_calibration-definitions-ambient_condition.md "TBD#/properties/result/properties/ambient_conditions/properties/air_temperature") |
-| [humidity](#humidity)               | `object` | Optional | cannot be null | [IEA Wind TCP Task 43 Anemometer Calibration Certificate](iea43_anemometer_calibration-definitions-ambient_condition.md "TBD#/properties/result/properties/ambient_conditions/properties/humidity")        |
-| [air_pressure](#air_pressure)       | `object` | Optional | cannot be null | [IEA Wind TCP Task 43 Anemometer Calibration Certificate](iea43_anemometer_calibration-definitions-ambient_condition.md "TBD#/properties/result/properties/ambient_conditions/properties/air_pressure")    |
+| Property                            | Type     | Required | Nullable       | Defined by                                                                                                                                                                                                                                                                                                                                                                        |
+| :---------------------------------- | :------- | :------- | :------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [air_temperature](#air_temperature) | `object` | Optional | cannot be null | [IEA Wind TCP Task 43 Anemometer Calibration Certificate](iea43_anemometer_calibration-definitions-ambient_condition.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/calibration_schema/digital_calibration_certificate/schema/iea43_anemometer_calibration.schema.json#/properties/result/properties/ambient_conditions/properties/air_temperature") |
+| [humidity](#humidity)               | `object` | Optional | cannot be null | [IEA Wind TCP Task 43 Anemometer Calibration Certificate](iea43_anemometer_calibration-definitions-ambient_condition.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/calibration_schema/digital_calibration_certificate/schema/iea43_anemometer_calibration.schema.json#/properties/result/properties/ambient_conditions/properties/humidity")        |
+| [air_pressure](#air_pressure)       | `object` | Optional | cannot be null | [IEA Wind TCP Task 43 Anemometer Calibration Certificate](iea43_anemometer_calibration-definitions-ambient_condition.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/calibration_schema/digital_calibration_certificate/schema/iea43_anemometer_calibration.schema.json#/properties/result/properties/ambient_conditions/properties/air_pressure")    |
 
 ## air_temperature
 
@@ -22,7 +22,7 @@
 
 *   cannot be null
 
-*   defined in: [IEA Wind TCP Task 43 Anemometer Calibration Certificate](iea43\_anemometer_calibration-definitions-ambient_condition.md "TBD#/properties/result/properties/ambient_conditions/properties/air_temperature")
+*   defined in: [IEA Wind TCP Task 43 Anemometer Calibration Certificate](iea43\_anemometer_calibration-definitions-ambient_condition.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/calibration_schema/digital_calibration_certificate/schema/iea43\_anemometer_calibration.schema.json#/properties/result/properties/ambient_conditions/properties/air_temperature")
 
 ### air_temperature Type
 
@@ -40,7 +40,7 @@
 
 *   cannot be null
 
-*   defined in: [IEA Wind TCP Task 43 Anemometer Calibration Certificate](iea43\_anemometer_calibration-definitions-ambient_condition.md "TBD#/properties/result/properties/ambient_conditions/properties/humidity")
+*   defined in: [IEA Wind TCP Task 43 Anemometer Calibration Certificate](iea43\_anemometer_calibration-definitions-ambient_condition.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/calibration_schema/digital_calibration_certificate/schema/iea43\_anemometer_calibration.schema.json#/properties/result/properties/ambient_conditions/properties/humidity")
 
 ### humidity Type
 
@@ -58,7 +58,7 @@
 
 *   cannot be null
 
-*   defined in: [IEA Wind TCP Task 43 Anemometer Calibration Certificate](iea43\_anemometer_calibration-definitions-ambient_condition.md "TBD#/properties/result/properties/ambient_conditions/properties/air_pressure")
+*   defined in: [IEA Wind TCP Task 43 Anemometer Calibration Certificate](iea43\_anemometer_calibration-definitions-ambient_condition.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/calibration_schema/digital_calibration_certificate/schema/iea43\_anemometer_calibration.schema.json#/properties/result/properties/ambient_conditions/properties/air_pressure")
 
 ### air_pressure Type
 
