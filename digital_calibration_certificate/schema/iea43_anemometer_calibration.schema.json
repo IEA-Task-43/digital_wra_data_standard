@@ -1,27 +1,31 @@
 {
 	"$schema": "http://json-schema.org/draft-07/schema#",
 	"$id": "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/calibration_schema/digital_calibration_certificate/schema/iea43_anemometer_calibration.schema.json",
-	"$version": "TBD",
 	"title": "IEA Wind TCP Task 43 Anemometer Calibration Certificate",
 	"description": "JSON Schema for IEC61400-12-1:2017 complient anemometer calibration certificates.",
 	"type": "object",
 	"properties": {
 		"calibration_id": {
+			"title": "Calibration ID",
 			"description": "Unique number assigned to the calibration/certificate by the calibration lab. Also called 'calibration mark', etc.",
 			"type": "string"
 		},
 		"calibration_lab": {
+			"title": "Calibration Lab",
 			"description": "General information about the calibration lab",
 			"type": "object",
 			"properties": {
 				"accreditation_id": {
+					"title": "Accredition ID",
 					"description": "The accreditation / calibration lab id if applicable",
 					"type": "string"
 				},
 				"company_name": {
+					"title": "Company Name",
 					"type": "string"
 				},
 				"address": {
+					"title": "Address",
 					"type": "string"
 				}
 			},
@@ -30,16 +34,20 @@
 			]
 		},
 		"customer": {
+			"title": "Customer",
 			"description": "General information about the customer",
 			"type": "object",
 			"properties": {
 				"company_name": {
+					"title": "Company Name",
 					"type": "string"
 				},
 				"address": {
+					"title": "Address",
 					"type": "string"
 				},
 				"reference": {
+					"title": "Reference",
 					"description": "the reference / order code supplied by the customer",
 					"type": "string"
 				}
@@ -49,10 +57,12 @@
 			]
 		},
 		"test_item": {
+			"title": "Test Item",
 			"description": "Information about the test item (DUT)",
 			"type": "object",
 			"properties": {
 				"model": {
+					"title": "Model",
 					"description": "the model number of the test item.",
 					"type": "string",
 					"examples": [
@@ -60,11 +70,12 @@
 					]
 				},
 				"serial_number": {
-					"title": "serial",
+					"title": "Serial Number",
 					"description": "Serial number(s) or similiar, seperated by a ',' e.G. <body>,<cup>",
 					"type": "string"
 				},
 				"description": {
+					"title": "Description",
 					"description": "General description of the test item.",
 					"type": "string",
 					"examples": [
@@ -74,13 +85,16 @@
 					]
 				},
 				"oem": {
+					"title": "OEM",
 					"description": "General information about the OEM",
 					"type": "object",
 					"properties": {
 						"company_name": {
+							"title": "Company Name",
 							"type": "string"
 						},
 						"address": {
+							"title": "Address",
 							"type": "string"
 						}
 					},
@@ -97,15 +111,18 @@
 			]
 		},
 		"setup": {
+			"title": "Setup",
 			"description": "Setup information specific to the calibration.",
 			"type": "object",
 			"properties": {
 				"date_of_calibration": {
+					"title": "Date of Calibration",
 					"description": "The date the calibration took place.",
 					"type": "string",
 					"format": "date"
 				},
 				"procedure": {
+					"title": "Procedure",
 					"description": "The calibration procedure used for the calibration.",
 					"type": "string",
 					"examples": [
@@ -113,18 +130,22 @@
 					]
 				},
 				"wind_tunnel_id": {
+					"title": "Wind Tunnel ID",
 					"description": "Identification of the wind tunnel the calibration took place",
 					"type": "string"
 				},
 				"mounting_diameter": {
+					"title": "Mounting Diameter",
 					"description": "The diameter of the mounting tube.",
 					"$ref": "#/definitions/quantity"
 				},
 				"mounting_orientation": {
+					"title": "Mounting Orientation",
 					"description": "The yaw orientation/direction of the DUT during calibration.",
 					"$ref": "#/definitions/quantity"
 				},
 				"notes": {
+					"title": "Notes",
 					"description": "Note down anything thats non-standard",
 					"type": "string"
 				}
@@ -137,30 +158,39 @@
 			]
 		},
 		"result": {
+			"title": "Result",
 			"type": "object",
 			"properties": {
 				"ambient_conditions": {
+					"title": "Ambient Conditions",
 					"description": "Ambient conditions during the calibration.",
 					"type": "object",
 					"properties": {
 						"air_temperature": {
+							"title": "Air Temperature",
 							"$ref": "#/definitions/ambient_condition"
 						},
 						"humidity": {
+							"title": "Humidity",
 							"$ref": "#/definitions/ambient_condition"
 						},
 						"air_pressure": {
+							"title": "Air Pressure",
 							"$ref": "#/definitions/ambient_condition"
 						}
 					}
 				},
 				"table": {
+					"title": "Table",
+					"description": "The calibration result in a tabular format",
 					"type": "array",
 					"items": {
 						"$ref": "#/definitions/column_IEC61400-12-1:2017_AnnexF"
 					}
 				},
 				"linear_regression": {
+					"title": "Linear Regression",
+					"description": "The linear regression analysis parameters",
 					"type": "object",
 					"properties": {
 						"slope": {
@@ -189,11 +219,13 @@
 			]
 		},
 		"date_of_issue": {
+			"title": "Date of Issue",
 			"description": "Issue date of the certificate.",
 			"type": "string",
 			"format": "date"
 		},
 		"revision": {
+			"title": "Revision",
 			"description": "Revision information if applicable.",
 			"type": "string"
 		}
@@ -209,47 +241,6 @@
 		"revision"
 	],
 	"definitions": {
-		"contact": {
-			"title": "contact",
-			"$comment": "contact information of the customer",
-			"type": "object",
-			"properties": {
-				"first_name": {
-					"type": "string"
-				},
-				"last_name": {
-					"type": "string"
-				},
-				"company_name": {
-					"type": "string"
-				},
-				"phone": {
-					"type": "string"
-				},
-				"email": {
-					"type": "string",
-					"format": "email"
-				},
-				"address": {
-					"title": "address",
-					"type": "object",
-					"properties": {
-						"street": {
-							"type": "string"
-						},
-						"postal_code": {
-							"type": "string"
-						},
-						"city": {
-							"type": "string"
-						},
-						"country_code": {
-							"type": "string"
-						}
-					}
-				}
-			}
-		},
 		"ambient_condition": {
 			"title": "ambient_condition",
 			"type": "object",
@@ -269,10 +260,12 @@
 			"type": "object",
 			"properties": {
 				"value": {
+					"title": "Value",
 					"description": "Magnitude of the quantity.",
 					"type": "number"
 				},
 				"unit": {
+					"title": "Unit",
 					"description": "Measurement unit.",
 					"type": "string",
 					"enum": [
@@ -300,7 +293,22 @@
 					]
 				},
 				"uncertainty": {
-					"$ref": "#/definitions/uncertainty"
+					"title": "Uncertainty",
+					"type": "object",
+					"properties": {
+						"value": {
+							"description": "Magnitude of the uncertainty.",
+							"type": "number"
+						},
+						"coverage_factor": {
+							"description": "coverage factor k associated with the uncertainty (VIM 2.38).",
+							"type": "number",
+							"examples": [
+								1,
+								2
+							]
+						}
+					}
 				}
 			},
 			"required": [
@@ -309,40 +317,31 @@
 			],
 			"additionalProperties": false
 		},
-		"uncertainty": {
-			"title": "uncertainty",
-			"type": "object",
-			"properties": {
-				"value": {
-					"description": "Magnitude of the uncertainty.",
-					"type": "number"
-				},
-				"coverage_factor": {
-					"description": "coverage factor k associated with the uncertainty (VIM 2.38).",
-					"type": "number",
-					"examples": [
-						1,
-						2
-					]
-				}
-			}
-		},
 		"column_IEC61400-12-1:2017_AnnexF": {
 			"type": "object",
 			"properties": {
 				"index": {
+					"title": "Index",
+					"description": "The index of the calibration point",
 					"type": "string"
 				},
 				"reference": {
+					"title": "Reference",
+					"description": "The reference or measurement standard, in this case air velocity",
 					"$ref": "#/definitions/quantity"
 				},
 				"test_item": {
+					"title": "Test Item",
+					"description": "The test item output",
 					"$ref": "#/definitions/quantity"
 				},
 				"deviation": {
+					"title": "Deviation",
+					"description": "The deviation between the reference and test item",
 					"$ref": "#/definitions/quantity"
 				}
 			}
 		}
-	}
+	},
+	"$version": "TBD"
 }
