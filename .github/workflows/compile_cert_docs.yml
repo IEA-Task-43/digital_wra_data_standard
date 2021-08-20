@@ -14,6 +14,8 @@ jobs:
     runs-on: ubuntu-18.04
     steps:
       - uses: actions/checkout@v2
+        with:
+          ref: 'calibration_schema'
 
 #       - name: Copy schema
 #         run: cp ./schema/iea43_wra_data_model.schema.json ./app/src/schema.json
