@@ -11,3 +11,10 @@ Currently supported are anemometer calibration certificates with the option to e
 - [Schema documentation](./docs/iea43_anemometer_calibration.md): Markdown documentation for the digital calibration certificate schema.
 
 - [Python Schema Loading Example](./tools/calibration_certificate_usage.ipynb): This notebook shows how to read an example file that uses the JSON schema with Python. [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/IEA-Task-43/digital_wra_data_standard/calibration_schema?filepath=.%2Fdigital_calibration_certificate%2Ftools%2Fcalibration_certificate_usage.ipynb)
+
+
+## Schema Overview
+The following is a visualization of the standard done with [Altova XMLSpy](https://www.altova.com/de/xmlspy-xml-editor), but there are also free software packages which can be used to visualize/edit the json-schema. 
+
+![complete](./docs_images/schema_complete.png)
+
