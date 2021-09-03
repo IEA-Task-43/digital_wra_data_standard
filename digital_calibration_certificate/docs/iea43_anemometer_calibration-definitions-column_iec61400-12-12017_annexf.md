@@ -13,13 +13,13 @@
 
 ## index
 
-
+The index of the calibration point
 
 `index`
 
 *   is optional
 
-*   Type: `string`
+*   Type: `string` ([Index](iea43\_anemometer_calibration-definitions-column_iec61400-12-12017\_annexf-properties-index.md))
 
 *   cannot be null
 
@@ -27,17 +27,17 @@
 
 ### index Type
 
-`string`
+`string` ([Index](iea43\_anemometer_calibration-definitions-column_iec61400-12-12017\_annexf-properties-index.md))
 
 ## reference
 
-
+The reference or measurement standard, in this case air velocity
 
 `reference`
 
 *   is optional
 
-*   Type: `object` ([Details](iea43\_anemometer_calibration-definitions-quantity.md))
+*   Type: `object` ([Reference](iea43\_anemometer_calibration-definitions-quantity.md))
 
 *   cannot be null
 
@@ -45,17 +45,17 @@
 
 ### reference Type
 
-`object` ([Details](iea43\_anemometer_calibration-definitions-quantity.md))
+`object` ([Reference](iea43\_anemometer_calibration-definitions-quantity.md))
 
 ## test_item
 
-
+The test item output
 
 `test_item`
 
 *   is optional
 
-*   Type: `object` ([Details](iea43\_anemometer_calibration-definitions-quantity.md))
+*   Type: `object` ([Test Item](iea43\_anemometer_calibration-definitions-quantity.md))
 
 *   cannot be null
 
@@ -63,17 +63,17 @@
 
 ### test_item Type
 
-`object` ([Details](iea43\_anemometer_calibration-definitions-quantity.md))
+`object` ([Test Item](iea43\_anemometer_calibration-definitions-quantity.md))
 
 ## deviation
 
-
+The deviation between the reference and test item
 
 `deviation`
 
 *   is optional
 
-*   Type: `object` ([Details](iea43\_anemometer_calibration-definitions-quantity.md))
+*   Type: `object` ([Deviation](iea43\_anemometer_calibration-definitions-quantity.md))
 
 *   cannot be null
 
@@ -81,4 +81,4 @@
 
 ### deviation Type
 
-`object` ([Details](iea43\_anemometer_calibration-definitions-quantity.md))
+`object` ([Deviation](iea43\_anemometer_calibration-definitions-quantity.md))

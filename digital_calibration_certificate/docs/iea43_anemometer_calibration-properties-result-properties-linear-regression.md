@@ -1,6 +1,6 @@
 ## linear_regression Type
 
-`object` ([Details](iea43\_anemometer_calibration-properties-result-properties-linear_regression.md))
+`object` ([Linear Regression](iea43\_anemometer_calibration-properties-result-properties-linear-regression.md))
 
 # linear_regression Properties
 

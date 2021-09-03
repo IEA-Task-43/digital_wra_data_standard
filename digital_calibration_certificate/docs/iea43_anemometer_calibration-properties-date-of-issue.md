@@ -1,6 +1,6 @@
 ## date_of_issue Type
 
-`string`
+`string` ([Date of Issue](iea43\_anemometer_calibration-properties-date-of-issue.md))
 
 ## date_of_issue Constraints
 

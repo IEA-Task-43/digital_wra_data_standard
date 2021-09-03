@@ -1,14 +1,14 @@
 ## deviation Type
 
-`object` ([Details](iea43\_anemometer_calibration-definitions-quantity.md))
+`object` ([Deviation](iea43\_anemometer_calibration-definitions-quantity.md))
 
 # deviation Properties
 
-| Property                    | Type     | Required | Nullable       | Defined by                                                                                                                                                                                                                                                                                                                                           |
-| :-------------------------- | :------- | :------- | :------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [value](#value)             | `number` | Required | cannot be null | [IEA Wind TCP Task 43 Anemometer Calibration Certificate](iea43_anemometer_calibration-definitions-quantity-properties-value.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/calibration_schema/digital_calibration_certificate/schema/iea43_anemometer_calibration.schema.json#/definitions/quantity/properties/value") |
-| [unit](#unit)               | `string` | Required | cannot be null | [IEA Wind TCP Task 43 Anemometer Calibration Certificate](iea43_anemometer_calibration-definitions-quantity-properties-unit.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/calibration_schema/digital_calibration_certificate/schema/iea43_anemometer_calibration.schema.json#/definitions/quantity/properties/unit")   |
-| [uncertainty](#uncertainty) | `object` | Optional | cannot be null | [IEA Wind TCP Task 43 Anemometer Calibration Certificate](iea43_anemometer_calibration-definitions-uncertainty.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/calibration_schema/digital_calibration_certificate/schema/iea43_anemometer_calibration.schema.json#/definitions/quantity/properties/uncertainty")         |
+| Property                    | Type     | Required | Nullable       | Defined by                                                                                                                                                                                                                                                                                                                                                       |
+| :-------------------------- | :------- | :------- | :------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [value](#value)             | `number` | Required | cannot be null | [IEA Wind TCP Task 43 Anemometer Calibration Certificate](iea43_anemometer_calibration-definitions-quantity-properties-value.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/calibration_schema/digital_calibration_certificate/schema/iea43_anemometer_calibration.schema.json#/definitions/quantity/properties/value")             |
+| [unit](#unit)               | `string` | Required | cannot be null | [IEA Wind TCP Task 43 Anemometer Calibration Certificate](iea43_anemometer_calibration-definitions-quantity-properties-unit.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/calibration_schema/digital_calibration_certificate/schema/iea43_anemometer_calibration.schema.json#/definitions/quantity/properties/unit")               |
+| [uncertainty](#uncertainty) | `object` | Optional | cannot be null | [IEA Wind TCP Task 43 Anemometer Calibration Certificate](iea43_anemometer_calibration-definitions-quantity-properties-uncertainty.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/calibration_schema/digital_calibration_certificate/schema/iea43_anemometer_calibration.schema.json#/definitions/quantity/properties/uncertainty") |
 
 ## value
 
@@ -18,7 +18,7 @@ Magnitude of the quantity.
 
 *   is required
 
-*   Type: `number`
+*   Type: `number` ([Value](iea43\_anemometer_calibration-definitions-quantity-properties-value.md))
 
 *   cannot be null
 
@@ -26,7 +26,7 @@ Magnitude of the quantity.
 
 ### value Type
 
-`number`
+`number` ([Value](iea43\_anemometer_calibration-definitions-quantity-properties-value.md))
 
 ## unit
 
@@ -36,7 +36,7 @@ Measurement unit.
 
 *   is required
 
-*   Type: `string`
+*   Type: `string` ([Unit](iea43\_anemometer_calibration-definitions-quantity-properties-unit.md))
 
 *   cannot be null
 
@@ -44,7 +44,7 @@ Measurement unit.
 
 ### unit Type
 
-`string`
+`string` ([Unit](iea43\_anemometer_calibration-definitions-quantity-properties-unit.md))
 
 ### unit Constraints
 
@@ -85,12 +85,12 @@ Measurement unit.
 
 *   is optional
 
-*   Type: `object` ([uncertainty](iea43\_anemometer_calibration-definitions-uncertainty.md))
+*   Type: `object` ([Uncertainty](iea43\_anemometer_calibration-definitions-quantity-properties-uncertainty.md))
 
 *   cannot be null
 
-*   defined in: [IEA Wind TCP Task 43 Anemometer Calibration Certificate](iea43\_anemometer_calibration-definitions-uncertainty.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/calibration_schema/digital_calibration_certificate/schema/iea43\_anemometer_calibration.schema.json#/definitions/quantity/properties/uncertainty")
+*   defined in: [IEA Wind TCP Task 43 Anemometer Calibration Certificate](iea43\_anemometer_calibration-definitions-quantity-properties-uncertainty.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/calibration_schema/digital_calibration_certificate/schema/iea43\_anemometer_calibration.schema.json#/definitions/quantity/properties/uncertainty")
 
 ### uncertainty Type
 
-`object` ([uncertainty](iea43\_anemometer_calibration-definitions-uncertainty.md))
+`object` ([Uncertainty](iea43\_anemometer_calibration-definitions-quantity-properties-uncertainty.md))

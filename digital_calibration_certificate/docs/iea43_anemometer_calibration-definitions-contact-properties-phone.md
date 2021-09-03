@@ -1,3 +1,0 @@
-## phone Type
-
-`string`

@@ -1,6 +1,6 @@
 ## procedure Type
 
-`string`
+`string` ([Procedure](iea43\_anemometer_calibration-properties-setup-properties-procedure.md))
 
 ## procedure Examples
 

@@ -1,14 +1,14 @@
 ## setup Type
 
-`object` ([Details](iea43\_anemometer_calibration-properties-setup.md))
+`object` ([Setup](iea43\_anemometer_calibration-properties-setup.md))
 
 # setup Properties
 
 | Property                                      | Type     | Required | Nullable       | Defined by                                                                                                                                                                                                                                                                                                                                                               |
 | :-------------------------------------------- | :------- | :------- | :------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [date_of_calibration](#date_of_calibration)   | `string` | Required | cannot be null | [IEA Wind TCP Task 43 Anemometer Calibration Certificate](iea43_anemometer_calibration-properties-setup-properties-date_of_calibration.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/calibration_schema/digital_calibration_certificate/schema/iea43_anemometer_calibration.schema.json#/properties/setup/properties/date_of_calibration") |
+| [date_of_calibration](#date_of_calibration)   | `string` | Required | cannot be null | [IEA Wind TCP Task 43 Anemometer Calibration Certificate](iea43_anemometer_calibration-properties-setup-properties-date-of-calibration.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/calibration_schema/digital_calibration_certificate/schema/iea43_anemometer_calibration.schema.json#/properties/setup/properties/date_of_calibration") |
 | [procedure](#procedure)                       | `string` | Required | cannot be null | [IEA Wind TCP Task 43 Anemometer Calibration Certificate](iea43_anemometer_calibration-properties-setup-properties-procedure.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/calibration_schema/digital_calibration_certificate/schema/iea43_anemometer_calibration.schema.json#/properties/setup/properties/procedure")                     |
-| [wind_tunnel_id](#wind_tunnel_id)             | `string` | Required | cannot be null | [IEA Wind TCP Task 43 Anemometer Calibration Certificate](iea43_anemometer_calibration-properties-setup-properties-wind_tunnel_id.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/calibration_schema/digital_calibration_certificate/schema/iea43_anemometer_calibration.schema.json#/properties/setup/properties/wind_tunnel_id")           |
+| [wind_tunnel_id](#wind_tunnel_id)             | `string` | Required | cannot be null | [IEA Wind TCP Task 43 Anemometer Calibration Certificate](iea43_anemometer_calibration-properties-setup-properties-wind-tunnel-id.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/calibration_schema/digital_calibration_certificate/schema/iea43_anemometer_calibration.schema.json#/properties/setup/properties/wind_tunnel_id")           |
 | [mounting_diameter](#mounting_diameter)       | `object` | Required | cannot be null | [IEA Wind TCP Task 43 Anemometer Calibration Certificate](iea43_anemometer_calibration-definitions-quantity.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/calibration_schema/digital_calibration_certificate/schema/iea43_anemometer_calibration.schema.json#/properties/setup/properties/mounting_diameter")                              |
 | [mounting_orientation](#mounting_orientation) | `object` | Optional | cannot be null | [IEA Wind TCP Task 43 Anemometer Calibration Certificate](iea43_anemometer_calibration-definitions-quantity.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/calibration_schema/digital_calibration_certificate/schema/iea43_anemometer_calibration.schema.json#/properties/setup/properties/mounting_orientation")                           |
 | [notes](#notes)                               | `string` | Optional | cannot be null | [IEA Wind TCP Task 43 Anemometer Calibration Certificate](iea43_anemometer_calibration-properties-setup-properties-notes.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/calibration_schema/digital_calibration_certificate/schema/iea43_anemometer_calibration.schema.json#/properties/setup/properties/notes")                             |
@@ -21,15 +21,15 @@ The date the calibration took place.
 
 *   is required
 
-*   Type: `string`
+*   Type: `string` ([Date of Calibration](iea43\_anemometer_calibration-properties-setup-properties-date-of-calibration.md))
 
 *   cannot be null
 
-*   defined in: [IEA Wind TCP Task 43 Anemometer Calibration Certificate](iea43\_anemometer_calibration-properties-setup-properties-date_of_calibration.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/calibration_schema/digital_calibration_certificate/schema/iea43\_anemometer_calibration.schema.json#/properties/setup/properties/date_of_calibration")
+*   defined in: [IEA Wind TCP Task 43 Anemometer Calibration Certificate](iea43\_anemometer_calibration-properties-setup-properties-date-of-calibration.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/calibration_schema/digital_calibration_certificate/schema/iea43\_anemometer_calibration.schema.json#/properties/setup/properties/date_of_calibration")
 
 ### date_of_calibration Type
 
-`string`
+`string` ([Date of Calibration](iea43\_anemometer_calibration-properties-setup-properties-date-of-calibration.md))
 
 ### date_of_calibration Constraints
 
@@ -43,7 +43,7 @@ The calibration procedure used for the calibration.
 
 *   is required
 
-*   Type: `string`
+*   Type: `string` ([Procedure](iea43\_anemometer_calibration-properties-setup-properties-procedure.md))
 
 *   cannot be null
 
@@ -51,7 +51,7 @@ The calibration procedure used for the calibration.
 
 ### procedure Type
 
-`string`
+`string` ([Procedure](iea43\_anemometer_calibration-properties-setup-properties-procedure.md))
 
 ### procedure Examples
 
@@ -67,15 +67,15 @@ Identification of the wind tunnel the calibration took place
 
 *   is required
 
-*   Type: `string`
+*   Type: `string` ([Wind Tunnel ID](iea43\_anemometer_calibration-properties-setup-properties-wind-tunnel-id.md))
 
 *   cannot be null
 
-*   defined in: [IEA Wind TCP Task 43 Anemometer Calibration Certificate](iea43\_anemometer_calibration-properties-setup-properties-wind_tunnel_id.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/calibration_schema/digital_calibration_certificate/schema/iea43\_anemometer_calibration.schema.json#/properties/setup/properties/wind_tunnel_id")
+*   defined in: [IEA Wind TCP Task 43 Anemometer Calibration Certificate](iea43\_anemometer_calibration-properties-setup-properties-wind-tunnel-id.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/calibration_schema/digital_calibration_certificate/schema/iea43\_anemometer_calibration.schema.json#/properties/setup/properties/wind_tunnel_id")
 
 ### wind_tunnel_id Type
 
-`string`
+`string` ([Wind Tunnel ID](iea43\_anemometer_calibration-properties-setup-properties-wind-tunnel-id.md))
 
 ## mounting_diameter
 
@@ -85,7 +85,7 @@ The diameter of the mounting tube.
 
 *   is required
 
-*   Type: `object` ([Details](iea43\_anemometer_calibration-definitions-quantity.md))
+*   Type: `object` ([Mounting Diameter](iea43\_anemometer_calibration-definitions-quantity.md))
 
 *   cannot be null
 
@@ -93,7 +93,7 @@ The diameter of the mounting tube.
 
 ### mounting_diameter Type
 
-`object` ([Details](iea43\_anemometer_calibration-definitions-quantity.md))
+`object` ([Mounting Diameter](iea43\_anemometer_calibration-definitions-quantity.md))
 
 ## mounting_orientation
 
@@ -103,7 +103,7 @@ The yaw orientation/direction of the DUT during calibration.
 
 *   is optional
 
-*   Type: `object` ([Details](iea43\_anemometer_calibration-definitions-quantity.md))
+*   Type: `object` ([Mounting Orientation](iea43\_anemometer_calibration-definitions-quantity.md))
 
 *   cannot be null
 
@@ -111,7 +111,7 @@ The yaw orientation/direction of the DUT during calibration.
 
 ### mounting_orientation Type
 
-`object` ([Details](iea43\_anemometer_calibration-definitions-quantity.md))
+`object` ([Mounting Orientation](iea43\_anemometer_calibration-definitions-quantity.md))
 
 ## notes
 
@@ -121,7 +121,7 @@ Note down anything thats non-standard
 
 *   is optional
 
-*   Type: `string`
+*   Type: `string` ([Notes](iea43\_anemometer_calibration-properties-setup-properties-notes.md))
 
 *   cannot be null
 
@@ -129,4 +129,4 @@ Note down anything thats non-standard
 
 ### notes Type
 
-`string`
+`string` ([Notes](iea43\_anemometer_calibration-properties-setup-properties-notes.md))
