@@ -1233,7 +1233,7 @@
                                 "null"
                               ],
                               "title": "Place of Calibration",
-                              "description": "The unique place or wind tunnel where the calibration took place. E.g. 'place of calibration' is usually a field on a calibration certificate. If not, a combination of a unique tunnel id or serial number and the address would suffice.",
+                              "description": "The unique place or wind tunnel where the calibration took place. E.g. 'place of calibration' is usually a field on a calibration certificate. If not, a combination of a unique tunnel id or serial number and the address would suffice. In the Digital Calibration Certificate project this field maps to 'wind_tunnel_id'.",
                               "examples": [
                                 "Windtunnel 2 of Deutsche WindGuard WindTunnel Services GmbH, Varel",
                                 "AWT Bargeshagen"
