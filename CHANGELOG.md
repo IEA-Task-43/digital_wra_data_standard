@@ -21,6 +21,7 @@ Additional labels for pre-release and build metadata are available as extensions
 - To `measurement_station_type` enum, added:
    - solar (Issue #91)
 - Converted `measurement_type_id` to a definition.
+- To `calibration_uncertainty` rename `uncertainty` to `combined_uncertainty` to better reflect what it is.
 - To `calibration` object, added `measurement_type_id` reference. (Issue #96)
 - To `logger_main_config` added `logger_firmware_version`. (Issue #87)
 

@@ -450,7 +450,7 @@ CREATE TABLE IF NOT EXISTS calibration_uncertainty(
     calibration_uuid UUID NOT NULL,
     reference_bin decimal,
     reference_unit text,
-    uncertainty decimal,
+    combined_uncertainty decimal,
     FOREIGN KEY (calibration_uuid) REFERENCES calibration (uuid),
     FOREIGN KEY (reference_unit) REFERENCES measurement_units (id)
 );
