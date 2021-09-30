@@ -10,16 +10,18 @@ Given a version number MAJOR.MINOR.PATCH, increment the:
 Additional labels for pre-release and build metadata are available as extensions to the MAJOR.MINOR.PATCH format.
 
 ## [0.2.0-2021.XX]
-- Rename `sensor_config` to `logger_measurement_config`
-- In the create table SQL statements contained in file 'iea43_wra_data_model_postgresql.sql' move `date_from` and `date_to` from the `sensor` table into the `measurement_point_sensor` table. Note: This has no impact on the JSON Schema.
-- Add `calibration_id` to `calibration`
-- `measurement_type`, add:
+- Renamed `sensor_config` to `logger_measurement_config`
+- In the create table SQL statements contained in file 'iea43_wra_data_model_postgresql.sql' moved `date_from` and `date_to` from the `sensor` table into the `measurement_point_sensor` table. Note: This has no impact on the JSON Schema.
+- To `measurement_type` enum, added:
     - flag
     - tilt
-- Add to `sensor_type`
+- To `sensor_type` enum, added:
    - thermohygrometer
    - vertical_anemometer
-- Add `solar` to `measurement_station_type`
+- To `measurement_station_type` enum, added:
+   - solar
+- Converted `measurement_type_id` to a definition.
+- To `calibration` object, added `measurement_type_id` reference.
 
 ## [0.1.1-2021.04]
 - Allow additional properties for header section of schema.

@@ -426,6 +426,7 @@ CREATE TABLE IF NOT EXISTS measurement_point_sensor(
 CREATE TABLE IF NOT EXISTS calibration(
     uuid UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
     sensor_uuid UUID NOT NULL,
+    measurement_type_id text NOT NULL,
     slope decimal,
     "offset" decimal,  -- offset is a SQL reserved word so needs to be escaped
     sensitivity decimal,
@@ -439,7 +440,8 @@ CREATE TABLE IF NOT EXISTS calibration(
     notes text,
     update_at timestamp WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
     updated_by UUID,
-    FOREIGN KEY (sensor_uuid) REFERENCES sensor (uuid)
+    FOREIGN KEY (sensor_uuid) REFERENCES sensor (uuid),
+    FOREIGN KEY (measurement_type_id) REFERENCES measurement_type (id)
 );
 
 CREATE TABLE IF NOT EXISTS calibration_uncertainty(
