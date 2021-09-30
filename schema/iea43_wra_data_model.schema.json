@@ -1284,13 +1284,13 @@
                                       "m/s"
                                     ]
                                   },
-                                  "uncertainty": {
+                                  "combined_uncertainty": {
                                     "type": [
                                       "number",
                                       "null"
                                     ],
-                                    "title": "Uncertainty",
-                                    "description": "The uncertainty associated with this reference bin.",
+                                    "title": "Combined Uncertainty",
+                                    "description": "The combined uncertainty associated with the deviation between the reference and the test item at this reference bin.",
                                     "examples": [
                                       0.1
                                     ]

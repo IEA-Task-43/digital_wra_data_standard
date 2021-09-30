@@ -22,6 +22,7 @@ Additional labels for pre-release and build metadata are available as extensions
    - solar
 - Converted `measurement_type_id` to a definition.
 - To `calibration` object, added `measurement_type_id` reference.
+- To `calibration_uncertainty` rename `uncertainty` to `combined_uncertainty` to better reflect what it is.
 
 ## [0.1.1-2021.04]
 - Allow additional properties for header section of schema.
