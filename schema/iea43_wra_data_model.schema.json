@@ -614,6 +614,11 @@
                   "title": "Logger Serial Number",
                   "description": "The logger or remote sensing device serial number. This is sometimes different from the logger id."
                 },
+                "logger_firmware_version": {
+                  "type": "string",
+                  "title": "Logger Firmware Version",
+                  "description": "The logger or remote sensing device's Firmware Version. This is the software version that is run on the logger at the time of data acquisition. This software can be updated and so can sometimes can impact the results of the outputted data. E.g. NRG SymphoniePro, Firmware Version: 3.2.3. For loggers/devices that have multiple software programmes to process the outputted data the versions can be concatenated together."
+                },
                 "logger_id": {
                   "type": [
                     "string",
