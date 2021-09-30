@@ -21,7 +21,10 @@ Additional labels for pre-release and build metadata are available as extensions
 - To `measurement_station_type` enum, added:
    - solar
 - Converted `measurement_type_id` to a definition.
-- To `calibration` object, added `measurement_type_id` reference.
+- To `calibration` object, added:
+   - `measurement_type_id` (Issue [#96](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/96))
+   - `revision` (Issue [#103](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/103))
+
 
 ## [0.1.1-2021.04]
 - Allow additional properties for header section of schema.

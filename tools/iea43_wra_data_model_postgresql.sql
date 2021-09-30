@@ -434,6 +434,7 @@ CREATE TABLE IF NOT EXISTS calibration(
     report_link text,
     calibration_id text,
     date_of_calibration date,
+    revision text,
     calibration_organisation text,
     place_of_calibration text,
     uncertainty_k_factor decimal,
