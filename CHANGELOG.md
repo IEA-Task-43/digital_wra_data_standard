@@ -19,12 +19,13 @@ Additional labels for pre-release and build metadata are available as extensions
    - thermohygrometer
    - vertical_anemometer
 - To `measurement_station_type` enum, added:
-   - solar
+   - solar (Issue #91)
 - Converted `measurement_type_id` to a definition.
 - To `calibration` object, added:
    - `measurement_type_id` (Issue [#96](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/96))
    - `revision` (Issue [#103](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/103))
-
+- To `calibration_uncertainty` rename `uncertainty` to `combined_uncertainty` to better reflect what it is.
+- To `logger_main_config` added `logger_firmware_version`. (Issue #87)
 
 ## [0.1.1-2021.04]
 - Allow additional properties for header section of schema.

@@ -614,6 +614,11 @@
                   "title": "Logger Serial Number",
                   "description": "The logger or remote sensing device serial number. This is sometimes different from the logger id."
                 },
+                "logger_firmware_version": {
+                  "type": "string",
+                  "title": "Logger Firmware Version",
+                  "description": "The logger or remote sensing device's Firmware Version. This is the software version that is run on the logger at the time of data acquisition. This software can be updated and so can sometimes impact the results of the outputted data. E.g. NRG SymphoniePro, Firmware Version: 3.2.3. For loggers/devices that have multiple software programmes to process the outputted data the versions can be concatenated together."
+                },
                 "logger_id": {
                   "type": [
                     "string",
@@ -1240,7 +1245,7 @@
                                 "null"
                               ],
                               "title": "Place of Calibration",
-                              "description": "The unique place or wind tunnel where the calibration took place. E.g. 'place of calibration' is usually a field on a calibration certificate. If not, a combination of a unique tunnel id or serial number and the address would suffice.",
+                              "description": "The unique place or wind tunnel where the calibration took place. E.g. 'place of calibration' is usually a field on a calibration certificate. If not, a combination of a unique tunnel id or serial number and the address would suffice. In the Digital Calibration Certificate project this field maps to 'wind_tunnel_id'.",
                               "examples": [
                                 "Windtunnel 2 of Deutsche WindGuard WindTunnel Services GmbH, Varel",
                                 "AWT Bargeshagen"
@@ -1296,13 +1301,13 @@
                                       "m/s"
                                     ]
                                   },
-                                  "uncertainty": {
+                                  "combined_uncertainty": {
                                     "type": [
                                       "number",
                                       "null"
                                     ],
-                                    "title": "Uncertainty",
-                                    "description": "The uncertainty associated with this reference bin.",
+                                    "title": "Combined Uncertainty",
+                                    "description": "The combined uncertainty associated with the deviation between the reference and the test item at this reference bin.",
                                     "examples": [
                                       0.1
                                     ]

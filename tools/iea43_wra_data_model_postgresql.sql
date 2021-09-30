@@ -321,6 +321,7 @@ CREATE TABLE IF NOT EXISTS logger_main_config(
     logger_oem_id text NOT NULL,
     logger_model_name text,
     logger_serial_number text NOT NULL,
+    logger_firmware_version text,
     logger_id text,
     logger_name text,
     date_from timestamp WITHOUT TIME ZONE NOT NULL,
@@ -450,7 +451,7 @@ CREATE TABLE IF NOT EXISTS calibration_uncertainty(
     calibration_uuid UUID NOT NULL,
     reference_bin decimal,
     reference_unit text,
-    uncertainty decimal,
+    combined_uncertainty decimal,
     FOREIGN KEY (calibration_uuid) REFERENCES calibration (uuid),
     FOREIGN KEY (reference_unit) REFERENCES measurement_units (id)
 );
