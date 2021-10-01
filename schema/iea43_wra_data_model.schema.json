@@ -1215,6 +1215,18 @@
                                 "2019-12-06"
                               ]
                             },
+                            "revision": {
+                              "type": [
+                                "string",
+                                "null"
+                              ],
+                              "title": "Calibration Revision",
+                              "description": "This is the revision number or other identifier if the calibration report was revised. The 'date of calibration' and 'calibration id' may stay the same for an update to the report and so this revision field allows this report to be uniquely identified.",
+                              "examples": [
+                                "2.0",
+                                "B"
+                              ]
+                            },
                             "calibration_organisation": {
                               "type": [
                                 "string",
