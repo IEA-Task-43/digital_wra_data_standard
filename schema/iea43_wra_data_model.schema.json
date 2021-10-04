@@ -144,6 +144,19 @@
         "timestamp (the timestamp of when a measurement value was recorded)",
         "other"
       ]
+    },
+    "orientation_reference": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Orientation Reference",
+      "description": "The orientation reference the item is measured against. E.g. magnetic north.",
+      "enum": [
+        "magnetic_north",
+        "true_north",
+        "grid_north"
+      ]
     }
   },
   "type": "object",
@@ -533,17 +546,7 @@
                   "maximum": 360
                 },
                 "orientation_reference_id": {
-                  "type": [
-                    "string",
-                    "null"
-                  ],
-                  "title": "Orientation Reference",
-                  "description": "The orientation reference the remote sensing device is measured against. E.g. magnetic north.",
-                  "enum": [
-                    "magnetic_north",
-                    "true_north",
-                    "grid_north"
-                  ]
+                  "$ref": "#/definitions/orientation_reference"
                 },
                 "date_from": {
                   "$ref": "#/definitions/date_from"
@@ -1389,17 +1392,7 @@
                         "maximum": 360
                       },
                       "orientation_reference_id": {
-                        "type": [
-                          "string",
-                          "null"
-                        ],
-                        "title": "Orientation Reference",
-                        "description": "The orientation reference the booms and vane dead band are measured against. E.g. magnetic north.",
-                        "enum": [
-                          "magnetic_north",
-                          "true_north",
-                          "grid_north"
-                        ]
+                        "$ref": "#/definitions/orientation_reference"
                       },
                       "tilt_angle_deg": {
                         "type": [
@@ -1529,17 +1522,7 @@
                         "maximum": 360
                       },
                       "orientation_reference_id": {
-                        "type": [
-                          "string",
-                          "null"
-                        ],
-                        "title": "Orientation Reference",
-                        "description": "The orientation reference the interference structure is measured against. E.g. magnetic north.",
-                        "enum": [
-                          "magnetic_north",
-                          "true_north",
-                          "grid_north"
-                        ]
+                        "$ref": "#/definitions/orientation_reference"
                       },
                       "distance_from_mast_centre_mm": {
                         "type": [
