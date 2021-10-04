@@ -800,7 +800,6 @@
               "required": [
                 "date_from",
                 "date_to",
-                "logger_model_name",
                 "logger_oem_id",
                 "logger_serial_number"
               ]
