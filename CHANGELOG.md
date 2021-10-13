@@ -21,6 +21,7 @@ Additional labels for pre-release and build metadata are available as extensions
 1. To `measurement_station_type` enum, added:
    1. solar (Issue [#91](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/91))
 1. Converted `measurement_type_id` to a definition. (As part of issue [#96](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/96))
+1. Converted `height_reference_id` to a definition. (Issue [#99](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/99))
 1. To `calibration` object, added:
    1. `measurement_type_id` (Issue [#96](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/96))
    1. `revision` (Issue [#103](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/103))
