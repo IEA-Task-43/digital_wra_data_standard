@@ -328,7 +328,7 @@
 			"properties": {
 				"index": {
 					"title": "Index",
-					"description": "The index of the calibration point",
+					"description": "The unique index of the calibration point",
 					"type": "string"
 				},
 				"reference": {
@@ -343,10 +343,14 @@
 				},
 				"deviation": {
 					"title": "Deviation",
-					"description": "The deviation between the reference and test item",
+					"description": "The deviation between the reference and test_item when applying the obtained calibration equation",
 					"$ref": "#/definitions/quantity"
 				}
-			}
+			},
+			"required": [
+				"reference",
+				"test_item"
+			]
 		}
 	},
 	"$version": "TBD"
