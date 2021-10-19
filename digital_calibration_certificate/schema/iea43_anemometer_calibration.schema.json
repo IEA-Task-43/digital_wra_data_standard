@@ -209,7 +209,13 @@
 							"$ref": "#/definitions/quantity",
 							"description": "Correlation coefficient."
 						}
-					}
+					},
+					"required": [
+						"slope",
+						"offset",
+						"rsd",
+						"corr_coeff"
+					]
 				}
 			},
 			"required": [
