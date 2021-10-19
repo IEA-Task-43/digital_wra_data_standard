@@ -185,7 +185,7 @@
 					"description": "The calibration result in a tabular format",
 					"type": "array",
 					"items": {
-						"$ref": "#/definitions/column_IEC61400-12-1:2017_AnnexF"
+						"$ref": "#/definitions/row_IEC61400-12-1:2017_AnnexF"
 					}
 				},
 				"linear_regression": {
@@ -323,7 +323,7 @@
 			],
 			"additionalProperties": false
 		},
-		"column_IEC61400-12-1:2017_AnnexF": {
+		"row_IEC61400-12-1:2017_AnnexF": {
 			"type": "object",
 			"properties": {
 				"index": {
