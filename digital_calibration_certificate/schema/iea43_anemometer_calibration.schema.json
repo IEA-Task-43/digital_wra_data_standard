@@ -141,7 +141,7 @@
 				},
 				"mounting_orientation": {
 					"title": "Mounting Orientation",
-					"description": "The yaw orientation/direction of the DUT during calibration.",
+					"description": "The yaw orientation/direction of the DUT during calibration, defined as the angle from the DUT north marker to the upwind direction as measured clockwise when seen from above",
 					"$ref": "#/definitions/quantity"
 				},
 				"notes": {
