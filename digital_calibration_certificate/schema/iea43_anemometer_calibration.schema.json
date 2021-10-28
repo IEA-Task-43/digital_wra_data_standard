@@ -288,11 +288,19 @@
 						"ohm",
 						"Hz",
 						"mm",
-						"W/m^2",
-						"m/s^2",
-						"lux",
-						"dB",
-						"-"
+						"-",
+						"cm/s",
+						"km/h",
+						"mph",
+						"knots",
+						"V/(m/s)",
+						"mA/(m/s)",
+						"Hz/(m/s)",
+						"-/(m/s)",
+						"(cm/s)/(m/s)",
+						"(km/h)/(m/s)",
+						"mph/(m/s)",
+						"knots/(m/s)"
 					],
 					"examples": [
 						"m/s"
