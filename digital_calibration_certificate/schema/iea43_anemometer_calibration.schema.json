@@ -139,9 +139,9 @@
 					"description": "The diameter of the mounting tube.",
 					"$ref": "#/definitions/quantity"
 				},
-				"mounting_orientation": {
+				"yaw_orientation": {
 					"title": "Mounting Orientation",
-					"description": "The yaw orientation/direction of the DUT during calibration, defined as the angle from the DUT north marker to the upwind direction as measured clockwise when seen from above",
+					"description": "The yaw orientation/direction of the test item during calibration if the test item is directionally sensitive. The angle is defined as the angle from the test item north marker to the upwind direction as measured clockwise when seen from above. If the test item is not directionally sensitive you can simply leave this out or set as null. Additional comments or alternative definitions should be added to the notes attribute (e.g. 'cable downstream')",
 					"$ref": "#/definitions/quantity"
 				},
 				"notes": {
