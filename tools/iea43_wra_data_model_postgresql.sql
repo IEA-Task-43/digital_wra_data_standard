@@ -69,7 +69,7 @@ INSERT INTO measurement_station_type (id) VALUES
     ('mast'),
     ('lidar'),
     ('sodar'),
-    ('flidar'),
+    ('floating_lidar'),
     ('solar');
 
 INSERT INTO mast_geometry (id) VALUES
