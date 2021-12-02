@@ -274,13 +274,13 @@
           },
           "measurement_station_type_id": {
             "title": "Measurement Station Type",
-            "description": "The type of measurement station. This must be one of either met mast, lidar (a vertical profiler), sodar (also a vertical profiler) or flidar (floating vertical profiler lidar).",
+            "description": "The type of measurement station. This must be one of either met mast, lidar (a vertical profiler), sodar (also a vertical profiler) or floating lidar (floating vertical profiler lidar).",
             "type": "string",
             "enum": [
               "mast",
               "lidar",
               "sodar",
-              "flidar",
+              "floating_lidar",
               "solar"
             ]
           },
@@ -514,7 +514,7 @@
               "null"
             ],
             "title": "Vertical Profiler Properties",
-            "description": "Vertical profiler remote sensing devices (e.g. lidar, sodar and flidar) installation specific properties.",
+            "description": "Vertical profiler remote sensing devices (e.g. lidar, sodar and floating lidar) installation specific properties.",
             "items": {
               "type": "object",
               "title": "Vertical Profiler Properties",
