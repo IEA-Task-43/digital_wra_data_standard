@@ -296,7 +296,7 @@
               "null"
             ],
             "title": "Mast Properties",
-            "description": "The properties of the installed met mast/tower.",
+            "description": "The properties of the installed met mast/tower. Additional properties can be added e.g. 'material' however this wouldn't be part of the Data Model. If an additional property is for information purposes please consider using 'notes' instead.",
             "properties": {
               "mast_geometry_id": {
                 "type": [
@@ -371,7 +371,7 @@
                   "null"
                 ],
                 "title": "Mast Section Geometry",
-                "description": "This properties of each mast section.",
+                "description": "This contains the properties of each mast section. Additional properties can be added e.g. 'material' however this wouldn't be part of the Data Model. If an additional property is for information purposes please consider using 'notes' instead.",
                 "items": {
                   "type": "object",
                   "title": "Mast Section Geometry",
@@ -497,7 +497,7 @@
                       "$ref": "#/definitions/update_at"
                     }
                   },
-                  "additionalProperties": false,
+                  "additionalProperties": true,
                   "required": [
 
                   ]
@@ -506,7 +506,7 @@
                 "uniqueItems": true
               }
             },
-            "additionalProperties": false
+            "additionalProperties": true
           },
           "vertical_profiler_properties":{
             "type": [
