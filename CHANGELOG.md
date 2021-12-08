@@ -17,6 +17,7 @@ Additional labels for pre-release and build metadata are available as extensions
 1. To `measurement_type` enum, added:
     1. flag (Issue [#74](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/74))
     1. tilt (Issue [#74](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/74))
+    1. u, v and w (Issue [#106](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/106))
 1. To `sensor_type` enum, added:
    1. thermohygrometer (Issue [#90](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/90))
    1. vertical_anemometer (Issue [#90](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/90))
