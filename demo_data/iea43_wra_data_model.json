@@ -164,55 +164,55 @@
           "calibration_uncertainty": [{
               "reference_bin": 4,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
             },{
               "reference_bin": 5.93,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
             },{
               "reference_bin": 7.93,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
             },{
               "reference_bin": 9.92,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
             },{
               "reference_bin": 11.9,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
             },{
               "reference_bin": 13.88,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
             },{
               "reference_bin": 15.88,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
             },{
               "reference_bin": 14.88,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
             },{
               "reference_bin": 12.88,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
             },{
               "reference_bin": 10.91,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
             },{
               "reference_bin": 8.91,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
             },{
               "reference_bin": 6.92,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
             },{
               "reference_bin": 4.98,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
           }]
         }]
       }],
@@ -355,55 +355,55 @@
           "calibration_uncertainty": [{
               "reference_bin": 4,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
             },{
               "reference_bin": 5.93,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
             },{
               "reference_bin": 7.93,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
             },{
               "reference_bin": 9.92,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
             },{
               "reference_bin": 11.9,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
             },{
               "reference_bin": 13.88,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
             },{
               "reference_bin": 15.88,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
             },{
               "reference_bin": 14.88,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
             },{
               "reference_bin": 12.88,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
             },{
               "reference_bin": 10.91,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
             },{
               "reference_bin": 8.91,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
             },{
               "reference_bin": 6.92,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
             },{
               "reference_bin": 4.98,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
           }]
         }]
       },{
@@ -432,55 +432,55 @@
           "calibration_uncertainty": [{
               "reference_bin": 4,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
             },{
               "reference_bin": 5.93,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
             },{
               "reference_bin": 7.93,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
             },{
               "reference_bin": 9.92,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
             },{
               "reference_bin": 11.9,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
             },{
               "reference_bin": 13.88,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
             },{
               "reference_bin": 15.88,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
             },{
               "reference_bin": 14.88,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
             },{
               "reference_bin": 12.88,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
             },{
               "reference_bin": 10.91,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
             },{
               "reference_bin": 8.91,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
             },{
               "reference_bin": 6.92,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
             },{
               "reference_bin": 4.98,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
           }]
         }]
       }],
@@ -585,55 +585,55 @@
           "calibration_uncertainty": [{
               "reference_bin": 4,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
             },{
               "reference_bin": 5.93,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
             },{
               "reference_bin": 7.93,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
             },{
               "reference_bin": 9.92,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
             },{
               "reference_bin": 11.9,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
             },{
               "reference_bin": 13.88,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
             },{
               "reference_bin": 15.88,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
             },{
               "reference_bin": 14.88,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
             },{
               "reference_bin": 12.88,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
             },{
               "reference_bin": 10.91,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
             },{
               "reference_bin": 8.91,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
             },{
               "reference_bin": 6.92,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
             },{
               "reference_bin": 4.98,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
           }]
         }]
       }],
@@ -728,55 +728,55 @@
           "calibration_uncertainty": [{
               "reference_bin": 4,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
             },{
               "reference_bin": 5.93,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
             },{
               "reference_bin": 7.93,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
             },{
               "reference_bin": 9.92,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
             },{
               "reference_bin": 11.9,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
             },{
               "reference_bin": 13.88,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
             },{
               "reference_bin": 15.88,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
             },{
               "reference_bin": 14.88,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
             },{
               "reference_bin": 12.88,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
             },{
               "reference_bin": 10.91,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
             },{
               "reference_bin": 8.91,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
             },{
               "reference_bin": 6.92,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
             },{
               "reference_bin": 4.98,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
           }]
         }]
       }],
@@ -909,55 +909,55 @@
           "calibration_uncertainty": [{
               "reference_bin": 4,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
             },{
               "reference_bin": 5.93,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
             },{
               "reference_bin": 7.93,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
             },{
               "reference_bin": 9.92,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
             },{
               "reference_bin": 11.9,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
             },{
               "reference_bin": 13.88,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
             },{
               "reference_bin": 15.88,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
             },{
               "reference_bin": 14.88,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
             },{
               "reference_bin": 12.88,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
             },{
               "reference_bin": 10.91,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
             },{
               "reference_bin": 8.91,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
             },{
               "reference_bin": 6.92,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
             },{
               "reference_bin": 4.98,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
           }]
         }]
       }],
@@ -1052,55 +1052,55 @@
           "calibration_uncertainty": [{
               "reference_bin": 4,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
             },{
               "reference_bin": 5.93,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
             },{
               "reference_bin": 7.93,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
             },{
               "reference_bin": 9.92,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
             },{
               "reference_bin": 11.9,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
             },{
               "reference_bin": 13.88,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
             },{
               "reference_bin": 15.88,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
             },{
               "reference_bin": 14.88,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
             },{
               "reference_bin": 12.88,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
             },{
               "reference_bin": 10.91,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
             },{
               "reference_bin": 8.91,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
             },{
               "reference_bin": 6.92,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
             },{
               "reference_bin": 4.98,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
           }]
         }]
       }],
@@ -1195,55 +1195,55 @@
           "calibration_uncertainty": [{
               "reference_bin": 4,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
             },{
               "reference_bin": 5.93,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
             },{
               "reference_bin": 7.93,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
             },{
               "reference_bin": 9.92,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
             },{
               "reference_bin": 11.9,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
             },{
               "reference_bin": 13.88,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
             },{
               "reference_bin": 15.88,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
             },{
               "reference_bin": 14.88,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
             },{
               "reference_bin": 12.88,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
             },{
               "reference_bin": 10.91,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
             },{
               "reference_bin": 8.91,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
             },{
               "reference_bin": 6.92,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
             },{
               "reference_bin": 4.98,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
           }]
         }]
       }],
