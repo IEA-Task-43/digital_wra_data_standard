@@ -748,6 +748,17 @@
                     "false (for when the logger clock is not auto-synced)"
                   ]
                 },
+                "logger_acquisition_uncertainty": {
+                  "type": [
+                    "number",
+                    "null"
+                  ],
+                  "title": "Logger Acquisition Uncertainty [%]",
+                  "description": "The uncertainty of the logger acquisition system as a percentage. This is also referred to as the uncertainty of the data acquisition system within IEC 61400-12-1. ",
+                  "examples": [
+                    "0.1"
+                  ]
+                },
                 "notes": {
                   "$ref": "#/definitions/notes"
                 },
