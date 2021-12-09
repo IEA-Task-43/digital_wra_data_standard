@@ -11,29 +11,31 @@ Additional labels for pre-release and build metadata are available as extensions
 
 ## [0.2.0-2021.XX]
 1. Renamed `sensor_config` to `logger_measurement_config` (Issue [#68](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/68))
-1. Renamed `measurement_station_type` enum item `flidar` to `floating_lidar` (Issue [#118](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/118))
-1. To `calibration_uncertainty` renamed `uncertainty` to `combined_uncertainty` to better reflect what it is. (Issue [#102](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/102))
-1. In the create table SQL statements contained in file 'iea43_wra_data_model_postgresql.sql' moved `date_from` and `date_to` from the `sensor` table into the `measurement_point_sensor` table. Note: This has no impact on the JSON Schema. (Issue [#79](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/79))
-1. To `measurement_type` enum, added:
+2. Renamed `measurement_station_type` enum item `flidar` to `floating_lidar` (Issue [#118](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/118))
+3. To `calibration_uncertainty` renamed `uncertainty` to `combined_uncertainty` to better reflect what it is. (Issue [#102](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/102))
+4. In the create table SQL statements contained in file 'iea43_wra_data_model_postgresql.sql' moved `date_from` and `date_to` from the `sensor` table into the `measurement_point_sensor` table. Note: This has no impact on the JSON Schema. (Issue [#79](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/79))
+5. To `measurement_type` enum, added:
     1. flag (Issue [#74](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/74))
-    1. tilt (Issue [#74](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/74))
-1. To `sensor_type` enum, added:
+    2. tilt (Issue [#74](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/74))
+6. To `sensor_type` enum, added:
    1. thermohygrometer (Issue [#90](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/90))
-   1. vertical_anemometer (Issue [#90](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/90))
-1. To `measurement_station_type` enum, added:
+   2. vertical_anemometer (Issue [#90](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/90))
+7. To `measurement_station_type` enum, added:
    1. solar (Issue [#91](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/91))
-1. Converted `measurement_type_id` to a definition. (As part of issue [#96](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/96))
-1. Converted `orientation_reference_id` to a definition. (Issue [#97](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/97))
-1. Converted `height_reference_id` to a definition. (Issue [#99](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/99))
-1. To `calibration` object, added:
-   1. `measurement_type_id` (Issue [#96](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/96))
-   1. `revision` (Issue [#103](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/103))
-1. To `logger_main_config`:
-   1. added `logger_firmware_version`. (Issue [#87](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/87))
-   1. removed `logger_model_name` as a required field. (Issue [#109](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/109))
-1. Removed the restriction preventing users from adding additional properties for:
-   1. `mast_properties` (Issue [#104](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/104))
-   1. `mast_section_geometry` (Issue [#104](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/104))
+8. Converted `measurement_type_id` to a definition. (As part of issue [#96](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/96))
+9. Converted `orientation_reference_id` to a definition. (Issue [#97](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/97))
+10. Converted `height_reference_id` to a definition. (Issue [#99](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/99))
+11. To `sensor` object, added:
+    1. `classification` (Issue [#88](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/88))
+12. To `calibration` object, added:
+    1. `measurement_type_id` (Issue [#96](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/96))
+    2. `revision` (Issue [#103](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/103))
+13. To `logger_main_config`:
+    1. added `logger_firmware_version`. (Issue [#87](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/87))
+    2. removed `logger_model_name` as a required field. (Issue [#109](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/109))
+14. Removed the restriction preventing users from adding additional properties for:
+    1. `mast_properties` (Issue [#104](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/104))
+    2. `mast_section_geometry` (Issue [#104](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/104))
 
 ## [0.1.1-2021.04]
 - Allow additional properties for header section of schema.
