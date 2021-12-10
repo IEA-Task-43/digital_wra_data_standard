@@ -25,6 +25,10 @@ A working group focuses on standardizing measurement data headers. The following
 | Documentation | ![Compile Documentation to Markdown](https://github.com/IEA-Task-43/digital_wra_data_standard/workflows/Compile%20Documentation%20to%20Markdown/badge.svg) | [Documentation](./docs/README.md) |
 | Form App | ![Deploy Form App to GitHub Pages](https://github.com/IEA-Task-43/digital_wra_data_standard/workflows/Deploy%20Form%20App%20to%20GitHub%20Pages/badge.svg) | [Form App](https://iea-task-43.github.io/digital_wra_data_standard/) |
 
+## Digital Calibration Certificate Model
+
+As a requirement resulting from the development of the *Standardized Measurement Data Model*, a [digital calibration certificate](./digital_calibration_certificate) is introduced as a complementary standard. This standard currently supports anemometer calibration certificats according to IEC 61400-12-1:2017. 
+
 ## Contributing
 
 We welcome all contributions including issue reporting, new features and bug fixes.   For full details see the contributing document here:
