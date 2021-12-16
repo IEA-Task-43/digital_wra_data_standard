@@ -34,8 +34,11 @@ Additional labels for pre-release and build metadata are available as extensions
     1. added `logger_firmware_version`. (Issue [#87](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/87))
     1. removed `logger_model_name` as a required field. (Issue [#109](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/109))
 1. Removed the restriction preventing users from adding additional properties for:
-    1. `mast_properties` (Issue [#104](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/104))
-    1. `mast_section_geometry` (Issue [#104](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/104))
+   1. `mast_properties` (Issue [#104](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/104))
+   1. `mast_section_geometry` (Issue [#104](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/104))
+   1. `logger_main_config` (Issue [#105](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/105))
+1. Updated Latitude and Longitude description to be more specific about the coordinate system to use.
+
 
 ## [0.1.1-2021.04]
 - Allow additional properties for header section of schema.
