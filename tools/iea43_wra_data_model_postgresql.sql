@@ -108,7 +108,6 @@ INSERT INTO measurement_type (id) VALUES
     ('resistance'),
     ('power'),
     ('energy'),
-    ('cumulative_energy'),
     ('vertical_wind_speed'),
     ('wind_speed_turbulence'),
     ('precipitation'),
