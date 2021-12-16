@@ -1090,11 +1090,12 @@
                         "title": "Classification",
                         "description": "The classification of a particular anemometer for this location. This combines the class index (number) with the terrain class (A, B, C, D or S) e.g. 1.2A. The format of this is validated by a regex which has the form of ^[0-9][.][0-9][ABCDS]$ i.e. digit.digit followed by a character.",
                         "examples": [
-                          "0.9A",
+                          "1.0A",
                           "3.2B",
-                          "2.7S"
+                          "2.7S",
+                          "10.32S"
                         ],
-                        "pattern": "^[0-9][.][0-9][ABCDS]$"
+                        "pattern": "^([0-9]{1,2})[.]([0-9]{1,2})[ABCDS]$"
                       },
                       "instrument_poi_height_mm": {
                         "type": [
