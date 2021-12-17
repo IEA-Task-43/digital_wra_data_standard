@@ -25,11 +25,18 @@ A working group focuses on standardizing measurement data headers. The following
 | Documentation | ![Compile Documentation to Markdown](https://github.com/IEA-Task-43/digital_wra_data_standard/workflows/Compile%20Documentation%20to%20Markdown/badge.svg) | [Documentation](./docs/README.md) |
 | Form App | ![Deploy Form App to GitHub Pages](https://github.com/IEA-Task-43/digital_wra_data_standard/workflows/Deploy%20Form%20App%20to%20GitHub%20Pages/badge.svg) | [Form App](https://iea-task-43.github.io/digital_wra_data_standard/) |
 
-## Contributing
+## Contributing to the Standard
+We welcome all contributions including issue reporting, new features and bug fixes.   For full details see the contributing guidelines and meeting notes here:
 
-We welcome all contributions including issue reporting, new features and bug fixes.   For full details see the contributing document here:
+- [Contribution Guidelines](./contributing.md)
+- [Meeting Notes](https://github.com/IEA-Task-43/digital_wra_data_standard/discussions/129#discussion-3748501)
 
-- [Contributing](./contributing.md)
+## Dissemination
+The Task 43 team is actively working to disseminate information and improve user experience.  See below:
+
+- [Presentations](https://github.com/IEA-Task-43/digital_wra_data_standard/wiki/Presentations)
+- [Videos](https://www.youtube.com/watch?v=BehksiZrvnw)
+- [User Workshops(coming soon)](TBD)
 
 ## Getting Help
 
