@@ -337,6 +337,7 @@ CREATE TABLE IF NOT EXISTS logger_main_config(
     averaging_period_minutes integer,
     timestamp_is_end_of_period boolean,
     clock_is_auto_synced boolean,
+    logger_acquisition_uncertainty decimal,
     notes text,
     update_at timestamp WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
     updated_by UUID,

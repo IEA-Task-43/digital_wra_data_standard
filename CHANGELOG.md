@@ -32,6 +32,7 @@ Additional labels for pre-release and build metadata are available as extensions
 1. To `logger_main_config`:
    1. added `logger_firmware_version`. (Issue [#87](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/87))
    1. removed `logger_model_name` as a required field. (Issue [#109](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/109))
+   1. added `logger_acquisition_uncertainty`. (Issue [#89](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/89))
 1. Removed the restriction preventing users from adding additional properties for:
    1. `mast_properties` (Issue [#104](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/104))
    1. `mast_section_geometry` (Issue [#104](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/104))
