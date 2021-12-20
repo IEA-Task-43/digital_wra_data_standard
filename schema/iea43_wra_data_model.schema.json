@@ -93,6 +93,9 @@
         "tilt_x",
         "tilt_y",
         "tilt_z",
+        "u",
+        "v",
+        "w",
         "elevation",
         "altitude",
         "azimuth",
@@ -138,6 +141,9 @@
         "tilt_x (the tilt of an object relative to the x-axis)",
         "tilt_y (the tilt of an object relative to the y-axis)",
         "tilt_z (the tilt of an object relative to the z-axis)",
+        "u (the U component vector, relating to wind it is positive for a west to east flow (eastward wind), however, it can be used for other vectors. If so, please use the notes property to define it.)",
+        "v (the V component vector, relating to wind it is positive for a south to north flow (northward wind), however, it can be used for other vectors. If so, please use the notes property to define it.)",
+        "w (the W component vector, if using this for wind please use the 'vertical_wind_speed' measurement type. Please use the notes property to define how this component is utilised.",
         "elevation (the height the surface of the earth is above mean sea level)",
         "altitude (the height above mean sea level or is the angle between the sun and the observer's local horizon, also sometimes referred to as elevation)",
         "azimuth (is the angle of the sun around the horizon, in the northern hemisphere this is usually measured from north and increasing eastward whereas in the southern hemisphere it can be measured from the south and increasing westward)",
@@ -746,6 +752,17 @@
                   "examples": [
                     "true (for when the logger clock is auto-synced)",
                     "false (for when the logger clock is not auto-synced)"
+                  ]
+                },
+                "logger_acquisition_uncertainty": {
+                  "type": [
+                    "number",
+                    "null"
+                  ],
+                  "title": "Logger Acquisition Uncertainty [%]",
+                  "description": "The uncertainty of the logger acquisition system as a percentage. This is also referred to as the uncertainty of the data acquisition system within IEC 61400-12-1. ",
+                  "examples": [
+                    "0.1"
                   ]
                 },
                 "notes": {
