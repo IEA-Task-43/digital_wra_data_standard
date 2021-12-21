@@ -1,7 +1,7 @@
 {
 	"$schema": "http://json-schema.org/draft-07/schema#",
-	"$id": "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/calibration_schema/digital_calibration_certificate/schema/iea43_anemometer_calibration.schema.json",
-	"title": "IEA Wind TCP Task 43 Anemometer Calibration Certificate",
+	"$id": "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/calibration_schema/digital_calibration_certificate/schema/iea43_digital_calibration_certificate.schema.json",
+	"title": "IEA Wind TCP Task 43 Digital Calibration Certificate",
 	"description": "JSON Schema for IEC61400-12-1:2017 complient anemometer calibration certificates.",
 	"type": "object",
 	"properties": {
