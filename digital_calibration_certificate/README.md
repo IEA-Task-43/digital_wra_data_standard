@@ -2,7 +2,7 @@
 # digital_calibration_certificate
 
 This subdirectory contains the schema, examples, documentation and tools for the digital_calibration_certificate developed in conjunction with the *digital_wra_data_standard*.
-The digital_calibration_certificate itself is independed of the *digital_wra_data_standard*, but was designed for compatibility. 
+The digital_calibration_certificate itself is independent of the *digital_wra_data_standard*, but was designed for compatibility. 
 Currently supported are anemometer calibration certificates with the option to extend the schema to other calibration types in the future.
 
 
