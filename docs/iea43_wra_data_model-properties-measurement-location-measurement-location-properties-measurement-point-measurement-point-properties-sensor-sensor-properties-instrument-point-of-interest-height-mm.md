@@ -1,6 +1,6 @@
 ## instrument_poi_height_mm Type
 
-`number` ([Instrument Point of Interest Height \[mm\]](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-measurement-point-measurement-point-properties-sensor-sensor-properties-instrument-point-of-interest-height-mm.md))
+`number` ([Instrument Point of Interest Height \[mm\]](iea43\_wra_data_model-properties-measurement-location-measurement-location-properties-measurement-point-measurement-point-properties-sensor-sensor-properties-instrument-point-of-interest-height-mm.md))
 
 ## instrument_poi_height_mm Examples
 

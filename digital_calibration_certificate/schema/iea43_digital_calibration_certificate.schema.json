@@ -1,0 +1,365 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+  	"$version": "1.0.0-2021.12",
+	"$id": "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/calibration_schema/digital_calibration_certificate/schema/iea43_digital_calibration_certificate.schema.json",
+	"title": "IEA Wind TCP Task 43 Digital Calibration Certificate",
+	"description": "JSON Schema for IEC61400-12-1:2017 complient anemometer calibration certificates.",
+	"type": "object",
+	"properties": {
+		"calibration_id": {
+			"title": "Calibration ID",
+			"description": "Unique number assigned to the calibration/certificate by the calibration lab. Also called 'calibration mark', etc.",
+			"type": "string"
+		},
+		"calibration_lab": {
+			"title": "Calibration Lab",
+			"description": "General information about the calibration lab.",
+			"type": "object",
+			"properties": {
+				"accreditation_id": {
+					"title": "Accredition ID",
+					"description": "The accreditation / calibration lab id if applicable.",
+					"type": "string"
+				},
+				"company_name": {
+					"title": "Company Name",
+					"type": "string"
+				},
+				"address": {
+					"title": "Address",
+					"type": "string"
+				}
+			},
+			"required": [
+				"company_name"
+			]
+		},
+		"customer": {
+			"title": "Customer",
+			"description": "General information about the customer.",
+			"type": "object",
+			"properties": {
+				"company_name": {
+					"title": "Company Name",
+					"type": "string"
+				},
+				"address": {
+					"title": "Address",
+					"type": "string"
+				},
+				"reference": {
+					"title": "Reference",
+					"description": "The reference / order code supplied by the customer.",
+					"type": "string"
+				}
+			},
+			"required": [
+				"company_name"
+			]
+		},
+		"test_item": {
+			"title": "Test Item",
+			"description": "Information about the test item. Also known as Device Under Test (DUT).",
+			"type": "object",
+			"properties": {
+				"model": {
+					"title": "Model",
+					"description": "The model number of the test item.",
+					"type": "string",
+					"examples": [
+						"Anemometer model X"
+					]
+				},
+				"serial_number": {
+					"title": "Serial Number",
+					"description": "Serial number(s) or similiar, seperated by a ',' e.g. <body>,<cup>",
+					"type": "string"
+				},
+				"description": {
+					"title": "Description",
+					"description": "General description of the test item.",
+					"type": "string",
+					"examples": [
+						"Cup Anemometer",
+						"3D Ultrasonic Anemometer",
+						"Cup Anemometer with converter box"
+					]
+				},
+				"oem": {
+					"title": "OEM",
+					"description": "General information about the OEM.",
+					"type": "object",
+					"properties": {
+						"company_name": {
+							"title": "Company Name",
+							"type": "string"
+						},
+						"address": {
+							"title": "Address",
+							"type": "string"
+						}
+					},
+					"required": [
+						"company_name"
+					]
+				}
+			},
+			"required": [
+				"model",
+				"serial_number",
+				"description",
+				"oem"
+			]
+		},
+		"setup": {
+			"title": "Setup",
+			"description": "Setup information specific to the calibration.",
+			"type": "object",
+			"properties": {
+				"date_of_calibration": {
+					"title": "Date of Calibration",
+					"description": "The date the calibration took place.",
+					"type": "string",
+					"format": "date"
+				},
+				"procedure": {
+					"title": "Procedure",
+					"description": "The calibration procedure used for the calibration.",
+					"type": "string",
+					"examples": [
+						"IEC 61400-12-1:2017"
+					]
+				},
+				"wind_tunnel_id": {
+					"title": "Wind Tunnel ID",
+					"description": "Identification of the wind tunnel the calibration took place.",
+					"type": "string"
+				},
+				"mounting_diameter": {
+					"title": "Mounting Diameter",
+					"description": "The diameter of the mounting tube.",
+					"$ref": "#/definitions/quantity"
+				},
+				"yaw_orientation": {
+					"title": "Mounting Orientation",
+					"description": "The yaw orientation/direction of the test item during calibration if the test item is directionally sensitive. The angle is defined as the angle from the test item north marker to the upwind direction as measured clockwise when seen from above. If the test item is not directionally sensitive you can simply leave this out or set as null. Additional comments or alternative definitions should be added to the notes attribute (e.g. 'cable downstream').",
+					"$ref": "#/definitions/quantity"
+				},
+				"notes": {
+					"title": "Notes",
+					"description": "Note down anything thats non-standard.",
+					"type": "string"
+				}
+			},
+			"required": [
+				"date_of_calibration",
+				"procedure",
+				"wind_tunnel_id",
+				"mounting_diameter"
+			]
+		},
+		"result": {
+			"title": "Result",
+			"type": "object",
+			"properties": {
+				"ambient_conditions": {
+					"title": "Ambient Conditions",
+					"description": "Ambient conditions during the calibration.",
+					"type": "object",
+					"properties": {
+						"air_temperature": {
+							"title": "Air Temperature",
+							"$ref": "#/definitions/ambient_condition"
+						},
+						"humidity": {
+							"title": "Humidity",
+							"$ref": "#/definitions/ambient_condition"
+						},
+						"air_pressure": {
+							"title": "Air Pressure",
+							"$ref": "#/definitions/ambient_condition"
+						}
+					}
+				},
+				"table": {
+					"title": "Table",
+					"description": "The calibration result in a tabular format.",
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/row_IEC61400-12-1:2017_AnnexF"
+					}
+				},
+				"linear_regression": {
+					"title": "Linear Regression",
+					"description": "The linear regression analysis parameters.",
+					"type": "object",
+					"properties": {
+						"slope": {
+							"$ref": "#/definitions/quantity",
+							"description": "Slope/Gain of the regression line."
+						},
+						"offset": {
+							"$ref": "#/definitions/quantity",
+							"description": "Offset/Intercept of the regression line."
+						},
+						"rsd": {
+							"$ref": "#/definitions/quantity",
+							"description": "Residual standard deviation (RSD)."
+						},
+						"corr_coeff": {
+							"$ref": "#/definitions/quantity",
+							"description": "Correlation coefficient."
+						}
+					},
+					"required": [
+						"slope",
+						"offset",
+						"rsd",
+						"corr_coeff"
+					]
+				}
+			},
+			"required": [
+				"ambient_conditions",
+				"table",
+				"linear_regression"
+			]
+		},
+		"date_of_issue": {
+			"title": "Date of Issue",
+			"description": "Issue date of the certificate.",
+			"type": "string",
+			"format": "date"
+		},
+		"revision": {
+			"title": "Revision",
+			"description": "Revision information if applicable.",
+			"type": "string"
+		}
+	},
+	"required": [
+		"calibration_id",
+		"calibration_lab",
+		"customer",
+		"test_item",
+		"setup",
+		"result",
+		"date_of_issue",
+		"revision"
+	],
+	"definitions": {
+		"ambient_condition": {
+			"title": "ambient_condition",
+			"type": "object",
+			"properties": {
+				"min": {
+					"$ref": "#/definitions/quantity"
+				},
+				"avg": {
+					"$ref": "#/definitions/quantity"
+				},
+				"max": {
+					"$ref": "#/definitions/quantity"
+				}
+			}
+		},
+		"quantity": {
+			"type": "object",
+			"properties": {
+				"value": {
+					"title": "Value",
+					"description": "Magnitude of the quantity.",
+					"type": "number"
+				},
+				"unit": {
+					"title": "Unit",
+					"description": "Measurement unit.",
+					"type": "string",
+					"enum": [
+						"m/s",
+						"deg",
+						"deg_C",
+						"deg_F",
+						"K",
+						"%",
+						"mbar",
+						"hPa",
+						"V",
+						"mA",
+						"ohm",
+						"Hz",
+						"mm",
+						"-",
+						"cm/s",
+						"km/h",
+						"mph",
+						"knots",
+						"V/(m/s)",
+						"mA/(m/s)",
+						"Hz/(m/s)",
+						"-/(m/s)",
+						"(cm/s)/(m/s)",
+						"(km/h)/(m/s)",
+						"mph/(m/s)",
+						"knots/(m/s)"
+					],
+					"examples": [
+						"m/s"
+					]
+				},
+				"uncertainty": {
+					"title": "Uncertainty",
+					"type": "object",
+					"properties": {
+						"value": {
+							"description": "Magnitude of the uncertainty.",
+							"type": "number"
+						},
+						"coverage_factor": {
+							"description": "Coverage factor k associated with the uncertainty (VIM 2.38).",
+							"type": "number",
+							"examples": [
+								1,
+								2
+							]
+						}
+					}
+				}
+			},
+			"required": [
+				"value",
+				"unit"
+			],
+			"additionalProperties": false
+		},
+		"row_IEC61400-12-1:2017_AnnexF": {
+			"type": "object",
+			"properties": {
+				"index": {
+					"title": "Index",
+					"description": "The unique index of the calibration point.",
+					"type": "string"
+				},
+				"reference": {
+					"title": "Reference",
+					"description": "The reference or measurement standard, in this case air velocity.",
+					"$ref": "#/definitions/quantity"
+				},
+				"test_item": {
+					"title": "Test Item",
+					"description": "The test item output.",
+					"$ref": "#/definitions/quantity"
+				},
+				"deviation": {
+					"title": "Deviation",
+					"description": "The deviation between the reference and test_item when applying the obtained calibration equation.",
+					"$ref": "#/definitions/quantity"
+				}
+			},
+			"required": [
+				"reference",
+				"test_item"
+			]
+		}
+	}
+}

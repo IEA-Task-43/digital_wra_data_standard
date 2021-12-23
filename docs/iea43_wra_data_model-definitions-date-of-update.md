@@ -1,6 +1,6 @@
 ## update_at Type
 
-`string` ([Date of Update](iea43_wra_data_model-definitions-date-of-update.md))
+`string` ([Date of Update](iea43\_wra_data_model-definitions-date-of-update.md))
 
 ## update_at Constraints
 

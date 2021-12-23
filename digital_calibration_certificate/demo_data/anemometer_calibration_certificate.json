@@ -1,0 +1,471 @@
+{
+	"calibration_id": "2110000",
+	"calibration_lab": {
+		"accreditation_id": "D-K-15140-01-00",
+		"company_name": "Deutsche WindGuard Wind Tunnel Services GmbH",
+		"address": "Oldenburger Str. 65, DE-26123 Varel",
+		"reference": "VTXXXXXX"
+	},
+	"customer": {
+		"company_name": "Example Customer",
+		"address": "Example Customer Address",
+		"reference": "Example Ordercode"
+	},
+	"test_item": {
+		"model": "Example Anemometer",
+		"serial_number": "Example Serial Number",
+		"description": "Cup Anemometer",
+		"oem": {
+			"company_name": "Example Manufacturer",
+			"address": "Example Manufacturer Address"
+		}
+	},
+	"setup": {
+		"date_of_calibration": "2021-01-01",
+		"procedure": "IEC 61400-12-1:2017",
+		"wind_tunnel_id": "Wind tunnel 1 of Deutsche WindGuard Wind Tunnel Services GmbH, Varel",
+		"mounting_diameter": {
+			"value": 33.7,
+			"unit": "mm"
+		}
+	},
+	"result": {
+		"ambient_conditions": {
+			"air_temperature": {
+				"min": {
+					"value": 24.4,
+					"unit": "deg_C",
+					"uncertainty": {
+						"value": 0.4,
+						"coverage_factor": 2
+					}
+				},
+				"max": {
+					"value": 25.5,
+					"unit": "deg_C",
+					"uncertainty": {
+						"value": 0.4,
+						"coverage_factor": 2
+					}
+				}
+			},
+			"baro_pressure": {
+				"min": {
+					"value": 1010.8,
+					"unit": "hPa",
+					"uncertainty": {
+						"value": 0.4,
+						"coverage_factor": 2
+					}
+				},
+				"max": {
+					"value": 1011.6,
+					"unit": "hPa",
+					"uncertainty": {
+						"value": 0.4,
+						"coverage_factor": 2
+					}
+				}
+			},
+			"humidity": {
+				"min": {
+					"value": 52.7,
+					"unit": "%",
+					"uncertainty": {
+						"value": 5.0,
+						"coverage_factor": 2
+					}
+				},
+				"max": {
+					"value": 54.7,
+					"unit": "%",
+					"uncertainty": {
+						"value": 5.0,
+						"coverage_factor": 2
+					}
+				}
+			}
+		},
+		"table": [
+			{
+				"index": "1",
+				"reference": {
+					"value": 3.936,
+					"unit": "m/s",
+					"uncertainty": {
+						"value": 0.05,
+						"coverage_factor": 2
+					}
+				},
+				"test_item": {
+					"value": 80.67,
+					"unit": "Hz",
+					"uncertainty": {
+						"value": 0.2,
+						"coverage_factor": 2
+					}
+				},
+				"deviation": {
+					"value": -0.009,
+					"unit": "m/s",
+					"uncertainty": {
+						"value": 0.051,
+						"coverage_factor": 2
+					}
+				}
+			},
+			{
+				"index": "2",
+				"reference": {
+					"value": 6.088,
+					"unit": "m/s",
+					"uncertainty": {
+						"value": 0.05,
+						"coverage_factor": 2
+					}
+				},
+				"test_item": {
+					"value": 127.6,
+					"unit": "Hz",
+					"uncertainty": {
+						"value": 0.3,
+						"coverage_factor": 2
+					}
+				},
+				"deviation": {
+					"value": -0.01,
+					"unit": "m/s",
+					"uncertainty": {
+						"value": 0.052,
+						"coverage_factor": 2
+					}
+				}
+			},
+			{
+				"index": "3",
+				"reference": {
+					"value": 8.136,
+					"unit": "m/s",
+					"uncertainty": {
+						"value": 0.05,
+						"coverage_factor": 2
+					}
+				},
+				"test_item": {
+					"value": 172.15,
+					"unit": "Hz",
+					"uncertainty": {
+						"value": 0.41,
+						"coverage_factor": 2
+					}
+				},
+				"deviation": {
+					"value": -0.005,
+					"unit": "m/s",
+					"uncertainty": {
+						"value": 0.053,
+						"coverage_factor": 2
+					}
+				}
+			},
+			{
+				"index": "4",
+				"reference": {
+					"value": 9.994,
+					"unit": "m/s",
+					"uncertainty": {
+						"value": 0.05,
+						"coverage_factor": 2
+					}
+				},
+				"test_item": {
+					"value": 211.91,
+					"unit": "Hz",
+					"uncertainty": {
+						"value": 0.49,
+						"coverage_factor": 2
+					}
+				},
+				"deviation": {
+					"value": 0.028,
+					"unit": "m/s",
+					"uncertainty": {
+						"value": 0.055,
+						"coverage_factor": 2
+					}
+				}
+			},
+			{
+				"index": "5",
+				"reference": {
+					"value": 11.975,
+					"unit": "m/s",
+					"uncertainty": {
+						"value": 0.06,
+						"coverage_factor": 2
+					}
+				},
+				"test_item": {
+					"value": 255.1,
+					"unit": "Hz",
+					"uncertainty": {
+						"value": 0.52,
+						"coverage_factor": 2
+					}
+				},
+				"deviation": {
+					"value": 0.028,
+					"unit": "m/s",
+					"uncertainty": {
+						"value": 0.064,
+						"coverage_factor": 2
+					}
+				}
+			},
+			{
+				"index": "6",
+				"reference": {
+					"value": 13.941,
+					"unit": "m/s",
+					"uncertainty": {
+						"value": 0.07,
+						"coverage_factor": 2
+					}
+				},
+				"test_item": {
+					"value": 298.31,
+					"unit": "Hz",
+					"uncertainty": {
+						"value": 0.54,
+						"coverage_factor": 2
+					}
+				},
+				"deviation": {
+					"value": 0.012,
+					"unit": "m/s",
+					"uncertainty": {
+						"value": 0.074,
+						"coverage_factor": 2
+					}
+				}
+			},
+			{
+				"index": "7",
+				"reference": {
+					"value": 16.019,
+					"unit": "m/s",
+					"uncertainty": {
+						"value": 0.08,
+						"coverage_factor": 2
+					}
+				},
+				"test_item": {
+					"value": 344.26,
+					"unit": "Hz",
+					"uncertainty": {
+						"value": 0.76,
+						"coverage_factor": 2
+					}
+				},
+				"deviation": {
+					"value": -0.018,
+					"unit": "m/s",
+					"uncertainty": {
+						"value": 0.087,
+						"coverage_factor": 2
+					}
+				}
+			},
+			{
+				"index": "8",
+				"reference": {
+					"value": 14.969,
+					"unit": "m/s",
+					"uncertainty": {
+						"value": 0.075,
+						"coverage_factor": 2
+					}
+				},
+				"test_item": {
+					"value": 321.48,
+					"unit": "Hz",
+					"uncertainty": {
+						"value": 0.62,
+						"coverage_factor": 2
+					}
+				},
+				"deviation": {
+					"value": -0.023,
+					"unit": "m/s",
+					"uncertainty": {
+						"value": 0.08,
+						"coverage_factor": 2
+					}
+				}
+			},
+			{
+				"index": "9",
+				"reference": {
+					"value": 12.941,
+					"unit": "m/s",
+					"uncertainty": {
+						"value": 0.065,
+						"coverage_factor": 2
+					}
+				},
+				"test_item": {
+					"value": 276.94,
+					"unit": "Hz",
+					"uncertainty": {
+						"value": 0.56,
+						"coverage_factor": 2
+					}
+				},
+				"deviation": {
+					"value": -0.008,
+					"unit": "m/s",
+					"uncertainty": {
+						"value": 0.07,
+						"coverage_factor": 2
+					}
+				}
+			},
+			{
+				"index": "10",
+				"reference": {
+					"value": 10.968,
+					"unit": "m/s",
+					"uncertainty": {
+						"value": 0.055,
+						"coverage_factor": 2
+					}
+				},
+				"test_item": {
+					"value": 233.4,
+					"unit": "Hz",
+					"uncertainty": {
+						"value": 0.5,
+						"coverage_factor": 2
+					}
+				},
+				"deviation": {
+					"value": 0.016,
+					"unit": "m/s",
+					"uncertainty": {
+						"value": 0.059,
+						"coverage_factor": 2
+					}
+				}
+			},
+			{
+				"index": "11",
+				"reference": {
+					"value": 8.996,
+					"unit": "m/s",
+					"uncertainty": {
+						"value": 0.05,
+						"coverage_factor": 2
+					}
+				},
+				"test_item": {
+					"value": 190.96,
+					"unit": "Hz",
+					"uncertainty": {
+						"value": 0.4,
+						"coverage_factor": 2
+					}
+				},
+				"deviation": {
+					"value": -0.008,
+					"unit": "m/s",
+					"uncertainty": {
+						"value": 0.053,
+						"coverage_factor": 2
+					}
+				}
+			},
+			{
+				"index": "12",
+				"reference": {
+					"value": 7.06,
+					"unit": "m/s",
+					"uncertainty": {
+						"value": 0.05,
+						"coverage_factor": 2
+					}
+				},
+				"test_item": {
+					"value": 148.54,
+					"unit": "Hz",
+					"uncertainty": {
+						"value": 0.38,
+						"coverage_factor": 2
+					}
+				},
+				"deviation": {
+					"value": 0.001,
+					"unit": "m/s",
+					"uncertainty": {
+						"value": 0.053,
+						"coverage_factor": 2
+					}
+				}
+			},
+			{
+				"index": "13",
+				"reference": {
+					"value": 5.033,
+					"unit": "m/s",
+					"uncertainty": {
+						"value": 0.05,
+						"coverage_factor": 2
+					}
+				},
+				"test_item": {
+					"value": 104.49,
+					"unit": "Hz",
+					"uncertainty": {
+						"value": 0.23,
+						"coverage_factor": 2
+					}
+				},
+				"deviation": {
+					"value": -0.005,
+					"unit": "m/s",
+					"uncertainty": {
+						"value": 0.051,
+						"coverage_factor": 2
+					}
+				}
+			}
+		],
+		"linear_regression": {
+			"slope": {
+				"value": 0.04587,
+				"unit": "-",
+				"uncertainty": {
+					"value": 6e-05,
+					"coverage_factor": 1
+				}
+			},
+			"offset": {
+				"value": 0.24453,
+				"unit": "-",
+				"uncertainty": {
+					"value": 0.01331,
+					"coverage_factor": 1
+				}
+			},
+			"rsd": {
+				"value": 0.01708,
+				"unit": "m/s"
+			},
+			"corr_coeff": {
+				"value": 0.999991,
+				"unit": "-"
+			}
+		}
+	},
+	"date_of_issue": "2021-08-16",
+	"revision": "0"
+}

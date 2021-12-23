@@ -1,6 +1,6 @@
 ## boom_diameter_mm Type
 
-`number` ([Boom Diameter \[mm\]](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-measurement-point-measurement-point-properties-mounting-arrangement-mounting-arrangement-properties-boom-diameter-mm.md))
+`number` ([Boom Diameter \[mm\]](iea43\_wra_data_model-properties-measurement-location-measurement-location-properties-measurement-point-measurement-point-properties-mounting-arrangement-mounting-arrangement-properties-boom-diameter-mm.md))
 
 ## boom_diameter_mm Constraints
 

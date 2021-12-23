@@ -1,32 +1,34 @@
 ## items Type
 
-`object` ([Lidar Specific Configuration](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-logger-configuration-logger-configuration-properties-lidar-specific-configuration-lidar-specific-configuration.md))
+`object` ([Lidar Specific Configuration](iea43\_wra_data_model-properties-measurement-location-measurement-location-properties-logger-configuration-logger-configuration-properties-lidar-specific-configuration-lidar-specific-configuration.md))
 
-# Lidar Specific Configuration Properties
+# items Properties
 
-| Property                                              | Type      | Required | Nullable       | Defined by                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
-| :---------------------------------------------------- | --------- | -------- | -------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [flow_corrections_applied](#flow_corrections_applied) | `boolean` | Optional | can be null    | [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-logger-configuration-logger-configuration-properties-lidar-specific-configuration-lidar-specific-configuration-properties-flow-corrections-applied.md "https&#x3A;//raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/logger_main_config/items/properties/lidar_config/items/properties/flow_corrections_applied") |
-| [date_from](#date_from)                               | `string`  | Optional | cannot be null | [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-definitions-date-from.md "https&#x3A;//raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/logger_main_config/items/properties/lidar_config/items/properties/date_from")                                                                                                                                                                                                             |
-| [date_to](#date_to)                                   | `string`  | Optional | can be null    | [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-definitions-date-to.md "https&#x3A;//raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/logger_main_config/items/properties/lidar_config/items/properties/date_to")                                                                                                                                                                                                                 |
-| [notes](#notes)                                       | `string`  | Optional | can be null    | [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-definitions-notes.md "https&#x3A;//raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/logger_main_config/items/properties/lidar_config/items/properties/notes")                                                                                                                                                                                                                     |
-| [update_at](#update_at)                               | `string`  | Optional | can be null    | [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-definitions-date-of-update.md "https&#x3A;//raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/logger_main_config/items/properties/lidar_config/items/properties/update_at")                                                                                                                                                                                                        |
+| Property                                              | Type      | Required | Nullable       | Defined by                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| :---------------------------------------------------- | :-------- | :------- | :------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| [flow_corrections_applied](#flow_corrections_applied) | `boolean` | Optional | can be null    | [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-logger-configuration-logger-configuration-properties-lidar-specific-configuration-lidar-specific-configuration-properties-flow-corrections-applied.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/logger_main_config/items/properties/lidar_config/items/properties/flow_corrections_applied") |
+| [date_from](#date_from)                               | `string`  | Optional | cannot be null | [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-definitions-date-from.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/logger_main_config/items/properties/lidar_config/items/properties/date_from")                                                                                                                                                                                                             |
+| [date_to](#date_to)                                   | `string`  | Optional | can be null    | [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-definitions-date-to.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/logger_main_config/items/properties/lidar_config/items/properties/date_to")                                                                                                                                                                                                                 |
+| [notes](#notes)                                       | `string`  | Optional | can be null    | [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-definitions-notes.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/logger_main_config/items/properties/lidar_config/items/properties/notes")                                                                                                                                                                                                                     |
+| [update_at](#update_at)                               | `string`  | Optional | can be null    | [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-definitions-date-of-update.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/logger_main_config/items/properties/lidar_config/items/properties/update_at")                                                                                                                                                                                                        |
 
 ## flow_corrections_applied
 
 Is there any flow corrections applied to the measured data by the lidar unit, e.g. Flow Complexity Recognition (FCR) for WindCubes?
 
-
 `flow_corrections_applied`
 
--   is optional
--   Type: `boolean` ([Flow Corrections Applied](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-logger-configuration-logger-configuration-properties-lidar-specific-configuration-lidar-specific-configuration-properties-flow-corrections-applied.md))
--   can be null
--   defined in: [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-logger-configuration-logger-configuration-properties-lidar-specific-configuration-lidar-specific-configuration-properties-flow-corrections-applied.md "https&#x3A;//raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/logger_main_config/items/properties/lidar_config/items/properties/flow_corrections_applied")
+*   is optional
+
+*   Type: `boolean` ([Flow Corrections Applied](iea43\_wra_data_model-properties-measurement-location-measurement-location-properties-logger-configuration-logger-configuration-properties-lidar-specific-configuration-lidar-specific-configuration-properties-flow-corrections-applied.md))
+
+*   can be null
+
+*   defined in: [IEA Wind Resource Assessment - Data Model](iea43\_wra_data_model-properties-measurement-location-measurement-location-properties-logger-configuration-logger-configuration-properties-lidar-specific-configuration-lidar-specific-configuration-properties-flow-corrections-applied.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43\_wra_data_model.schema.json#/properties/measurement_location/items/properties/logger_main_config/items/properties/lidar_config/items/properties/flow_corrections_applied")
 
 ### flow_corrections_applied Type
 
-`boolean` ([Flow Corrections Applied](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-logger-configuration-logger-configuration-properties-lidar-specific-configuration-lidar-specific-configuration-properties-flow-corrections-applied.md))
+`boolean` ([Flow Corrections Applied](iea43\_wra_data_model-properties-measurement-location-measurement-location-properties-logger-configuration-logger-configuration-properties-lidar-specific-configuration-lidar-specific-configuration-properties-flow-corrections-applied.md))
 
 ### flow_corrections_applied Examples
 
@@ -42,17 +44,19 @@ Is there any flow corrections applied to the measured data by the lidar unit, e.
 
 The date from when these properties are active. If these properties follow a change, then this Date From should equal the previous Date To. The format of this date should follow ISO 8601 with the 'T' required. If a timezone is used, it is essential that this timezone is the same as the logger timezone.
 
-
 `date_from`
 
--   is optional
--   Type: `string` ([Date From](iea43_wra_data_model-definitions-date-from.md))
--   cannot be null
--   defined in: [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-definitions-date-from.md "https&#x3A;//raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/logger_main_config/items/properties/lidar_config/items/properties/date_from")
+*   is optional
+
+*   Type: `string` ([Date From](iea43\_wra_data_model-definitions-date-from.md))
+
+*   cannot be null
+
+*   defined in: [IEA Wind Resource Assessment - Data Model](iea43\_wra_data_model-definitions-date-from.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43\_wra_data_model.schema.json#/properties/measurement_location/items/properties/logger_main_config/items/properties/lidar_config/items/properties/date_from")
 
 ### date_from Type
 
-`string` ([Date From](iea43_wra_data_model-definitions-date-from.md))
+`string` ([Date From](iea43\_wra_data_model-definitions-date-from.md))
 
 ### date_from Constraints
 
@@ -68,17 +72,19 @@ The date from when these properties are active. If these properties follow a cha
 
 The final end date for when these properties are active. If these properties are currently active please use null. If null is not allowed please use 2100-01-01T00:00:00. The format of this date should follow ISO 8601 with the 'T' required. If a timezone is used, it is essential that this timezone is the same as the logger timezone.
 
-
 `date_to`
 
--   is optional
--   Type: `string` ([Date To](iea43_wra_data_model-definitions-date-to.md))
--   can be null
--   defined in: [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-definitions-date-to.md "https&#x3A;//raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/logger_main_config/items/properties/lidar_config/items/properties/date_to")
+*   is optional
+
+*   Type: `string` ([Date To](iea43\_wra_data_model-definitions-date-to.md))
+
+*   can be null
+
+*   defined in: [IEA Wind Resource Assessment - Data Model](iea43\_wra_data_model-definitions-date-to.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43\_wra_data_model.schema.json#/properties/measurement_location/items/properties/logger_main_config/items/properties/lidar_config/items/properties/date_to")
 
 ### date_to Type
 
-`string` ([Date To](iea43_wra_data_model-definitions-date-to.md))
+`string` ([Date To](iea43\_wra_data_model-definitions-date-to.md))
 
 ### date_to Constraints
 
@@ -98,17 +104,19 @@ The final end date for when these properties are active. If these properties are
 
 Notes relating to these properties.
 
-
 `notes`
 
--   is optional
--   Type: `string` ([Notes](iea43_wra_data_model-definitions-notes.md))
--   can be null
--   defined in: [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-definitions-notes.md "https&#x3A;//raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/logger_main_config/items/properties/lidar_config/items/properties/notes")
+*   is optional
+
+*   Type: `string` ([Notes](iea43\_wra_data_model-definitions-notes.md))
+
+*   can be null
+
+*   defined in: [IEA Wind Resource Assessment - Data Model](iea43\_wra_data_model-definitions-notes.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43\_wra_data_model.schema.json#/properties/measurement_location/items/properties/logger_main_config/items/properties/lidar_config/items/properties/notes")
 
 ### notes Type
 
-`string` ([Notes](iea43_wra_data_model-definitions-notes.md))
+`string` ([Notes](iea43\_wra_data_model-definitions-notes.md))
 
 ### notes Examples
 
@@ -120,17 +128,19 @@ Notes relating to these properties.
 
 The date these properties were last updated.
 
-
 `update_at`
 
--   is optional
--   Type: `string` ([Date of Update](iea43_wra_data_model-definitions-date-of-update.md))
--   can be null
--   defined in: [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-definitions-date-of-update.md "https&#x3A;//raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/logger_main_config/items/properties/lidar_config/items/properties/update_at")
+*   is optional
+
+*   Type: `string` ([Date of Update](iea43\_wra_data_model-definitions-date-of-update.md))
+
+*   can be null
+
+*   defined in: [IEA Wind Resource Assessment - Data Model](iea43\_wra_data_model-definitions-date-of-update.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43\_wra_data_model.schema.json#/properties/measurement_location/items/properties/logger_main_config/items/properties/lidar_config/items/properties/update_at")
 
 ### update_at Type
 
-`string` ([Date of Update](iea43_wra_data_model-definitions-date-of-update.md))
+`string` ([Date of Update](iea43\_wra_data_model-definitions-date-of-update.md))
 
 ### update_at Constraints
 

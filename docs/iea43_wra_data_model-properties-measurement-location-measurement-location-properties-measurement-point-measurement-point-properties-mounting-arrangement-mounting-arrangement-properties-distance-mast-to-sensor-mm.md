@@ -1,6 +1,6 @@
 ## distance_from_mast_to_sensor_mm Type
 
-`number` ([Distance Mast to Sensor \[mm\]](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-measurement-point-measurement-point-properties-mounting-arrangement-mounting-arrangement-properties-distance-mast-to-sensor-mm.md))
+`number` ([Distance Mast to Sensor \[mm\]](iea43\_wra_data_model-properties-measurement-location-measurement-location-properties-measurement-point-measurement-point-properties-mounting-arrangement-mounting-arrangement-properties-distance-mast-to-sensor-mm.md))
 
 ## distance_from_mast_to_sensor_mm Constraints
 

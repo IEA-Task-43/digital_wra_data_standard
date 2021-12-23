@@ -1,6 +1,6 @@
 ## mast_section_geometry_uuid Type
 
-`string` ([Mast Section Geometry UUID](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-measurement-point-measurement-point-properties-mounting-arrangement-mounting-arrangement-properties-mast-section-geometry-uuid.md))
+`string` ([Mast Section Geometry UUID](iea43\_wra_data_model-properties-measurement-location-measurement-location-properties-measurement-point-measurement-point-properties-mounting-arrangement-mounting-arrangement-properties-mast-section-geometry-uuid.md))
 
 ## mast_section_geometry_uuid Constraints
 

@@ -1,6 +1,6 @@
 ## timestamp_is_end_of_period Type
 
-`boolean` ([Timestamp at End of Period](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-logger-configuration-logger-configuration-properties-timestamp-at-end-of-period.md))
+`boolean` ([Timestamp at End of Period](iea43\_wra_data_model-properties-measurement-location-measurement-location-properties-logger-configuration-logger-configuration-properties-timestamp-at-end-of-period.md))
 
 ## timestamp_is_end_of_period Examples
 
