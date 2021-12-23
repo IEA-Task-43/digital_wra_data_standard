@@ -410,6 +410,7 @@ CREATE TABLE IF NOT EXISTS sensor(
     model text,
     serial_number text,
     sensor_type_id text,
+    classification text,
     instrument_poi_height_mm decimal,
     is_heated boolean,
     notes text,
