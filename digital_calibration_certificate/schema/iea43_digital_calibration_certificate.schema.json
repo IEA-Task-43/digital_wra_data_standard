@@ -12,12 +12,12 @@
 		},
 		"calibration_lab": {
 			"title": "Calibration Lab",
-			"description": "General information about the calibration lab",
+			"description": "General information about the calibration lab.",
 			"type": "object",
 			"properties": {
 				"accreditation_id": {
 					"title": "Accredition ID",
-					"description": "The accreditation / calibration lab id if applicable",
+					"description": "The accreditation / calibration lab id if applicable.",
 					"type": "string"
 				},
 				"company_name": {
@@ -35,7 +35,7 @@
 		},
 		"customer": {
 			"title": "Customer",
-			"description": "General information about the customer",
+			"description": "General information about the customer.",
 			"type": "object",
 			"properties": {
 				"company_name": {
@@ -48,7 +48,7 @@
 				},
 				"reference": {
 					"title": "Reference",
-					"description": "the reference / order code supplied by the customer",
+					"description": "The reference / order code supplied by the customer.",
 					"type": "string"
 				}
 			},
@@ -58,12 +58,12 @@
 		},
 		"test_item": {
 			"title": "Test Item",
-			"description": "Information about the test item (DUT)",
+			"description": "Information about the test item. Also known as Device Under Test (DUT).",
 			"type": "object",
 			"properties": {
 				"model": {
 					"title": "Model",
-					"description": "the model number of the test item.",
+					"description": "The model number of the test item.",
 					"type": "string",
 					"examples": [
 						"Anemometer model X"
@@ -71,7 +71,7 @@
 				},
 				"serial_number": {
 					"title": "Serial Number",
-					"description": "Serial number(s) or similiar, seperated by a ',' e.G. <body>,<cup>",
+					"description": "Serial number(s) or similiar, seperated by a ',' e.g. <body>,<cup>",
 					"type": "string"
 				},
 				"description": {
@@ -86,7 +86,7 @@
 				},
 				"oem": {
 					"title": "OEM",
-					"description": "General information about the OEM",
+					"description": "General information about the OEM.",
 					"type": "object",
 					"properties": {
 						"company_name": {
@@ -131,7 +131,7 @@
 				},
 				"wind_tunnel_id": {
 					"title": "Wind Tunnel ID",
-					"description": "Identification of the wind tunnel the calibration took place",
+					"description": "Identification of the wind tunnel the calibration took place.",
 					"type": "string"
 				},
 				"mounting_diameter": {
@@ -141,12 +141,12 @@
 				},
 				"yaw_orientation": {
 					"title": "Mounting Orientation",
-					"description": "The yaw orientation/direction of the test item during calibration if the test item is directionally sensitive. The angle is defined as the angle from the test item north marker to the upwind direction as measured clockwise when seen from above. If the test item is not directionally sensitive you can simply leave this out or set as null. Additional comments or alternative definitions should be added to the notes attribute (e.g. 'cable downstream')",
+					"description": "The yaw orientation/direction of the test item during calibration if the test item is directionally sensitive. The angle is defined as the angle from the test item north marker to the upwind direction as measured clockwise when seen from above. If the test item is not directionally sensitive you can simply leave this out or set as null. Additional comments or alternative definitions should be added to the notes attribute (e.g. 'cable downstream').",
 					"$ref": "#/definitions/quantity"
 				},
 				"notes": {
 					"title": "Notes",
-					"description": "Note down anything thats non-standard",
+					"description": "Note down anything thats non-standard.",
 					"type": "string"
 				}
 			},
@@ -182,7 +182,7 @@
 				},
 				"table": {
 					"title": "Table",
-					"description": "The calibration result in a tabular format",
+					"description": "The calibration result in a tabular format.",
 					"type": "array",
 					"items": {
 						"$ref": "#/definitions/row_IEC61400-12-1:2017_AnnexF"
@@ -190,7 +190,7 @@
 				},
 				"linear_regression": {
 					"title": "Linear Regression",
-					"description": "The linear regression analysis parameters",
+					"description": "The linear regression analysis parameters.",
 					"type": "object",
 					"properties": {
 						"slope": {
@@ -315,7 +315,7 @@
 							"type": "number"
 						},
 						"coverage_factor": {
-							"description": "coverage factor k associated with the uncertainty (VIM 2.38).",
+							"description": "Coverage factor k associated with the uncertainty (VIM 2.38).",
 							"type": "number",
 							"examples": [
 								1,
@@ -336,22 +336,22 @@
 			"properties": {
 				"index": {
 					"title": "Index",
-					"description": "The unique index of the calibration point",
+					"description": "The unique index of the calibration point.",
 					"type": "string"
 				},
 				"reference": {
 					"title": "Reference",
-					"description": "The reference or measurement standard, in this case air velocity",
+					"description": "The reference or measurement standard, in this case air velocity.",
 					"$ref": "#/definitions/quantity"
 				},
 				"test_item": {
 					"title": "Test Item",
-					"description": "The test item output",
+					"description": "The test item output.",
 					"$ref": "#/definitions/quantity"
 				},
 				"deviation": {
 					"title": "Deviation",
-					"description": "The deviation between the reference and test_item when applying the obtained calibration equation",
+					"description": "The deviation between the reference and test_item when applying the obtained calibration equation.",
 					"$ref": "#/definitions/quantity"
 				}
 			},
