@@ -29,11 +29,18 @@ A working group focuses on standardizing wind resource measurement data headers.
 
 As a requirement resulting from the development of the *WRA Data Model*, a [digital calibration certificate](./digital_calibration_certificate) is introduced as a complementary standard. This standard currently supports anemometer calibration certificates according to IEC 61400-12-1:2017. 
 
-## Contributing
+## Contributing to the Standard
+We welcome all contributions including issue reporting, new features and bug fixes.   For full details see the contributing guidelines and meeting notes here:
 
-We welcome all contributions including issue reporting, new features and bug fixes.   For full details see the contributing document here:
+- [Contribution Guidelines](./contributing.md)
+- [Meeting Notes](https://github.com/IEA-Task-43/digital_wra_data_standard/discussions/129#discussion-3748501)
 
-- [Contributing](./contributing.md)
+## Dissemination
+The Task 43 team is actively working to disseminate information and improve user experience.  See below:
+
+- [Presentations](https://github.com/IEA-Task-43/digital_wra_data_standard/wiki/Presentations)
+- [Videos](https://www.youtube.com/watch?v=BehksiZrvnw)
+- [User Workshops(coming soon)](TBD)
 
 ## Getting Help
 
