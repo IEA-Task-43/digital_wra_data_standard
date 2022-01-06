@@ -6,7 +6,7 @@ The digital_calibration_certificate itself is independent of the *digital_wra_da
 Currently supported are anemometer calibration certificates with the option to extend the schema to other calibration types in the future.
 
 
-- [JSON Schema](./schema/iea43_anemometer_calibration.schema.json): This JSON schema is a work in progress and describes how a JSON file that describes an anemometer calibration certificate should be composed.
+- [JSON Schema](./schema/iea43_digital_calibration_certificate.schema.json): This JSON schema is a work in progress and describes how a JSON file that describes an anemometer calibration certificate should be composed.
 
 - [Schema documentation](./docs/iea43_anemometer_calibration.md): Markdown documentation for the digital calibration certificate schema.
 
