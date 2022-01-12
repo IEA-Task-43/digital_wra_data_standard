@@ -1,12 +1,12 @@
 {
   "author": "Stephen Holleran",
   "organisation": "brightwind",
-  "date": "2020-06-07",
-  "version": "0.1.0-2021.01",
-  "plant_name": "A Name of Wind Farm",
+  "date": "2021-12-23",
+  "version": "1.0.0-2022.01",
+  "plant_name": "A Name of the Wind Farm",
   "plant_type": "onshore_wind",
   "measurement_location": [{
-    "name": "AName_MM1",
+    "name": "Test_MM1",
     "latitude_ddeg": 53.5,
     "longitude_ddeg": -8,
     "measurement_station_type_id": "mast",
@@ -41,6 +41,7 @@
       "logger_id": "4321",
       "logger_oem_id": "NRG Systems",
       "logger_name": "AName_MM1",
+      "logger_firmware_version": "3.2.3",
       "date_from": "2020-04-12T12:00:00",
       "date_to": null,
       "encryption_pin_or_key": "9876",
@@ -51,6 +52,7 @@
       "averaging_period_minutes": 10,
       "timestamp_is_end_of_period": false,
       "clock_is_auto_synced": true,
+      "logger_acquisition_uncertainty": 0.1,
       "notes": "I can write anything I want here.",
       "update_at": "2020-04-18T18:13:00"
     }],
@@ -61,7 +63,7 @@
       "height_reference_id": "ground_level",
       "notes": "I can write anything I want here.",
       "update_at": "2020-04-18T18:13:00",
-      "sensor_config": [{
+      "logger_measurement_config": [{
         "slope": 0.04573,
         "offset": 0.2419,
         "sensitivity": null,
@@ -143,6 +145,7 @@
         "model": "4.3351.10.000",
         "serial_number": "09183000",
         "sensor_type_id": "anemometer",
+        "classification": "1.2A",
         "instrument_poi_height_mm": 250,
         "is_heated": false,
         "date_from": "2020-04-12T12:00:00",
@@ -150,12 +153,14 @@
         "update_at": "2020-04-18T18:13:00",
         "notes": "First Class Advanced",
         "calibration": [{
+          "measurement_type_id": "wind_speed",
           "slope": 0.04573,
           "offset": 0.2419,
           "sensitivity": null,
           "report_file_name": "file name.pdf",
           "report_link": null,
           "date_of_calibration": "2019-12-06",
+          "revision": "A",
           "calibration_organisation": "Deutsche WindGuard",
           "place_of_calibration": "Windtunnel of Deutsche WindGuard WindTunnel Services GmbH, Varel",
           "uncertainty_k_factor": 2,
@@ -164,55 +169,55 @@
           "calibration_uncertainty": [{
               "reference_bin": 4,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
             },{
               "reference_bin": 5.93,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
             },{
               "reference_bin": 7.93,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
             },{
               "reference_bin": 9.92,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
             },{
               "reference_bin": 11.9,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
             },{
               "reference_bin": 13.88,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
             },{
               "reference_bin": 15.88,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
             },{
               "reference_bin": 14.88,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
             },{
               "reference_bin": 12.88,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
             },{
               "reference_bin": 10.91,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
             },{
               "reference_bin": 8.91,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
             },{
               "reference_bin": 6.92,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
             },{
               "reference_bin": 4.98,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
           }]
         }]
       }],
@@ -252,7 +257,7 @@
       "height_reference_id": "ground_level",
       "notes": "I can write anything I want here.",
       "update_at": "2020-04-18T18:13:00",
-      "sensor_config": [{
+      "logger_measurement_config": [{
         "slope": 0.04568,
         "offset": 0.2487,
         "sensitivity": null,
@@ -334,6 +339,7 @@
         "model": "4.3351.10.000",
         "serial_number": "09183001",
         "sensor_type_id": "anemometer",
+        "classification": "1.2A",
         "instrument_poi_height_mm": 250,
         "is_heated": false,
         "date_from": "2020-04-12T12:00:00",
@@ -341,12 +347,14 @@
         "update_at": "2020-04-18T18:13:00",
         "notes": "First Class Advanced",
         "calibration": [{
+          "measurement_type_id": "wind_speed",
           "slope": 0.04568,
           "offset": 0.2487,
           "sensitivity": null,
           "report_file_name": "file name.pdf",
           "report_link": null,
           "date_of_calibration": "2019-12-06",
+          "revision": "A",
           "calibration_organisation": "Deutsche WindGuard",
           "place_of_calibration": "Windtunnel of Deutsche WindGuard WindTunnel Services GmbH, Varel",
           "uncertainty_k_factor": 2,
@@ -355,55 +363,55 @@
           "calibration_uncertainty": [{
               "reference_bin": 4,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
             },{
               "reference_bin": 5.93,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
             },{
               "reference_bin": 7.93,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
             },{
               "reference_bin": 9.92,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
             },{
               "reference_bin": 11.9,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
             },{
               "reference_bin": 13.88,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
             },{
               "reference_bin": 15.88,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
             },{
               "reference_bin": 14.88,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
             },{
               "reference_bin": 12.88,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
             },{
               "reference_bin": 10.91,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
             },{
               "reference_bin": 8.91,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
             },{
               "reference_bin": 6.92,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
             },{
               "reference_bin": 4.98,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
           }]
         }]
       },{
@@ -411,6 +419,7 @@
         "model": "4.3351.10.000",
         "serial_number": "09183023",
         "sensor_type_id": "anemometer",
+        "classification": "1.2A",
         "instrument_poi_height_mm": 250,
         "is_heated": false,
         "date_from": "2020-04-18T00:00:00",
@@ -432,55 +441,55 @@
           "calibration_uncertainty": [{
               "reference_bin": 4,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
             },{
               "reference_bin": 5.93,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
             },{
               "reference_bin": 7.93,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
             },{
               "reference_bin": 9.92,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
             },{
               "reference_bin": 11.9,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
             },{
               "reference_bin": 13.88,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
             },{
               "reference_bin": 15.88,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
             },{
               "reference_bin": 14.88,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
             },{
               "reference_bin": 12.88,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
             },{
               "reference_bin": 10.91,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
             },{
               "reference_bin": 8.91,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
             },{
               "reference_bin": 6.92,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
             },{
               "reference_bin": 4.98,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
           }]
         }]
       }],
@@ -520,7 +529,7 @@
       "height_reference_id": "ground_level",
       "notes": "I can write anything I want here.",
       "update_at": "2020-04-18T18:13:00",
-      "sensor_config": [{
+      "logger_measurement_config": [{
         "slope": 0.04666,
         "offset": 0.2416,
         "sensitivity": null,
@@ -564,6 +573,7 @@
         "model": "4.3351.10.000",
         "serial_number": "09183002",
         "sensor_type_id": "anemometer",
+        "classification": "1.2A",
         "instrument_poi_height_mm": 250,
         "is_heated": false,
         "date_from": "2020-04-12T12:00:00",
@@ -585,55 +595,55 @@
           "calibration_uncertainty": [{
               "reference_bin": 4,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
             },{
               "reference_bin": 5.93,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
             },{
               "reference_bin": 7.93,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
             },{
               "reference_bin": 9.92,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
             },{
               "reference_bin": 11.9,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
             },{
               "reference_bin": 13.88,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
             },{
               "reference_bin": 15.88,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
             },{
               "reference_bin": 14.88,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
             },{
               "reference_bin": 12.88,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
             },{
               "reference_bin": 10.91,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
             },{
               "reference_bin": 8.91,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
             },{
               "reference_bin": 6.92,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
             },{
               "reference_bin": 4.98,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
           }]
         }]
       }],
@@ -663,7 +673,7 @@
       "height_reference_id": "ground_level",
       "notes": "I can write anything I want here.",
       "update_at": "2020-04-18T18:13:00",
-      "sensor_config": [{
+      "logger_measurement_config": [{
         "slope": 0.04777,
         "offset": 0.2417,
         "sensitivity": null,
@@ -707,6 +717,7 @@
         "model": "4.3351.10.000",
         "serial_number": "09183003",
         "sensor_type_id": "anemometer",
+        "classification": "1.2A",
         "instrument_poi_height_mm": 250,
         "is_heated": false,
         "date_from": "2020-04-12T12:00:00",
@@ -728,55 +739,55 @@
           "calibration_uncertainty": [{
               "reference_bin": 4,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
             },{
               "reference_bin": 5.93,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
             },{
               "reference_bin": 7.93,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
             },{
               "reference_bin": 9.92,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
             },{
               "reference_bin": 11.9,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
             },{
               "reference_bin": 13.88,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
             },{
               "reference_bin": 15.88,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
             },{
               "reference_bin": 14.88,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
             },{
               "reference_bin": 12.88,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
             },{
               "reference_bin": 10.91,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
             },{
               "reference_bin": 8.91,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
             },{
               "reference_bin": 6.92,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
             },{
               "reference_bin": 4.98,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
           }]
         }]
       }],
@@ -806,7 +817,7 @@
       "height_reference_id": "ground_level",
       "notes": "I can write anything I want here.",
       "update_at": "2020-04-18T18:13:00",
-      "sensor_config": [{
+      "logger_measurement_config": [{
         "slope": 0.04888,
         "offset": 0.2418,
         "sensitivity": null,
@@ -888,6 +899,7 @@
         "model": "4.3351.10.000",
         "serial_number": "09183004",
         "sensor_type_id": "anemometer",
+        "classification": "1.2A",
         "instrument_poi_height_mm": 250,
         "is_heated": false,
         "date_from": "2020-04-12T12:00:00",
@@ -909,55 +921,55 @@
           "calibration_uncertainty": [{
               "reference_bin": 4,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
             },{
               "reference_bin": 5.93,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
             },{
               "reference_bin": 7.93,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
             },{
               "reference_bin": 9.92,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
             },{
               "reference_bin": 11.9,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
             },{
               "reference_bin": 13.88,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
             },{
               "reference_bin": 15.88,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
             },{
               "reference_bin": 14.88,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
             },{
               "reference_bin": 12.88,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
             },{
               "reference_bin": 10.91,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
             },{
               "reference_bin": 8.91,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
             },{
               "reference_bin": 6.92,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
             },{
               "reference_bin": 4.98,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
           }]
         }]
       }],
@@ -987,7 +999,7 @@
       "height_reference_id": "ground_level",
       "notes": "I can write anything I want here.",
       "update_at": "2020-04-18T18:13:00",
-      "sensor_config": [{
+      "logger_measurement_config": [{
         "slope": 0.04999,
         "offset": 0.2419,
         "sensitivity": null,
@@ -1031,6 +1043,7 @@
         "model": "4.3351.10.000",
         "serial_number": "09183005",
         "sensor_type_id": "anemometer",
+        "classification": "1.2A",
         "instrument_poi_height_mm": 250,
         "is_heated": false,
         "date_from": "2020-04-12T12:00:00",
@@ -1052,55 +1065,55 @@
           "calibration_uncertainty": [{
               "reference_bin": 4,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
             },{
               "reference_bin": 5.93,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
             },{
               "reference_bin": 7.93,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
             },{
               "reference_bin": 9.92,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
             },{
               "reference_bin": 11.9,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
             },{
               "reference_bin": 13.88,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
             },{
               "reference_bin": 15.88,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
             },{
               "reference_bin": 14.88,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
             },{
               "reference_bin": 12.88,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
             },{
               "reference_bin": 10.91,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
             },{
               "reference_bin": 8.91,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
             },{
               "reference_bin": 6.92,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
             },{
               "reference_bin": 4.98,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
           }]
         }]
       }],
@@ -1130,7 +1143,7 @@
       "height_reference_id": "ground_level",
       "notes": "Anemometer put in wrong place. Moved to 40m.",
       "update_at": "2020-04-18T18:13:00",
-      "sensor_config": [{
+      "logger_measurement_config": [{
         "slope": 0.04999,
         "offset": 0.2419,
         "sensitivity": null,
@@ -1174,6 +1187,7 @@
         "model": "4.3351.10.000",
         "serial_number": "09183005",
         "sensor_type_id": "anemometer",
+        "classification": "1.2A",
         "instrument_poi_height_mm": 250,
         "is_heated": false,
         "date_from": "2020-04-12T12:00:00",
@@ -1195,55 +1209,55 @@
           "calibration_uncertainty": [{
               "reference_bin": 4,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
             },{
               "reference_bin": 5.93,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
             },{
               "reference_bin": 7.93,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
             },{
               "reference_bin": 9.92,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
             },{
               "reference_bin": 11.9,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
             },{
               "reference_bin": 13.88,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
             },{
               "reference_bin": 15.88,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
             },{
               "reference_bin": 14.88,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
             },{
               "reference_bin": 12.88,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
             },{
               "reference_bin": 10.91,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
             },{
               "reference_bin": 8.91,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
             },{
               "reference_bin": 6.92,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
             },{
               "reference_bin": 4.98,
               "reference_unit": "m/s",
-              "uncertainty": 0.1
+              "combined_uncertainty": 0.1
           }]
         }]
       }],
@@ -1273,7 +1287,7 @@
       "height_reference_id": "ground_level",
       "notes": "I can write anything I want here.",
       "update_at": "2020-04-18T18:13:00",
-      "sensor_config": [{
+      "logger_measurement_config": [{
         "slope": 0.351,
         "offset": null,
         "sensitivity": null,
@@ -1351,7 +1365,7 @@
       "height_reference_id": "ground_level",
       "notes": "I can write anything I want here.",
       "update_at": "2020-04-18T18:13:00",
-      "sensor_config": [{
+      "logger_measurement_config": [{
         "slope": 0.351,
         "offset": null,
         "sensitivity": null,
@@ -1459,7 +1473,7 @@
       "height_reference_id": "ground_level",
       "notes": "I can write anything I want here.",
       "update_at": "2020-04-18T18:13:00",
-      "sensor_config": [{
+      "logger_measurement_config": [{
         "slope": 0.136,
         "offset": -86.383,
         "sensitivity": null,
@@ -1519,7 +1533,7 @@
       "height_reference_id": "ground_level",
       "notes": "I can write anything I want here.",
       "update_at": "2020-04-18T18:13:00",
-      "sensor_config": [{
+      "logger_measurement_config": [{
         "slope": 100,
         "offset": -30,
         "sensitivity": null,
@@ -1579,7 +1593,7 @@
       "height_reference_id": "ground_level",
       "notes": "I can write anything I want here.",
       "update_at": "2020-04-18T18:13:00",
-      "sensor_config": [{
+      "logger_measurement_config": [{
         "slope": 100,
         "offset": 0,
         "sensitivity": null,
@@ -1639,7 +1653,7 @@
       "height_reference_id": "ground_level",
       "notes": "I can write anything I want here.",
       "update_at": "2020-04-18T18:13:00",
-      "sensor_config": [{
+      "logger_measurement_config": [{
         "slope": 0.4255,
         "offset": 650,
         "sensitivity": null,
@@ -1699,7 +1713,7 @@
       "height_reference_id": "ground_level",
       "notes": "I can write anything I want here.",
       "update_at": "2020-04-18T18:13:00",
-      "sensor_config": [{
+      "logger_measurement_config": [{
         "slope": 0.021,
         "offset": 0,
         "sensitivity": null,
