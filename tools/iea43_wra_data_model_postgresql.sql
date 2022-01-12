@@ -69,7 +69,8 @@ INSERT INTO measurement_station_type (id) VALUES
     ('mast'),
     ('lidar'),
     ('sodar'),
-    ('flidar');
+    ('floating_lidar'),
+    ('solar');
 
 INSERT INTO mast_geometry (id) VALUES
     ('lattice_triangle'),
@@ -122,6 +123,7 @@ INSERT INTO measurement_type (id) VALUES
     ('fog'),
     ('gps_coordinates'),
     ('status'),
+    ('flag'),
     ('counter'),
     ('availability'),
     ('quality'),
@@ -130,9 +132,13 @@ INSERT INTO measurement_type (id) VALUES
     ('orientation'),
     ('compass_direction'),
     ('true_north_offset'),
+    ('tilt'),
     ('tilt_x'),
     ('tilt_y'),
     ('tilt_z'),
+    ('u'),
+    ('v'),
+    ('w'),
     ('elevation'),
     ('altitude'),
     ('azimuth'),
@@ -194,6 +200,7 @@ INSERT INTO sensor_type (id) VALUES
     ('thermometer'),
     ('barometer'),
     ('hygrometer'),
+    ('thermohygrometer'),
     ('voltmeter'),
     ('ammeter'),
     ('pyranometer'),
@@ -201,6 +208,7 @@ INSERT INTO sensor_type (id) VALUES
     ('albedometer'),
     ('2d_ultrasonic'),
     ('3d_ultrasonic'),
+    ('vertical_anemometer'),
     ('propeller_anemometer'),
     ('gill_propeller'),
     ('rain_gauge'),
@@ -316,6 +324,7 @@ CREATE TABLE IF NOT EXISTS logger_main_config(
     logger_oem_id text NOT NULL,
     logger_model_name text,
     logger_serial_number text NOT NULL,
+    logger_firmware_version text,
     logger_id text,
     logger_name text,
     date_from timestamp WITHOUT TIME ZONE NOT NULL,
@@ -328,6 +337,7 @@ CREATE TABLE IF NOT EXISTS logger_main_config(
     averaging_period_minutes integer,
     timestamp_is_end_of_period boolean,
     clock_is_auto_synced boolean,
+    logger_acquisition_uncertainty decimal,
     notes text,
     update_at timestamp WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
     updated_by UUID,
@@ -362,7 +372,7 @@ CREATE TABLE IF NOT EXISTS measurement_point(
     FOREIGN KEY (height_reference_id) REFERENCES height_reference (id)
 );
 
-CREATE TABLE IF NOT EXISTS sensor_config(
+CREATE TABLE IF NOT EXISTS logger_measurement_config(
     uuid UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
     measurement_point_uuid UUID NOT NULL,
     slope decimal,
@@ -383,14 +393,14 @@ CREATE TABLE IF NOT EXISTS sensor_config(
 
 CREATE TABLE IF NOT EXISTS column_name(
     uuid UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
-    sensor_config_uuid UUID NOT NULL,
+    logger_measurement_config_uuid UUID NOT NULL,
     column_name text NOT NULL,
     statistic_type_id text NOT NULL,
     is_ignored boolean NOT NULL DEFAULT false,
     notes text,
     update_at timestamp WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
     updated_by UUID,
-    FOREIGN KEY (sensor_config_uuid) REFERENCES sensor_config (uuid),
+    FOREIGN KEY (logger_measurement_config_uuid) REFERENCES logger_measurement_config (uuid),
     FOREIGN KEY (statistic_type_id) REFERENCES statistic_type (id)
 );
 
@@ -400,10 +410,9 @@ CREATE TABLE IF NOT EXISTS sensor(
     model text,
     serial_number text,
     sensor_type_id text,
+    classification text,
     instrument_poi_height_mm decimal,
     is_heated boolean,
-    date_from timestamp WITHOUT TIME ZONE NOT NULL,
-    date_to timestamp WITHOUT TIME ZONE,
     notes text,
     update_at timestamp WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
     updated_by UUID,
@@ -413,6 +422,8 @@ CREATE TABLE IF NOT EXISTS sensor(
 CREATE TABLE IF NOT EXISTS measurement_point_sensor(
     measurement_point_uuid UUID,
     sensor_uuid UUID,
+    date_from timestamp WITHOUT TIME ZONE NOT NULL,
+    date_to timestamp WITHOUT TIME ZONE,
     PRIMARY KEY (measurement_point_uuid, sensor_uuid),
     FOREIGN KEY (measurement_point_uuid) REFERENCES measurement_point (uuid),
     FOREIGN KEY (sensor_uuid) REFERENCES sensor (uuid)
@@ -421,19 +432,23 @@ CREATE TABLE IF NOT EXISTS measurement_point_sensor(
 CREATE TABLE IF NOT EXISTS calibration(
     uuid UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
     sensor_uuid UUID NOT NULL,
+    measurement_type_id text NOT NULL,
     slope decimal,
     "offset" decimal,  -- offset is a SQL reserved word so needs to be escaped
     sensitivity decimal,
     report_file_name text NOT NULL,
     report_link text,
+    calibration_id text,
     date_of_calibration date,
+    revision text,
     calibration_organisation text,
     place_of_calibration text,
     uncertainty_k_factor decimal,
     notes text,
     update_at timestamp WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
     updated_by UUID,
-    FOREIGN KEY (sensor_uuid) REFERENCES sensor (uuid)
+    FOREIGN KEY (sensor_uuid) REFERENCES sensor (uuid),
+    FOREIGN KEY (measurement_type_id) REFERENCES measurement_type (id)
 );
 
 CREATE TABLE IF NOT EXISTS calibration_uncertainty(
@@ -441,7 +456,7 @@ CREATE TABLE IF NOT EXISTS calibration_uncertainty(
     calibration_uuid UUID NOT NULL,
     reference_bin decimal,
     reference_unit text,
-    uncertainty decimal,
+    combined_uncertainty decimal,
     FOREIGN KEY (calibration_uuid) REFERENCES calibration (uuid),
     FOREIGN KEY (reference_unit) REFERENCES measurement_units (id)
 );
