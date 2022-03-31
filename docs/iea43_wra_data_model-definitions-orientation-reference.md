@@ -1,6 +1,6 @@
 ## orientation_reference_id Type
 
-`string` ([Orientation Reference](iea43\_wra_data_model-properties-measurement-location-measurement-location-properties-measurement-point-measurement-point-properties-mounting-arrangement-mounting-arrangement-properties-orientation-reference.md))
+`string` ([Orientation Reference](iea43\_wra_data_model-definitions-orientation-reference.md))
 
 ## orientation_reference_id Constraints
 

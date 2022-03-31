@@ -6,9 +6,10 @@
 
 **enum**: the value of this property must be equal to one of the following values:
 
-| Value      | Explanation |
-| :--------- | :---------- |
-| `"mast"`   |             |
-| `"lidar"`  |             |
-| `"sodar"`  |             |
-| `"flidar"` |             |
+| Value              | Explanation |
+| :----------------- | :---------- |
+| `"mast"`           |             |
+| `"lidar"`          |             |
+| `"sodar"`          |             |
+| `"floating_lidar"` |             |
+| `"solar"`          |             |

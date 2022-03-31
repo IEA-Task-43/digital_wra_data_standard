@@ -68,7 +68,7 @@ INSERT INTO measurement_point
     ('bfe53c3c-6196-400a-afef-f32aa936b375', '7faab396-bc55-4732-a5c5-0254047ae5ed', 'Logger_V', 'voltage',
      null, 'ground_level', null, 'be6f56e6-83f6-4460-a8b8-84c457238c86');
 
-INSERT INTO sensor_config
+INSERT INTO logger_measurement_config
     (uuid, measurement_point_uuid, slope, "offset", sensitivity, measurement_units_id, height_m,
      serial_number, connection_channel, date_from, date_to, notes, updated_by) VALUES
     ('c48054d3-888a-405f-9009-6714e53a7fc2', '390bc20e-acb2-4ad2-adfa-65eadeb2346b', 0.04573, 0.2419, null,
@@ -107,7 +107,7 @@ INSERT INTO sensor_config
 --     'm/s', 80, '09183000', 'CH1', '2020-04-12T12:00:00', '2020-04-15T00:00:00', null, 'be6f56e6-83f6-4460-a8b8-84c457238c86');
 
 INSERT INTO column_name
-    (uuid, sensor_config_uuid, column_name, statistic_type_id, is_ignored, notes, updated_by) VALUES
+    (uuid, logger_measurement_config_uuid, column_name, statistic_type_id, is_ignored, notes, updated_by) VALUES
     ('0fb971d5-9075-4860-9610-b83e93ce1095', 'c48054d3-888a-405f-9009-6714e53a7fc2', 'CH1Avg', 'avg',
      false, null, 'be6f56e6-83f6-4460-a8b8-84c457238c86'),
     ('0e31838b-0e9a-41a8-90f8-d8cba3c49b1e', 'c48054d3-888a-405f-9009-6714e53a7fc2', 'CH1SD', 'sd',
@@ -126,24 +126,24 @@ INSERT INTO column_name
      false, null, 'be6f56e6-83f6-4460-a8b8-84c457238c86');
 
 INSERT INTO sensor
-    (uuid, oem, model, serial_number, sensor_type_id, instrument_height_mm, is_heated,
-     date_from, date_to, notes, updated_by) VALUES
-    ('d78f2bbe-1164-40ab-bf90-7673e24f613b', 'Thies', '4.3351.10.000', '09183000', 'anemometer', 290, false, '2020-04-12T12:00:00',
-     null, null, 'be6f56e6-83f6-4460-a8b8-84c457238c86');
+    (uuid, oem, model, serial_number, sensor_type_id, instrument_poi_height_mm, is_heated,
+     notes, updated_by) VALUES
+    ('d78f2bbe-1164-40ab-bf90-7673e24f613b', 'Thies', '4.3351.10.000', '09183000', 'anemometer', 290, false, 
+     null, 'be6f56e6-83f6-4460-a8b8-84c457238c86');
 
 INSERT INTO measurement_point_sensor
-    (measurement_point_uuid, sensor_uuid) VALUES
-    ('390bc20e-acb2-4ad2-adfa-65eadeb2346b', 'd78f2bbe-1164-40ab-bf90-7673e24f613b');
+    (measurement_point_uuid, sensor_uuid, date_from, date_to) VALUES
+    ('390bc20e-acb2-4ad2-adfa-65eadeb2346b', 'd78f2bbe-1164-40ab-bf90-7673e24f613b', '2020-04-12T12:00:00', null);
 
 INSERT INTO calibration
-    (uuid, sensor_uuid, slope, "offset", sensitivity, report_file_name, report_link, date_of_calibration,
+    (uuid, sensor_uuid, measurement_type_id, slope, "offset", sensitivity, report_file_name, report_link, date_of_calibration,
      calibration_organisation, place_of_calibration, uncertainty_k_factor, notes, updated_by) VALUES
-    ('d692d2f3-fc92-4bc0-b659-46bd84db4d3d', 'd78f2bbe-1164-40ab-bf90-7673e24f613b', 0.04573, 0.2419,
+    ('d692d2f3-fc92-4bc0-b659-46bd84db4d3d', 'd78f2bbe-1164-40ab-bf90-7673e24f613b', 'wind_speed', 0.04573, 0.2419,
      null, 'file name.pdf', null, '2019-12-06', 'Deutsche WindGuard', 'Windtunnel of Deutsche WindGuard WindTunnel Services GmbH, Varel',
      2, null, 'be6f56e6-83f6-4460-a8b8-84c457238c86');
 
 INSERT INTO calibration_uncertainty
-    (uuid, calibration_uuid, reference_bin, reference_unit, uncertainty) VALUES
+    (uuid, calibration_uuid, reference_bin, reference_unit, combined_uncertainty) VALUES
     ('47d16085-f976-41d1-93a7-973f035aced1', 'd692d2f3-fc92-4bc0-b659-46bd84db4d3d', 4, 'm/s', 0.1),
     ('048a407d-b389-4167-bd08-be11a09b7ca1', 'd692d2f3-fc92-4bc0-b659-46bd84db4d3d', 5.93, 'm/s', 0.1),
     ('0d1d7a35-9795-4d24-a9a6-9185bbaaeb76', 'd692d2f3-fc92-4bc0-b659-46bd84db4d3d', 7.93, 'm/s', 0.1),
@@ -169,4 +169,5 @@ INSERT INTO mounting_arrangement
     ('a41bd62b-4a55-4afb-9b63-67b54331abe0', '436cd366-5e5d-443d-a6e4-364f26c1a988', 'bf078172-bbb6-48fe-ac1f-c6605dffb1b5',
      'side', 315, null, 'magnetic_north', 0, 'NRG', '#9334', 224, 25, 25, 2470, 2470, '2020-04-12T12:00:00',
      null, null, 'be6f56e6-83f6-4460-a8b8-84c457238c86');
+
 

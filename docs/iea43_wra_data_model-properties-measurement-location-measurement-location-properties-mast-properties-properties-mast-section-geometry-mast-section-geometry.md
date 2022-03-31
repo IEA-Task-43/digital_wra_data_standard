@@ -18,6 +18,7 @@
 | [lattice_has_horizontal_member](#lattice_has_horizontal_member)                           | `boolean` | Optional | can be null | [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-mast-properties-properties-mast-section-geometry-mast-section-geometry-properties-does-the-tower-have-horizontal-braces.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/mast_properties/properties/mast_section_geometry/items/properties/lattice_has_horizontal_member")          |
 | [notes](#notes)                                                                           | `string`  | Optional | can be null | [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-definitions-notes.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/mast_properties/properties/mast_section_geometry/items/properties/notes")                                                                                                                                                                                                        |
 | [update_at](#update_at)                                                                   | `string`  | Optional | can be null | [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-definitions-date-of-update.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/mast_properties/properties/mast_section_geometry/items/properties/update_at")                                                                                                                                                                                           |
+| Additional Properties                                                                     | Any       | Optional | can be null |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 
 ## uuid
 
@@ -326,3 +327,7 @@ The date these properties were last updated.
 ```json
 "2020-07-28T20:49:13"
 ```
+
+## Additional Properties
+
+Additional properties are allowed and do not have to follow a specific schema
