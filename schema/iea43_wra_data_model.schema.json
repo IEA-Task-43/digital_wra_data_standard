@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$version": "1.0.0-2022.01",
+  "$version": "1.X.0-2022.XX",
   "$id": "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json",
   "definitions": {
     "date_from": {
@@ -86,6 +86,9 @@
         "quality",
         "carrier_to_noise_ratio",
         "doppler_spectral_broadening",
+        "motion_corrected_wind_speed",
+        "motion_corrected_wind_direction",
+        "motion_corrected_vertical_wind_speed",
         "orientation",
         "compass_direction",
         "true_north_offset",
