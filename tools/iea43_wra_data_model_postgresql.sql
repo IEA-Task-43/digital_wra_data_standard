@@ -494,6 +494,7 @@ CREATE TABLE IF NOT EXISTS interference_structures(
     orientation_from_mast_centre_deg decimal CHECK (orientation_from_mast_centre_deg >= 0 AND orientation_from_mast_centre_deg <= 360),
     orientation_reference_id text,
     distance_from_mast_centre_mm decimal,
+	lightning_finial_diameter_mm decimal,
     date_from timestamp WITHOUT TIME ZONE NOT NULL,
     date_to timestamp WITHOUT TIME ZONE,
     notes text,

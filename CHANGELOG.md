@@ -9,6 +9,9 @@ Given a version number MAJOR.MINOR.PATCH, increment the:
 
 Additional labels for pre-release and build metadata are available as extensions to the MAJOR.MINOR.PATCH format.
 
+## [1.1.0-2022.04]
+1. Incorporating lightning finial diameter. (Issue [#156] (https://github.com/IEA-Task-43/digital_wra_data_standard/issues/156#issuecomment-1083002418)
+
 ## [1.0.0-2022.01]
 1. Incorporating the first version of the [Digital Calibration Certificate](./digital_calibration_certificate). (Issue [#77](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/77))
 1. Renamed `sensor_config` to `logger_measurement_config` (Issue [#68](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/68))

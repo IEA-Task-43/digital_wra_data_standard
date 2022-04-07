@@ -1550,6 +1550,17 @@
                           900
                         ]
                       },
+					   "lightning_finial_diameter_mm": {
+                        "type": [
+                          "number",
+                          "null"
+                        ],
+                        "title": "Diameter of Lightning Finial [mm]",
+                        "description": "The diameter of the lightning finial.",
+                        "examples": [
+                          30
+                        ]
+                      },
                       "date_from": {
                         "$ref": "#/definitions/date_from"
                       },
