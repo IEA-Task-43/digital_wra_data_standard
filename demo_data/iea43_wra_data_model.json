@@ -518,6 +518,7 @@
         "orientation_from_mast_centre_deg": 45,
         "orientation_reference_id": "magnetic_north",
         "distance_from_mast_centre_mm": 900,
+		"lightning_finial_diameter_mm": 30
         "date_from": "2020-04-12T12:00:00",
         "date_to": null,
         "notes": "I can write anything I want here.",
