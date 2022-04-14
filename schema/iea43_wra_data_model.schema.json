@@ -1106,6 +1106,7 @@
                           "illuminance_sensor",
                           "compass",
                           "solar_compass",
+                          "inertial_measurement_unit",
                           "other"
                         ]
                       },
