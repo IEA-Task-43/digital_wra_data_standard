@@ -176,6 +176,7 @@
       "enum": [
         "ground_level",
         "mean_sea_level",
+        "sea_level",
         "lowest_astronomical_tide",
         "other"
       ],

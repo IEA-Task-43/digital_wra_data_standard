@@ -151,6 +151,7 @@ INSERT INTO measurement_type (id) VALUES
 INSERT INTO height_reference (id) VALUES
     ('ground_level'),
     ('mean_sea_level'),
+    ('sea_level'),
     ('lowest_astronomical_tide'),
     ('other');
 

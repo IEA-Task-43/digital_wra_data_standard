@@ -14,7 +14,7 @@
     "update_at": "2022-03-31T12:13:27",
     "vertical_profiler_properties": [{
       "device_datum_plane_height_m": 1.5,
-      "height_reference_id": "mean_sea_level",
+      "height_reference_id": "sea_level",
       "date_from": "2022-03-01T12:10:00",
       "date_to": null,
       "notes": "Device datum plane is at window, therefore 1 m for device and 0.5 m for mounting.",
@@ -51,7 +51,7 @@
       "name": "Spd_80",
       "measurement_type_id": "wind_speed",
       "height_m": 80.5,
-      "height_reference_id": "mean_sea_level",
+      "height_reference_id": "sea_level",
       "notes": "I can write anything I want here.",
       "update_at": "2022-03-31T12:13:27",
       "logger_measurement_config": [{
@@ -104,7 +104,7 @@
       "name": "Dir_80m",
       "measurement_type_id": "wind_direction",
       "height_m": 80.5,
-      "height_reference_id": "mean_sea_level",
+      "height_reference_id": "sea_level",
       "notes": "I can write anything I want here.",
       "update_at": "2022-03-31T12:13:27",
       "logger_measurement_config": [{
@@ -126,7 +126,7 @@
       "name": "VSpd_80",
       "measurement_type_id": "vertical_wind_speed",
       "height_m": 80.5,
-      "height_reference_id": "mean_sea_level",
+      "height_reference_id": "sea_level",
       "notes": "I can write anything I want here.",
       "update_at": "2022-03-31T12:13:27",
       "logger_measurement_config": [{
@@ -148,7 +148,7 @@
       "name": "Spd_80_MC",
       "measurement_type_id": "motion_corrected_wind_speed",
       "height_m": 80.5,
-      "height_reference_id": "mean_sea_level",
+      "height_reference_id": "sea_level",
       "notes": "Motion corrected wind speed.",
       "update_at": "2022-03-31T12:13:27",
       "logger_measurement_config": [{
@@ -185,7 +185,7 @@
       "name": "Dir_80m_MC",
       "measurement_type_id": "motion_corrected_wind_direction",
       "height_m": 80.5,
-      "height_reference_id": "mean_sea_level",
+      "height_reference_id": "sea_level",
       "notes": "Motion corrected wind direction.",
       "update_at": "2022-03-31T12:13:27",
       "logger_measurement_config": [{
@@ -207,7 +207,7 @@
       "name": "VSpd_80_MC",
       "measurement_type_id": "motion_corrected_vertical_wind_speed",
       "height_m": 80.5,
-      "height_reference_id": "mean_sea_level",
+      "height_reference_id": "sea_level",
       "notes": "Motion corrected vertical wind speed.",
       "update_at": "2022-03-31T12:13:27",
       "logger_measurement_config": [{
