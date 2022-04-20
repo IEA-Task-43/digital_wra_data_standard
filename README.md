@@ -1,5 +1,6 @@
 
 <img src="/images/Task 43_Bkg-3.png">
+[![Mentioned in Awesome Wind](https://awesome.re/mentioned-badge.svg)](https://github.com/IEA-Task-43/awesome-wind)
 
 # digital_wra_data_standard
 
