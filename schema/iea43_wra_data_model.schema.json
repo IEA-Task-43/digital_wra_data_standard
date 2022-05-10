@@ -393,6 +393,17 @@
                       "examples": [
                         "bf078172-bbb6-48fe-ac1f-c6605dffb1b5"
                       ]
+					},
+                    "mast_section_height_mm": {
+                      "type": [
+                        "number",
+                        "null"
+                      ],
+                      "title": "Mast Section Height [mm]",
+                      "description": "Towers come split in sections. This is the height in mm of a met mast section.",
+                      "examples": [
+                        6000
+                      ]
                     },
                     "pole_diameter_mm": {
                       "type": [

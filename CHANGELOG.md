@@ -10,12 +10,11 @@ Given a version number MAJOR.MINOR.PATCH, increment the:
 Additional labels for pre-release and build metadata are available as extensions to the MAJOR.MINOR.PATCH format.
 
 ## [1.1.0-2022.05]
-1. Incorporating Number of Repetitive Patterns on Face. (Issue [#152] (https://github.com/IEA-Task-43/digital_wra_data_standard/issues/152)
+1. Incorporating Number of Repetitive Patterns on Face to mast_section_geometry. (Issue [#152] (https://github.com/IEA-Task-43/digital_wra_data_standard/issues/152)
+1. Incorporating Mast Section Height to mast_section_geometry. (Issue [#152] (https://github.com/IEA-Task-43/digital_wra_data_standard/issues/152)
 1. Incorporating k uncertainty factor to logger_main_config. (Issue [#166] (https://github.com/IEA-Task-43/digital_wra_data_standard/issues/166#issuecomment-1119677516)
-1. Incorporating lightning finial diameter. (Issue [#156] (https://github.com/IEA-Task-43/digital_wra_data_standard/issues/156#issuecomment-1083002418)
-
-## [1.X.X-2022.XX]
-1. Incorporating lightning finial diameter. (Issue [#156](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/156))
+1. Incorporating lightning finial diameter to interference_structures. (Issue [#156] (https://github.com/IEA-Task-43/digital_wra_data_standard/issues/156#issuecomment-1083002418)
+1. Modified example iea43_wra_data_model.json to include more realistic numbers for mast_section_geometry table.
 
 ## [1.X.X-2022.XX]
 1. Incorporating lightning finial diameter. (Issue [#156](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/156))
