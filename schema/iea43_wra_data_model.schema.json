@@ -490,7 +490,7 @@
                         "null"
                       ],
                       "title": "Number of Repetitive Patterns on Face",
-                      "description": "The number of repetitive paterns on tower face as in the image. Note that for this case the pattern in red repeats itself 6 times. https://github.com/IEA-Task-43/digital_wra_data_standard/blob/master/images/number_of_repetitive_patterns_on_face.png.",
+                      "description": "The number of repetitive patterns on tower face as in the image. Note that for this case the pattern in red repeats itself 6 times. https://github.com/IEA-Task-43/digital_wra_data_standard/blob/master/images/number_of_repetitive_patterns_on_face.png.",
                       "examples": [
                         6
                       ]
@@ -1583,13 +1583,13 @@
                           900
                         ]
                       },
-					   "lightning_finial_diameter_mm": {
+					   "diameter_of_interference_structure_mm": {
                         "type": [
                           "number",
                           "null"
                         ],
-                        "title": "Diameter of Lightning Finial [mm]",
-                        "description": "The diameter of the lightning finial.",
+                        "title": "Diameter of Lightning Interference Structure [mm]",
+                        "description": "The diameter of the Interference Structure. If lightning finial, then it can be used for IEC validation.",
                         "examples": [
                           30
                         ]
