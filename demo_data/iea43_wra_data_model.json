@@ -29,6 +29,7 @@
         "lattice_leg_is_round_cross_section": true,
         "lattice_bracing_member_diameter_mm": 12,
         "lattice_number_of_diagonal_bracing_members": 2,
+		"number_of_repetitive_patterns_on_face": 6,
         "lattice_bracing_member_height_mm": 900,
         "lattice_has_horizontal_member": false,
         "notes": "I can write anything I want here.",
@@ -246,7 +247,7 @@
         "orientation_from_mast_centre_deg": 45,
         "orientation_reference_id": "magnetic_north",
         "distance_from_mast_centre_mm": 900,
-	"lightning_finial_diameter_mm": 30
+	    "lightning_finial_diameter_mm": 30
         "date_from": "2020-04-12T12:00:00",
         "date_to": null,
         "notes": "I can write anything I want here.",

@@ -473,6 +473,17 @@
                         2
                       ]
                     },
+					"number_of_repetitive_patterns_on_face": {
+                      "type": [
+                        "integer",
+                        "null"
+                      ],
+                      "title": "Number of Repetitive Patterns on Face",
+                      "description": "The number of repetitive paterns on tower face as in the image. Note that for this case the pattern in red repeats itself 6 times. https://github.com/IEA-Task-43/digital_wra_data_standard/blob/master/images/number_of_repetitive_patterns_on_face.png.",
+                      "examples": [
+                        6
+                      ]
+                    },
                     "lattice_bracing_member_height_mm": {
                       "type": [
                         "number",
