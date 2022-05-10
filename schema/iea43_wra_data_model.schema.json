@@ -764,6 +764,17 @@
                   "examples": [
                     "0.1"
                   ]
+				},
+                "uncertainty_k_factor": {
+                  "type": [
+                    "number",
+                    "null"
+                  ],
+                  "title": "Uncertainty K Factor",
+                  "description": "Uncertainty k factor for Logger Acquisition Uncertainty as provided in logger documentation specification.",
+                  "examples": [
+                    "0.1"
+                  ]
                 },
                 "notes": {
                   "$ref": "#/definitions/notes"
