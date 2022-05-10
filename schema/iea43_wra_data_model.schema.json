@@ -930,6 +930,8 @@
                         "description": "The measurement units of the values the sensor records.",
                         "enum": [
                           "m/s",
+						  "mph",
+						  "knots",
                           "deg",
                           "deg_C",
                           "deg_F",
@@ -937,6 +939,9 @@
                           "%",
                           "mbar",
                           "hPa",
+						  "atm",
+						  "mmHg",
+						  "inHg",
                           "kg/m^2",
                           "V",
                           "mA",
@@ -1588,7 +1593,7 @@
                           "number",
                           "null"
                         ],
-                        "title": "Diameter of Lightning Interference Structure [mm]",
+                        "title": "Diameter of Interference Structure [mm]",
                         "description": "The diameter of the Interference Structure. If lightning finial, then it can be used for IEC validation.",
                         "examples": [
                           30

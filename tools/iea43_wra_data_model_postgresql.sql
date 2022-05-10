@@ -153,6 +153,8 @@ INSERT INTO height_reference (id) VALUES
 
 INSERT INTO measurement_units (id) VALUES
     ('m/s'),
+	('mph'),
+	('knots');
     ('deg'),
     ('deg_C'),
     ('deg_F'),
@@ -160,6 +162,9 @@ INSERT INTO measurement_units (id) VALUES
     ('%'),
     ('mbar'),
     ('hPa'),
+	('atm'),
+	('mmHg'),
+	('inHg'),
     ('kg/m^2'),
     ('V'),
     ('mA'),
