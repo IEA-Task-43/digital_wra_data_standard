@@ -291,7 +291,7 @@ CREATE TABLE IF NOT EXISTS measurement_location_mast_properties(
 CREATE TABLE IF NOT EXISTS mast_section_geometry(
     uuid UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
     mast_properties_uuid UUID,
-	mast_section_height_mm decimal,
+    mast_section_height_mm decimal,
     pole_diameter_mm decimal,
     lattice_face_width_at_bottom_mm decimal,
     lattice_face_width_at_top_mm decimal,
@@ -299,7 +299,7 @@ CREATE TABLE IF NOT EXISTS mast_section_geometry(
     lattice_leg_is_round_cross_section boolean,
     lattice_bracing_member_diameter_mm decimal,
     lattice_number_of_diagonal_bracing_members integer,
-	number_of_repetitive_patterns_on_face integer,
+    number_of_repetitive_patterns_on_face integer,
     lattice_bracing_member_height_mm decimal,
     lattice_has_horizontal_member boolean,
     notes text,
