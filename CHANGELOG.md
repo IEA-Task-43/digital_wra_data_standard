@@ -13,11 +13,10 @@ Additional labels for pre-release and build metadata are available as extensions
 1. Included `number_of_repetitive_patterns_on_face` to `mast_section_geometry`. (Issue [#152] (https://github.com/IEA-Task-43/digital_wra_data_standard/issues/152)
 1. Included `mast_section_height_mm` to `mast_section_geometry`. (Issue [#152] (https://github.com/IEA-Task-43/digital_wra_data_standard/issues/152)
 1. Included `uncertainty_k_factor` to `logger_main_config`. (Issue [#166] (https://github.com/IEA-Task-43/digital_wra_data_standard/issues/166)
-1. Included `diameter_of_interference_structure_mm` to `interference_structures`. (Issue [#156] (https://github.com/IEA-Task-43/digital_wra_data_standard/issues/156)
 1. Modified example iea43_wra_data_model.json to include more realistic numbers for mast_section_geometry table.
 
 ## [1.X.X-2022.XX]
-1. Incorporating lightning finial diameter. (Issue [#156](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/156))
+1. To `interference_structures` adding `diameter_of_interference_structure_mm` to capture, for example, a lightning finial diameter. (Issue [#156](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/156))
 1. Included additional enums to `measurement_units_id` in `logger_measurement_config` [mph, knots, atm, mmHg, inHg]. (Issue [#164](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/164))
 
 ## [1.0.0-2022.01]
