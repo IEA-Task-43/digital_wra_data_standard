@@ -166,6 +166,7 @@ INSERT INTO measurement_units (id) VALUES
     ('mmHg'),
     ('inHg'),
     ('kg/m^2'),
+    ('kg/m^3'),
     ('V'),
     ('mA'),
     ('A'),
