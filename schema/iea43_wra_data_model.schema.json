@@ -393,14 +393,14 @@
                       "examples": [
                         "bf078172-bbb6-48fe-ac1f-c6605dffb1b5"
                       ]
-					},
+                    },
                     "mast_section_height_mm": {
                       "type": [
                         "number",
                         "null"
                       ],
                       "title": "Mast Section Height [mm]",
-                      "description": "Towers come split in sections. This is the height in mm of a met mast section.",
+                      "description": "Towers come in sections that are connected together to make a complete met mast. This is the height in mm of this met mast section.",
                       "examples": [
                         6000
                       ]
@@ -478,13 +478,13 @@
                         "null"
                       ],
                       "title": "Lattice Number of Bracing Members",
-                      "description": "The number of lattice diagonal bracing members.",
+                      "description": "The number of lattice diagonal bracing members that are contained in one of the repetitive patterns making up a mast section.",
                       "examples": [
                         1,
                         2
                       ]
                     },
-					"number_of_repetitive_patterns_on_face": {
+                    "number_of_repetitive_patterns_on_face": {
                       "type": [
                         "integer",
                         "null"
