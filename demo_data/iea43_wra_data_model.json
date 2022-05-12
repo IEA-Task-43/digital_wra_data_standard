@@ -55,7 +55,7 @@
       "timestamp_is_end_of_period": false,
       "clock_is_auto_synced": true,
       "logger_acquisition_uncertainty": 0.1,
-	  "uncertainty_k_factor": 2,
+      "uncertainty_k_factor": 2,
       "notes": "I can write anything I want here.",
       "update_at": "2020-04-18T18:13:00"
     }],
