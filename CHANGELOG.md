@@ -12,8 +12,9 @@ Additional labels for pre-release and build metadata are available as extensions
 ## [1.X.X-2022.XX]
 
 1. To `mast_section_geometry` added:
-	1. `lattice_bracing_member_diameter_horizontal_mm` (Issue [#168](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/168))
-	1. `lattice_bracing_member_diameter_diagonal_mm` (Issue [#168](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/168))
+    1. `lattice_bracing_member_diameter_horizontal_mm` (Issue [#168](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/168))
+    1. `lattice_bracing_member_diameter_diagonal_mm` (Issue [#168](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/168))
+    1. DEPRECIATION NOTICE TO `lattice_bracing_member_diameter_mm` (Issue [#168](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/168))
 1. To `mast_section_geometry` added:
    1. `mast_section_height_mm` (Issue [#152](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/152))
    1. `number_of_repetitive_patterns_on_face` (Issue [#152](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/152))

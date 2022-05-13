@@ -467,7 +467,7 @@
                         "null"
                       ],
                       "title": "Lattice Bracing Member Diameter [mm]",
-                      "description": "THIS FIELD WILL BE REMOVED IN THE NEXT MAJOR RELEASE. The lattice diagonal bracing member diameter.",
+                      "description": "THIS FIELD WILL BE DEPRECIATED IN THE NEXT MAJOR RELEASE. The lattice diagonal bracing member diameter.",
                       "examples": [
                         12
                       ]
