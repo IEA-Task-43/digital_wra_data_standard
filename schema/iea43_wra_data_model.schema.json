@@ -467,6 +467,28 @@
                         "null"
                       ],
                       "title": "Lattice Bracing Member Diameter [mm]",
+                      "description": "THIS FIELD WILL BE REMOVED IN THE NEXT MAJOR RELEASE. The lattice diagonal bracing member diameter.",
+                      "examples": [
+                        12
+                      ]
+                    },
+					"lattice_bracing_member_diameter_horizontal_mm": {
+                      "type": [
+                        "number",
+                        "null"
+                      ],
+                      "title": "Lattice Bracing Member Diameter Horizontal [mm]",
+                      "description": "The lattice horizontal bracing member diameter.",
+                      "examples": [
+                        12
+                      ]
+                    },
+					"lattice_bracing_member_diameter_diagonal_mm": {
+                      "type": [
+                        "number",
+                        "null"
+                      ],
+                      "title": "Lattice Bracing Member Diameter Diagonal [mm]",
                       "description": "The lattice diagonal bracing member diameter.",
                       "examples": [
                         12
