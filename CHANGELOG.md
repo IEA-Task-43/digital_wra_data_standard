@@ -23,7 +23,7 @@ Additional labels for pre-release and build metadata are available as extensions
 1. To `measurement_units_id` added:
    1. mph, knots, atm, mmHg, inHg (Issue [#164](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/164))
    1. kg/m^3 (THE INCORRECT 'kg/m^2' WILL BE DEPRECIATED IN THE NEXT RELEASE) (Issue [#165](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/165))
-
+1. Improve `lattice_face_width` description. (Issue [#157](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/157))
 
 ## [1.0.0-2022.01]
 1. Incorporating the first version of the [Digital Calibration Certificate](./digital_calibration_certificate). (Issue [#77](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/77))
