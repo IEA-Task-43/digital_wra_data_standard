@@ -422,7 +422,7 @@
                         "null"
                       ],
                       "title": "Lattice Face Width at Bottom [mm]",
-                      "description": "The lattice section bottom face width.",
+                      "description": "The lattice face width at the bottom of the mast section, as measured from leg centre to leg centre as outlined in [IEC 61400-12-1 2017 Fig G.5](https://user-images.githubusercontent.com/25622575/160807405-24f8ec74-e93f-4454-b41d-92ea30ffeb15.png).",
                       "examples": [
                         500
                       ]
@@ -433,7 +433,7 @@
                         "null"
                       ],
                       "title": "Lattice Face Width at Top [mm]",
-                      "description": "The lattice section top face width.",
+                      "description": "The lattice face width at the top of the mast section, as measured from leg centre to leg centre as outlined in [IEC 61400-12-1 2017 Fig G.5](https://user-images.githubusercontent.com/25622575/160807405-24f8ec74-e93f-4454-b41d-92ea30ffeb15.png).",
                       "examples": [
                         500
                       ]
