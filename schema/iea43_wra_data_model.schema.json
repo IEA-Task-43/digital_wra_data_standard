@@ -506,6 +506,17 @@
                         2
                       ]
                     },
+                    "lattice_bracing_member_length_diagonal_mm": {
+                      "type": [
+                        "number",
+                        "null"
+                      ],
+                      "title": "Lattice Bracing Member Length Diagonal [mm]",
+                      "description": "The lattice diagonal bracing member length in mm.",
+                      "examples": [
+                        512
+                      ]
+                    },
                     "number_of_repetitive_patterns_on_face": {
                       "type": [
                         "integer",

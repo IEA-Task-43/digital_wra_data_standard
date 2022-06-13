@@ -302,6 +302,7 @@ CREATE TABLE IF NOT EXISTS mast_section_geometry(
     lattice_bracing_member_diameter_horizontal_mm decimal,
     lattice_bracing_member_diameter_diagonal_mm decimal,
     lattice_number_of_diagonal_bracing_members integer,
+    lattice_bracing_member_length_diagonal_mm decimal,
     number_of_repetitive_patterns_on_face integer,
     lattice_bracing_member_height_mm decimal,
     lattice_has_horizontal_member boolean,
