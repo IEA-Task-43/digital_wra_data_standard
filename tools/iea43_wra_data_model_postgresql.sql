@@ -154,7 +154,7 @@ INSERT INTO height_reference (id) VALUES
 INSERT INTO measurement_units (id) VALUES
     ('m/s'),
     ('mph'),
-    ('knots');
+    ('knots'),
     ('deg'),
     ('deg_C'),
     ('deg_F'),
@@ -385,7 +385,6 @@ CREATE TABLE IF NOT EXISTS measurement_point(
 
 CREATE TABLE IF NOT EXISTS logger_measurement_config(
     uuid UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
-    measurement_point_uuid UUID NOT NULL,
     slope decimal,
     "offset" decimal,  -- offset is a SQL reserved word so needs to be escaped
     sensitivity decimal,
@@ -398,7 +397,6 @@ CREATE TABLE IF NOT EXISTS logger_measurement_config(
     notes text,
     update_at timestamp WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
     updated_by UUID,
-    FOREIGN KEY (measurement_point_uuid) REFERENCES measurement_point (uuid),
     FOREIGN KEY (measurement_units_id) REFERENCES measurement_units (id)
 );
 
@@ -413,6 +411,14 @@ CREATE TABLE IF NOT EXISTS column_name(
     updated_by UUID,
     FOREIGN KEY (logger_measurement_config_uuid) REFERENCES logger_measurement_config (uuid),
     FOREIGN KEY (statistic_type_id) REFERENCES statistic_type (id)
+);
+
+CREATE TABLE IF NOT EXISTS measurement_point_logger_measurement_config(
+    measurement_point_uuid UUID,
+    logger_measurement_config_uuid UUID,
+    PRIMARY KEY (measurement_point_uuid, logger_measurement_config_uuid),
+    FOREIGN KEY (measurement_point_uuid) REFERENCES measurement_point (uuid),
+    FOREIGN KEY (logger_measurement_config_uuid) REFERENCES logger_measurement_config (uuid)
 );
 
 CREATE TABLE IF NOT EXISTS sensor(

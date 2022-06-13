@@ -69,11 +69,11 @@ INSERT INTO measurement_point
      null, 'ground_level', null, 'be6f56e6-83f6-4460-a8b8-84c457238c86');
 
 INSERT INTO logger_measurement_config
-    (uuid, measurement_point_uuid, slope, "offset", sensitivity, measurement_units_id, height_m,
+    (uuid, slope, "offset", sensitivity, measurement_units_id, height_m,
      serial_number, connection_channel, date_from, date_to, notes, updated_by) VALUES
-    ('c48054d3-888a-405f-9009-6714e53a7fc2', '390bc20e-acb2-4ad2-adfa-65eadeb2346b', 0.04573, 0.2419, null,
+    ('c48054d3-888a-405f-9009-6714e53a7fc2', 0.04573, 0.2419, null,
      'm/s', 80, '09183000', 'CH1', '2020-04-12T12:00:00', '2020-04-15T00:00:00', null, 'be6f56e6-83f6-4460-a8b8-84c457238c86'),
-    ('b08331bd-0dc3-44cf-86f8-7ca42735bb58', '390bc20e-acb2-4ad2-adfa-65eadeb2346b', 0.04573, 0.2491, null,
+    ('b08331bd-0dc3-44cf-86f8-7ca42735bb58', 0.04573, 0.2491, null,
      'm/s', 80, '09183000', 'CH1', '2020-04-15T00:00:00', null, null, 'be6f56e6-83f6-4460-a8b8-84c457238c86');
 --    ('', '3f074548-aa9f-4e98-94c5-745ec2e26c73', 0.04568, 0.2487, null,
 --     'm/s', 80, '09183001', 'CH2', '2020-04-12T12:00:00', '2020-04-18T00:00:00', null, 'be6f56e6-83f6-4460-a8b8-84c457238c86'),
@@ -105,6 +105,11 @@ INSERT INTO logger_measurement_config
 --     'm/s', 80, '09183000', 'CH1', '2020-04-12T12:00:00', '2020-04-15T00:00:00', null, 'be6f56e6-83f6-4460-a8b8-84c457238c86'),
 --    ('', '390bc20e-acb2-4ad2-adfa-65eadeb2346b', 0.04573, 0.2419, null,
 --     'm/s', 80, '09183000', 'CH1', '2020-04-12T12:00:00', '2020-04-15T00:00:00', null, 'be6f56e6-83f6-4460-a8b8-84c457238c86');
+
+INSERT INTO measurement_point_logger_measurement_config
+    (measurement_point_uuid, logger_measurement_config_uuid) VALUES
+    ('390bc20e-acb2-4ad2-adfa-65eadeb2346b', 'c48054d3-888a-405f-9009-6714e53a7fc2'),
+    ('390bc20e-acb2-4ad2-adfa-65eadeb2346b', 'b08331bd-0dc3-44cf-86f8-7ca42735bb58');
 
 INSERT INTO column_name
     (uuid, logger_measurement_config_uuid, column_name, statistic_type_id, is_ignored, notes, updated_by) VALUES

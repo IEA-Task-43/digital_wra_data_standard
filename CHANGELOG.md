@@ -23,6 +23,7 @@ Additional labels for pre-release and build metadata are available as extensions
 1. To `measurement_units_id` added:
    1. mph, knots, atm, mmHg, inHg (Issue [#164](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/164))
    1. kg/m^3 (THE INCORRECT 'kg/m^2' WILL BE DEPRECIATED IN THE NEXT RELEASE) (Issue [#165](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/165))
+1. Add a mapping table between `meas_point` and `logger_meas_config` in the SQL database. (Issue [#150](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/150))
 
 
 ## [1.0.0-2022.01]
