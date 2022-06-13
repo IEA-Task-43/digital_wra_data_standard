@@ -23,7 +23,7 @@
       "mast_section_geometry": [{
         "uuid": "bf078172-bbb6-48fe-ac1f-c6605dffb1b5",
         "pole_diameter_mm": null,
-        "mast_section_height_mm": 6000,
+        "mast_section_height_mm": 3000,
         "lattice_face_width_at_bottom_mm": 500,
         "lattice_face_width_at_top_mm": 500,
         "lattice_leg_width_mm": 50,
@@ -32,8 +32,9 @@
         "lattice_bracing_member_diameter_horizontal_mm": 12,
         "lattice_bracing_member_diameter_diagonal_mm": 12,
         "lattice_number_of_diagonal_bracing_members": 2,
+        "lattice_bracing_member_length_diagonal_mm": 625,
         "number_of_repetitive_patterns_on_face": 4,
-        "lattice_bracing_member_height_mm": 1486,
+        "lattice_bracing_member_height_mm": 750,
         "lattice_has_horizontal_member": false,
         "notes": "I can write anything I want here.",
         "update_at": "2020-04-18T18:13:00"
