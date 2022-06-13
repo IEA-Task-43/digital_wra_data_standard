@@ -1,6 +1,8 @@
 
 <img src="/images/Task 43_Bkg-3.png">
 
+[![Mentioned in Awesome Wind](https://awesome.re/mentioned-badge.svg)](https://github.com/IEA-Task-43/awesome-wind)
+
 # digital_wra_data_standard
 
 This repository is for the work on standardizing digital tools in wind resource assessment(WRA). This standard data model and associated tools are intended as universal building blocks for Wind Energy Resource Assessment applications.  Our goals for the project are to make the WRA process more efficient, more repeatable and more scalable.
