@@ -312,7 +312,9 @@
 						"(m/s)/(cm/s)",
 						"(m/s)/(km/h)",
 						"(m/s)/mph",
-						"(m/s)/knots"
+						"(m/s)/knots",
+						"(m/s)/(m/s)",
+						"1"
 					],
 					"examples": [
 						"m/s"
