@@ -394,6 +394,17 @@
                         "bf078172-bbb6-48fe-ac1f-c6605dffb1b5"
                       ]
                     },
+                    "mast_section_height_mm": {
+                      "type": [
+                        "number",
+                        "null"
+                      ],
+                      "title": "Mast Section Height [mm]",
+                      "description": "Towers come in sections that are connected together to make a complete met mast. This is the height in mm of this met mast section.",
+                      "examples": [
+                        6000
+                      ]
+                    },
                     "pole_diameter_mm": {
                       "type": [
                         "number",
@@ -411,7 +422,7 @@
                         "null"
                       ],
                       "title": "Lattice Face Width at Bottom [mm]",
-                      "description": "The lattice section bottom face width.",
+                      "description": "The lattice face width at the bottom of the mast section, as measured from leg centre to leg centre as outlined in [IEC 61400-12-1 2017 Fig G.5](https://user-images.githubusercontent.com/25622575/160807405-24f8ec74-e93f-4454-b41d-92ea30ffeb15.png).",
                       "examples": [
                         500
                       ]
@@ -422,7 +433,7 @@
                         "null"
                       ],
                       "title": "Lattice Face Width at Top [mm]",
-                      "description": "The lattice section top face width.",
+                      "description": "The lattice face width at the top of the mast section, as measured from leg centre to leg centre as outlined in [IEC 61400-12-1 2017 Fig G.5](https://user-images.githubusercontent.com/25622575/160807405-24f8ec74-e93f-4454-b41d-92ea30ffeb15.png).",
                       "examples": [
                         500
                       ]
@@ -456,7 +467,29 @@
                         "null"
                       ],
                       "title": "Lattice Bracing Member Diameter [mm]",
-                      "description": "The lattice diagonal bracing member diameter.",
+                      "description": "THIS FIELD WILL BE DEPRECIATED IN THE NEXT MAJOR RELEASE. The lattice diagonal bracing member diameter.",
+                      "examples": [
+                        12
+                      ]
+                    },
+                    "lattice_bracing_member_diameter_horizontal_mm": {
+                      "type": [
+                        "number",
+                        "null"
+                      ],
+                      "title": "Lattice Bracing Member Diameter Horizontal [mm]",
+                      "description": "The lattice horizontal bracing member diameter in mm.",
+                      "examples": [
+                        12
+                      ]
+                    },
+                    "lattice_bracing_member_diameter_diagonal_mm": {
+                      "type": [
+                        "number",
+                        "null"
+                      ],
+                      "title": "Lattice Bracing Member Diameter Diagonal [mm]",
+                      "description": "The lattice diagonal bracing member diameter in mm.",
                       "examples": [
                         12
                       ]
@@ -467,10 +500,32 @@
                         "null"
                       ],
                       "title": "Lattice Number of Bracing Members",
-                      "description": "The number of lattice diagonal bracing members.",
+                      "description": "The number of lattice diagonal bracing members that are contained in one of the repetitive patterns making up a mast section.",
                       "examples": [
                         1,
                         2
+                      ]
+                    },
+                    "lattice_bracing_member_length_diagonal_mm": {
+                      "type": [
+                        "number",
+                        "null"
+                      ],
+                      "title": "Lattice Bracing Member Length Diagonal [mm]",
+                      "description": "The lattice diagonal bracing member length in mm.",
+                      "examples": [
+                        512
+                      ]
+                    },
+                    "number_of_repetitive_patterns_on_face": {
+                      "type": [
+                        "integer",
+                        "null"
+                      ],
+                      "title": "Number of Repetitive Patterns on Face",
+                      "description": "The number of repetitive patterns on tower face as in the image. Note that for this case the pattern in red repeats itself 6 times. https://github.com/IEA-Task-43/digital_wra_data_standard/blob/master/images/number_of_repetitive_patterns_on_face.png.",
+                      "examples": [
+                        6
                       ]
                     },
                     "lattice_bracing_member_height_mm": {
@@ -765,6 +820,17 @@
                     "0.1"
                   ]
                 },
+                "uncertainty_k_factor": {
+                  "type": [
+                    "number",
+                    "null"
+                  ],
+                  "title": "Uncertainty K Factor",
+                  "description": "Uncertainty k factor for Logger Acquisition Uncertainty as provided in logger documentation specification.",
+                  "examples": [
+                    "2"
+                  ]
+                },
                 "notes": {
                   "$ref": "#/definitions/notes"
                 },
@@ -897,6 +963,8 @@
                         "description": "The measurement units of the values the sensor records.",
                         "enum": [
                           "m/s",
+                          "mph",
+                          "knots",
                           "deg",
                           "deg_C",
                           "deg_F",
@@ -904,7 +972,11 @@
                           "%",
                           "mbar",
                           "hPa",
+                          "atm",
+                          "mmHg",
+                          "inHg",
                           "kg/m^2",
+                          "kg/m^3",
                           "V",
                           "mA",
                           "A",
@@ -1548,6 +1620,17 @@
                         "description": "The distance from the mast centre to the interference structure causing an impact on the sensor's measurements.",
                         "examples": [
                           900
+                        ]
+                      },
+                      "diameter_of_interference_structure_mm": {
+                        "type": [
+                          "number",
+                          "null"
+                        ],
+                        "title": "Diameter of Interference Structure [mm]",
+                        "description": "The diameter of the Interference Structure. If lightning finial, then it can be used for IEC validation. For irregularly shaped structures, a representative diameter would be sufficient for an analyst to understand it's size.",
+                        "examples": [
+                          30
                         ]
                       },
                       "date_from": {

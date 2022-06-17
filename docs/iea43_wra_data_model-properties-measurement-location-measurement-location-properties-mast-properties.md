@@ -14,6 +14,7 @@
 | [notes](#notes)                                 | `string` | Optional | can be null | [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-definitions-notes.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/mast_properties/properties/notes")                                                                                                                |
 | [update_at](#update_at)                         | `string` | Optional | can be null | [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-definitions-date-of-update.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/mast_properties/properties/update_at")                                                                                                   |
 | [mast_section_geometry](#mast_section_geometry) | `array`  | Optional | can be null | [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-mast-properties-properties-mast-section-geometry.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/mast_properties/properties/mast_section_geometry") |
+| Additional Properties                           | Any      | Optional | can be null |                                                                                                                                                                                                                                                                                                                                                                                                                   |
 
 ## mast_geometry_id
 
@@ -206,7 +207,7 @@ The date these properties were last updated.
 
 ## mast_section_geometry
 
-This properties of each mast section.
+This contains the properties of each mast section. Additional properties can be added e.g. 'material' however this wouldn't be part of the Data Model. If an additional property is for information purposes please consider using 'notes' instead.
 
 `mast_section_geometry`
 
@@ -225,3 +226,7 @@ This properties of each mast section.
 ### mast_section_geometry Constraints
 
 **unique items**: all items in this array must be unique. Duplicates are not allowed.
+
+## Additional Properties
+
+Additional properties are allowed and do not have to follow a specific schema

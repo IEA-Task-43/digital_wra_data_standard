@@ -1,6 +1,6 @@
 ## measurement_type_id Type
 
-`string` ([Measurement Type](iea43\_wra_data_model-properties-measurement-location-measurement-location-properties-measurement-point-measurement-point-properties-measurement-type.md))
+`string` ([Measurement Type](iea43\_wra_data_model-definitions-measurement-type.md))
 
 ## measurement_type_id Constraints
 
@@ -35,6 +35,7 @@
 | `"fog"`                           |             |
 | `"gps_coordinates"`               |             |
 | `"status"`                        |             |
+| `"flag"`                          |             |
 | `"counter"`                       |             |
 | `"availability"`                  |             |
 | `"quality"`                       |             |
@@ -43,9 +44,13 @@
 | `"orientation"`                   |             |
 | `"compass_direction"`             |             |
 | `"true_north_offset"`             |             |
+| `"tilt"`                          |             |
 | `"tilt_x"`                        |             |
 | `"tilt_y"`                        |             |
 | `"tilt_z"`                        |             |
+| `"u"`                             |             |
+| `"v"`                             |             |
+| `"w"`                             |             |
 | `"elevation"`                     |             |
 | `"altitude"`                      |             |
 | `"azimuth"`                       |             |
@@ -204,6 +209,18 @@
 
 ```json
 "tilt_z (the tilt of an object relative to the z-axis)"
+```
+
+```json
+"u (the U component vector, relating to wind it is positive for a west to east flow (eastward wind), however, it can be used for other vectors. If so, please use the notes property to define it.)"
+```
+
+```json
+"v (the V component vector, relating to wind it is positive for a south to north flow (northward wind), however, it can be used for other vectors. If so, please use the notes property to define it.)"
+```
+
+```json
+"w (the W component vector, if using this for wind please use the 'vertical_wind_speed' measurement type. Please use the notes property to define how this component is utilised."
 ```
 
 ```json

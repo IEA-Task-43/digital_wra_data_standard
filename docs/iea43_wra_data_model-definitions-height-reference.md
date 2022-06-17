@@ -1,6 +1,6 @@
 ## height_reference_id Type
 
-`string` ([Height Reference](iea43\_wra_data_model-properties-measurement-location-measurement-location-properties-vertical-profiler-properties-vertical-profiler-properties-properties-height-reference.md))
+unknown ([Height Reference](iea43\_wra_data_model-definitions-height-reference.md))
 
 ## height_reference_id Constraints
 

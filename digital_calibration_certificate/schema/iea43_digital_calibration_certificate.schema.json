@@ -294,14 +294,14 @@
 						"km/h",
 						"mph",
 						"knots",
-						"V/(m/s)",
-						"mA/(m/s)",
-						"Hz/(m/s)",
-						"-/(m/s)",
-						"(cm/s)/(m/s)",
-						"(km/h)/(m/s)",
-						"mph/(m/s)",
-						"knots/(m/s)"
+						"(m/s)/V",
+						"(m/s)/mA",
+						"(m/s)/Hz",
+						"(m/s)/-",
+						"(m/s)/(cm/s)",
+						"(m/s)/(km/h)",
+						"(m/s)/mph",
+						"(m/s)/knots"
 					],
 					"examples": [
 						"m/s"

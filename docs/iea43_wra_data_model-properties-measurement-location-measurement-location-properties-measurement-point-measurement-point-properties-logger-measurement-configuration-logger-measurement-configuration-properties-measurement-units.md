@@ -1,6 +1,6 @@
 ## measurement_units_id Type
 
-`string` ([Measurement Units](iea43\_wra_data_model-properties-measurement-location-measurement-location-properties-measurement-point-measurement-point-properties-sensor-configuration-sensor-configuration-properties-measurement-units.md))
+`string` ([Measurement Units](iea43\_wra_data_model-properties-measurement-location-measurement-location-properties-measurement-point-measurement-point-properties-logger-measurement-configuration-logger-measurement-configuration-properties-measurement-units.md))
 
 ## measurement_units_id Constraints
 

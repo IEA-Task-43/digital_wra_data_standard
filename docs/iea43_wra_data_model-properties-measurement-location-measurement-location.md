@@ -43,7 +43,7 @@ The name given to the measurement location i.e. to the met mast or remote sensin
 
 ## latitude_ddeg
 
-Latitude coordinate in the Geographic Coordinate System using the WGS84 datum in decimal degrees. Latitude lines are parallel to the equator where their position ranges from -90 degrees at the south pole to 90 degrees at the north pole.
+Latitude coordinate in the Geographic Coordinate System using the WGS84 reference coordinate system, [EPSG:4326](https://epsg.io/4326). Unit of measure is in decimal degrees. Latitude lines are parallel to the equator where their position ranges from -90 degrees at the south pole to 90 degrees at the north pole.
 
 `latitude_ddeg`
 
@@ -73,7 +73,7 @@ Latitude coordinate in the Geographic Coordinate System using the WGS84 datum in
 
 ## longitude_ddeg
 
-Longitude coordinate in the Geographic Coordinate System using the WGS84 datum in decimal degrees. Longitude lines are perpendicular to the equator where their position ranges from 0° at Greenwich Mean Time increasing to +180° as you move eastward and decreasing to −180° as you move westward.
+Longitude coordinate in the Geographic Coordinate System using the WGS84 reference coordinate system, [EPSG:4326](https://epsg.io/4326). Unit of measure is in decimal degrees. Longitude lines are perpendicular to the equator where their position ranges from 0° at Greenwich Mean Time increasing to +180° as you move eastward and decreasing to −180° as you move westward.
 
 `longitude_ddeg`
 
@@ -103,7 +103,7 @@ Longitude coordinate in the Geographic Coordinate System using the WGS84 datum i
 
 ## measurement_station_type_id
 
-The type of measurement station. This must be one of either met mast, lidar (a vertical profiler), sodar (also a vertical profiler) or flidar (floating vertical profiler lidar).
+The type of measurement station. This must be one of either met mast, lidar (a vertical profiler), sodar (also a vertical profiler) or floating lidar (floating vertical profiler lidar).
 
 `measurement_station_type_id`
 
@@ -123,12 +123,13 @@ The type of measurement station. This must be one of either met mast, lidar (a v
 
 **enum**: the value of this property must be equal to one of the following values:
 
-| Value      | Explanation |
-| :--------- | :---------- |
-| `"mast"`   |             |
-| `"lidar"`  |             |
-| `"sodar"`  |             |
-| `"flidar"` |             |
+| Value              | Explanation |
+| :----------------- | :---------- |
+| `"mast"`           |             |
+| `"lidar"`          |             |
+| `"sodar"`          |             |
+| `"floating_lidar"` |             |
+| `"solar"`          |             |
 
 ## notes
 
@@ -184,7 +185,7 @@ The date these properties were last updated.
 
 ## mast_properties
 
-The properties of the installed met mast/tower.
+The properties of the installed met mast/tower. Additional properties can be added e.g. 'material' however this wouldn't be part of the Data Model. If an additional property is for information purposes please consider using 'notes' instead.
 
 `mast_properties`
 
@@ -202,7 +203,7 @@ The properties of the installed met mast/tower.
 
 ## vertical_profiler_properties
 
-Vertical profiler remote sensing devices (e.g. lidar, sodar and flidar) installation specific properties.
+Vertical profiler remote sensing devices (e.g. lidar, sodar and floating lidar) installation specific properties.
 
 `vertical_profiler_properties`
 

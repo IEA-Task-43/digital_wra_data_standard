@@ -442,7 +442,7 @@
 		"linear_regression": {
 			"slope": {
 				"value": 0.04587,
-				"unit": "-",
+				"unit": "(m/s)/Hz",
 				"uncertainty": {
 					"value": 6e-05,
 					"coverage_factor": 1
@@ -450,7 +450,7 @@
 			},
 			"offset": {
 				"value": 0.24453,
-				"unit": "-",
+				"unit": "m/s",
 				"uncertainty": {
 					"value": 0.01331,
 					"coverage_factor": 1
