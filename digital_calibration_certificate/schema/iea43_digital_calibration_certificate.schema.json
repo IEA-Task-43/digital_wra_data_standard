@@ -152,7 +152,7 @@
 				},
 				"mounting_length": {
 					"title": "Mounting Length",
-					"description": "The length of the mounting inside the test section.",
+					"description": "The mounting tube length as used inside the test section.",
 					"$ref": "#/definitions/quantity"
 				},
 				"yaw_orientation": {
