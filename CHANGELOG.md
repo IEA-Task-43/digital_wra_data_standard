@@ -11,6 +11,10 @@ Additional labels for pre-release and build metadata are available as extensions
 
 ## [Unreleased 1.X.X-2022.XX]
 
+1. __
+
+## [1.1.0-2022.06]
+
 1. To `mast_section_geometry` added:
    1. `lattice_bracing_member_diameter_horizontal_mm` (Issue [#168](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/168))
    1. `lattice_bracing_member_diameter_diagonal_mm` (Issue [#168](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/168))

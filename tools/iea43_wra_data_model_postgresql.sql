@@ -1,10 +1,12 @@
 -- These PostgreSQL statements are a relational database representation of the
--- IEA Wind Task 43 Wind Energy Digitalization Standardized Data Model
+-- IEA Wind Task 43 Wind Resource Assessment (WRA) Data Model
 
 -- Running these SQL statements in a PostgreSQL database will create the database
 -- schema and insert named reference values (enums).
 
 -- The SQL standard has tried to be used as much as possible.
+
+-- These statements match version 1.1.0-2022.06
 
 
 -- ** load plugin that generates uuids **:
