@@ -1,7 +1,7 @@
-## column_name Type
+## column\_name Type
 
-`object[]` ([Column Names](iea43\_wra_data_model-properties-measurement-location-measurement-location-properties-measurement-point-measurement-point-properties-logger-measurement-configuration-logger-measurement-configuration-properties-column-names-column-names.md))
+`object[]` ([Column Names](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-measurement-point-measurement-point-properties-logger-measurement-configuration-logger-measurement-configuration-properties-column-names-column-names.md))
 
-## column_name Constraints
+## column\_name Constraints
 
 **unique items**: all items in this array must be unique. Duplicates are not allowed.

@@ -1,22 +1,22 @@
-## mast_properties Type
+## mast\_properties Type
 
-`object` ([Mast Properties](iea43\_wra_data_model-properties-measurement-location-measurement-location-properties-mast-properties.md))
+`object` ([Mast Properties](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-mast-properties.md))
 
-# mast_properties Properties
+# mast\_properties Properties
 
-| Property                                        | Type     | Required | Nullable    | Defined by                                                                                                                                                                                                                                                                                                                                                                                                        |
-| :---------------------------------------------- | :------- | :------- | :---------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [mast_geometry_id](#mast_geometry_id)           | `string` | Optional | can be null | [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-mast-properties-properties-mast-geometry.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/mast_properties/properties/mast_geometry_id")              |
-| [mast_oem](#mast_oem)                           | `string` | Optional | can be null | [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-mast-properties-properties-mast-oem.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/mast_properties/properties/mast_oem")                           |
-| [mast_serial_number](#mast_serial_number)       | `string` | Optional | can be null | [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-mast-properties-properties-mast-serial-number.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/mast_properties/properties/mast_serial_number")       |
-| [mast_model](#mast_model)                       | `string` | Optional | can be null | [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-mast-properties-properties-mast-model.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/mast_properties/properties/mast_model")                       |
-| [mast_height_m](#mast_height_m)                 | `number` | Optional | can be null | [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-mast-properties-properties-mast-height-m.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/mast_properties/properties/mast_height_m")                 |
-| [notes](#notes)                                 | `string` | Optional | can be null | [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-definitions-notes.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/mast_properties/properties/notes")                                                                                                                |
-| [update_at](#update_at)                         | `string` | Optional | can be null | [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-definitions-date-of-update.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/mast_properties/properties/update_at")                                                                                                   |
-| [mast_section_geometry](#mast_section_geometry) | `array`  | Optional | can be null | [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-mast-properties-properties-mast-section-geometry.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/mast_properties/properties/mast_section_geometry") |
-| Additional Properties                           | Any      | Optional | can be null |                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| Property                                          | Type     | Required | Nullable    | Defined by                                                                                                                                                                                                                                                                                                                                                                                                        |
+| :------------------------------------------------ | :------- | :------- | :---------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [mast\_geometry\_id](#mast_geometry_id)           | `string` | Optional | can be null | [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-mast-properties-properties-mast-geometry.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/mast_properties/properties/mast_geometry_id")              |
+| [mast\_oem](#mast_oem)                            | `string` | Optional | can be null | [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-mast-properties-properties-mast-oem.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/mast_properties/properties/mast_oem")                           |
+| [mast\_serial\_number](#mast_serial_number)       | `string` | Optional | can be null | [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-mast-properties-properties-mast-serial-number.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/mast_properties/properties/mast_serial_number")       |
+| [mast\_model](#mast_model)                        | `string` | Optional | can be null | [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-mast-properties-properties-mast-model.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/mast_properties/properties/mast_model")                       |
+| [mast\_height\_m](#mast_height_m)                 | `number` | Optional | can be null | [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-mast-properties-properties-mast-height-m.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/mast_properties/properties/mast_height_m")                 |
+| [notes](#notes)                                   | `string` | Optional | can be null | [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-definitions-notes.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/mast_properties/properties/notes")                                                                                                                |
+| [update\_at](#update_at)                          | `string` | Optional | can be null | [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-definitions-date-of-update.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/mast_properties/properties/update_at")                                                                                                   |
+| [mast\_section\_geometry](#mast_section_geometry) | `array`  | Optional | can be null | [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-mast-properties-properties-mast-section-geometry.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/mast_properties/properties/mast_section_geometry") |
+| Additional Properties                             | Any      | Optional | can be null |                                                                                                                                                                                                                                                                                                                                                                                                                   |
 
-## mast_geometry_id
+## mast\_geometry\_id
 
 The type of mast geometry e.g. lattice with a triangular profile or pole. The IEC specifies two square lattice towers as having rounded edges for their members or sharp edges.
 
@@ -24,17 +24,17 @@ The type of mast geometry e.g. lattice with a triangular profile or pole. The IE
 
 *   is optional
 
-*   Type: `string` ([Mast Geometry](iea43\_wra_data_model-properties-measurement-location-measurement-location-properties-mast-properties-properties-mast-geometry.md))
+*   Type: `string` ([Mast Geometry](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-mast-properties-properties-mast-geometry.md))
 
 *   can be null
 
-*   defined in: [IEA Wind Resource Assessment - Data Model](iea43\_wra_data_model-properties-measurement-location-measurement-location-properties-mast-properties-properties-mast-geometry.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43\_wra_data_model.schema.json#/properties/measurement_location/items/properties/mast_properties/properties/mast_geometry_id")
+*   defined in: [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-mast-properties-properties-mast-geometry.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/mast_properties/properties/mast_geometry_id")
 
-### mast_geometry_id Type
+### mast\_geometry\_id Type
 
-`string` ([Mast Geometry](iea43\_wra_data_model-properties-measurement-location-measurement-location-properties-mast-properties-properties-mast-geometry.md))
+`string` ([Mast Geometry](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-mast-properties-properties-mast-geometry.md))
 
-### mast_geometry_id Constraints
+### mast\_geometry\_id Constraints
 
 **enum**: the value of this property must be equal to one of the following values:
 
@@ -45,7 +45,7 @@ The type of mast geometry e.g. lattice with a triangular profile or pole. The IE
 | `"lattice_square_sharp_edges"` |             |
 | `"pole"`                       |             |
 
-## mast_oem
+## mast\_oem
 
 The manufacturer of the met mast.
 
@@ -53,17 +53,17 @@ The manufacturer of the met mast.
 
 *   is optional
 
-*   Type: `string` ([Mast OEM](iea43\_wra_data_model-properties-measurement-location-measurement-location-properties-mast-properties-properties-mast-oem.md))
+*   Type: `string` ([Mast OEM](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-mast-properties-properties-mast-oem.md))
 
 *   can be null
 
-*   defined in: [IEA Wind Resource Assessment - Data Model](iea43\_wra_data_model-properties-measurement-location-measurement-location-properties-mast-properties-properties-mast-oem.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43\_wra_data_model.schema.json#/properties/measurement_location/items/properties/mast_properties/properties/mast_oem")
+*   defined in: [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-mast-properties-properties-mast-oem.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/mast_properties/properties/mast_oem")
 
-### mast_oem Type
+### mast\_oem Type
 
-`string` ([Mast OEM](iea43\_wra_data_model-properties-measurement-location-measurement-location-properties-mast-properties-properties-mast-oem.md))
+`string` ([Mast OEM](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-mast-properties-properties-mast-oem.md))
 
-### mast_oem Examples
+### mast\_oem Examples
 
 ```json
 "NRG Systems"
@@ -73,7 +73,7 @@ The manufacturer of the met mast.
 "Galetech Energy Services"
 ```
 
-## mast_serial_number
+## mast\_serial\_number
 
 The manufacturer's serial number of the mast.
 
@@ -81,17 +81,17 @@ The manufacturer's serial number of the mast.
 
 *   is optional
 
-*   Type: `string` ([Mast Serial Number](iea43\_wra_data_model-properties-measurement-location-measurement-location-properties-mast-properties-properties-mast-serial-number.md))
+*   Type: `string` ([Mast Serial Number](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-mast-properties-properties-mast-serial-number.md))
 
 *   can be null
 
-*   defined in: [IEA Wind Resource Assessment - Data Model](iea43\_wra_data_model-properties-measurement-location-measurement-location-properties-mast-properties-properties-mast-serial-number.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43\_wra_data_model.schema.json#/properties/measurement_location/items/properties/mast_properties/properties/mast_serial_number")
+*   defined in: [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-mast-properties-properties-mast-serial-number.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/mast_properties/properties/mast_serial_number")
 
-### mast_serial_number Type
+### mast\_serial\_number Type
 
-`string` ([Mast Serial Number](iea43\_wra_data_model-properties-measurement-location-measurement-location-properties-mast-properties-properties-mast-serial-number.md))
+`string` ([Mast Serial Number](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-mast-properties-properties-mast-serial-number.md))
 
-### mast_serial_number Examples
+### mast\_serial\_number Examples
 
 ```json
 "XHD12345"
@@ -101,7 +101,7 @@ The manufacturer's serial number of the mast.
 "MM01234"
 ```
 
-## mast_model
+## mast\_model
 
 The model of the mast.
 
@@ -109,17 +109,17 @@ The model of the mast.
 
 *   is optional
 
-*   Type: `string` ([Mast Model](iea43\_wra_data_model-properties-measurement-location-measurement-location-properties-mast-properties-properties-mast-model.md))
+*   Type: `string` ([Mast Model](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-mast-properties-properties-mast-model.md))
 
 *   can be null
 
-*   defined in: [IEA Wind Resource Assessment - Data Model](iea43\_wra_data_model-properties-measurement-location-measurement-location-properties-mast-properties-properties-mast-model.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43\_wra_data_model.schema.json#/properties/measurement_location/items/properties/mast_properties/properties/mast_model")
+*   defined in: [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-mast-properties-properties-mast-model.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/mast_properties/properties/mast_model")
 
-### mast_model Type
+### mast\_model Type
 
-`string` ([Mast Model](iea43\_wra_data_model-properties-measurement-location-measurement-location-properties-mast-properties-properties-mast-model.md))
+`string` ([Mast Model](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-mast-properties-properties-mast-model.md))
 
-### mast_model Examples
+### mast\_model Examples
 
 ```json
 "80m XHD TallTower"
@@ -129,7 +129,7 @@ The model of the mast.
 "SLX80m"
 ```
 
-## mast_height_m
+## mast\_height\_m
 
 The height of the mast itself, not necessarily the top anemometer height.
 
@@ -137,17 +137,17 @@ The height of the mast itself, not necessarily the top anemometer height.
 
 *   is optional
 
-*   Type: `number` ([Mast Height \[m\]](iea43\_wra_data_model-properties-measurement-location-measurement-location-properties-mast-properties-properties-mast-height-m.md))
+*   Type: `number` ([Mast Height \[m\]](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-mast-properties-properties-mast-height-m.md))
 
 *   can be null
 
-*   defined in: [IEA Wind Resource Assessment - Data Model](iea43\_wra_data_model-properties-measurement-location-measurement-location-properties-mast-properties-properties-mast-height-m.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43\_wra_data_model.schema.json#/properties/measurement_location/items/properties/mast_properties/properties/mast_height_m")
+*   defined in: [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-mast-properties-properties-mast-height-m.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/mast_properties/properties/mast_height_m")
 
-### mast_height_m Type
+### mast\_height\_m Type
 
-`number` ([Mast Height \[m\]](iea43\_wra_data_model-properties-measurement-location-measurement-location-properties-mast-properties-properties-mast-height-m.md))
+`number` ([Mast Height \[m\]](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-mast-properties-properties-mast-height-m.md))
 
-### mast_height_m Examples
+### mast\_height\_m Examples
 
 ```json
 81.3
@@ -161,15 +161,15 @@ Notes relating to these properties.
 
 *   is optional
 
-*   Type: `string` ([Notes](iea43\_wra_data_model-definitions-notes.md))
+*   Type: `string` ([Notes](iea43_wra_data_model-definitions-notes.md))
 
 *   can be null
 
-*   defined in: [IEA Wind Resource Assessment - Data Model](iea43\_wra_data_model-definitions-notes.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43\_wra_data_model.schema.json#/properties/measurement_location/items/properties/mast_properties/properties/notes")
+*   defined in: [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-definitions-notes.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/mast_properties/properties/notes")
 
 ### notes Type
 
-`string` ([Notes](iea43\_wra_data_model-definitions-notes.md))
+`string` ([Notes](iea43_wra_data_model-definitions-notes.md))
 
 ### notes Examples
 
@@ -177,7 +177,7 @@ Notes relating to these properties.
 "I can write anything I want here."
 ```
 
-## update_at
+## update\_at
 
 The date these properties were last updated.
 
@@ -185,27 +185,27 @@ The date these properties were last updated.
 
 *   is optional
 
-*   Type: `string` ([Date of Update](iea43\_wra_data_model-definitions-date-of-update.md))
+*   Type: `string` ([Date of Update](iea43_wra_data_model-definitions-date-of-update.md))
 
 *   can be null
 
-*   defined in: [IEA Wind Resource Assessment - Data Model](iea43\_wra_data_model-definitions-date-of-update.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43\_wra_data_model.schema.json#/properties/measurement_location/items/properties/mast_properties/properties/update_at")
+*   defined in: [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-definitions-date-of-update.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/mast_properties/properties/update_at")
 
-### update_at Type
+### update\_at Type
 
-`string` ([Date of Update](iea43\_wra_data_model-definitions-date-of-update.md))
+`string` ([Date of Update](iea43_wra_data_model-definitions-date-of-update.md))
 
-### update_at Constraints
+### update\_at Constraints
 
 **date time**: the string must be a date time string, according to [RFC 3339, section 5.6](https://tools.ietf.org/html/rfc3339 "check the specification")
 
-### update_at Examples
+### update\_at Examples
 
 ```json
 "2020-07-28T20:49:13"
 ```
 
-## mast_section_geometry
+## mast\_section\_geometry
 
 This contains the properties of each mast section. Additional properties can be added e.g. 'material' however this wouldn't be part of the Data Model. If an additional property is for information purposes please consider using 'notes' instead.
 
@@ -213,17 +213,17 @@ This contains the properties of each mast section. Additional properties can be 
 
 *   is optional
 
-*   Type: `object[]` ([Mast Section Geometry](iea43\_wra_data_model-properties-measurement-location-measurement-location-properties-mast-properties-properties-mast-section-geometry-mast-section-geometry.md))
+*   Type: `object[]` ([Mast Section Geometry](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-mast-properties-properties-mast-section-geometry-mast-section-geometry.md))
 
 *   can be null
 
-*   defined in: [IEA Wind Resource Assessment - Data Model](iea43\_wra_data_model-properties-measurement-location-measurement-location-properties-mast-properties-properties-mast-section-geometry.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43\_wra_data_model.schema.json#/properties/measurement_location/items/properties/mast_properties/properties/mast_section_geometry")
+*   defined in: [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-mast-properties-properties-mast-section-geometry.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/mast_properties/properties/mast_section_geometry")
 
-### mast_section_geometry Type
+### mast\_section\_geometry Type
 
-`object[]` ([Mast Section Geometry](iea43\_wra_data_model-properties-measurement-location-measurement-location-properties-mast-properties-properties-mast-section-geometry-mast-section-geometry.md))
+`object[]` ([Mast Section Geometry](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-mast-properties-properties-mast-section-geometry-mast-section-geometry.md))
 
-### mast_section_geometry Constraints
+### mast\_section\_geometry Constraints
 
 **unique items**: all items in this array must be unique. Duplicates are not allowed.
 

@@ -1,8 +1,8 @@
-## plant_type Type
+## plant\_type Type
 
-`string` ([Plant Type](iea43\_wra_data_model-properties-plant-type.md))
+`string` ([Plant Type](iea43_wra_data_model-properties-plant-type.md))
 
-## plant_type Constraints
+## plant\_type Constraints
 
 **enum**: the value of this property must be equal to one of the following values:
 

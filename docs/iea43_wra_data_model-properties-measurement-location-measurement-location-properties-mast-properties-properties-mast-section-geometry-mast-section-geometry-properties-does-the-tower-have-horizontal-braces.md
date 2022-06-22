@@ -1,8 +1,8 @@
-## lattice_has_horizontal_member Type
+## lattice\_has\_horizontal\_member Type
 
-`boolean` ([Does the tower have horizontal braces?](iea43\_wra_data_model-properties-measurement-location-measurement-location-properties-mast-properties-properties-mast-section-geometry-mast-section-geometry-properties-does-the-tower-have-horizontal-braces.md))
+`boolean` ([Does the tower have horizontal braces?](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-mast-properties-properties-mast-section-geometry-mast-section-geometry-properties-does-the-tower-have-horizontal-braces.md))
 
-## lattice_has_horizontal_member Examples
+## lattice\_has\_horizontal\_member Examples
 
 ```json
 "true (for towers with horizontal braces)"

@@ -1,10 +1,10 @@
 ## classification Type
 
-`string` ([Classification](iea43\_wra_data_model-properties-measurement-location-measurement-location-properties-measurement-point-measurement-point-properties-sensor-sensor-properties-classification.md))
+`string` ([Classification](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-measurement-point-measurement-point-properties-sensor-sensor-properties-classification.md))
 
 ## classification Constraints
 
-**pattern**: the string must match the following regular expression: 
+**pattern**: the string must match the following regular expression:&#x20;
 
 ```regexp
 ^([0-9]{1,2})[.]([0-9]{1,2})[ABCDS]$

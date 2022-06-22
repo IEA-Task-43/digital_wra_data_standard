@@ -1,6 +1,6 @@
 ## uuid Type
 
-`string` ([UUID](iea43\_wra_data_model-properties-measurement-location-measurement-location-properties-mast-properties-properties-mast-section-geometry-mast-section-geometry-properties-uuid.md))
+`string` ([UUID](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-mast-properties-properties-mast-section-geometry-mast-section-geometry-properties-uuid.md))
 
 ## uuid Constraints
 

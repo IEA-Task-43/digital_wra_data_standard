@@ -1,8 +1,8 @@
-## orientation_from_mast_centre_deg Type
+## orientation\_from\_mast\_centre\_deg Type
 
-`number` ([Orientation from Mast Centre \[deg\]](iea43\_wra_data_model-properties-measurement-location-measurement-location-properties-measurement-point-measurement-point-properties-interference-structures-interference-structures-properties-orientation-from-mast-centre-deg.md))
+`number` ([Orientation from Mast Centre \[deg\]](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-measurement-point-measurement-point-properties-interference-structures-interference-structures-properties-orientation-from-mast-centre-deg.md))
 
-## orientation_from_mast_centre_deg Constraints
+## orientation\_from\_mast\_centre\_deg Constraints
 
 **maximum**: the value of this number must smaller than or equal to: `360`
 

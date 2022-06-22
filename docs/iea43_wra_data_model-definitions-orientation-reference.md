@@ -1,8 +1,8 @@
-## orientation_reference_id Type
+## orientation\_reference\_id Type
 
-`string` ([Orientation Reference](iea43\_wra_data_model-definitions-orientation-reference.md))
+`string` ([Orientation Reference](iea43_wra_data_model-definitions-orientation-reference.md))
 
-## orientation_reference_id Constraints
+## orientation\_reference\_id Constraints
 
 **enum**: the value of this property must be equal to one of the following values:
 

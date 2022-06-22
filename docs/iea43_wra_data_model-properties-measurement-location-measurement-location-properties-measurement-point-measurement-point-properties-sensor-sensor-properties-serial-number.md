@@ -1,3 +1,3 @@
-## serial_number Type
+## serial\_number Type
 
-`string` ([Serial Number](iea43\_wra_data_model-properties-measurement-location-measurement-location-properties-measurement-point-measurement-point-properties-sensor-sensor-properties-serial-number.md))
+`string` ([Serial Number](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-measurement-point-measurement-point-properties-sensor-sensor-properties-serial-number.md))

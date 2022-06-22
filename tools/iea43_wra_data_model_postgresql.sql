@@ -1,10 +1,12 @@
 -- These PostgreSQL statements are a relational database representation of the
--- IEA Wind Task 43 Wind Energy Digitalization Standardized Data Model
+-- IEA Wind Task 43 Wind Resource Assessment (WRA) Data Model
 
 -- Running these SQL statements in a PostgreSQL database will create the database
 -- schema and insert named reference values (enums).
 
 -- The SQL standard has tried to be used as much as possible.
+
+-- These statements match version 1.1.0-2022.06
 
 
 -- ** load plugin that generates uuids **:
@@ -153,6 +155,8 @@ INSERT INTO height_reference (id) VALUES
 
 INSERT INTO measurement_units (id) VALUES
     ('m/s'),
+    ('mph'),
+    ('knots'),
     ('deg'),
     ('deg_C'),
     ('deg_F'),
@@ -160,7 +164,11 @@ INSERT INTO measurement_units (id) VALUES
     ('%'),
     ('mbar'),
     ('hPa'),
+    ('atm'),
+    ('mmHg'),
+    ('inHg'),
     ('kg/m^2'),
+    ('kg/m^3'),
     ('V'),
     ('mA'),
     ('A'),
@@ -286,13 +294,18 @@ CREATE TABLE IF NOT EXISTS measurement_location_mast_properties(
 CREATE TABLE IF NOT EXISTS mast_section_geometry(
     uuid UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
     mast_properties_uuid UUID,
+    mast_section_height_mm decimal,
     pole_diameter_mm decimal,
     lattice_face_width_at_bottom_mm decimal,
     lattice_face_width_at_top_mm decimal,
     lattice_leg_width_mm decimal,
     lattice_leg_is_round_cross_section boolean,
     lattice_bracing_member_diameter_mm decimal,
+    lattice_bracing_member_diameter_horizontal_mm decimal,
+    lattice_bracing_member_diameter_diagonal_mm decimal,
     lattice_number_of_diagonal_bracing_members integer,
+    lattice_bracing_member_length_diagonal_mm decimal,
+    number_of_repetitive_patterns_on_face integer,
     lattice_bracing_member_height_mm decimal,
     lattice_has_horizontal_member boolean,
     notes text,
@@ -338,6 +351,7 @@ CREATE TABLE IF NOT EXISTS logger_main_config(
     timestamp_is_end_of_period boolean,
     clock_is_auto_synced boolean,
     logger_acquisition_uncertainty decimal,
+    uncertainty_k_factor integer,
     notes text,
     update_at timestamp WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
     updated_by UUID,
@@ -494,6 +508,7 @@ CREATE TABLE IF NOT EXISTS interference_structures(
     orientation_from_mast_centre_deg decimal CHECK (orientation_from_mast_centre_deg >= 0 AND orientation_from_mast_centre_deg <= 360),
     orientation_reference_id text,
     distance_from_mast_centre_mm decimal,
+    diameter_of_interference_structure_mm decimal,
     date_from timestamp WITHOUT TIME ZONE NOT NULL,
     date_to timestamp WITHOUT TIME ZONE,
     notes text,
