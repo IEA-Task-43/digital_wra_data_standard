@@ -1,6 +1,6 @@
 ## notes Type
 
-`string` ([Notes](iea43\_wra_data_model-definitions-notes.md))
+`string` ([Notes](iea43_wra_data_model-definitions-notes.md))
 
 ## notes Examples
 

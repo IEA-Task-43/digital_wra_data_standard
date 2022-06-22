@@ -1,8 +1,8 @@
-## sensor_type_id Type
+## sensor\_type\_id Type
 
-`string` ([Sensor Type](iea43\_wra_data_model-properties-measurement-location-measurement-location-properties-measurement-point-measurement-point-properties-sensor-sensor-properties-sensor-type.md))
+`string` ([Sensor Type](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-measurement-point-measurement-point-properties-sensor-sensor-properties-sensor-type.md))
 
-## sensor_type_id Constraints
+## sensor\_type\_id Constraints
 
 **enum**: the value of this property must be equal to one of the following values:
 

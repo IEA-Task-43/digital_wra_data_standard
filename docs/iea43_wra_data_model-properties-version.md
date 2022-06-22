@@ -1,10 +1,10 @@
 ## version Type
 
-`string` ([Version](iea43\_wra_data_model-properties-version.md))
+`string` ([Version](iea43_wra_data_model-properties-version.md))
 
 ## version Constraints
 
-**pattern**: the string must match the following regular expression: 
+**pattern**: the string must match the following regular expression:&#x20;
 
 ```regexp
 ^([0-9]{1,2})[.]([0-9]{1,2})[.]([0-9]{1,2})-([0-9]{4})[.]([0-9]{2})$

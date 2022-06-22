@@ -1,8 +1,8 @@
-## measurement_type_id Type
+## measurement\_type\_id Type
 
-`string` ([Measurement Type](iea43\_wra_data_model-definitions-measurement-type.md))
+`string` ([Measurement Type](iea43_wra_data_model-definitions-measurement-type.md))
 
-## measurement_type_id Constraints
+## measurement\_type\_id Constraints
 
 **enum**: the value of this property must be equal to one of the following values:
 
@@ -57,7 +57,7 @@
 | `"timestamp"`                     |             |
 | `"other"`                         |             |
 
-## measurement_type_id Examples
+## measurement\_type\_id Examples
 
 ```json
 "wind_speed  (the horizontal component of wind speed)"

@@ -1,19 +1,19 @@
 ## IEA Wind Resource Assessment - Data Model Type
 
-`object` ([IEA Wind Resource Assessment - Data Model](iea43\_wra_data_model.md))
+`object` ([IEA Wind Resource Assessment - Data Model](iea43_wra_data_model.md))
 
 # IEA Wind Resource Assessment - Data Model Properties
 
-| Property                                      | Type     | Required | Nullable       | Defined by                                                                                                                                                                                                                                                     |
-| :-------------------------------------------- | :------- | :------- | :------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [author](#author)                             | `string` | Required | cannot be null | [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-properties-author.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/author")                             |
-| [organisation](#organisation)                 | `string` | Required | cannot be null | [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-properties-organisation.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/organisation")                 |
-| [date](#date)                                 | `string` | Required | cannot be null | [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-properties-date.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/date")                                 |
-| [version](#version)                           | `string` | Required | cannot be null | [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-properties-version.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/version")                           |
-| [plant_name](#plant_name)                     | `string` | Optional | can be null    | [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-properties-plant-name.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/plant_name")                     |
-| [plant_type](#plant_type)                     | `string` | Optional | can be null    | [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-properties-plant-type.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/plant_type")                     |
-| [measurement_location](#measurement_location) | `array`  | Required | cannot be null | [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-properties-measurement-location.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location") |
-| Additional Properties                         | Any      | Optional | can be null    |                                                                                                                                                                                                                                                                |
+| Property                                       | Type     | Required | Nullable       | Defined by                                                                                                                                                                                                                                                     |
+| :--------------------------------------------- | :------- | :------- | :------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [author](#author)                              | `string` | Required | cannot be null | [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-properties-author.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/author")                             |
+| [organisation](#organisation)                  | `string` | Required | cannot be null | [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-properties-organisation.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/organisation")                 |
+| [date](#date)                                  | `string` | Required | cannot be null | [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-properties-date.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/date")                                 |
+| [version](#version)                            | `string` | Required | cannot be null | [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-properties-version.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/version")                           |
+| [plant\_name](#plant_name)                     | `string` | Optional | can be null    | [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-properties-plant-name.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/plant_name")                     |
+| [plant\_type](#plant_type)                     | `string` | Optional | can be null    | [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-properties-plant-type.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/plant_type")                     |
+| [measurement\_location](#measurement_location) | `array`  | Required | cannot be null | [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-properties-measurement-location.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location") |
+| Additional Properties                          | Any      | Optional | can be null    |                                                                                                                                                                                                                                                                |
 
 ## author
 
@@ -23,15 +23,15 @@ The person or system who created this data model representing a specific mast.
 
 *   is required
 
-*   Type: `string` ([Author](iea43\_wra_data_model-properties-author.md))
+*   Type: `string` ([Author](iea43_wra_data_model-properties-author.md))
 
 *   cannot be null
 
-*   defined in: [IEA Wind Resource Assessment - Data Model](iea43\_wra_data_model-properties-author.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43\_wra_data_model.schema.json#/properties/author")
+*   defined in: [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-properties-author.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/author")
 
 ### author Type
 
-`string` ([Author](iea43\_wra_data_model-properties-author.md))
+`string` ([Author](iea43_wra_data_model-properties-author.md))
 
 ### author Examples
 
@@ -51,15 +51,15 @@ The organisation the Author is from.
 
 *   is required
 
-*   Type: `string` ([Organisation](iea43\_wra_data_model-properties-organisation.md))
+*   Type: `string` ([Organisation](iea43_wra_data_model-properties-organisation.md))
 
 *   cannot be null
 
-*   defined in: [IEA Wind Resource Assessment - Data Model](iea43\_wra_data_model-properties-organisation.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43\_wra_data_model.schema.json#/properties/organisation")
+*   defined in: [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-properties-organisation.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/organisation")
 
 ### organisation Type
 
-`string` ([Organisation](iea43\_wra_data_model-properties-organisation.md))
+`string` ([Organisation](iea43_wra_data_model-properties-organisation.md))
 
 ### organisation Examples
 
@@ -79,15 +79,15 @@ The date this file was created. Format should be YYYY-MM-DD
 
 *   is required
 
-*   Type: `string` ([Date](iea43\_wra_data_model-properties-date.md))
+*   Type: `string` ([Date](iea43_wra_data_model-properties-date.md))
 
 *   cannot be null
 
-*   defined in: [IEA Wind Resource Assessment - Data Model](iea43\_wra_data_model-properties-date.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43\_wra_data_model.schema.json#/properties/date")
+*   defined in: [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-properties-date.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/date")
 
 ### date Type
 
-`string` ([Date](iea43\_wra_data_model-properties-date.md))
+`string` ([Date](iea43_wra_data_model-properties-date.md))
 
 ### date Constraints
 
@@ -107,19 +107,19 @@ The version of the IEA WRA Data Model this file is based on. The format of this 
 
 *   is required
 
-*   Type: `string` ([Version](iea43\_wra_data_model-properties-version.md))
+*   Type: `string` ([Version](iea43_wra_data_model-properties-version.md))
 
 *   cannot be null
 
-*   defined in: [IEA Wind Resource Assessment - Data Model](iea43\_wra_data_model-properties-version.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43\_wra_data_model.schema.json#/properties/version")
+*   defined in: [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-properties-version.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/version")
 
 ### version Type
 
-`string` ([Version](iea43\_wra_data_model-properties-version.md))
+`string` ([Version](iea43_wra_data_model-properties-version.md))
 
 ### version Constraints
 
-**pattern**: the string must match the following regular expression: 
+**pattern**: the string must match the following regular expression:&#x20;
 
 ```regexp
 ^([0-9]{1,2})[.]([0-9]{1,2})[.]([0-9]{1,2})-([0-9]{4})[.]([0-9]{2})$
@@ -137,7 +137,7 @@ The version of the IEA WRA Data Model this file is based on. The format of this 
 "1.1.1-2020.07"
 ```
 
-## plant_name
+## plant\_name
 
 The name of the wind farm this met mast is associated with.
 
@@ -145,23 +145,23 @@ The name of the wind farm this met mast is associated with.
 
 *   is optional
 
-*   Type: `string` ([Plant Name](iea43\_wra_data_model-properties-plant-name.md))
+*   Type: `string` ([Plant Name](iea43_wra_data_model-properties-plant-name.md))
 
 *   can be null
 
-*   defined in: [IEA Wind Resource Assessment - Data Model](iea43\_wra_data_model-properties-plant-name.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43\_wra_data_model.schema.json#/properties/plant_name")
+*   defined in: [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-properties-plant-name.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/plant_name")
 
-### plant_name Type
+### plant\_name Type
 
-`string` ([Plant Name](iea43\_wra_data_model-properties-plant-name.md))
+`string` ([Plant Name](iea43_wra_data_model-properties-plant-name.md))
 
-### plant_name Examples
+### plant\_name Examples
 
 ```json
 "A Name of Wind Farm"
 ```
 
-## plant_type
+## plant\_type
 
 The type of renewable generation plant it is.
 
@@ -169,17 +169,17 @@ The type of renewable generation plant it is.
 
 *   is optional
 
-*   Type: `string` ([Plant Type](iea43\_wra_data_model-properties-plant-type.md))
+*   Type: `string` ([Plant Type](iea43_wra_data_model-properties-plant-type.md))
 
 *   can be null
 
-*   defined in: [IEA Wind Resource Assessment - Data Model](iea43\_wra_data_model-properties-plant-type.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43\_wra_data_model.schema.json#/properties/plant_type")
+*   defined in: [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-properties-plant-type.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/plant_type")
 
-### plant_type Type
+### plant\_type Type
 
-`string` ([Plant Type](iea43\_wra_data_model-properties-plant-type.md))
+`string` ([Plant Type](iea43_wra_data_model-properties-plant-type.md))
 
-### plant_type Constraints
+### plant\_type Constraints
 
 **enum**: the value of this property must be equal to one of the following values:
 
@@ -190,7 +190,7 @@ The type of renewable generation plant it is.
 | `"offshore_wind"` |             |
 | `"solar"`         |             |
 
-## measurement_location
+## measurement\_location
 
 This is the geographic location of the meteorological measurement station i.e. a met mast/tower or remote sensing device.
 
@@ -198,17 +198,17 @@ This is the geographic location of the meteorological measurement station i.e. a
 
 *   is required
 
-*   Type: `object[]` ([Measurement Location](iea43\_wra_data_model-properties-measurement-location-measurement-location.md))
+*   Type: `object[]` ([Measurement Location](iea43_wra_data_model-properties-measurement-location-measurement-location.md))
 
 *   cannot be null
 
-*   defined in: [IEA Wind Resource Assessment - Data Model](iea43\_wra_data_model-properties-measurement-location.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43\_wra_data_model.schema.json#/properties/measurement_location")
+*   defined in: [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-properties-measurement-location.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location")
 
-### measurement_location Type
+### measurement\_location Type
 
-`object[]` ([Measurement Location](iea43\_wra_data_model-properties-measurement-location-measurement-location.md))
+`object[]` ([Measurement Location](iea43_wra_data_model-properties-measurement-location-measurement-location.md))
 
-### measurement_location Constraints
+### measurement\_location Constraints
 
 **unique items**: all items in this array must be unique. Duplicates are not allowed.
 
@@ -218,7 +218,7 @@ Additional properties are allowed and do not have to follow a specific schema
 
 # IEA Wind Resource Assessment - Data Model Definitions
 
-## Definitions group date_from
+## Definitions group date\_from
 
 Reference this group by using
 
@@ -229,7 +229,7 @@ Reference this group by using
 | Property | Type | Required | Nullable | Defined by |
 | :------- | :--- | :------- | :------- | :--------- |
 
-## Definitions group date_to
+## Definitions group date\_to
 
 Reference this group by using
 
@@ -251,7 +251,7 @@ Reference this group by using
 | Property | Type | Required | Nullable | Defined by |
 | :------- | :--- | :------- | :------- | :--------- |
 
-## Definitions group update_at
+## Definitions group update\_at
 
 Reference this group by using
 
@@ -262,7 +262,7 @@ Reference this group by using
 | Property | Type | Required | Nullable | Defined by |
 | :------- | :--- | :------- | :------- | :--------- |
 
-## Definitions group measurement_type
+## Definitions group measurement\_type
 
 Reference this group by using
 
@@ -273,7 +273,7 @@ Reference this group by using
 | Property | Type | Required | Nullable | Defined by |
 | :------- | :--- | :------- | :------- | :--------- |
 
-## Definitions group orientation_reference
+## Definitions group orientation\_reference
 
 Reference this group by using
 
@@ -284,7 +284,7 @@ Reference this group by using
 | Property | Type | Required | Nullable | Defined by |
 | :------- | :--- | :------- | :------- | :--------- |
 
-## Definitions group height_reference
+## Definitions group height\_reference
 
 Reference this group by using
 

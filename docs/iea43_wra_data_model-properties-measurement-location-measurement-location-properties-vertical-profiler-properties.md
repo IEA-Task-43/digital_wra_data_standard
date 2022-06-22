@@ -1,7 +1,7 @@
-## vertical_profiler_properties Type
+## vertical\_profiler\_properties Type
 
-`object[]` ([Vertical Profiler Properties](iea43\_wra_data_model-properties-measurement-location-measurement-location-properties-vertical-profiler-properties-vertical-profiler-properties.md))
+`object[]` ([Vertical Profiler Properties](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-vertical-profiler-properties-vertical-profiler-properties.md))
 
-## vertical_profiler_properties Constraints
+## vertical\_profiler\_properties Constraints
 
 **unique items**: all items in this array must be unique. Duplicates are not allowed.

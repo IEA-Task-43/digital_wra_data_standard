@@ -1,8 +1,8 @@
-## offset_from_utc_hrs Type
+## offset\_from\_utc\_hrs Type
 
-`number` ([Offset From UTC \[hr\]](iea43\_wra_data_model-properties-measurement-location-measurement-location-properties-logger-configuration-logger-configuration-properties-offset-from-utc-hr.md))
+`number` ([Offset From UTC \[hr\]](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-logger-configuration-logger-configuration-properties-offset-from-utc-hr.md))
 
-## offset_from_utc_hrs Examples
+## offset\_from\_utc\_hrs Examples
 
 ```json
 "-5 (for Eastern Standard Time)"

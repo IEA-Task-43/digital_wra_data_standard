@@ -1,8 +1,8 @@
-## vane_dead_band_orientation_deg Type
+## vane\_dead\_band\_orientation\_deg Type
 
-`number` ([Vane Dead Band Orientation \[deg\]](iea43\_wra_data_model-properties-measurement-location-measurement-location-properties-measurement-point-measurement-point-properties-mounting-arrangement-mounting-arrangement-properties-vane-dead-band-orientation-deg.md))
+`number` ([Vane Dead Band Orientation \[deg\]](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-measurement-point-measurement-point-properties-mounting-arrangement-mounting-arrangement-properties-vane-dead-band-orientation-deg.md))
 
-## vane_dead_band_orientation_deg Constraints
+## vane\_dead\_band\_orientation\_deg Constraints
 
 **maximum**: the value of this number must smaller than or equal to: `360`
 

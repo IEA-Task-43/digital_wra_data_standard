@@ -1,8 +1,8 @@
-## logger_id Type
+## logger\_id Type
 
-`string` ([Logger Id](iea43\_wra_data_model-properties-measurement-location-measurement-location-properties-logger-configuration-logger-configuration-properties-logger-id.md))
+`string` ([Logger Id](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-logger-configuration-logger-configuration-properties-logger-id.md))
 
-## logger_id Examples
+## logger\_id Examples
 
 ```json
 "4321"

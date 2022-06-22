@@ -1,8 +1,8 @@
-## is_heated Type
+## is\_heated Type
 
-`boolean` ([Is Heated](iea43\_wra_data_model-properties-measurement-location-measurement-location-properties-measurement-point-measurement-point-properties-sensor-sensor-properties-is-heated.md))
+`boolean` ([Is Heated](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-measurement-point-measurement-point-properties-sensor-sensor-properties-is-heated.md))
 
-## is_heated Examples
+## is\_heated Examples
 
 ```json
 "true (if the sensor is heated)"

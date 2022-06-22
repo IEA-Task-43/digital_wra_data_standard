@@ -1,12 +1,12 @@
-## date_to Type
+## date\_to Type
 
-`string` ([Date To](iea43\_wra_data_model-definitions-date-to.md))
+`string` ([Date To](iea43_wra_data_model-definitions-date-to.md))
 
-## date_to Constraints
+## date\_to Constraints
 
 **date time**: the string must be a date time string, according to [RFC 3339, section 5.6](https://tools.ietf.org/html/rfc3339 "check the specification")
 
-## date_to Examples
+## date\_to Examples
 
 ```json
 "2020-07-28T20:00:00"

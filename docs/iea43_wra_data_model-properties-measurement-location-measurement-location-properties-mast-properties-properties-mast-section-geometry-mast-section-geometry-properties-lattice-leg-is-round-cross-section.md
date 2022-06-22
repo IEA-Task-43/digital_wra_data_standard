@@ -1,8 +1,8 @@
-## lattice_leg_is_round_cross_section Type
+## lattice\_leg\_is\_round\_cross\_section Type
 
-`boolean` ([Lattice Leg is Round Cross Section](iea43\_wra_data_model-properties-measurement-location-measurement-location-properties-mast-properties-properties-mast-section-geometry-mast-section-geometry-properties-lattice-leg-is-round-cross-section.md))
+`boolean` ([Lattice Leg is Round Cross Section](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-mast-properties-properties-mast-section-geometry-mast-section-geometry-properties-lattice-leg-is-round-cross-section.md))
 
-## lattice_leg_is_round_cross_section Examples
+## lattice\_leg\_is\_round\_cross\_section Examples
 
 ```json
 "true (for a round leg cross section)"

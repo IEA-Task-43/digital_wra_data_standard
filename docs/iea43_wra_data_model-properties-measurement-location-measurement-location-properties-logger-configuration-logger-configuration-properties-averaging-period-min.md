@@ -1,8 +1,8 @@
-## averaging_period_minutes Type
+## averaging\_period\_minutes Type
 
-`integer` ([Averaging Period \[min\]](iea43\_wra_data_model-properties-measurement-location-measurement-location-properties-logger-configuration-logger-configuration-properties-averaging-period-min.md))
+`integer` ([Averaging Period \[min\]](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-logger-configuration-logger-configuration-properties-averaging-period-min.md))
 
-## averaging_period_minutes Examples
+## averaging\_period\_minutes Examples
 
 ```json
 "10"
