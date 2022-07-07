@@ -289,6 +289,27 @@
             "update_at": "2022-03-31T12:13:27"
         }]
       }]
+    },{
+      "name": "Wave_Dir",
+      "measurement_type_id": "wave_direction",
+      "height_m": 0,
+      "height_reference_id": "sea_level",
+      "notes": "Wave direction.",
+      "update_at": "2022-03-31T12:13:27",
+      "logger_measurement_config": [{
+        "measurement_units_id": "deg",
+        "date_from": "2022-03-01T12:10:00",
+        "date_to": null,
+        "notes": null,
+        "update_at": "2022-03-31T12:13:27",
+        "column_name": [
+          {
+            "column_name": "Wave Direction (degrees)",
+            "statistic_type_id": "avg",
+            "is_ignored": false,
+            "update_at": "2022-03-31T12:13:27"
+        }]
+      }]
 
     }]
   }]
