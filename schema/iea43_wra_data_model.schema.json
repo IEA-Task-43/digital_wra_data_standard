@@ -111,7 +111,7 @@
       ],
       "examples": [
         "wind_speed  (the horizontal component of wind speed)",
-        "wind_direction  (the direction form which the wind is coming from)",
+        "wind_direction  (the direction from which the wind is coming from)",
         "air_temperature  (outdoor ambient temperature of the air)",
         "water_temperature  (is the in situ temperature of the water. In CF Conventions this is 'sea_water_temperature'.)",
         "temperature  (the temperature of a body or indoor ambient air temperature)",
@@ -148,7 +148,7 @@
         "motion_corrected_vertical_wind_speed (the vertical component of wind speed which has been corrected due to the motion of the measuring sensor/device, typically from floating lidar systems)",
         "wave_significant_height (is a statistic computed from wave measurements and corresponds to the average height of the highest one third of the waves, where the height is defined as the vertical distance from a wave trough to the following wave crest. In CF Conventions this is equivalent to 'sea_surface_wave_significant_height'.)",
         "wave_maximum_height (is the greatest trough to crest distance measured during the observation period. Wave height is defined as the vertical distance from a wave trough to the following wave crest. In CF Conventions this is equivalent to 'sea_surface_wave_maximum_height'.)",
-        "wave_direction (the direction form which the wave is coming from. The direction is a bearing in the usual geographical sense, measured positive clockwise from due north. In CF Conventions this is equivalent to 'sea_surface_wave_from_direction'.)",
+        "wave_direction (the direction from which the wave is coming from. The direction is a bearing in the usual geographical sense, measured positive clockwise from due north. In CF Conventions this is equivalent to 'sea_surface_wave_from_direction'.)",
         "orientation (the direction something points or faces relative to north or other specified positions)",
         "compass_direction (the direction as measured by a compass, therefore referenced to magnetic north)",
         "true_north_offset (the offset something points or faces relative to true north, e.g. from a solar compass such as a Geovane)",
