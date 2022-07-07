@@ -310,6 +310,27 @@
             "update_at": "2022-03-31T12:13:27"
         }]
       }]
+    },{
+      "name": "Wave_PP",
+      "measurement_type_id": "wave_peak_period",
+      "height_m": 0,
+      "height_reference_id": "sea_level",
+      "notes": "Wave peak period.",
+      "update_at": "2022-03-31T12:13:27",
+      "logger_measurement_config": [{
+        "measurement_units_id": "s",
+        "date_from": "2022-03-01T12:10:00",
+        "date_to": null,
+        "notes": null,
+        "update_at": "2022-03-31T12:13:27",
+        "column_name": [
+          {
+            "column_name": "Wave Peak Period (seconds)",
+            "statistic_type_id": "avg",
+            "is_ignored": false,
+            "update_at": "2022-03-31T12:13:27"
+        }]
+      }]
 
     }]
   }]

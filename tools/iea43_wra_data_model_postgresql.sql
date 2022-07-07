@@ -136,6 +136,7 @@ INSERT INTO measurement_type (id) VALUES
     ('wave_significant_height'),
     ('wave_maximum_height'),
     ('wave_direction'),
+    ('wave_peak_period'),
     ('orientation'),
     ('compass_direction'),
     ('true_north_offset'),
