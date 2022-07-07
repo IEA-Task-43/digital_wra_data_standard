@@ -256,7 +256,7 @@
       "update_at": "2022-03-31T12:13:27",
       "logger_measurement_config": [{
         "measurement_units_id": "m",
-        "height_m": -1,
+        "height_m": 0,
         "date_from": "2022-03-01T12:10:00",
         "date_to": null,
         "notes": "Wave significant height.",
@@ -265,6 +265,28 @@
           {
             "column_name": "Wave Significant Height (m)",
             "statistic_type_id": "avg",
+            "is_ignored": false,
+            "update_at": "2022-03-31T12:13:27"
+        }]
+      }]
+    },{
+      "name": "Wave_Height_Max",
+      "measurement_type_id": "wave_maximum_height",
+      "height_m": 0,
+      "height_reference_id": "sea_level",
+      "notes": "Wave maximum height.",
+      "update_at": "2022-03-31T12:13:27",
+      "logger_measurement_config": [{
+        "measurement_units_id": "m",
+        "height_m": 0,
+        "date_from": "2022-03-01T12:10:00",
+        "date_to": null,
+        "notes": null,
+        "update_at": "2022-03-31T12:13:27",
+        "column_name": [
+          {
+            "column_name": "Wave Maximum Height (m)",
+            "statistic_type_id": "max",
             "is_ignored": false,
             "update_at": "2022-03-31T12:13:27"
         }]
