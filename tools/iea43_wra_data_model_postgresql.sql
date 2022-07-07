@@ -133,6 +133,7 @@ INSERT INTO measurement_type (id) VALUES
     ('motion_corrected_wind_speed'),
     ('motion_corrected_wind_direction'),
     ('motion_corrected_vertical_wind_speed'),
+    ('wave_significant_height'),
     ('orientation'),
     ('compass_direction'),
     ('true_north_offset'),
