@@ -99,6 +99,7 @@ INSERT INTO measurement_type (id) VALUES
     ('wind_speed'),
     ('wind_direction'),
     ('air_temperature'),
+    ('water_temperature'),
     ('temperature'),
     ('air_pressure'),
     ('air_density'),

@@ -225,6 +225,29 @@
             "update_at": "2022-03-31T12:13:27"
         }]
       }]
+    },{
+      "name": "Water_Tmp",
+      "measurement_type_id": "water_temperature",
+      "height_m": -1,
+      "height_reference_id": "sea_level",
+      "notes": "Water temperature under the hull of the buoy.",
+      "update_at": "2022-03-31T12:13:27",
+      "logger_measurement_config": [{
+        "measurement_units_id": "deg_C",
+        "height_m": -1,
+        "date_from": "2022-03-01T12:10:00",
+        "date_to": null,
+        "notes": "Water temperature under the hull of the buoy.",
+        "update_at": "2022-03-31T12:13:27",
+        "column_name": [
+          {
+            "column_name": "Water Temperature (°C) at -1m",
+            "statistic_type_id": "avg",
+            "is_ignored": false,
+            "update_at": "2022-03-31T12:13:27"
+        }]
+      }]
+
     }]
   }]
 }
