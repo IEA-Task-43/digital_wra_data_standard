@@ -256,7 +256,6 @@
       "update_at": "2022-03-31T12:13:27",
       "logger_measurement_config": [{
         "measurement_units_id": "m",
-        "height_m": 0,
         "date_from": "2022-03-01T12:10:00",
         "date_to": null,
         "notes": "Wave significant height.",
@@ -278,7 +277,6 @@
       "update_at": "2022-03-31T12:13:27",
       "logger_measurement_config": [{
         "measurement_units_id": "m",
-        "height_m": 0,
         "date_from": "2022-03-01T12:10:00",
         "date_to": null,
         "notes": null,
