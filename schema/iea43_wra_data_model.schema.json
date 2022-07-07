@@ -107,6 +107,7 @@
         "elevation",
         "altitude",
         "azimuth",
+        "water_level",
         "timestamp",
         "other"
       ],
@@ -163,6 +164,7 @@
         "elevation (the height the surface of the earth is above mean sea level)",
         "altitude (the height above mean sea level or is the angle between the sun and the observer's local horizon, also sometimes referred to as elevation)",
         "azimuth (is the angle of the sun around the horizon, in the northern hemisphere this is usually measured from north and increasing eastward whereas in the southern hemisphere it can be measured from the south and increasing westward)",
+        "water_level (is the height of the sea surface above the sea floor. In CF Conventions this is equivalent, but opposite in respect of their point of reference, to 'sea_floor_depth_below_sea_surface'.)",
         "timestamp (the timestamp of when a measurement value was recorded)",
         "other"
       ]
