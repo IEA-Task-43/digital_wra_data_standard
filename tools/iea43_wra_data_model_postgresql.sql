@@ -172,6 +172,7 @@ INSERT INTO measurement_units (id) VALUES
     ('ohm'),
     ('Hz'),
     ('mm'),
+    ('m'),
     ('W/m^2'),
     ('W'),
     ('kW'),
