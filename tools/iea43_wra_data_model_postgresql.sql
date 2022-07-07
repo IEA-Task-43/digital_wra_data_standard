@@ -158,6 +158,7 @@ INSERT INTO height_reference (id) VALUES
     ('mean_sea_level'),
     ('sea_level'),
     ('lowest_astronomical_tide'),
+    ('sea_floor'),
     ('other');
 
 INSERT INTO measurement_units (id) VALUES

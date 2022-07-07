@@ -114,7 +114,7 @@
         "wind_speed  (the horizontal component of wind speed)",
         "wind_direction  (the direction from which the wind is coming from)",
         "air_temperature  (outdoor ambient temperature of the air)",
-        "water_temperature  (is the in situ temperature of the water. In CF Conventions this is 'sea_water_temperature'.)",
+        "water_temperature  (is the in situ temperature of the water. In CF Conventions this is equivalent to 'sea_water_temperature'.)",
         "temperature  (the temperature of a body or indoor ambient air temperature)",
         "air_pressure (outdoor pressure of the air)",
         "air_density (the density of air)",
@@ -188,6 +188,7 @@
         "mean_sea_level",
         "sea_level",
         "lowest_astronomical_tide",
+        "sea_floor",
         "other"
       ],
       "default": "ground_level"
