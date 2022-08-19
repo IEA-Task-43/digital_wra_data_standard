@@ -427,7 +427,7 @@ CREATE TABLE IF NOT EXISTS sensor(
     classification text,
     instrument_poi_height_mm decimal,
     is_heated boolean,
-	sensor_body_size_mm decimal,
+    sensor_body_size_mm decimal,
     notes text,
     update_at timestamp WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
     updated_by UUID,
