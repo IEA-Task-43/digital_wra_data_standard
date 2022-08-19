@@ -1214,7 +1214,7 @@
                           "number",
                           "null"
                         ],
-                        "title": "Sensor body size [mm]",
+                        "title": "Sensor Body Size [mm]",
                         "description": "This is the instrument body size in mm. This parameter is used in IEC 61400-12-2 to ensure that the size of the anemometer body is smaller than the diameter of the tube used to mount the anemometer.",
                         "examples": [
                           "50",
