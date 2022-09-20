@@ -13,9 +13,6 @@ Additional labels for pre-release and build metadata are available as extensions
 
 1. To `sensor` object, added:
     1. `sensor_body_size_mm` (Issue [#155](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/155))
-1. To `mounting_arrangement` object, added:
-    1. `mounting_tube_length_mm` (Issue [#151] (https://github.com/IEA-Task-43/digital_wra_data_standard/issues/151))
-1. To `mounting_arrangement` ammended the definition of upstand_diameter_mm to clarify with the use of `mounting_tube_length_mm` (Issue [#151] (https://github.com/IEA-Task-43/digital_wra_data_standard/issues/151))
 
 ## [1.1.0-2022.06]
 
