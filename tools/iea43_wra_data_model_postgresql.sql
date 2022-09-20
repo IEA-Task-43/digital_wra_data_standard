@@ -489,6 +489,7 @@ CREATE TABLE IF NOT EXISTS mounting_arrangement(
     boom_model text,
     upstand_height_mm decimal,
     upstand_diameter_mm decimal,
+	mounting_tube_length_mm decimal,
     boom_diameter_mm decimal,
     boom_length_mm decimal,
     distance_from_mast_to_sensor_mm decimal,

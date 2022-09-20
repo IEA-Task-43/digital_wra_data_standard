@@ -1533,7 +1533,16 @@
                           "null"
                         ],
                         "title": "Upstand Diameter [mm]",
-                        "description": "The diameter, measured in millimeters, of the upstand.",
+                        "description": "The diameter, measured in millimeters, of the upstand. Also, this definition is valid for the upstand mounted on top of another long tube such as on page 164 of IEC 61400-12-2 and here labeled as mounting_tube_length_mm",
+                        "minimum": 0
+                      },
+                      "mounting_tube_length_mm": {
+                        "type": [
+                          "number",
+                          "null"
+                        ],
+                        "title": "Mounting Tube Lenght [mm]",
+                        "description": "The length, in millimeters, of the tube that the sensor is directly mounted on. This is used if the mounting tube is different to the upstand_height_mm as in some cases the total upstand_height_mm may be made up of more than one tube. This parameter may be used to satisfy the condition in the IEC 61400-12-1:2017 that the Tube length ≥ tube length used during calibration' where the 'tube length used during calibration' relates to the mounting_length in the digital calibration certificate."
                         "minimum": 0
                       },
                       "boom_diameter_mm": {
