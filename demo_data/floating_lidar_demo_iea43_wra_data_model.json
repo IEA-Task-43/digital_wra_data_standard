@@ -353,6 +353,43 @@
         }]
       }]
     },{
+      "name": "WtrSpd5m",
+      "measurement_type_id": "water_speed",
+      "height_m": -5,
+      "height_reference_id": "sea_level",
+      "notes": "Water speed at 5m.",
+      "update_at": "2022-03-31T12:13:27",
+      "logger_measurement_config": [{
+        "measurement_units_id": "m/s",
+        "height_m": 3.5,
+        "date_from": "2022-03-01T12:10:00",
+        "date_to": null,
+        "notes": null,
+        "update_at": "2022-03-31T12:13:27",
+        "column_name": [
+          {
+            "column_name": "Horizontal Water Speed (m/s) at 3.5m",
+            "statistic_type_id": "avg",
+            "is_ignored": false,
+            "update_at": "2022-03-31T12:13:27"
+          },{
+            "column_name": "Horizontal Water Speed Std. Dev. (m/s) at 3.5m",
+            "statistic_type_id": "sd",
+            "is_ignored": false,
+            "update_at": "2022-03-31T12:13:27"
+          },{
+            "column_name": "Horizontal Water Speed Min (m/s) at 3.5m",
+            "statistic_type_id": "min",
+            "is_ignored": false,
+            "update_at": "2022-03-31T12:13:27"
+          },{
+            "column_name": "Horizontal Water Speed Max (m/s) at 3.5m",
+            "statistic_type_id": "max",
+            "is_ignored": false,
+            "update_at": "2022-03-31T12:13:27"
+        }]
+      }]
+    },{
       "name": "Water_Level",
       "measurement_type_id": "water_level",
       "height_m": 0,
@@ -373,7 +410,6 @@
             "update_at": "2022-03-31T12:13:27"
         }]
       }]
-
     }]
   }]
 }
