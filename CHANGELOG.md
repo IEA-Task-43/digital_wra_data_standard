@@ -13,6 +13,7 @@ Additional labels for pre-release and build metadata are available as extensions
 
 1. To `sensor` object, added:
     1. `sensor_body_size_mm` (Issue [#155](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/155))
+1. Fixed `logger_firmware_version` allowing to be null (Issue [#87](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/87))
 
 ## [1.1.0-2022.06]
 
