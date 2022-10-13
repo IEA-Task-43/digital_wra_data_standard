@@ -139,6 +139,7 @@ INSERT INTO measurement_type (id) VALUES
     ('wave_directional_spread'),
     ('wave_peak_period'),
     ('water_speed'),
+    ('water_direction'),
     ('orientation'),
     ('compass_direction'),
     ('true_north_offset'),
