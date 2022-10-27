@@ -477,6 +477,33 @@
         }]
       }]
     },{
+      "name": "Echo_5m",
+      "measurement_type_id": "echo_intensity",
+      "height_m": -5,
+      "height_reference_id": "sea_level",
+      "notes": "Echo intensity at 5m.",
+      "update_at": "2022-03-31T12:13:27",
+      "logger_measurement_config": [{
+        "measurement_units_id": "dB",
+        "height_m": 3.5,
+        "date_from": "2022-03-01T12:10:00",
+        "date_to": null,
+        "notes": null,
+        "update_at": "2022-03-31T12:13:27",
+        "column_name": [
+          {
+            "column_name": "Echo Intensity (decibels) at 3.5m",
+            "statistic_type_id": "avg",
+            "is_ignored": false,
+            "update_at": "2022-03-31T12:13:27"
+          },{
+            "column_name": "Echo Intensity Std. Dev. (decibels) at 3.5m",
+            "statistic_type_id": "sd",
+            "is_ignored": false,
+            "update_at": "2022-03-31T12:13:27"
+        }]
+      }]
+    },{
       "name": "Water_Level",
       "measurement_type_id": "water_level",
       "height_m": 0,
