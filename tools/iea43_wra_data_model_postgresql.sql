@@ -239,6 +239,7 @@ INSERT INTO sensor_type (id) VALUES
     ('compass'),
     ('solar_compass'),
     ('inertial_measurement_unit'),
+    ('adcp'),
     ('other');
 
 INSERT INTO mounting_type (id) VALUES
