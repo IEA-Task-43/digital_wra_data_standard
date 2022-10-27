@@ -20,12 +20,12 @@
       "notes": "Device datum plane is at window, therefore 1 m for device and 0.5 m for mounting.",
       "update_at": "2022-03-31T12:13:27"
     },{
-      "device_datum_plane_height_m": 0.2,
-      "height_reference_id": "sea_floor",
-      "device_vertical_orientation": "upward",
+      "device_datum_plane_height_m": 1.2,
+      "height_reference_id": "sea_level",
+      "device_vertical_orientation": "downward",
       "date_from": "2022-03-01T12:10:00",
       "date_to": null,
-      "notes": "Device is mounted at the anchor.",
+      "notes": "Device is mounted under the buoy. Datum plane is therefore 1 m for the buoy plus 0.2 m for the device.",
       "update_at": "2022-03-31T12:13:27"
     }],
     "logger_main_config": [{
@@ -67,7 +67,7 @@
       "averaging_period_minutes": 10,
       "timestamp_is_end_of_period": false,
       "clock_is_auto_synced": true,
-      "notes": "This is the ADCP mounted at the anchor.",
+      "notes": "This is the ADCP mounted under the buoy.",
       "update_at": "2022-03-31T12:13:27"
     }],
     "measurement_point": [{
@@ -384,29 +384,29 @@
       "update_at": "2022-03-31T12:13:27",
       "logger_measurement_config": [{
         "measurement_units_id": "m/s",
-        "height_m": 3.5,
+        "height_m": 3.8,
         "date_from": "2022-03-01T12:10:00",
         "date_to": null,
         "notes": null,
         "update_at": "2022-03-31T12:13:27",
         "column_name": [
           {
-            "column_name": "Horizontal Water Speed (m/s) at 3.5m",
+            "column_name": "Horizontal Water Speed (m/s) at 3.8m",
             "statistic_type_id": "avg",
             "is_ignored": false,
             "update_at": "2022-03-31T12:13:27"
           },{
-            "column_name": "Horizontal Water Speed Std. Dev. (m/s) at 3.5m",
+            "column_name": "Horizontal Water Speed Std. Dev. (m/s) at 3.8m",
             "statistic_type_id": "sd",
             "is_ignored": false,
             "update_at": "2022-03-31T12:13:27"
           },{
-            "column_name": "Horizontal Water Speed Min (m/s) at 3.5m",
+            "column_name": "Horizontal Water Speed Min (m/s) at 3.8m",
             "statistic_type_id": "min",
             "is_ignored": false,
             "update_at": "2022-03-31T12:13:27"
           },{
-            "column_name": "Horizontal Water Speed Max (m/s) at 3.5m",
+            "column_name": "Horizontal Water Speed Max (m/s) at 3.8m",
             "statistic_type_id": "max",
             "is_ignored": false,
             "update_at": "2022-03-31T12:13:27"
@@ -421,29 +421,29 @@
       "update_at": "2022-03-31T12:13:27",
       "logger_measurement_config": [{
         "measurement_units_id": "m/s",
-        "height_m": 3.5,
+        "height_m": 3.8,
         "date_from": "2022-03-01T12:10:00",
         "date_to": null,
         "notes": null,
         "update_at": "2022-03-31T12:13:27",
         "column_name": [
           {
-            "column_name": "Vertical Water Speed (m/s) at 3.5m",
+            "column_name": "Vertical Water Speed (m/s) at 3.8m",
             "statistic_type_id": "avg",
             "is_ignored": false,
             "update_at": "2022-03-31T12:13:27"
           },{
-            "column_name": "Vertical Water Speed Std. Dev. (m/s) at 3.5m",
+            "column_name": "Vertical Water Speed Std. Dev. (m/s) at 3.8m",
             "statistic_type_id": "sd",
             "is_ignored": false,
             "update_at": "2022-03-31T12:13:27"
           },{
-            "column_name": "Vertical Water Speed Min (m/s) at 3.5m",
+            "column_name": "Vertical Water Speed Min (m/s) at 3.8m",
             "statistic_type_id": "min",
             "is_ignored": false,
             "update_at": "2022-03-31T12:13:27"
           },{
-            "column_name": "Vertical Water Speed Max (m/s) at 3.5m",
+            "column_name": "Vertical Water Speed Max (m/s) at 3.8m",
             "statistic_type_id": "max",
             "is_ignored": false,
             "update_at": "2022-03-31T12:13:27"
@@ -458,19 +458,19 @@
       "update_at": "2022-03-31T12:13:27",
       "logger_measurement_config": [{
         "measurement_units_id": "deg",
-        "height_m": 3.5,
+        "height_m": 3.8,
         "date_from": "2022-03-01T12:10:00",
         "date_to": null,
         "notes": null,
         "update_at": "2022-03-31T12:13:27",
         "column_name": [
           {
-            "column_name": "Horizontal Water Direction (degrees) at 3.5m",
+            "column_name": "Horizontal Water Direction (degrees) at 3.8m",
             "statistic_type_id": "avg",
             "is_ignored": false,
             "update_at": "2022-03-31T12:13:27"
           },{
-            "column_name": "Horizontal Water Direction Std. Dev. (degrees) at 3.5m",
+            "column_name": "Horizontal Water Direction Std. Dev. (degrees) at 3.8m",
             "statistic_type_id": "sd",
             "is_ignored": false,
             "update_at": "2022-03-31T12:13:27"
@@ -485,19 +485,19 @@
       "update_at": "2022-03-31T12:13:27",
       "logger_measurement_config": [{
         "measurement_units_id": "dB",
-        "height_m": 3.5,
+        "height_m": 3.8,
         "date_from": "2022-03-01T12:10:00",
         "date_to": null,
         "notes": null,
         "update_at": "2022-03-31T12:13:27",
         "column_name": [
           {
-            "column_name": "Echo Intensity (decibels) at 3.5m",
+            "column_name": "Echo Intensity (decibels) at 3.8m",
             "statistic_type_id": "avg",
             "is_ignored": false,
             "update_at": "2022-03-31T12:13:27"
           },{
-            "column_name": "Echo Intensity Std. Dev. (decibels) at 3.5m",
+            "column_name": "Echo Intensity Std. Dev. (decibels) at 3.8m",
             "statistic_type_id": "sd",
             "is_ignored": false,
             "update_at": "2022-03-31T12:13:27"
@@ -512,14 +512,14 @@
       "update_at": "2022-03-31T12:13:27",
       "logger_measurement_config": [{
         "measurement_units_id": "-",
-        "height_m": 3.5,
+        "height_m": 3.8,
         "date_from": "2022-03-01T12:10:00",
         "date_to": null,
         "notes": null,
         "update_at": "2022-03-31T12:13:27",
         "column_name": [
           {
-            "column_name": "SNR (-) at 3.5m",
+            "column_name": "SNR (-) at 3.8m",
             "statistic_type_id": "avg",
             "is_ignored": false,
             "update_at": "2022-03-31T12:13:27"
