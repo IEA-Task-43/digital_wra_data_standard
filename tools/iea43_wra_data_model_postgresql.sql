@@ -135,6 +135,7 @@ INSERT INTO measurement_type (id) VALUES
     ('carrier_to_noise_ratio'),
     ('doppler_spectral_broadening'),
     ('echo_intensity'),
+    ('signal_to_noise_ratio'),
     ('motion_corrected_wind_speed'),
     ('motion_corrected_wind_direction'),
     ('motion_corrected_vertical_wind_speed'),
