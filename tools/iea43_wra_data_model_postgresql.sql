@@ -55,6 +55,10 @@ CREATE TABLE IF NOT EXISTS orientation_reference (
     id text PRIMARY KEY
 );
 
+CREATE TABLE IF NOT EXISTS device_vertical_orientation (
+    id text PRIMARY KEY
+);
+
 CREATE TABLE IF NOT EXISTS structure_type (
     id text PRIMARY KEY
 );
@@ -247,6 +251,10 @@ INSERT INTO orientation_reference (id) VALUES
     ('true_north'),
     ('grid_north');
 
+INSERT INTO device_vertical_orientation (id) VALUES
+    ('upward'),
+    ('downward');
+
 INSERT INTO structure_type (id) VALUES
     ('lightning_finial'),
     ('aviation_light'),
@@ -325,6 +333,7 @@ CREATE TABLE IF NOT EXISTS vertical_profiler_properties(
     height_reference_id text DEFAULT 'ground_level',
     device_orientation_deg decimal CHECK (device_orientation_deg >= 0 AND device_orientation_deg <= 360),
     orientation_reference_id text,
+    device_vertical_orientation_id text,
     date_from timestamp WITHOUT TIME ZONE NOT NULL,
     date_to timestamp WITHOUT TIME ZONE,
     notes text,
@@ -332,7 +341,8 @@ CREATE TABLE IF NOT EXISTS vertical_profiler_properties(
     updated_by UUID,
     FOREIGN KEY (measurement_location_uuid) REFERENCES measurement_location (uuid),
     FOREIGN KEY (height_reference_id) REFERENCES height_reference (id),
-    FOREIGN KEY (orientation_reference_id) REFERENCES orientation_reference (id)
+    FOREIGN KEY (orientation_reference_id) REFERENCES orientation_reference (id),
+    FOREIGN KEY (device_vertical_orientation_id) REFERENCES device_vertical_orientation (id)
 );
 
 CREATE TABLE IF NOT EXISTS logger_main_config(

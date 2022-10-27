@@ -581,6 +581,18 @@
                 "orientation_reference_id": {
                   "$ref": "#/definitions/orientation_reference"
                 },
+                "device_vertical_orientation": {
+                  "type": [
+                    "string",
+                    "null"
+                  ],
+                  "title": "Device Vertical Orientation",
+                  "description": "The vertical orientation that the remote sensing device is installed. E.g. an ADCP mounted on the sea floor has an 'upwards' vertical orientation pointing towards the sea surface whereas an ADCP mounted underneath a buoy has a 'downward' vertical orientation pointing towards the sea floor.",
+                  "enum": [
+                    "upward",
+                    "downward"
+                  ]
+                },
                 "date_from": {
                   "$ref": "#/definitions/date_from"
                 },
@@ -628,6 +640,7 @@
                     "AXYS Technologies",
                     "AQSystem",
                     "Pentaluum",
+                    "Nortek",
                     "Other"
                   ]
                 },

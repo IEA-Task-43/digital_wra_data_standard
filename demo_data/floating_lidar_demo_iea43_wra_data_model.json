@@ -19,6 +19,14 @@
       "date_to": null,
       "notes": "Device datum plane is at window, therefore 1 m for device and 0.5 m for mounting.",
       "update_at": "2022-03-31T12:13:27"
+    },{
+      "device_datum_plane_height_m": 0.2,
+      "height_reference_id": "sea_floor",
+      "device_vertical_orientation": "upward",
+      "date_from": "2022-03-01T12:10:00",
+      "date_to": null,
+      "notes": "Device is mounted at the anchor.",
+      "update_at": "2022-03-31T12:13:27"
     }],
     "logger_main_config": [{
       "logger_serial_number": "9999",
@@ -38,7 +46,7 @@
       "timestamp_is_end_of_period": false,
       "clock_is_auto_synced": true,
       "logger_acquisition_uncertainty": 0.1,
-      "notes": "I can write anything I want here.",
+      "notes": "This is the lidar.",
       "update_at": "2022-03-31T12:13:27",
       "lidar_config": [{
         "flow_corrections_applied": false,
@@ -46,6 +54,21 @@
         "date_to": null,
         "update_at": "2022-03-31T12:13:27"
       }]
+    },{
+      "logger_serial_number": "123456",
+      "logger_model_name": "Signature1000",
+      "logger_id": "123456",
+      "logger_oem_id": "Nortek",
+      "logger_name": "FLS1-ADCP",
+      "logger_firmware_version": "2.3",
+      "date_from": "2022-03-01T12:10:00",
+      "date_to": null,
+      "offset_from_utc_hrs": 0,
+      "averaging_period_minutes": 10,
+      "timestamp_is_end_of_period": false,
+      "clock_is_auto_synced": true,
+      "notes": "This is the ADCP mounted at the anchor.",
+      "update_at": "2022-03-31T12:13:27"
     }],
     "measurement_point": [{
       "name": "Spd_80",
