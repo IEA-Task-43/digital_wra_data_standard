@@ -1019,6 +1019,16 @@
                         "title": "Connection Channel",
                         "description": "The connection channel the sensor is wired into on the logger."
                       },
+                      "logger_stated_boom_orientation_deg": {
+                        "type": [
+                          "number",
+                          "null"
+                        ],
+                        "title": "Logger Stated Boom Orientation [deg]",
+                        "description": "The boom orientation of the horizontal boom the sensor is mounted on as programmed into the logger.",
+                        "minimum": 0,
+                        "maximum": 360
+                      },
                       "date_from": {
                         "$ref": "#/definitions/date_from"
                       },

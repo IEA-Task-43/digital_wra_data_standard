@@ -396,6 +396,7 @@ CREATE TABLE IF NOT EXISTS logger_measurement_config(
     height_m decimal,
     serial_number text,
     connection_channel text,
+    logger_stated_boom_orientation_deg decimal CHECK (logger_stated_boom_orientation_deg >= 0 AND logger_stated_boom_orientation_deg <= 360),
     date_from timestamp WITHOUT TIME ZONE NOT NULL,
     date_to timestamp WITHOUT TIME ZONE,
     notes text,
