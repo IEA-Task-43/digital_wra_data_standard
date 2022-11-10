@@ -600,7 +600,7 @@
       "measurement_type_id": "pressure",
       "height_m": 0,
       "height_reference_id": "sea_floor",
-      "notes": "Sea floor conductivity.",
+      "notes": "Sea floor pressure.",
       "update_at": "2022-03-31T12:13:27",
       "logger_measurement_config": [{
         "measurement_units_id": "dbar",
