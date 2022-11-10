@@ -529,8 +529,8 @@
       "name": "Salinity_0m",
       "measurement_type_id": "salinity",
       "height_m": 0,
-      "height_reference_id": "sea_level",
-      "notes": "Sea surface salinity using ppt units.",
+      "height_reference_id": "sea_floor",
+      "notes": "Sea floor salinity using ppt units.",
       "update_at": "2022-03-31T12:13:27",
       "logger_measurement_config": [{
         "measurement_units_id": "ppt",
@@ -564,8 +564,8 @@
       "name": "Conductivity_0m",
       "measurement_type_id": "conductivity",
       "height_m": 0,
-      "height_reference_id": "sea_level",
-      "notes": "Sea surface conductivity.",
+      "height_reference_id": "sea_floor",
+      "notes": "Sea floor conductivity.",
       "update_at": "2022-03-31T12:13:27",
       "logger_measurement_config": [{
         "measurement_units_id": "S/m",
@@ -577,6 +577,41 @@
         "column_name": [
           {
             "column_name": "Conductivity (S/m) at 0m",
+            "statistic_type_id": "avg",
+            "is_ignored": false,
+            "update_at": "2022-03-31T12:13:27"
+          }]
+      }],
+      "sensor": [{
+        "oem": "Sea-Bird Electronics",
+        "model": "37-SMP MicroCAT",
+        "serial_number": "SBE012345",
+        "sensor_type_id": "ctd",
+        "instrument_poi_height_mm": null,
+        "is_heated": false,
+        "date_from": "2020-04-12T12:00:00",
+        "date_to": null,
+        "update_at": "2020-04-18T18:13:00",
+        "notes": "",
+        "calibration": null
+      }]
+    },{
+      "name": "Pressure_0m",
+      "measurement_type_id": "pressure",
+      "height_m": 0,
+      "height_reference_id": "sea_floor",
+      "notes": "Sea floor conductivity.",
+      "update_at": "2022-03-31T12:13:27",
+      "logger_measurement_config": [{
+        "measurement_units_id": "dbar",
+        "height_m": 0,
+        "date_from": "2022-03-01T12:10:00",
+        "date_to": null,
+        "notes": null,
+        "update_at": "2022-03-31T12:13:27",
+        "column_name": [
+          {
+            "column_name": "Pressure (dbar) at 0m",
             "statistic_type_id": "avg",
             "is_ignored": false,
             "update_at": "2022-03-31T12:13:27"
