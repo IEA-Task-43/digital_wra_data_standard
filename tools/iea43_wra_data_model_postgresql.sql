@@ -162,6 +162,7 @@ INSERT INTO measurement_type (id) VALUES
     ('w'),
     ('elevation'),
     ('altitude'),
+    ('height'),
     ('azimuth'),
     ('water_level'),
     ('timestamp'),
