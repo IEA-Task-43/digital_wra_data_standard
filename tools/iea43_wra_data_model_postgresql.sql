@@ -127,6 +127,7 @@ INSERT INTO measurement_type (id) VALUES
     ('illuminance'),
     ('fog'),
     ('salinity'),
+    ('conductivity'),
     ('gps_coordinates'),
     ('status'),
     ('flag'),
@@ -202,6 +203,7 @@ INSERT INTO measurement_units (id) VALUES
     ('g/L'),
     ('g/kg'),
     ('ppt'),
+    ('S/m'),
     ('-');
 
 INSERT INTO statistic_type (id) VALUES

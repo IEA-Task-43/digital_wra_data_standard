@@ -80,6 +80,7 @@
         "illuminance",
         "fog",
         "salinity",
+        "conductivity",
         "gps_coordinates",
         "status",
         "flag",
@@ -974,6 +975,7 @@
                           "g/L",
                           "g/kg",
                           "ppt",
+                          "S/m",
                           "-"
                         ]
                       },
