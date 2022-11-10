@@ -202,6 +202,7 @@ INSERT INTO measurement_units (id) VALUES
     ('m/s^2'),
     ('lux'),
     ('dB'),
+    ('L'),
     ('g/L'),
     ('g/kg'),
     ('ppt'),
