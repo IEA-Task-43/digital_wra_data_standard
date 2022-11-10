@@ -126,6 +126,7 @@ INSERT INTO measurement_type (id) VALUES
     ('soiling_loss_index'),
     ('illuminance'),
     ('fog'),
+    ('salinity'),
     ('gps_coordinates'),
     ('status'),
     ('flag'),
@@ -198,6 +199,9 @@ INSERT INTO measurement_units (id) VALUES
     ('m/s^2'),
     ('lux'),
     ('dB'),
+    ('g/L'),
+    ('g/kg'),
+    ('ppt'),
     ('-');
 
 INSERT INTO statistic_type (id) VALUES
@@ -242,6 +246,7 @@ INSERT INTO sensor_type (id) VALUES
     ('solar_compass'),
     ('inertial_measurement_unit'),
     ('adcp'),
+    ('ctd'),
     ('other');
 
 INSERT INTO mounting_type (id) VALUES

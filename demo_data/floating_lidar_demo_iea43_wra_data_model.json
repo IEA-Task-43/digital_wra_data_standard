@@ -526,6 +526,28 @@
           }]
       }]
     },{
+      "name": "Salinity_0m",
+      "measurement_type_id": "salinity",
+      "height_m": 0,
+      "height_reference_id": "sea_level",
+      "notes": "Sea surface salinity using ppt units.",
+      "update_at": "2022-03-31T12:13:27",
+      "logger_measurement_config": [{
+        "measurement_units_id": "ppt",
+        "height_m": 0,
+        "date_from": "2022-03-01T12:10:00",
+        "date_to": null,
+        "notes": null,
+        "update_at": "2022-03-31T12:13:27",
+        "column_name": [
+          {
+            "column_name": "Salinity (ppt) at 0m",
+            "statistic_type_id": "avg",
+            "is_ignored": false,
+            "update_at": "2022-03-31T12:13:27"
+          }]
+      }]
+    },{
       "name": "Water_Level",
       "measurement_type_id": "water_level",
       "height_m": 0,

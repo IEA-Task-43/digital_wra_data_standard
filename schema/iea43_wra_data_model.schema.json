@@ -79,6 +79,7 @@
         "soiling_loss_index",
         "illuminance",
         "fog",
+        "salinity",
         "gps_coordinates",
         "status",
         "flag",
@@ -144,6 +145,7 @@
         "soiling_loss_index (an index of lost energy between clean and dirty PV modules, https://www.campbellsci.com/cr-pvs1 )",
         "illuminance (measure of visible light falling onto a per unit area, typically measured in lux)",
         "fog (is a visible aerosol consisting of tiny water droplets or ice crystals suspended in the air at or near the Earth's surface)",
+        "salinity (is the salt content of water.  In CF Conventions this is equivalent to 'sea_water_salinity', 'sea_water_practical_salinity' or 'sea_water_absolute_salinity' depending on the scale been used.)",
         "gps_coordinates (latitude and/or longitude as measured by a gps)",
         "status (a status flag or other to describe the status of a sensor or object)",
         "counter (a simple counter)",
@@ -969,6 +971,9 @@
                           "m/s^2",
                           "lux",
                           "dB",
+                          "g/L",
+                          "g/kg",
+                          "ppt",
                           "-"
                         ]
                       },
@@ -1150,6 +1155,7 @@
                           "solar_compass",
                           "inertial_measurement_unit",
                           "adcp",
+                          "ctd",
                           "other"
                         ]
                       },
