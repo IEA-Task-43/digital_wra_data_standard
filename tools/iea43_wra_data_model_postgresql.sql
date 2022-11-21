@@ -97,6 +97,9 @@ INSERT INTO logger_oem (id) VALUES
     ('AXYS Technologies'),
     ('AQSystem'),
     ('Pentaluum'),
+    ('Nortek'),
+    ('Teledyne RDI'),
+    ('Aanderaa'),
     ('other');
 
 INSERT INTO measurement_type (id) VALUES
