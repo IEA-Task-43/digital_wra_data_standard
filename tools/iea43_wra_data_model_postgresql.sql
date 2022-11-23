@@ -226,6 +226,8 @@ INSERT INTO sensor_type (id) VALUES
     ('illuminance_sensor'),
     ('compass'),
     ('solar_compass'),
+    ('lidar'),
+    ('sodar'),
     ('other');
 
 INSERT INTO mounting_type (id) VALUES
