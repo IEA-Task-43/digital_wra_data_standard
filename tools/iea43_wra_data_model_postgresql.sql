@@ -288,6 +288,8 @@ CREATE TABLE IF NOT EXISTS mast_properties(
 CREATE TABLE IF NOT EXISTS measurement_location_mast_properties(
     measurement_location_uuid UUID,
     mast_properties_uuid UUID,
+    date_from timestamp WITHOUT TIME ZONE,
+    date_to timestamp WITHOUT TIME ZONE,
     PRIMARY KEY (measurement_location_uuid, mast_properties_uuid),
     FOREIGN KEY (measurement_location_uuid) REFERENCES measurement_location (uuid),
     FOREIGN KEY (mast_properties_uuid) REFERENCES mast_properties (uuid)

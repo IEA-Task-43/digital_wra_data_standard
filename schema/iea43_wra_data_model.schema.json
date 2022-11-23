@@ -365,6 +365,12 @@
                   81.3
                 ]
               },
+              "date_from": {
+                "$ref": "#/definitions/date_from"
+              },
+              "date_to": {
+                "$ref": "#/definitions/date_to"
+              },
               "notes": {
                 "$ref": "#/definitions/notes"
               },
