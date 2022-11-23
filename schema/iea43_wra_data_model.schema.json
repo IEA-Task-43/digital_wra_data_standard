@@ -1171,6 +1171,8 @@
                           "illuminance_sensor",
                           "compass",
                           "solar_compass",
+                          "lidar",
+                          "sodar",
                           "other"
                         ]
                       },

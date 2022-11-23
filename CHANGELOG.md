@@ -13,6 +13,9 @@ Additional labels for pre-release and build metadata are available as extensions
 
 1. To `sensor` object, added:
     1. `sensor_body_size_mm` (Issue [#155](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/155))
+1. To `sensor_type`:
+   1. add `lidar` (Issue [#186](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/186)),
+   2. add `sodar` (Issue [#186](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/186)).
 
 ## [1.1.0-2022.06]
 
