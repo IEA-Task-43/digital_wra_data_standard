@@ -20,6 +20,7 @@ Additional labels for pre-release and build metadata are available as extensions
 1. To `sensor_type`:
    1. add `lidar` (Issue [#186](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/186)),
    2. add `sodar` (Issue [#186](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/186)).
+1. To `mast_properties` add `date_from` and `date_to` (Issue [#192](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/192)).
 
 ## [1.1.0-2022.06]
 
