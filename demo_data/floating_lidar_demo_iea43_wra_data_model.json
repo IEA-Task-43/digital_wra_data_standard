@@ -20,7 +20,7 @@
       "notes": "The ZX 300M device datum plane is at window, therefore 1 m for device and 0.5 m for mounting.",
       "update_at": "2022-03-31T12:13:27"
     },{
-      "device_datum_plane_height_m": 1.3,
+      "device_datum_plane_height_m": -1.3,
       "height_reference_id": "sea_level",
       "device_vertical_orientation": "downward",
       "date_from": "2022-03-01T12:10:00",
