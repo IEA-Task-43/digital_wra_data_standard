@@ -9,6 +9,35 @@ Given a version number MAJOR.MINOR.PATCH, increment the:
 
 Additional labels for pre-release and build metadata are available as extensions to the MAJOR.MINOR.PATCH format.
 
+## [Unreleased 1.X.X-2022.XX]
+
+1. To `sensor` object, added:
+    1. `sensor_body_size_mm` (Issue [#155](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/155))
+1. To `logger_main_config`:
+   1. fix inconsistency with data types for `logger_firmware_version`. (Issue [#87](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/87))
+1. To `logger_measurement_config` object:
+    1. added `logger_stated_boom_orientation_deg` (Issue [#190](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/190))
+1. To `sensor_type`:
+   1. add `lidar` (Issue [#186](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/186)),
+   2. add `sodar` (Issue [#186](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/186)).
+1. To `mast_properties` add `date_from` and `date_to` (Issue [#192](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/192)).
+
+## [1.1.0-2022.06]
+
+1. To `mast_section_geometry` added:
+   1. `lattice_bracing_member_diameter_horizontal_mm` (Issue [#168](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/168))
+   1. `lattice_bracing_member_diameter_diagonal_mm` (Issue [#168](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/168))
+   1. DEPRECIATION NOTICE TO `lattice_bracing_member_diameter_mm` (Issue [#168](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/168))
+   1. `lattice_bracing_member_length_diagonal_mm` (Issue [#170](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/170))
+   1. `mast_section_height_mm` (Issue [#152](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/152))
+   1. `number_of_repetitive_patterns_on_face` (Issue [#152](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/152))
+1. To `interference_structures` added `diameter_of_interference_structure_mm` to capture, for example, a lightning finial diameter. (Issue [#156](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/156))
+1. To `logger_main_config` added `uncertainty_k_factor`. (Issue [#166](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/166))
+1. To `measurement_units_id` added:
+   1. mph, knots, atm, mmHg, inHg (Issue [#164](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/164))
+   1. kg/m^3 (THE INCORRECT 'kg/m^2' WILL BE DEPRECIATED IN THE NEXT RELEASE) (Issue [#165](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/165))
+1. Improve `lattice_face_width` description. (Issue [#157](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/157))
+
 ## [1.0.0-2022.01]
 1. Incorporating the first version of the [Digital Calibration Certificate](./digital_calibration_certificate). (Issue [#77](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/77))
 1. Renamed `sensor_config` to `logger_measurement_config` (Issue [#68](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/68))
