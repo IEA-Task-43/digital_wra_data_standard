@@ -150,6 +150,7 @@ INSERT INTO measurement_type (id) VALUES
     ('wave_maximum_height'),
     ('wave_direction'),
     ('wave_directional_spread'),
+    ('wave_period'),
     ('wave_peak_period'),
     ('water_speed'),
     ('vertical_water_speed'),
