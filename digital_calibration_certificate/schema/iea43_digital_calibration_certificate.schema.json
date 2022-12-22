@@ -1,11 +1,21 @@
 {
 	"$schema": "http://json-schema.org/draft-07/schema#",
-  	"$version": "1.0.0-2022.01",
+	"$version": "1.1.0-2022.06",
 	"$id": "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/calibration_schema/digital_calibration_certificate/schema/iea43_digital_calibration_certificate.schema.json",
 	"title": "IEA Wind TCP Task 43 Digital Calibration Certificate",
 	"description": "JSON Schema for IEC61400-12-1:2017 complient anemometer calibration certificates.",
 	"type": "object",
 	"properties": {
+		"version": {
+			"title": "Version",
+			"description": "The version of the IEA DCC this file is based on. The format of this follows Semantic Versioning with the year and month tagged on after. E.g. 1.1.1-2020.07",
+			"type": "string",
+			"pattern": "^([0-9]{1,2})[.]([0-9]{1,2})[.]([0-9]{1,2})-([0-9]{4})[.]([0-9]{2})$",
+			"examples": [
+				"0.1.0-2020.06",
+				"1.1.1-2020.07"
+			]
+		},
 		"calibration_id": {
 			"title": "Calibration ID",
 			"description": "Unique number assigned to the calibration/certificate by the calibration lab. Also called 'calibration mark', etc.",
@@ -140,6 +150,11 @@
 					"description": "The diameter of the mounting tube.",
 					"$ref": "#/definitions/quantity"
 				},
+				"mounting_length": {
+					"title": "Mounting Length",
+					"description": "The mounting tube length as used inside the test section.",
+					"$ref": "#/definitions/quantity"
+				},
 				"yaw_orientation": {
 					"title": "Mounting Orientation",
 					"description": "The yaw orientation/direction of the test item during calibration if the test item is directionally sensitive. The angle is defined as the angle from the test item north marker to the upwind direction as measured clockwise when seen from above. If the test item is not directionally sensitive you can simply leave this out or set as null. Additional comments or alternative definitions should be added to the notes attribute (e.g. 'cable downstream').",
@@ -238,6 +253,7 @@
 		}
 	},
 	"required": [
+		"version",
 		"calibration_id",
 		"calibration_lab",
 		"customer",
@@ -301,7 +317,9 @@
 						"(m/s)/(cm/s)",
 						"(m/s)/(km/h)",
 						"(m/s)/mph",
-						"(m/s)/knots"
+						"(m/s)/knots",
+						"(m/s)/(m/s)",
+						"1"
 					],
 					"examples": [
 						"m/s"
