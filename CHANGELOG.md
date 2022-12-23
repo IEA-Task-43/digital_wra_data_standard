@@ -11,16 +11,64 @@ Additional labels for pre-release and build metadata are available as extensions
 
 ## [Unreleased 1.X.X-2022.XX]
 
+The majority of the changes in this release are to expand the data model to include floating lidar sensors, measurement 
+types and units.
+
 1. To `sensor` object, added:
     1. `sensor_body_size_mm` (Issue [#155](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/155))
 1. To `logger_main_config`:
    1. fix inconsistency with data types for `logger_firmware_version`. (Issue [#87](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/87))
 1. To `logger_measurement_config` object:
     1. added `logger_stated_boom_orientation_deg` (Issue [#190](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/190))
-1. To `sensor_type`:
-   1. add `lidar` (Issue [#186](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/186)),
-   2. add `sodar` (Issue [#186](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/186)).
+1. To `sensor_type` enum add:
+   1. `lidar` (Issue [#186](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/186)),
+   2. `sodar` (Issue [#186](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/186)).
+   1. `inertial_measurement_unit` (Discussion [#148, 2022-03-31](https://github.com/IEA-Task-43/digital_wra_data_standard/discussions/148#discussioncomment-2479643))
+   1. `adcp` (Discussion [#148, 2022-10-27](https://github.com/IEA-Task-43/digital_wra_data_standard/discussions/148#discussioncomment-3984312))
+   1. `ctd` (Discussion [#148, 2022-10-27](https://github.com/IEA-Task-43/digital_wra_data_standard/discussions/148#discussioncomment-3984312))
 1. To `mast_properties` add `date_from` and `date_to` (Issue [#192](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/192)).
+1. To `height_reference` add to the enum:
+   1. `sea_level` (Discussion [#148, 2022-03-31](https://github.com/IEA-Task-43/digital_wra_data_standard/discussions/148#discussioncomment-2479643))
+   1. `sea_floor` (Discussion [#148, 2022-04-28](https://github.com/IEA-Task-43/digital_wra_data_standard/discussions/148#discussioncomment-2655990))
+1. To `vertical_profiler_properties` add a new property:
+   1. `device_vertical_orientation` (Discussion [#148, 2022-10-13](https://github.com/IEA-Task-43/digital_wra_data_standard/discussions/148#discussioncomment-3871669))
+1. To `logger_oem` enum add:
+   1. `Nortek` (Discussion [#148, 2022-10-13](https://github.com/IEA-Task-43/digital_wra_data_standard/discussions/148#discussioncomment-3871669))
+   1. `Teledyne RDI` (Discussion [#148, 2022-10-13](https://github.com/IEA-Task-43/digital_wra_data_standard/discussions/148#discussioncomment-3871669))
+   1. `Aanderaa` (Discussion [#148, 2022-10-13](https://github.com/IEA-Task-43/digital_wra_data_standard/discussions/148#discussioncomment-3871669))
+1. To `measurement_units` enum add:
+   1. `dbar` (Discussion [#148, 2022-11-10](https://github.com/IEA-Task-43/digital_wra_data_standard/discussions/148#discussioncomment-4109570))
+   1. `m` (Discussion [#148, 2022-07-27](https://github.com/IEA-Task-43/digital_wra_data_standard/discussions/148#discussioncomment-3101355))
+   1. `s` (Discussion [#148, 2022-07-27](https://github.com/IEA-Task-43/digital_wra_data_standard/discussions/148#discussioncomment-3101355))
+   1. `L` (Discussion [#148, 2022-11-10](https://github.com/IEA-Task-43/digital_wra_data_standard/discussions/148#discussioncomment-4109570))
+   1. `g/L` (Discussion [#148, 2022-11-10](https://github.com/IEA-Task-43/digital_wra_data_standard/discussions/148#discussioncomment-4109570))
+   1. `g/kg` (Discussion [#148, 2022-11-10](https://github.com/IEA-Task-43/digital_wra_data_standard/discussions/148#discussioncomment-4109570))
+   1. `ppt` (Discussion [#148, 2022-11-10](https://github.com/IEA-Task-43/digital_wra_data_standard/discussions/148#discussioncomment-4109570))
+   1. `psu` (Discussion [#148, 2022-11-10](https://github.com/IEA-Task-43/digital_wra_data_standard/discussions/148#discussioncomment-4109570))
+   1. `S/m` (Discussion [#148, 2022-11-10](https://github.com/IEA-Task-43/digital_wra_data_standard/discussions/148#discussioncomment-4109570))
+1. To `measurement_type` enum add:
+   1. `water_temperature` (Discussion [#148, 2022-04-28](https://github.com/IEA-Task-43/digital_wra_data_standard/discussions/148#discussioncomment-2655990))
+   1. `salinity` (Discussion [#148, 2022-10-27](https://github.com/IEA-Task-43/digital_wra_data_standard/discussions/148#discussioncomment-3984312))
+   1. `conductivity` (Discussion [#148, 2022-10-27](https://github.com/IEA-Task-43/digital_wra_data_standard/discussions/148#discussioncomment-3984312))
+   1. `pressure` (Discussion [#148, 2022-10-27](https://github.com/IEA-Task-43/digital_wra_data_standard/discussions/148#discussioncomment-3984312))
+   1. `echo_intensity` (Discussion [#148, 2022-10-13](https://github.com/IEA-Task-43/digital_wra_data_standard/discussions/148#discussioncomment-3871669))
+   1. `signal_to_noise_ratio` (Discussion [#148, 2022-10-13](https://github.com/IEA-Task-43/digital_wra_data_standard/discussions/148#discussioncomment-3871669))
+   1. `motion_corrected_wind_speed` (Discussion [#148, 2022-03-31](https://github.com/IEA-Task-43/digital_wra_data_standard/discussions/148#discussioncomment-2479643))
+   1. `motion_corrected_wind_direction` (Discussion [#148, 2022-03-31](https://github.com/IEA-Task-43/digital_wra_data_standard/discussions/148#discussioncomment-2479643))
+   1. `motion_corrected_vertical_wind_speed` (Discussion [#148, 2022-03-31](https://github.com/IEA-Task-43/digital_wra_data_standard/discussions/148#discussioncomment-2479643))
+   1. `wave_height` (Discussion [#148, 2022-12-08](https://github.com/IEA-Task-43/digital_wra_data_standard/discussions/148#discussioncomment-4345628))
+   1. `wave_significant_height` (Discussion [#148, 2022-04-28](https://github.com/IEA-Task-43/digital_wra_data_standard/discussions/148#discussioncomment-2655990))
+   1. `wave_maximum_height` (Discussion [#148, 2022-04-28](https://github.com/IEA-Task-43/digital_wra_data_standard/discussions/148#discussioncomment-2655990))
+   1. `wave_direction` (Discussion [#148, 2022-04-28](https://github.com/IEA-Task-43/digital_wra_data_standard/discussions/148#discussioncomment-2655990))
+   1. `wave_directional_spread` (Discussion [#148, 2022-09-29](https://github.com/IEA-Task-43/digital_wra_data_standard/discussions/148#discussioncomment-3764611))
+   1. `wave_period` (Discussion [#148, 2022-12-08](https://github.com/IEA-Task-43/digital_wra_data_standard/discussions/148#discussioncomment-4345628))
+   1. `wave_peak_period` (Discussion [#148, 2022-04-28](https://github.com/IEA-Task-43/digital_wra_data_standard/discussions/148#discussioncomment-2655990))
+   1. `water_speed` (Discussion [#148, 2022-09-29](https://github.com/IEA-Task-43/digital_wra_data_standard/discussions/148#discussioncomment-3764611))
+   1. `vertical_water_speed` (Discussion [#148, 2022-10-13](https://github.com/IEA-Task-43/digital_wra_data_standard/discussions/148#discussioncomment-3871669))
+   1. `water_direction` (Discussion [#148, 2022-09-29](https://github.com/IEA-Task-43/digital_wra_data_standard/discussions/148#discussioncomment-3764611))
+   1. `height` (Discussion [#148, 2022-11-10](https://github.com/IEA-Task-43/digital_wra_data_standard/discussions/148#discussioncomment-4109570))
+   1. `water_level` (Discussion [#148, 2022-07-27](https://github.com/IEA-Task-43/digital_wra_data_standard/discussions/148#discussioncomment-3101355))
+   1. `depth` (Discussion [#148, 2022-07-27](https://github.com/IEA-Task-43/digital_wra_data_standard/discussions/148#discussioncomment-3101355))
 
 ## [1.1.0-2022.06]
 
