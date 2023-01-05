@@ -366,7 +366,7 @@ CREATE TABLE IF NOT EXISTS mast_section_geometry(
 
 CREATE TABLE IF NOT EXISTS vertical_profiler_properties(
     uuid UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
-    measurement_location_uuid UUID,
+    measurement_location_uuid UUID NOT NULL,
     device_datum_plane_height_m decimal,
     height_reference_id text DEFAULT 'ground_level',
     device_orientation_deg decimal CHECK (device_orientation_deg >= 0 AND device_orientation_deg <= 360),
