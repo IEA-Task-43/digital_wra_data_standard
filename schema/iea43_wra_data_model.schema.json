@@ -1698,10 +1698,7 @@
                     "title": "Interference Structures",
                     "properties":{
                       "structure_type_id":{
-                        "type": [
-                          "string",
-                          "null"
-                        ],
+                        "type": "string",
                         "title": "Structure Type",
                         "description": "The type of structure that is causing an interference in the sensor's measurements.",
                         "enum": [
