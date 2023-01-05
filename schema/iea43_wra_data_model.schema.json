@@ -209,6 +209,10 @@
       ]
     },
     "height_reference": {
+      "type": [
+        "string",
+        "null"
+      ],
       "title": "Height Reference",
       "description": "The height reference frame that is used to measure the item height. E.g. onshore this is ground level i.e. the item is 0.5 m above ground level. Offshore is a bit different as it can be 20 m above mean sea level or 20 m above lowest astronomical tide.",
       "enum": [
