@@ -444,7 +444,7 @@ CREATE TABLE IF NOT EXISTS logger_measurement_config(
     slope decimal,
     "offset" decimal,  -- offset is a SQL reserved word so needs to be escaped
     sensitivity decimal,
-    measurement_units_id text NOT NULL,
+    measurement_units_id text,
     height_m decimal,
     serial_number text,
     connection_channel text,

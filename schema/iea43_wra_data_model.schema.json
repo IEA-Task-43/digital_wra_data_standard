@@ -1028,7 +1028,10 @@
                         "description": "The sensitivity programmed into the logger. Usually used for pyranometers. It is the same as 1/slope with zero for offset."
                       },
                       "measurement_units_id": {
-                        "type": "string",
+                        "type": [
+                          "string",
+                          "null"
+                        ],
                         "title": "Measurement Units",
                         "description": "The measurement units of the values the sensor records.",
                         "enum": [
@@ -1071,7 +1074,8 @@
                           "ppt",
                           "psu",
                           "S/m",
-                          "-"
+                          "-",
+                          null
                         ]
                       },
                       "height_m": {
