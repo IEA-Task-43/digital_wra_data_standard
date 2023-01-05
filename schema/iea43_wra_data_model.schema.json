@@ -361,7 +361,8 @@
                   "lattice_triangle",
                   "lattice_square_round_edges",
                   "lattice_square_sharp_edges",
-                  "pole"
+                  "pole",
+                  null
                 ]
               },
               "mast_oem": {
