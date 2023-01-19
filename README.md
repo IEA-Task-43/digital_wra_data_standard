@@ -16,7 +16,7 @@ through digitizing and automation."**_
 
 ## What is a "Data Model"?
 A data model is an abstract model of real-world entities that organizes elements of data and standardizes how they 
-relate to one another. In this instance, the WRA Data Model standardizes how properties of a met mast (e.g. 
+relate to one another. In this instance, the _WRA Data Model_ standardizes how properties of a met mast (e.g. 
 latitude, longitude, anemometer serial number, installation height, logger slope, logger offset, etc.) are recorded and 
 how all the properties relate to each other. An implementation of the data model therefore describes how a specific met mast was 
 installed, how the sensors were mounted on that met mast, how these sensors were programmed into the logger and how 
