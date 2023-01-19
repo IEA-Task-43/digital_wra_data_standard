@@ -205,7 +205,8 @@
       "enum": [
         "magnetic_north",
         "true_north",
-        "grid_north"
+        "grid_north",
+        null
       ]
     },
     "height_reference": {
@@ -670,7 +671,8 @@
                   "description": "The vertical orientation that the remote sensing device is installed. E.g. an ADCP mounted on the sea floor has an 'upwards' vertical orientation pointing towards the sea surface whereas an ADCP mounted underneath a buoy has a 'downward' vertical orientation pointing towards the sea floor.",
                   "enum": [
                     "upward",
-                    "downward"
+                    "downward",
+                    null
                   ]
                 },
                 "date_from": {
@@ -1270,7 +1272,8 @@
                           "ctd",
                           "lidar",
                           "sodar",
-                          "other"
+                          "other",
+                          null
                         ]
                       },
                       "classification": {
@@ -1568,7 +1571,8 @@
                         "enum": [
                           "side",
                           "goal_post",
-                          "top"
+                          "top",
+                          null
                         ]
                       },
                       "boom_orientation_deg": {
