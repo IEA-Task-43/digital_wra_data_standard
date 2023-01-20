@@ -19,3 +19,6 @@ dist/
 tmp/
 log/
 tests/temp/*
+
+### long files##
+docs/*
