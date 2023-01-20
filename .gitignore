@@ -21,4 +21,4 @@ log/
 tests/temp/*
 
 ### long files##
-docs/*
+docs/
