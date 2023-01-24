@@ -372,7 +372,7 @@ CREATE TABLE IF NOT EXISTS vertical_profiler_properties(
     device_orientation_deg decimal CHECK (device_orientation_deg >= 0 AND device_orientation_deg <= 360),
     orientation_reference_id text,
     device_vertical_orientation_id text,
-    date_from timestamp WITHOUT TIME ZONE NOT NULL,
+    date_from timestamp WITHOUT TIME ZONE,
     date_to timestamp WITHOUT TIME ZONE,
     notes text,
     update_at timestamp WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,

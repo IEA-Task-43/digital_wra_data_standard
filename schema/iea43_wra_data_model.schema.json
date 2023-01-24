@@ -685,7 +685,16 @@
                   ]
                 },
                 "date_from": {
-                  "$ref": "#/definitions/date_from"
+                  "type": [
+                    "string",
+                    "null"
+                  ],
+                  "format": "date-time",
+                  "title": "Date From",
+                  "description": "The date from when these properties are active. If these properties follow a change, then this Date From should equal the previous Date To. The format of this date should follow ISO 8601 with the 'T' required. If a timezone is used, it is essential that this timezone is the same as the logger timezone.",
+                  "examples": [
+                    "2020-07-28T20:00:00"
+                  ]
                 },
                 "date_to": {
                   "$ref": "#/definitions/date_to"

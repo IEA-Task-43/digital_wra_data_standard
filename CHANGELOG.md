@@ -28,6 +28,7 @@ types and units.
    1. `mounting_type_id` (Issue [#193](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/193))
    1. `mast_properties`.`date_from` (Issue [#193](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/193))
    1. `lidar_config`.`date_from` (Issue [#193](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/193))
+   1. `vertical_profiler_properties`.`date_from` (Issue [#193](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/193))
 1. To `logger_measurement_config` object:
     1. added `logger_stated_boom_orientation_deg` (Issue [#190](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/190))
 1. To `sensor_type` enum add:
