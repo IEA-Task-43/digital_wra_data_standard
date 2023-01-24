@@ -415,7 +415,7 @@ CREATE TABLE IF NOT EXISTS lidar_config(
     uuid UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
     logger_main_config_uuid UUID,
     flow_corrections_applied boolean,
-    date_from timestamp WITHOUT TIME ZONE NOT NULL,
+    date_from timestamp WITHOUT TIME ZONE,
     date_to timestamp WITHOUT TIME ZONE,
     notes text,
     update_at timestamp WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
