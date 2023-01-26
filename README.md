@@ -16,7 +16,7 @@ through digitizing and automation."**_
 
 ## What is a "Data Model"?
 A data model is an abstract model of real-world entities that organizes elements of data and standardizes how they 
-relate to one another. In this instance, the _WRA Data Model_ standardizes how properties of a met mast (e.g. 
+relate to one another. In this instance, the _WRA Data Model_ standardizes how properties of a wind resource measurement station (e.g. 
 latitude, longitude, anemometer serial number, installation height, logger slope, logger offset, etc.) are recorded and 
 how all the properties relate to each other. An implementation of the data model therefore describes how a specific met mast was 
 installed, how the sensors were mounted on that met mast, how these sensors were programmed into the logger and how 
@@ -65,7 +65,7 @@ The following tools are part of this undertaking:
 ## Dissemination
 The Task 43 team is actively working to disseminate information and improve user experience. 
 The [Wiki](https://github.com/IEA-Task-43/digital_wra_data_standard/wiki) tab in this GitHub repository is the starting 
-point to learn more via tutorials, recorded presentations and more.
+point to learn more via tutorials, recorded presentations, videos and more.
 
 <br>
 
