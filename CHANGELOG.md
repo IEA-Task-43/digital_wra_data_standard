@@ -18,6 +18,7 @@ types and units.
     1. `sensor_body_size_mm` (Issue [#155](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/155))
 1. To `logger_main_config`:
    1. fix inconsistency with data types for `logger_firmware_version`. (Issue [#87](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/87))
+   1. `height_reference` (Issue [#202](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/202))
 1. To `logger_measurement_config` object:
     1. added `logger_stated_boom_orientation_deg` (Issue [#190](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/190))
 1. To `sensor_type` enum add:
