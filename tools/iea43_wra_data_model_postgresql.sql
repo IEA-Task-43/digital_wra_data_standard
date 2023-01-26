@@ -366,13 +366,13 @@ CREATE TABLE IF NOT EXISTS mast_section_geometry(
 
 CREATE TABLE IF NOT EXISTS vertical_profiler_properties(
     uuid UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
-    measurement_location_uuid UUID,
+    measurement_location_uuid UUID NOT NULL,
     device_datum_plane_height_m decimal,
     height_reference_id text DEFAULT 'ground_level',
     device_orientation_deg decimal CHECK (device_orientation_deg >= 0 AND device_orientation_deg <= 360),
     orientation_reference_id text,
     device_vertical_orientation_id text,
-    date_from timestamp WITHOUT TIME ZONE NOT NULL,
+    date_from timestamp WITHOUT TIME ZONE,
     date_to timestamp WITHOUT TIME ZONE,
     notes text,
     update_at timestamp WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
@@ -415,7 +415,7 @@ CREATE TABLE IF NOT EXISTS lidar_config(
     uuid UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
     logger_main_config_uuid UUID,
     flow_corrections_applied boolean,
-    date_from timestamp WITHOUT TIME ZONE NOT NULL,
+    date_from timestamp WITHOUT TIME ZONE,
     date_to timestamp WITHOUT TIME ZONE,
     notes text,
     update_at timestamp WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
@@ -444,7 +444,7 @@ CREATE TABLE IF NOT EXISTS logger_measurement_config(
     slope decimal,
     "offset" decimal,  -- offset is a SQL reserved word so needs to be escaped
     sensitivity decimal,
-    measurement_units_id text NOT NULL,
+    measurement_units_id text,
     height_m decimal,
     serial_number text,
     connection_channel text,

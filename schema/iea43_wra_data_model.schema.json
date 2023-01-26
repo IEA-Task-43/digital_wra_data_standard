@@ -205,7 +205,8 @@
       "enum": [
         "magnetic_north",
         "true_north",
-        "grid_north"
+        "grid_north",
+        null
       ]
     },
     "height_reference": {
@@ -365,7 +366,8 @@
                   "lattice_triangle",
                   "lattice_square_round_edges",
                   "lattice_square_sharp_edges",
-                  "pole"
+                  "pole",
+                  null
                 ]
               },
               "mast_oem": {
@@ -416,7 +418,16 @@
                 ]
               },
               "date_from": {
-                "$ref": "#/definitions/date_from"
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "format": "date-time",
+                "title": "Date From",
+                "description": "The date from when these properties are active. If these properties follow a change, then this Date From should equal the previous Date To. The format of this date should follow ISO 8601 with the 'T' required. If a timezone is used, it is essential that this timezone is the same as the logger timezone.",
+                "examples": [
+                  "2020-07-28T20:00:00"
+                ]
               },
               "date_to": {
                 "$ref": "#/definitions/date_to"
@@ -673,11 +684,21 @@
                   "description": "The vertical orientation that the remote sensing device is installed. E.g. an ADCP mounted on the sea floor has an 'upwards' vertical orientation pointing towards the sea surface whereas an ADCP mounted underneath a buoy has a 'downward' vertical orientation pointing towards the sea floor.",
                   "enum": [
                     "upward",
-                    "downward"
+                    "downward",
+                    null
                   ]
                 },
                 "date_from": {
-                  "$ref": "#/definitions/date_from"
+                  "type": [
+                    "string",
+                    "null"
+                  ],
+                  "format": "date-time",
+                  "title": "Date From",
+                  "description": "The date from when these properties are active. If these properties follow a change, then this Date From should equal the previous Date To. The format of this date should follow ISO 8601 with the 'T' required. If a timezone is used, it is essential that this timezone is the same as the logger timezone.",
+                  "examples": [
+                    "2020-07-28T20:00:00"
+                  ]
                 },
                 "date_to": {
                   "$ref": "#/definitions/date_to"
@@ -935,7 +956,16 @@
                         ]
                       },
                       "date_from": {
-                        "$ref": "#/definitions/date_from"
+                        "type": [
+                          "string",
+                          "null"
+                        ],
+                        "format": "date-time",
+                        "title": "Date From",
+                        "description": "The date from when these properties are active. If these properties follow a change, then this Date From should equal the previous Date To. The format of this date should follow ISO 8601 with the 'T' required. If a timezone is used, it is essential that this timezone is the same as the logger timezone.",
+                        "examples": [
+                          "2020-07-28T20:00:00"
+                        ]
                       },
                       "date_to": {
                         "$ref": "#/definitions/date_to"
@@ -1032,7 +1062,10 @@
                         "description": "The sensitivity programmed into the logger. Usually used for pyranometers. It is the same as 1/slope with zero for offset."
                       },
                       "measurement_units_id": {
-                        "type": "string",
+                        "type": [
+                          "string",
+                          "null"
+                        ],
                         "title": "Measurement Units",
                         "description": "The measurement units of the values the sensor records.",
                         "enum": [
@@ -1075,7 +1108,8 @@
                           "ppt",
                           "psu",
                           "S/m",
-                          "-"
+                          "-",
+                          null
                         ]
                       },
                       "height_m": {
@@ -1269,11 +1303,15 @@
                           "ctd",
                           "lidar",
                           "sodar",
-                          "other"
+                          "other",
+                          null
                         ]
                       },
                       "classification": {
-                        "type": "string",
+                        "type": [
+                          "string",
+                          "null"
+                        ],
                         "title": "Classification",
                         "description": "The classification of a particular anemometer for this location. This combines the class index (number) with the terrain class (A, B, C, D or S) e.g. 1.2A. The format of this is validated by a regex which has the form of ^[0-9][.][0-9][ABCDS]$ i.e. digit.digit followed by a character.",
                         "examples": [
@@ -1564,7 +1602,8 @@
                         "enum": [
                           "side",
                           "goal_post",
-                          "top"
+                          "top",
+                          null
                         ]
                       },
                       "boom_orientation_deg": {
@@ -1694,10 +1733,7 @@
                     "title": "Interference Structures",
                     "properties":{
                       "structure_type_id":{
-                        "type": [
-                          "string",
-                          "null"
-                        ],
+                        "type": "string",
                         "title": "Structure Type",
                         "description": "The type of structure that is causing an interference in the sensor's measurements.",
                         "enum": [
