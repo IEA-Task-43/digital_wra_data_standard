@@ -40,8 +40,10 @@ To learn more about the _WRA Data Model_, please read Amit Bohara's
 [introduction](https://github.com/IEA-Task-43/digital_wra_data_standard/wiki/Task-43-WRA-Data-Model---An-introduction)
 in the Wiki section of this GitHub repository.
 
-JSON Schema is used to capture the _WRA Data Model_. It can be thought of as a blueprint for how an implementation of the
-data model can be described with the JSON data format. See Figure 1 below for a snippet of an example implementation.
+JSON ([JavaScript Object Notation](https://www.json.org/)) is used to implement the _WRA Data Model_ and 
+[JSON Schema](https://json-schema.org/) is used to express the _WRA Data Model_. The JSON Schema file is the 
+_WRA Data Model_. It can be thought of as a blueprint for how an implementation of the data model can be described with 
+the JSON data-interchange format. See Figure 1 below for a snippet of an example implementation.
 
 ![example_implementation](https://user-images.githubusercontent.com/25622575/211047742-e83ee47b-d756-4e5e-a48f-cfb3d2fa00c6.png)
 <br>
