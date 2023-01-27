@@ -1,8 +1,8 @@
-## mounting_type_id Type
+## mounting\_type\_id Type
 
-`string` ([Mounting Type](iea43\_wra_data_model-properties-measurement-location-measurement-location-properties-measurement-point-measurement-point-properties-mounting-arrangement-mounting-arrangement-properties-mounting-type.md))
+`string` ([Mounting Type](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-measurement-point-measurement-point-properties-mounting-arrangement-mounting-arrangement-properties-mounting-type.md))
 
-## mounting_type_id Constraints
+## mounting\_type\_id Constraints
 
 **enum**: the value of this property must be equal to one of the following values:
 
@@ -11,3 +11,4 @@
 | `"side"`      |             |
 | `"goal_post"` |             |
 | `"top"`       |             |
+| `null`        |             |

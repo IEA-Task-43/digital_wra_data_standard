@@ -1,28 +1,28 @@
 ## items Type
 
-`object` ([Calibration](iea43\_wra_data_model-properties-measurement-location-measurement-location-properties-measurement-point-measurement-point-properties-sensor-sensor-properties-calibration-calibration.md))
+`object` ([Calibration](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-measurement-point-measurement-point-properties-sensor-sensor-properties-calibration-calibration.md))
 
 # items Properties
 
-| Property                                              | Type     | Required | Nullable       | Defined by                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
-| :---------------------------------------------------- | :------- | :------- | :------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [measurement_type_id](#measurement_type_id)           | `string` | Optional | cannot be null | [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-definitions-measurement-type.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/measurement_point/items/properties/sensor/items/properties/calibration/items/properties/measurement_type_id")                                                                                                                                                                             |
-| [slope](#slope)                                       | `number` | Optional | can be null    | [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-measurement-point-measurement-point-properties-sensor-sensor-properties-calibration-calibration-properties-calibration-slope.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/measurement_point/items/properties/sensor/items/properties/calibration/items/properties/slope")                           |
-| [offset](#offset)                                     | `number` | Optional | can be null    | [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-measurement-point-measurement-point-properties-sensor-sensor-properties-calibration-calibration-properties-calibration-offset.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/measurement_point/items/properties/sensor/items/properties/calibration/items/properties/offset")                         |
-| [sensitivity](#sensitivity)                           | `number` | Optional | can be null    | [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-measurement-point-measurement-point-properties-sensor-sensor-properties-calibration-calibration-properties-calibration-sensitivity.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/measurement_point/items/properties/sensor/items/properties/calibration/items/properties/sensitivity")               |
-| [report_file_name](#report_file_name)                 | `string` | Optional | can be null    | [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-measurement-point-measurement-point-properties-sensor-sensor-properties-calibration-calibration-properties-report-file-name.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/measurement_point/items/properties/sensor/items/properties/calibration/items/properties/report_file_name")                 |
-| [report_link](#report_link)                           | `string` | Optional | can be null    | [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-measurement-point-measurement-point-properties-sensor-sensor-properties-calibration-calibration-properties-report-link.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/measurement_point/items/properties/sensor/items/properties/calibration/items/properties/report_link")                           |
-| [calibration_id](#calibration_id)                     | `string` | Optional | can be null    | [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-measurement-point-measurement-point-properties-sensor-sensor-properties-calibration-calibration-properties-calibration-id.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/measurement_point/items/properties/sensor/items/properties/calibration/items/properties/calibration_id")                     |
-| [date_of_calibration](#date_of_calibration)           | `string` | Optional | can be null    | [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-measurement-point-measurement-point-properties-sensor-sensor-properties-calibration-calibration-properties-date-of-calibration.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/measurement_point/items/properties/sensor/items/properties/calibration/items/properties/date_of_calibration")           |
-| [revision](#revision)                                 | `string` | Optional | can be null    | [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-measurement-point-measurement-point-properties-sensor-sensor-properties-calibration-calibration-properties-calibration-revision.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/measurement_point/items/properties/sensor/items/properties/calibration/items/properties/revision")                     |
-| [calibration_organisation](#calibration_organisation) | `string` | Optional | can be null    | [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-measurement-point-measurement-point-properties-sensor-sensor-properties-calibration-calibration-properties-calibration-organisation.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/measurement_point/items/properties/sensor/items/properties/calibration/items/properties/calibration_organisation") |
-| [place_of_calibration](#place_of_calibration)         | `string` | Optional | can be null    | [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-measurement-point-measurement-point-properties-sensor-sensor-properties-calibration-calibration-properties-place-of-calibration.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/measurement_point/items/properties/sensor/items/properties/calibration/items/properties/place_of_calibration")         |
-| [uncertainty_k_factor](#uncertainty_k_factor)         | `number` | Optional | can be null    | [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-measurement-point-measurement-point-properties-sensor-sensor-properties-calibration-calibration-properties-uncertainty-k-factor.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/measurement_point/items/properties/sensor/items/properties/calibration/items/properties/uncertainty_k_factor")         |
-| [notes](#notes)                                       | `string` | Optional | can be null    | [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-definitions-notes.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/measurement_point/items/properties/sensor/items/properties/calibration/items/properties/notes")                                                                                                                                                                                                      |
-| [update_at](#update_at)                               | `string` | Optional | can be null    | [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-definitions-date-of-update.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/measurement_point/items/properties/sensor/items/properties/calibration/items/properties/update_at")                                                                                                                                                                                         |
-| [calibration_uncertainty](#calibration_uncertainty)   | `array`  | Optional | can be null    | [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-measurement-point-measurement-point-properties-sensor-sensor-properties-calibration-calibration-properties-calibration-uncertainty.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/measurement_point/items/properties/sensor/items/properties/calibration/items/properties/calibration_uncertainty")   |
+| Property                                               | Type     | Required | Nullable       | Defined by                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| :----------------------------------------------------- | :------- | :------- | :------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [measurement\_type\_id](#measurement_type_id)          | `string` | Optional | cannot be null | [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-definitions-measurement-type.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/measurement_point/items/properties/sensor/items/properties/calibration/items/properties/measurement_type_id")                                                                                                                                                                             |
+| [slope](#slope)                                        | `number` | Optional | can be null    | [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-measurement-point-measurement-point-properties-sensor-sensor-properties-calibration-calibration-properties-calibration-slope.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/measurement_point/items/properties/sensor/items/properties/calibration/items/properties/slope")                           |
+| [offset](#offset)                                      | `number` | Optional | can be null    | [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-measurement-point-measurement-point-properties-sensor-sensor-properties-calibration-calibration-properties-calibration-offset.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/measurement_point/items/properties/sensor/items/properties/calibration/items/properties/offset")                         |
+| [sensitivity](#sensitivity)                            | `number` | Optional | can be null    | [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-measurement-point-measurement-point-properties-sensor-sensor-properties-calibration-calibration-properties-calibration-sensitivity.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/measurement_point/items/properties/sensor/items/properties/calibration/items/properties/sensitivity")               |
+| [report\_file\_name](#report_file_name)                | `string` | Optional | can be null    | [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-measurement-point-measurement-point-properties-sensor-sensor-properties-calibration-calibration-properties-report-file-name.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/measurement_point/items/properties/sensor/items/properties/calibration/items/properties/report_file_name")                 |
+| [report\_link](#report_link)                           | `string` | Optional | can be null    | [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-measurement-point-measurement-point-properties-sensor-sensor-properties-calibration-calibration-properties-report-link.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/measurement_point/items/properties/sensor/items/properties/calibration/items/properties/report_link")                           |
+| [calibration\_id](#calibration_id)                     | `string` | Optional | can be null    | [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-measurement-point-measurement-point-properties-sensor-sensor-properties-calibration-calibration-properties-calibration-id.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/measurement_point/items/properties/sensor/items/properties/calibration/items/properties/calibration_id")                     |
+| [date\_of\_calibration](#date_of_calibration)          | `string` | Optional | can be null    | [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-measurement-point-measurement-point-properties-sensor-sensor-properties-calibration-calibration-properties-date-of-calibration.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/measurement_point/items/properties/sensor/items/properties/calibration/items/properties/date_of_calibration")           |
+| [revision](#revision)                                  | `string` | Optional | can be null    | [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-measurement-point-measurement-point-properties-sensor-sensor-properties-calibration-calibration-properties-calibration-revision.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/measurement_point/items/properties/sensor/items/properties/calibration/items/properties/revision")                     |
+| [calibration\_organisation](#calibration_organisation) | `string` | Optional | can be null    | [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-measurement-point-measurement-point-properties-sensor-sensor-properties-calibration-calibration-properties-calibration-organisation.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/measurement_point/items/properties/sensor/items/properties/calibration/items/properties/calibration_organisation") |
+| [place\_of\_calibration](#place_of_calibration)        | `string` | Optional | can be null    | [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-measurement-point-measurement-point-properties-sensor-sensor-properties-calibration-calibration-properties-place-of-calibration.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/measurement_point/items/properties/sensor/items/properties/calibration/items/properties/place_of_calibration")         |
+| [uncertainty\_k\_factor](#uncertainty_k_factor)        | `number` | Optional | can be null    | [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-measurement-point-measurement-point-properties-sensor-sensor-properties-calibration-calibration-properties-uncertainty-k-factor.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/measurement_point/items/properties/sensor/items/properties/calibration/items/properties/uncertainty_k_factor")         |
+| [notes](#notes)                                        | `string` | Optional | can be null    | [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-definitions-notes.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/measurement_point/items/properties/sensor/items/properties/calibration/items/properties/notes")                                                                                                                                                                                                      |
+| [update\_at](#update_at)                               | `string` | Optional | can be null    | [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-definitions-date-of-update.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/measurement_point/items/properties/sensor/items/properties/calibration/items/properties/update_at")                                                                                                                                                                                         |
+| [calibration\_uncertainty](#calibration_uncertainty)   | `array`  | Optional | can be null    | [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-measurement-point-measurement-point-properties-sensor-sensor-properties-calibration-calibration-properties-calibration-uncertainty.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/measurement_point/items/properties/sensor/items/properties/calibration/items/properties/calibration_uncertainty")   |
 
-## measurement_type_id
+## measurement\_type\_id
 
 The type of measurement been made. See more information in the examples.
 
@@ -30,83 +30,109 @@ The type of measurement been made. See more information in the examples.
 
 *   is optional
 
-*   Type: `string` ([Measurement Type](iea43\_wra_data_model-definitions-measurement-type.md))
+*   Type: `string` ([Measurement Type](iea43_wra_data_model-definitions-measurement-type.md))
 
 *   cannot be null
 
-*   defined in: [IEA Wind Resource Assessment - Data Model](iea43\_wra_data_model-definitions-measurement-type.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43\_wra_data_model.schema.json#/properties/measurement_location/items/properties/measurement_point/items/properties/sensor/items/properties/calibration/items/properties/measurement_type_id")
+*   defined in: [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-definitions-measurement-type.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/measurement_point/items/properties/sensor/items/properties/calibration/items/properties/measurement_type_id")
 
-### measurement_type_id Type
+### measurement\_type\_id Type
 
-`string` ([Measurement Type](iea43\_wra_data_model-definitions-measurement-type.md))
+`string` ([Measurement Type](iea43_wra_data_model-definitions-measurement-type.md))
 
-### measurement_type_id Constraints
+### measurement\_type\_id Constraints
 
 **enum**: the value of this property must be equal to one of the following values:
 
-| Value                             | Explanation |
-| :-------------------------------- | :---------- |
-| `"wind_speed"`                    |             |
-| `"wind_direction"`                |             |
-| `"air_temperature"`               |             |
-| `"temperature"`                   |             |
-| `"air_pressure"`                  |             |
-| `"air_density"`                   |             |
-| `"relative_humidity"`             |             |
-| `"voltage"`                       |             |
-| `"current"`                       |             |
-| `"resistance"`                    |             |
-| `"power"`                         |             |
-| `"energy"`                        |             |
-| `"vertical_wind_speed"`           |             |
-| `"wind_speed_turbulence"`         |             |
-| `"precipitation"`                 |             |
-| `"ice_detection"`                 |             |
-| `"global_horizontal_irradiance"`  |             |
-| `"direct_normal_irradiance"`      |             |
-| `"diffuse_horizontal_irradiance"` |             |
-| `"global_tilted_irradiance"`      |             |
-| `"global_normal_irradiance"`      |             |
-| `"albedo"`                        |             |
-| `"soiling_loss_index"`            |             |
-| `"illuminance"`                   |             |
-| `"fog"`                           |             |
-| `"gps_coordinates"`               |             |
-| `"status"`                        |             |
-| `"flag"`                          |             |
-| `"counter"`                       |             |
-| `"availability"`                  |             |
-| `"quality"`                       |             |
-| `"carrier_to_noise_ratio"`        |             |
-| `"doppler_spectral_broadening"`   |             |
-| `"orientation"`                   |             |
-| `"compass_direction"`             |             |
-| `"true_north_offset"`             |             |
-| `"tilt"`                          |             |
-| `"tilt_x"`                        |             |
-| `"tilt_y"`                        |             |
-| `"tilt_z"`                        |             |
-| `"u"`                             |             |
-| `"v"`                             |             |
-| `"w"`                             |             |
-| `"elevation"`                     |             |
-| `"altitude"`                      |             |
-| `"azimuth"`                       |             |
-| `"timestamp"`                     |             |
-| `"other"`                         |             |
+| Value                                    | Explanation |
+| :--------------------------------------- | :---------- |
+| `"wind_speed"`                           |             |
+| `"wind_direction"`                       |             |
+| `"air_temperature"`                      |             |
+| `"water_temperature"`                    |             |
+| `"temperature"`                          |             |
+| `"air_pressure"`                         |             |
+| `"air_density"`                          |             |
+| `"relative_humidity"`                    |             |
+| `"voltage"`                              |             |
+| `"current"`                              |             |
+| `"resistance"`                           |             |
+| `"power"`                                |             |
+| `"energy"`                               |             |
+| `"vertical_wind_speed"`                  |             |
+| `"wind_speed_turbulence"`                |             |
+| `"precipitation"`                        |             |
+| `"ice_detection"`                        |             |
+| `"global_horizontal_irradiance"`         |             |
+| `"direct_normal_irradiance"`             |             |
+| `"diffuse_horizontal_irradiance"`        |             |
+| `"global_tilted_irradiance"`             |             |
+| `"global_normal_irradiance"`             |             |
+| `"albedo"`                               |             |
+| `"soiling_loss_index"`                   |             |
+| `"illuminance"`                          |             |
+| `"fog"`                                  |             |
+| `"salinity"`                             |             |
+| `"conductivity"`                         |             |
+| `"pressure"`                             |             |
+| `"gps_coordinates"`                      |             |
+| `"status"`                               |             |
+| `"flag"`                                 |             |
+| `"counter"`                              |             |
+| `"availability"`                         |             |
+| `"quality"`                              |             |
+| `"carrier_to_noise_ratio"`               |             |
+| `"doppler_spectral_broadening"`          |             |
+| `"echo_intensity"`                       |             |
+| `"signal_to_noise_ratio"`                |             |
+| `"motion_corrected_wind_speed"`          |             |
+| `"motion_corrected_wind_direction"`      |             |
+| `"motion_corrected_vertical_wind_speed"` |             |
+| `"wave_height"`                          |             |
+| `"wave_significant_height"`              |             |
+| `"wave_maximum_height"`                  |             |
+| `"wave_direction"`                       |             |
+| `"wave_directional_spread"`              |             |
+| `"wave_period"`                          |             |
+| `"wave_peak_period"`                     |             |
+| `"water_speed"`                          |             |
+| `"vertical_water_speed"`                 |             |
+| `"water_direction"`                      |             |
+| `"orientation"`                          |             |
+| `"compass_direction"`                    |             |
+| `"true_north_offset"`                    |             |
+| `"tilt"`                                 |             |
+| `"tilt_x"`                               |             |
+| `"tilt_y"`                               |             |
+| `"tilt_z"`                               |             |
+| `"u"`                                    |             |
+| `"v"`                                    |             |
+| `"w"`                                    |             |
+| `"elevation"`                            |             |
+| `"altitude"`                             |             |
+| `"height"`                               |             |
+| `"azimuth"`                              |             |
+| `"water_level"`                          |             |
+| `"depth"`                                |             |
+| `"timestamp"`                            |             |
+| `"other"`                                |             |
 
-### measurement_type_id Examples
+### measurement\_type\_id Examples
 
 ```json
 "wind_speed  (the horizontal component of wind speed)"
 ```
 
 ```json
-"wind_direction  (the direction form which the wind is coming from)"
+"wind_direction  (the direction from which the wind is coming from)"
 ```
 
 ```json
 "air_temperature  (outdoor ambient temperature of the air)"
+```
+
+```json
+"water_temperature  (is the in situ temperature of the water. In CF Conventions this is equivalent to 'sea_water_temperature'.)"
 ```
 
 ```json
@@ -198,6 +224,18 @@ The type of measurement been made. See more information in the examples.
 ```
 
 ```json
+"salinity (is the salt content of water. In CF Conventions this is equivalent to 'sea_water_salinity', 'sea_water_practical_salinity' or 'sea_water_absolute_salinity' depending on the scale been used.)"
+```
+
+```json
+"conductivity (of an electrolyte solution, e.g. sea water, is a measure of its ability to conduct electricity. In CF Conventions this is equivalent to 'sea_water_electrical_conductivity' for offshore use cases.)"
+```
+
+```json
+"pressure (the pressure of a medium e.g. water. In CF Conventions this is equivalent to 'sea_water_pressure' for offshore use cases.)"
+```
+
+```json
 "gps_coordinates (latitude and/or longitude as measured by a gps)"
 ```
 
@@ -223,6 +261,66 @@ The type of measurement been made. See more information in the examples.
 
 ```json
 "doppler_spectral_broadening (as measured by lidar devices)"
+```
+
+```json
+"echo_intensity (is the brightness or brilliance of the acoustic echo usually measured by an ADCP. If from an ADCP, it can be used to judge the quality of measurement or estimate the amount of suspended sediment in the water column.)"
+```
+
+```json
+"signal_to_noise_ratio (a measure of signal strength as measured by ADCPs.)"
+```
+
+```json
+"motion_corrected_wind_speed (the horizontal component of wind speed which has been corrected due to the motion of the measuring sensor/device, typically from floating lidar systems)"
+```
+
+```json
+"motion_corrected_wind_direction (the direction form which the wind is coming from which has been corrected due to the motion of the measuring sensor/device, typically from floating lidar systems)"
+```
+
+```json
+"motion_corrected_vertical_wind_speed (the vertical component of wind speed which has been corrected due to the motion of the measuring sensor/device, typically from floating lidar systems)"
+```
+
+```json
+"wave_height (is the mean wave height measured during the observation period, where the height is defined as the vertical distance from a wave trough to the following wave crest. In CF Conventions this is equivalent to 'sea_surface_wave_mean_height'.)"
+```
+
+```json
+"wave_significant_height (is a statistic computed from wave measurements and corresponds to the average height of the highest one third of the waves, where the height is defined as the vertical distance from a wave trough to the following wave crest. In CF Conventions this is equivalent to 'sea_surface_wave_significant_height'.)"
+```
+
+```json
+"wave_maximum_height (is the greatest trough to crest distance measured during the observation period. Wave height is defined as the vertical distance from a wave trough to the following wave crest. In CF Conventions this is equivalent to 'sea_surface_wave_maximum_height'.)"
+```
+
+```json
+"wave_direction (the direction from which the wave is coming from. The direction is a bearing in the usual geographical sense, measured positive clockwise from due north. In CF Conventions this is equivalent to 'sea_surface_wave_from_direction'.)"
+```
+
+```json
+"wave_directional_spread (is the standard deviation of all the wave directions measured. It signifies how spread out,or how wide an area, all the waves are coming from. In CF Conventions this is equivalent to 'sea_surface_wave_directional_spread'.)"
+```
+
+```json
+"wave_period (is the mean wave period measured during the observation period at a specific location. In CF Conventions this is equivalent to 'sea_surface_wave_mean_period'.)"
+```
+
+```json
+"wave_peak_period (is the wave period of the most energetic waves in the total wave spectrum at a specific location. In CF Conventions this is equivalent to 'sea_surface_wave_period_at_variance_spectral_density_maximum'.)"
+```
+
+```json
+"water_speed (the horizontal magnitude of the water's velocity. This is sometimes also known as 'current speed' and in CF Conventions this is equivalent to 'sea_water_speed'.)"
+```
+
+```json
+"vertical_water_speed (the vertical magnitude of the water's velocity. In CF Conventions this is equivalent to 'upward_sea_water_velocity'.)"
+```
+
+```json
+"water_direction (the direction from which the water flow is coming from. The direction is a bearing in the usual geographical sense, measured positive clockwise from due north. This is sometimes also known as 'current direction' and in CF Conventions this is equivalent to 'sea_water_velocity_from_direction' or 'sea_water_from_direction'.)"
 ```
 
 ```json
@@ -270,7 +368,19 @@ The type of measurement been made. See more information in the examples.
 ```
 
 ```json
+"height (the vertical distance above a particular reference e.g. ground level.)"
+```
+
+```json
 "azimuth (is the angle of the sun around the horizon, in the northern hemisphere this is usually measured from north and increasing eastward whereas in the southern hemisphere it can be measured from the south and increasing westward)"
+```
+
+```json
+"water_level (is the height of the sea surface above the sea floor. In CF Conventions this is equivalent, but opposite in respect of their point of reference, to 'sea_floor_depth_below_sea_surface'.)"
+```
+
+```json
+"depth (the vertical distance below a particular reference e.g. sea level.)"
 ```
 
 ```json
@@ -289,15 +399,15 @@ The slope programmed into the logger.
 
 *   is optional
 
-*   Type: `number` ([Calibration Slope](iea43\_wra_data_model-properties-measurement-location-measurement-location-properties-measurement-point-measurement-point-properties-sensor-sensor-properties-calibration-calibration-properties-calibration-slope.md))
+*   Type: `number` ([Calibration Slope](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-measurement-point-measurement-point-properties-sensor-sensor-properties-calibration-calibration-properties-calibration-slope.md))
 
 *   can be null
 
-*   defined in: [IEA Wind Resource Assessment - Data Model](iea43\_wra_data_model-properties-measurement-location-measurement-location-properties-measurement-point-measurement-point-properties-sensor-sensor-properties-calibration-calibration-properties-calibration-slope.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43\_wra_data_model.schema.json#/properties/measurement_location/items/properties/measurement_point/items/properties/sensor/items/properties/calibration/items/properties/slope")
+*   defined in: [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-measurement-point-measurement-point-properties-sensor-sensor-properties-calibration-calibration-properties-calibration-slope.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/measurement_point/items/properties/sensor/items/properties/calibration/items/properties/slope")
 
 ### slope Type
 
-`number` ([Calibration Slope](iea43\_wra_data_model-properties-measurement-location-measurement-location-properties-measurement-point-measurement-point-properties-sensor-sensor-properties-calibration-calibration-properties-calibration-slope.md))
+`number` ([Calibration Slope](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-measurement-point-measurement-point-properties-sensor-sensor-properties-calibration-calibration-properties-calibration-slope.md))
 
 ## offset
 
@@ -307,15 +417,15 @@ The offset programmed into the logger.
 
 *   is optional
 
-*   Type: `number` ([Calibration Offset](iea43\_wra_data_model-properties-measurement-location-measurement-location-properties-measurement-point-measurement-point-properties-sensor-sensor-properties-calibration-calibration-properties-calibration-offset.md))
+*   Type: `number` ([Calibration Offset](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-measurement-point-measurement-point-properties-sensor-sensor-properties-calibration-calibration-properties-calibration-offset.md))
 
 *   can be null
 
-*   defined in: [IEA Wind Resource Assessment - Data Model](iea43\_wra_data_model-properties-measurement-location-measurement-location-properties-measurement-point-measurement-point-properties-sensor-sensor-properties-calibration-calibration-properties-calibration-offset.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43\_wra_data_model.schema.json#/properties/measurement_location/items/properties/measurement_point/items/properties/sensor/items/properties/calibration/items/properties/offset")
+*   defined in: [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-measurement-point-measurement-point-properties-sensor-sensor-properties-calibration-calibration-properties-calibration-offset.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/measurement_point/items/properties/sensor/items/properties/calibration/items/properties/offset")
 
 ### offset Type
 
-`number` ([Calibration Offset](iea43\_wra_data_model-properties-measurement-location-measurement-location-properties-measurement-point-measurement-point-properties-sensor-sensor-properties-calibration-calibration-properties-calibration-offset.md))
+`number` ([Calibration Offset](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-measurement-point-measurement-point-properties-sensor-sensor-properties-calibration-calibration-properties-calibration-offset.md))
 
 ## sensitivity
 
@@ -325,17 +435,17 @@ The sensitivity programmed into the logger.
 
 *   is optional
 
-*   Type: `number` ([Calibration Sensitivity](iea43\_wra_data_model-properties-measurement-location-measurement-location-properties-measurement-point-measurement-point-properties-sensor-sensor-properties-calibration-calibration-properties-calibration-sensitivity.md))
+*   Type: `number` ([Calibration Sensitivity](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-measurement-point-measurement-point-properties-sensor-sensor-properties-calibration-calibration-properties-calibration-sensitivity.md))
 
 *   can be null
 
-*   defined in: [IEA Wind Resource Assessment - Data Model](iea43\_wra_data_model-properties-measurement-location-measurement-location-properties-measurement-point-measurement-point-properties-sensor-sensor-properties-calibration-calibration-properties-calibration-sensitivity.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43\_wra_data_model.schema.json#/properties/measurement_location/items/properties/measurement_point/items/properties/sensor/items/properties/calibration/items/properties/sensitivity")
+*   defined in: [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-measurement-point-measurement-point-properties-sensor-sensor-properties-calibration-calibration-properties-calibration-sensitivity.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/measurement_point/items/properties/sensor/items/properties/calibration/items/properties/sensitivity")
 
 ### sensitivity Type
 
-`number` ([Calibration Sensitivity](iea43\_wra_data_model-properties-measurement-location-measurement-location-properties-measurement-point-measurement-point-properties-sensor-sensor-properties-calibration-calibration-properties-calibration-sensitivity.md))
+`number` ([Calibration Sensitivity](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-measurement-point-measurement-point-properties-sensor-sensor-properties-calibration-calibration-properties-calibration-sensitivity.md))
 
-## report_file_name
+## report\_file\_name
 
 The file name of the calibration report.
 
@@ -343,23 +453,23 @@ The file name of the calibration report.
 
 *   is optional
 
-*   Type: `string` ([Report File Name](iea43\_wra_data_model-properties-measurement-location-measurement-location-properties-measurement-point-measurement-point-properties-sensor-sensor-properties-calibration-calibration-properties-report-file-name.md))
+*   Type: `string` ([Report File Name](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-measurement-point-measurement-point-properties-sensor-sensor-properties-calibration-calibration-properties-report-file-name.md))
 
 *   can be null
 
-*   defined in: [IEA Wind Resource Assessment - Data Model](iea43\_wra_data_model-properties-measurement-location-measurement-location-properties-measurement-point-measurement-point-properties-sensor-sensor-properties-calibration-calibration-properties-report-file-name.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43\_wra_data_model.schema.json#/properties/measurement_location/items/properties/measurement_point/items/properties/sensor/items/properties/calibration/items/properties/report_file_name")
+*   defined in: [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-measurement-point-measurement-point-properties-sensor-sensor-properties-calibration-calibration-properties-report-file-name.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/measurement_point/items/properties/sensor/items/properties/calibration/items/properties/report_file_name")
 
-### report_file_name Type
+### report\_file\_name Type
 
-`string` ([Report File Name](iea43\_wra_data_model-properties-measurement-location-measurement-location-properties-measurement-point-measurement-point-properties-sensor-sensor-properties-calibration-calibration-properties-report-file-name.md))
+`string` ([Report File Name](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-measurement-point-measurement-point-properties-sensor-sensor-properties-calibration-calibration-properties-report-file-name.md))
 
-### report_file_name Examples
+### report\_file\_name Examples
 
 ```json
 "A12345_calibration.pdf"
 ```
 
-## report_link
+## report\_link
 
 A link to the calibration report.
 
@@ -367,23 +477,23 @@ A link to the calibration report.
 
 *   is optional
 
-*   Type: `string` ([Report Link](iea43\_wra_data_model-properties-measurement-location-measurement-location-properties-measurement-point-measurement-point-properties-sensor-sensor-properties-calibration-calibration-properties-report-link.md))
+*   Type: `string` ([Report Link](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-measurement-point-measurement-point-properties-sensor-sensor-properties-calibration-calibration-properties-report-link.md))
 
 *   can be null
 
-*   defined in: [IEA Wind Resource Assessment - Data Model](iea43\_wra_data_model-properties-measurement-location-measurement-location-properties-measurement-point-measurement-point-properties-sensor-sensor-properties-calibration-calibration-properties-report-link.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43\_wra_data_model.schema.json#/properties/measurement_location/items/properties/measurement_point/items/properties/sensor/items/properties/calibration/items/properties/report_link")
+*   defined in: [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-measurement-point-measurement-point-properties-sensor-sensor-properties-calibration-calibration-properties-report-link.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/measurement_point/items/properties/sensor/items/properties/calibration/items/properties/report_link")
 
-### report_link Type
+### report\_link Type
 
-`string` ([Report Link](iea43\_wra_data_model-properties-measurement-location-measurement-location-properties-measurement-point-measurement-point-properties-sensor-sensor-properties-calibration-calibration-properties-report-link.md))
+`string` ([Report Link](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-measurement-point-measurement-point-properties-sensor-sensor-properties-calibration-calibration-properties-report-link.md))
 
-### report_link Examples
+### report\_link Examples
 
 ```json
 "https://www.dropbox.com/bw/7dzu7xzb/AAN-BNsa?dl=0"
 ```
 
-## calibration_id
+## calibration\_id
 
 The calibration ID is the unique number that the calibration organisation uses to identify a particular calibration. It may be referred to as Certificate number or Calibration Mark by some organisations.
 
@@ -391,17 +501,17 @@ The calibration ID is the unique number that the calibration organisation uses t
 
 *   is optional
 
-*   Type: `string` ([Calibration ID](iea43\_wra_data_model-properties-measurement-location-measurement-location-properties-measurement-point-measurement-point-properties-sensor-sensor-properties-calibration-calibration-properties-calibration-id.md))
+*   Type: `string` ([Calibration ID](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-measurement-point-measurement-point-properties-sensor-sensor-properties-calibration-calibration-properties-calibration-id.md))
 
 *   can be null
 
-*   defined in: [IEA Wind Resource Assessment - Data Model](iea43\_wra_data_model-properties-measurement-location-measurement-location-properties-measurement-point-measurement-point-properties-sensor-sensor-properties-calibration-calibration-properties-calibration-id.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43\_wra_data_model.schema.json#/properties/measurement_location/items/properties/measurement_point/items/properties/sensor/items/properties/calibration/items/properties/calibration_id")
+*   defined in: [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-measurement-point-measurement-point-properties-sensor-sensor-properties-calibration-calibration-properties-calibration-id.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/measurement_point/items/properties/sensor/items/properties/calibration/items/properties/calibration_id")
 
-### calibration_id Type
+### calibration\_id Type
 
-`string` ([Calibration ID](iea43\_wra_data_model-properties-measurement-location-measurement-location-properties-measurement-point-measurement-point-properties-sensor-sensor-properties-calibration-calibration-properties-calibration-id.md))
+`string` ([Calibration ID](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-measurement-point-measurement-point-properties-sensor-sensor-properties-calibration-calibration-properties-calibration-id.md))
 
-### calibration_id Examples
+### calibration\_id Examples
 
 ```json
 "1234567"
@@ -411,7 +521,7 @@ The calibration ID is the unique number that the calibration organisation uses t
 "CERT1234"
 ```
 
-## date_of_calibration
+## date\_of\_calibration
 
 The date the sensor calibration took place.
 
@@ -419,21 +529,21 @@ The date the sensor calibration took place.
 
 *   is optional
 
-*   Type: `string` ([Date of Calibration](iea43\_wra_data_model-properties-measurement-location-measurement-location-properties-measurement-point-measurement-point-properties-sensor-sensor-properties-calibration-calibration-properties-date-of-calibration.md))
+*   Type: `string` ([Date of Calibration](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-measurement-point-measurement-point-properties-sensor-sensor-properties-calibration-calibration-properties-date-of-calibration.md))
 
 *   can be null
 
-*   defined in: [IEA Wind Resource Assessment - Data Model](iea43\_wra_data_model-properties-measurement-location-measurement-location-properties-measurement-point-measurement-point-properties-sensor-sensor-properties-calibration-calibration-properties-date-of-calibration.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43\_wra_data_model.schema.json#/properties/measurement_location/items/properties/measurement_point/items/properties/sensor/items/properties/calibration/items/properties/date_of_calibration")
+*   defined in: [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-measurement-point-measurement-point-properties-sensor-sensor-properties-calibration-calibration-properties-date-of-calibration.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/measurement_point/items/properties/sensor/items/properties/calibration/items/properties/date_of_calibration")
 
-### date_of_calibration Type
+### date\_of\_calibration Type
 
-`string` ([Date of Calibration](iea43\_wra_data_model-properties-measurement-location-measurement-location-properties-measurement-point-measurement-point-properties-sensor-sensor-properties-calibration-calibration-properties-date-of-calibration.md))
+`string` ([Date of Calibration](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-measurement-point-measurement-point-properties-sensor-sensor-properties-calibration-calibration-properties-date-of-calibration.md))
 
-### date_of_calibration Constraints
+### date\_of\_calibration Constraints
 
 **date**: the string must be a date string, according to [RFC 3339, section 5.6](https://tools.ietf.org/html/rfc3339 "check the specification")
 
-### date_of_calibration Examples
+### date\_of\_calibration Examples
 
 ```json
 "2019-12-06"
@@ -447,15 +557,15 @@ This is the revision number or other identifier if the calibration report was re
 
 *   is optional
 
-*   Type: `string` ([Calibration Revision](iea43\_wra_data_model-properties-measurement-location-measurement-location-properties-measurement-point-measurement-point-properties-sensor-sensor-properties-calibration-calibration-properties-calibration-revision.md))
+*   Type: `string` ([Calibration Revision](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-measurement-point-measurement-point-properties-sensor-sensor-properties-calibration-calibration-properties-calibration-revision.md))
 
 *   can be null
 
-*   defined in: [IEA Wind Resource Assessment - Data Model](iea43\_wra_data_model-properties-measurement-location-measurement-location-properties-measurement-point-measurement-point-properties-sensor-sensor-properties-calibration-calibration-properties-calibration-revision.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43\_wra_data_model.schema.json#/properties/measurement_location/items/properties/measurement_point/items/properties/sensor/items/properties/calibration/items/properties/revision")
+*   defined in: [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-measurement-point-measurement-point-properties-sensor-sensor-properties-calibration-calibration-properties-calibration-revision.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/measurement_point/items/properties/sensor/items/properties/calibration/items/properties/revision")
 
 ### revision Type
 
-`string` ([Calibration Revision](iea43\_wra_data_model-properties-measurement-location-measurement-location-properties-measurement-point-measurement-point-properties-sensor-sensor-properties-calibration-calibration-properties-calibration-revision.md))
+`string` ([Calibration Revision](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-measurement-point-measurement-point-properties-sensor-sensor-properties-calibration-calibration-properties-calibration-revision.md))
 
 ### revision Examples
 
@@ -467,7 +577,7 @@ This is the revision number or other identifier if the calibration report was re
 "B"
 ```
 
-## calibration_organisation
+## calibration\_organisation
 
 The organisation who performed the calibration.
 
@@ -475,17 +585,17 @@ The organisation who performed the calibration.
 
 *   is optional
 
-*   Type: `string` ([Calibration Organisation](iea43\_wra_data_model-properties-measurement-location-measurement-location-properties-measurement-point-measurement-point-properties-sensor-sensor-properties-calibration-calibration-properties-calibration-organisation.md))
+*   Type: `string` ([Calibration Organisation](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-measurement-point-measurement-point-properties-sensor-sensor-properties-calibration-calibration-properties-calibration-organisation.md))
 
 *   can be null
 
-*   defined in: [IEA Wind Resource Assessment - Data Model](iea43\_wra_data_model-properties-measurement-location-measurement-location-properties-measurement-point-measurement-point-properties-sensor-sensor-properties-calibration-calibration-properties-calibration-organisation.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43\_wra_data_model.schema.json#/properties/measurement_location/items/properties/measurement_point/items/properties/sensor/items/properties/calibration/items/properties/calibration_organisation")
+*   defined in: [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-measurement-point-measurement-point-properties-sensor-sensor-properties-calibration-calibration-properties-calibration-organisation.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/measurement_point/items/properties/sensor/items/properties/calibration/items/properties/calibration_organisation")
 
-### calibration_organisation Type
+### calibration\_organisation Type
 
-`string` ([Calibration Organisation](iea43\_wra_data_model-properties-measurement-location-measurement-location-properties-measurement-point-measurement-point-properties-sensor-sensor-properties-calibration-calibration-properties-calibration-organisation.md))
+`string` ([Calibration Organisation](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-measurement-point-measurement-point-properties-sensor-sensor-properties-calibration-calibration-properties-calibration-organisation.md))
 
-### calibration_organisation Examples
+### calibration\_organisation Examples
 
 ```json
 "Deutsche WindGuard"
@@ -495,25 +605,25 @@ The organisation who performed the calibration.
 "Ammonit Wind Tunnel GmbH"
 ```
 
-## place_of_calibration
+## place\_of\_calibration
 
-The unique place or wind tunnel where the calibration took place. E.g. 'place of calibration' is usually a field on a calibration certificate. If not, a combination of a unique tunnel id or serial number and the address would suffice. In the Digital Calibration Certificate project this field maps to 'wind_tunnel_id'.
+The unique place or wind tunnel where the calibration took place. E.g. 'place of calibration' is usually a field on a calibration certificate. If not, a combination of a unique tunnel id or serial number and the address would suffice. In the Digital Calibration Certificate project this field maps to 'wind\_tunnel\_id'.
 
 `place_of_calibration`
 
 *   is optional
 
-*   Type: `string` ([Place of Calibration](iea43\_wra_data_model-properties-measurement-location-measurement-location-properties-measurement-point-measurement-point-properties-sensor-sensor-properties-calibration-calibration-properties-place-of-calibration.md))
+*   Type: `string` ([Place of Calibration](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-measurement-point-measurement-point-properties-sensor-sensor-properties-calibration-calibration-properties-place-of-calibration.md))
 
 *   can be null
 
-*   defined in: [IEA Wind Resource Assessment - Data Model](iea43\_wra_data_model-properties-measurement-location-measurement-location-properties-measurement-point-measurement-point-properties-sensor-sensor-properties-calibration-calibration-properties-place-of-calibration.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43\_wra_data_model.schema.json#/properties/measurement_location/items/properties/measurement_point/items/properties/sensor/items/properties/calibration/items/properties/place_of_calibration")
+*   defined in: [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-measurement-point-measurement-point-properties-sensor-sensor-properties-calibration-calibration-properties-place-of-calibration.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/measurement_point/items/properties/sensor/items/properties/calibration/items/properties/place_of_calibration")
 
-### place_of_calibration Type
+### place\_of\_calibration Type
 
-`string` ([Place of Calibration](iea43\_wra_data_model-properties-measurement-location-measurement-location-properties-measurement-point-measurement-point-properties-sensor-sensor-properties-calibration-calibration-properties-place-of-calibration.md))
+`string` ([Place of Calibration](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-measurement-point-measurement-point-properties-sensor-sensor-properties-calibration-calibration-properties-place-of-calibration.md))
 
-### place_of_calibration Examples
+### place\_of\_calibration Examples
 
 ```json
 "Windtunnel 2 of Deutsche WindGuard WindTunnel Services GmbH, Varel"
@@ -523,7 +633,7 @@ The unique place or wind tunnel where the calibration took place. E.g. 'place of
 "AWT Bargeshagen"
 ```
 
-## uncertainty_k_factor
+## uncertainty\_k\_factor
 
 The uncertainty k factor stated in the calibration report.
 
@@ -531,17 +641,17 @@ The uncertainty k factor stated in the calibration report.
 
 *   is optional
 
-*   Type: `number` ([Uncertainty K Factor](iea43\_wra_data_model-properties-measurement-location-measurement-location-properties-measurement-point-measurement-point-properties-sensor-sensor-properties-calibration-calibration-properties-uncertainty-k-factor.md))
+*   Type: `number` ([Uncertainty K Factor](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-measurement-point-measurement-point-properties-sensor-sensor-properties-calibration-calibration-properties-uncertainty-k-factor.md))
 
 *   can be null
 
-*   defined in: [IEA Wind Resource Assessment - Data Model](iea43\_wra_data_model-properties-measurement-location-measurement-location-properties-measurement-point-measurement-point-properties-sensor-sensor-properties-calibration-calibration-properties-uncertainty-k-factor.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43\_wra_data_model.schema.json#/properties/measurement_location/items/properties/measurement_point/items/properties/sensor/items/properties/calibration/items/properties/uncertainty_k_factor")
+*   defined in: [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-measurement-point-measurement-point-properties-sensor-sensor-properties-calibration-calibration-properties-uncertainty-k-factor.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/measurement_point/items/properties/sensor/items/properties/calibration/items/properties/uncertainty_k_factor")
 
-### uncertainty_k_factor Type
+### uncertainty\_k\_factor Type
 
-`number` ([Uncertainty K Factor](iea43\_wra_data_model-properties-measurement-location-measurement-location-properties-measurement-point-measurement-point-properties-sensor-sensor-properties-calibration-calibration-properties-uncertainty-k-factor.md))
+`number` ([Uncertainty K Factor](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-measurement-point-measurement-point-properties-sensor-sensor-properties-calibration-calibration-properties-uncertainty-k-factor.md))
 
-### uncertainty_k_factor Examples
+### uncertainty\_k\_factor Examples
 
 ```json
 2
@@ -555,15 +665,15 @@ Notes relating to these properties.
 
 *   is optional
 
-*   Type: `string` ([Notes](iea43\_wra_data_model-definitions-notes.md))
+*   Type: `string` ([Notes](iea43_wra_data_model-definitions-notes.md))
 
 *   can be null
 
-*   defined in: [IEA Wind Resource Assessment - Data Model](iea43\_wra_data_model-definitions-notes.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43\_wra_data_model.schema.json#/properties/measurement_location/items/properties/measurement_point/items/properties/sensor/items/properties/calibration/items/properties/notes")
+*   defined in: [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-definitions-notes.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/measurement_point/items/properties/sensor/items/properties/calibration/items/properties/notes")
 
 ### notes Type
 
-`string` ([Notes](iea43\_wra_data_model-definitions-notes.md))
+`string` ([Notes](iea43_wra_data_model-definitions-notes.md))
 
 ### notes Examples
 
@@ -571,7 +681,7 @@ Notes relating to these properties.
 "I can write anything I want here."
 ```
 
-## update_at
+## update\_at
 
 The date these properties were last updated.
 
@@ -579,27 +689,27 @@ The date these properties were last updated.
 
 *   is optional
 
-*   Type: `string` ([Date of Update](iea43\_wra_data_model-definitions-date-of-update.md))
+*   Type: `string` ([Date of Update](iea43_wra_data_model-definitions-date-of-update.md))
 
 *   can be null
 
-*   defined in: [IEA Wind Resource Assessment - Data Model](iea43\_wra_data_model-definitions-date-of-update.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43\_wra_data_model.schema.json#/properties/measurement_location/items/properties/measurement_point/items/properties/sensor/items/properties/calibration/items/properties/update_at")
+*   defined in: [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-definitions-date-of-update.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/measurement_point/items/properties/sensor/items/properties/calibration/items/properties/update_at")
 
-### update_at Type
+### update\_at Type
 
-`string` ([Date of Update](iea43\_wra_data_model-definitions-date-of-update.md))
+`string` ([Date of Update](iea43_wra_data_model-definitions-date-of-update.md))
 
-### update_at Constraints
+### update\_at Constraints
 
 **date time**: the string must be a date time string, according to [RFC 3339, section 5.6](https://tools.ietf.org/html/rfc3339 "check the specification")
 
-### update_at Examples
+### update\_at Examples
 
 ```json
 "2020-07-28T20:49:13"
 ```
 
-## calibration_uncertainty
+## calibration\_uncertainty
 
 The sensor calibration details.
 
@@ -607,16 +717,16 @@ The sensor calibration details.
 
 *   is optional
 
-*   Type: `object[]` ([Calibration Uncertainty](iea43\_wra_data_model-properties-measurement-location-measurement-location-properties-measurement-point-measurement-point-properties-sensor-sensor-properties-calibration-calibration-properties-calibration-uncertainty-calibration-uncertainty.md))
+*   Type: `object[]` ([Calibration Uncertainty](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-measurement-point-measurement-point-properties-sensor-sensor-properties-calibration-calibration-properties-calibration-uncertainty-calibration-uncertainty.md))
 
 *   can be null
 
-*   defined in: [IEA Wind Resource Assessment - Data Model](iea43\_wra_data_model-properties-measurement-location-measurement-location-properties-measurement-point-measurement-point-properties-sensor-sensor-properties-calibration-calibration-properties-calibration-uncertainty.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43\_wra_data_model.schema.json#/properties/measurement_location/items/properties/measurement_point/items/properties/sensor/items/properties/calibration/items/properties/calibration_uncertainty")
+*   defined in: [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-measurement-point-measurement-point-properties-sensor-sensor-properties-calibration-calibration-properties-calibration-uncertainty.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/measurement_point/items/properties/sensor/items/properties/calibration/items/properties/calibration_uncertainty")
 
-### calibration_uncertainty Type
+### calibration\_uncertainty Type
 
-`object[]` ([Calibration Uncertainty](iea43\_wra_data_model-properties-measurement-location-measurement-location-properties-measurement-point-measurement-point-properties-sensor-sensor-properties-calibration-calibration-properties-calibration-uncertainty-calibration-uncertainty.md))
+`object[]` ([Calibration Uncertainty](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-measurement-point-measurement-point-properties-sensor-sensor-properties-calibration-calibration-properties-calibration-uncertainty-calibration-uncertainty.md))
 
-### calibration_uncertainty Constraints
+### calibration\_uncertainty Constraints
 
 **unique items**: all items in this array must be unique. Duplicates are not allowed.

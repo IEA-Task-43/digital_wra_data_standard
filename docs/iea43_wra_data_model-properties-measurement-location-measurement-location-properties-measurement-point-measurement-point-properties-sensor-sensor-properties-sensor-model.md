@@ -1,6 +1,6 @@
 ## model Type
 
-`string` ([Sensor Model](iea43\_wra_data_model-properties-measurement-location-measurement-location-properties-measurement-point-measurement-point-properties-sensor-sensor-properties-sensor-model.md))
+`string` ([Sensor Model](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-measurement-point-measurement-point-properties-sensor-sensor-properties-sensor-model.md))
 
 ## model Examples
 

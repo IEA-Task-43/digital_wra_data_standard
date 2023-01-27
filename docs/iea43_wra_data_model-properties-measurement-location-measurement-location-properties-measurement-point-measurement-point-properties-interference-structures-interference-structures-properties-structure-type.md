@@ -1,8 +1,8 @@
-## structure_type_id Type
+## structure\_type\_id Type
 
-`string` ([Structure Type](iea43\_wra_data_model-properties-measurement-location-measurement-location-properties-measurement-point-measurement-point-properties-interference-structures-interference-structures-properties-structure-type.md))
+`string` ([Structure Type](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-measurement-point-measurement-point-properties-interference-structures-interference-structures-properties-structure-type.md))
 
-## structure_type_id Constraints
+## structure\_type\_id Constraints
 
 **enum**: the value of this property must be equal to one of the following values:
 

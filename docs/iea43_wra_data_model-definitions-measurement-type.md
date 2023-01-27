@@ -1,74 +1,100 @@
-## measurement_type_id Type
+## measurement\_type\_id Type
 
-`string` ([Measurement Type](iea43\_wra_data_model-definitions-measurement-type.md))
+`string` ([Measurement Type](iea43_wra_data_model-definitions-measurement-type.md))
 
-## measurement_type_id Constraints
+## measurement\_type\_id Constraints
 
 **enum**: the value of this property must be equal to one of the following values:
 
-| Value                             | Explanation |
-| :-------------------------------- | :---------- |
-| `"wind_speed"`                    |             |
-| `"wind_direction"`                |             |
-| `"air_temperature"`               |             |
-| `"temperature"`                   |             |
-| `"air_pressure"`                  |             |
-| `"air_density"`                   |             |
-| `"relative_humidity"`             |             |
-| `"voltage"`                       |             |
-| `"current"`                       |             |
-| `"resistance"`                    |             |
-| `"power"`                         |             |
-| `"energy"`                        |             |
-| `"vertical_wind_speed"`           |             |
-| `"wind_speed_turbulence"`         |             |
-| `"precipitation"`                 |             |
-| `"ice_detection"`                 |             |
-| `"global_horizontal_irradiance"`  |             |
-| `"direct_normal_irradiance"`      |             |
-| `"diffuse_horizontal_irradiance"` |             |
-| `"global_tilted_irradiance"`      |             |
-| `"global_normal_irradiance"`      |             |
-| `"albedo"`                        |             |
-| `"soiling_loss_index"`            |             |
-| `"illuminance"`                   |             |
-| `"fog"`                           |             |
-| `"gps_coordinates"`               |             |
-| `"status"`                        |             |
-| `"flag"`                          |             |
-| `"counter"`                       |             |
-| `"availability"`                  |             |
-| `"quality"`                       |             |
-| `"carrier_to_noise_ratio"`        |             |
-| `"doppler_spectral_broadening"`   |             |
-| `"orientation"`                   |             |
-| `"compass_direction"`             |             |
-| `"true_north_offset"`             |             |
-| `"tilt"`                          |             |
-| `"tilt_x"`                        |             |
-| `"tilt_y"`                        |             |
-| `"tilt_z"`                        |             |
-| `"u"`                             |             |
-| `"v"`                             |             |
-| `"w"`                             |             |
-| `"elevation"`                     |             |
-| `"altitude"`                      |             |
-| `"azimuth"`                       |             |
-| `"timestamp"`                     |             |
-| `"other"`                         |             |
+| Value                                    | Explanation |
+| :--------------------------------------- | :---------- |
+| `"wind_speed"`                           |             |
+| `"wind_direction"`                       |             |
+| `"air_temperature"`                      |             |
+| `"water_temperature"`                    |             |
+| `"temperature"`                          |             |
+| `"air_pressure"`                         |             |
+| `"air_density"`                          |             |
+| `"relative_humidity"`                    |             |
+| `"voltage"`                              |             |
+| `"current"`                              |             |
+| `"resistance"`                           |             |
+| `"power"`                                |             |
+| `"energy"`                               |             |
+| `"vertical_wind_speed"`                  |             |
+| `"wind_speed_turbulence"`                |             |
+| `"precipitation"`                        |             |
+| `"ice_detection"`                        |             |
+| `"global_horizontal_irradiance"`         |             |
+| `"direct_normal_irradiance"`             |             |
+| `"diffuse_horizontal_irradiance"`        |             |
+| `"global_tilted_irradiance"`             |             |
+| `"global_normal_irradiance"`             |             |
+| `"albedo"`                               |             |
+| `"soiling_loss_index"`                   |             |
+| `"illuminance"`                          |             |
+| `"fog"`                                  |             |
+| `"salinity"`                             |             |
+| `"conductivity"`                         |             |
+| `"pressure"`                             |             |
+| `"gps_coordinates"`                      |             |
+| `"status"`                               |             |
+| `"flag"`                                 |             |
+| `"counter"`                              |             |
+| `"availability"`                         |             |
+| `"quality"`                              |             |
+| `"carrier_to_noise_ratio"`               |             |
+| `"doppler_spectral_broadening"`          |             |
+| `"echo_intensity"`                       |             |
+| `"signal_to_noise_ratio"`                |             |
+| `"motion_corrected_wind_speed"`          |             |
+| `"motion_corrected_wind_direction"`      |             |
+| `"motion_corrected_vertical_wind_speed"` |             |
+| `"wave_height"`                          |             |
+| `"wave_significant_height"`              |             |
+| `"wave_maximum_height"`                  |             |
+| `"wave_direction"`                       |             |
+| `"wave_directional_spread"`              |             |
+| `"wave_period"`                          |             |
+| `"wave_peak_period"`                     |             |
+| `"water_speed"`                          |             |
+| `"vertical_water_speed"`                 |             |
+| `"water_direction"`                      |             |
+| `"orientation"`                          |             |
+| `"compass_direction"`                    |             |
+| `"true_north_offset"`                    |             |
+| `"tilt"`                                 |             |
+| `"tilt_x"`                               |             |
+| `"tilt_y"`                               |             |
+| `"tilt_z"`                               |             |
+| `"u"`                                    |             |
+| `"v"`                                    |             |
+| `"w"`                                    |             |
+| `"elevation"`                            |             |
+| `"altitude"`                             |             |
+| `"height"`                               |             |
+| `"azimuth"`                              |             |
+| `"water_level"`                          |             |
+| `"depth"`                                |             |
+| `"timestamp"`                            |             |
+| `"other"`                                |             |
 
-## measurement_type_id Examples
+## measurement\_type\_id Examples
 
 ```json
 "wind_speed  (the horizontal component of wind speed)"
 ```
 
 ```json
-"wind_direction  (the direction form which the wind is coming from)"
+"wind_direction  (the direction from which the wind is coming from)"
 ```
 
 ```json
 "air_temperature  (outdoor ambient temperature of the air)"
+```
+
+```json
+"water_temperature  (is the in situ temperature of the water. In CF Conventions this is equivalent to 'sea_water_temperature'.)"
 ```
 
 ```json
@@ -160,6 +186,18 @@
 ```
 
 ```json
+"salinity (is the salt content of water. In CF Conventions this is equivalent to 'sea_water_salinity', 'sea_water_practical_salinity' or 'sea_water_absolute_salinity' depending on the scale been used.)"
+```
+
+```json
+"conductivity (of an electrolyte solution, e.g. sea water, is a measure of its ability to conduct electricity. In CF Conventions this is equivalent to 'sea_water_electrical_conductivity' for offshore use cases.)"
+```
+
+```json
+"pressure (the pressure of a medium e.g. water. In CF Conventions this is equivalent to 'sea_water_pressure' for offshore use cases.)"
+```
+
+```json
 "gps_coordinates (latitude and/or longitude as measured by a gps)"
 ```
 
@@ -185,6 +223,66 @@
 
 ```json
 "doppler_spectral_broadening (as measured by lidar devices)"
+```
+
+```json
+"echo_intensity (is the brightness or brilliance of the acoustic echo usually measured by an ADCP. If from an ADCP, it can be used to judge the quality of measurement or estimate the amount of suspended sediment in the water column.)"
+```
+
+```json
+"signal_to_noise_ratio (a measure of signal strength as measured by ADCPs.)"
+```
+
+```json
+"motion_corrected_wind_speed (the horizontal component of wind speed which has been corrected due to the motion of the measuring sensor/device, typically from floating lidar systems)"
+```
+
+```json
+"motion_corrected_wind_direction (the direction form which the wind is coming from which has been corrected due to the motion of the measuring sensor/device, typically from floating lidar systems)"
+```
+
+```json
+"motion_corrected_vertical_wind_speed (the vertical component of wind speed which has been corrected due to the motion of the measuring sensor/device, typically from floating lidar systems)"
+```
+
+```json
+"wave_height (is the mean wave height measured during the observation period, where the height is defined as the vertical distance from a wave trough to the following wave crest. In CF Conventions this is equivalent to 'sea_surface_wave_mean_height'.)"
+```
+
+```json
+"wave_significant_height (is a statistic computed from wave measurements and corresponds to the average height of the highest one third of the waves, where the height is defined as the vertical distance from a wave trough to the following wave crest. In CF Conventions this is equivalent to 'sea_surface_wave_significant_height'.)"
+```
+
+```json
+"wave_maximum_height (is the greatest trough to crest distance measured during the observation period. Wave height is defined as the vertical distance from a wave trough to the following wave crest. In CF Conventions this is equivalent to 'sea_surface_wave_maximum_height'.)"
+```
+
+```json
+"wave_direction (the direction from which the wave is coming from. The direction is a bearing in the usual geographical sense, measured positive clockwise from due north. In CF Conventions this is equivalent to 'sea_surface_wave_from_direction'.)"
+```
+
+```json
+"wave_directional_spread (is the standard deviation of all the wave directions measured. It signifies how spread out,or how wide an area, all the waves are coming from. In CF Conventions this is equivalent to 'sea_surface_wave_directional_spread'.)"
+```
+
+```json
+"wave_period (is the mean wave period measured during the observation period at a specific location. In CF Conventions this is equivalent to 'sea_surface_wave_mean_period'.)"
+```
+
+```json
+"wave_peak_period (is the wave period of the most energetic waves in the total wave spectrum at a specific location. In CF Conventions this is equivalent to 'sea_surface_wave_period_at_variance_spectral_density_maximum'.)"
+```
+
+```json
+"water_speed (the horizontal magnitude of the water's velocity. This is sometimes also known as 'current speed' and in CF Conventions this is equivalent to 'sea_water_speed'.)"
+```
+
+```json
+"vertical_water_speed (the vertical magnitude of the water's velocity. In CF Conventions this is equivalent to 'upward_sea_water_velocity'.)"
+```
+
+```json
+"water_direction (the direction from which the water flow is coming from. The direction is a bearing in the usual geographical sense, measured positive clockwise from due north. This is sometimes also known as 'current direction' and in CF Conventions this is equivalent to 'sea_water_velocity_from_direction' or 'sea_water_from_direction'.)"
 ```
 
 ```json
@@ -232,7 +330,19 @@
 ```
 
 ```json
+"height (the vertical distance above a particular reference e.g. ground level.)"
+```
+
+```json
 "azimuth (is the angle of the sun around the horizon, in the northern hemisphere this is usually measured from north and increasing eastward whereas in the southern hemisphere it can be measured from the south and increasing westward)"
+```
+
+```json
+"water_level (is the height of the sea surface above the sea floor. In CF Conventions this is equivalent, but opposite in respect of their point of reference, to 'sea_floor_depth_below_sea_surface'.)"
+```
+
+```json
+"depth (the vertical distance below a particular reference e.g. sea level.)"
 ```
 
 ```json

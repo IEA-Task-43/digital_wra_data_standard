@@ -1,6 +1,6 @@
 ## date Type
 
-`string` ([Date](iea43\_wra_data_model-properties-date.md))
+`string` ([Date](iea43_wra_data_model-properties-date.md))
 
 ## date Constraints
 

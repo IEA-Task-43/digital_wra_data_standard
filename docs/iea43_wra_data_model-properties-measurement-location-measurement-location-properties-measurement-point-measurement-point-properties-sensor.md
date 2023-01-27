@@ -1,6 +1,6 @@
 ## sensor Type
 
-`object[]` ([Sensor](iea43\_wra_data_model-properties-measurement-location-measurement-location-properties-measurement-point-measurement-point-properties-sensor-sensor.md))
+`object[]` ([Sensor](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-measurement-point-measurement-point-properties-sensor-sensor.md))
 
 ## sensor Constraints
 

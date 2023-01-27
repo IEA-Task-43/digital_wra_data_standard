@@ -1,8 +1,8 @@
-## height_reference_id Type
+## height\_reference\_id Type
 
-unknown ([Height Reference](iea43\_wra_data_model-definitions-height-reference.md))
+`string` ([Height Reference](iea43_wra_data_model-definitions-height-reference.md))
 
-## height_reference_id Constraints
+## height\_reference\_id Constraints
 
 **enum**: the value of this property must be equal to one of the following values:
 
@@ -10,10 +10,12 @@ unknown ([Height Reference](iea43\_wra_data_model-definitions-height-reference.m
 | :--------------------------- | :---------- |
 | `"ground_level"`             |             |
 | `"mean_sea_level"`           |             |
+| `"sea_level"`                |             |
 | `"lowest_astronomical_tide"` |             |
+| `"sea_floor"`                |             |
 | `"other"`                    |             |
 
-## height_reference_id Default Value
+## height\_reference\_id Default Value
 
 The default value is:
 

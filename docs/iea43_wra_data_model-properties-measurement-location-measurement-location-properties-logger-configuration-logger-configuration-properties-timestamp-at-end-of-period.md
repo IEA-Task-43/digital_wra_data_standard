@@ -1,8 +1,8 @@
-## timestamp_is_end_of_period Type
+## timestamp\_is\_end\_of\_period Type
 
-`boolean` ([Timestamp at End of Period](iea43\_wra_data_model-properties-measurement-location-measurement-location-properties-logger-configuration-logger-configuration-properties-timestamp-at-end-of-period.md))
+`boolean` ([Timestamp at End of Period](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-logger-configuration-logger-configuration-properties-timestamp-at-end-of-period.md))
 
-## timestamp_is_end_of_period Examples
+## timestamp\_is\_end\_of\_period Examples
 
 ```json
 "true (for timestamp to represent the end of the averaging period)"
