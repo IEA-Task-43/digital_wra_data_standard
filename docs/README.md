@@ -2,7 +2,7 @@
 
 ## Top-level Schemas
 
-*   [IEA Wind Resource Assessment - Data Model](./iea43_wra_data_model.md "This Data Model schema is a digital representation of a meteorological mast used for measureing the wind resource of a potential wind farm") – `https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json`
+*   [IEA Wind Resource Assessment - Data Model](./iea43_wra_data_model.md "This Data Model schema is a digital representation of a meteorological mast used for measuring the wind resource of a potential wind farm") – `https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json`
 
 ## Other Schemas
 

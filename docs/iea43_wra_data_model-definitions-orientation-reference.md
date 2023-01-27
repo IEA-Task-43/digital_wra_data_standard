@@ -11,3 +11,4 @@
 | `"magnetic_north"` |             |
 | `"true_north"`     |             |
 | `"grid_north"`     |             |
+| `null`             |             |

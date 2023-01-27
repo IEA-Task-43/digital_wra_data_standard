@@ -11,3 +11,4 @@
 | `"side"`      |             |
 | `"goal_post"` |             |
 | `"top"`       |             |
+| `null`        |             |

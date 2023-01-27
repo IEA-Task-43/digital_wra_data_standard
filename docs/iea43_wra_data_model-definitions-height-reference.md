@@ -1,6 +1,6 @@
 ## height\_reference\_id Type
 
-unknown ([Height Reference](iea43_wra_data_model-definitions-height-reference.md))
+`string` ([Height Reference](iea43_wra_data_model-definitions-height-reference.md))
 
 ## height\_reference\_id Constraints
 
@@ -10,7 +10,9 @@ unknown ([Height Reference](iea43_wra_data_model-definitions-height-reference.md
 | :--------------------------- | :---------- |
 | `"ground_level"`             |             |
 | `"mean_sea_level"`           |             |
+| `"sea_level"`                |             |
 | `"lowest_astronomical_tide"` |             |
+| `"sea_floor"`                |             |
 | `"other"`                    |             |
 
 ## height\_reference\_id Default Value

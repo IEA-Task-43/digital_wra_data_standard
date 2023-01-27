@@ -73,6 +73,7 @@ The mounting type the sensor is mounted onto the mast e.g. an anemometer top mou
 | `"side"`      |             |
 | `"goal_post"` |             |
 | `"top"`       |             |
+| `null`        |             |
 
 ## boom\_orientation\_deg
 
@@ -149,6 +150,7 @@ The orientation reference the item is measured against. E.g. magnetic north.
 | `"magnetic_north"` |             |
 | `"true_north"`     |             |
 | `"grid_north"`     |             |
+| `null`             |             |
 
 ## tilt\_angle\_deg
 

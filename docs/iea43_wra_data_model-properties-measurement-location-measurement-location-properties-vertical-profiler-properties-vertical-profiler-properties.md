@@ -4,16 +4,17 @@
 
 # items Properties
 
-| Property                                                        | Type          | Required | Nullable       | Defined by                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
-| :-------------------------------------------------------------- | :------------ | :------- | :------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [device\_datum\_plane\_height\_m](#device_datum_plane_height_m) | `number`      | Optional | can be null    | [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-vertical-profiler-properties-vertical-profiler-properties-properties-device-datum-plane-height-m.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/vertical_profiler_properties/items/properties/device_datum_plane_height_m") |
-| [height\_reference\_id](#height_reference_id)                   | Not specified | Optional | cannot be null | [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-definitions-height-reference.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/vertical_profiler_properties/items/properties/height_reference_id")                                                                                                                                             |
-| [device\_orientation\_deg](#device_orientation_deg)             | `number`      | Optional | can be null    | [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-vertical-profiler-properties-vertical-profiler-properties-properties-device-orientation-deg.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/vertical_profiler_properties/items/properties/device_orientation_deg")           |
-| [orientation\_reference\_id](#orientation_reference_id)         | `string`      | Optional | can be null    | [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-definitions-orientation-reference.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/vertical_profiler_properties/items/properties/orientation_reference_id")                                                                                                                                   |
-| [date\_from](#date_from)                                        | `string`      | Optional | cannot be null | [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-definitions-date-from.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/vertical_profiler_properties/items/properties/date_from")                                                                                                                                                              |
-| [date\_to](#date_to)                                            | `string`      | Optional | can be null    | [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-definitions-date-to.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/vertical_profiler_properties/items/properties/date_to")                                                                                                                                                                  |
-| [notes](#notes)                                                 | `string`      | Optional | can be null    | [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-definitions-notes.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/vertical_profiler_properties/items/properties/notes")                                                                                                                                                                      |
-| [update\_at](#update_at)                                        | `string`      | Optional | can be null    | [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-definitions-date-of-update.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/vertical_profiler_properties/items/properties/update_at")                                                                                                                                                         |
+| Property                                                        | Type     | Required | Nullable    | Defined by                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| :-------------------------------------------------------------- | :------- | :------- | :---------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [device\_datum\_plane\_height\_m](#device_datum_plane_height_m) | `number` | Optional | can be null | [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-vertical-profiler-properties-vertical-profiler-properties-properties-device-datum-plane-height-m.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/vertical_profiler_properties/items/properties/device_datum_plane_height_m") |
+| [height\_reference\_id](#height_reference_id)                   | `string` | Optional | can be null | [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-definitions-height-reference.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/vertical_profiler_properties/items/properties/height_reference_id")                                                                                                                                             |
+| [device\_orientation\_deg](#device_orientation_deg)             | `number` | Optional | can be null | [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-vertical-profiler-properties-vertical-profiler-properties-properties-device-orientation-deg.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/vertical_profiler_properties/items/properties/device_orientation_deg")           |
+| [orientation\_reference\_id](#orientation_reference_id)         | `string` | Optional | can be null | [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-definitions-orientation-reference.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/vertical_profiler_properties/items/properties/orientation_reference_id")                                                                                                                                   |
+| [device\_vertical\_orientation](#device_vertical_orientation)   | `string` | Optional | can be null | [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-vertical-profiler-properties-vertical-profiler-properties-properties-device-vertical-orientation.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/vertical_profiler_properties/items/properties/device_vertical_orientation") |
+| [date\_from](#date_from)                                        | `string` | Optional | can be null | [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-vertical-profiler-properties-vertical-profiler-properties-properties-date-from.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/vertical_profiler_properties/items/properties/date_from")                                     |
+| [date\_to](#date_to)                                            | `string` | Optional | can be null | [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-definitions-date-to.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/vertical_profiler_properties/items/properties/date_to")                                                                                                                                                                  |
+| [notes](#notes)                                                 | `string` | Optional | can be null | [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-definitions-notes.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/vertical_profiler_properties/items/properties/notes")                                                                                                                                                                      |
+| [update\_at](#update_at)                                        | `string` | Optional | can be null | [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-definitions-date-of-update.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/vertical_profiler_properties/items/properties/update_at")                                                                                                                                                         |
 
 ## device\_datum\_plane\_height\_m
 
@@ -45,21 +46,21 @@ The datum plane height of the remote sensing device where the datum feature is d
 
 ## height\_reference\_id
 
-The height reference frame that is used to measure the item height. E.g. onshore this is ground level i.e. the item is 0.5 m above ground level. Offshore is a bit different as it can be 20 m above mean sea level or 20 m above lowest astronomical tide.
+The height reference frame that is used to measure the item height. E.g. onshore this is 'ground level' i.e. the item is 0.5 m above ground level. Offshore is a bit different as it can be 20 m above 'mean sea level' or 20 m above 'lowest astronomical tide' for a fixed structure or 20 m above 'sea level' for a floating lidar.
 
 `height_reference_id`
 
 *   is optional
 
-*   Type: unknown ([Height Reference](iea43_wra_data_model-definitions-height-reference.md))
+*   Type: `string` ([Height Reference](iea43_wra_data_model-definitions-height-reference.md))
 
-*   cannot be null
+*   can be null
 
 *   defined in: [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-definitions-height-reference.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/vertical_profiler_properties/items/properties/height_reference_id")
 
 ### height\_reference\_id Type
 
-unknown ([Height Reference](iea43_wra_data_model-definitions-height-reference.md))
+`string` ([Height Reference](iea43_wra_data_model-definitions-height-reference.md))
 
 ### height\_reference\_id Constraints
 
@@ -69,7 +70,9 @@ unknown ([Height Reference](iea43_wra_data_model-definitions-height-reference.md
 | :--------------------------- | :---------- |
 | `"ground_level"`             |             |
 | `"mean_sea_level"`           |             |
+| `"sea_level"`                |             |
 | `"lowest_astronomical_tide"` |             |
+| `"sea_floor"`                |             |
 | `"other"`                    |             |
 
 ### height\_reference\_id Default Value
@@ -131,6 +134,35 @@ The orientation reference the item is measured against. E.g. magnetic north.
 | `"magnetic_north"` |             |
 | `"true_north"`     |             |
 | `"grid_north"`     |             |
+| `null`             |             |
+
+## device\_vertical\_orientation
+
+The vertical orientation that the remote sensing device is installed. E.g. an ADCP mounted on the sea floor has an 'upwards' vertical orientation pointing towards the sea surface whereas an ADCP mounted underneath a buoy has a 'downward' vertical orientation pointing towards the sea floor.
+
+`device_vertical_orientation`
+
+*   is optional
+
+*   Type: `string` ([Device Vertical Orientation](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-vertical-profiler-properties-vertical-profiler-properties-properties-device-vertical-orientation.md))
+
+*   can be null
+
+*   defined in: [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-vertical-profiler-properties-vertical-profiler-properties-properties-device-vertical-orientation.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/vertical_profiler_properties/items/properties/device_vertical_orientation")
+
+### device\_vertical\_orientation Type
+
+`string` ([Device Vertical Orientation](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-vertical-profiler-properties-vertical-profiler-properties-properties-device-vertical-orientation.md))
+
+### device\_vertical\_orientation Constraints
+
+**enum**: the value of this property must be equal to one of the following values:
+
+| Value        | Explanation |
+| :----------- | :---------- |
+| `"upward"`   |             |
+| `"downward"` |             |
+| `null`       |             |
 
 ## date\_from
 
@@ -140,15 +172,15 @@ The date from when these properties are active. If these properties follow a cha
 
 *   is optional
 
-*   Type: `string` ([Date From](iea43_wra_data_model-definitions-date-from.md))
+*   Type: `string` ([Date From](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-vertical-profiler-properties-vertical-profiler-properties-properties-date-from.md))
 
-*   cannot be null
+*   can be null
 
-*   defined in: [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-definitions-date-from.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/vertical_profiler_properties/items/properties/date_from")
+*   defined in: [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-vertical-profiler-properties-vertical-profiler-properties-properties-date-from.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/vertical_profiler_properties/items/properties/date_from")
 
 ### date\_from Type
 
-`string` ([Date From](iea43_wra_data_model-definitions-date-from.md))
+`string` ([Date From](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-vertical-profiler-properties-vertical-profiler-properties-properties-date-from.md))
 
 ### date\_from Constraints
 

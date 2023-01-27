@@ -22,4 +22,7 @@
 | `"AXYS Technologies"`   |             |
 | `"AQSystem"`            |             |
 | `"Pentaluum"`           |             |
+| `"Nortek"`              |             |
+| `"Teledyne RDI"`        |             |
+| `"Aanderaa"`            |             |
 | `"Other"`               |             |

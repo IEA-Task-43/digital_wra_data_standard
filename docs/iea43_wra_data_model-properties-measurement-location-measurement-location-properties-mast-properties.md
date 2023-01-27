@@ -11,6 +11,8 @@
 | [mast\_serial\_number](#mast_serial_number)       | `string` | Optional | can be null | [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-mast-properties-properties-mast-serial-number.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/mast_properties/properties/mast_serial_number")       |
 | [mast\_model](#mast_model)                        | `string` | Optional | can be null | [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-mast-properties-properties-mast-model.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/mast_properties/properties/mast_model")                       |
 | [mast\_height\_m](#mast_height_m)                 | `number` | Optional | can be null | [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-mast-properties-properties-mast-height-m.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/mast_properties/properties/mast_height_m")                 |
+| [date\_from](#date_from)                          | `string` | Optional | can be null | [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-mast-properties-properties-date-from.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/mast_properties/properties/date_from")                         |
+| [date\_to](#date_to)                              | `string` | Optional | can be null | [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-definitions-date-to.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/mast_properties/properties/date_to")                                                                                                            |
 | [notes](#notes)                                   | `string` | Optional | can be null | [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-definitions-notes.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/mast_properties/properties/notes")                                                                                                                |
 | [update\_at](#update_at)                          | `string` | Optional | can be null | [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-definitions-date-of-update.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/mast_properties/properties/update_at")                                                                                                   |
 | [mast\_section\_geometry](#mast_section_geometry) | `array`  | Optional | can be null | [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-mast-properties-properties-mast-section-geometry.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/mast_properties/properties/mast_section_geometry") |
@@ -44,6 +46,7 @@ The type of mast geometry e.g. lattice with a triangular profile or pole. The IE
 | `"lattice_square_round_edges"` |             |
 | `"lattice_square_sharp_edges"` |             |
 | `"pole"`                       |             |
+| `null`                         |             |
 
 ## mast\_oem
 
@@ -151,6 +154,66 @@ The height of the mast itself, not necessarily the top anemometer height.
 
 ```json
 81.3
+```
+
+## date\_from
+
+The date from when these properties are active. If these properties follow a change, then this Date From should equal the previous Date To. The format of this date should follow ISO 8601 with the 'T' required. If a timezone is used, it is essential that this timezone is the same as the logger timezone.
+
+`date_from`
+
+*   is optional
+
+*   Type: `string` ([Date From](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-mast-properties-properties-date-from.md))
+
+*   can be null
+
+*   defined in: [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-mast-properties-properties-date-from.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/mast_properties/properties/date_from")
+
+### date\_from Type
+
+`string` ([Date From](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-mast-properties-properties-date-from.md))
+
+### date\_from Constraints
+
+**date time**: the string must be a date time string, according to [RFC 3339, section 5.6](https://tools.ietf.org/html/rfc3339 "check the specification")
+
+### date\_from Examples
+
+```json
+"2020-07-28T20:00:00"
+```
+
+## date\_to
+
+The final end date for when these properties are active. If these properties are currently active please use null. If null is not allowed please use 2100-01-01T00:00:00. The format of this date should follow ISO 8601 with the 'T' required. If a timezone is used, it is essential that this timezone is the same as the logger timezone.
+
+`date_to`
+
+*   is optional
+
+*   Type: `string` ([Date To](iea43_wra_data_model-definitions-date-to.md))
+
+*   can be null
+
+*   defined in: [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-definitions-date-to.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/mast_properties/properties/date_to")
+
+### date\_to Type
+
+`string` ([Date To](iea43_wra_data_model-definitions-date-to.md))
+
+### date\_to Constraints
+
+**date time**: the string must be a date time string, according to [RFC 3339, section 5.6](https://tools.ietf.org/html/rfc3339 "check the specification")
+
+### date\_to Examples
+
+```json
+"2020-07-28T20:00:00"
+```
+
+```json
+"2100-01-01T00:00:00"
 ```
 
 ## notes
