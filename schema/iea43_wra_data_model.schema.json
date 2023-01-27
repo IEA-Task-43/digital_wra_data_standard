@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$version": "1.1.0-2022.06",
+  "$version": "1.2.0-2023.01",
   "$id": "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json",
   "definitions": {
     "date_from": {
@@ -56,6 +56,7 @@
         "wind_speed",
         "wind_direction",
         "air_temperature",
+        "water_temperature",
         "temperature",
         "air_pressure",
         "air_density",
@@ -78,6 +79,9 @@
         "soiling_loss_index",
         "illuminance",
         "fog",
+        "salinity",
+        "conductivity",
+        "pressure",
         "gps_coordinates",
         "status",
         "flag",
@@ -86,6 +90,21 @@
         "quality",
         "carrier_to_noise_ratio",
         "doppler_spectral_broadening",
+        "echo_intensity",
+        "signal_to_noise_ratio",
+        "motion_corrected_wind_speed",
+        "motion_corrected_wind_direction",
+        "motion_corrected_vertical_wind_speed",
+        "wave_height",
+        "wave_significant_height",
+        "wave_maximum_height",
+        "wave_direction",
+        "wave_directional_spread",
+        "wave_period",
+        "wave_peak_period",
+        "water_speed",
+        "vertical_water_speed",
+        "water_direction",
         "orientation",
         "compass_direction",
         "true_north_offset",
@@ -98,14 +117,18 @@
         "w",
         "elevation",
         "altitude",
+        "height",
         "azimuth",
+        "water_level",
+        "depth",
         "timestamp",
         "other"
       ],
       "examples": [
         "wind_speed  (the horizontal component of wind speed)",
-        "wind_direction  (the direction form which the wind is coming from)",
+        "wind_direction  (the direction from which the wind is coming from)",
         "air_temperature  (outdoor ambient temperature of the air)",
+        "water_temperature  (is the in situ temperature of the water. In CF Conventions this is equivalent to 'sea_water_temperature'.)",
         "temperature  (the temperature of a body or indoor ambient air temperature)",
         "air_pressure (outdoor pressure of the air)",
         "air_density (the density of air)",
@@ -128,6 +151,9 @@
         "soiling_loss_index (an index of lost energy between clean and dirty PV modules, https://www.campbellsci.com/cr-pvs1 )",
         "illuminance (measure of visible light falling onto a per unit area, typically measured in lux)",
         "fog (is a visible aerosol consisting of tiny water droplets or ice crystals suspended in the air at or near the Earth's surface)",
+        "salinity (is the salt content of water. In CF Conventions this is equivalent to 'sea_water_salinity', 'sea_water_practical_salinity' or 'sea_water_absolute_salinity' depending on the scale been used.)",
+        "conductivity (of an electrolyte solution, e.g. sea water, is a measure of its ability to conduct electricity. In CF Conventions this is equivalent to 'sea_water_electrical_conductivity' for offshore use cases.)",
+        "pressure (the pressure of a medium e.g. water. In CF Conventions this is equivalent to 'sea_water_pressure' for offshore use cases.)",
         "gps_coordinates (latitude and/or longitude as measured by a gps)",
         "status (a status flag or other to describe the status of a sensor or object)",
         "counter (a simple counter)",
@@ -135,6 +161,21 @@
         "quality (a measure of the quality of a measurement)",
         "carrier_to_noise_ratio (a measure of signal strength as measured by lidar devices, http://data.windenergy.dtu.dk/ontologies/view/IEATask32Glossary/en/page/parameters.carrier_to_noise_ratio )",
         "doppler_spectral_broadening (as measured by lidar devices)",
+        "echo_intensity (is the brightness or brilliance of the acoustic echo usually measured by an ADCP. If from an ADCP, it can be used to judge the quality of measurement or estimate the amount of suspended sediment in the water column.)",
+        "signal_to_noise_ratio (a measure of signal strength as measured by ADCPs.)",
+        "motion_corrected_wind_speed (the horizontal component of wind speed which has been corrected due to the motion of the measuring sensor/device, typically from floating lidar systems)",
+        "motion_corrected_wind_direction (the direction form which the wind is coming from which has been corrected due to the motion of the measuring sensor/device, typically from floating lidar systems)",
+        "motion_corrected_vertical_wind_speed (the vertical component of wind speed which has been corrected due to the motion of the measuring sensor/device, typically from floating lidar systems)",
+        "wave_height (is the mean wave height measured during the observation period, where the height is defined as the vertical distance from a wave trough to the following wave crest. In CF Conventions this is equivalent to 'sea_surface_wave_mean_height'.)",
+        "wave_significant_height (is a statistic computed from wave measurements and corresponds to the average height of the highest one third of the waves, where the height is defined as the vertical distance from a wave trough to the following wave crest. In CF Conventions this is equivalent to 'sea_surface_wave_significant_height'.)",
+        "wave_maximum_height (is the greatest trough to crest distance measured during the observation period. Wave height is defined as the vertical distance from a wave trough to the following wave crest. In CF Conventions this is equivalent to 'sea_surface_wave_maximum_height'.)",
+        "wave_direction (the direction from which the wave is coming from. The direction is a bearing in the usual geographical sense, measured positive clockwise from due north. In CF Conventions this is equivalent to 'sea_surface_wave_from_direction'.)",
+        "wave_directional_spread (is the standard deviation of all the wave directions measured. It signifies how spread out,or how wide an area, all the waves are coming from. In CF Conventions this is equivalent to 'sea_surface_wave_directional_spread'.)",
+        "wave_period (is the mean wave period measured during the observation period at a specific location. In CF Conventions this is equivalent to 'sea_surface_wave_mean_period'.)",
+        "wave_peak_period (is the wave period of the most energetic waves in the total wave spectrum at a specific location. In CF Conventions this is equivalent to 'sea_surface_wave_period_at_variance_spectral_density_maximum'.)",
+        "water_speed (the horizontal magnitude of the water's velocity. This is sometimes also known as 'current speed' and in CF Conventions this is equivalent to 'sea_water_speed'.)",
+        "vertical_water_speed (the vertical magnitude of the water's velocity. In CF Conventions this is equivalent to 'upward_sea_water_velocity'.)",
+        "water_direction (the direction from which the water flow is coming from. The direction is a bearing in the usual geographical sense, measured positive clockwise from due north. This is sometimes also known as 'current direction' and in CF Conventions this is equivalent to 'sea_water_velocity_from_direction' or 'sea_water_from_direction'.)",
         "orientation (the direction something points or faces relative to north or other specified positions)",
         "compass_direction (the direction as measured by a compass, therefore referenced to magnetic north)",
         "true_north_offset (the offset something points or faces relative to true north, e.g. from a solar compass such as a Geovane)",
@@ -146,7 +187,10 @@
         "w (the W component vector, if using this for wind please use the 'vertical_wind_speed' measurement type. Please use the notes property to define how this component is utilised.",
         "elevation (the height the surface of the earth is above mean sea level)",
         "altitude (the height above mean sea level or is the angle between the sun and the observer's local horizon, also sometimes referred to as elevation)",
+        "height (the vertical distance above a particular reference e.g. ground level.)",
         "azimuth (is the angle of the sun around the horizon, in the northern hemisphere this is usually measured from north and increasing eastward whereas in the southern hemisphere it can be measured from the south and increasing westward)",
+        "water_level (is the height of the sea surface above the sea floor. In CF Conventions this is equivalent, but opposite in respect of their point of reference, to 'sea_floor_depth_below_sea_surface'.)",
+        "depth (the vertical distance below a particular reference e.g. sea level.)",
         "timestamp (the timestamp of when a measurement value was recorded)",
         "other"
       ]
@@ -161,16 +205,23 @@
       "enum": [
         "magnetic_north",
         "true_north",
-        "grid_north"
+        "grid_north",
+        null
       ]
     },
     "height_reference": {
+      "type": [
+        "string",
+        "null"
+      ],
       "title": "Height Reference",
-      "description": "The height reference frame that is used to measure the item height. E.g. onshore this is ground level i.e. the item is 0.5 m above ground level. Offshore is a bit different as it can be 20 m above mean sea level or 20 m above lowest astronomical tide.",
+      "description": "The height reference frame that is used to measure the item height. E.g. onshore this is 'ground level' i.e. the item is 0.5 m above ground level. Offshore is a bit different as it can be 20 m above 'mean sea level' or 20 m above 'lowest astronomical tide' for a fixed structure or 20 m above 'sea level' for a floating lidar.",
       "enum": [
         "ground_level",
         "mean_sea_level",
+        "sea_level",
         "lowest_astronomical_tide",
+        "sea_floor",
         "other"
       ],
       "default": "ground_level"
@@ -178,7 +229,7 @@
   },
   "type": "object",
   "title": "IEA Wind Resource Assessment - Data Model",
-  "description": "This Data Model schema is a digital representation of a meteorological mast used for measureing the wind resource of a potential wind farm.",
+  "description": "This Data Model schema is a digital representation of a meteorological mast used for measuring the wind resource of a potential wind farm.",
   "properties": {
     "author": {
       "type": "string",
@@ -315,7 +366,8 @@
                   "lattice_triangle",
                   "lattice_square_round_edges",
                   "lattice_square_sharp_edges",
-                  "pole"
+                  "pole",
+                  null
                 ]
               },
               "mast_oem": {
@@ -364,6 +416,21 @@
                 "examples": [
                   81.3
                 ]
+              },
+              "date_from": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "format": "date-time",
+                "title": "Date From",
+                "description": "The date from when these properties are active. If these properties follow a change, then this Date From should equal the previous Date To. The format of this date should follow ISO 8601 with the 'T' required. If a timezone is used, it is essential that this timezone is the same as the logger timezone.",
+                "examples": [
+                  "2020-07-28T20:00:00"
+                ]
+              },
+              "date_to": {
+                "$ref": "#/definitions/date_to"
               },
               "notes": {
                 "$ref": "#/definitions/notes"
@@ -608,8 +675,30 @@
                 "orientation_reference_id": {
                   "$ref": "#/definitions/orientation_reference"
                 },
+                "device_vertical_orientation": {
+                  "type": [
+                    "string",
+                    "null"
+                  ],
+                  "title": "Device Vertical Orientation",
+                  "description": "The vertical orientation that the remote sensing device is installed. E.g. an ADCP mounted on the sea floor has an 'upwards' vertical orientation pointing towards the sea surface whereas an ADCP mounted underneath a buoy has a 'downward' vertical orientation pointing towards the sea floor.",
+                  "enum": [
+                    "upward",
+                    "downward",
+                    null
+                  ]
+                },
                 "date_from": {
-                  "$ref": "#/definitions/date_from"
+                  "type": [
+                    "string",
+                    "null"
+                  ],
+                  "format": "date-time",
+                  "title": "Date From",
+                  "description": "The date from when these properties are active. If these properties follow a change, then this Date From should equal the previous Date To. The format of this date should follow ISO 8601 with the 'T' required. If a timezone is used, it is essential that this timezone is the same as the logger timezone.",
+                  "examples": [
+                    "2020-07-28T20:00:00"
+                  ]
                 },
                 "date_to": {
                   "$ref": "#/definitions/date_to"
@@ -655,6 +744,9 @@
                     "AXYS Technologies",
                     "AQSystem",
                     "Pentaluum",
+                    "Nortek",
+                    "Teledyne RDI",
+                    "Aanderaa",
                     "Other"
                   ]
                 },
@@ -678,7 +770,10 @@
                   "description": "The logger or remote sensing device serial number. This is sometimes different from the logger id."
                 },
                 "logger_firmware_version": {
-                  "type": "string",
+                  "type": [
+                    "string",
+                    "null"
+                  ],
                   "title": "Logger Firmware Version",
                   "description": "The logger or remote sensing device's Firmware Version. This is the software version that is run on the logger at the time of data acquisition. This software can be updated and so can sometimes impact the results of the outputted data. E.g. NRG SymphoniePro, Firmware Version: 3.2.3. For loggers/devices that have multiple software programmes to process the outputted data the versions can be concatenated together."
                 },
@@ -861,7 +956,16 @@
                         ]
                       },
                       "date_from": {
-                        "$ref": "#/definitions/date_from"
+                        "type": [
+                          "string",
+                          "null"
+                        ],
+                        "format": "date-time",
+                        "title": "Date From",
+                        "description": "The date from when these properties are active. If these properties follow a change, then this Date From should equal the previous Date To. The format of this date should follow ISO 8601 with the 'T' required. If a timezone is used, it is essential that this timezone is the same as the logger timezone.",
+                        "examples": [
+                          "2020-07-28T20:00:00"
+                        ]
                       },
                       "date_to": {
                         "$ref": "#/definitions/date_to"
@@ -958,7 +1062,10 @@
                         "description": "The sensitivity programmed into the logger. Usually used for pyranometers. It is the same as 1/slope with zero for offset."
                       },
                       "measurement_units_id": {
-                        "type": "string",
+                        "type": [
+                          "string",
+                          "null"
+                        ],
                         "title": "Measurement Units",
                         "description": "The measurement units of the values the sensor records.",
                         "enum": [
@@ -971,6 +1078,7 @@
                           "K",
                           "%",
                           "mbar",
+                          "dbar",
                           "hPa",
                           "atm",
                           "mmHg",
@@ -983,6 +1091,8 @@
                           "ohm",
                           "Hz",
                           "mm",
+                          "m",
+                          "s",
                           "W/m^2",
                           "W",
                           "kW",
@@ -992,7 +1102,14 @@
                           "m/s^2",
                           "lux",
                           "dB",
-                          "-"
+                          "L",
+                          "g/L",
+                          "g/kg",
+                          "ppt",
+                          "psu",
+                          "S/m",
+                          "-",
+                          null
                         ]
                       },
                       "height_m": {
@@ -1018,6 +1135,16 @@
                         ],
                         "title": "Connection Channel",
                         "description": "The connection channel the sensor is wired into on the logger."
+                      },
+                      "logger_stated_boom_orientation_deg": {
+                        "type": [
+                          "number",
+                          "null"
+                        ],
+                        "title": "Logger Stated Boom Orientation [deg]",
+                        "description": "The boom orientation of the horizontal boom the sensor is mounted on as programmed into the logger.",
+                        "minimum": 0,
+                        "maximum": 360
                       },
                       "date_from": {
                         "$ref": "#/definitions/date_from"
@@ -1171,11 +1298,20 @@
                           "illuminance_sensor",
                           "compass",
                           "solar_compass",
-                          "other"
+                          "inertial_measurement_unit",
+                          "adcp",
+                          "ctd",
+                          "lidar",
+                          "sodar",
+                          "other",
+                          null
                         ]
                       },
                       "classification": {
-                        "type": "string",
+                        "type": [
+                          "string",
+                          "null"
+                        ],
                         "title": "Classification",
                         "description": "The classification of a particular anemometer for this location. This combines the class index (number) with the terrain class (A, B, C, D or S) e.g. 1.2A. The format of this is validated by a regex which has the form of ^[0-9][.][0-9][ABCDS]$ i.e. digit.digit followed by a character.",
                         "examples": [
@@ -1207,6 +1343,17 @@
                         "examples": [
                           "true (if the sensor is heated)",
                           "false (if the sensor is not heated)"
+                        ]
+                      },
+                      "sensor_body_size_mm": {
+                        "type": [
+                          "number",
+                          "null"
+                        ],
+                        "title": "Sensor Body Size [mm]",
+                        "description": "This is the instrument body size in mm. This parameter is used in IEC 61400-12-2 to ensure that the size of the anemometer body is smaller than the diameter of the tube used to mount the anemometer.",
+                        "examples": [
+                          "50"
                         ]
                       },
                       "date_from": {
@@ -1455,7 +1602,8 @@
                         "enum": [
                           "side",
                           "goal_post",
-                          "top"
+                          "top",
+                          null
                         ]
                       },
                       "boom_orientation_deg": {
@@ -1585,10 +1733,7 @@
                     "title": "Interference Structures",
                     "properties":{
                       "structure_type_id":{
-                        "type": [
-                          "string",
-                          "null"
-                        ],
+                        "type": "string",
                         "title": "Structure Type",
                         "description": "The type of structure that is causing an interference in the sensor's measurements.",
                         "enum": [
