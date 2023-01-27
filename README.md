@@ -41,7 +41,8 @@ To learn more about the _WRA Data Model_, please read Amit Bohara's
 in the Wiki section of this GitHub repository.
 
 JSON ([JavaScript Object Notation](https://www.json.org/)) is used to implement the _WRA Data Model_ and 
-[JSON Schema](https://json-schema.org/) is used to express the _WRA Data Model_. The JSON Schema file is the 
+[JSON Schema](https://json-schema.org/) is used to express the _WRA Data Model_. The JSON Schema file, located at 
+[./schema/iea43_wra_data_model.schema.json](./schema/iea43_wra_data_model.schema.json), is the 
 _WRA Data Model_. It can be thought of as a blueprint for how an implementation of the data model can be described with 
 the JSON data-interchange format. See Figure 1 below for a snippet of an example implementation.
 
