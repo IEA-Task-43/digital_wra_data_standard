@@ -9,6 +9,10 @@ Given a version number MAJOR.MINOR.PATCH, increment the:
 
 Additional labels for pre-release and build metadata are available as extensions to the MAJOR.MINOR.PATCH format.
 
+## [Unreleased 2.X.X-2023.XX]
+
+1. __
+
 ## [1.2.0-2023.01]
 
 The majority of the changes in this release are to expand the data model to include floating lidar sensors, measurement 
