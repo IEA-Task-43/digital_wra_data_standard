@@ -6,7 +6,7 @@
 
 -- The SQL standard has tried to be used as much as possible.
 
--- These statements match version 1.1.0-2022.06
+-- These statements match version 1.2.0-2023.01
 
 
 -- ** load plugin that generates uuids **:
