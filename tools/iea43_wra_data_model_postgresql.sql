@@ -174,6 +174,7 @@ INSERT INTO measurement_type (id) VALUES
     ('water_level'),
     ('depth'),
     ('timestamp'),
+    ('obukhov_length'),
     ('other');
 
 INSERT INTO height_reference (id) VALUES

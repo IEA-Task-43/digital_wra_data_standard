@@ -122,6 +122,7 @@
         "water_level",
         "depth",
         "timestamp",
+        "obukhov_length",
         "other"
       ],
       "examples": [
@@ -192,6 +193,7 @@
         "water_level (is the height of the sea surface above the sea floor. In CF Conventions this is equivalent, but opposite in respect of their point of reference, to 'sea_floor_depth_below_sea_surface'.)",
         "depth (the vertical distance below a particular reference e.g. sea level.)",
         "timestamp (the timestamp of when a measurement value was recorded)",
+        "obukhov_length (a parameter with a dimension of length which, when used to scale the height above ground, gives a dimensionless stability parameter.)",
         "other"
       ]
     },
