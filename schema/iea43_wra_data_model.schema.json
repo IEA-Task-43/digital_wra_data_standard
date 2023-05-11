@@ -1191,7 +1191,11 @@
                                 "range",
                                 "gust",
                                 "ti",
+                                "ti30sec",
                                 "text"
+                              ],
+                              "examples": [
+                                "ti30sec (the 10 minute average of the turbulence intensity calculated every 30 seconds within that 10 minute period.)"							  
                               ]
                             },
                             "is_ignored": {

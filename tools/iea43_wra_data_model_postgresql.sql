@@ -240,6 +240,7 @@ INSERT INTO statistic_type (id) VALUES
     ('range'),
     ('gust'),
     ('ti'),
+    ('ti30sec'),
     ('text');
 
 INSERT INTO sensor_type (id) VALUES
