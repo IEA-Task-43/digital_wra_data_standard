@@ -151,6 +151,7 @@ The measurement sensor type e.g. anemometer.
 | `"solar_compass"`             |             |
 | `"inertial_measurement_unit"` |             |
 | `"adcp"`                      |             |
+| `"altimeter"`                 |             |
 | `"ctd"`                       |             |
 | `"lidar"`                     |             |
 | `"sodar"`                     |             |

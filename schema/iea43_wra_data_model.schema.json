@@ -340,6 +340,8 @@
               "lidar",
               "sodar",
               "floating_lidar",
+              "wave_buoy",
+              "adcp",
               "solar"
             ]
           },
@@ -1306,6 +1308,7 @@
                           "solar_compass",
                           "inertial_measurement_unit",
                           "adcp",
+                          "altimeter",
                           "ctd",
                           "lidar",
                           "sodar",
