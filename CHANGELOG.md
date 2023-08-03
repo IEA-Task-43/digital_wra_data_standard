@@ -13,9 +13,10 @@ Additional labels for pre-release and build metadata are available as extensions
 
 1. To `measurement_type` add:
    1. `obukhov_length` (Issue [#182](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/182))
-1. To `statistic_type_id` enum add:
+2. To `statistic_type_id` enum add:
    1. `ti30sec` (Issue [#218](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/218 ))
-1. __
+3. Bug fixes:
+   1. Add `null` to `height_reference` enum to match its type (Issue [#215](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/215))
 
 ## [1.2.0-2023.01]
 
