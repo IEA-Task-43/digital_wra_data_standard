@@ -15,7 +15,7 @@ Additional labels for pre-release and build metadata are available as extensions
    1. `obukhov_length` (Issue [#182](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/182))
 1. To `statistic_type_id` enum add:
    1. `ti30sec` (Issue [#218](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/218 ))
-1. __
+1. In `plant_type` enum, remove double quotes around the `null` (Issue [#217](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/217)).
 
 ## [1.2.0-2023.01]
 
