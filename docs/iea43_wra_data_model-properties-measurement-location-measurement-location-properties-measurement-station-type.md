@@ -12,4 +12,6 @@
 | `"lidar"`          |             |
 | `"sodar"`          |             |
 | `"floating_lidar"` |             |
+| `"wave_buoy"`      |             |
+| `"adcp"`           |             |
 | `"solar"`          |             |

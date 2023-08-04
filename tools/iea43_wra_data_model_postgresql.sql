@@ -76,6 +76,8 @@ INSERT INTO measurement_station_type (id) VALUES
     ('lidar'),
     ('sodar'),
     ('floating_lidar'),
+    ('wave_buoy'),
+    ('adcp'),
     ('solar');
 
 INSERT INTO mast_geometry (id) VALUES
@@ -269,6 +271,7 @@ INSERT INTO sensor_type (id) VALUES
     ('solar_compass'),
     ('inertial_measurement_unit'),
     ('adcp'),
+    ('altimeter'),
     ('ctd'),
     ('lidar'),
     ('sodar'),
