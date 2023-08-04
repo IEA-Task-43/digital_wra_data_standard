@@ -224,7 +224,8 @@
         "sea_level",
         "lowest_astronomical_tide",
         "sea_floor",
-        "other"
+        "other",
+        null
       ],
       "default": "ground_level"
     }
