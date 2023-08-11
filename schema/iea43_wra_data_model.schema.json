@@ -224,7 +224,8 @@
         "sea_level",
         "lowest_astronomical_tide",
         "sea_floor",
-        "other"
+        "other",
+        null
       ],
       "default": "ground_level"
     }
@@ -333,13 +334,15 @@
           },
           "measurement_station_type_id": {
             "title": "Measurement Station Type",
-            "description": "The type of measurement station. This must be one of either met mast, lidar (a vertical profiler), sodar (also a vertical profiler) or floating lidar (floating vertical profiler lidar).",
+            "description": "The type of measurement station. This must be one of either met mast, lidar (a vertical profiler), sodar (also a vertical profiler), floating lidar (floating vertical profiler lidar), wave buoy, ADCP (Acoustic Doppler Current Profiler) or a solar measurement station.",
             "type": "string",
             "enum": [
               "mast",
               "lidar",
               "sodar",
               "floating_lidar",
+              "wave_buoy",
+              "adcp",
               "solar"
             ]
           },
@@ -1306,6 +1309,7 @@
                           "solar_compass",
                           "inertial_measurement_unit",
                           "adcp",
+                          "altimeter",
                           "ctd",
                           "lidar",
                           "sodar",

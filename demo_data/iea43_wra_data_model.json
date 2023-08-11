@@ -1746,7 +1746,7 @@
       "name": "Logger_V",
       "measurement_type_id": "voltage",
       "height_m": null,
-      "height_reference_id": "ground_level",
+      "height_reference_id": null,
       "notes": "I can write anything I want here.",
       "update_at": "2020-04-18T18:13:00",
       "logger_measurement_config": [{
