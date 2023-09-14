@@ -290,10 +290,10 @@
       "title": "Plant Type",
       "description": "The type of renewable generation plant it is.",
       "enum": [
-        "null",
         "onshore_wind",
         "offshore_wind",
-        "solar"
+        "solar",
+        null
       ]
     },
     "measurement_location": {
