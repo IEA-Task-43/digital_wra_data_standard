@@ -10,9 +10,10 @@
 | [model](#model)                                          | `string`  | Optional | can be null    | [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-measurement-point-measurement-point-properties-sensor-sensor-properties-sensor-model.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/measurement_point/items/properties/sensor/items/properties/model")                                              |
 | [serial\_number](#serial_number)                         | `string`  | Optional | can be null    | [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-measurement-point-measurement-point-properties-sensor-sensor-properties-serial-number.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/measurement_point/items/properties/sensor/items/properties/serial_number")                                     |
 | [sensor\_type\_id](#sensor_type_id)                      | `string`  | Optional | can be null    | [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-measurement-point-measurement-point-properties-sensor-sensor-properties-sensor-type.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/measurement_point/items/properties/sensor/items/properties/sensor_type_id")                                      |
-| [classification](#classification)                        | `string`  | Optional | cannot be null | [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-measurement-point-measurement-point-properties-sensor-sensor-properties-classification.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/measurement_point/items/properties/sensor/items/properties/classification")                                   |
+| [classification](#classification)                        | `string`  | Optional | can be null    | [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-measurement-point-measurement-point-properties-sensor-sensor-properties-classification.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/measurement_point/items/properties/sensor/items/properties/classification")                                   |
 | [instrument\_poi\_height\_mm](#instrument_poi_height_mm) | `number`  | Optional | can be null    | [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-measurement-point-measurement-point-properties-sensor-sensor-properties-instrument-point-of-interest-height-mm.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/measurement_point/items/properties/sensor/items/properties/instrument_poi_height_mm") |
 | [is\_heated](#is_heated)                                 | `boolean` | Optional | can be null    | [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-measurement-point-measurement-point-properties-sensor-sensor-properties-is-heated.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/measurement_point/items/properties/sensor/items/properties/is_heated")                                             |
+| [sensor\_body\_size\_mm](#sensor_body_size_mm)           | `number`  | Optional | can be null    | [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-measurement-point-measurement-point-properties-sensor-sensor-properties-sensor-body-size-mm.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/measurement_point/items/properties/sensor/items/properties/sensor_body_size_mm")                         |
 | [date\_from](#date_from)                                 | `string`  | Required | cannot be null | [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-definitions-date-from.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/measurement_point/items/properties/sensor/items/properties/date_from")                                                                                                                                                                         |
 | [date\_to](#date_to)                                     | `string`  | Required | can be null    | [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-definitions-date-to.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/measurement_point/items/properties/sensor/items/properties/date_to")                                                                                                                                                                             |
 | [notes](#notes)                                          | `string`  | Optional | can be null    | [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-definitions-notes.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/measurement_point/items/properties/sensor/items/properties/notes")                                                                                                                                                                                 |
@@ -123,32 +124,38 @@ The measurement sensor type e.g. anemometer.
 
 **enum**: the value of this property must be equal to one of the following values:
 
-| Value                    | Explanation |
-| :----------------------- | :---------- |
-| `"anemometer"`           |             |
-| `"wind_vane"`            |             |
-| `"thermometer"`          |             |
-| `"barometer"`            |             |
-| `"hygrometer"`           |             |
-| `"thermohygrometer"`     |             |
-| `"voltmeter"`            |             |
-| `"ammeter"`              |             |
-| `"pyranometer"`          |             |
-| `"pyrheliometer"`        |             |
-| `"albedometer"`          |             |
-| `"2d_ultrasonic"`        |             |
-| `"3d_ultrasonic"`        |             |
-| `"vertical_anemometer"`  |             |
-| `"propeller_anemometer"` |             |
-| `"gill_propeller"`       |             |
-| `"rain_gauge"`           |             |
-| `"ice_detection_sensor"` |             |
-| `"fog_sensor"`           |             |
-| `"gps"`                  |             |
-| `"illuminance_sensor"`   |             |
-| `"compass"`              |             |
-| `"solar_compass"`        |             |
-| `"other"`                |             |
+| Value                         | Explanation |
+| :---------------------------- | :---------- |
+| `"anemometer"`                |             |
+| `"wind_vane"`                 |             |
+| `"thermometer"`               |             |
+| `"barometer"`                 |             |
+| `"hygrometer"`                |             |
+| `"thermohygrometer"`          |             |
+| `"voltmeter"`                 |             |
+| `"ammeter"`                   |             |
+| `"pyranometer"`               |             |
+| `"pyrheliometer"`             |             |
+| `"albedometer"`               |             |
+| `"2d_ultrasonic"`             |             |
+| `"3d_ultrasonic"`             |             |
+| `"vertical_anemometer"`       |             |
+| `"propeller_anemometer"`      |             |
+| `"gill_propeller"`            |             |
+| `"rain_gauge"`                |             |
+| `"ice_detection_sensor"`      |             |
+| `"fog_sensor"`                |             |
+| `"gps"`                       |             |
+| `"illuminance_sensor"`        |             |
+| `"compass"`                   |             |
+| `"solar_compass"`             |             |
+| `"inertial_measurement_unit"` |             |
+| `"adcp"`                      |             |
+| `"ctd"`                       |             |
+| `"lidar"`                     |             |
+| `"sodar"`                     |             |
+| `"other"`                     |             |
+| `null`                        |             |
 
 ## classification
 
@@ -160,7 +167,7 @@ The classification of a particular anemometer for this location. This combines t
 
 *   Type: `string` ([Classification](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-measurement-point-measurement-point-properties-sensor-sensor-properties-classification.md))
 
-*   cannot be null
+*   can be null
 
 *   defined in: [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-measurement-point-measurement-point-properties-sensor-sensor-properties-classification.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/measurement_point/items/properties/sensor/items/properties/classification")
 
@@ -246,6 +253,30 @@ Is the sensor heated to reduce the effect of icing. This is usually relevant for
 
 ```json
 "false (if the sensor is not heated)"
+```
+
+## sensor\_body\_size\_mm
+
+This is the instrument body size in mm. This parameter is used in IEC 61400-12-2 to ensure that the size of the anemometer body is smaller than the diameter of the tube used to mount the anemometer.
+
+`sensor_body_size_mm`
+
+*   is optional
+
+*   Type: `number` ([Sensor Body Size \[mm\]](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-measurement-point-measurement-point-properties-sensor-sensor-properties-sensor-body-size-mm.md))
+
+*   can be null
+
+*   defined in: [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-measurement-point-measurement-point-properties-sensor-sensor-properties-sensor-body-size-mm.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/measurement_point/items/properties/sensor/items/properties/sensor_body_size_mm")
+
+### sensor\_body\_size\_mm Type
+
+`number` ([Sensor Body Size \[mm\]](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-measurement-point-measurement-point-properties-sensor-sensor-properties-sensor-body-size-mm.md))
+
+### sensor\_body\_size\_mm Examples
+
+```json
+"50"
 ```
 
 ## date\_from

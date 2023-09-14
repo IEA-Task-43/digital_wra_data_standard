@@ -12,3 +12,4 @@
 | `"lattice_square_round_edges"` |             |
 | `"lattice_square_sharp_edges"` |             |
 | `"pole"`                       |             |
+| `null`                         |             |

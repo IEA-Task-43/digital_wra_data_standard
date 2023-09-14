@@ -4,18 +4,18 @@
 
 # items Properties
 
-| Property                                                  | Type          | Required | Nullable       | Defined by                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
-| :-------------------------------------------------------- | :------------ | :------- | :------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [name](#name)                                             | `string`      | Required | cannot be null | [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-measurement-point-measurement-point-properties-name.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/measurement_point/items/properties/name")                                                  |
-| [measurement\_type\_id](#measurement_type_id)             | `string`      | Required | cannot be null | [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-definitions-measurement-type.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/measurement_point/items/properties/measurement_type_id")                                                                                                                          |
-| [height\_m](#height_m)                                    | `number`      | Required | can be null    | [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-measurement-point-measurement-point-properties-height-m.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/measurement_point/items/properties/height_m")                                          |
-| [height\_reference\_id](#height_reference_id)             | Not specified | Optional | cannot be null | [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-definitions-height-reference.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/measurement_point/items/properties/height_reference_id")                                                                                                                          |
-| [notes](#notes)                                           | `string`      | Optional | can be null    | [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-definitions-notes.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/measurement_point/items/properties/notes")                                                                                                                                                   |
-| [update\_at](#update_at)                                  | `string`      | Optional | can be null    | [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-definitions-date-of-update.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/measurement_point/items/properties/update_at")                                                                                                                                      |
-| [logger\_measurement\_config](#logger_measurement_config) | `array`       | Required | cannot be null | [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-measurement-point-measurement-point-properties-logger-measurement-configuration.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/measurement_point/items/properties/logger_measurement_config") |
-| [sensor](#sensor)                                         | `array`       | Optional | cannot be null | [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-measurement-point-measurement-point-properties-sensor.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/measurement_point/items/properties/sensor")                                              |
-| [mounting\_arrangement](#mounting_arrangement)            | `array`       | Optional | can be null    | [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-measurement-point-measurement-point-properties-mounting-arrangement.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/measurement_point/items/properties/mounting_arrangement")                  |
-| [interference\_structures](#interference_structures)      | `array`       | Optional | can be null    | [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-measurement-point-measurement-point-properties-interference-structures.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/measurement_point/items/properties/interference_structures")            |
+| Property                                                  | Type     | Required | Nullable       | Defined by                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| :-------------------------------------------------------- | :------- | :------- | :------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [name](#name)                                             | `string` | Required | cannot be null | [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-measurement-point-measurement-point-properties-name.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/measurement_point/items/properties/name")                                                  |
+| [measurement\_type\_id](#measurement_type_id)             | `string` | Required | cannot be null | [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-definitions-measurement-type.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/measurement_point/items/properties/measurement_type_id")                                                                                                                          |
+| [height\_m](#height_m)                                    | `number` | Required | can be null    | [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-measurement-point-measurement-point-properties-height-m.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/measurement_point/items/properties/height_m")                                          |
+| [height\_reference\_id](#height_reference_id)             | `string` | Optional | can be null    | [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-definitions-height-reference.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/measurement_point/items/properties/height_reference_id")                                                                                                                          |
+| [notes](#notes)                                           | `string` | Optional | can be null    | [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-definitions-notes.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/measurement_point/items/properties/notes")                                                                                                                                                   |
+| [update\_at](#update_at)                                  | `string` | Optional | can be null    | [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-definitions-date-of-update.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/measurement_point/items/properties/update_at")                                                                                                                                      |
+| [logger\_measurement\_config](#logger_measurement_config) | `array`  | Required | cannot be null | [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-measurement-point-measurement-point-properties-logger-measurement-configuration.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/measurement_point/items/properties/logger_measurement_config") |
+| [sensor](#sensor)                                         | `array`  | Optional | cannot be null | [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-measurement-point-measurement-point-properties-sensor.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/measurement_point/items/properties/sensor")                                              |
+| [mounting\_arrangement](#mounting_arrangement)            | `array`  | Optional | can be null    | [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-measurement-point-measurement-point-properties-mounting-arrangement.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/measurement_point/items/properties/mounting_arrangement")                  |
+| [interference\_structures](#interference_structures)      | `array`  | Optional | can be null    | [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-measurement-point-measurement-point-properties-interference-structures.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/measurement_point/items/properties/interference_structures")            |
 
 ## name
 
@@ -57,56 +57,78 @@ The type of measurement been made. See more information in the examples.
 
 **enum**: the value of this property must be equal to one of the following values:
 
-| Value                             | Explanation |
-| :-------------------------------- | :---------- |
-| `"wind_speed"`                    |             |
-| `"wind_direction"`                |             |
-| `"air_temperature"`               |             |
-| `"temperature"`                   |             |
-| `"air_pressure"`                  |             |
-| `"air_density"`                   |             |
-| `"relative_humidity"`             |             |
-| `"voltage"`                       |             |
-| `"current"`                       |             |
-| `"resistance"`                    |             |
-| `"power"`                         |             |
-| `"energy"`                        |             |
-| `"vertical_wind_speed"`           |             |
-| `"wind_speed_turbulence"`         |             |
-| `"precipitation"`                 |             |
-| `"ice_detection"`                 |             |
-| `"global_horizontal_irradiance"`  |             |
-| `"direct_normal_irradiance"`      |             |
-| `"diffuse_horizontal_irradiance"` |             |
-| `"global_tilted_irradiance"`      |             |
-| `"global_normal_irradiance"`      |             |
-| `"albedo"`                        |             |
-| `"soiling_loss_index"`            |             |
-| `"illuminance"`                   |             |
-| `"fog"`                           |             |
-| `"gps_coordinates"`               |             |
-| `"status"`                        |             |
-| `"flag"`                          |             |
-| `"counter"`                       |             |
-| `"availability"`                  |             |
-| `"quality"`                       |             |
-| `"carrier_to_noise_ratio"`        |             |
-| `"doppler_spectral_broadening"`   |             |
-| `"orientation"`                   |             |
-| `"compass_direction"`             |             |
-| `"true_north_offset"`             |             |
-| `"tilt"`                          |             |
-| `"tilt_x"`                        |             |
-| `"tilt_y"`                        |             |
-| `"tilt_z"`                        |             |
-| `"u"`                             |             |
-| `"v"`                             |             |
-| `"w"`                             |             |
-| `"elevation"`                     |             |
-| `"altitude"`                      |             |
-| `"azimuth"`                       |             |
-| `"timestamp"`                     |             |
-| `"other"`                         |             |
+| Value                                    | Explanation |
+| :--------------------------------------- | :---------- |
+| `"wind_speed"`                           |             |
+| `"wind_direction"`                       |             |
+| `"air_temperature"`                      |             |
+| `"water_temperature"`                    |             |
+| `"temperature"`                          |             |
+| `"air_pressure"`                         |             |
+| `"air_density"`                          |             |
+| `"relative_humidity"`                    |             |
+| `"voltage"`                              |             |
+| `"current"`                              |             |
+| `"resistance"`                           |             |
+| `"power"`                                |             |
+| `"energy"`                               |             |
+| `"vertical_wind_speed"`                  |             |
+| `"wind_speed_turbulence"`                |             |
+| `"precipitation"`                        |             |
+| `"ice_detection"`                        |             |
+| `"global_horizontal_irradiance"`         |             |
+| `"direct_normal_irradiance"`             |             |
+| `"diffuse_horizontal_irradiance"`        |             |
+| `"global_tilted_irradiance"`             |             |
+| `"global_normal_irradiance"`             |             |
+| `"albedo"`                               |             |
+| `"soiling_loss_index"`                   |             |
+| `"illuminance"`                          |             |
+| `"fog"`                                  |             |
+| `"salinity"`                             |             |
+| `"conductivity"`                         |             |
+| `"pressure"`                             |             |
+| `"gps_coordinates"`                      |             |
+| `"status"`                               |             |
+| `"flag"`                                 |             |
+| `"counter"`                              |             |
+| `"availability"`                         |             |
+| `"quality"`                              |             |
+| `"carrier_to_noise_ratio"`               |             |
+| `"doppler_spectral_broadening"`          |             |
+| `"echo_intensity"`                       |             |
+| `"signal_to_noise_ratio"`                |             |
+| `"motion_corrected_wind_speed"`          |             |
+| `"motion_corrected_wind_direction"`      |             |
+| `"motion_corrected_vertical_wind_speed"` |             |
+| `"wave_height"`                          |             |
+| `"wave_significant_height"`              |             |
+| `"wave_maximum_height"`                  |             |
+| `"wave_direction"`                       |             |
+| `"wave_directional_spread"`              |             |
+| `"wave_period"`                          |             |
+| `"wave_peak_period"`                     |             |
+| `"water_speed"`                          |             |
+| `"vertical_water_speed"`                 |             |
+| `"water_direction"`                      |             |
+| `"orientation"`                          |             |
+| `"compass_direction"`                    |             |
+| `"true_north_offset"`                    |             |
+| `"tilt"`                                 |             |
+| `"tilt_x"`                               |             |
+| `"tilt_y"`                               |             |
+| `"tilt_z"`                               |             |
+| `"u"`                                    |             |
+| `"v"`                                    |             |
+| `"w"`                                    |             |
+| `"elevation"`                            |             |
+| `"altitude"`                             |             |
+| `"height"`                               |             |
+| `"azimuth"`                              |             |
+| `"water_level"`                          |             |
+| `"depth"`                                |             |
+| `"timestamp"`                            |             |
+| `"other"`                                |             |
 
 ### measurement\_type\_id Examples
 
@@ -115,11 +137,15 @@ The type of measurement been made. See more information in the examples.
 ```
 
 ```json
-"wind_direction  (the direction form which the wind is coming from)"
+"wind_direction  (the direction from which the wind is coming from)"
 ```
 
 ```json
 "air_temperature  (outdoor ambient temperature of the air)"
+```
+
+```json
+"water_temperature  (is the in situ temperature of the water. In CF Conventions this is equivalent to 'sea_water_temperature'.)"
 ```
 
 ```json
@@ -211,6 +237,18 @@ The type of measurement been made. See more information in the examples.
 ```
 
 ```json
+"salinity (is the salt content of water. In CF Conventions this is equivalent to 'sea_water_salinity', 'sea_water_practical_salinity' or 'sea_water_absolute_salinity' depending on the scale been used.)"
+```
+
+```json
+"conductivity (of an electrolyte solution, e.g. sea water, is a measure of its ability to conduct electricity. In CF Conventions this is equivalent to 'sea_water_electrical_conductivity' for offshore use cases.)"
+```
+
+```json
+"pressure (the pressure of a medium e.g. water. In CF Conventions this is equivalent to 'sea_water_pressure' for offshore use cases.)"
+```
+
+```json
 "gps_coordinates (latitude and/or longitude as measured by a gps)"
 ```
 
@@ -236,6 +274,66 @@ The type of measurement been made. See more information in the examples.
 
 ```json
 "doppler_spectral_broadening (as measured by lidar devices)"
+```
+
+```json
+"echo_intensity (is the brightness or brilliance of the acoustic echo usually measured by an ADCP. If from an ADCP, it can be used to judge the quality of measurement or estimate the amount of suspended sediment in the water column.)"
+```
+
+```json
+"signal_to_noise_ratio (a measure of signal strength as measured by ADCPs.)"
+```
+
+```json
+"motion_corrected_wind_speed (the horizontal component of wind speed which has been corrected due to the motion of the measuring sensor/device, typically from floating lidar systems)"
+```
+
+```json
+"motion_corrected_wind_direction (the direction form which the wind is coming from which has been corrected due to the motion of the measuring sensor/device, typically from floating lidar systems)"
+```
+
+```json
+"motion_corrected_vertical_wind_speed (the vertical component of wind speed which has been corrected due to the motion of the measuring sensor/device, typically from floating lidar systems)"
+```
+
+```json
+"wave_height (is the mean wave height measured during the observation period, where the height is defined as the vertical distance from a wave trough to the following wave crest. In CF Conventions this is equivalent to 'sea_surface_wave_mean_height'.)"
+```
+
+```json
+"wave_significant_height (is a statistic computed from wave measurements and corresponds to the average height of the highest one third of the waves, where the height is defined as the vertical distance from a wave trough to the following wave crest. In CF Conventions this is equivalent to 'sea_surface_wave_significant_height'.)"
+```
+
+```json
+"wave_maximum_height (is the greatest trough to crest distance measured during the observation period. Wave height is defined as the vertical distance from a wave trough to the following wave crest. In CF Conventions this is equivalent to 'sea_surface_wave_maximum_height'.)"
+```
+
+```json
+"wave_direction (the direction from which the wave is coming from. The direction is a bearing in the usual geographical sense, measured positive clockwise from due north. In CF Conventions this is equivalent to 'sea_surface_wave_from_direction'.)"
+```
+
+```json
+"wave_directional_spread (is the standard deviation of all the wave directions measured. It signifies how spread out,or how wide an area, all the waves are coming from. In CF Conventions this is equivalent to 'sea_surface_wave_directional_spread'.)"
+```
+
+```json
+"wave_period (is the mean wave period measured during the observation period at a specific location. In CF Conventions this is equivalent to 'sea_surface_wave_mean_period'.)"
+```
+
+```json
+"wave_peak_period (is the wave period of the most energetic waves in the total wave spectrum at a specific location. In CF Conventions this is equivalent to 'sea_surface_wave_period_at_variance_spectral_density_maximum'.)"
+```
+
+```json
+"water_speed (the horizontal magnitude of the water's velocity. This is sometimes also known as 'current speed' and in CF Conventions this is equivalent to 'sea_water_speed'.)"
+```
+
+```json
+"vertical_water_speed (the vertical magnitude of the water's velocity. In CF Conventions this is equivalent to 'upward_sea_water_velocity'.)"
+```
+
+```json
+"water_direction (the direction from which the water flow is coming from. The direction is a bearing in the usual geographical sense, measured positive clockwise from due north. This is sometimes also known as 'current direction' and in CF Conventions this is equivalent to 'sea_water_velocity_from_direction' or 'sea_water_from_direction'.)"
 ```
 
 ```json
@@ -283,7 +381,19 @@ The type of measurement been made. See more information in the examples.
 ```
 
 ```json
+"height (the vertical distance above a particular reference e.g. ground level.)"
+```
+
+```json
 "azimuth (is the angle of the sun around the horizon, in the northern hemisphere this is usually measured from north and increasing eastward whereas in the southern hemisphere it can be measured from the south and increasing westward)"
+```
+
+```json
+"water_level (is the height of the sea surface above the sea floor. In CF Conventions this is equivalent, but opposite in respect of their point of reference, to 'sea_floor_depth_below_sea_surface'.)"
+```
+
+```json
+"depth (the vertical distance below a particular reference e.g. sea level.)"
 ```
 
 ```json
@@ -314,21 +424,21 @@ The height (in meters) typically above ground level that the measurement is taki
 
 ## height\_reference\_id
 
-The height reference frame that is used to measure the item height. E.g. onshore this is ground level i.e. the item is 0.5 m above ground level. Offshore is a bit different as it can be 20 m above mean sea level or 20 m above lowest astronomical tide.
+The height reference frame that is used to measure the item height. E.g. onshore this is 'ground level' i.e. the item is 0.5 m above ground level. Offshore is a bit different as it can be 20 m above 'mean sea level' or 20 m above 'lowest astronomical tide' for a fixed structure or 20 m above 'sea level' for a floating lidar.
 
 `height_reference_id`
 
 *   is optional
 
-*   Type: unknown ([Height Reference](iea43_wra_data_model-definitions-height-reference.md))
+*   Type: `string` ([Height Reference](iea43_wra_data_model-definitions-height-reference.md))
 
-*   cannot be null
+*   can be null
 
 *   defined in: [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-definitions-height-reference.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/measurement_point/items/properties/height_reference_id")
 
 ### height\_reference\_id Type
 
-unknown ([Height Reference](iea43_wra_data_model-definitions-height-reference.md))
+`string` ([Height Reference](iea43_wra_data_model-definitions-height-reference.md))
 
 ### height\_reference\_id Constraints
 
@@ -338,7 +448,9 @@ unknown ([Height Reference](iea43_wra_data_model-definitions-height-reference.md
 | :--------------------------- | :---------- |
 | `"ground_level"`             |             |
 | `"mean_sea_level"`           |             |
+| `"sea_level"`                |             |
 | `"lowest_astronomical_tide"` |             |
+| `"sea_floor"`                |             |
 | `"other"`                    |             |
 
 ### height\_reference\_id Default Value

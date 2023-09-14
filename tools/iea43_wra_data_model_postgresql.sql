@@ -6,7 +6,7 @@
 
 -- The SQL standard has tried to be used as much as possible.
 
--- These statements match version 1.1.0-2022.06
+-- These statements match version 1.2.0-2023.01
 
 
 -- ** load plugin that generates uuids **:
@@ -57,6 +57,10 @@ CREATE TABLE IF NOT EXISTS orientation_reference (
     id text PRIMARY KEY
 );
 
+CREATE TABLE IF NOT EXISTS device_vertical_orientation (
+    id text PRIMARY KEY
+);
+
 CREATE TABLE IF NOT EXISTS structure_type (
     id text PRIMARY KEY
 );
@@ -95,12 +99,16 @@ INSERT INTO logger_oem (id) VALUES
     ('AXYS Technologies'),
     ('AQSystem'),
     ('Pentaluum'),
+    ('Nortek'),
+    ('Teledyne RDI'),
+    ('Aanderaa'),
     ('other');
 
 INSERT INTO measurement_type (id) VALUES
     ('wind_speed'),
     ('wind_direction'),
     ('air_temperature'),
+    ('water_temperature'),
     ('temperature'),
     ('air_pressure'),
     ('air_density'),
@@ -123,6 +131,9 @@ INSERT INTO measurement_type (id) VALUES
     ('soiling_loss_index'),
     ('illuminance'),
     ('fog'),
+    ('salinity'),
+    ('conductivity'),
+    ('pressure'),
     ('gps_coordinates'),
     ('status'),
     ('flag'),
@@ -131,6 +142,21 @@ INSERT INTO measurement_type (id) VALUES
     ('quality'),
     ('carrier_to_noise_ratio'),
     ('doppler_spectral_broadening'),
+    ('echo_intensity'),
+    ('signal_to_noise_ratio'),
+    ('motion_corrected_wind_speed'),
+    ('motion_corrected_wind_direction'),
+    ('motion_corrected_vertical_wind_speed'),
+    ('wave_height'),
+    ('wave_significant_height'),
+    ('wave_maximum_height'),
+    ('wave_direction'),
+    ('wave_directional_spread'),
+    ('wave_period'),
+    ('wave_peak_period'),
+    ('water_speed'),
+    ('vertical_water_speed'),
+    ('water_direction'),
     ('orientation'),
     ('compass_direction'),
     ('true_north_offset'),
@@ -143,14 +169,19 @@ INSERT INTO measurement_type (id) VALUES
     ('w'),
     ('elevation'),
     ('altitude'),
+    ('height'),
     ('azimuth'),
+    ('water_level'),
+    ('depth'),
     ('timestamp'),
     ('other');
 
 INSERT INTO height_reference (id) VALUES
     ('ground_level'),
     ('mean_sea_level'),
+    ('sea_level'),
     ('lowest_astronomical_tide'),
+    ('sea_floor'),
     ('other');
 
 INSERT INTO measurement_units (id) VALUES
@@ -163,6 +194,7 @@ INSERT INTO measurement_units (id) VALUES
     ('K'),
     ('%'),
     ('mbar'),
+    ('dbar'),
     ('hPa'),
     ('atm'),
     ('mmHg'),
@@ -175,6 +207,7 @@ INSERT INTO measurement_units (id) VALUES
     ('ohm'),
     ('Hz'),
     ('mm'),
+    ('m'),
     ('W/m^2'),
     ('W'),
     ('kW'),
@@ -184,6 +217,12 @@ INSERT INTO measurement_units (id) VALUES
     ('m/s^2'),
     ('lux'),
     ('dB'),
+    ('L'),
+    ('g/L'),
+    ('g/kg'),
+    ('ppt'),
+    ('psu'),
+    ('S/m'),
     ('-');
 
 INSERT INTO statistic_type (id) VALUES
@@ -226,6 +265,11 @@ INSERT INTO sensor_type (id) VALUES
     ('illuminance_sensor'),
     ('compass'),
     ('solar_compass'),
+    ('inertial_measurement_unit'),
+    ('adcp'),
+    ('ctd'),
+    ('lidar'),
+    ('sodar'),
     ('other');
 
 INSERT INTO mounting_type (id) VALUES
@@ -237,6 +281,10 @@ INSERT INTO orientation_reference (id) VALUES
     ('magnetic_north'),
     ('true_north'),
     ('grid_north');
+
+INSERT INTO device_vertical_orientation (id) VALUES
+    ('upward'),
+    ('downward');
 
 INSERT INTO structure_type (id) VALUES
     ('lightning_finial'),
@@ -286,6 +334,8 @@ CREATE TABLE IF NOT EXISTS mast_properties(
 CREATE TABLE IF NOT EXISTS measurement_location_mast_properties(
     measurement_location_uuid UUID,
     mast_properties_uuid UUID,
+    date_from timestamp WITHOUT TIME ZONE,
+    date_to timestamp WITHOUT TIME ZONE,
     PRIMARY KEY (measurement_location_uuid, mast_properties_uuid),
     FOREIGN KEY (measurement_location_uuid) REFERENCES measurement_location (uuid),
     FOREIGN KEY (mast_properties_uuid) REFERENCES mast_properties (uuid)
@@ -316,19 +366,21 @@ CREATE TABLE IF NOT EXISTS mast_section_geometry(
 
 CREATE TABLE IF NOT EXISTS vertical_profiler_properties(
     uuid UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
-    measurement_location_uuid UUID,
+    measurement_location_uuid UUID NOT NULL,
     device_datum_plane_height_m decimal,
     height_reference_id text DEFAULT 'ground_level',
     device_orientation_deg decimal CHECK (device_orientation_deg >= 0 AND device_orientation_deg <= 360),
     orientation_reference_id text,
-    date_from timestamp WITHOUT TIME ZONE NOT NULL,
+    device_vertical_orientation_id text,
+    date_from timestamp WITHOUT TIME ZONE,
     date_to timestamp WITHOUT TIME ZONE,
     notes text,
     update_at timestamp WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
     updated_by UUID,
     FOREIGN KEY (measurement_location_uuid) REFERENCES measurement_location (uuid),
     FOREIGN KEY (height_reference_id) REFERENCES height_reference (id),
-    FOREIGN KEY (orientation_reference_id) REFERENCES orientation_reference (id)
+    FOREIGN KEY (orientation_reference_id) REFERENCES orientation_reference (id),
+    FOREIGN KEY (device_vertical_orientation_id) REFERENCES device_vertical_orientation (id)
 );
 
 CREATE TABLE IF NOT EXISTS logger_main_config(
@@ -363,7 +415,7 @@ CREATE TABLE IF NOT EXISTS lidar_config(
     uuid UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
     logger_main_config_uuid UUID,
     flow_corrections_applied boolean,
-    date_from timestamp WITHOUT TIME ZONE NOT NULL,
+    date_from timestamp WITHOUT TIME ZONE,
     date_to timestamp WITHOUT TIME ZONE,
     notes text,
     update_at timestamp WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
@@ -392,10 +444,11 @@ CREATE TABLE IF NOT EXISTS logger_measurement_config(
     slope decimal,
     "offset" decimal,  -- offset is a SQL reserved word so needs to be escaped
     sensitivity decimal,
-    measurement_units_id text NOT NULL,
+    measurement_units_id text,
     height_m decimal,
     serial_number text,
     connection_channel text,
+    logger_stated_boom_orientation_deg decimal CHECK (logger_stated_boom_orientation_deg >= 0 AND logger_stated_boom_orientation_deg <= 360),
     date_from timestamp WITHOUT TIME ZONE NOT NULL,
     date_to timestamp WITHOUT TIME ZONE,
     notes text,
@@ -427,6 +480,7 @@ CREATE TABLE IF NOT EXISTS sensor(
     classification text,
     instrument_poi_height_mm decimal,
     is_heated boolean,
+    sensor_body_size_mm decimal,
     notes text,
     update_at timestamp WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
     updated_by UUID,
