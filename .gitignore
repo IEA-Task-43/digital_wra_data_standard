@@ -19,3 +19,5 @@ dist/
 tmp/
 log/
 tests/temp/*
+tools/E06_Hudson_South_10_min_avg_20190904_20220327.csv
+tools/E06_Hudson_South_hourly_avg_20190904_20220327.csv
