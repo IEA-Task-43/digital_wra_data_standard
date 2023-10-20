@@ -1,0 +1,3226 @@
+{
+    "author": "Daniel Nuno",
+    "organisation": "EOLOS Floating Lidar Solutions",
+    "date": "2023-08-25",
+    "version": "1.2.0-2023.01",
+    "plant_name": "NYS",
+    "plant_type": "offshore_wind",
+    "notes": "IEA Task 43 WRA Data Model. Campaign data available for download at https://oswbuoysny.resourcepanorama.dnv.com/",
+    "measurement_location": [
+        {
+            "name": "E06",
+            "latitude_ddeg": 39.545,
+            "longitude_ddeg": -73.4295,
+            "measurement_station_type_id": "floating_lidar",
+            "notes": "EOLOS Floating Lidar buoy EOL-FLS200.",
+            "vertical_profiler_properties": [
+                {
+                    "device_datum_plane_height_m": 1.6,
+                    "height_reference_id": "mean_sea_level",
+                    "device_vertical_orientation": "upward",
+                    "notes": "The ZXLidars ZX300M has 10 heights configured.",
+                    "date_from": "2019-09-04T00:00:00",
+                    "date_to": "2022-03-28T00:00:00",
+                    "update_at": "2023-08-25T13:00:00"
+                },
+                {
+                    "device_datum_plane_height_m": -0.8,
+                    "height_reference_id": "mean_sea_level",
+                    "device_vertical_orientation": "downward",
+                    "notes": "The ADCP Nortek Signature 500 has 22 cells, with a cell size of 2.7 m and a blanking distance of 2.2 m.",
+                    "date_from": "2019-09-04T00:00:00",
+                    "date_to": "2022-03-28T00:00:00",
+                    "update_at": "2023-08-25T13:00:00"
+                }
+            ],
+            "logger_main_config": [
+                {
+                    "logger_serial_number": "E06",
+                    "logger_model_name": "EOL-FLS200",
+                    "logger_oem_id": "Other",
+                    "logger_name": "E06-Buoy",
+                    "logger_firmware_version": "internal:v24 - PostProcessing:V.1.0.1",
+                    "offset_from_utc_hrs": 0,
+                    "sampling_rate_sec": 1,
+                    "averaging_period_minutes": 10,
+                    "timestamp_is_end_of_period": false,
+                    "clock_is_auto_synced": true,
+                    "notes": "Pre-deployment verification info: NOAH (UK), 2019-08-01, DNV. Successfully passed with all stage 3 requirements.",
+                    "data_transfer_details": "Iridium",
+                    "date_from": "2019-09-04T00:00:00",
+                    "date_to": "2022-03-28T00:00:00",
+                    "update_at": "2023-08-25T13:00:00"
+                },
+                {
+                    "logger_serial_number": "ZX844",
+                    "logger_model_name": "ZX300M",
+                    "logger_oem_id": "ZX Lidars",
+                    "logger_name": "E06-Lidar-1",
+                    "logger_firmware_version": "v2.2020",
+                    "offset_from_utc_hrs": 0,
+                    "sampling_rate_sec": 1,
+                    "averaging_period_minutes": 10,
+                    "timestamp_is_end_of_period": false,
+                    "clock_is_auto_synced": true,
+                    "notes": "Performance verification info: PERSHORE (UK), 2019-02-26, DNV. Successfully passed at all treated levels.",
+                    "date_from": "2019-09-04T00:00:00",
+                    "date_to": "2021-01-13T00:00:00",
+                    "update_at": "2023-08-25T13:00:00"
+                },
+                {
+                    "logger_serial_number": "ZX1009",
+                    "logger_model_name": "ZX300M",
+                    "logger_oem_id": "ZX Lidars",
+                    "logger_name": "E06-Lidar-2",
+                    "logger_firmware_version": "v2.2031",
+                    "offset_from_utc_hrs": 0,
+                    "sampling_rate_sec": 1,
+                    "averaging_period_minutes": 10,
+                    "timestamp_is_end_of_period": false,
+                    "clock_is_auto_synced": true,
+                    "notes": "Performance verification info: PERSHORE (UK), 2020-07-09, DNV. Successfully passed at all treated levels.",
+                    "date_from": "2021-01-13T00:00:00",
+                    "date_to": "2022-03-28T00:00:00",
+                    "update_at": "2023-08-25T13:00:00"
+                },
+                {
+                    "logger_serial_number": "102999",
+                    "logger_model_name": "Signature 500",
+                    "logger_oem_id": "Nortek",
+                    "logger_name": "E06-ADCP",
+                    "logger_firmware_version": "v1.4.4093.2205_14/163",
+                    "offset_from_utc_hrs": 0,
+                    "sampling_rate_sec": 1,
+                    "averaging_period_minutes": 3,
+                    "timestamp_is_end_of_period": false,
+                    "clock_is_auto_synced": true,
+                    "notes": "The ADCP sensor sends data every 10 minutes.",
+                    "date_from": "2019-09-04T00:00:00",
+                    "date_to": "2022-03-28T00:00:00",
+                    "update_at": "2023-08-25T13:00:00"
+                },
+                {
+                    "logger_serial_number": "2007",
+                    "logger_model_name": "AIM3+ WAVE",
+                    "logger_oem_id": "Other",
+                    "logger_name": "E06-WAVE",
+                    "logger_firmware_version": "v3.9.8",
+                    "offset_from_utc_hrs": 0,
+                    "sampling_rate_sec": 4,
+                    "averaging_period_minutes": 20,
+                    "timestamp_is_end_of_period": false,
+                    "clock_is_auto_synced": true,
+                    "notes": "The Wave sensor sends data every 60 minutes.",
+                    "date_from": "2019-09-04T00:00:00",
+                    "date_to": "2022-03-28T00:00:00",
+                    "update_at": "2023-08-25T13:00:00"
+                }
+            ],
+            "measurement_point": [
+                {
+                    "name": "LIDAR20m_WdDir",
+                    "measurement_type_id": "wind_direction",
+                    "height_m": 20.0,
+                    "height_reference_id": "mean_sea_level",
+                    "logger_measurement_config": [
+                        {
+                            "measurement_units_id": "deg",
+                            "height_m": 18.0,
+                            "date_from": "2019-09-04T00:00:00",
+                            "date_to": "2022-03-28T00:00:00",
+                            "update_at": "2023-08-25T13:00:00",
+                            "column_name": [
+                                {
+                                    "column_name": "lidar_lidar18m_WD_alg_03",
+                                    "statistic_type_id": "avg",
+                                    "is_ignored": false
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "LIDAR20m_WdSpdHor",
+                    "measurement_type_id": "wind_speed",
+                    "height_m": 20.0,
+                    "height_reference_id": "mean_sea_level",
+                    "logger_measurement_config": [
+                        {
+                            "measurement_units_id": "m/s",
+                            "height_m": 18.0,
+                            "date_from": "2019-09-04T00:00:00",
+                            "date_to": "2022-03-28T00:00:00",
+                            "update_at": "2023-08-25T13:00:00",
+                            "column_name": [
+                                {
+                                    "column_name": "lidar_lidar18m_Z10_HorizWS",
+                                    "statistic_type_id": "avg",
+                                    "is_ignored": false
+                                },
+                                {
+                                    "column_name": "lidar_lidar18m_Z10_TurbInt",
+                                    "statistic_type_id": "ti",
+                                    "is_ignored": false
+                                },
+                                {
+                                    "column_name": "lidar_lidar18m_Z10_MaxWS",
+                                    "statistic_type_id": "max",
+                                    "is_ignored": false
+                                },
+                                {
+                                    "column_name": "lidar_lidar18m_Z10_MinWs",
+                                    "statistic_type_id": "min",
+                                    "is_ignored": false
+                                },
+                                {
+                                    "column_name": "lidar_lidar18m_Z10_StdDevWS",
+                                    "statistic_type_id": "sd",
+                                    "is_ignored": false
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "LIDAR20m_InfoFlag",
+                    "measurement_type_id": "flag",
+                    "height_m": 20.0,
+                    "height_reference_id": "mean_sea_level",
+                    "logger_measurement_config": [
+                        {
+                            "measurement_units_id": "-",
+                            "height_m": 18.0,
+                            "date_from": "2019-09-04T00:00:00",
+                            "date_to": "2022-03-28T00:00:00",
+                            "update_at": "2023-08-25T13:00:00",
+                            "column_name": [
+                                {
+                                    "column_name": "lidar_lidar18m_Z10_InfoFlag",
+                                    "statistic_type_id": "quality",
+                                    "is_ignored": false
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "LIDAR20m_Packets",
+                    "measurement_type_id": "status",
+                    "height_m": 20.0,
+                    "height_reference_id": "mean_sea_level",
+                    "logger_measurement_config": [
+                        {
+                            "measurement_units_id": "-",
+                            "height_m": 18.0,
+                            "date_from": "2019-09-04T00:00:00",
+                            "date_to": "2022-03-28T00:00:00",
+                            "update_at": "2023-08-25T13:00:00",
+                            "column_name": [
+                                {
+                                    "column_name": "lidar_lidar18m_Z10_Packets",
+                                    "statistic_type_id": "count",
+                                    "is_ignored": false
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "LIDAR20m_StatFlag",
+                    "measurement_type_id": "flag",
+                    "height_m": 20.0,
+                    "height_reference_id": "mean_sea_level",
+                    "logger_measurement_config": [
+                        {
+                            "measurement_units_id": "-",
+                            "height_m": 18.0,
+                            "date_from": "2019-09-04T00:00:00",
+                            "date_to": "2022-03-28T00:00:00",
+                            "update_at": "2023-08-25T13:00:00",
+                            "column_name": [
+                                {
+                                    "column_name": "lidar_lidar18m_Z10_StatFlag",
+                                    "statistic_type_id": "quality",
+                                    "is_ignored": false
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "LIDAR20m_WdSpdVer",
+                    "measurement_type_id": "vertical_wind_speed",
+                    "height_m": 20.0,
+                    "height_reference_id": "mean_sea_level",
+                    "logger_measurement_config": [
+                        {
+                            "measurement_units_id": "m/s",
+                            "height_m": 18.0,
+                            "date_from": "2019-09-04T00:00:00",
+                            "date_to": "2022-03-28T00:00:00",
+                            "update_at": "2023-08-25T13:00:00",
+                            "column_name": [
+                                {
+                                    "column_name": "lidar_lidar18m_Z10_VertWs",
+                                    "statistic_type_id": "avg",
+                                    "is_ignored": false
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "LIDAR40m_WdDir",
+                    "measurement_type_id": "wind_direction",
+                    "height_m": 40.0,
+                    "height_reference_id": "mean_sea_level",
+                    "logger_measurement_config": [
+                        {
+                            "measurement_units_id": "deg",
+                            "height_m": 38.0,
+                            "date_from": "2019-09-04T00:00:00",
+                            "date_to": "2022-03-28T00:00:00",
+                            "update_at": "2023-08-25T13:00:00",
+                            "column_name": [
+                                {
+                                    "column_name": "lidar_lidar38m_WD_alg_03",
+                                    "statistic_type_id": "avg",
+                                    "is_ignored": false
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "LIDAR40m_WdSpdHor",
+                    "measurement_type_id": "wind_speed",
+                    "height_m": 40.0,
+                    "height_reference_id": "mean_sea_level",
+                    "logger_measurement_config": [
+                        {
+                            "measurement_units_id": "m/s",
+                            "height_m": 38.0,
+                            "date_from": "2019-09-04T00:00:00",
+                            "date_to": "2022-03-28T00:00:00",
+                            "update_at": "2023-08-25T13:00:00",
+                            "column_name": [
+                                {
+                                    "column_name": "lidar_lidar38m_Z10_HorizWS",
+                                    "statistic_type_id": "avg",
+                                    "is_ignored": false
+                                },
+                                {
+                                    "column_name": "lidar_lidar38m_Z10_TurbInt",
+                                    "statistic_type_id": "ti",
+                                    "is_ignored": false
+                                },
+                                {
+                                    "column_name": "lidar_lidar38m_Z10_MaxWS",
+                                    "statistic_type_id": "max",
+                                    "is_ignored": false
+                                },
+                                {
+                                    "column_name": "lidar_lidar38m_Z10_MinWs",
+                                    "statistic_type_id": "min",
+                                    "is_ignored": false
+                                },
+                                {
+                                    "column_name": "lidar_lidar38m_Z10_StdDevWS",
+                                    "statistic_type_id": "sd",
+                                    "is_ignored": false
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "LIDAR40m_InfoFlag",
+                    "measurement_type_id": "flag",
+                    "height_m": 40.0,
+                    "height_reference_id": "mean_sea_level",
+                    "logger_measurement_config": [
+                        {
+                            "measurement_units_id": "-",
+                            "height_m": 38.0,
+                            "date_from": "2019-09-04T00:00:00",
+                            "date_to": "2022-03-28T00:00:00",
+                            "update_at": "2023-08-25T13:00:00",
+                            "column_name": [
+                                {
+                                    "column_name": "lidar_lidar38m_Z10_InfoFlag",
+                                    "statistic_type_id": "quality",
+                                    "is_ignored": false
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "LIDAR40m_Packets",
+                    "measurement_type_id": "status",
+                    "height_m": 40.0,
+                    "height_reference_id": "mean_sea_level",
+                    "logger_measurement_config": [
+                        {
+                            "measurement_units_id": "-",
+                            "height_m": 38.0,
+                            "date_from": "2019-09-04T00:00:00",
+                            "date_to": "2022-03-28T00:00:00",
+                            "update_at": "2023-08-25T13:00:00",
+                            "column_name": [
+                                {
+                                    "column_name": "lidar_lidar38m_Z10_Packets",
+                                    "statistic_type_id": "count",
+                                    "is_ignored": false
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "LIDAR40m_StatFlag",
+                    "measurement_type_id": "flag",
+                    "height_m": 40.0,
+                    "height_reference_id": "mean_sea_level",
+                    "logger_measurement_config": [
+                        {
+                            "measurement_units_id": "-",
+                            "height_m": 38.0,
+                            "date_from": "2019-09-04T00:00:00",
+                            "date_to": "2022-03-28T00:00:00",
+                            "update_at": "2023-08-25T13:00:00",
+                            "column_name": [
+                                {
+                                    "column_name": "lidar_lidar38m_Z10_StatFlag",
+                                    "statistic_type_id": "quality",
+                                    "is_ignored": false
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "LIDAR40m_WdSpdVer",
+                    "measurement_type_id": "vertical_wind_speed",
+                    "height_m": 40.0,
+                    "height_reference_id": "mean_sea_level",
+                    "logger_measurement_config": [
+                        {
+                            "measurement_units_id": "m/s",
+                            "height_m": 38.0,
+                            "date_from": "2019-09-04T00:00:00",
+                            "date_to": "2022-03-28T00:00:00",
+                            "update_at": "2023-08-25T13:00:00",
+                            "column_name": [
+                                {
+                                    "column_name": "lidar_lidar38m_Z10_VertWs",
+                                    "statistic_type_id": "avg",
+                                    "is_ignored": false
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "LIDAR60m_WdDir",
+                    "measurement_type_id": "wind_direction",
+                    "height_m": 60.0,
+                    "height_reference_id": "mean_sea_level",
+                    "logger_measurement_config": [
+                        {
+                            "measurement_units_id": "deg",
+                            "height_m": 58.0,
+                            "date_from": "2019-09-04T00:00:00",
+                            "date_to": "2022-03-28T00:00:00",
+                            "update_at": "2023-08-25T13:00:00",
+                            "column_name": [
+                                {
+                                    "column_name": "lidar_lidar58m_WD_alg_03",
+                                    "statistic_type_id": "avg",
+                                    "is_ignored": false
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "LIDAR60m_WdSpdHor",
+                    "measurement_type_id": "wind_speed",
+                    "height_m": 60.0,
+                    "height_reference_id": "mean_sea_level",
+                    "logger_measurement_config": [
+                        {
+                            "measurement_units_id": "m/s",
+                            "height_m": 58.0,
+                            "date_from": "2019-09-04T00:00:00",
+                            "date_to": "2022-03-28T00:00:00",
+                            "update_at": "2023-08-25T13:00:00",
+                            "column_name": [
+                                {
+                                    "column_name": "lidar_lidar58m_Z10_HorizWS",
+                                    "statistic_type_id": "avg",
+                                    "is_ignored": false
+                                },
+                                {
+                                    "column_name": "lidar_lidar58m_Z10_TurbInt",
+                                    "statistic_type_id": "ti",
+                                    "is_ignored": false
+                                },
+                                {
+                                    "column_name": "lidar_lidar58m_Z10_MaxWS",
+                                    "statistic_type_id": "max",
+                                    "is_ignored": false
+                                },
+                                {
+                                    "column_name": "lidar_lidar58m_Z10_MinWs",
+                                    "statistic_type_id": "min",
+                                    "is_ignored": false
+                                },
+                                {
+                                    "column_name": "lidar_lidar58m_Z10_StdDevWS",
+                                    "statistic_type_id": "sd",
+                                    "is_ignored": false
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "LIDAR60m_InfoFlag",
+                    "measurement_type_id": "flag",
+                    "height_m": 60.0,
+                    "height_reference_id": "mean_sea_level",
+                    "logger_measurement_config": [
+                        {
+                            "measurement_units_id": "-",
+                            "height_m": 58.0,
+                            "date_from": "2019-09-04T00:00:00",
+                            "date_to": "2022-03-28T00:00:00",
+                            "update_at": "2023-08-25T13:00:00",
+                            "column_name": [
+                                {
+                                    "column_name": "lidar_lidar58m_Z10_InfoFlag",
+                                    "statistic_type_id": "quality",
+                                    "is_ignored": false
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "LIDAR60m_Packets",
+                    "measurement_type_id": "status",
+                    "height_m": 60.0,
+                    "height_reference_id": "mean_sea_level",
+                    "logger_measurement_config": [
+                        {
+                            "measurement_units_id": "-",
+                            "height_m": 58.0,
+                            "date_from": "2019-09-04T00:00:00",
+                            "date_to": "2022-03-28T00:00:00",
+                            "update_at": "2023-08-25T13:00:00",
+                            "column_name": [
+                                {
+                                    "column_name": "lidar_lidar58m_Z10_Packets",
+                                    "statistic_type_id": "count",
+                                    "is_ignored": false
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "LIDAR60m_StatFlag",
+                    "measurement_type_id": "flag",
+                    "height_m": 60.0,
+                    "height_reference_id": "mean_sea_level",
+                    "logger_measurement_config": [
+                        {
+                            "measurement_units_id": "-",
+                            "height_m": 58.0,
+                            "date_from": "2019-09-04T00:00:00",
+                            "date_to": "2022-03-28T00:00:00",
+                            "update_at": "2023-08-25T13:00:00",
+                            "column_name": [
+                                {
+                                    "column_name": "lidar_lidar58m_Z10_StatFlag",
+                                    "statistic_type_id": "quality",
+                                    "is_ignored": false
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "LIDAR60m_WdSpdVer",
+                    "measurement_type_id": "vertical_wind_speed",
+                    "height_m": 60.0,
+                    "height_reference_id": "mean_sea_level",
+                    "logger_measurement_config": [
+                        {
+                            "measurement_units_id": "m/s",
+                            "height_m": 58.0,
+                            "date_from": "2019-09-04T00:00:00",
+                            "date_to": "2022-03-28T00:00:00",
+                            "update_at": "2023-08-25T13:00:00",
+                            "column_name": [
+                                {
+                                    "column_name": "lidar_lidar58m_Z10_VertWs",
+                                    "statistic_type_id": "avg",
+                                    "is_ignored": false
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "LIDAR80m_WdDir",
+                    "measurement_type_id": "wind_direction",
+                    "height_m": 80.0,
+                    "height_reference_id": "mean_sea_level",
+                    "logger_measurement_config": [
+                        {
+                            "measurement_units_id": "deg",
+                            "height_m": 78.0,
+                            "date_from": "2019-09-04T00:00:00",
+                            "date_to": "2022-03-28T00:00:00",
+                            "update_at": "2023-08-25T13:00:00",
+                            "column_name": [
+                                {
+                                    "column_name": "lidar_lidar78m_WD_alg_03",
+                                    "statistic_type_id": "avg",
+                                    "is_ignored": false
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "LIDAR80m_WdSpdHor",
+                    "measurement_type_id": "wind_speed",
+                    "height_m": 80.0,
+                    "height_reference_id": "mean_sea_level",
+                    "logger_measurement_config": [
+                        {
+                            "measurement_units_id": "m/s",
+                            "height_m": 78.0,
+                            "date_from": "2019-09-04T00:00:00",
+                            "date_to": "2022-03-28T00:00:00",
+                            "update_at": "2023-08-25T13:00:00",
+                            "column_name": [
+                                {
+                                    "column_name": "lidar_lidar78m_Z10_HorizWS",
+                                    "statistic_type_id": "avg",
+                                    "is_ignored": false
+                                },
+                                {
+                                    "column_name": "lidar_lidar78m_Z10_TurbInt",
+                                    "statistic_type_id": "ti",
+                                    "is_ignored": false
+                                },
+                                {
+                                    "column_name": "lidar_lidar78m_Z10_MaxWS",
+                                    "statistic_type_id": "max",
+                                    "is_ignored": false
+                                },
+                                {
+                                    "column_name": "lidar_lidar78m_Z10_MinWs",
+                                    "statistic_type_id": "min",
+                                    "is_ignored": false
+                                },
+                                {
+                                    "column_name": "lidar_lidar78m_Z10_StdDevWS",
+                                    "statistic_type_id": "sd",
+                                    "is_ignored": false
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "LIDAR80m_InfoFlag",
+                    "measurement_type_id": "flag",
+                    "height_m": 80.0,
+                    "height_reference_id": "mean_sea_level",
+                    "logger_measurement_config": [
+                        {
+                            "measurement_units_id": "-",
+                            "height_m": 78.0,
+                            "date_from": "2019-09-04T00:00:00",
+                            "date_to": "2022-03-28T00:00:00",
+                            "update_at": "2023-08-25T13:00:00",
+                            "column_name": [
+                                {
+                                    "column_name": "lidar_lidar78m_Z10_InfoFlag",
+                                    "statistic_type_id": "quality",
+                                    "is_ignored": false
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "LIDAR80m_Packets",
+                    "measurement_type_id": "status",
+                    "height_m": 80.0,
+                    "height_reference_id": "mean_sea_level",
+                    "logger_measurement_config": [
+                        {
+                            "measurement_units_id": "-",
+                            "height_m": 78.0,
+                            "date_from": "2019-09-04T00:00:00",
+                            "date_to": "2022-03-28T00:00:00",
+                            "update_at": "2023-08-25T13:00:00",
+                            "column_name": [
+                                {
+                                    "column_name": "lidar_lidar78m_Z10_Packets",
+                                    "statistic_type_id": "count",
+                                    "is_ignored": false
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "LIDAR80m_StatFlag",
+                    "measurement_type_id": "flag",
+                    "height_m": 80.0,
+                    "height_reference_id": "mean_sea_level",
+                    "logger_measurement_config": [
+                        {
+                            "measurement_units_id": "-",
+                            "height_m": 78.0,
+                            "date_from": "2019-09-04T00:00:00",
+                            "date_to": "2022-03-28T00:00:00",
+                            "update_at": "2023-08-25T13:00:00",
+                            "column_name": [
+                                {
+                                    "column_name": "lidar_lidar78m_Z10_StatFlag",
+                                    "statistic_type_id": "quality",
+                                    "is_ignored": false
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "LIDAR80m_WdSpdVer",
+                    "measurement_type_id": "vertical_wind_speed",
+                    "height_m": 80.0,
+                    "height_reference_id": "mean_sea_level",
+                    "logger_measurement_config": [
+                        {
+                            "measurement_units_id": "m/s",
+                            "height_m": 78.0,
+                            "date_from": "2019-09-04T00:00:00",
+                            "date_to": "2022-03-28T00:00:00",
+                            "update_at": "2023-08-25T13:00:00",
+                            "column_name": [
+                                {
+                                    "column_name": "lidar_lidar78m_Z10_VertWs",
+                                    "statistic_type_id": "avg",
+                                    "is_ignored": false
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "LIDAR100m_WdDir",
+                    "measurement_type_id": "wind_direction",
+                    "height_m": 100.0,
+                    "height_reference_id": "mean_sea_level",
+                    "logger_measurement_config": [
+                        {
+                            "measurement_units_id": "deg",
+                            "height_m": 98.0,
+                            "date_from": "2019-09-04T00:00:00",
+                            "date_to": "2022-03-28T00:00:00",
+                            "update_at": "2023-08-25T13:00:00",
+                            "column_name": [
+                                {
+                                    "column_name": "lidar_lidar98m_WD_alg_03",
+                                    "statistic_type_id": "avg",
+                                    "is_ignored": false
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "LIDAR100m_WdSpdHor",
+                    "measurement_type_id": "wind_speed",
+                    "height_m": 100.0,
+                    "height_reference_id": "mean_sea_level",
+                    "logger_measurement_config": [
+                        {
+                            "measurement_units_id": "m/s",
+                            "height_m": 98.0,
+                            "date_from": "2019-09-04T00:00:00",
+                            "date_to": "2022-03-28T00:00:00",
+                            "update_at": "2023-08-25T13:00:00",
+                            "column_name": [
+                                {
+                                    "column_name": "lidar_lidar98m_Z10_HorizWS",
+                                    "statistic_type_id": "avg",
+                                    "is_ignored": false
+                                },
+                                {
+                                    "column_name": "lidar_lidar98m_Z10_TurbInt",
+                                    "statistic_type_id": "ti",
+                                    "is_ignored": false
+                                },
+                                {
+                                    "column_name": "lidar_lidar98m_Z10_MaxWS",
+                                    "statistic_type_id": "max",
+                                    "is_ignored": false
+                                },
+                                {
+                                    "column_name": "lidar_lidar98m_Z10_MinWs",
+                                    "statistic_type_id": "min",
+                                    "is_ignored": false
+                                },
+                                {
+                                    "column_name": "lidar_lidar98m_Z10_StdDevWS",
+                                    "statistic_type_id": "sd",
+                                    "is_ignored": false
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "LIDAR100m_InfoFlag",
+                    "measurement_type_id": "flag",
+                    "height_m": 100.0,
+                    "height_reference_id": "mean_sea_level",
+                    "logger_measurement_config": [
+                        {
+                            "measurement_units_id": "-",
+                            "height_m": 98.0,
+                            "date_from": "2019-09-04T00:00:00",
+                            "date_to": "2022-03-28T00:00:00",
+                            "update_at": "2023-08-25T13:00:00",
+                            "column_name": [
+                                {
+                                    "column_name": "lidar_lidar98m_Z10_InfoFlag",
+                                    "statistic_type_id": "quality",
+                                    "is_ignored": false
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "LIDAR100m_Packets",
+                    "measurement_type_id": "status",
+                    "height_m": 100.0,
+                    "height_reference_id": "mean_sea_level",
+                    "logger_measurement_config": [
+                        {
+                            "measurement_units_id": "-",
+                            "height_m": 98.0,
+                            "date_from": "2019-09-04T00:00:00",
+                            "date_to": "2022-03-28T00:00:00",
+                            "update_at": "2023-08-25T13:00:00",
+                            "column_name": [
+                                {
+                                    "column_name": "lidar_lidar98m_Z10_Packets",
+                                    "statistic_type_id": "count",
+                                    "is_ignored": false
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "LIDAR100m_StatFlag",
+                    "measurement_type_id": "flag",
+                    "height_m": 100.0,
+                    "height_reference_id": "mean_sea_level",
+                    "logger_measurement_config": [
+                        {
+                            "measurement_units_id": "-",
+                            "height_m": 98.0,
+                            "date_from": "2019-09-04T00:00:00",
+                            "date_to": "2022-03-28T00:00:00",
+                            "update_at": "2023-08-25T13:00:00",
+                            "column_name": [
+                                {
+                                    "column_name": "lidar_lidar98m_Z10_StatFlag",
+                                    "statistic_type_id": "quality",
+                                    "is_ignored": false
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "LIDAR100m_WdSpdVer",
+                    "measurement_type_id": "vertical_wind_speed",
+                    "height_m": 100.0,
+                    "height_reference_id": "mean_sea_level",
+                    "logger_measurement_config": [
+                        {
+                            "measurement_units_id": "m/s",
+                            "height_m": 98.0,
+                            "date_from": "2019-09-04T00:00:00",
+                            "date_to": "2022-03-28T00:00:00",
+                            "update_at": "2023-08-25T13:00:00",
+                            "column_name": [
+                                {
+                                    "column_name": "lidar_lidar98m_Z10_VertWs",
+                                    "statistic_type_id": "avg",
+                                    "is_ignored": false
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "LIDAR120m_WdDir",
+                    "measurement_type_id": "wind_direction",
+                    "height_m": 120.0,
+                    "height_reference_id": "mean_sea_level",
+                    "logger_measurement_config": [
+                        {
+                            "measurement_units_id": "deg",
+                            "height_m": 118.0,
+                            "date_from": "2019-09-04T00:00:00",
+                            "date_to": "2022-03-28T00:00:00",
+                            "update_at": "2023-08-25T13:00:00",
+                            "column_name": [
+                                {
+                                    "column_name": "lidar_lidar118m_WD_alg_03",
+                                    "statistic_type_id": "avg",
+                                    "is_ignored": false
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "LIDAR120m_WdSpdHor",
+                    "measurement_type_id": "wind_speed",
+                    "height_m": 120.0,
+                    "height_reference_id": "mean_sea_level",
+                    "logger_measurement_config": [
+                        {
+                            "measurement_units_id": "m/s",
+                            "height_m": 118.0,
+                            "date_from": "2019-09-04T00:00:00",
+                            "date_to": "2022-03-28T00:00:00",
+                            "update_at": "2023-08-25T13:00:00",
+                            "column_name": [
+                                {
+                                    "column_name": "lidar_lidar118m_Z10_HorizWS",
+                                    "statistic_type_id": "avg",
+                                    "is_ignored": false
+                                },
+                                {
+                                    "column_name": "lidar_lidar118m_Z10_TurbInt",
+                                    "statistic_type_id": "ti",
+                                    "is_ignored": false
+                                },
+                                {
+                                    "column_name": "lidar_lidar118m_Z10_MaxWS",
+                                    "statistic_type_id": "max",
+                                    "is_ignored": false
+                                },
+                                {
+                                    "column_name": "lidar_lidar118m_Z10_MinWs",
+                                    "statistic_type_id": "min",
+                                    "is_ignored": false
+                                },
+                                {
+                                    "column_name": "lidar_lidar118m_Z10_StdDevWS",
+                                    "statistic_type_id": "sd",
+                                    "is_ignored": false
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "LIDAR120m_InfoFlag",
+                    "measurement_type_id": "flag",
+                    "height_m": 120.0,
+                    "height_reference_id": "mean_sea_level",
+                    "logger_measurement_config": [
+                        {
+                            "measurement_units_id": "-",
+                            "height_m": 118.0,
+                            "date_from": "2019-09-04T00:00:00",
+                            "date_to": "2022-03-28T00:00:00",
+                            "update_at": "2023-08-25T13:00:00",
+                            "column_name": [
+                                {
+                                    "column_name": "lidar_lidar118m_Z10_InfoFlag",
+                                    "statistic_type_id": "quality",
+                                    "is_ignored": false
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "LIDAR120m_Packets",
+                    "measurement_type_id": "status",
+                    "height_m": 120.0,
+                    "height_reference_id": "mean_sea_level",
+                    "logger_measurement_config": [
+                        {
+                            "measurement_units_id": "-",
+                            "height_m": 118.0,
+                            "date_from": "2019-09-04T00:00:00",
+                            "date_to": "2022-03-28T00:00:00",
+                            "update_at": "2023-08-25T13:00:00",
+                            "column_name": [
+                                {
+                                    "column_name": "lidar_lidar118m_Z10_Packets",
+                                    "statistic_type_id": "count",
+                                    "is_ignored": false
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "LIDAR120m_StatFlag",
+                    "measurement_type_id": "flag",
+                    "height_m": 120.0,
+                    "height_reference_id": "mean_sea_level",
+                    "logger_measurement_config": [
+                        {
+                            "measurement_units_id": "-",
+                            "height_m": 118.0,
+                            "date_from": "2019-09-04T00:00:00",
+                            "date_to": "2022-03-28T00:00:00",
+                            "update_at": "2023-08-25T13:00:00",
+                            "column_name": [
+                                {
+                                    "column_name": "lidar_lidar118m_Z10_StatFlag",
+                                    "statistic_type_id": "quality",
+                                    "is_ignored": false
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "LIDAR120m_WdSpdVer",
+                    "measurement_type_id": "vertical_wind_speed",
+                    "height_m": 120.0,
+                    "height_reference_id": "mean_sea_level",
+                    "logger_measurement_config": [
+                        {
+                            "measurement_units_id": "m/s",
+                            "height_m": 118.0,
+                            "date_from": "2019-09-04T00:00:00",
+                            "date_to": "2022-03-28T00:00:00",
+                            "update_at": "2023-08-25T13:00:00",
+                            "column_name": [
+                                {
+                                    "column_name": "lidar_lidar118m_Z10_VertWs",
+                                    "statistic_type_id": "avg",
+                                    "is_ignored": false
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "LIDAR140m_WdDir",
+                    "measurement_type_id": "wind_direction",
+                    "height_m": 140.0,
+                    "height_reference_id": "mean_sea_level",
+                    "logger_measurement_config": [
+                        {
+                            "measurement_units_id": "deg",
+                            "height_m": 138.0,
+                            "date_from": "2019-09-04T00:00:00",
+                            "date_to": "2022-03-28T00:00:00",
+                            "update_at": "2023-08-25T13:00:00",
+                            "column_name": [
+                                {
+                                    "column_name": "lidar_lidar138m_WD_alg_03",
+                                    "statistic_type_id": "avg",
+                                    "is_ignored": false
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "LIDAR140m_WdSpdHor",
+                    "measurement_type_id": "wind_speed",
+                    "height_m": 140.0,
+                    "height_reference_id": "mean_sea_level",
+                    "logger_measurement_config": [
+                        {
+                            "measurement_units_id": "m/s",
+                            "height_m": 138.0,
+                            "date_from": "2019-09-04T00:00:00",
+                            "date_to": "2022-03-28T00:00:00",
+                            "update_at": "2023-08-25T13:00:00",
+                            "column_name": [
+                                {
+                                    "column_name": "lidar_lidar138m_Z10_HorizWS",
+                                    "statistic_type_id": "avg",
+                                    "is_ignored": false
+                                },
+                                {
+                                    "column_name": "lidar_lidar138m_Z10_TurbInt",
+                                    "statistic_type_id": "ti",
+                                    "is_ignored": false
+                                },
+                                {
+                                    "column_name": "lidar_lidar138m_Z10_MaxWS",
+                                    "statistic_type_id": "max",
+                                    "is_ignored": false
+                                },
+                                {
+                                    "column_name": "lidar_lidar138m_Z10_MinWs",
+                                    "statistic_type_id": "min",
+                                    "is_ignored": false
+                                },
+                                {
+                                    "column_name": "lidar_lidar138m_Z10_StdDevWS",
+                                    "statistic_type_id": "sd",
+                                    "is_ignored": false
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "LIDAR140m_InfoFlag",
+                    "measurement_type_id": "flag",
+                    "height_m": 140.0,
+                    "height_reference_id": "mean_sea_level",
+                    "logger_measurement_config": [
+                        {
+                            "measurement_units_id": "-",
+                            "height_m": 138.0,
+                            "date_from": "2019-09-04T00:00:00",
+                            "date_to": "2022-03-28T00:00:00",
+                            "update_at": "2023-08-25T13:00:00",
+                            "column_name": [
+                                {
+                                    "column_name": "lidar_lidar138m_Z10_InfoFlag",
+                                    "statistic_type_id": "quality",
+                                    "is_ignored": false
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "LIDAR140m_Packets",
+                    "measurement_type_id": "status",
+                    "height_m": 140.0,
+                    "height_reference_id": "mean_sea_level",
+                    "logger_measurement_config": [
+                        {
+                            "measurement_units_id": "-",
+                            "height_m": 138.0,
+                            "date_from": "2019-09-04T00:00:00",
+                            "date_to": "2022-03-28T00:00:00",
+                            "update_at": "2023-08-25T13:00:00",
+                            "column_name": [
+                                {
+                                    "column_name": "lidar_lidar138m_Z10_Packets",
+                                    "statistic_type_id": "count",
+                                    "is_ignored": false
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "LIDAR140m_StatFlag",
+                    "measurement_type_id": "flag",
+                    "height_m": 140.0,
+                    "height_reference_id": "mean_sea_level",
+                    "logger_measurement_config": [
+                        {
+                            "measurement_units_id": "-",
+                            "height_m": 138.0,
+                            "date_from": "2019-09-04T00:00:00",
+                            "date_to": "2022-03-28T00:00:00",
+                            "update_at": "2023-08-25T13:00:00",
+                            "column_name": [
+                                {
+                                    "column_name": "lidar_lidar138m_Z10_StatFlag",
+                                    "statistic_type_id": "quality",
+                                    "is_ignored": false
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "LIDAR140m_WdSpdVer",
+                    "measurement_type_id": "vertical_wind_speed",
+                    "height_m": 140.0,
+                    "height_reference_id": "mean_sea_level",
+                    "logger_measurement_config": [
+                        {
+                            "measurement_units_id": "m/s",
+                            "height_m": 138.0,
+                            "date_from": "2019-09-04T00:00:00",
+                            "date_to": "2022-03-28T00:00:00",
+                            "update_at": "2023-08-25T13:00:00",
+                            "column_name": [
+                                {
+                                    "column_name": "lidar_lidar138m_Z10_VertWs",
+                                    "statistic_type_id": "avg",
+                                    "is_ignored": false
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "LIDAR160m_WdDir",
+                    "measurement_type_id": "wind_direction",
+                    "height_m": 160.0,
+                    "height_reference_id": "mean_sea_level",
+                    "logger_measurement_config": [
+                        {
+                            "measurement_units_id": "deg",
+                            "height_m": 158.0,
+                            "date_from": "2019-09-04T00:00:00",
+                            "date_to": "2022-03-28T00:00:00",
+                            "update_at": "2023-08-25T13:00:00",
+                            "column_name": [
+                                {
+                                    "column_name": "lidar_lidar158m_WD_alg_03",
+                                    "statistic_type_id": "avg",
+                                    "is_ignored": false
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "LIDAR160m_WdSpdHor",
+                    "measurement_type_id": "wind_speed",
+                    "height_m": 160.0,
+                    "height_reference_id": "mean_sea_level",
+                    "logger_measurement_config": [
+                        {
+                            "measurement_units_id": "m/s",
+                            "height_m": 158.0,
+                            "date_from": "2019-09-04T00:00:00",
+                            "date_to": "2022-03-28T00:00:00",
+                            "update_at": "2023-08-25T13:00:00",
+                            "column_name": [
+                                {
+                                    "column_name": "lidar_lidar158m_Z10_HorizWS",
+                                    "statistic_type_id": "avg",
+                                    "is_ignored": false
+                                },
+                                {
+                                    "column_name": "lidar_lidar158m_Z10_TurbInt",
+                                    "statistic_type_id": "ti",
+                                    "is_ignored": false
+                                },
+                                {
+                                    "column_name": "lidar_lidar158m_Z10_MaxWS",
+                                    "statistic_type_id": "max",
+                                    "is_ignored": false
+                                },
+                                {
+                                    "column_name": "lidar_lidar158m_Z10_MinWs",
+                                    "statistic_type_id": "min",
+                                    "is_ignored": false
+                                },
+                                {
+                                    "column_name": "lidar_lidar158m_Z10_StdDevWS",
+                                    "statistic_type_id": "sd",
+                                    "is_ignored": false
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "LIDAR160m_InfoFlag",
+                    "measurement_type_id": "flag",
+                    "height_m": 160.0,
+                    "height_reference_id": "mean_sea_level",
+                    "logger_measurement_config": [
+                        {
+                            "measurement_units_id": "-",
+                            "height_m": 158.0,
+                            "date_from": "2019-09-04T00:00:00",
+                            "date_to": "2022-03-28T00:00:00",
+                            "update_at": "2023-08-25T13:00:00",
+                            "column_name": [
+                                {
+                                    "column_name": "lidar_lidar158m_Z10_InfoFlag",
+                                    "statistic_type_id": "quality",
+                                    "is_ignored": false
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "LIDAR160m_Packets",
+                    "measurement_type_id": "status",
+                    "height_m": 160.0,
+                    "height_reference_id": "mean_sea_level",
+                    "logger_measurement_config": [
+                        {
+                            "measurement_units_id": "-",
+                            "height_m": 158.0,
+                            "date_from": "2019-09-04T00:00:00",
+                            "date_to": "2022-03-28T00:00:00",
+                            "update_at": "2023-08-25T13:00:00",
+                            "column_name": [
+                                {
+                                    "column_name": "lidar_lidar158m_Z10_Packets",
+                                    "statistic_type_id": "count",
+                                    "is_ignored": false
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "LIDAR160m_StatFlag",
+                    "measurement_type_id": "flag",
+                    "height_m": 160.0,
+                    "height_reference_id": "mean_sea_level",
+                    "logger_measurement_config": [
+                        {
+                            "measurement_units_id": "-",
+                            "height_m": 158.0,
+                            "date_from": "2019-09-04T00:00:00",
+                            "date_to": "2022-03-28T00:00:00",
+                            "update_at": "2023-08-25T13:00:00",
+                            "column_name": [
+                                {
+                                    "column_name": "lidar_lidar158m_Z10_StatFlag",
+                                    "statistic_type_id": "quality",
+                                    "is_ignored": false
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "LIDAR160m_WdSpdVer",
+                    "measurement_type_id": "vertical_wind_speed",
+                    "height_m": 160.0,
+                    "height_reference_id": "mean_sea_level",
+                    "logger_measurement_config": [
+                        {
+                            "measurement_units_id": "m/s",
+                            "height_m": 158.0,
+                            "date_from": "2019-09-04T00:00:00",
+                            "date_to": "2022-03-28T00:00:00",
+                            "update_at": "2023-08-25T13:00:00",
+                            "column_name": [
+                                {
+                                    "column_name": "lidar_lidar158m_Z10_VertWs",
+                                    "statistic_type_id": "avg",
+                                    "is_ignored": false
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "LIDAR180m_WdDir",
+                    "measurement_type_id": "wind_direction",
+                    "height_m": 180.0,
+                    "height_reference_id": "mean_sea_level",
+                    "logger_measurement_config": [
+                        {
+                            "measurement_units_id": "deg",
+                            "height_m": 178.0,
+                            "date_from": "2019-09-04T00:00:00",
+                            "date_to": "2022-03-28T00:00:00",
+                            "update_at": "2023-08-25T13:00:00",
+                            "column_name": [
+                                {
+                                    "column_name": "lidar_lidar178m_WD_alg_03",
+                                    "statistic_type_id": "avg",
+                                    "is_ignored": false
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "LIDAR180m_WdSpdHor",
+                    "measurement_type_id": "wind_speed",
+                    "height_m": 180.0,
+                    "height_reference_id": "mean_sea_level",
+                    "logger_measurement_config": [
+                        {
+                            "measurement_units_id": "m/s",
+                            "height_m": 178.0,
+                            "date_from": "2019-09-04T00:00:00",
+                            "date_to": "2022-03-28T00:00:00",
+                            "update_at": "2023-08-25T13:00:00",
+                            "column_name": [
+                                {
+                                    "column_name": "lidar_lidar178m_Z10_HorizWS",
+                                    "statistic_type_id": "avg",
+                                    "is_ignored": false
+                                },
+                                {
+                                    "column_name": "lidar_lidar178m_Z10_TurbInt",
+                                    "statistic_type_id": "ti",
+                                    "is_ignored": false
+                                },
+                                {
+                                    "column_name": "lidar_lidar178m_Z10_MaxWS",
+                                    "statistic_type_id": "max",
+                                    "is_ignored": false
+                                },
+                                {
+                                    "column_name": "lidar_lidar178m_Z10_MinWs",
+                                    "statistic_type_id": "min",
+                                    "is_ignored": false
+                                },
+                                {
+                                    "column_name": "lidar_lidar178m_Z10_StdDevWS",
+                                    "statistic_type_id": "sd",
+                                    "is_ignored": false
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "LIDAR180m_InfoFlag",
+                    "measurement_type_id": "flag",
+                    "height_m": 180.0,
+                    "height_reference_id": "mean_sea_level",
+                    "logger_measurement_config": [
+                        {
+                            "measurement_units_id": "-",
+                            "height_m": 178.0,
+                            "date_from": "2019-09-04T00:00:00",
+                            "date_to": "2022-03-28T00:00:00",
+                            "update_at": "2023-08-25T13:00:00",
+                            "column_name": [
+                                {
+                                    "column_name": "lidar_lidar178m_Z10_InfoFlag",
+                                    "statistic_type_id": "quality",
+                                    "is_ignored": false
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "LIDAR180m_Packets",
+                    "measurement_type_id": "status",
+                    "height_m": 180.0,
+                    "height_reference_id": "mean_sea_level",
+                    "logger_measurement_config": [
+                        {
+                            "measurement_units_id": "-",
+                            "height_m": 178.0,
+                            "date_from": "2019-09-04T00:00:00",
+                            "date_to": "2022-03-28T00:00:00",
+                            "update_at": "2023-08-25T13:00:00",
+                            "column_name": [
+                                {
+                                    "column_name": "lidar_lidar178m_Z10_Packets",
+                                    "statistic_type_id": "count",
+                                    "is_ignored": false
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "LIDAR180m_StatFlag",
+                    "measurement_type_id": "flag",
+                    "height_m": 180.0,
+                    "height_reference_id": "mean_sea_level",
+                    "logger_measurement_config": [
+                        {
+                            "measurement_units_id": "-",
+                            "height_m": 178.0,
+                            "date_from": "2019-09-04T00:00:00",
+                            "date_to": "2022-03-28T00:00:00",
+                            "update_at": "2023-08-25T13:00:00",
+                            "column_name": [
+                                {
+                                    "column_name": "lidar_lidar178m_Z10_StatFlag",
+                                    "statistic_type_id": "quality",
+                                    "is_ignored": false
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "LIDAR180m_WdSpdVer",
+                    "measurement_type_id": "vertical_wind_speed",
+                    "height_m": 180.0,
+                    "height_reference_id": "mean_sea_level",
+                    "logger_measurement_config": [
+                        {
+                            "measurement_units_id": "m/s",
+                            "height_m": 178.0,
+                            "date_from": "2019-09-04T00:00:00",
+                            "date_to": "2022-03-28T00:00:00",
+                            "update_at": "2023-08-25T13:00:00",
+                            "column_name": [
+                                {
+                                    "column_name": "lidar_lidar178m_Z10_VertWs",
+                                    "statistic_type_id": "avg",
+                                    "is_ignored": false
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "LIDAR200m_WdDir",
+                    "measurement_type_id": "wind_direction",
+                    "height_m": 200.0,
+                    "height_reference_id": "mean_sea_level",
+                    "logger_measurement_config": [
+                        {
+                            "measurement_units_id": "deg",
+                            "height_m": 198.0,
+                            "date_from": "2019-09-04T00:00:00",
+                            "date_to": "2022-03-28T00:00:00",
+                            "update_at": "2023-08-25T13:00:00",
+                            "column_name": [
+                                {
+                                    "column_name": "lidar_lidar198m_WD_alg_03",
+                                    "statistic_type_id": "avg",
+                                    "is_ignored": false
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "LIDAR200m_WdSpdHor",
+                    "measurement_type_id": "wind_speed",
+                    "height_m": 200.0,
+                    "height_reference_id": "mean_sea_level",
+                    "logger_measurement_config": [
+                        {
+                            "measurement_units_id": "m/s",
+                            "height_m": 198.0,
+                            "date_from": "2019-09-04T00:00:00",
+                            "date_to": "2022-03-28T00:00:00",
+                            "update_at": "2023-08-25T13:00:00",
+                            "column_name": [
+                                {
+                                    "column_name": "lidar_lidar198m_Z10_HorizWS",
+                                    "statistic_type_id": "avg",
+                                    "is_ignored": false
+                                },
+                                {
+                                    "column_name": "lidar_lidar198m_Z10_TurbInt",
+                                    "statistic_type_id": "ti",
+                                    "is_ignored": false
+                                },
+                                {
+                                    "column_name": "lidar_lidar198m_Z10_MaxWS",
+                                    "statistic_type_id": "max",
+                                    "is_ignored": false
+                                },
+                                {
+                                    "column_name": "lidar_lidar198m_Z10_MinWs",
+                                    "statistic_type_id": "min",
+                                    "is_ignored": false
+                                },
+                                {
+                                    "column_name": "lidar_lidar198m_Z10_StdDevWS",
+                                    "statistic_type_id": "sd",
+                                    "is_ignored": false
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "LIDAR200m_InfoFlag",
+                    "measurement_type_id": "flag",
+                    "height_m": 200.0,
+                    "height_reference_id": "mean_sea_level",
+                    "logger_measurement_config": [
+                        {
+                            "measurement_units_id": "-",
+                            "height_m": 198.0,
+                            "date_from": "2019-09-04T00:00:00",
+                            "date_to": "2022-03-28T00:00:00",
+                            "update_at": "2023-08-25T13:00:00",
+                            "column_name": [
+                                {
+                                    "column_name": "lidar_lidar198m_Z10_InfoFlag",
+                                    "statistic_type_id": "quality",
+                                    "is_ignored": false
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "LIDAR200m_Packets",
+                    "measurement_type_id": "status",
+                    "height_m": 200.0,
+                    "height_reference_id": "mean_sea_level",
+                    "logger_measurement_config": [
+                        {
+                            "measurement_units_id": "-",
+                            "height_m": 198.0,
+                            "date_from": "2019-09-04T00:00:00",
+                            "date_to": "2022-03-28T00:00:00",
+                            "update_at": "2023-08-25T13:00:00",
+                            "column_name": [
+                                {
+                                    "column_name": "lidar_lidar198m_Z10_Packets",
+                                    "statistic_type_id": "count",
+                                    "is_ignored": false
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "LIDAR200m_StatFlag",
+                    "measurement_type_id": "flag",
+                    "height_m": 200.0,
+                    "height_reference_id": "mean_sea_level",
+                    "logger_measurement_config": [
+                        {
+                            "measurement_units_id": "-",
+                            "height_m": 198.0,
+                            "date_from": "2019-09-04T00:00:00",
+                            "date_to": "2022-03-28T00:00:00",
+                            "update_at": "2023-08-25T13:00:00",
+                            "column_name": [
+                                {
+                                    "column_name": "lidar_lidar198m_Z10_StatFlag",
+                                    "statistic_type_id": "quality",
+                                    "is_ignored": false
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "LIDAR200m_WdSpdVer",
+                    "measurement_type_id": "vertical_wind_speed",
+                    "height_m": 200.0,
+                    "height_reference_id": "mean_sea_level",
+                    "logger_measurement_config": [
+                        {
+                            "measurement_units_id": "m/s",
+                            "height_m": 198.0,
+                            "date_from": "2019-09-04T00:00:00",
+                            "date_to": "2022-03-28T00:00:00",
+                            "update_at": "2023-08-25T13:00:00",
+                            "column_name": [
+                                {
+                                    "column_name": "lidar_lidar198m_Z10_VertWs",
+                                    "statistic_type_id": "avg",
+                                    "is_ignored": false
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "ADCP_WtrTemp",
+                    "measurement_type_id": "water_temperature",
+                    "height_m": -0.8,
+                    "logger_measurement_config": [
+                        {
+                            "measurement_units_id": "deg_C",
+                            "date_from": "2019-09-04T00:00:00",
+                            "date_to": "2022-03-28T00:00:00",
+                            "update_at": "2023-08-25T13:00:00",
+                            "column_name": [
+                                {
+                                    "column_name": "ADCP_ADCPtemp",
+                                    "statistic_type_id": "avg",
+                                    "is_ignored": false
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "ADCP_WtrCurrSpd",
+                    "measurement_type_id": "water_speed",
+                    "height_m": -5.7,
+                    "height_reference_id": "mean_sea_level",
+                    "logger_measurement_config": [
+                        {
+                            "measurement_units_id": "m/s",
+                            "height_m": 4.9,
+                            "date_from": "2019-09-04T00:00:00",
+                            "date_to": "2022-03-28T00:00:00",
+                            "update_at": "2023-08-25T13:00:00",
+                            "column_name": [
+                                {
+                                    "column_name": "ADCP_vc1",
+                                    "statistic_type_id": "avg",
+                                    "is_ignored": false
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "ADCP_WtrCurrDir",
+                    "measurement_type_id": "water_direction",
+                    "height_m": -5.7,
+                    "height_reference_id": "mean_sea_level",
+                    "logger_measurement_config": [
+                        {
+                            "measurement_units_id": "deg",
+                            "height_m": 4.9,
+                            "date_from": "2019-09-04T00:00:00",
+                            "date_to": "2022-03-28T00:00:00",
+                            "update_at": "2023-08-25T13:00:00",
+                            "column_name": [
+                                {
+                                    "column_name": "ADCP_dc1",
+                                    "statistic_type_id": "avg",
+                                    "is_ignored": false
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "ADCP_WtrCurrSpd",
+                    "measurement_type_id": "water_speed",
+                    "height_m": -8.4,
+                    "height_reference_id": "mean_sea_level",
+                    "logger_measurement_config": [
+                        {
+                            "measurement_units_id": "m/s",
+                            "height_m": 7.6,
+                            "date_from": "2019-09-04T00:00:00",
+                            "date_to": "2022-03-28T00:00:00",
+                            "update_at": "2023-08-25T13:00:00",
+                            "column_name": [
+                                {
+                                    "column_name": "ADCP_vc2",
+                                    "statistic_type_id": "avg",
+                                    "is_ignored": false
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "ADCP_WtrCurrDir",
+                    "measurement_type_id": "water_direction",
+                    "height_m": -8.4,
+                    "height_reference_id": "mean_sea_level",
+                    "logger_measurement_config": [
+                        {
+                            "measurement_units_id": "deg",
+                            "height_m": 7.6,
+                            "date_from": "2019-09-04T00:00:00",
+                            "date_to": "2022-03-28T00:00:00",
+                            "update_at": "2023-08-25T13:00:00",
+                            "column_name": [
+                                {
+                                    "column_name": "ADCP_dc2",
+                                    "statistic_type_id": "avg",
+                                    "is_ignored": false
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "ADCP_WtrCurrSpd",
+                    "measurement_type_id": "water_speed",
+                    "height_m": -11.1,
+                    "height_reference_id": "mean_sea_level",
+                    "logger_measurement_config": [
+                        {
+                            "measurement_units_id": "m/s",
+                            "height_m": 10.3,
+                            "date_from": "2019-09-04T00:00:00",
+                            "date_to": "2022-03-28T00:00:00",
+                            "update_at": "2023-08-25T13:00:00",
+                            "column_name": [
+                                {
+                                    "column_name": "ADCP_vc3",
+                                    "statistic_type_id": "avg",
+                                    "is_ignored": false
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "ADCP_WtrCurrDir",
+                    "measurement_type_id": "water_direction",
+                    "height_m": -11.1,
+                    "height_reference_id": "mean_sea_level",
+                    "logger_measurement_config": [
+                        {
+                            "measurement_units_id": "deg",
+                            "height_m": 10.3,
+                            "date_from": "2019-09-04T00:00:00",
+                            "date_to": "2022-03-28T00:00:00",
+                            "update_at": "2023-08-25T13:00:00",
+                            "column_name": [
+                                {
+                                    "column_name": "ADCP_dc3",
+                                    "statistic_type_id": "avg",
+                                    "is_ignored": false
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "ADCP_WtrCurrSpd",
+                    "measurement_type_id": "water_speed",
+                    "height_m": -13.8,
+                    "height_reference_id": "mean_sea_level",
+                    "logger_measurement_config": [
+                        {
+                            "measurement_units_id": "m/s",
+                            "height_m": 13.0,
+                            "date_from": "2019-09-04T00:00:00",
+                            "date_to": "2022-03-28T00:00:00",
+                            "update_at": "2023-08-25T13:00:00",
+                            "column_name": [
+                                {
+                                    "column_name": "ADCP_vc4",
+                                    "statistic_type_id": "avg",
+                                    "is_ignored": false
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "ADCP_WtrCurrDir",
+                    "measurement_type_id": "water_direction",
+                    "height_m": -13.8,
+                    "height_reference_id": "mean_sea_level",
+                    "logger_measurement_config": [
+                        {
+                            "measurement_units_id": "deg",
+                            "height_m": 13.0,
+                            "date_from": "2019-09-04T00:00:00",
+                            "date_to": "2022-03-28T00:00:00",
+                            "update_at": "2023-08-25T13:00:00",
+                            "column_name": [
+                                {
+                                    "column_name": "ADCP_dc4",
+                                    "statistic_type_id": "avg",
+                                    "is_ignored": false
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "ADCP_WtrCurrSpd",
+                    "measurement_type_id": "water_speed",
+                    "height_m": -16.5,
+                    "height_reference_id": "mean_sea_level",
+                    "logger_measurement_config": [
+                        {
+                            "measurement_units_id": "m/s",
+                            "height_m": 15.7,
+                            "date_from": "2019-09-04T00:00:00",
+                            "date_to": "2022-03-28T00:00:00",
+                            "update_at": "2023-08-25T13:00:00",
+                            "column_name": [
+                                {
+                                    "column_name": "ADCP_vc5",
+                                    "statistic_type_id": "avg",
+                                    "is_ignored": false
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "ADCP_WtrCurrDir",
+                    "measurement_type_id": "water_direction",
+                    "height_m": -16.5,
+                    "height_reference_id": "mean_sea_level",
+                    "logger_measurement_config": [
+                        {
+                            "measurement_units_id": "deg",
+                            "height_m": 15.7,
+                            "date_from": "2019-09-04T00:00:00",
+                            "date_to": "2022-03-28T00:00:00",
+                            "update_at": "2023-08-25T13:00:00",
+                            "column_name": [
+                                {
+                                    "column_name": "ADCP_dc5",
+                                    "statistic_type_id": "avg",
+                                    "is_ignored": false
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "ADCP_WtrCurrSpd",
+                    "measurement_type_id": "water_speed",
+                    "height_m": -19.2,
+                    "height_reference_id": "mean_sea_level",
+                    "logger_measurement_config": [
+                        {
+                            "measurement_units_id": "m/s",
+                            "height_m": 18.4,
+                            "date_from": "2019-09-04T00:00:00",
+                            "date_to": "2022-03-28T00:00:00",
+                            "update_at": "2023-08-25T13:00:00",
+                            "column_name": [
+                                {
+                                    "column_name": "ADCP_vc6",
+                                    "statistic_type_id": "avg",
+                                    "is_ignored": false
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "ADCP_WtrCurrDir",
+                    "measurement_type_id": "water_direction",
+                    "height_m": -19.2,
+                    "height_reference_id": "mean_sea_level",
+                    "logger_measurement_config": [
+                        {
+                            "measurement_units_id": "deg",
+                            "height_m": 18.4,
+                            "date_from": "2019-09-04T00:00:00",
+                            "date_to": "2022-03-28T00:00:00",
+                            "update_at": "2023-08-25T13:00:00",
+                            "column_name": [
+                                {
+                                    "column_name": "ADCP_dc6",
+                                    "statistic_type_id": "avg",
+                                    "is_ignored": false
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "ADCP_WtrCurrSpd",
+                    "measurement_type_id": "water_speed",
+                    "height_m": -21.9,
+                    "height_reference_id": "mean_sea_level",
+                    "logger_measurement_config": [
+                        {
+                            "measurement_units_id": "m/s",
+                            "height_m": 21.1,
+                            "date_from": "2019-09-04T00:00:00",
+                            "date_to": "2022-03-28T00:00:00",
+                            "update_at": "2023-08-25T13:00:00",
+                            "column_name": [
+                                {
+                                    "column_name": "ADCP_vc7",
+                                    "statistic_type_id": "avg",
+                                    "is_ignored": false
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "ADCP_WtrCurrDir",
+                    "measurement_type_id": "water_direction",
+                    "height_m": -21.9,
+                    "height_reference_id": "mean_sea_level",
+                    "logger_measurement_config": [
+                        {
+                            "measurement_units_id": "deg",
+                            "height_m": 21.1,
+                            "date_from": "2019-09-04T00:00:00",
+                            "date_to": "2022-03-28T00:00:00",
+                            "update_at": "2023-08-25T13:00:00",
+                            "column_name": [
+                                {
+                                    "column_name": "ADCP_dc7",
+                                    "statistic_type_id": "avg",
+                                    "is_ignored": false
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "ADCP_WtrCurrSpd",
+                    "measurement_type_id": "water_speed",
+                    "height_m": -24.6,
+                    "height_reference_id": "mean_sea_level",
+                    "logger_measurement_config": [
+                        {
+                            "measurement_units_id": "m/s",
+                            "height_m": 23.8,
+                            "date_from": "2019-09-04T00:00:00",
+                            "date_to": "2022-03-28T00:00:00",
+                            "update_at": "2023-08-25T13:00:00",
+                            "column_name": [
+                                {
+                                    "column_name": "ADCP_vc8",
+                                    "statistic_type_id": "avg",
+                                    "is_ignored": false
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "ADCP_WtrCurrDir",
+                    "measurement_type_id": "water_direction",
+                    "height_m": -24.6,
+                    "height_reference_id": "mean_sea_level",
+                    "logger_measurement_config": [
+                        {
+                            "measurement_units_id": "deg",
+                            "height_m": 23.8,
+                            "date_from": "2019-09-04T00:00:00",
+                            "date_to": "2022-03-28T00:00:00",
+                            "update_at": "2023-08-25T13:00:00",
+                            "column_name": [
+                                {
+                                    "column_name": "ADCP_dc8",
+                                    "statistic_type_id": "avg",
+                                    "is_ignored": false
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "ADCP_WtrCurrSpd",
+                    "measurement_type_id": "water_speed",
+                    "height_m": -27.3,
+                    "height_reference_id": "mean_sea_level",
+                    "logger_measurement_config": [
+                        {
+                            "measurement_units_id": "m/s",
+                            "height_m": 26.5,
+                            "date_from": "2019-09-04T00:00:00",
+                            "date_to": "2022-03-28T00:00:00",
+                            "update_at": "2023-08-25T13:00:00",
+                            "column_name": [
+                                {
+                                    "column_name": "ADCP_vc9",
+                                    "statistic_type_id": "avg",
+                                    "is_ignored": false
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "ADCP_WtrCurrDir",
+                    "measurement_type_id": "water_direction",
+                    "height_m": -27.3,
+                    "height_reference_id": "mean_sea_level",
+                    "logger_measurement_config": [
+                        {
+                            "measurement_units_id": "deg",
+                            "height_m": 26.5,
+                            "date_from": "2019-09-04T00:00:00",
+                            "date_to": "2022-03-28T00:00:00",
+                            "update_at": "2023-08-25T13:00:00",
+                            "column_name": [
+                                {
+                                    "column_name": "ADCP_dc9",
+                                    "statistic_type_id": "avg",
+                                    "is_ignored": false
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "ADCP_WtrCurrSpd",
+                    "measurement_type_id": "water_speed",
+                    "height_m": -30.0,
+                    "height_reference_id": "mean_sea_level",
+                    "logger_measurement_config": [
+                        {
+                            "measurement_units_id": "m/s",
+                            "height_m": 29.2,
+                            "date_from": "2019-09-04T00:00:00",
+                            "date_to": "2022-03-28T00:00:00",
+                            "update_at": "2023-08-25T13:00:00",
+                            "column_name": [
+                                {
+                                    "column_name": "ADCP_vc10",
+                                    "statistic_type_id": "avg",
+                                    "is_ignored": false
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "ADCP_WtrCurrDir",
+                    "measurement_type_id": "water_direction",
+                    "height_m": -30.0,
+                    "height_reference_id": "mean_sea_level",
+                    "logger_measurement_config": [
+                        {
+                            "measurement_units_id": "deg",
+                            "height_m": 29.2,
+                            "date_from": "2019-09-04T00:00:00",
+                            "date_to": "2022-03-28T00:00:00",
+                            "update_at": "2023-08-25T13:00:00",
+                            "column_name": [
+                                {
+                                    "column_name": "ADCP_dc10",
+                                    "statistic_type_id": "avg",
+                                    "is_ignored": false
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "ADCP_WtrCurrSpd",
+                    "measurement_type_id": "water_speed",
+                    "height_m": -32.7,
+                    "height_reference_id": "mean_sea_level",
+                    "logger_measurement_config": [
+                        {
+                            "measurement_units_id": "m/s",
+                            "height_m": 31.9,
+                            "date_from": "2019-09-04T00:00:00",
+                            "date_to": "2022-03-28T00:00:00",
+                            "update_at": "2023-08-25T13:00:00",
+                            "column_name": [
+                                {
+                                    "column_name": "ADCP_vc11",
+                                    "statistic_type_id": "avg",
+                                    "is_ignored": false
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "ADCP_WtrCurrDir",
+                    "measurement_type_id": "water_direction",
+                    "height_m": -32.7,
+                    "height_reference_id": "mean_sea_level",
+                    "logger_measurement_config": [
+                        {
+                            "measurement_units_id": "deg",
+                            "height_m": 31.9,
+                            "date_from": "2019-09-04T00:00:00",
+                            "date_to": "2022-03-28T00:00:00",
+                            "update_at": "2023-08-25T13:00:00",
+                            "column_name": [
+                                {
+                                    "column_name": "ADCP_dc11",
+                                    "statistic_type_id": "avg",
+                                    "is_ignored": false
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "ADCP_WtrCurrSpd",
+                    "measurement_type_id": "water_speed",
+                    "height_m": -35.4,
+                    "height_reference_id": "mean_sea_level",
+                    "logger_measurement_config": [
+                        {
+                            "measurement_units_id": "m/s",
+                            "height_m": 34.6,
+                            "date_from": "2019-09-04T00:00:00",
+                            "date_to": "2022-03-28T00:00:00",
+                            "update_at": "2023-08-25T13:00:00",
+                            "column_name": [
+                                {
+                                    "column_name": "ADCP_vc12",
+                                    "statistic_type_id": "avg",
+                                    "is_ignored": false
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "ADCP_WtrCurrDir",
+                    "measurement_type_id": "water_direction",
+                    "height_m": -35.4,
+                    "height_reference_id": "mean_sea_level",
+                    "logger_measurement_config": [
+                        {
+                            "measurement_units_id": "deg",
+                            "height_m": 34.6,
+                            "date_from": "2019-09-04T00:00:00",
+                            "date_to": "2022-03-28T00:00:00",
+                            "update_at": "2023-08-25T13:00:00",
+                            "column_name": [
+                                {
+                                    "column_name": "ADCP_dc12",
+                                    "statistic_type_id": "avg",
+                                    "is_ignored": false
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "ADCP_WtrCurrSpd",
+                    "measurement_type_id": "water_speed",
+                    "height_m": -38.1,
+                    "height_reference_id": "mean_sea_level",
+                    "logger_measurement_config": [
+                        {
+                            "measurement_units_id": "m/s",
+                            "height_m": 37.3,
+                            "date_from": "2019-09-04T00:00:00",
+                            "date_to": "2022-03-28T00:00:00",
+                            "update_at": "2023-08-25T13:00:00",
+                            "column_name": [
+                                {
+                                    "column_name": "ADCP_vc13",
+                                    "statistic_type_id": "avg",
+                                    "is_ignored": false
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "ADCP_WtrCurrDir",
+                    "measurement_type_id": "water_direction",
+                    "height_m": -38.1,
+                    "height_reference_id": "mean_sea_level",
+                    "logger_measurement_config": [
+                        {
+                            "measurement_units_id": "deg",
+                            "height_m": 37.3,
+                            "date_from": "2019-09-04T00:00:00",
+                            "date_to": "2022-03-28T00:00:00",
+                            "update_at": "2023-08-25T13:00:00",
+                            "column_name": [
+                                {
+                                    "column_name": "ADCP_dc13",
+                                    "statistic_type_id": "avg",
+                                    "is_ignored": false
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "ADCP_WtrCurrSpd",
+                    "measurement_type_id": "water_speed",
+                    "height_m": -40.8,
+                    "height_reference_id": "mean_sea_level",
+                    "logger_measurement_config": [
+                        {
+                            "measurement_units_id": "m/s",
+                            "height_m": 40.0,
+                            "date_from": "2019-09-04T00:00:00",
+                            "date_to": "2022-03-28T00:00:00",
+                            "update_at": "2023-08-25T13:00:00",
+                            "column_name": [
+                                {
+                                    "column_name": "ADCP_vc14",
+                                    "statistic_type_id": "avg",
+                                    "is_ignored": false
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "ADCP_WtrCurrDir",
+                    "measurement_type_id": "water_direction",
+                    "height_m": -40.8,
+                    "height_reference_id": "mean_sea_level",
+                    "logger_measurement_config": [
+                        {
+                            "measurement_units_id": "deg",
+                            "height_m": 40.0,
+                            "date_from": "2019-09-04T00:00:00",
+                            "date_to": "2022-03-28T00:00:00",
+                            "update_at": "2023-08-25T13:00:00",
+                            "column_name": [
+                                {
+                                    "column_name": "ADCP_dc14",
+                                    "statistic_type_id": "avg",
+                                    "is_ignored": false
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "ADCP_WtrCurrSpd",
+                    "measurement_type_id": "water_speed",
+                    "height_m": -43.5,
+                    "height_reference_id": "mean_sea_level",
+                    "logger_measurement_config": [
+                        {
+                            "measurement_units_id": "m/s",
+                            "height_m": 42.7,
+                            "date_from": "2019-09-04T00:00:00",
+                            "date_to": "2022-03-28T00:00:00",
+                            "update_at": "2023-08-25T13:00:00",
+                            "column_name": [
+                                {
+                                    "column_name": "ADCP_vc15",
+                                    "statistic_type_id": "avg",
+                                    "is_ignored": false
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "ADCP_WtrCurrDir",
+                    "measurement_type_id": "water_direction",
+                    "height_m": -43.5,
+                    "height_reference_id": "mean_sea_level",
+                    "logger_measurement_config": [
+                        {
+                            "measurement_units_id": "deg",
+                            "height_m": 42.7,
+                            "date_from": "2019-09-04T00:00:00",
+                            "date_to": "2022-03-28T00:00:00",
+                            "update_at": "2023-08-25T13:00:00",
+                            "column_name": [
+                                {
+                                    "column_name": "ADCP_dc15",
+                                    "statistic_type_id": "avg",
+                                    "is_ignored": false
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "ADCP_WtrCurrSpd",
+                    "measurement_type_id": "water_speed",
+                    "height_m": -46.2,
+                    "height_reference_id": "mean_sea_level",
+                    "logger_measurement_config": [
+                        {
+                            "measurement_units_id": "m/s",
+                            "height_m": 45.4,
+                            "date_from": "2019-09-04T00:00:00",
+                            "date_to": "2022-03-28T00:00:00",
+                            "update_at": "2023-08-25T13:00:00",
+                            "column_name": [
+                                {
+                                    "column_name": "ADCP_vc16",
+                                    "statistic_type_id": "avg",
+                                    "is_ignored": false
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "ADCP_WtrCurrDir",
+                    "measurement_type_id": "water_direction",
+                    "height_m": -46.2,
+                    "height_reference_id": "mean_sea_level",
+                    "logger_measurement_config": [
+                        {
+                            "measurement_units_id": "deg",
+                            "height_m": 45.4,
+                            "date_from": "2019-09-04T00:00:00",
+                            "date_to": "2022-03-28T00:00:00",
+                            "update_at": "2023-08-25T13:00:00",
+                            "column_name": [
+                                {
+                                    "column_name": "ADCP_dc16",
+                                    "statistic_type_id": "avg",
+                                    "is_ignored": false
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "ADCP_WtrCurrSpd",
+                    "measurement_type_id": "water_speed",
+                    "height_m": -48.9,
+                    "height_reference_id": "mean_sea_level",
+                    "logger_measurement_config": [
+                        {
+                            "measurement_units_id": "m/s",
+                            "height_m": 48.1,
+                            "date_from": "2019-09-04T00:00:00",
+                            "date_to": "2022-03-28T00:00:00",
+                            "update_at": "2023-08-25T13:00:00",
+                            "column_name": [
+                                {
+                                    "column_name": "ADCP_vc17",
+                                    "statistic_type_id": "avg",
+                                    "is_ignored": false
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "ADCP_WtrCurrDir",
+                    "measurement_type_id": "water_direction",
+                    "height_m": -48.9,
+                    "height_reference_id": "mean_sea_level",
+                    "logger_measurement_config": [
+                        {
+                            "measurement_units_id": "deg",
+                            "height_m": 48.1,
+                            "date_from": "2019-09-04T00:00:00",
+                            "date_to": "2022-03-28T00:00:00",
+                            "update_at": "2023-08-25T13:00:00",
+                            "column_name": [
+                                {
+                                    "column_name": "ADCP_dc17",
+                                    "statistic_type_id": "avg",
+                                    "is_ignored": false
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "ADCP_WtrCurrSpd",
+                    "measurement_type_id": "water_speed",
+                    "height_m": -51.6,
+                    "height_reference_id": "mean_sea_level",
+                    "logger_measurement_config": [
+                        {
+                            "measurement_units_id": "m/s",
+                            "height_m": 50.8,
+                            "date_from": "2019-09-04T00:00:00",
+                            "date_to": "2022-03-28T00:00:00",
+                            "update_at": "2023-08-25T13:00:00",
+                            "column_name": [
+                                {
+                                    "column_name": "ADCP_vc18",
+                                    "statistic_type_id": "avg",
+                                    "is_ignored": false
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "ADCP_WtrCurrDir",
+                    "measurement_type_id": "water_direction",
+                    "height_m": -51.6,
+                    "height_reference_id": "mean_sea_level",
+                    "logger_measurement_config": [
+                        {
+                            "measurement_units_id": "deg",
+                            "height_m": 50.8,
+                            "date_from": "2019-09-04T00:00:00",
+                            "date_to": "2022-03-28T00:00:00",
+                            "update_at": "2023-08-25T13:00:00",
+                            "column_name": [
+                                {
+                                    "column_name": "ADCP_dc18",
+                                    "statistic_type_id": "avg",
+                                    "is_ignored": false
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "ADCP_WtrCurrSpd",
+                    "measurement_type_id": "water_speed",
+                    "height_m": -54.3,
+                    "height_reference_id": "mean_sea_level",
+                    "logger_measurement_config": [
+                        {
+                            "measurement_units_id": "m/s",
+                            "height_m": 53.5,
+                            "date_from": "2019-09-04T00:00:00",
+                            "date_to": "2022-03-28T00:00:00",
+                            "update_at": "2023-08-25T13:00:00",
+                            "column_name": [
+                                {
+                                    "column_name": "ADCP_vc19",
+                                    "statistic_type_id": "avg",
+                                    "is_ignored": false
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "ADCP_WtrCurrDir",
+                    "measurement_type_id": "water_direction",
+                    "height_m": -54.3,
+                    "height_reference_id": "mean_sea_level",
+                    "logger_measurement_config": [
+                        {
+                            "measurement_units_id": "deg",
+                            "height_m": 53.5,
+                            "date_from": "2019-09-04T00:00:00",
+                            "date_to": "2022-03-28T00:00:00",
+                            "update_at": "2023-08-25T13:00:00",
+                            "column_name": [
+                                {
+                                    "column_name": "ADCP_dc19",
+                                    "statistic_type_id": "avg",
+                                    "is_ignored": false
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "ADCP_WtrCurrSpd",
+                    "measurement_type_id": "water_speed",
+                    "height_m": -57.0,
+                    "height_reference_id": "mean_sea_level",
+                    "logger_measurement_config": [
+                        {
+                            "measurement_units_id": "m/s",
+                            "height_m": 56.2,
+                            "date_from": "2019-09-04T00:00:00",
+                            "date_to": "2022-03-28T00:00:00",
+                            "update_at": "2023-08-25T13:00:00",
+                            "column_name": [
+                                {
+                                    "column_name": "ADCP_vc20",
+                                    "statistic_type_id": "avg",
+                                    "is_ignored": false
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "ADCP_WtrCurrDir",
+                    "measurement_type_id": "water_direction",
+                    "height_m": -57.0,
+                    "height_reference_id": "mean_sea_level",
+                    "logger_measurement_config": [
+                        {
+                            "measurement_units_id": "deg",
+                            "height_m": 56.2,
+                            "date_from": "2019-09-04T00:00:00",
+                            "date_to": "2022-03-28T00:00:00",
+                            "update_at": "2023-08-25T13:00:00",
+                            "column_name": [
+                                {
+                                    "column_name": "ADCP_dc20",
+                                    "statistic_type_id": "avg",
+                                    "is_ignored": false
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "ADCP_WtrCurrSpd",
+                    "measurement_type_id": "water_speed",
+                    "height_m": -59.7,
+                    "height_reference_id": "mean_sea_level",
+                    "logger_measurement_config": [
+                        {
+                            "measurement_units_id": "m/s",
+                            "height_m": 58.9,
+                            "date_from": "2019-09-04T00:00:00",
+                            "date_to": "2022-03-28T00:00:00",
+                            "update_at": "2023-08-25T13:00:00",
+                            "column_name": [
+                                {
+                                    "column_name": "ADCP_vc21",
+                                    "statistic_type_id": "avg",
+                                    "is_ignored": false
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "ADCP_WtrCurrDir",
+                    "measurement_type_id": "water_direction",
+                    "height_m": -59.7,
+                    "height_reference_id": "mean_sea_level",
+                    "logger_measurement_config": [
+                        {
+                            "measurement_units_id": "deg",
+                            "height_m": 58.9,
+                            "date_from": "2019-09-04T00:00:00",
+                            "date_to": "2022-03-28T00:00:00",
+                            "update_at": "2023-08-25T13:00:00",
+                            "column_name": [
+                                {
+                                    "column_name": "ADCP_dc21",
+                                    "statistic_type_id": "avg",
+                                    "is_ignored": false
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "ADCP_WtrCurrSpd",
+                    "measurement_type_id": "water_speed",
+                    "height_m": -62.4,
+                    "height_reference_id": "mean_sea_level",
+                    "logger_measurement_config": [
+                        {
+                            "measurement_units_id": "m/s",
+                            "height_m": 61.6,
+                            "date_from": "2019-09-04T00:00:00",
+                            "date_to": "2022-03-28T00:00:00",
+                            "update_at": "2023-08-25T13:00:00",
+                            "column_name": [
+                                {
+                                    "column_name": "ADCP_vc22",
+                                    "statistic_type_id": "avg",
+                                    "is_ignored": false
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "ADCP_WtrCurrDir",
+                    "measurement_type_id": "water_direction",
+                    "height_m": -62.4,
+                    "height_reference_id": "mean_sea_level",
+                    "logger_measurement_config": [
+                        {
+                            "measurement_units_id": "deg",
+                            "height_m": 61.6,
+                            "date_from": "2019-09-04T00:00:00",
+                            "date_to": "2022-03-28T00:00:00",
+                            "update_at": "2023-08-25T13:00:00",
+                            "column_name": [
+                                {
+                                    "column_name": "ADCP_dc22",
+                                    "statistic_type_id": "avg",
+                                    "is_ignored": false
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "WdDirSurf",
+                    "measurement_type_id": "wind_direction",
+                    "height_m": 1.4,
+                    "logger_measurement_config": [
+                        {
+                            "measurement_units_id": "deg",
+                            "date_from": "2019-09-04T00:00:00",
+                            "date_to": "2022-03-28T00:00:00",
+                            "update_at": "2023-08-25T13:00:00",
+                            "column_name": [
+                                {
+                                    "column_name": "meteo_Dir_bear",
+                                    "statistic_type_id": "avg",
+                                    "is_ignored": false
+                                }
+                            ]
+                        }
+                    ],
+                    "sensor": [
+                        {
+                            "oem": "Vaisala",
+                            "model": "WXT536",
+                            "serial_number": "S1340803",
+                            "date_from": "2019-09-04T00:00:00",
+                            "date_to": "2022-03-28T00:00:00",
+                            "update_at": "2023-08-25T13:00:00",
+                            "sensor_type_id": "2d_ultrasonic"
+                        }
+                    ]
+                },
+                {
+                    "name": "WdSpdHorSurf",
+                    "measurement_type_id": "wind_speed",
+                    "height_m": 1.4,
+                    "logger_measurement_config": [
+                        {
+                            "measurement_units_id": "m/s",
+                            "date_from": "2019-09-04T00:00:00",
+                            "date_to": "2022-03-28T00:00:00",
+                            "update_at": "2023-08-25T13:00:00",
+                            "column_name": [
+                                {
+                                    "column_name": "meteo_Sm_avg",
+                                    "statistic_type_id": "avg",
+                                    "is_ignored": false
+                                },
+                                {
+                                    "column_name": "meteo_Sn_min",
+                                    "statistic_type_id": "min",
+                                    "is_ignored": false
+                                },
+                                {
+                                    "column_name": "meteo_Sx_max",
+                                    "statistic_type_id": "max",
+                                    "is_ignored": false
+                                }
+                            ]
+                        }
+                    ],
+                    "sensor": [
+                        {
+                            "oem": "Vaisala",
+                            "model": "WXT536",
+                            "serial_number": "S1340803",
+                            "date_from": "2019-09-04T00:00:00",
+                            "date_to": "2022-03-28T00:00:00",
+                            "update_at": "2023-08-25T13:00:00",
+                            "sensor_type_id": "2d_ultrasonic"
+                        }
+                    ]
+                },
+                {
+                    "name": "AirTemp",
+                    "measurement_type_id": "air_temperature",
+                    "height_m": 1.4,
+                    "logger_measurement_config": [
+                        {
+                            "measurement_units_id": "deg_C",
+                            "date_from": "2019-09-04T00:00:00",
+                            "date_to": "2022-03-28T00:00:00",
+                            "update_at": "2023-08-25T13:00:00",
+                            "column_name": [
+                                {
+                                    "column_name": "meteo_Ta_avg",
+                                    "statistic_type_id": "avg",
+                                    "is_ignored": false
+                                }
+                            ]
+                        }
+                    ],
+                    "sensor": [
+                        {
+                            "oem": "Vaisala",
+                            "model": "WXT536",
+                            "serial_number": "S1340803",
+                            "date_from": "2019-09-04T00:00:00",
+                            "date_to": "2022-03-28T00:00:00",
+                            "update_at": "2023-08-25T13:00:00",
+                            "sensor_type_id": "thermometer"
+                        }
+                    ]
+                },
+                {
+                    "name": "RelHum",
+                    "measurement_type_id": "relative_humidity",
+                    "height_m": 1.4,
+                    "logger_measurement_config": [
+                        {
+                            "measurement_units_id": "%",
+                            "date_from": "2019-09-04T00:00:00",
+                            "date_to": "2022-03-28T00:00:00",
+                            "update_at": "2023-08-25T13:00:00",
+                            "column_name": [
+                                {
+                                    "column_name": "meteo_Ua_avg",
+                                    "statistic_type_id": "avg",
+                                    "is_ignored": false
+                                }
+                            ]
+                        }
+                    ],
+                    "sensor": [
+                        {
+                            "oem": "Vaisala",
+                            "model": "WXT536",
+                            "serial_number": "S1340803",
+                            "date_from": "2019-09-04T00:00:00",
+                            "date_to": "2022-03-28T00:00:00",
+                            "update_at": "2023-08-25T13:00:00",
+                            "sensor_type_id": "hygrometer"
+                        }
+                    ]
+                },
+                {
+                    "name": "AtmPress",
+                    "measurement_type_id": "air_pressure",
+                    "height_m": 1.4,
+                    "logger_measurement_config": [
+                        {
+                            "measurement_units_id": "hPa",
+                            "date_from": "2019-09-04T00:00:00",
+                            "date_to": "2022-03-28T00:00:00",
+                            "update_at": "2023-08-25T13:00:00",
+                            "column_name": [
+                                {
+                                    "column_name": "meteo_Pa_avg",
+                                    "statistic_type_id": "avg",
+                                    "is_ignored": false
+                                }
+                            ]
+                        }
+                    ],
+                    "sensor": [
+                        {
+                            "oem": "Vaisala",
+                            "model": "WXT536",
+                            "serial_number": "S1340803",
+                            "date_from": "2019-09-04T00:00:00",
+                            "date_to": "2022-03-28T00:00:00",
+                            "update_at": "2023-08-25T13:00:00",
+                            "sensor_type_id": "barometer"
+                        }
+                    ]
+                },
+                {
+                    "name": "RainAcc",
+                    "measurement_type_id": "precipitation",
+                    "height_m": 1.4,
+                    "logger_measurement_config": [
+                        {
+                            "measurement_units_id": "mm",
+                            "date_from": "2019-09-04T00:00:00",
+                            "date_to": "2022-03-28T00:00:00",
+                            "update_at": "2023-08-25T13:00:00",
+                            "column_name": [
+                                {
+                                    "column_name": "meteo_Rc",
+                                    "statistic_type_id": "avg",
+                                    "is_ignored": false
+                                }
+                            ]
+                        }
+                    ],
+                    "sensor": [
+                        {
+                            "oem": "Vaisala",
+                            "model": "WXT536",
+                            "serial_number": "S1340803",
+                            "date_from": "2019-09-04T00:00:00",
+                            "date_to": "2022-03-28T00:00:00",
+                            "update_at": "2023-08-25T13:00:00",
+                            "sensor_type_id": "rain_gauge"
+                        }
+                    ]
+                },
+                {
+                    "name": "SolarIrr_Avg ",
+                    "measurement_type_id": "global_normal_irradiance",
+                    "height_m": 1.4,
+                    "logger_measurement_config": [
+                        {
+                            "measurement_units_id": "W/m^2",
+                            "date_from": "2019-09-04T00:00:00",
+                            "date_to": "2022-03-28T00:00:00",
+                            "update_at": "2023-08-25T13:00:00",
+                            "column_name": [
+                                {
+                                    "column_name": "meteo_SlrW_Avg",
+                                    "statistic_type_id": "avg",
+                                    "is_ignored": false
+                                }
+                            ]
+                        }
+                    ],
+                    "sensor": [
+                        {
+                            "oem": "LI-COR",
+                            "model": "LI-200/R",
+                            "serial_number": "PY107497",
+                            "date_from": "2019-09-04T00:00:00",
+                            "date_to": "2022-03-28T00:00:00",
+                            "update_at": "2023-08-25T13:00:00",
+                            "sensor_type_id": "pyranometer"
+                        }
+                    ]
+                },
+                {
+                    "name": "WAVE_Hmax",
+                    "measurement_type_id": "wave_height",
+                    "height_m": 0,
+                    "logger_measurement_config": [
+                        {
+                            "measurement_units_id": "m",
+                            "date_from": "2019-09-04T00:00:00",
+                            "date_to": "2022-03-28T00:00:00",
+                            "update_at": "2023-08-25T13:00:00",
+                            "column_name": [
+                                {
+                                    "column_name": "wave_Hmax",
+                                    "statistic_type_id": "avg",
+                                    "is_ignored": false
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "WAVE_Hs",
+                    "measurement_type_id": "wave_significant_height",
+                    "height_m": 0,
+                    "logger_measurement_config": [
+                        {
+                            "measurement_units_id": "m",
+                            "date_from": "2019-09-04T00:00:00",
+                            "date_to": "2022-03-28T00:00:00",
+                            "update_at": "2023-08-25T13:00:00",
+                            "column_name": [
+                                {
+                                    "column_name": "wave_Hs",
+                                    "statistic_type_id": "avg",
+                                    "is_ignored": false
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "WAVE_Tp",
+                    "measurement_type_id": "wave_peak_period",
+                    "height_m": 0,
+                    "logger_measurement_config": [
+                        {
+                            "measurement_units_id": "s",
+                            "date_from": "2019-09-04T00:00:00",
+                            "date_to": "2022-03-28T00:00:00",
+                            "update_at": "2023-08-25T13:00:00",
+                            "column_name": [
+                                {
+                                    "column_name": "wave_Tp",
+                                    "statistic_type_id": "avg",
+                                    "is_ignored": false
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "WAVE_Tz",
+                    "measurement_type_id": "wave_period",
+                    "height_m": 0,
+                    "logger_measurement_config": [
+                        {
+                            "measurement_units_id": "s",
+                            "date_from": "2019-09-04T00:00:00",
+                            "date_to": "2022-03-28T00:00:00",
+                            "update_at": "2023-08-25T13:00:00",
+                            "column_name": [
+                                {
+                                    "column_name": "wave_Tz",
+                                    "statistic_type_id": "avg",
+                                    "is_ignored": false
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "WAVE_Dir",
+                    "measurement_type_id": "wave_direction",
+                    "height_m": 0,
+                    "logger_measurement_config": [
+                        {
+                            "measurement_units_id": "s",
+                            "date_from": "2019-09-04T00:00:00",
+                            "date_to": "2022-03-28T00:00:00",
+                            "update_at": "2023-08-25T13:00:00",
+                            "column_name": [
+                                {
+                                    "column_name": "wave_Wave_dir",
+                                    "statistic_type_id": "avg",
+                                    "is_ignored": false
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "AHRS_AHRSpitch_Max",
+                    "measurement_type_id": "orientation",
+                    "height_m": 0,
+                    "logger_measurement_config": [
+                        {
+                            "measurement_units_id": "deg",
+                            "date_from": "2019-09-04T00:00:00",
+                            "date_to": "2022-03-28T00:00:00",
+                            "update_at": "2023-08-25T13:00:00",
+                            "column_name": [
+                                {
+                                    "column_name": "AHRS_AHRSpitch_Max",
+                                    "statistic_type_id": "max",
+                                    "is_ignored": false
+                                }
+                            ]
+                        }
+                    ],
+                    "sensor": [
+                        {
+                            "oem": "A+D",
+                            "model": "AHRS",
+                            "serial_number": "2007",
+                            "date_from": "2019-09-04T00:00:00",
+                            "date_to": "2022-03-28T00:00:00",
+                            "update_at": "2023-08-25T13:00:00",
+                            "sensor_type_id": "inertial_measurement_unit"
+                        }
+                    ]
+                },
+                {
+                    "name": "AHRS_AHRSpitch_Min",
+                    "measurement_type_id": "orientation",
+                    "height_m": 0,
+                    "logger_measurement_config": [
+                        {
+                            "measurement_units_id": "deg",
+                            "date_from": "2019-09-04T00:00:00",
+                            "date_to": "2022-03-28T00:00:00",
+                            "update_at": "2023-08-25T13:00:00",
+                            "column_name": [
+                                {
+                                    "column_name": "AHRS_AHRSpitch_Min",
+                                    "statistic_type_id": "min",
+                                    "is_ignored": false
+                                }
+                            ]
+                        }
+                    ],
+                    "sensor": [
+                        {
+                            "oem": "A+D",
+                            "model": "AHRS",
+                            "serial_number": "2007",
+                            "date_from": "2019-09-04T00:00:00",
+                            "date_to": "2022-03-28T00:00:00",
+                            "update_at": "2023-08-25T13:00:00",
+                            "sensor_type_id": "inertial_measurement_unit"
+                        }
+                    ]
+                },
+                {
+                    "name": "AHRS_AHRSroll_Max",
+                    "measurement_type_id": "orientation",
+                    "height_m": 0,
+                    "logger_measurement_config": [
+                        {
+                            "measurement_units_id": "deg",
+                            "date_from": "2019-09-04T00:00:00",
+                            "date_to": "2022-03-28T00:00:00",
+                            "update_at": "2023-08-25T13:00:00",
+                            "column_name": [
+                                {
+                                    "column_name": "AHRS_AHRSroll_Max",
+                                    "statistic_type_id": "max",
+                                    "is_ignored": false
+                                }
+                            ]
+                        }
+                    ],
+                    "sensor": [
+                        {
+                            "oem": "A+D",
+                            "model": "AHRS",
+                            "serial_number": "2007",
+                            "date_from": "2019-09-04T00:00:00",
+                            "date_to": "2022-03-28T00:00:00",
+                            "update_at": "2023-08-25T13:00:00",
+                            "sensor_type_id": "inertial_measurement_unit"
+                        }
+                    ]
+                },
+                {
+                    "name": "AHRS_AHRSroll_Min",
+                    "measurement_type_id": "orientation",
+                    "height_m": 0,
+                    "logger_measurement_config": [
+                        {
+                            "measurement_units_id": "deg",
+                            "date_from": "2019-09-04T00:00:00",
+                            "date_to": "2022-03-28T00:00:00",
+                            "update_at": "2023-08-25T13:00:00",
+                            "column_name": [
+                                {
+                                    "column_name": "AHRS_AHRSroll_Min",
+                                    "statistic_type_id": "min",
+                                    "is_ignored": false
+                                }
+                            ]
+                        }
+                    ],
+                    "sensor": [
+                        {
+                            "oem": "A+D",
+                            "model": "AHRS",
+                            "serial_number": "2007",
+                            "date_from": "2019-09-04T00:00:00",
+                            "date_to": "2022-03-28T00:00:00",
+                            "update_at": "2023-08-25T13:00:00",
+                            "sensor_type_id": "inertial_measurement_unit"
+                        }
+                    ]
+                },
+                {
+                    "name": "AHRS_AHRSyaw_Max",
+                    "measurement_type_id": "orientation",
+                    "height_m": 0,
+                    "logger_measurement_config": [
+                        {
+                            "measurement_units_id": "deg",
+                            "date_from": "2019-09-04T00:00:00",
+                            "date_to": "2022-03-28T00:00:00",
+                            "update_at": "2023-08-25T13:00:00",
+                            "column_name": [
+                                {
+                                    "column_name": "AHRS_AHRSyaw_Max",
+                                    "statistic_type_id": "max",
+                                    "is_ignored": false
+                                }
+                            ]
+                        }
+                    ],
+                    "sensor": [
+                        {
+                            "oem": "A+D",
+                            "model": "AHRS",
+                            "serial_number": "2007",
+                            "date_from": "2019-09-04T00:00:00",
+                            "date_to": "2022-03-28T00:00:00",
+                            "update_at": "2023-08-25T13:00:00",
+                            "sensor_type_id": "inertial_measurement_unit"
+                        }
+                    ]
+                },
+                {
+                    "name": "AHRS_AHRSyaw_Min",
+                    "measurement_type_id": "orientation",
+                    "height_m": 0,
+                    "logger_measurement_config": [
+                        {
+                            "measurement_units_id": "deg",
+                            "date_from": "2019-09-04T00:00:00",
+                            "date_to": "2022-03-28T00:00:00",
+                            "update_at": "2023-08-25T13:00:00",
+                            "column_name": [
+                                {
+                                    "column_name": "AHRS_AHRSyaw_Min",
+                                    "statistic_type_id": "min",
+                                    "is_ignored": false
+                                }
+                            ]
+                        }
+                    ],
+                    "sensor": [
+                        {
+                            "oem": "A+D",
+                            "model": "AHRS",
+                            "serial_number": "2007",
+                            "date_from": "2019-09-04T00:00:00",
+                            "date_to": "2022-03-28T00:00:00",
+                            "update_at": "2023-08-25T13:00:00",
+                            "sensor_type_id": "inertial_measurement_unit"
+                        }
+                    ]
+                },
+                {
+                    "name": "Battery_Voltage",
+                    "measurement_type_id": "voltage",
+                    "height_m": 0,
+                    "logger_measurement_config": [
+                        {
+                            "measurement_units_id": "V",
+                            "date_from": "2019-09-04T00:00:00",
+                            "date_to": "2022-03-28T00:00:00",
+                            "update_at": "2023-08-25T13:00:00",
+                            "column_name": [
+                                {
+                                    "column_name": "buoy_status_CR6S_batt_Avg",
+                                    "statistic_type_id": "avg",
+                                    "is_ignored": false
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "BUOY_GPSlat",
+                    "measurement_type_id": "gps_coordinates",
+                    "height_m": 0,
+                    "logger_measurement_config": [
+                        {
+                            "measurement_units_id": "deg",
+                            "date_from": "2019-09-04T00:00:00",
+                            "date_to": "2022-03-28T00:00:00",
+                            "update_at": "2023-08-25T13:00:00",
+                            "column_name": [
+                                {
+                                    "column_name": "buoy_status_GPSlat",
+                                    "statistic_type_id": "avg",
+                                    "is_ignored": false
+                                }
+                            ]
+                        }
+                    ],
+                    "sensor": [
+                        {
+                            "oem": "GARMIN",
+                            "model": "GPS",
+                            "date_from": "2019-09-04T00:00:00",
+                            "date_to": "2022-03-28T00:00:00",
+                            "update_at": "2023-08-25T13:00:00",
+                            "sensor_type_id": "gps",
+                            "serial_number": "2J5064738"
+                        }
+                    ]
+                },
+                {
+                    "name": "BUOY_GPSlong",
+                    "measurement_type_id": "gps_coordinates",
+                    "height_m": 0,
+                    "logger_measurement_config": [
+                        {
+                            "measurement_units_id": "deg",
+                            "date_from": "2019-09-04T00:00:00",
+                            "date_to": "2022-03-28T00:00:00",
+                            "update_at": "2023-08-25T13:00:00",
+                            "column_name": [
+                                {
+                                    "column_name": "buoy_status_GPSlong",
+                                    "statistic_type_id": "avg",
+                                    "is_ignored": false
+                                }
+                            ]
+                        }
+                    ],
+                    "sensor": [
+                        {
+                            "oem": "GARMIN",
+                            "model": "GPS",
+                            "date_from": "2019-09-04T00:00:00",
+                            "date_to": "2022-03-28T00:00:00",
+                            "update_at": "2023-08-25T13:00:00",
+                            "sensor_type_id": "gps",
+                            "serial_number": "2J5064738"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

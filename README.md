@@ -29,7 +29,7 @@ For more information on the definition of a Data Model and other terminology suc
 
 # The WRA Data Model
 
-The _WRA Data Model_ provides the instructions for how to digitally represent an installed met mast, lidar, sodar, 
+The _WRA Data Model_ provides the instructions for how to digitally represent the configuration of an installed met mast, lidar, sodar, 
 floating lidar or solar measurement station. An implementation of the data model therefore can contain the latitude and 
 longitude of where the met mast was installed. At what height is a wind speed measurement been made and by what 
 sensor. How is this sensor mounted onto the mast. How the sensor is connected to the logger and how this logger channel
