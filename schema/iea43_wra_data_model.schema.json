@@ -271,6 +271,15 @@
       ],
       "pattern": "^([0-9]{1,2})[.]([0-9]{1,2})[.]([0-9]{1,2})-([0-9]{4})[.]([0-9]{2})$"
     },
+    "license": {
+      "type": "string",
+      "title": "License",
+      "description": "Expected to be used as the Dublin Core Metadata Initiative intended. Link: http://purl.org/dc/terms/license Definition: A legal document giving official permission to do something with the resource. Comment: Recommended practice is to identify the license document with a URI. If this is not possible or feasible, a literal value that identifies the license may be provided.",
+      "examples": [
+        "https://opensource.org/license/bsd-3-clause/",
+        "BSD-3-Clause"
+      ]
+    },
     "plant_name": {
       "type": [
         "string",
