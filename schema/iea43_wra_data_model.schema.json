@@ -301,6 +301,18 @@
         "type": "object",
         "title": "Measurement Location",
         "properties": {
+          "uuid": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "format": "uuid",
+            "title": "UUID",
+            "description": "The unique identifier of the measurement location in the UUID format.",
+            "examples": [
+              "3d40f012-a525-4024-a626-5fcf954c59cf"
+            ]
+          },
           "name": {
             "type": "string",
             "title": "Name",
