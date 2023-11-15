@@ -316,7 +316,7 @@
           "name": {
             "type": "string",
             "title": "Name",
-            "description": "The name given to the measurement location i.e. to the met mast or remote sensing device.",
+            "description": "The name given to the measurement location i.e. to the met mast or remote sensing device. It is recommended to use unique names, avoiding that any two locations that may be considered in the same context are given the same name.",
             "examples": [
               "AName_MM1"
             ]
