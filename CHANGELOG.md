@@ -9,6 +9,22 @@ Given a version number MAJOR.MINOR.PATCH, increment the:
 
 Additional labels for pre-release and build metadata are available as extensions to the MAJOR.MINOR.PATCH format.
 
+## [Unreleased 2.X.X-2023.XX]
+
+1. To `measurement_type` add:
+   1. `obukhov_length` (Issue [#182](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/182))
+1. To `statistic_type_id` enum add:
+   1. `ti30sec` (Issue [#218](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/218 ))
+1. To `measurement_station_type` enum add:
+   1. `wave_buoy` (Issue [#226](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/226))
+   1. `adcp` (Issue [#226](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/226))
+1. To `sensor_type` enum add:
+   1. `altimeter` (Issue [#226](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/226))
+1. Bug fixes:
+   1. Add `null` to `height_reference` enum to match its type (Issue [#215](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/215))
+   1. In `plant_type` enum, remove double quotes around the `null` (Issue [#217](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/217)).
+
+
 ## [1.2.0-2023.01]
 
 The majority of the changes in this release are to expand the data model to include floating lidar sensors, measurement 

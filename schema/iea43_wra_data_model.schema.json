@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$version": "1.2.0-2023.01",
+  "$version": "X.X.0-2023.XX",
   "$id": "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json",
   "definitions": {
     "date_from": {
@@ -122,6 +122,7 @@
         "water_level",
         "depth",
         "timestamp",
+        "obukhov_length",
         "other"
       ],
       "examples": [
@@ -192,6 +193,7 @@
         "water_level (is the height of the sea surface above the sea floor. In CF Conventions this is equivalent, but opposite in respect of their point of reference, to 'sea_floor_depth_below_sea_surface'.)",
         "depth (the vertical distance below a particular reference e.g. sea level.)",
         "timestamp (the timestamp of when a measurement value was recorded)",
+        "obukhov_length (a parameter with a dimension of length which, when used to scale the height above ground, gives a dimensionless stability parameter.)",
         "other"
       ]
     },
@@ -222,7 +224,8 @@
         "sea_level",
         "lowest_astronomical_tide",
         "sea_floor",
-        "other"
+        "other",
+        null
       ],
       "default": "ground_level"
     }
@@ -287,10 +290,10 @@
       "title": "Plant Type",
       "description": "The type of renewable generation plant it is.",
       "enum": [
-        "null",
         "onshore_wind",
         "offshore_wind",
-        "solar"
+        "solar",
+        null
       ]
     },
     "measurement_location": {
@@ -343,13 +346,15 @@
           },
           "measurement_station_type_id": {
             "title": "Measurement Station Type",
-            "description": "The type of measurement station. This must be one of either met mast, lidar (a vertical profiler), sodar (also a vertical profiler) or floating lidar (floating vertical profiler lidar).",
+            "description": "The type of measurement station. This must be one of either met mast, lidar (a vertical profiler), sodar (also a vertical profiler), floating lidar (floating vertical profiler lidar), wave buoy, ADCP (Acoustic Doppler Current Profiler) or a solar measurement station.",
             "type": "string",
             "enum": [
               "mast",
               "lidar",
               "sodar",
               "floating_lidar",
+              "wave_buoy",
+              "adcp",
               "solar"
             ]
           },
@@ -1201,7 +1206,11 @@
                                 "range",
                                 "gust",
                                 "ti",
+                                "ti30sec",
                                 "text"
+                              ],
+                              "examples": [
+                                "ti30sec (the 10 minute average of the turbulence intensity calculated every 30 seconds within that 10 minute period.)"							  
                               ]
                             },
                             "is_ignored": {
@@ -1312,6 +1321,7 @@
                           "solar_compass",
                           "inertial_measurement_unit",
                           "adcp",
+                          "altimeter",
                           "ctd",
                           "lidar",
                           "sodar",

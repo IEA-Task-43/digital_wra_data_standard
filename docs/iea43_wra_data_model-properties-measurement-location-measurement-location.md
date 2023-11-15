@@ -128,7 +128,7 @@ Longitude coordinate in the Geographic Coordinate System using the WGS84 referen
 
 ## measurement\_station\_type\_id
 
-The type of measurement station. This must be one of either met mast, lidar (a vertical profiler), sodar (also a vertical profiler) or floating lidar (floating vertical profiler lidar).
+The type of measurement station. This must be one of either met mast, lidar (a vertical profiler), sodar (also a vertical profiler), floating lidar (floating vertical profiler lidar), wave buoy or ADCP.
 
 `measurement_station_type_id`
 
@@ -154,6 +154,8 @@ The type of measurement station. This must be one of either met mast, lidar (a v
 | `"lidar"`          |             |
 | `"sodar"`          |             |
 | `"floating_lidar"` |             |
+| `"wave_buoy"`      |             |
+| `"adcp"`           |             |
 | `"solar"`          |             |
 
 ## notes

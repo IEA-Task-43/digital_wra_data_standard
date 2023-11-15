@@ -110,6 +110,12 @@
             "is_ignored": false,
             "notes": "I can write anything I want here.",
             "update_at": "2020-04-18T18:13:00"
+          },{
+            "column_name": "CH1Ti30sec",
+            "statistic_type_id": "ti30sec",
+            "is_ignored": false,
+            "notes": "I can write anything I want here.",
+            "update_at": "2020-04-18T18:13:00"
         }]
       },{
         "slope": 0.04573,
@@ -1741,7 +1747,7 @@
       "name": "Logger_V",
       "measurement_type_id": "voltage",
       "height_m": null,
-      "height_reference_id": "ground_level",
+      "height_reference_id": null,
       "notes": "I can write anything I want here.",
       "update_at": "2020-04-18T18:13:00",
       "logger_measurement_config": [{

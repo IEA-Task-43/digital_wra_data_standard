@@ -76,6 +76,8 @@ INSERT INTO measurement_station_type (id) VALUES
     ('lidar'),
     ('sodar'),
     ('floating_lidar'),
+    ('wave_buoy'),
+    ('adcp'),
     ('solar');
 
 INSERT INTO mast_geometry (id) VALUES
@@ -174,6 +176,7 @@ INSERT INTO measurement_type (id) VALUES
     ('water_level'),
     ('depth'),
     ('timestamp'),
+    ('obukhov_length'),
     ('other');
 
 INSERT INTO height_reference (id) VALUES
@@ -239,6 +242,7 @@ INSERT INTO statistic_type (id) VALUES
     ('range'),
     ('gust'),
     ('ti'),
+    ('ti30sec'),
     ('text');
 
 INSERT INTO sensor_type (id) VALUES
@@ -267,6 +271,7 @@ INSERT INTO sensor_type (id) VALUES
     ('solar_compass'),
     ('inertial_measurement_unit'),
     ('adcp'),
+    ('altimeter'),
     ('ctd'),
     ('lidar'),
     ('sodar'),
