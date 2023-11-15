@@ -6,6 +6,7 @@
 
 | Property                                                        | Type     | Required | Nullable       | Defined by                                                                                                                                                                                                                                                                                                                                                                |
 | :-------------------------------------------------------------- | :------- | :------- | :------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| [uuid](#uuid)                                                   | `string` | Optional | can be null    | [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-uuid.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/uuid")                                                 |
 | [name](#name)                                                   | `string` | Required | cannot be null | [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-name.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/name")                                                 |
 | [latitude\_ddeg](#latitude_ddeg)                                | `number` | Required | cannot be null | [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-latitude-ddeg.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/latitude_ddeg")                               |
 | [longitude\_ddeg](#longitude_ddeg)                              | `number` | Required | cannot be null | [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-longitude-ddeg.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/longitude_ddeg")                             |
@@ -16,6 +17,30 @@
 | [vertical\_profiler\_properties](#vertical_profiler_properties) | `array`  | Optional | can be null    | [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-vertical-profiler-properties.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/vertical_profiler_properties") |
 | [logger\_main\_config](#logger_main_config)                     | `array`  | Optional | cannot be null | [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-logger-configuration.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/logger_main_config")                   |
 | [measurement\_point](#measurement_point)                        | `array`  | Required | cannot be null | [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-measurement-point.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/measurement_point")                       |
+
+## uuid
+
+The unique identifier of the measurement location in the UUID format.
+
+`uuid`
+
+*   is optional
+
+*   Type: `string` ([UUID](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-uuid.md))
+
+*   can be null
+
+*   defined in: [IEA Wind Resource Assessment - Data Model](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-uuid.md "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/schema/iea43_wra_data_model.schema.json#/properties/measurement_location/items/properties/uuid")
+
+### uuid Type
+
+`string` ([UUID](iea43_wra_data_model-properties-measurement-location-measurement-location-properties-uuid.md))
+
+### uuid Examples
+
+```json
+"3d40f012-a525-4024-a626-5fcf954c59cf"
+```
 
 ## name
 
