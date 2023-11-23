@@ -1076,6 +1076,7 @@
                         "enum": [
                           "m/s",
                           "cm/s",
+                          "mm/s",
                           "mph",
                           "knots",
                           "deg",

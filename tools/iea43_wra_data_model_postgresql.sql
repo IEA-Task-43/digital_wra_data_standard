@@ -191,6 +191,7 @@ INSERT INTO measurement_units (id) VALUES
     ('m/s'),
     ('mph'),
     ('cm/s'),
+    ('mm/s'),
     ('knots'),
     ('deg'),
     ('deg_C'),
