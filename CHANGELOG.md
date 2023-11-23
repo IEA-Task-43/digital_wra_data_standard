@@ -14,7 +14,9 @@ Additional labels for pre-release and build metadata are available as extensions
 1. To `measurement_type` add:
    1. `obukhov_length` (Issue [#182](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/182))
 1. To `statistic_type_id` enum add:
-   1. `ti30sec` (Issue [#218](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/218 ))
+   1. `ti30sec` (Issue [#218](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/218))
+1. To `measurement_units_id` enum add:
+   1. `cm/s` (Issue [#241](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/241))
 1. To `measurement_station_type` enum add:
    1. `wave_buoy` (Issue [#226](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/226))
    1. `adcp` (Issue [#226](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/226))

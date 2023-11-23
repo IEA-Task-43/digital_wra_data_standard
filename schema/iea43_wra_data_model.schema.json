@@ -1075,6 +1075,7 @@
                         "description": "The measurement units of the values the sensor records.",
                         "enum": [
                           "m/s",
+                          "cm/s",
                           "mph",
                           "knots",
                           "deg",
