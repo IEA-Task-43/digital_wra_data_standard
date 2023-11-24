@@ -8,14 +8,19 @@
     "latitude_ddeg": 53.536,
     "longitude_ddeg": -6.3,
     "measurement_station_type_id": "reanalysis",
-    "notes": "I can write anything I want here.",
-    "update_at": "2020-04-18T18:13:00",
-    "logger_main_config": [{
-      "logger_oem_id": "Other",
-      "logger_serial_number": "---",
+    "notes": "This is an ERA5 reanalysis dataset produced by ECMWF.",
+    "update_at": "2023-11-24T18:13:00",
+    "main_config": [{
+      "reanalysis_source": "era5",
+      "final_resolution_m": "11000",
+      "model_used": "ECMWF IFS",
+      "offset_from_utc_hrs": 0,
+      "averaging_period_minutes": 60,
+      "timestamp_is_end_of_period": false,
       "date_from": "2000-01-01T00:00:00",
       "date_to": null,
-      "offset_from_utc_hrs": 0
+      "notes": "This is an ERA5 reanalysis dataset produced by ECMWF.",
+      "update_at": "2023-11-24T18:13:00"
     }],
     "measurement_point": [{
       "name": "WS100m",
