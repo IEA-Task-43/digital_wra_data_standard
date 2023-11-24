@@ -1,0 +1,78 @@
+{
+  "author": "Stephen Holleran",
+  "organisation": "BrightWind",
+  "date": "2023-11-24",
+  "version": "1.2.0-2023.01",
+  "measurement_location": [{
+    "name": "ERA5_53.536N_-6.3E",
+    "latitude_ddeg": 53.536,
+    "longitude_ddeg": -6.3,
+    "measurement_station_type_id": "reanalysis",
+    "notes": "I can write anything I want here.",
+    "update_at": "2020-04-18T18:13:00",
+    "logger_main_config": [{
+      "logger_oem_id": "Other",
+      "logger_serial_number": "---",
+      "date_from": "2000-01-01T00:00:00",
+      "date_to": null,
+      "offset_from_utc_hrs": 0
+    }],
+    "measurement_point": [{
+      "name": "WS100m",
+      "measurement_type_id": "wind_speed",
+      "height_m": 100,
+      "height_reference_id": "ground_level",
+      "logger_measurement_config": [{
+        "measurement_units_id": "m/s",
+        "date_from": "2000-01-01T00:00:00",
+        "date_to": null,
+        "column_name": [{
+          "column_name": "Spd_100m_mps",
+          "statistic_type_id": "avg"
+        }]
+      }]
+    },{
+      "name": "WD100m",
+      "measurement_type_id": "wind_direction",
+      "height_m": 100,
+      "logger_measurement_config": [{
+        "measurement_units_id": "deg",
+        "date_from": "2000-01-01T00:00:00",
+        "date_to": null,
+        "column_name": [
+          {
+            "column_name": "Dir_100m_deg",
+            "statistic_type_id": "avg"
+          }]
+      }]
+    },{
+      "name": "Tmp2m",
+      "measurement_type_id": "air_temperature",
+      "height_m": 2,
+      "logger_measurement_config": [{
+        "measurement_units_id": "deg_C",
+        "date_from": "2000-01-01T00:00:00",
+        "date_to": null,
+        "column_name": [
+          {
+            "column_name": "Tmp_2m_degC",
+            "statistic_type_id": "avg"
+          }]
+      }]
+    },{
+      "name": "Prs0m",
+      "measurement_type_id": "air_pressure",
+      "height_m": 0,
+      "logger_measurement_config": [{
+        "measurement_units_id": "hPa",
+        "date_from": "2000-01-01T00:00:00",
+        "date_to": null,
+        "column_name": [
+          {
+            "column_name": "Prs_0m_hPa",
+            "statistic_type_id": "avg"
+          }]
+      }]
+    }]
+  }]
+}

@@ -78,7 +78,9 @@ INSERT INTO measurement_station_type (id) VALUES
     ('floating_lidar'),
     ('wave_buoy'),
     ('adcp'),
-    ('solar');
+    ('solar'),
+    ('virtual_met_mast'),
+    ('reanalysis');
 
 INSERT INTO mast_geometry (id) VALUES
     ('lattice_triangle'),

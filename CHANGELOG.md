@@ -11,7 +11,10 @@ Additional labels for pre-release and build metadata are available as extensions
 
 ## [Unreleased 2.X.X-2023.XX]
 
-1. To `measurement_type` add:
+1. To `measurement_station_type` enum add:
+   1. `virtual_met_mast` (Issue [#214](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/214))
+   1. `reanalysis` (Issue [#214](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/214))
+1. To `measurement_type` enum add:
    1. `obukhov_length` (Issue [#182](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/182))
 1. To `statistic_type_id` enum add:
    1. `ti30sec` (Issue [#218](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/218 ))

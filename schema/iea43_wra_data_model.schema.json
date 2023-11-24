@@ -343,7 +343,9 @@
               "floating_lidar",
               "wave_buoy",
               "adcp",
-              "solar"
+              "solar",
+              "virtual_met_mast",
+              "reanalysis"
             ]
           },
           "notes": {
