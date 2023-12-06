@@ -20,6 +20,7 @@ Additional labels for pre-release and build metadata are available as extensions
    1. `adcp` (Issue [#226](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/226))
 1. To `sensor_type` enum add:
    1. `altimeter` (Issue [#226](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/226))
+1. At top level, add `license` (Issue [#225](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/225))
 1. Bug fixes:
    1. Add `null` to `height_reference` enum to match its type (Issue [#215](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/215))
    1. In `plant_type` enum, remove double quotes around the `null` (Issue [#217](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/217)).
