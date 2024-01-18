@@ -48,6 +48,43 @@
         "2020-07-28T20:49:13"
       ]
     },
+    "offset_from_utc_hrs": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "title": "Offset From UTC [hr]",
+      "description": "The number of hours that the resulting timeseries dataset is offset from UTC. E.g. -5 for Eastern Standard Time.",
+      "examples": [
+        "-5 (for Eastern Standard Time)",
+        "1 (for Central European Time)",
+        "5.5 (for India Standard Time)"
+      ]
+    },
+    "averaging_period_minutes": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "title": "Averaging Period [min]",
+      "description": "The number of minutes the model outputs the timeseries data at. Also known as 'time step' or 'averaging step'",
+      "examples": [
+        "10",
+        "60"
+      ]
+    },
+    "timestamp_is_end_of_period": {
+      "type": [
+        "boolean",
+        "null"
+      ],
+      "title": "Timestamp at End of Period",
+      "description": "Does the timestamp represent the end of the averaging period. True is for timestamp to represent the end of the averaging period and false is for timestamp to represent the start of the averaging period.",
+      "examples": [
+        "true (for timestamp to represent the end of the averaging period)",
+        "false (for timestamp to represent the start of the averaging period)"
+      ]
+    },
     "measurement_type": {
       "type": "string",
       "title": "Measurement Type",
@@ -851,17 +888,7 @@
                   ]
                 },
                 "offset_from_utc_hrs": {
-                  "type": [
-                    "number",
-                    "null"
-                  ],
-                  "title": "Offset From UTC [hr]",
-                  "description": "The number of hours that the logger clock is offset from UTC. E.g. -5 for Eastern Standard Time. This could also be used to capture an incorrect time programmed into the logger. E.g. a logger might be installed in upstate New York and have a UTC offset of -5. Unfortunately the mast installer programmed the incorrect time into the logger by +15 mins. Therefore the offset from UTC is -4.75.",
-                  "examples": [
-                    "-5 (for Eastern Standard Time)",
-                    "1 (for Central European Time)",
-                    "5.5 (for India Standard Time)"
-                  ]
+                  "$ref": "#/definitions/offset_from_utc_hrs"
                 },
                 "sampling_rate_sec": {
                   "type": [
@@ -876,28 +903,10 @@
                   ]
                 },
                 "averaging_period_minutes": {
-                  "type": [
-                    "integer",
-                    "null"
-                  ],
-                  "title": "Averaging Period [min]",
-                  "description": "The number of minutes the logger aggregates the data over.",
-                  "examples": [
-                    "10",
-                    "60"
-                  ]
+                  "$ref": "#/definitions/averaging_period_minutes"
                 },
                 "timestamp_is_end_of_period": {
-                  "type": [
-                    "boolean",
-                    "null"
-                  ],
-                  "title": "Timestamp at End of Period",
-                  "description": "Does the timestamp represent the end of the averaging period. True is for timestamp to represent the end of the averaging period and false is for timestamp to represent the start of the averaging period.",
-                  "examples": [
-                    "true (for timestamp to represent the end of the averaging period)",
-                    "false (for timestamp to represent the start of the averaging period)"
-                  ]
+                  "$ref": "#/definitions/timestamp_is_end_of_period"
                 },
                 "clock_is_auto_synced": {
                   "type": [
@@ -998,6 +1007,83 @@
                 "date_to",
                 "logger_oem_id",
                 "logger_serial_number"
+              ]
+            },
+            "additionalItems": false,
+            "uniqueItems": true
+          },
+          "model_config": {
+            "type": "array",
+            "title": "Model Configuration",
+            "description": "This represents how a simulation model or other model that produces a synthetic timeseries dataset is configured. This also includes reanalysis datasets.",
+            "items": {
+              "type": "object",
+              "title": "Model Configuration",
+              "properties": {
+                "reanalysis": {
+                  "type": "string",
+                  "title": "Reanalysis",
+                  "description": "The name of the reanalysis dataset that is the source or the result of this model.",
+                  "enum": [
+                    "CFSR",
+                    "ERA-Interim",
+                    "ERA5",
+                    "JRA-55",
+                    "MERRA-2",
+                    "NCAR",
+                    "Other"
+                  ]
+                },
+                "final_resolution_m": {
+                  "type": [
+                    "integer",
+                    "null"
+                  ],
+                  "title": "Final Horizontal Resolution [m]",
+                  "description": "The final horizontal resolution, in meters, of the model used to create this dataset. If a reanalysis dataset this can be an approximation.",
+                  "examples": [
+                    "11000",
+                    "300"
+                  ]
+                },
+                "model_used": {
+                  "type": [
+                    "string",
+                    "null"
+                  ],
+                  "title": "Model Used",
+                  "description": "The typical name of the model used to create this dataset. Further details can be added to the notes.",
+                  "examples": [
+                    "ECMWF IFS"
+                  ]
+                },
+                "date_from": {
+                  "$ref": "#/definitions/date_from"
+                },
+                "date_to": {
+                  "$ref": "#/definitions/date_to"
+                },
+                "offset_from_utc_hrs": {
+                  "$ref": "#/definitions/offset_from_utc_hrs"
+                },
+                "averaging_period_minutes": {
+                  "$ref": "#/definitions/averaging_period_minutes"
+                },
+                "timestamp_is_end_of_period": {
+                  "$ref": "#/definitions/timestamp_is_end_of_period"
+                },
+                "notes": {
+                  "$ref": "#/definitions/notes"
+                },
+                "update_at": {
+                  "$ref": "#/definitions/update_at"
+                }
+              },
+              "additionalProperties": false,
+              "required": [
+                "reanalysis_source",
+                "date_from",
+                "date_to"
               ]
             },
             "additionalItems": false,
