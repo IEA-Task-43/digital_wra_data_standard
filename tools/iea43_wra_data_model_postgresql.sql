@@ -29,6 +29,10 @@ CREATE TABLE IF NOT EXISTS logger_oem (
     id text PRIMARY KEY
 );
 
+CREATE TABLE IF NOT EXISTS reanalysis (
+    id text PRIMARY KEY
+);
+
 CREATE TABLE IF NOT EXISTS measurement_type (
     id text PRIMARY KEY
 );
@@ -107,6 +111,15 @@ INSERT INTO logger_oem (id) VALUES
     ('Teledyne RDI'),
     ('Aanderaa'),
     ('other');
+
+INSERT INTO reanalysis (id) VALUES
+    ('CFSR'),
+    ('ERA-Interim'),
+    ('ERA5'),
+    ('JRA-55'),
+    ('MERRA-2'),
+    ('NCAR'),
+    ('Other');
 
 INSERT INTO measurement_type (id) VALUES
     ('wind_speed'),
@@ -428,6 +441,24 @@ CREATE TABLE IF NOT EXISTS lidar_config(
     update_at timestamp WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
     updated_by UUID,
     FOREIGN KEY (logger_main_config_uuid) REFERENCES logger_main_config (uuid)
+);
+
+CREATE TABLE IF NOT EXISTS model_config(
+    uuid UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
+    measurement_location_uuid UUID NOT NULL,
+    reanalysis_id text,
+    horizontal_grid_resolution_m integer,
+    model_used text,
+    date_from timestamp WITHOUT TIME ZONE NOT NULL,
+    date_to timestamp WITHOUT TIME ZONE,
+    offset_from_utc_hrs decimal,
+    averaging_period_minutes integer,
+    timestamp_is_end_of_period boolean,
+    notes text,
+    update_at timestamp WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
+    updated_by UUID,
+    FOREIGN KEY (measurement_location_uuid) REFERENCES measurement_location (uuid),
+    FOREIGN KEY (reanalysis_id) REFERENCES reanalysis (id)
 );
 
 CREATE TABLE IF NOT EXISTS measurement_point(
