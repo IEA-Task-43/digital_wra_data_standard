@@ -1034,15 +1034,15 @@
                     "Other"
                   ]
                 },
-                "final_resolution_m": {
+                "horizontal_grid_resolution_m": {
                   "type": [
                     "integer",
                     "null"
                   ],
-                  "title": "Final Horizontal Resolution [m]",
-                  "description": "The final horizontal resolution, in meters, of the model used to create this dataset. If a reanalysis dataset this can be an approximation.",
+                  "title": "Horizontal Grid Resolution [m]",
+                  "description": "The final horizontal grid resolution, in meters, of the model used to create this dataset. If a reanalysis dataset, this can be an approximation e.g. '50000' for MERRA-2 as it is about 50 km in the latitudinal direction.",
                   "examples": [
-                    "11000",
+                    "50000",
                     "300"
                   ]
                 },
@@ -1081,9 +1081,7 @@
               },
               "additionalProperties": false,
               "required": [
-                "reanalysis_source",
-                "date_from",
-                "date_to"
+                "date_from"
               ]
             },
             "additionalItems": false,

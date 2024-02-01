@@ -12,7 +12,7 @@
     "update_at": "2023-11-24T18:13:00",
     "model_config": [{
       "reanalysis": "ERA5",
-      "final_resolution_m": 11000,
+      "horizontal_grid_resolution_m": 11000,
       "model_used": "ECMWF IFS",
       "offset_from_utc_hrs": 0,
       "averaging_period_minutes": 60,
