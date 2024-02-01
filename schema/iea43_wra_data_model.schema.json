@@ -1916,6 +1916,16 @@
           "longitude_ddeg",
           "measurement_station_type_id",
           "measurement_point"
+        ],
+        "allOf": [
+          {
+            "if": { "required": ["logger_main_config"] },
+            "then": { "not": { "required": ["model_config"] } }
+          },
+          {
+            "if": { "required": ["model_config"] },
+            "then": { "not": { "required": ["logger_main_config"] } }
+          }
         ]
       },
       "additionalItems": false,
