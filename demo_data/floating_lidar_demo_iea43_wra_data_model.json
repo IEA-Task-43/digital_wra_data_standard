@@ -499,7 +499,7 @@
       "notes": "Vertical water speed at 5m.",
       "update_at": "2022-03-31T12:13:27",
       "logger_measurement_config": [{
-        "measurement_units_id": "m/s",
+        "measurement_units_id": "cm/s",
         "height_m": 3.7,
         "date_from": "2022-03-01T12:10:00",
         "date_to": null,
@@ -507,22 +507,22 @@
         "update_at": "2022-03-31T12:13:27",
         "column_name": [
           {
-            "column_name": "Vertical Water Speed (m/s) at 3.7m",
+            "column_name": "Vertical Water Speed (cm/s) at 3.7m",
             "statistic_type_id": "avg",
             "is_ignored": false,
             "update_at": "2022-03-31T12:13:27"
           },{
-            "column_name": "Vertical Water Speed Std. Dev. (m/s) at 3.7m",
+            "column_name": "Vertical Water Speed Std. Dev. (cm/s) at 3.7m",
             "statistic_type_id": "sd",
             "is_ignored": false,
             "update_at": "2022-03-31T12:13:27"
           },{
-            "column_name": "Vertical Water Speed Min (m/s) at 3.7m",
+            "column_name": "Vertical Water Speed Min (cm/s) at 3.7m",
             "statistic_type_id": "min",
             "is_ignored": false,
             "update_at": "2022-03-31T12:13:27"
           },{
-            "column_name": "Vertical Water Speed Max (m/s) at 3.7m",
+            "column_name": "Vertical Water Speed Max (cm/s) at 3.7m",
             "statistic_type_id": "max",
             "is_ignored": false,
             "update_at": "2022-03-31T12:13:27"
