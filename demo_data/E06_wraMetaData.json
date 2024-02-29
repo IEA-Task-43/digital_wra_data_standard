@@ -2,7 +2,7 @@
     "author": "Daniel Nuno",
     "organisation": "EOLOS Floating Lidar Solutions",
     "date": "2023-08-25",
-    "version": "1.2.0-2023.01",
+    "version": "1.3.0-2024.03",
     "plant_name": "NYS",
     "plant_type": "offshore_wind",
     "notes": "IEA Task 43 WRA Data Model. Campaign data available for download at https://oswbuoysny.resourcepanorama.dnv.com/",
