@@ -2,11 +2,12 @@
   "author": "Stephen Holleran",
   "organisation": "brightwind",
   "date": "2021-12-23",
-  "version": "1.2.0-2023.01",
+  "version": "1.3.0-2024.03",
   "license": "https://opensource.org/license/mit/",
   "plant_name": "A Name of the Wind Farm",
   "plant_type": "onshore_wind",
   "measurement_location": [{
+    "uuid": "6858cf5c-24e0-40d4-955b-8aecbccba391",
     "name": "Test_MM1",
     "latitude_ddeg": 53.5,
     "longitude_ddeg": -8,

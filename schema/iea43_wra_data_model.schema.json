@@ -350,10 +350,22 @@
         "type": "object",
         "title": "Measurement Location",
         "properties": {
+          "uuid": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "format": "uuid",
+            "title": "UUID",
+            "description": "The unique identifier of the measurement location in the UUID format. A UUID can be generated here https://www.uuidgenerator.net/",
+            "examples": [
+              "3d40f012-a525-4024-a626-5fcf954c59cf"
+            ]
+          },
           "name": {
             "type": "string",
             "title": "Name",
-            "description": "The name given to the measurement location i.e. to the met mast or remote sensing device.",
+            "description": "The name given to the measurement location i.e. to the met mast or remote sensing device. Unique names are recommended to avoid two locations in the same context being given the same name.",
             "examples": [
               "AName_MM1"
             ]

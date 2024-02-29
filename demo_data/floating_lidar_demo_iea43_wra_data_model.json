@@ -2,10 +2,11 @@
   "author": "Stephen Holleran",
   "organisation": "brightwind",
   "date": "2022-03-31",
-  "version": "1.2.0-2023.01",
+  "version": "1.3.0-2024.03",
   "plant_name": "Irish Sea Wind Farm",
   "plant_type": "offshore_wind",
   "measurement_location": [{
+    "uuid": "c5c1efe8-6daf-48e5-89c6-8098ea5a26f3",
     "name": "ISWF_FLS1",
     "latitude_ddeg": 53.35,
     "longitude_ddeg": -5.3,

@@ -2,8 +2,9 @@
   "author": "Stephen Holleran",
   "organisation": "BrightWind",
   "date": "2023-11-24",
-  "version": "1.2.0-2023.01",
+  "version": "1.3.0-2024.03",
   "measurement_location": [{
+    "uuid": "282c5c44-17a2-426a-b10d-0826d0d868fc",
     "name": "ERA5_53.536N_-6.3E",
     "latitude_ddeg": 53.536,
     "longitude_ddeg": -6.3,
