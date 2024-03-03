@@ -29,6 +29,7 @@ Additional labels for pre-release and build metadata are available as extensions
    1. `reanalysis` (Issue [#214](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/214))
 1. To `sensor_type` enum add:
    1. `altimeter` (Issue [#226](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/226))
+   1. `PTH` (Issue [#247](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/247))
 1. To `measurement_location` add:
    1. `uuid` (Issue [#232](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/232))
 1. At top level, add `license` (Issue [#225](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/225))
