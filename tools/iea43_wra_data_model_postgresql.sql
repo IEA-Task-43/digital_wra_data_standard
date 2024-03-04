@@ -290,9 +290,9 @@ INSERT INTO sensor_type (id) VALUES
     ('adcp'),
     ('altimeter'),
     ('ctd'),
+	('pth'),
     ('lidar'),
     ('sodar'),
-	('PTH'),
     ('other');
 
 INSERT INTO mounting_type (id) VALUES
