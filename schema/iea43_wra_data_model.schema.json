@@ -1420,6 +1420,7 @@
                           "adcp",
                           "altimeter",
                           "ctd",
+                          "pth",
                           "lidar",
                           "sodar",
                           "other",
