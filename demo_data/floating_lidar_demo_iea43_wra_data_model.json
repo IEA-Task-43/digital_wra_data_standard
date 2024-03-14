@@ -2,10 +2,11 @@
   "author": "Stephen Holleran",
   "organisation": "brightwind",
   "date": "2022-03-31",
-  "version": "1.2.0-2023.01",
+  "version": "1.3.0-2024.03",
   "plant_name": "Irish Sea Wind Farm",
   "plant_type": "offshore_wind",
   "measurement_location": [{
+    "uuid": "c5c1efe8-6daf-48e5-89c6-8098ea5a26f3",
     "name": "ISWF_FLS1",
     "latitude_ddeg": 53.35,
     "longitude_ddeg": -5.3,
@@ -498,7 +499,7 @@
       "notes": "Vertical water speed at 5m.",
       "update_at": "2022-03-31T12:13:27",
       "logger_measurement_config": [{
-        "measurement_units_id": "m/s",
+        "measurement_units_id": "cm/s",
         "height_m": 3.7,
         "date_from": "2022-03-01T12:10:00",
         "date_to": null,
@@ -506,22 +507,22 @@
         "update_at": "2022-03-31T12:13:27",
         "column_name": [
           {
-            "column_name": "Vertical Water Speed (m/s) at 3.7m",
+            "column_name": "Vertical Water Speed (cm/s) at 3.7m",
             "statistic_type_id": "avg",
             "is_ignored": false,
             "update_at": "2022-03-31T12:13:27"
           },{
-            "column_name": "Vertical Water Speed Std. Dev. (m/s) at 3.7m",
+            "column_name": "Vertical Water Speed Std. Dev. (cm/s) at 3.7m",
             "statistic_type_id": "sd",
             "is_ignored": false,
             "update_at": "2022-03-31T12:13:27"
           },{
-            "column_name": "Vertical Water Speed Min (m/s) at 3.7m",
+            "column_name": "Vertical Water Speed Min (cm/s) at 3.7m",
             "statistic_type_id": "min",
             "is_ignored": false,
             "update_at": "2022-03-31T12:13:27"
           },{
-            "column_name": "Vertical Water Speed Max (m/s) at 3.7m",
+            "column_name": "Vertical Water Speed Max (cm/s) at 3.7m",
             "statistic_type_id": "max",
             "is_ignored": false,
             "update_at": "2022-03-31T12:13:27"

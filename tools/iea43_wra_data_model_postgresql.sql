@@ -6,7 +6,7 @@
 
 -- The SQL standard has tried to be used as much as possible.
 
--- These statements match version 1.2.0-2023.01
+-- These statements match version 1.3.0-2024.03
 
 
 -- ** load plugin that generates uuids **:
@@ -26,6 +26,10 @@ CREATE TABLE IF NOT EXISTS mast_geometry (
 );
 
 CREATE TABLE IF NOT EXISTS logger_oem (
+    id text PRIMARY KEY
+);
+
+CREATE TABLE IF NOT EXISTS reanalysis (
     id text PRIMARY KEY
 );
 
@@ -76,7 +80,11 @@ INSERT INTO measurement_station_type (id) VALUES
     ('lidar'),
     ('sodar'),
     ('floating_lidar'),
-    ('solar');
+    ('wave_buoy'),
+    ('adcp'),
+    ('solar'),
+    ('virtual_met_mast'),
+    ('reanalysis');
 
 INSERT INTO mast_geometry (id) VALUES
     ('lattice_triangle'),
@@ -103,6 +111,15 @@ INSERT INTO logger_oem (id) VALUES
     ('Teledyne RDI'),
     ('Aanderaa'),
     ('other');
+
+INSERT INTO reanalysis (id) VALUES
+    ('CFSR'),
+    ('ERA-Interim'),
+    ('ERA5'),
+    ('JRA-55'),
+    ('MERRA-2'),
+    ('NCAR'),
+    ('Other');
 
 INSERT INTO measurement_type (id) VALUES
     ('wind_speed'),
@@ -174,6 +191,7 @@ INSERT INTO measurement_type (id) VALUES
     ('water_level'),
     ('depth'),
     ('timestamp'),
+    ('obukhov_length'),
     ('other');
 
 INSERT INTO height_reference (id) VALUES
@@ -187,6 +205,8 @@ INSERT INTO height_reference (id) VALUES
 INSERT INTO measurement_units (id) VALUES
     ('m/s'),
     ('mph'),
+    ('cm/s'),
+    ('mm/s'),
     ('knots'),
     ('deg'),
     ('deg_C'),
@@ -239,6 +259,7 @@ INSERT INTO statistic_type (id) VALUES
     ('range'),
     ('gust'),
     ('ti'),
+    ('ti30sec'),
     ('text');
 
 INSERT INTO sensor_type (id) VALUES
@@ -267,7 +288,9 @@ INSERT INTO sensor_type (id) VALUES
     ('solar_compass'),
     ('inertial_measurement_unit'),
     ('adcp'),
+    ('altimeter'),
     ('ctd'),
+    ('pth'),
     ('lidar'),
     ('sodar'),
     ('other');
@@ -421,6 +444,24 @@ CREATE TABLE IF NOT EXISTS lidar_config(
     update_at timestamp WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
     updated_by UUID,
     FOREIGN KEY (logger_main_config_uuid) REFERENCES logger_main_config (uuid)
+);
+
+CREATE TABLE IF NOT EXISTS model_config(
+    uuid UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
+    measurement_location_uuid UUID NOT NULL,
+    reanalysis_id text,
+    horizontal_grid_resolution_m integer,
+    model_used text,
+    date_from timestamp WITHOUT TIME ZONE NOT NULL,
+    date_to timestamp WITHOUT TIME ZONE,
+    offset_from_utc_hrs decimal,
+    averaging_period_minutes integer,
+    timestamp_is_end_of_period boolean,
+    notes text,
+    update_at timestamp WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
+    updated_by UUID,
+    FOREIGN KEY (measurement_location_uuid) REFERENCES measurement_location (uuid),
+    FOREIGN KEY (reanalysis_id) REFERENCES reanalysis (id)
 );
 
 CREATE TABLE IF NOT EXISTS measurement_point(
