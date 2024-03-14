@@ -9,7 +9,7 @@ Given a version number MAJOR.MINOR.PATCH, increment the:
 
 Additional labels for pre-release and build metadata are available as extensions to the MAJOR.MINOR.PATCH format.
 
-## [Unreleased 2.X.X-2023.XX]
+## [1.3.0-2024.03]
 
 1. Adding a new table to capture details of modelled VMM and reanalysis datasets (Issue [#214](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/214))
    1. This is called `model_config` which is at the same level as `logger_main_config` and contains similar information.
