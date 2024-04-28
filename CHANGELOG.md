@@ -11,8 +11,6 @@ Additional labels for pre-release and build metadata are available as extensions
 
 ## [Unreleased X.X.0-202X.XX]
 
-1. 
-
 
 ## [1.3.0-2024.03]
 
