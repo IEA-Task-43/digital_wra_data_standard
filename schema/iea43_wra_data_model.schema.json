@@ -992,6 +992,28 @@
                           "false (for no flow corrections applied)"
                         ]
                       },
+                      "logger_stated_device_datum_plane_height": {
+                        "type": [
+                          "boolean",
+                          "null"
+                        ],
+						"title": "Logger Stated Device Datum Plane Height",
+						"description": "Height of the datum plane as programmed into the logger.",
+						"examples": [
+						 0.6,
+						 1
+						]
+					  },
+					 "logger_stated_device_orientation_deg": {
+                        "type": [
+                          "boolean",
+                          "null"
+                        ],
+						"title": "Logger Stated Device Orientation Deg",
+						"description": "Device orientation in degrees as programmed into the logger.",
+						"minimum": 0,
+						"maximum": 360
+                      },					  
                       "date_from": {
                         "type": [
                           "string",
