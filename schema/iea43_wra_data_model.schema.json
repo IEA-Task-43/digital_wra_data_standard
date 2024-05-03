@@ -992,7 +992,7 @@
                           "false (for no flow corrections applied)"
                         ]
                       },
-                      "logger_stated_device_datum_plane_height": {
+                      "logger_stated_device_datum_plane_height_m": {
                         "type": [
                           "number",
                           "null"
