@@ -10,6 +10,9 @@ Given a version number MAJOR.MINOR.PATCH, increment the:
 Additional labels for pre-release and build metadata are available as extensions to the MAJOR.MINOR.PATCH format.
 
 ## [Unreleased X.X.0-202X.XX]
+1. To `lidar_config` enum add:
+   1. `logger_stated_device_datum_plane_height` (Issue [#254](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/254))
+   1. `logger_stated_device_orientation_deg` (Issue [#254](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/254))
 
 
 ## [1.3.0-2024.03]
@@ -30,9 +33,6 @@ Additional labels for pre-release and build metadata are available as extensions
    1. `adcp` (Issue [#226](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/226))
    1. `virtual_met_mast` (Issue [#214](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/214))
    1. `reanalysis` (Issue [#214](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/214))
-1. To `lidar_config` enum add:
-   1. `logger_stated_device_datum_plane_height` (Issue [#254](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/254))
-   1. `logger_stated_device_orientation_deg` (Issue [#254](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/254))
 1. To `sensor_type` enum add:
    1. `altimeter` (Issue [#226](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/226))
    1. `PTH` (Issue [#247](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/247))
