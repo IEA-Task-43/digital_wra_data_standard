@@ -994,7 +994,7 @@
                       },
                       "logger_stated_device_datum_plane_height": {
                         "type": [
-                          "boolean",
+                          "number",
                           "null"
                         ],
 		        "title": "Logger Stated Device Datum Plane Height",
@@ -1006,7 +1006,7 @@
 		       },
 		       "logger_stated_device_orientation_deg": {
                         "type": [
-                          "boolean",
+                          "number",
                           "null"
                         ],
 			"title": "Logger Stated Device Orientation Deg",
