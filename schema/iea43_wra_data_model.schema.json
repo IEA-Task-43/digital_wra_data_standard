@@ -998,7 +998,7 @@
                           "null"
                         ],
 		        "title": "Logger Stated Device Datum Plane Height",
-			"description": "Height of the datum plane as programmed into the logger.",
+			"description": "Height, in meters, of the datum plane as programmed into the logger where the datum feature is defined here: http://data.windenergy.dtu.dk/ontologies/view/ontolidar/en/page/DatumFeature . For lidars the datum feature is usually the window and for sodars it is usually the base of the device. These datum plane heights are also usually referred to as above ground level however it may be above sea level or above a platform level.",
 			"examples": [
 			  0.6,
 			  1
@@ -1010,7 +1010,7 @@
                           "null"
                         ],
 			"title": "Logger Stated Device Orientation Deg",
-			"description": "Device orientation in degrees as programmed into the logger.",
+			"description": "Device orientation relative to north, in degrees, as programmed into the logger.",
 			"minimum": 0,
 			"maximum": 360
                       },					  
