@@ -545,8 +545,11 @@ CREATE TABLE IF NOT EXISTS calibration(
     sensor_uuid UUID NOT NULL,
     measurement_type_id text NOT NULL,
     slope decimal,
+	slope_unit decimal,
     "offset" decimal,  -- offset is a SQL reserved word so needs to be escaped
+	offset_unit decimal,
     sensitivity decimal,
+	sensitivity_unit decimal,
     report_file_name text NOT NULL,
     report_link text,
     calibration_id text,

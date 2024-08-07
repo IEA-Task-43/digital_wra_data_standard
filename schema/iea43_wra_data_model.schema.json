@@ -1532,6 +1532,14 @@
                               "title": "Calibration Slope",
                               "description": "The slope programmed into the logger."
                             },
+                            "slope_unit": {
+                              "type": [
+                                "number",
+                                "null"
+                              ],
+                              "title": "Calibration Slope Unit",
+                              "description": "The unit for the calibration slope."
+                            },
                             "offset": {
                               "type": [
                                 "number",
@@ -1540,6 +1548,14 @@
                               "title": "Calibration Offset",
                               "description": "The offset programmed into the logger."
                             },
+							"offset_unit": {
+                              "type": [
+                                "number",
+                                "null"
+                              ],
+                              "title": "Calibration Offset Unit",
+                              "description": "The unit for the calibration offset."
+                            },
                             "sensitivity": {
                               "type": [
                                 "number",
@@ -1547,6 +1563,14 @@
                               ],
                               "title": "Calibration Sensitivity",
                               "description": "The sensitivity programmed into the logger."
+                            },
+							"sensitivity_units": {
+                              "type": [
+                                "number",
+                                "null"
+                              ],
+                              "title": "Calibration Sensitivity Unit",
+                              "description": "The unit for the calibration sensitivity."
                             },
                             "report_file_name": {
                               "type": [
