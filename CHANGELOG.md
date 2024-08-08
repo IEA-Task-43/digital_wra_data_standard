@@ -15,7 +15,7 @@ Additional labels for pre-release and build metadata are available as extensions
    1. `logger_stated_device_orientation_deg` (Issue [#254](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/254))
 
 
-## [1.3.0-2024.07]
+## [1.3.0-2024.03]
 
 1. Adding a new table to capture details of modelled VMM and reanalysis datasets (Issue [#214](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/214))
    1. This is called `model_config` which is at the same level as `logger_main_config` and contains similar information.
@@ -38,10 +38,6 @@ Additional labels for pre-release and build metadata are available as extensions
    1. `PTH` (Issue [#247](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/247))
 1. To `measurement_location` add:
    1. `uuid` (Issue [#232](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/232))
-1. To `calibration` add:
-   1. `slope_unit` (Issue [#248](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/248))
-   1. `offset_unit` (Issue [#248](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/248))
-   1. `sensitivity_unit` (Issue [#248](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/248))
 1. At top level, add `license` (Issue [#225](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/225))
 1. Bug fixes:
    1. Add `null` to `height_reference` enum to match its type (Issue [#215](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/215))
