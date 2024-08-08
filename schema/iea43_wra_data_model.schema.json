@@ -1512,7 +1512,7 @@
                             },
                             "slope_unit": {
                               "type": [
-                                "number",
+                                "string",
                                 "null"
                               ],
                               "title": "Calibration Slope Unit",
@@ -1528,7 +1528,7 @@
                             },
 							"offset_unit": {
                               "type": [
-                                "number",
+                                "string",
                                 "null"
                               ],
                               "title": "Calibration Offset Unit",
@@ -1542,9 +1542,9 @@
                               "title": "Calibration Sensitivity",
                               "description": "The sensitivity programmed into the logger."
                             },
-							"sensitivity_units": {
+							"sensitivity_unit": {
                               "type": [
-                                "number",
+                                "string",
                                 "null"
                               ],
                               "title": "Calibration Sensitivity Unit",
