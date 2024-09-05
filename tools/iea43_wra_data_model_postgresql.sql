@@ -562,7 +562,10 @@ CREATE TABLE IF NOT EXISTS calibration(
     update_at timestamp WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
     updated_by UUID,
     FOREIGN KEY (sensor_uuid) REFERENCES sensor (uuid),
-    FOREIGN KEY (measurement_type_id) REFERENCES measurement_type (id)
+    FOREIGN KEY (measurement_type_id) REFERENCES measurement_type (id),
+    FOREIGN KEY (slope_unit) REFERENCES measurement_units (id),
+    FOREIGN KEY (offset_unit) REFERENCES measurement_units (id),
+    FOREIGN KEY (sensitivity_unit) REFERENCES measurement_units (id)
 );
 
 CREATE TABLE IF NOT EXISTS calibration_uncertainty(

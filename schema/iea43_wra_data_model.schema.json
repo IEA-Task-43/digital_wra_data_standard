@@ -1536,10 +1536,7 @@
                               "description": "The calibrated slope to be programmed into the logger."
                             },
                             "slope_unit": {
-                              "type": [
-                                "string",
-                                "null"
-                              ],
+                              "$ref": "#/definitions/measurement_units",
                               "title": "Calibration Slope Unit",
                               "description": "The unit for the calibration slope."
                             },
@@ -1552,10 +1549,7 @@
                               "description": "The calibrated offset to be programmed into the logger."
                             },
                             "offset_unit": {
-                              "type": [
-                                "string",
-                                "null"
-                              ],
+                              "$ref": "#/definitions/measurement_units",
                               "title": "Calibration Offset Unit",
                               "description": "The unit for the calibration offset."
                             },
@@ -1568,10 +1562,7 @@
                               "description": "The calibrated sensitivity to be programmed into the logger."
                             },
                             "sensitivity_unit": {
-                              "type": [
-                                "string",
-                                "null"
-                              ],
+                              "$ref": "#/definitions/measurement_units",
                               "title": "Calibration Sensitivity Unit",
                               "description": "The unit for the calibration sensitivity."
                             },
