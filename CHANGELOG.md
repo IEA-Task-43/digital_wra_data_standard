@@ -17,6 +17,7 @@ Additional labels for pre-release and build metadata are available as extensions
    1. `slope_unit` (Issue [#248](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/248))
    1. `offset_unit` (Issue [#248](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/248))
    1. `sensitivity_unit` (Issue [#248](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/248))
+1. As a result of Issue [#248](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/248) above `measurement_units` are now a definition.
 
 
 ## [1.3.0-2024.03]
