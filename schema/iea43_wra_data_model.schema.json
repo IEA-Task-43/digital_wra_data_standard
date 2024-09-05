@@ -1530,7 +1530,7 @@
                                 "null"
                               ],
                               "title": "Calibration Slope",
-                              "description": "The slope programmed into the logger."
+                              "description": "The calibrated slope to be programmed into the logger."
                             },
                             "slope_unit": {
                               "type": [
@@ -1546,7 +1546,7 @@
                                 "null"
                               ],
                               "title": "Calibration Offset",
-                              "description": "The offset programmed into the logger."
+                              "description": "The calibrated offset to be programmed into the logger."
                             },
                             "offset_unit": {
                               "type": [
@@ -1562,7 +1562,7 @@
                                 "null"
                               ],
                               "title": "Calibration Sensitivity",
-                              "description": "The sensitivity programmed into the logger."
+                              "description": "The calibrated sensitivity to be programmed into the logger."
                             },
                             "sensitivity_unit": {
                               "type": [
