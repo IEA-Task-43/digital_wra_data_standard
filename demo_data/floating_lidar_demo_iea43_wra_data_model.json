@@ -51,6 +51,8 @@
       "update_at": "2022-03-31T12:13:27",
       "lidar_config": [{
         "flow_corrections_applied": false,
+	"logger_stated_device_datum_plane_height_m": 1.5,
+	"logger_stated_device_orientation_deg": null,
         "date_from": "2022-03-01T12:10:00",
         "date_to": null,
         "update_at": "2022-03-31T12:13:27"
