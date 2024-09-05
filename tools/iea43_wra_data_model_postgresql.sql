@@ -547,9 +547,9 @@ CREATE TABLE IF NOT EXISTS calibration(
     slope decimal,
     slope_unit text,
     "offset" decimal,  -- offset is a SQL reserved word so needs to be escaped
-	  offset_unit text,
+	offset_unit text,
     sensitivity decimal,
-	  sensitivity_unit text,
+	sensitivity_unit text,
     report_file_name text NOT NULL,
     report_link text,
     calibration_id text,
