@@ -228,6 +228,7 @@ INSERT INTO measurement_units (id) VALUES
     ('Hz'),
     ('mm'),
     ('m'),
+    ('s'),
     ('W/m^2'),
     ('W'),
     ('kW'),
@@ -243,6 +244,17 @@ INSERT INTO measurement_units (id) VALUES
     ('ppt'),
     ('psu'),
     ('S/m'),
+    ('km/h'),
+    ('(m/s)/V'),
+    ('(m/s)/mA'),
+    ('(m/s)/Hz'),
+    ('(m/s)/-'),
+    ('(m/s)/(cm/s)'),
+    ('(m/s)/(km/h)'),
+    ('(m/s)/mph'),
+    ('(m/s)/knots'),
+    ('(m/s)/(m/s)'),
+    ('1'),
     ('-');
 
 INSERT INTO statistic_type (id) VALUES
