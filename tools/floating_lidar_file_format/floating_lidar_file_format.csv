@@ -33,14 +33,3 @@ DateTime,lidar_1234_wind_speed_110_m/s_avg,lidar_1234_wind_speed_110_m/s_sd,lida
 2024-01-01 00:10:00,12.7,1.3,14.2,10.3
 2024-01-01 00:20:00,13.1,1.4,14.7,10.8
 
-
-5. Column names: these could contain the minimal information so we can avoid having a very large header with measurement point information.
-   1. Format: `<sensor_type>_<serial_number>_<measurement_type>_<height>_<measurement_units>_<statistic_type>`
-      Example: `lidar_1234_wind_speed_110_m/s_avg`
-   1. Separator is an underscore however element names also use underscore. This can cause a problem with splitting out the data into individual components. Can use a different separator such as a colon (:) or semicolon (;) similar to Ammonit loggers?
-      Example: `lidar:1234:wind_speed:110:m/s:avg`
-      Example: `lidar;1234;wind_speed;110;m/s;avg`
-      Can't use a hyphen (-) as it can get mixed up with a negative height and dimensionless units.
-      Can't use a period (.) as it can get mixed up with decimal heights and/or lat and long.
-      Semicolon can also be used as a delimiter so we should avoid that however if the delimiter is a comma we could use a semicolon.
-      Or we can just handle the underscores?
