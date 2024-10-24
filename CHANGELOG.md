@@ -20,6 +20,14 @@ Additional labels for pre-release and build metadata are available as extensions
 1. To `measurement_units` enum add:
    1. `mV` (Issue [#260](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/260))
    1. `(m/s)/mV` (Issue [#260](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/260))
+   1. `mbar/V` (Issue [#260](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/260))
+   1. `mbar/mV` (Issue [#260](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/260))
+   1. `hPa/V` (Issue [#260](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/260))
+   1. `hPa/mV` (Issue [#260](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/260))
+   1. `deg_C/V` (Issue [#260](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/260))
+   1. `deg_C/mV` (Issue [#260](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/260))
+   1. `%/V` (Issue [#260](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/260))
+   1. `%/mV` (Issue [#260](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/260))
 
 
 ## [1.3.0-2024.03]

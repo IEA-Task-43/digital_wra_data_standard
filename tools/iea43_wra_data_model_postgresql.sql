@@ -256,6 +256,14 @@ INSERT INTO measurement_units (id) VALUES
     ('(m/s)/mph'),
     ('(m/s)/knots'),
     ('(m/s)/(m/s)'),
+    ('mbar/V'),
+    ('mbar/mV'),
+    ('hPa/V'),
+    ('hPa/mV'),
+    ('deg_C/V'),
+    ('deg_C/mV'),
+    ('%/V'),
+    ('%/mV'),
     ('1'),
     ('-');
 
