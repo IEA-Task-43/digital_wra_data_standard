@@ -234,6 +234,68 @@
         "other"
       ]
     },
+    "measurement_units": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "enum": [
+        "m/s",
+        "cm/s",
+        "mm/s",
+        "mph",
+        "knots",
+        "deg",
+        "deg_C",
+        "deg_F",
+        "K",
+        "%",
+        "mbar",
+        "dbar",
+        "hPa",
+        "atm",
+        "mmHg",
+        "inHg",
+        "kg/m^2",
+        "kg/m^3",
+        "V",
+        "mA",
+        "A",
+        "ohm",
+        "Hz",
+        "mm",
+        "m",
+        "s",
+        "W/m^2",
+        "W",
+        "kW",
+        "MW",
+        "kWh",
+        "MWh",
+        "m/s^2",
+        "lux",
+        "dB",
+        "L",
+        "g/L",
+        "g/kg",
+        "ppt",
+        "psu",
+        "S/m",
+        "km/h",
+        "(m/s)/V",
+        "(m/s)/mA",
+        "(m/s)/Hz",
+        "(m/s)/-",
+        "(m/s)/(cm/s)",
+        "(m/s)/(km/h)",
+        "(m/s)/mph",
+        "(m/s)/knots",
+        "(m/s)/(m/s)",
+        "1",
+        "-",
+        null
+      ]
+    },
     "orientation_reference": {
       "type": [
         "string",
@@ -1196,57 +1258,9 @@
                         "description": "The sensitivity programmed into the logger. Usually used for pyranometers. It is the same as 1/slope with zero for offset."
                       },
                       "measurement_units_id": {
-                        "type": [
-                          "string",
-                          "null"
-                        ],
+                        "$ref": "#/definitions/measurement_units",
                         "title": "Measurement Units",
-                        "description": "The measurement units of the values the sensor records.",
-                        "enum": [
-                          "m/s",
-                          "cm/s",
-                          "mm/s",
-                          "mph",
-                          "knots",
-                          "deg",
-                          "deg_C",
-                          "deg_F",
-                          "K",
-                          "%",
-                          "mbar",
-                          "dbar",
-                          "hPa",
-                          "atm",
-                          "mmHg",
-                          "inHg",
-                          "kg/m^2",
-                          "kg/m^3",
-                          "V",
-                          "mA",
-                          "A",
-                          "ohm",
-                          "Hz",
-                          "mm",
-                          "m",
-                          "s",
-                          "W/m^2",
-                          "W",
-                          "kW",
-                          "MW",
-                          "kWh",
-                          "MWh",
-                          "m/s^2",
-                          "lux",
-                          "dB",
-                          "L",
-                          "g/L",
-                          "g/kg",
-                          "ppt",
-                          "psu",
-                          "S/m",
-                          "-",
-                          null
-                        ]
+                        "description": "The measurement units of the values the sensor records."
                       },
                       "height_m": {
                         "type": [
@@ -1530,7 +1544,12 @@
                                 "null"
                               ],
                               "title": "Calibration Slope",
-                              "description": "The slope programmed into the logger."
+                              "description": "The calibrated slope to be programmed into the logger."
+                            },
+                            "slope_unit": {
+                              "$ref": "#/definitions/measurement_units",
+                              "title": "Calibration Slope Unit",
+                              "description": "The unit for the calibration slope."
                             },
                             "offset": {
                               "type": [
@@ -1538,7 +1557,12 @@
                                 "null"
                               ],
                               "title": "Calibration Offset",
-                              "description": "The offset programmed into the logger."
+                              "description": "The calibrated offset to be programmed into the logger."
+                            },
+                            "offset_unit": {
+                              "$ref": "#/definitions/measurement_units",
+                              "title": "Calibration Offset Unit",
+                              "description": "The unit for the calibration offset."
                             },
                             "sensitivity": {
                               "type": [
@@ -1546,7 +1570,12 @@
                                 "null"
                               ],
                               "title": "Calibration Sensitivity",
-                              "description": "The sensitivity programmed into the logger."
+                              "description": "The calibrated sensitivity to be programmed into the logger."
+                            },
+                            "sensitivity_unit": {
+                              "$ref": "#/definitions/measurement_units",
+                              "title": "Calibration Sensitivity Unit",
+                              "description": "The unit for the calibration sensitivity."
                             },
                             "report_file_name": {
                               "type": [

@@ -228,6 +228,7 @@ INSERT INTO measurement_units (id) VALUES
     ('Hz'),
     ('mm'),
     ('m'),
+    ('s'),
     ('W/m^2'),
     ('W'),
     ('kW'),
@@ -243,6 +244,17 @@ INSERT INTO measurement_units (id) VALUES
     ('ppt'),
     ('psu'),
     ('S/m'),
+    ('km/h'),
+    ('(m/s)/V'),
+    ('(m/s)/mA'),
+    ('(m/s)/Hz'),
+    ('(m/s)/-'),
+    ('(m/s)/(cm/s)'),
+    ('(m/s)/(km/h)'),
+    ('(m/s)/mph'),
+    ('(m/s)/knots'),
+    ('(m/s)/(m/s)'),
+    ('1'),
     ('-');
 
 INSERT INTO statistic_type (id) VALUES
@@ -545,8 +557,11 @@ CREATE TABLE IF NOT EXISTS calibration(
     sensor_uuid UUID NOT NULL,
     measurement_type_id text NOT NULL,
     slope decimal,
+    slope_unit text,
     "offset" decimal,  -- offset is a SQL reserved word so needs to be escaped
+    offset_unit text,
     sensitivity decimal,
+    sensitivity_unit text,
     report_file_name text NOT NULL,
     report_link text,
     calibration_id text,
@@ -559,7 +574,10 @@ CREATE TABLE IF NOT EXISTS calibration(
     update_at timestamp WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
     updated_by UUID,
     FOREIGN KEY (sensor_uuid) REFERENCES sensor (uuid),
-    FOREIGN KEY (measurement_type_id) REFERENCES measurement_type (id)
+    FOREIGN KEY (measurement_type_id) REFERENCES measurement_type (id),
+    FOREIGN KEY (slope_unit) REFERENCES measurement_units (id),
+    FOREIGN KEY (offset_unit) REFERENCES measurement_units (id),
+    FOREIGN KEY (sensitivity_unit) REFERENCES measurement_units (id)
 );
 
 CREATE TABLE IF NOT EXISTS calibration_uncertainty(
