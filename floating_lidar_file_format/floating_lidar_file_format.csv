@@ -1,0 +1,39 @@
+{
+	"format_version": "1.0.0-2025.03",
+	"station_serial_number": "123456",
+	"name": "Site X - FLS 01",
+	"latitude_ddeg": 53.5017,
+	"longitude_ddeg": -19.0966,
+	"measurement_station_type": "floating_lidar",
+	"notes": "Some additional notes specific for this deployment.",
+	"logger_main_config":
+	[{
+		"logger_oem": "ZX Lidars",
+		"logger_model_name": "300M",
+		"logger_serial_number": "1234",
+		"logger_firmware_version": "v12345",
+		"logger_id": "1234",
+		"logger_name": "FLS1",
+		"offset_from_utc_hrs": 0.0,
+		"averaging_period_minutes": 10,
+		"timestamp_is_end_of_period": true,
+		"lidar_config":
+		{
+			"flow_corrections_applied": false,
+			"logger_stated_device_datum_plane_height_m": 2,
+			"logger_stated_device_orientation_deg": 3
+		}
+	}, {
+		"logger_oem": "Nortek",
+		"logger_model_name": "Signature250",
+		"logger_serial_number": "1234567",
+		"offset_from_utc_hrs": 0.0,
+		"averaging_period_minutes": 10
+	}]
+}
+timestamp, lidar__1234__wind_speed__110__m/s__avg, lidar__1234__wind_speed__110__m/s__sd, lidar__1234__wind_speed__110__m/s__max, lidar__1234__wind_speed__110__m/s__min
+2024-11-27T00:00:00, 12.3, 1.2, 13.7, 10.1
+2024-11-27T00:10:00, 12.7, 1.3, 14.2, 10.3
+2024-11-27T00:20:00, 13.1, 1.4, 14.7, 10.8
+
+
