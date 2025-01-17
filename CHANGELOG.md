@@ -13,6 +13,8 @@ Additional labels for pre-release and build metadata are available as extensions
 1. To `lidar_config` add:
    1. `logger_stated_device_datum_plane_height_m` (Issue [#254](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/254))
    1. `logger_stated_device_orientation_deg` (Issue [#254](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/254))
+1. To `sensor_type` add:
+   1. `calc` (Discussion [#268](https://github.com/IEA-Task-43/digital_wra_data_standard/discussions/268#discussioncomment-11257819))
 
 
 ## [1.3.0-2024.03]

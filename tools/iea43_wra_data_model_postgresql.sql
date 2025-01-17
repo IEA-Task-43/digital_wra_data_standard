@@ -293,7 +293,8 @@ INSERT INTO sensor_type (id) VALUES
     ('pth'),
     ('lidar'),
     ('sodar'),
-    ('other');
+    ('other'),
+    ('calc');
 
 INSERT INTO mounting_type (id) VALUES
     ('side'),
