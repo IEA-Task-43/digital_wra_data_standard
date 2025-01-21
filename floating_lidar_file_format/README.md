@@ -1,7 +1,10 @@
 
 # Floating Lidar File Format
 
-This subdirectory contains schema, documentation, tools, samples and guidance notes for the floating lidar file format develope in conjunction with the IEA Wind Task 43 WRA Data Model working group.
+This subdirectory contains schema, documentation, tools, samples and guidance notes for the floating lidar file format developed in conjunction with the IEA Wind Task 43 WRA Data Model working group.
+
+This file format is to help structure the transfer of metadata from the measurement device to the consumers of the data giving enhanced meaning to the timeseries data that is transferred.
+The WRA Data Model is used as the foundation for this but not used directly due to its complexity.
 
 ## Background
 In September 2024 a group of stakeholders held bi-weekly meetings with the objective of creating a floating lidar file format that could standardise the data transferred from floating lidar OEMs to users of the data.
@@ -17,15 +20,28 @@ We also derived a file naming structure that we fell would be useful.
 All variables for the file naming convention, header and timeseries part are defined in the WRA Data Model except for three new ones which are `format_version`, `station_serial_number` and the timestamp column name.
 
 ### File naming convention
-File name structure is a suggested format of
+File name structure is a suggested, best practice format of
 `<oem_name>__<station_name>__<station_serial_number>__<date_from>__<date_to>__<notes>.csv`
+
+Helps with identifying the file when received and document management.
+
+Where:
+
+| Variable | Description | Values |
+|---|---|---|
+| oem_name |  |  |
+| station_name |  |  |
+| station_serial_number | The station serial number that is usually created by the OEM. | A free-form text string e.g. "FLS 01", "XYZ_1234_DD". |
+| date_from |  |  |
+| date_to | '2024-01-01_23_50_00' | WHY NOT JUST USE THE T INSTEAD OF THE UNDERSCORE. THIS WASN'T SUGGESTED ON THE CALLS. |
+| notes |  | A free-form text string e.g. "LidarData", "10min" in this case. |
+
+All parts are required, except for 'notes', to help machines pick out the appropriate information.
 
 Examples:
 - Fugro__Site X__FLS 01__2024-01-01_00_00_00__2024-01-31_23_50_00__LidarData.csv
 - Eolos__Site X__FLS 01__2024-01-01_00_00_00__2024-01-01_23_50_00__10min.csv
 
-Where:
-- oem_name is
 
 ### File Header
 The header in the file is made up of JSON to describe some minimal metadata describing the station setup.
@@ -46,7 +62,9 @@ Example with the minimal metadata required for the header:
 }
 ```
 
-## Timeseries data
+A more complete sample file with logger configs can be found here: [sample file](./floating_lidar_file_format.json).
+
+### Timeseries data
 The format of the timeseries part of the file is basically comma separated values (CSV).
 We have defined the main timestamp column along with a format for the column names.
 This format is to help consumers of the data to automatically process the data when they receive it by providing metadata that describes what each column of data refers to.
@@ -58,7 +76,15 @@ This format is to help consumers of the data to automatically process the data w
 #### Column names
 Format: `<measurement_type>__<statistic_type>__<height_m>__<sensor_type>__<serial_number>__<measurement_units>__<notes>`
 
-Example: `wind_speed__avg__120__lidar__1234__m/s`
+Examples
+- `wind_speed__avg__120__lidar__1234__m/s`
+- `wind_speed__avg__120__lidar__1234__m/s__flag` to show the notes that could be a flag
+- `air_temperature__avg__1__thermometer__null__deg_C` serial number can be null if you don't know it
+- `air_density__avg__2__calc__null__kg/m^3` "calc" example
+- `air_density__avg__2__calc__null__kg/m^3__A` and `air_density__avg__2__calc__null__kg/m^3__B` to show that the 'notes' can be used to distinguish between 2 identical column names
+- 
+
+# Add fuel_level option to the measurement_type enum and fuel_gauge in the sensor_type enum
 
 All variables are required except for the `<notes` field.
 
@@ -79,9 +105,9 @@ Where:
 | statistic_type | The statistic, aggregation function or signal e.g. 'average' or 'maximum' that this column records. | Values must follow the enum provided in the WRA Data Model and cannot be "null". |
 | height_m | The height (in meters) typically above ground level that the measurement is taking place. | If you do not yet know the height please use null. |
 | sensor_type | The measurement sensor type e.g. anemometer. | Values must follow the enum provided in the WRA Data Model. |
-| serial_number | The serial number of the sensor installed. | This is free text string and can be "null". |
+| serial_number | The serial number of the sensor installed. | This is free-form text string and can be "null". |
 | measurement_units |  |  |
-| notes |  |  |
+| notes |  | Free-form text, can allow a duplicate column name for "flags"  |
 
 The WRA Data Model uses 'snake case' for all the variables. 
 When they are included together in a column name, to make it easier for parsers to identify each variable we decided to use a **double underscore** to separate them.
