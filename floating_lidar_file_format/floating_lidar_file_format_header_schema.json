@@ -67,8 +67,8 @@
     }
   },
   "type": "object",
-  "title": "IEA Wind Resource Assessment - Data Model",
-  "description": "This Data Model schema is a digital representation of a meteorological mast used for measuring the wind resource of a potential wind farm.",
+  "title": "IEA Wind Task 43 - Floating Lidar File Format Header",
+  "description": "This JSON Schema is used to validate the floating lidar file format header that is inserted at the top of the file. This is based on the IEA Task 43 Wind WRA Data Model where only the relevant parts are kept.",
   "properties": {
     "format_version": {
       "type": "string",
