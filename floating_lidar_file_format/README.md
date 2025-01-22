@@ -1,6 +1,6 @@
 
 # Floating Lidar File Format
-
+## Introduction
 This subdirectory contains schema, documentation, tools, samples and guidance notes for the floating lidar file format developed in conjunction with the IEA Wind Task 43 WRA Data Model working group.
 
 This file format is to help structure the transfer of metadata from the measurement device to the consumers of the data giving enhanced meaning to the timeseries data that is transferred.
@@ -12,31 +12,30 @@ These discussions are all captured in this GitHub discussion https://github.com/
 
 ---
 
-## Structure
-The content of the file is split into 2 parts. The first part is the header which provides some metadata to describe the setup of the station and helps to identify which station this timeseries data relates to. 
-The second part is the actual timeseries data measured by the station. These parts are described separately below.
-We also derived a file naming structure that we fell would be useful.
+## Structure of the floating lidar file
+The content of the file is split into 2 parts. The first part is the **header** which provides some metadata to describe the setup of the station and helps to identify which station this timeseries data relates to. 
+The second part is the actual **timeseries** data measured by the station. These parts are described separately below.
+We also derived a file naming structure that we felt would be useful.
 
-All variables for the file naming convention, header and timeseries part are defined in the WRA Data Model except for three new ones which are `format_version`, `station_serial_number` and the timestamp column name.
+All variables for the file naming convention, header and timeseries part are defined in the WRA Data Model except for two new ones which are `format_version`, `station_serial_number` and the timestamp column name.
 
 ### File naming convention
-File name structure is a suggested, best practice format of
+File name structure is a suggested, best practice format of:
+
 `<oem_name>__<station_name>__<station_serial_number>__<date_from>__<date_to>__<notes>.csv`
 
-Helps with identifying the file when received and document management.
+This file naming convention helps with identifying the file when received by the consumer of the data and document management.
 
 Where:
 
-| Variable | Description | Values |
-|---|---|---|
-| oem_name |  |  |
-| station_name |  |  |
-| station_serial_number | The station serial number that is usually created by the OEM. | A free-form text string e.g. "FLS 01", "XYZ_1234_DD". |
-| date_from |  |  |
-| date_to | '2024-01-01_23_50_00' | WHY NOT JUST USE THE T INSTEAD OF THE UNDERSCORE. THIS WASN'T SUGGESTED ON THE CALLS. |
-| notes |  | A free-form text string e.g. "LidarData", "10min" in this case. |
-
-All parts are required, except for 'notes', to help machines pick out the appropriate information.
+| Variable | Required? | Description | Values |
+|---|---|---|---|
+| oem_name | Yes | The Original Equipment Manufacturer of the measurement station. | A free-form text string e.g. "Eolos", "Fugro", "GreenRebel". |
+| station_name | Yes | The name given to the measurement station i.e. to the floating lidar station. | A free-form text string. Unique names are recommended to avoid two locations in the same context being given the same name. E.g. "IJmuiden IJV A1", "N-9_WLBZ_2". |
+| station_serial_number | Yes | The station serial number that is usually created by the OEM. | A free-form text string e.g. "FLS 01", "XYZ_1234_DD". |
+| date_from | Yes | The first timestamp of the timeseries data found in the file. | '2024-01-01_00_00_00' **WHY NOT JUST USE THE T INSTEAD OF THE UNDERSCORE. THIS WASN'T SUGGESTED ON THE CALLS.** |
+| date_to | Yes | The last timestamp of the timeseries data found in the file. | '2024-01-01_23_50_00' |
+| notes | No | A field to give the file further meaning or to make it unique. | A free-form text string e.g. "LidarData", "10min" in this case. |
 
 Examples:
 - Fugro__Site X__FLS 01__2024-01-01_00_00_00__2024-01-31_23_50_00__LidarData.csv
