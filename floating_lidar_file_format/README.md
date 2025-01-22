@@ -84,6 +84,41 @@ Examples
 - `air_density__avg__2__calc__null__kg/m^3__A` and `air_density__avg__2__calc__null__kg/m^3__B` to show that the 'notes' can be used to distinguish between 2 identical column names
 - 
 
+
+
+Column name examples
+- `wind_speed__avg__120__lidar__1234__m/s`
+- `wind_speed__sd__120__lidar__1234__m/s`
+- `wind_speed__max__120__lidar__1234__m/s`
+- `wind_speed__min__120__lidar__1234__m/s`
+- `wind_speed__count__120__lidar__1234__m/s`
+- `wind_speed__ti__120__lidar__1234__m/s`
+- `wind_speed__avg__120__lidar__1234__m/s__flag` to show the notes that could be a flag
+- `vertical_wind_speed__avg__120__lidar__1234__m/s`
+- `wind_direction__avg__120__lidar__1234__deg__note on algorithm`
+- `air_temperature__avg__2__thermometer__null__deg_C` serial number can be null if you don't know it
+- `air_density__avg__2__calc__null__kg/m^3` "calc" example
+- `air_density__avg__2__calc__null__kg/m^3__A` and `air_density__avg__2__calc__null__kg/m^3__B` to show that the 'notes' can be used to distinguish between 2 identical column names
+- `counter__count__120__lidar__1234__null__packets in avg`
+- `packets__count__120__lidar__1234__null__rain/fog`
+- `quality__quality__null__lidar__1234__%__proportion of packets with rain`
+- `status__text__120__lidar__1234__null`
+- `flag__text__120__lidar__1234__null`
+
+
+
+LIDAR120m_Z10_HorizWS,
+LIDAR120m_Z10_StdDevWS,
+LIDAR120m_Z10_MaxWS,
+LIDAR120m_Z10_MinWs,
+LIDAR120m_WD_alg,
+LIDAR120m_Z10_VertWs,
+LIDAR120m_Z10_InfoFlag,
+LIDAR120m_Z10_StatFlag,
+LIDAR120m_Z10_Packets,
+LIDAR120m_Z10_TurbInt,
+
+
 # Add fuel_level option to the measurement_type enum and fuel_gauge in the sensor_type enum
 
 All variables are required except for the `<notes` field.
