@@ -31,7 +31,7 @@
 		"averaging_period_minutes": 10
 	}]
 }
-timestamp, lidar__1234__wind_speed__110__m/s__avg, lidar__1234__wind_speed__110__m/s__sd, lidar__1234__wind_speed__110__m/s__max, lidar__1234__wind_speed__110__m/s__min
+timestamp, wind_speed__avg__120__lidar__1234__m/s, wind_speed__sd__120__lidar__1234__m/s, wind_speed__max__120__lidar__1234__m/s, wind_speed__min__120__lidar__1234__m/s
 2024-11-27T00:00:00, 12.3, 1.2, 13.7, 10.1
 2024-11-27T00:10:00, 12.7, 1.3, 14.2, 10.3
 2024-11-27T00:20:00, 13.1, 1.4, 14.7, 10.8
