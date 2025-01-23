@@ -26,12 +26,12 @@
 	}, {
 		"logger_oem": "Nortek",
 		"logger_model_name": "Signature250",
-		"logger_serial_number": "1234567",
+		"logger_serial_number": "4321",
 		"offset_from_utc_hrs": 0.0,
 		"averaging_period_minutes": 10
 	}]
 }
-timestamp, wind_speed__avg__120__lidar__1234__m/s, wind_speed__sd__120__lidar__1234__m/s, wind_speed__max__120__lidar__1234__m/s, wind_speed__min__120__lidar__1234__m/s
+timestamp, wind_speed__avg__120__lidar__1234__m/s, wind_speed__sd__120__lidar__1234__m/s, wind_speed__max__120__lidar__1234__m/s, wind_speed__min__120__lidar__1234__m/s, wind_speed__ti__120__lidar__1234__m/s, vertical_wind_speed__avg__120__lidar__1234__m/s, wind_direction__avg__120__lidar__1234__deg, status__text__120__lidar__1234__null, flag__text__120__lidar__1234__null, air_temperature__avg__2__thermometer__null__deg_C__A, air_temperature__avg__2__thermometer__null__deg_C__B, air_pressure__avg__2__barometer__null__hPa__A, air_pressure__avg__2__barometer__null__hPa__B, air_density__avg__2__calc__null__kg/m^3__A, air_density__avg__2__calc__null__kg/m^3__B, water_speed__avg__-5__adcp__4321__cm/s, water_direction__avg__0__adcp__4321__deg, water_temperature__avg__-1__adcp__4321__deg_C, wave_period__avg__0__inertial_measurement_unit__xyz12__s, wave_height__avg__0__inertial_measurement_unit__xyz12__m, wave_maximum_height__max__0__inertial_measurement_unit__xyz12__m, wave_direction__avg__0__inertial_measurement_unit__xyz12__deg
 2024-11-27T00:00:00, 12.3, 1.2, 13.7, 10.1
 2024-11-27T00:10:00, 12.7, 1.3, 14.2, 10.3
 2024-11-27T00:20:00, 13.1, 1.4, 14.7, 10.8
