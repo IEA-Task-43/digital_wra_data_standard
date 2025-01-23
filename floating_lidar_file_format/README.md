@@ -36,7 +36,7 @@ Where:
 | date_from     | Yes | The first timestamp of the timeseries data found in the file. | The format of this date should follow ISO 8601 however with the 'T' replaced with an underscore. E.g. '2024-01-01_00_00_00'. **WHY NOT JUST USE THE T INSTEAD OF THE UNDERSCORE. THIS WASN'T SUGGESTED ON THE CALLS.** |
 | date_to       | Yes | The last timestamp of the timeseries data found in the file. | The format of this date should follow ISO 8601 however with the 'T' replaced with an underscore. E.g. '2024-01-01_23_50_00'. |
 | notes         | No | A field to give the file further meaning or to make it unique. | A free-form text string e.g. "LidarData", "10min" in this case. |
-Table 1: File naming convention variables.
+_Table 1: File naming convention variables._
 
 Examples:
 - Fugro__Site X__FLS 01__2024-01-01_00_00_00__2024-01-31_23_50_00__LidarData.csv
@@ -98,7 +98,7 @@ use a double underscore (__) to separate them.
 | serial_number     | Yes | The serial number of the sensor installed. | A free-form text string e.g. "ABC123" where "null" is also allowed. |
 | measurement_units | Yes | The measurement units of the values the sensor records. | An enum as described in the WRA Data Model e.g. "m/s", "deg" where "null" is also allowed. |
 | notes             | No | A field to give the column further meaning or to make it unique. | A free-form text string e.g. "A" or "B" to avoid duplicates. |
-Table 2: Column name variables.
+_Table 2: Column name variables._
 
 Column name examples
 1. `wind_speed__avg__120__lidar__1234__m/s`
@@ -125,6 +125,7 @@ Column name examples
 1. `wave_maximum_height__max__0__inertial_measurement_unit__xyz12__m`
 1. `wave_direction__avg__0__inertial_measurement_unit__xyz12__deg`
 
+1. `voltage__avg__2__lidar__1234__V`
 1. `counter__count__120__lidar__1234__null__packets in avg`
 1. `quality__quality__null__lidar__1234__%__proportion of packets with rain`
 
