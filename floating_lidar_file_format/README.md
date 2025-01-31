@@ -1,51 +1,63 @@
 
 # Floating Lidar File Format
-## Introduction
-This subdirectory contains schema, documentation, tools, samples and guidance notes for the floating lidar file format developed in conjunction with the IEA Wind Task 43 WRA Data Model working group.
+## 1. Introduction
+This subdirectory of the IEA Task 43 [WRA Data Model](https://github.com/IEA-Task-43/digital_wra_data_standard) contains schema, documentation, tools, samples and guidance notes for the floating lidar file format developed in conjunction with the IEA Wind Task 43 WRA Data Model working group.
 
 This file format is to help structure the transfer of metadata from the measurement device to the consumers of the data giving enhanced meaning to the timeseries data that is transferred.
 The WRA Data Model is used as the foundation for this but not used directly due to its complexity.
 
-## Background
+### 1.1 Background
 In September 2024 a group of stakeholders held bi-weekly meetings with the objective of creating a floating lidar file format that could standardise the data transferred from floating lidar OEMs to users of the data.
-These discussions are all captured in this GitHub discussion https://github.com/IEA-Task-43/digital_wra_data_standard/discussions/268
+These discussions are all captured in this GitHub discussion [#268](https://github.com/IEA-Task-43/digital_wra_data_standard/discussions/268).
+
+The companies involved were: BrightWind, Eolos, GreenRebel, RWE, Shell, Akrocean, Fugro, TGS, BP, RPS, Altosphere, RINA, Axys, Recons, RES.
 
 ---
 
-## Structure of the floating lidar file
+## 2. Structure of the floating lidar file
 The content of the file is split into 2 parts. The first part is the **header** which provides some metadata to describe the setup of the station and helps to identify which station this timeseries data relates to. 
 The second part is the actual **timeseries** data measured by the station. These parts are described separately below.
-We also derived a file naming structure that we felt would be useful.
+We also derived a file naming structure that we felt would be useful for floating OEMs to adopt.
 
 All variables for the file naming convention, header and timeseries part are defined in the WRA Data Model except for two new ones which are `format_version`, `station_serial_number` and the timestamp column name.
 
-### File naming convention
-The file naming structure is a suggested, best practice format of:
+### 2.1 File naming convention
+The file naming structure is a suggested, best practice format, which will help consumers of the data to build automated pipelines to process the files in their systems.
+It can do this by helping with file, OEM and station identification. It is also useful for document management purposes. The format is:
 
 `<oem_name>__<station_name>__<station_serial_number>__<date_from>__<date_to>__<notes>.csv`
-
-This file naming convention helps with identifying the file when received by the consumer of the data and document management.
 
 Where:
 
 | Variable | Required? | Description | Values |
 |---|---|---|---|
-| oem_name      | Yes | The Original Equipment Manufacturer of the measurement station. | A free-form text string e.g. "Eolos", "Fugro", "GreenRebel". |
+| oem_name      | Yes | The Original Equipment Manufacturer of the measurement station. | A free-form text string e.g. "Eolos", "GreenRebel", "Akrocean", "Fugro". |
 | station_name  | Yes | The name given to the measurement station i.e. to the floating lidar station. | A free-form text string. Unique names are recommended to avoid two locations in the same context being given the same name. E.g. "IJmuiden IJV A1", "N-9_WLBZ_2". |
 | station_serial_number | Yes | The station serial number that is usually created by the OEM. | A free-form text string e.g. "FLS 01", "XYZ_1234_DD". |
-| date_from     | Yes | The first timestamp of the timeseries data found in the file. | The format of this date should follow ISO 8601 however with the 'T' replaced with an underscore. E.g. '2024-01-01_00_00_00'. **WHY NOT JUST USE THE T INSTEAD OF THE UNDERSCORE. THIS WASN'T SUGGESTED ON THE CALLS.** |
-| date_to       | Yes | The last timestamp of the timeseries data found in the file. | The format of this date should follow ISO 8601 however with the 'T' replaced with an underscore. E.g. '2024-01-01_23_50_00'. |
-| notes         | No | A field to give the file further meaning or to make it unique. | A free-form text string e.g. "LidarData", "10min" in this case. |
+| date_from     | Yes | The first timestamp of the timeseries data found in the file. | The format of this date should follow ISO 8601, with the 'T', however file systems like Windows Explorer do not accept the colon (:) character and therefore this character needs to be replaced with an underscore (_) e.g. '2024-01-01T00_00_00'. |
+| date_to       | Yes | The last timestamp of the timeseries data found in the file.  | The format of this date should follow ISO 8601, with the 'T', however file systems like Windows Explorer do not accept the colon (:) character and therefore this character needs to be replaced with an underscore (_) e.g. '2024-01-01T23_50_00'. |
+| notes         | No | A field to give the file further meaning or to make it unique. | A free-form text string e.g. "LidarData", "10min" in this case. Ensure not to use double underscores (__) as these are used to separate components of the file name. |
+
 _Table 1: File naming convention variables._
 
+The WRA Data Model uses 'snake case' for all the variables which involves a single underscore ( _ ) to separate words. 
+When these variables are put together in a file name, to make it easier for parsers to identify each variable we decided to 
+use a double underscore (__) to separate them.
+
 Examples:
-- Fugro__Site X__FLS 01__2024-01-01_00_00_00__2024-01-31_23_50_00__LidarData.csv
-- Eolos__Site X__FLS 01__2024-01-01_00_00_00__2024-01-01_23_50_00__10min.csv
+- Fugro__Site X__FLS 01__2024-01T01_00_00_00__2024-01T31_23_50_00__LidarData.csv
+- Eolos__Site X__FLS 01__2024-01T01_00_00_00__2024-01T01_23_50_00__10min.csv
 
+Please remember to use Windows, and other file systems, compatible characters in the file name free-form text parts. For example the At sign (@) is not a Windows compatible character.
 
-### File Header
+### 2.2 File Header
 The header in the file is made up of JSON to describe some minimal metadata describing the station setup.
-There is a JSON Schema to help validate this JSON which is  
+The format of this JSON mostly follows the IEA Task 43 WRA Data Model with unnecessary sections removed.
+There are two additional properties (`format_version` and `station_serial_number`) and the `measurement_location` section is not an array as the timeseries data in this file represents only a single station.
+
+Also removed are the `date_from` and `date_to` as there should be no configuration changes covering the period of timeseries data within the file. 
+That is, that the timeseries within the file should only cover a period where there were no changes to any sensor, their physical installation or their settings programmed into the logger.
+To help with explaining and validating the resulting JSON, a JSON Schema was developed:  
 [floating_lidar_file_format_header_schema.json](./floating_lidar_file_format_header_schema.json).
 
 Example with the minimal metadata required for the header:
@@ -59,35 +71,30 @@ Example with the minimal metadata required for the header:
   "measurement_station_type": "floating_lidar"
 }
 ```
+A more complete sample file with logger configs has been developed, [floating_lidar_file_format.csv](./floating_lidar_file_format.csv).
 
-INSTEAD OF EXPLAINING EACH VARIABLE, IS THERE A BIT OF CODE THAT CAN CONVERT THE JSON SCHEMA INTO DOCUMENTATION? NOT WHAT IS ALREADY USED FOR THE DATA MODEL AS THAT IS COMPLICATED TO RUN AND NOT CURRENTLY WORKING.
-
-A more complete sample file with logger configs is [floating_lidar_file_format.csv](./floating_lidar_file_format.csv).
-
-### Timeseries data
-The format of the timeseries part of the file is structures as comma separated values (CSV).
+### 2.3 Timeseries data
+The format of the timeseries part of the file is structured as comma separated values (CSV).
 We have defined the main timestamp column along with a format for the column names.
 This format is to help consumers of the data to automatically process the data when they receive it by providing metadata that describes what each column of data refers to.
+It also allows for the consumers of the data to know when there are certain configuration changes such as a sensor replaced or add.
 
 #### Timestamp column
 The timestamp column should be the first column of the timeseries data with some specific properties as outlined below.
 - **Location:** First column found in the timeseries.
-- **Column name:** "timestamp", all lowercase.
+- **Column name:** `timestamp`, all lowercase.
 - **Values:** The timestamp format should be ISO 8601 with the 'T' required, similar to the WRA Data Model, but with no time zone. E.g. `2024-12-12T13:40:00`.
 
-#### Column names
-In order for machines to automatically read and understand what a column of data is measuring and for the automated process to identify any configuration changes, we have specified a specific column name format as outlined below.
+#### Column name
+In order for machines to automatically read and understand what a column of data is measuring and for the automated process to identify any configuration changes, 
+we have specified a column name format as outlined below.
 
 Column name format:
 
 `<measurement_type>__<statistic_type>__<height_m>__<sensor_type>__<serial_number>__<measurement_units>__<notes>`
 
-All of these variables follow the conditions described in the IEA Wind Task 43 [WRA Data Model](../schema/iea43_wra_data_model.schema.json), **(CHECK LINK WORKS)** 
-with some additional details for this column name context in the table below.
-
-The WRA Data Model uses 'snake case' for all the variables. 
-When they are included together in a column name, to make it easier for parsers to identify each variable we decided to 
-use a double underscore (__) to separate them.
+All of these variables follow the conditions described in the IEA Wind Task 43 [WRA Data Model JSON Schema](../schema/iea43_wra_data_model.schema.json), **(CHECK LINK WORKS)** 
+with some additional details for this context in the table below.
 
 | Variable | Required? | Description | Values |
 |---|---|---|---|
@@ -97,8 +104,17 @@ use a double underscore (__) to separate them.
 | sensor_type       | Yes | The measurement sensor type e.g. anemometer. | An enum as described in the WRA Data Model e.g. "lidar", "adcp". "other" is an option however "null" is not allowed. |
 | serial_number     | Yes | The serial number of the sensor installed. | A free-form text string e.g. "ABC123" where "null" is also allowed. |
 | measurement_units | Yes | The measurement units of the values the sensor records. | An enum as described in the WRA Data Model e.g. "m/s", "deg" where "null" is also allowed. |
-| notes             | No | A field to give the column further meaning or to make it unique. | A free-form text string e.g. "A" or "B" to avoid duplicates. |
+| notes             | No | A field to give the column further meaning or to make it unique. | A free-form text string e.g. "A" or "B" to avoid duplicates. Ensure not to use double underscores (__) as these are used to separate components of the column name. |
+
 _Table 2: Column name variables._
+
+The WRA Data Model uses 'snake case' for all the variables which involves a single underscore ( _ ) to separate words. 
+When these variables are put together in a column name, to make it easier for parsers to identify each variable we decided to 
+use a double underscore ( __ ) to separate them.
+```
+1. wind_speed__avg__120__lidar__1234__m/s
+1. wind_speed__sd__120__lidar__1234__m/s
+```
 
 Column name examples
 1. `wind_speed__avg__120__lidar__1234__m/s`
