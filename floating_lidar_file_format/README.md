@@ -48,7 +48,8 @@ Examples:
 - Fugro__Site X__FLS 01__2024-01T01_00_00_00__2024-01T31_23_50_00__LidarData.csv
 - Eolos__Site X__FLS 01__2024-01T01_00_00_00__2024-01T01_23_50_00__10min.csv
 
-Please remember to use Windows, and other file systems, compatible characters in the file name free-form text parts. For example the At sign (@) is not a Windows compatible character.
+Please remember to use Windows, and other file systems, compatible characters in the file name free-form text parts. 
+For example the At (@) sign is not a Windows compatible character.
 
 ### 2.2 File Header
 The header in the file is made up of JSON to describe some minimal metadata describing the station setup.
@@ -93,55 +94,57 @@ Column name format:
 
 `<measurement_type>__<statistic_type>__<height_m>__<sensor_type>__<serial_number>__<measurement_units>__<notes>`
 
-All of these variables follow the conditions described in the IEA Wind Task 43 [WRA Data Model JSON Schema](../schema/iea43_wra_data_model.schema.json), **(CHECK LINK WORKS)** 
+All of these variables follow the conditions described in the IEA Wind Task 43 [WRA Data Model JSON Schema](../schema/iea43_wra_data_model.schema.json),
 with some additional details for this context in the table below.
 
 | Variable | Required? | Description | Values |
 |---|---|---|---|
 | measurement_type  | Yes | The type of measurement been made, e.g. "wind_speed". | An enum as described in the WRA Data Model e.g. "wind_speed", "water_direction". "other" is an option however "null" is not allowed. |
 | statistic_type    | Yes | The statistic, aggregation function or signal e.g. 'average' or 'maximum' that this column records. | An enum as described in the WRA Data Model e.g. "avg", "max" where "null" is not allowed. |
-| height_m          | Yes | The height (in meters) typically above ground level that the measurement is taking place. Or in the case of floating lidars, the height above or below sea level. | A number e.g. "120", "-5" where "null" is also allowed. |
-| sensor_type       | Yes | The measurement sensor type e.g. anemometer. | An enum as described in the WRA Data Model e.g. "lidar", "adcp". "other" is an option however "null" is not allowed. |
+| height_m          | Yes | The height (in meters) typically above ground level that the measurement is taking place. Or in the case of floating lidars, the height above or below sea level. | A number e.g. "120", "-5" where "null" is also allowed. It is a recommendation to use leading zeros (e.g. 80 goes to 080 or -5.5 to -005.5) in order to ensure column names when listed alphabetically will go from lowest to highest. If you have a measurement that may go over 1,000 m then use 4 digits. |
+| sensor_type       | Yes | The measurement sensor type e.g. anemometer. | An enum as described in the WRA Data Model e.g. "lidar", "adcp". "other" is an option and "null" is allowed. |
 | serial_number     | Yes | The serial number of the sensor installed. | A free-form text string e.g. "ABC123" where "null" is also allowed. |
 | measurement_units | Yes | The measurement units of the values the sensor records. | An enum as described in the WRA Data Model e.g. "m/s", "deg" where "null" is also allowed. |
-| notes             | No | A field to give the column further meaning or to make it unique. | A free-form text string e.g. "A" or "B" to avoid duplicates. Ensure not to use double underscores (__) as these are used to separate components of the column name. |
+| notes             | No | A field to give the column further meaning or to make it unique. | A free-form text string e.g. "A" or "B" to avoid duplicates. Preferably avoid space characters and use an underscore instead. Ensure not to use double underscores (__) as these are used to separate components of the column name. |
 
 _Table 2: Column name variables._
 
 The WRA Data Model uses 'snake case' for all the variables which involves a single underscore ( _ ) to separate words. 
 When these variables are put together in a column name, to make it easier for parsers to identify each variable we decided to 
 use a double underscore ( __ ) to separate them.
+
 ```
-1. wind_speed__avg__120__lidar__1234__m/s
-1. wind_speed__sd__120__lidar__1234__m/s
+1. wind_speed__avg__080__lidar__1234__m/s
+2. wind_speed__sd__080__lidar__1234__m/s
 ```
 
 Column name examples
-1. `wind_speed__avg__120__lidar__1234__m/s`
-1. `wind_speed__sd__120__lidar__1234__m/s`
-1. `wind_speed__max__120__lidar__1234__m/s`
-1. `wind_speed__min__120__lidar__1234__m/s`
-1. `wind_speed__ti__120__lidar__1234__m/s`
-1. `vertical_wind_speed__avg__120__lidar__1234__m/s`
-1. `wind_direction__avg__120__lidar__1234__deg`
-1. `status__text__120__lidar__1234__null`
-1. `flag__text__120__lidar__1234__null`
-1. `wind_speed__avg__120__lidar__1234__m/s__flag` to show the notes that could be a type of flag for quality control
-1. `wind_direction__avg__120__lidar__1234__deg__note on algorithm` where there could be a note on the algorithm to determine the wind direction
+1. `wind_speed__avg__080__lidar__1234__m/s`
+1. `wind_speed__sd__080__lidar__1234__m/s`
+1. `wind_speed__max__080__lidar__1234__m/s`
+1. `wind_speed__min__080__lidar__1234__m/s`
+1. `wind_speed__ti__080__lidar__1234__m/s`
+1. `vertical_wind_speed__avg__080__lidar__1234__m/s`
+1. `wind_direction__avg__080__lidar__1234__deg`
+1. `status__text__080__lidar__1234__null`
+1. `flag__text__080__lidar__1234__null`
+1. `wind_speed__avg__080__lidar__1234__m/s__flag` to show the notes that could be a type of flag for quality control
+1. `wind_direction__avg__080__lidar__1234__deg__note on algorithm` where there could be a note on the algorithm to determine the wind direction
 
-1. `air_temperature__avg__2__thermometer__null__deg_C` serial number can be null if you don't know it
-1. `air_density__avg__2__calc__null__kg/m^3` example to show how this column is a calculated field
-1. `air_density__avg__2__calc__null__kg/m^3__A` and `air_density__avg__2__calc__null__kg/m^3__B` to show that the 'notes' can be used to distinguish between 2 identical column names
+1. `air_temperature__avg__002__thermometer__null__deg_C` serial number can be null if you don't know it
+1. `air_density__avg__002__calc__null__kg/m^3` example to show how this column is a calculated field
+1. `air_density__avg__002__calc__null__kg/m^3__A` and `air_density__avg__002__calc__null__kg/m^3__B` to show that the 'notes' can be used to distinguish between 2 identical column names
 
-1. `water_speed__avg__-5__adcp__4321__cm/s`
-1. `water_direction__avg__0__adcp__4321__deg`
-1. `water_temperature__avg__-1__adcp__4321__deg_C`
-1. `wave_period__avg__0__inertial_measurement_unit__xyz12__s`
-1. `wave_height__avg__0__inertial_measurement_unit__xyz12__m`
-1. `wave_maximum_height__max__0__inertial_measurement_unit__xyz12__m`
-1. `wave_direction__avg__0__inertial_measurement_unit__xyz12__deg`
+1. `water_speed__avg__-005__adcp__4321__cm/s`
+1. `water_direction__avg__000__adcp__4321__deg`
+1. `water_temperature__avg__-001__adcp__4321__deg_C`
+1. `wave_period__avg__000__inertial_measurement_unit__xyz12__s`
+1. `wave_height__avg__000__inertial_measurement_unit__xyz12__m`
+1. `wave_maximum_height__max__000__inertial_measurement_unit__xyz12__m`
+1. `wave_direction__avg__000__inertial_measurement_unit__xyz12__deg`
 
-1. `voltage__avg__2__lidar__1234__V`
-1. `counter__count__120__lidar__1234__null__packets in avg`
-1. `quality__quality__null__lidar__1234__%__proportion of packets with rain`
+1. `voltage__avg__002__lidar__1234__V`  
+1. `voltage__avg__002__voltmeter__null__V__fog_horn` using the notes to distinguish between voltage measured from a fog horn verses an aviation light or communications system.
+1. `counter__count__080__lidar__1234__null__packets_in_avg` and `quality__quality__null__lidar__1234__%__proportion_of_packets_with_rain` using the notes section to capture the 'packets' measured by ZX lidars.
+1. 
 
