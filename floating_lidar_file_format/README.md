@@ -114,22 +114,22 @@ When these variables are put together in a column name, to make it easier for pa
 use a double underscore ( __ ) to separate them.
 
 ```
-1. wind_speed__avg__080__lidar__1234__m/s
-2. wind_speed__sd__080__lidar__1234__m/s
+1. wind_speed__avg__070__lidar__1234__m/s
+2. wind_speed__sd__070__lidar__1234__m/s
 ```
 
 Column name examples
-1. `wind_speed__avg__080__lidar__1234__m/s`
-1. `wind_speed__sd__080__lidar__1234__m/s`
-1. `wind_speed__max__080__lidar__1234__m/s`
-1. `wind_speed__min__080__lidar__1234__m/s`
-1. `wind_speed__ti__080__lidar__1234__m/s`
-1. `vertical_wind_speed__avg__080__lidar__1234__m/s`
-1. `wind_direction__avg__080__lidar__1234__deg`
-1. `status__text__080__lidar__1234__null`
-1. `flag__text__080__lidar__1234__null`
-1. `wind_speed__avg__080__lidar__1234__m/s__flag` to show the notes that could be a type of flag for quality control
-1. `wind_direction__avg__080__lidar__1234__deg__note on algorithm` where there could be a note on the algorithm to determine the wind direction
+1. `wind_speed__avg__070__lidar__1234__m/s`
+1. `wind_speed__sd__070__lidar__1234__m/s`
+1. `wind_speed__max__070__lidar__1234__m/s`
+1. `wind_speed__min__070__lidar__1234__m/s`
+1. `wind_speed__ti__070__lidar__1234__m/s`
+1. `vertical_wind_speed__avg__070__lidar__1234__m/s`
+1. `wind_direction__avg__070__lidar__1234__deg`
+1. `status__text__070__lidar__1234__null`
+1. `flag__text__070__lidar__1234__null`
+1. `wind_speed__avg__070__lidar__1234__m/s__flag` to show the notes that could be a type of flag for quality control
+1. `wind_direction__avg__070__lidar__1234__deg__note on algorithm` where there could be a note on the algorithm to determine the wind direction
 
 1. `air_temperature__avg__002__thermometer__null__deg_C` serial number can be null if you don't know it
 1. `air_density__avg__002__calc__null__kg/m^3` example to show how this column is a calculated field
@@ -145,6 +145,6 @@ Column name examples
 
 1. `voltage__avg__002__lidar__1234__V`  
 1. `voltage__avg__002__voltmeter__null__V__fog_horn` using the notes to distinguish between voltage measured from a fog horn verses an aviation light or communications system.
-1. `counter__count__080__lidar__1234__null__packets_in_avg` and `quality__quality__null__lidar__1234__%__proportion_of_packets_with_rain` using the notes section to capture the 'packets' measured by ZX lidars.
+1. `counter__count__070__lidar__1234__null__packets_in_avg` and `quality__quality__null__lidar__1234__%__proportion_of_packets_with_rain` using the notes section to capture the 'packets' measured by ZX lidars.
 1. 
 
