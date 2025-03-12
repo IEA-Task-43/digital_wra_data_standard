@@ -1,0 +1,65 @@
+[tool.poetry]
+name = "digital_wra_data_standard"
+version = "0.0.1"
+description = ""
+authors = ["John Smith <john@example.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11, <4.0"
+pandas = "^2.2.3"
+requests = "^2.32.3"
+
+
+[tool.poetry.group.dev.dependencies]
+datamodel-code-generator = "^0.28.2"
+ruff = "^0.9.10"
+ipykernel = "^6.29.5"
+pytest = "^8.3.5"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.ruff]
+line-length = 120
+target-version = "py311"
+exclude = ["old"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "Q", "UP", "I", "N"]
+[tool.mypy]
+python_version = "3.11"
+ignore_missing_imports = true
+exclude = ["old"]
+disallow_untyped_defs = true
+
+[tool.poe.tasks]
+[tool.poe.tasks.lint]
+help = "Lint"
+sequence = [
+    { cmd = "poetry run ruff check ." },
+    { cmd = "poetry run mypy ." },
+]
+
+[tool.poe.tasks.fmt]
+help = "Format code"
+sequence = [
+    { cmd = "poetry run ruff format ." },
+    { cmd = "poetry run ruff check . --fix" },
+]
+
+[tool.poe.tasks.test]
+help = "Run tests"
+sequence = [
+    { cmd = "poetry run pytest tests" },
+]
+
+[tool.poe.tasks.check]
+help = "Check code"
+sequence = [
+    { ref = "fmt" },
+    { ref = "lint" },
+    { ref = "test" },
+]
