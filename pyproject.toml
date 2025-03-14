@@ -16,6 +16,7 @@ datamodel-code-generator = "^0.28.2"
 ruff = "^0.9.10"
 ipykernel = "^6.29.5"
 pytest = "^8.3.5"
+poethepoet = "^0.33.0"
 
 
 [build-system]
@@ -39,15 +40,15 @@ disallow_untyped_defs = true
 [tool.poe.tasks.lint]
 help = "Lint"
 sequence = [
-    { cmd = "poetry run ruff check ." },
-    { cmd = "poetry run mypy ." },
+    { cmd = "poetry run ruff check src tests" },
+    { cmd = "poetry run mypy src tests" },
 ]
 
 [tool.poe.tasks.fmt]
 help = "Format code"
 sequence = [
-    { cmd = "poetry run ruff format ." },
-    { cmd = "poetry run ruff check . --fix" },
+    { cmd = "poetry run ruff format src tests" },
+    { cmd = "poetry run ruff check src tests --fix" },
 ]
 
 [tool.poe.tasks.test]
