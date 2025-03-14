@@ -8,12 +8,12 @@ import re
 from datetime import date, datetime
 from enum import Enum
 
-from pydantic import BaseModel, ConfigDict, Field, RootModel, confloat, field_validator
+from pydantic import BaseModel, ConfigDict, Field, RootModel, field_validator
 
 
 class BaseModelWithHash(BaseModel):
-    def __hash__(self):
-        hash_tuple = ()
+    def __hash__(self) -> int:
+        hash_tuple: tuple = ()
         for value in self.__dict__.values():
             if isinstance(value, BaseModel):
                 continue
@@ -86,52 +86,6 @@ class Reanalysis(Enum):
     MERRA_2 = "MERRA-2"
     NCAR = "NCAR"
     Other = "Other"
-
-
-class MeasurementUnitsId(Enum):
-    m_s = "m/s"
-    cm_s = "cm/s"
-    mm_s = "mm/s"
-    mph = "mph"
-    knots = "knots"
-    deg = "deg"
-    deg_C = "deg_C"  # noqa: N815
-    deg_F = "deg_F"  # noqa: N815
-    K = "K"
-    field_ = "%"
-    mbar = "mbar"
-    dbar = "dbar"
-    hPa = "hPa"  # noqa: N815
-    atm = "atm"
-    mmHg = "mmHg"  # noqa: N815
-    inHg = "inHg"  # noqa: N815
-    kg_m_2 = "kg/m^2"
-    kg_m_3 = "kg/m^3"
-    V = "V"
-    mA = "mA"  # noqa: N815
-    A = "A"
-    ohm = "ohm"
-    Hz = "Hz"
-    mm = "mm"
-    m = "m"
-    s = "s"
-    W_m_2 = "W/m^2"
-    W = "W"
-    kW = "kW"  # noqa: N815
-    MW = "MW"
-    kWh = "kWh"  # noqa: N815
-    MWh = "MWh"
-    m_s_2 = "m/s^2"
-    lux = "lux"
-    dB = "dB"  # noqa: N815
-    L = "L"
-    g_L = "g/L"  # noqa: N815
-    g_kg = "g/kg"
-    ppt = "ppt"
-    psu = "psu"
-    S_m = "S/m"
-    field__1 = "-"
-    NoneType_None = None
 
 
 class StatisticTypeId(Enum):
@@ -378,6 +332,73 @@ class MeasurementType(Enum):
     other = "other"
 
 
+class MeasurementUnits(Enum):
+    m_s = "m/s"
+    cm_s = "cm/s"
+    mm_s = "mm/s"
+    mph = "mph"
+    knots = "knots"
+    deg = "deg"
+    deg_C = "deg_C"  # noqa: N815
+    deg_F = "deg_F"  # noqa: N815
+    K = "K"
+    field_ = "%"
+    mbar = "mbar"
+    dbar = "dbar"
+    hPa = "hPa"  # noqa: N815
+    atm = "atm"
+    mmHg = "mmHg"  # noqa: N815
+    inHg = "inHg"  # noqa: N815
+    kg_m_2 = "kg/m^2"
+    kg_m_3 = "kg/m^3"
+    V = "V"
+    mV = "mV"  # noqa: N815
+    mA = "mA"  # noqa: N815
+    A = "A"
+    ohm = "ohm"
+    Hz = "Hz"  # noqa: N815
+    mm = "mm"
+    m = "m"
+    s = "s"
+    W_m_2 = "W/m^2"  # noqa: N815
+    W = "W"
+    kW = "kW"  # noqa: N815
+    MW = "MW"  # noqa: N815
+    kWh = "kWh"  # noqa: N815
+    MWh = "MWh"  # noqa: N815
+    m_s_2 = "m/s^2"
+    lux = "lux"
+    dB = "dB"  # noqa: N815
+    L = "L"
+    g_L = "g/L"  # noqa: N815
+    g_kg = "g/kg"
+    ppt = "ppt"
+    psu = "psu"
+    S_m = "S/m"
+    km_h = "km/h"
+    field_m_s__V = "(m/s)/V"  # noqa: N815
+    field_m_s__mV = "(m/s)/mV"  # noqa: N815
+    field_m_s__mA = "(m/s)/mA"  # noqa: N815
+    field_m_s__Hz = "(m/s)/Hz"  # noqa: N815
+    field_m_s___ = "(m/s)/-"
+    field_m_s___cm_s_ = "(m/s)/(cm/s)"
+    field_m_s___km_h_ = "(m/s)/(km/h)"
+    field_m_s__mph = "(m/s)/mph"
+    field_m_s__knots = "(m/s)/knots"
+    field_m_s___m_s_ = "(m/s)/(m/s)"
+    mbar_V = "mbar/V"  # noqa: N815
+    mbar_mV = "mbar/mV"  # noqa: N815
+    hPa_V = "hPa/V"  # noqa: N815
+    hPa_mV = "hPa/mV"  # noqa: N815
+    deg_C_V = "deg_C/V"  # noqa: N815
+    deg_C_mV = "deg_C/mV"  # noqa: N815
+    field__V = "%/V"  # noqa: N815
+    field__mV = "%/mV"  # noqa: N815
+    field_1 = "1"
+    field__1 = "-"
+    NoneType_None = None
+
+
 class OrientationReference(Enum):
     magnetic_north = "magnetic_north"
     true_north = "true_north"
@@ -576,11 +597,13 @@ class VerticalProfilerProperty(BaseModelWithHash):
         examples=[0.5, 1],
         title="Device Datum Plane Height [m]",
     )
-    height_reference_id: HeightReference | None = "ground_level"
-    device_orientation_deg: confloat(ge=0.0, le=360.0) | None = Field(
+    height_reference_id: HeightReference | None = HeightReference.ground_level
+    device_orientation_deg: float | None = Field(
         None,
         description="The orientation that the remote sensing device is installed relative to north.",
         title="Device Orientation [deg]",
+        ge=0.0,
+        le=360.0,
     )
     orientation_reference_id: OrientationReference | None = None
     device_vertical_orientation: DeviceVerticalOrientation | None = Field(
@@ -616,6 +639,23 @@ class LidarConfigItem(BaseModelWithHash):
             "false (for no flow corrections applied)",
         ],
         title="Flow Corrections Applied",
+    )
+    logger_stated_device_datum_plane_height_m: float | None = Field(
+        None,
+        description="Height, in meters, of the datum plane as programmed into the logger where the datum feature is "
+        "defined here: http://data.windenergy.dtu.dk/ontologies/view/ontolidar/en/page/DatumFeature . For "
+        "lidars the datum feature is usually the window and for sodars it is usually the base of the "
+        "device. These datum plane heights are also usually referred to as above ground level however it "
+        "may be above sea level or above a platform level.",
+        examples=[0.6, 1],
+        title="Logger Stated Device Datum Plane Height",
+    )
+    logger_stated_device_orientation_deg: float | None = Field(
+        None,
+        description="Device orientation relative to north, in degrees, as programmed into the logger.",
+        title="Logger Stated Device Orientation Deg",
+        ge=0.0,
+        le=360.0,
     )
     date_from: datetime | None = Field(
         None,
@@ -817,7 +857,7 @@ class LoggerMeasurementConfigItem(BaseModelWithHash):
         "1/slope with zero for offset.",
         title="Logger Sensitivity",
     )
-    measurement_units_id: MeasurementUnitsId | None = Field(
+    measurement_units_id: MeasurementUnits | None = Field(
         None,
         description="The measurement units of the values the sensor records.",
         title="Measurement Units",
@@ -840,11 +880,13 @@ class LoggerMeasurementConfigItem(BaseModelWithHash):
         description="The connection channel the sensor is wired into on the logger.",
         title="Connection Channel",
     )
-    logger_stated_boom_orientation_deg: confloat(ge=0.0, le=360.0) | None = Field(
+    logger_stated_boom_orientation_deg: float | None = Field(
         None,
         description="The boom orientation of the horizontal boom the sensor is mounted on as programmed into the "
         "logger.",
         title="Logger Stated Boom Orientation [deg]",
+        ge=0.0,
+        le=360.0,
     )
     date_from: DateFrom
     date_to: DateTo | None
@@ -865,15 +907,30 @@ class CalibrationItem(BaseModelWithHash):
         description="The slope programmed into the logger.",
         title="Calibration Slope",
     )
+    slope_unit: MeasurementUnits | None = Field(
+        None,
+        description="The unit for the calibration slope.",
+        title="Calibration Slope Unit",
+    )
     offset: float | None = Field(
         None,
         description="The offset programmed into the logger.",
         title="Calibration Offset",
     )
+    offset_unit: MeasurementUnits | None = Field(
+        None,
+        description="The unit for the calibration offset.",
+        title="Calibration Offset Unit",
+    )
     sensitivity: float | None = Field(
         None,
         description="The sensitivity programmed into the logger.",
         title="Calibration Sensitivity",
+    )
+    sensitivity_unit: MeasurementUnits | None = Field(
+        None,
+        description="The unit for the calibration sensitivity.",
+        title="Calibration Sensitivity Unit",
     )
     report_file_name: str | None = Field(
         None,
@@ -1019,7 +1076,7 @@ class SensorItem(BaseModelWithHash):
     )
 
     @field_validator("classification")
-    def validate_classification(cls, value):  # noqa: N805
+    def validate_classification(cls, value: str) -> str:  # noqa: N805
         pattern = re.compile(r"^[0-9]\.[0-9][ABCDS]$")
         if value and not pattern.match(value):
             raise ValueError("Invalid classification format")
@@ -1040,48 +1097,59 @@ class MountingArrangementItem(BaseModelWithHash):
         "mast or a pair of anemometers mounted in the goal post configuration.",
         title="Mounting Type",
     )
-    boom_orientation_deg: confloat(ge=0.0, le=360.0) | None = Field(
+    boom_orientation_deg: float | None = Field(
         None,
         description="The boom orientation of the horizontal boom the sensor is mounted on.",
         title="Boom Orientation [deg]",
+        ge=0.0,
+        le=360.0,
     )
-    vane_dead_band_orientation_deg: confloat(ge=0.0, le=360.0) | None = Field(
+    vane_dead_band_orientation_deg: float | None = Field(
         None,
         description="The wind vane dead band orientation.",
         title="Vane Dead Band Orientation [deg]",
+        ge=0.0,
+        le=360.0,
     )
     orientation_reference_id: OrientationReference | None = None
-    tilt_angle_deg: confloat(ge=-90.0, le=90.0) | None = Field(
+    tilt_angle_deg: float | None = Field(
         None,
         description="The tilt angle of either the vertical upstand the sensor is mounted on.",
         title="Tilt Angle [deg]",
+        ge=-90.0,
+        le=90.0,
     )
     boom_oem: str | None = Field(None, description="The boom OEM.", title="Boom OEM")
     boom_model: str | None = Field(None, description="The boom model.", title="Boom Model")
-    upstand_height_mm: confloat(ge=0.0) | None = Field(
+    upstand_height_mm: float | None = Field(
         None,
         description="The height, measured in millimeters, of the upstand.",
         title="Upstand Height [mm]",
+        ge=0.0,
     )
-    upstand_diameter_mm: confloat(ge=0.0) | None = Field(
+    upstand_diameter_mm: float | None = Field(
         None,
         description="The diameter, measured in millimeters, of the upstand.",
         title="Upstand Diameter [mm]",
+        ge=0.0,
     )
-    boom_diameter_mm: confloat(ge=0.0) | None = Field(
+    boom_diameter_mm: float | None = Field(
         None,
         description="The diameter, measured in millimeters, of the boom.",
         title="Boom Diameter [mm]",
+        ge=0.0,
     )
-    boom_length_mm: confloat(ge=0.0) | None = Field(
+    boom_length_mm: float | None = Field(
         None,
         description="The length, measured in millimeters, of the boom.",
         title="Boom Length [mm]",
+        ge=0.0,
     )
-    distance_from_mast_to_sensor_mm: confloat(ge=0.0) | None = Field(
+    distance_from_mast_to_sensor_mm: float | None = Field(
         None,
         description="The distance, measured in millimeters, of edge of the mast to the centre of the sensor.",
         title="Distance Mast to Sensor [mm]",
+        ge=0.0,
     )
     date_from: DateFrom
     date_to: DateTo | None
@@ -1096,11 +1164,13 @@ class InterferenceStructure(BaseModelWithHash):
         description="The type of structure that is causing an interference in the sensor's measurements.",
         title="Structure Type",
     )
-    orientation_from_mast_centre_deg: confloat(ge=0.0, le=360.0) | None = Field(
+    orientation_from_mast_centre_deg: float | None = Field(
         None,
         description="The orientation of the interference structure, relative to the centre of the mast, causing an "
         "impact on the sensor's measurements.",
         title="Orientation from Mast Centre [deg]",
+        ge=0.0,
+        le=360.0,
     )
     orientation_reference_id: OrientationReference | None = None
     distance_from_mast_centre_mm: float | None = Field(
@@ -1139,7 +1209,7 @@ class MeasurementPointItem(BaseModelWithHash):
         "do not yet know the height please use null.",
         title="Height [m]",
     )
-    height_reference_id: HeightReference | None = "ground_level"
+    height_reference_id: HeightReference | None = HeightReference.ground_level
     notes: Notes | None = None
     update_at: UpdateAt | None = None
     logger_measurement_config: set[LoggerMeasurementConfigItem] = Field(
@@ -1178,7 +1248,7 @@ class MeasurementLocationItem(BaseModelWithHash):
         examples=["AName_MM1"],
         title="Name",
     )
-    latitude_ddeg: confloat(ge=-90.0, le=90.0) = Field(
+    latitude_ddeg: float = Field(
         ...,
         description="Latitude coordinate in the Geographic Coordinate System using the WGS84 reference coordinate "
         "system, [EPSG:4326](https://epsg.io/4326). Unit of measure is in decimal degrees. Latitude lines "
@@ -1186,8 +1256,10 @@ class MeasurementLocationItem(BaseModelWithHash):
         "degrees at the north pole.",
         examples=[52.973],
         title="Latitude [ddeg]",
+        ge=-90.0,
+        le=90.0,
     )
-    longitude_ddeg: confloat(ge=-180.0, le=180.0) = Field(
+    longitude_ddeg: float = Field(
         ...,
         description="Longitude coordinate in the Geographic Coordinate System using the WGS84 reference coordinate "
         "system, [EPSG:4326](https://epsg.io/4326). Unit of measure is in decimal degrees. Longitude "
@@ -1196,6 +1268,8 @@ class MeasurementLocationItem(BaseModelWithHash):
         "you move westward.",
         examples=[-9.431],
         title="Longitude [ddeg]",
+        ge=-180.0,
+        le=180.0,
     )
     measurement_station_type_id: MeasurementStationTypeId = Field(
         ...,
@@ -1297,7 +1371,7 @@ class IeaWindResourceAssessmentDataModel(BaseModel):
     )
 
     @field_validator("version")
-    def validate_classification(cls, value):  # noqa: N805
+    def validate_version(cls, value: str) -> str:  # noqa: N805
         pattern = re.compile(r"^([0-9]{1,2})[.]([0-9]{1,2})[.]([0-9]{1,2})-([0-9]{4})[.]([0-9]{2})$")
         if value and not pattern.match(value):
             raise ValueError("Invalid version format")
