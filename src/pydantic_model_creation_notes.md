@@ -18,7 +18,7 @@ This model was created by making use the [pydantic data model generator](https:/
 The following command was used to generate the model run from the root of this repo:
 
 ```shell
-poetry run datamodel-codegen --input ./schema/iea43_wra_data_model.schema.json --output ./model/iea43_wra_data_model.py --input-file-type jsonschema
+poetry run datamodel-codegen --input ./schema/iea43_wra_data_model.schema.json --output ./src/iea43_wra_data_model.py --input-file-type jsonschema
 ```
 
 At the time of writing, the generated model is not perfect and needed some manual updates to make it work correctly.
@@ -31,6 +31,7 @@ These updates are detailed below:
 - Added `BaseModelWithHash` class that adds a `hash` method to the model attributes with values that are not an instance of `BaseModel` or a `Set` and added this to all classes that caused unhashable type errors
 - change `classification` on `SensorItem` to string type and add a validator to ensure the string meats the required format
 - change `version` on `IeaWindResourceAssessmentDataModel` to string type and add a validator to ensure the string meats the required format
+- removed the use of `confloat` and replaced with `Field` annotation to pass linting and conform with [pydantic 3.0](https://docs.pydantic.dev/latest/api/types/#pydantic.types.confloat)
 
 The code linting and formatting tool [ruff](https://docs.astral.sh/ruff/) was used to ensure the code was formatted correctly.
 
@@ -54,6 +55,20 @@ To run the tests, use the following command from the root of this repo:
 ```shell
 poetry run pytest
 ```
+
+### Updating the 
+
+If the JSON schema is updated, the pydantic data model will need be updated. The recomended way of doing this is to 
+create a new pydantic model as `iea43_wra_data_model_updated.py` using the code genorator and then update the original 
+by comparing the two models and bringing over any changes. A diff tool can be used to help with this process.
+
+The following command can be used to generate the updated model:
+
+```shell
+poetry run datamodel-codegen --input ./schema/iea43_wra_data_model.schema.json --output ./src/iea43_wra_data_model_updated.py --input-file-type jsonschema
+```
+
+The updated model can then be tested using the `pytest` testing framework as described above.
 
 
 
