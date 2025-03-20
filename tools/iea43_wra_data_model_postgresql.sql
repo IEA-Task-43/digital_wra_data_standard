@@ -190,6 +190,7 @@ INSERT INTO measurement_type (id) VALUES
     ('azimuth'),
     ('water_level'),
     ('depth'),
+    ('fuel_level'),
     ('timestamp'),
     ('obukhov_length'),
     ('other');
@@ -315,6 +316,8 @@ INSERT INTO sensor_type (id) VALUES
     ('pth'),
     ('lidar'),
     ('sodar'),
+    ('fuel_gauge'),
+    ('calc'),
     ('other');
 
 INSERT INTO mounting_type (id) VALUES
