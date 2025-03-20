@@ -156,5 +156,6 @@ Column name examples
 1. `voltage__avg__002__lidar__1234__V`  
 1. `voltage__avg__002__voltmeter__null__V__fog_horn` using the notes to distinguish between voltage measured from a fog horn verses an aviation light or communications system.
 1. `counter__count__070__lidar__1234__null__packets_in_avg` and `quality__quality__null__lidar__1234__%__proportion_of_packets_with_rain` using the notes section to capture the 'packets' measured by ZX lidars.
+1. `water_speed__avg__-001__adcp__1234__m/s__meas_distance_3_m` in cases where an ADCP is mounted horizontally. The notes part contains the distance out from the ADCP it is measuring. Horizontal measurements like this, and nacelle mounted or scanning lidars, are a shortcoming of the data model and so this is a strongly recommended way to handle these.
 1. 
 
