@@ -1,0 +1,68 @@
+name: Python Model Build, Lint, and Test
+
+on:
+  push:
+    branches:
+      - main
+    paths-ignore:
+      - '**.md'
+  pull_request:
+  workflow_dispatch:
+
+env:
+  PYTHON_VERSION: '3.11'
+
+jobs:
+  test:
+    timeout-minutes: 10
+    name: Build, Lint, and Test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        if: github.event_name == 'pull_request' || github.event_name == 'pull_request_target'
+        name: Checkout
+        with:
+          fetch-depth: 1  # Shallow Clone
+          lfs: "true"
+          ref: refs/pull/${{ github.event.number }}/merge
+
+      - uses: actions/checkout@v3
+        if: github.event_name != 'pull_request' && github.event_name != 'pull_request_target'
+        name: Checkout
+        with:
+          fetch-depth: 1  # Shallow Clone
+          lfs: "true"
+
+      - name: Set up Python ${{ env.PYTHON_VERSION }}
+        uses: actions/setup-python@v5
+        id: install-python
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+
+      - name: Bootstrap Poetry
+        shell: bash
+        run: |
+          curl -sSL https://install.python-poetry.org | python - -y
+
+      - name: Configure Poetry
+        shell: bash
+        run: |
+          poetry config virtualenvs.in-project true
+
+      - name: Set up cache
+        uses: actions/cache@v4
+        id: cache
+        with:
+          path: |
+            .venv
+            ~/.cache/pypoetry
+          key: venv-${{ runner.os }}-${{ steps.install-python.outputs.python-version }}-${{ hashFiles('**/poetry.lock') }}
+
+      - name: Install dependencies from pyproject.toml
+        run: poetry install
+
+      - name: Run lint tests
+        run: poetry run poe lint
+
+      - name: Test with pytest
+        run: poetry run poe test
