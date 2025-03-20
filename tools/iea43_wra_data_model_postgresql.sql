@@ -195,6 +195,7 @@ INSERT INTO measurement_type (id) VALUES
     ('water_level'),
     ('depth'),
     ('fuel_level'),
+    ('turbidity'),
     ('timestamp'),
     ('obukhov_length'),
     ('other');
@@ -322,6 +323,7 @@ INSERT INTO sensor_type (id) VALUES
     ('sodar'),
     ('fuel_gauge'),
     ('microwave_temperature_profiler'),
+    ('nephelometer'),
     ('calc'),
     ('other');
 
