@@ -1479,6 +1479,7 @@
                           "lidar",
                           "sodar",
                           "fuel_gauge",
+                          "microwave_temperature_profiler",
                           "calc",
                           "other",
                           null

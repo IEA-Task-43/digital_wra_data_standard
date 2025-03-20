@@ -321,6 +321,7 @@ INSERT INTO sensor_type (id) VALUES
     ('lidar'),
     ('sodar'),
     ('fuel_gauge'),
+    ('microwave_temperature_profiler'),
     ('calc'),
     ('other');
 
