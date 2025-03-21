@@ -137,6 +137,8 @@ class SensorTypeId(Enum):
     pth = "pth"
     lidar = "lidar"
     sodar = "sodar"
+    fuel_gauge = "fuel_gauge"
+    calc = "calc"
     other = "other"
     NoneType_None = None
 
@@ -327,6 +329,7 @@ class MeasurementType(Enum):
     azimuth = "azimuth"
     water_level = "water_level"
     depth = "depth"
+    fuel_level = "fuel_level"
     timestamp = "timestamp"
     obukhov_length = "obukhov_length"
     other = "other"
