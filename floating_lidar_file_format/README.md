@@ -84,6 +84,7 @@ physical installation or their settings programmed into the logger.
 To help with explaining and validating the header JSON, a JSON Schema was developed. 
 This is the blueprint for how to structure the JSON and also includes constraints ensuring consistency. 
 This JSON Schema can be found here:
+
 [floating_lidar_file_format_header_schema.json](./floating_lidar_file_format_header_schema.json).
 
 Below is an example header showing only the minimal metadata that is required:
@@ -98,6 +99,7 @@ Below is an example header showing only the minimal metadata that is required:
 }
 ```
 A more complete sample file with logger configs has been developed and can be found here: 
+
 [floating_lidar_file_format.csv](./floating_lidar_file_format.csv).
 
 ## 5 Timeseries data
@@ -206,4 +208,5 @@ X represents the distance out from the device that it is measuring in meters. Ex
 ## 6 Demo file
 An example of a complete file can be found below. 
 Please note that the filename does not conform to the recommendations outlined here. 
+
 [floating_lidar_file_format.csv](./floating_lidar_file_format.csv).
