@@ -128,7 +128,7 @@ The WRA Data Model uses 'snake case' for all the variables which involves a sing
 When these variables are put together in a column name, to make it easier for parsers to identify each variable it is required 
 to use a double underscore ( __ ) to separate them. 
 
-Column name examples
+Column name examples:
 1. `wind_speed__avg__070__lidar__1234__m/s`
 1. `wind_speed__sd__070__lidar__1234__m/s`
 1. `wind_speed__max__070__lidar__1234__m/s`
@@ -138,13 +138,6 @@ Column name examples
 1. `wind_direction__avg__070__lidar__1234__deg`
 1. `status__text__070__lidar__1234__null`
 1. `flag__text__070__lidar__1234__null`
-1. `wind_speed__avg__070__lidar__1234__m/s__flag` to show the notes that could be a type of flag for quality control
-1. `wind_direction__avg__070__lidar__1234__deg__note on algorithm` where there could be a note on the algorithm to determine the wind direction
-
-1. `air_temperature__avg__002__thermometer__null__deg_C` serial number can be null if you don't know it
-1. `air_density__avg__002__calc__null__kg/m^3` example to show how this column is a calculated field
-1. `air_density__avg__002__calc__null__kg/m^3__A` and `air_density__avg__002__calc__null__kg/m^3__B` to show that the 'notes' can be used to distinguish between 2 identical column names
-
 1. `water_speed__avg__-005__adcp__4321__cm/s`
 1. `water_direction__avg__000__adcp__4321__deg`
 1. `water_temperature__avg__-001__adcp__4321__deg_C`
@@ -152,10 +145,45 @@ Column name examples
 1. `wave_height__avg__000__inertial_measurement_unit__xyz12__m`
 1. `wave_maximum_height__max__000__inertial_measurement_unit__xyz12__m`
 1. `wave_direction__avg__000__inertial_measurement_unit__xyz12__deg`
+1. `air_density__avg__002__calc__null__kg/m^3`
+1. `voltage__avg__002__lidar__1234__V` - voltage measured by the lidar
 
-1. `voltage__avg__002__lidar__1234__V`  
-1. `voltage__avg__002__voltmeter__null__V__fog_horn` using the notes to distinguish between voltage measured from a fog horn verses an aviation light or communications system.
-1. `counter__count__070__lidar__1234__null__packets_in_avg` and `quality__quality__null__lidar__1234__%__proportion_of_packets_with_rain` using the notes section to capture the 'packets' measured by ZX lidars.
-1. `water_speed__avg__-001__adcp__1234__m/s__meas_distance_3_m` in cases where an ADCP is mounted horizontally. The notes part contains the distance out from the ADCP it is measuring. Horizontal measurements like this, and nacelle mounted or scanning lidars, are a shortcoming of the data model and so this is a strongly recommended way to handle these.
-1. 
+It is not possible to capture all possible scenarios that might occur on a floating lidar device. Therefore, we have
+outlined some possible examples to deal with these.
+
+Using the notes could be a way to indicate a **flag** for **quality control** column that users may want to include in 
+the timeseries that is related to each measurement column. Example: `wind_speed__avg__070__lidar__1234__m/s__flag` or 
+`wind_speed__avg__070__lidar__1234__m/s__qc`.
+
+In some cases the floating lidar OEM may want to inform of a type or different **algorithm** that may have been used to
+derive a particular measurement like a wind_direction. The notes part can again be used for this: 
+`wind_direction__avg__070__lidar__1234__deg__note on algorithm`.
+
+In a lot of cases the `serial_number` wouldn't be known for some less important sensors. In this case it is ok 
+to use null instead: `air_temperature__avg__002__thermometer__null__deg_C`.
+
+There may be cases where there are duplicate measurements and so there needs to be a way to distinguish between them
+so there are no duplicate column names in the timeseries. This can happen if there are redundant sensors mounted at
+the same height and where the serial numbers are not know or calculated variables where there is no direct sensor. 
+Or it is a voltage measurement that needs distinguishing between the fog horn and aviation light.
+The notes can again be used to distinguish. Examples:
+
+- `air_temperature__avg__002__thermometer__null__deg_C__starboard` and `air_temperature__avg__002__thermometer__null__deg_C__port`
+- `air_density__avg__002__calc__null__kg/m^3__A` and `air_density__avg__002__calc__null__kg/m^3__B`
+- `voltage__avg__002__voltmeter__null__V__fog_horn` and `voltage__avg__002__voltmeter__null__V__aviation_light`
+
+For ZX Lidars the timeseries includes "packets" measurements. To account for these we recommend using the notes to
+identify these:
+
+- `counter__count__070__lidar__1234__null__packets_in_avg` for the packets in average measured at the 70 m level and 
+- `quality__quality__null__lidar__1234__%__proportion_of_packets_with_rain` for the proportion of packets with rain which is not related to a specific height.
+
+For ADCPs that are mounted horizontally to measure the water speed in front, or out from, the buoy the WRA Data Model 
+cannot yet handle this. This is similar to forward-looking nacelle mounted lidars and scanning lidars. In this
+situation we strongly recommend using the notes section with the text "meas_distance_X_m" where the X represents the 
+distance out from the device that it is measuring. Examples of this are:
+
+- `water_speed__avg__-001__adcp__1234__m/s__meas_distance_3_m` 
+- `water_speed__avg__-001__adcp__1234__m/s__meas_distance_4_m`
+- `water_speed__avg__-001__adcp__1234__m/s__meas_distance_5_m`
 
