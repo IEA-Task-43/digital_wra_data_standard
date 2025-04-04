@@ -100,7 +100,7 @@ Below is an example header showing only the minimal metadata that is required:
 ```
 A more complete sample file with logger configs has been developed and can be found here: 
 
-[floating_lidar_file_format.csv](./floating_lidar_file_format.csv).
+[MyOEM__Site X - FLS 01__123456__2025-03-20T00_00_00__2025-03-20T23_50_00__demo_file.csv](./MyOEM__Site X - FLS 01__123456__2025-03-20T00_00_00__2025-03-20T23_50_00__demo_file.csv).
 
 ## 5 Timeseries data
 The format of the timeseries part of the file is structured as comma separated values (CSV).
@@ -209,4 +209,4 @@ X represents the distance out from the device that it is measuring in meters. Ex
 An example of a complete file can be found below. 
 Please note that the filename does not conform to the recommendations outlined here. 
 
-[floating_lidar_file_format.csv](./floating_lidar_file_format.csv).
+[MyOEM__Site X - FLS 01__123456__2025-03-20T00_00_00__2025-03-20T23_50_00__demo_file.csv](./MyOEM__Site X - FLS 01__123456__2025-03-20T00_00_00__2025-03-20T23_50_00__demo_file.csv).
