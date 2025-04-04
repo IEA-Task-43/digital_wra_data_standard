@@ -98,9 +98,10 @@ Below is an example header showing only the minimal metadata that is required:
   "measurement_station_type": "floating_lidar"
 }
 ```
-A more complete sample file with logger configs has been developed and can be found here: 
+A more complete sample file with logger configs has been developed and can be found in the same directory as this
+ReadMe. It is labelled:
 
-[MyOEM__Site X - FLS 01__123456__2025-03-20T00_00_00__2025-03-20T23_50_00__demo_file.csv](./MyOEM__Site X - FLS 01__123456__2025-03-20T00_00_00__2025-03-20T23_50_00__demo_file.csv).
+**MyOEM__Site X - FLS 01__123456__2025-03-20T00_00_00__2025-03-20T23_50_00__demo_file.csv**
 
 ## 5 Timeseries data
 The format of the timeseries part of the file is structured as comma separated values (CSV).
@@ -206,7 +207,6 @@ X represents the distance out from the device that it is measuring in meters. Ex
 - `water_speed__avg__-001__adcp__1234__m/s__meas_distance_5_m`
 
 ## 6 Demo file
-An example of a complete file can be found below. 
-Please note that the filename does not conform to the recommendations outlined here. 
+An example of a complete file can be found in the same directory as this ReadMe. It is labelled:
 
-[MyOEM__Site X - FLS 01__123456__2025-03-20T00_00_00__2025-03-20T23_50_00__demo_file.csv](./MyOEM__Site X - FLS 01__123456__2025-03-20T00_00_00__2025-03-20T23_50_00__demo_file.csv).
+**MyOEM__Site X - FLS 01__123456__2025-03-20T00_00_00__2025-03-20T23_50_00__demo_file.csv**
