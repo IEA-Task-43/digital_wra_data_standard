@@ -85,7 +85,7 @@ To help with explaining and validating the header JSON, a JSON Schema was develo
 This is the blueprint for how to structure the JSON and also includes constraints ensuring consistency. 
 This JSON Schema can be found here:
 
-[floating_lidar_file_format_header_schema.json](./floating_lidar_file_format_header_schema.json).
+[floating_lidar_file_format_header_schema.json](./floating_lidar_file_format_header.schema.json).
 
 Below is an example header showing only the minimal metadata that is required:
 ```json
