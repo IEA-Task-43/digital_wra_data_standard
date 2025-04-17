@@ -195,6 +195,7 @@ INSERT INTO measurement_type (id) VALUES
     ('depth'),
     ('fuel_level'),
     ('turbidity'),
+    ('visibility_in_air'),
     ('timestamp'),
     ('obukhov_length'),
     ('other');

@@ -42,6 +42,7 @@ Additional labels for pre-release and build metadata are available as extensions
    1. `roll` (Discussion [#268](https://github.com/IEA-Task-43/digital_wra_data_standard/discussions/268#discussioncomment-12266281))
    1. `heading` (Discussion [#268](https://github.com/IEA-Task-43/digital_wra_data_standard/discussions/268#discussioncomment-12266281))
    1. `turbidity` (Discussion [#268](https://github.com/IEA-Task-43/digital_wra_data_standard/discussions/268#discussioncomment-12266281))
+   1. `visibility_in_air` (Discussion [#268](https://github.com/IEA-Task-43/digital_wra_data_standard/discussions/268#discussioncomment-12266281))
 
 ## [1.3.0-2024.03]
 

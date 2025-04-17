@@ -163,6 +163,7 @@
         "depth",
         "fuel_level",
         "turbidity",
+        "visibility_in_air",
         "timestamp",
         "obukhov_length",
         "other"
@@ -237,6 +238,7 @@
         "azimuth (is the angle of the sun around the horizon, in the northern hemisphere this is usually measured from north and increasing eastward whereas in the southern hemisphere it can be measured from the south and increasing westward)",
         "water_level (is the height of the sea surface above the sea floor. In CF Conventions this is equivalent, but opposite in respect of their point of reference, to 'sea_floor_depth_below_sea_surface'.)",
         "turbidity (from CF Conventions for 'sea_water_turbidity' the turbidity is a dimensionless quantity which is expressed in NTU (Nephelometric Turbidity Units). Turbidity expressed in NTU is the proportion of white light scattered back to a transceiver by the particulate load in a body of water, represented on an arbitrary scale referenced against measurements made in the laboratory on aqueous suspensions of formazine beads.)",
+        "visibility_in_air (from CF Conventions for 'visibility_in_air') the visibility is the distance at which something can be seen with Canonical Units of 'm'.)",
         "depth (the vertical distance below a particular reference e.g. sea level.)",
         "timestamp (the timestamp of when a measurement value was recorded)",
         "obukhov_length (a parameter with a dimension of length which, when used to scale the height above ground, gives a dimensionless stability parameter.)",
