@@ -183,7 +183,6 @@ INSERT INTO measurement_type (id) VALUES
     ('tilt_z'),
     ('pitch'),
     ('roll'),
-    ('yaw'),
     ('heading'),
     ('u'),
     ('v'),
