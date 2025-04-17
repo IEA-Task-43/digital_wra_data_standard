@@ -313,6 +313,7 @@ INSERT INTO sensor_type (id) VALUES
     ('illuminance_sensor'),
     ('compass'),
     ('solar_compass'),
+    ('wave_buoy'),
     ('inertial_measurement_unit'),
     ('adcp'),
     ('altimeter'),
