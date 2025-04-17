@@ -204,7 +204,7 @@ Examples:
 - Eolos__Site X__FLS 01__2024-01T01_00_00_00__2024-01T01_23_50_00__10min.csv
 
 Please remember to use compatible characters with file systems, such as Windows, in the free-form text parts. 
-For example the Forward Slash (/) sign is not a Windows compatible character.
+For example the Forward Slash (/) is not a Windows compatible character.
 
 ## 6 Demo file
 An example of a complete file can be found in the same directory as this ReadMe. It is labelled:
