@@ -1482,6 +1482,7 @@
                           "fuel_gauge",
                           "microwave_temperature_profiler",
                           "nephelometer",
+                          "transmissometer",
                           "calc",
                           "other",
                           null
