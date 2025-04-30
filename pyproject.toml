@@ -43,6 +43,7 @@ disallow_untyped_defs = true
 help = "Lint"
 sequence = [
     { cmd = "poetry run ruff check src tests" },
+    { cmd = "poetry run ruff format --check src tests" },
     { cmd = "poetry run mypy src tests" },
 ]
 
