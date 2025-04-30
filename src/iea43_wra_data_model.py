@@ -5,22 +5,32 @@
 from __future__ import annotations
 
 import re
+import typing
 from datetime import date, datetime
 from enum import Enum
+from uuid import UUID
 
 from pydantic import BaseModel, ConfigDict, Field, RootModel, field_validator
+
+
+def get_hash_tuple(value: typing.Any, hash_tuple: tuple) -> tuple:
+    if isinstance(value, typing.Hashable):
+        hash_tuple += (value,)
+    elif isinstance(value, BaseModel):
+        hash_tuple += (value.model_dump(),)
+    elif isinstance(value, set):
+        for item in value:
+            get_hash_tuple(item, hash_tuple)
+    else:
+        raise TypeError(f"Cannot hash {type(value)}. Please ensure that all fields are hashable.")
+    return hash_tuple
 
 
 class BaseModelWithHash(BaseModel):
     def __hash__(self) -> int:
         hash_tuple: tuple = ()
         for value in self.__dict__.values():
-            if isinstance(value, BaseModel):
-                continue
-            elif isinstance(value, set):
-                continue
-            else:
-                hash_tuple += (value,)
+            hash_tuple = get_hash_tuple(value, hash_tuple)
         return hash((type(self),) + hash_tuple)
 
 
@@ -421,8 +431,7 @@ class HeightReference(Enum):
 
 class MastSectionGeometryItem(BaseModelWithHash):
     model_config = ConfigDict(extra="allow")
-    # TODO: add validation for uuid and maybe add constructor to generate uuid
-    uuid: str | None = Field(
+    uuid: UUID | None = Field(
         None,
         description="The unique id to relate this mast section to the mounting arrangement. A UUID can be generated "
         "here https://www.uuidgenerator.net/",
@@ -535,7 +544,7 @@ class MastSectionGeometryItem(BaseModelWithHash):
     update_at: UpdateAt | None = None
 
 
-class MastProperties(BaseModel):
+class MastProperties(BaseModelWithHash):
     model_config = ConfigDict(extra="allow")
     mast_geometry_id: MastGeometryId | None = Field(
         None,
@@ -1088,7 +1097,7 @@ class SensorItem(BaseModelWithHash):
 
 class MountingArrangementItem(BaseModelWithHash):
     model_config = ConfigDict(extra="forbid")
-    mast_section_geometry_uuid: str | None = Field(
+    mast_section_geometry_uuid: UUID | None = Field(
         None,
         description="The uuid to link this Measurement Point's mounting arrangement to the Mast Section Geometry. "
         "A UUID can be generated here https://www.uuidgenerator.net/",
@@ -1237,7 +1246,7 @@ class MeasurementPointItem(BaseModelWithHash):
 
 class MeasurementLocationItem(BaseModelWithHash):
     model_config = ConfigDict(extra="forbid")
-    uuid: str | None = Field(
+    uuid: UUID | None = Field(
         None,
         description="The unique identifier of the measurement location in the UUID format. A UUID can be generated "
         "here https://www.uuidgenerator.net/",
