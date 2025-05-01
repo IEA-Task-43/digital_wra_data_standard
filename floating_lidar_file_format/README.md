@@ -90,7 +90,7 @@ This JSON Schema can be found here:
 Below is an example header showing only the minimal metadata that is required:
 ```json
 {
-  "format_version": "1.0.0-2025.03",
+  "format_version": "1.0.0-2025.05",
   "station_serial_number": "123456",
   "name": "Site X - FLS 01",
   "latitude_ddeg": 53.5017,
