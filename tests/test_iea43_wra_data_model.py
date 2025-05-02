@@ -3,7 +3,7 @@ import os
 
 import pytest
 
-from src.iea43_wra_data_model import IeaWindResourceAssessmentDataModel
+from wra_data_model_pydantic.iea43_wra_data_model import IeaWindResourceAssessmentDataModel
 
 PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 DEMO_DATA_DIR = os.path.join(PROJECT_ROOT, "demo_data")

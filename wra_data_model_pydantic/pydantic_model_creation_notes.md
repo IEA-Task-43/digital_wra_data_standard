@@ -18,7 +18,7 @@ This model was created by making use the [pydantic data model generator](https:/
 The following command was used to generate the model run from the root of this repo:
 
 ```shell
-poetry run datamodel-codegen --input ./schema/iea43_wra_data_model.schema.json --output ./src/iea43_wra_data_model.py --input-file-type jsonschema
+poetry run datamodel-codegen --input ./schema/iea43_wra_data_model.schema.json --output ./wra_data_model_pydantic/iea43_wra_data_model.py --input-file-type jsonschema
 ```
 
 At the time of writing, the generated model is not perfect and needed some manual updates to make it work correctly.
@@ -65,7 +65,7 @@ by comparing the two models and bringing over any changes. A diff tool can be us
 The following command can be used to generate the updated model:
 
 ```shell
-poetry run datamodel-codegen --input ./schema/iea43_wra_data_model.schema.json --output ./src/iea43_wra_data_model_updated.py --input-file-type jsonschema
+poetry run datamodel-codegen --input ./schema/iea43_wra_data_model.schema.json --output ./wra_data_model_pydantic/iea43_wra_data_model_updated.py --input-file-type jsonschema
 ```
 
 The updated model can then be tested using the `pytest` testing framework as described above.
