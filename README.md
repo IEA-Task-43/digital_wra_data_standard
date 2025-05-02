@@ -50,6 +50,7 @@ the JSON data-interchange format. See Figure 1 below for a snippet of an example
 <br>
 _Figure 1: Example implementation of the WRA Data Model._
 
+## Tools
 The following tools are part of this undertaking:
 
 - [WRA Data Model](./schema/iea43_wra_data_model.schema.json): This JSON Schema file is the _WRA Data Model_. It describes 
@@ -60,8 +61,29 @@ The following tools are part of this undertaking:
 - [Form App](https://iea-task-43.github.io/digital_wra_data_standard/): This app shows a form that is modeled after the 
   JSON Schema and can create JSON data out of your inputs that is in accordance with the _WRA Data Model_.
 
-- [Python Data Model Loading Example](./tools/load_demo_schema.ipynb): This notebook shows how to read an example file that 
-  uses the _WRA Data Model_ with Python. [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/IEA-Task-43/digital_wra_data_standard/master?filepath=.%2Ftools%2Fload_demo_schema.ipynb)
+- [PostgreSQL Data Model](wra_data_model_postgresql): This SQL file contains the SQL statements to create a PostgreSQL 
+  database that is in accordance with the _WRA Data Model_. It can be used to create a database that can be used to 
+  store data that is in accordance with the _WRA Data Model_.
+
+- [Pydantic Data Model](wra_data_model_pydantic): This Python file contains the Pydantic data model that is in accordance 
+  with the _WRA Data Model_. It can be used to create a Python object that can be used to interact with the data in a 
+  more object-oriented way. Modern IDEs can also provide code completion and type checking when using a Pydantic data 
+  model.
+
+## Examples
+Example data files that are in accordance with the _WRA Data Model_ can be found in the [demo_data](./demo_data) folder. 
+
+Example usage of the _WRA Data Model_ can be found in Jupyter notebooks the [examples](./examples) folder. For example:
+- [Python Loading data Example](./examples/load_demo_schema.ipynb): This notebook shows how to read an example file that 
+  uses the _WRA Data Model_ with Python. [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/IEA-Task-43/digital_wra_data_standard/master?filepath=.%examples%2Fload_demo_schema.ipynb)
+
+A python environment is provided via [Poetry](https://python-poetry.org/) to make it easy to install the required
+dependencies to use the example notebooks. To install the dependencies, run the following command from the root of 
+this repository:
+
+```bash
+poetry install
+```
 
 ## Dissemination
 The Task 43 team is actively working to disseminate information and improve user experience. 
@@ -97,7 +119,7 @@ You can find out more about the IEA's Wind Task 43 working group at [ieawindtask
 
 
 ## Pipeline Status
-| Pipeline | Status | Result |
-|:---------|:-------|:-------|
-| Documentation | ![Compile Documentation to Markdown](https://github.com/IEA-Task-43/digital_wra_data_standard/workflows/Compile%20Documentation%20to%20Markdown/badge.svg) | [Documentation](./docs/README.md) |
+| Pipeline | Status                                                                                                                                                     | Result                                                               |
+|:---------|:-----------------------------------------------------------------------------------------------------------------------------------------------------------|:---------------------------------------------------------------------|
+| Documentation | ![Compile Documentation to Markdown](https://github.com/IEA-Task-43/digital_wra_data_standard/workflows/Compile%20Documentation%20to%20Markdown/badge.svg) | [Documentation](./docs/README.md)                                    |
 | Form App | ![Deploy Form App to GitHub Pages](https://github.com/IEA-Task-43/digital_wra_data_standard/workflows/Deploy%20Form%20App%20to%20GitHub%20Pages/badge.svg) | [Form App](https://iea-task-43.github.io/digital_wra_data_standard/) |
