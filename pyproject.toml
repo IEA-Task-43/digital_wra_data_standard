@@ -2,7 +2,7 @@
 name = "digital_wra_data_standard"
 version = "0.0.1"
 description = ""
-authors = ["Stephen Peters <stephen.peters@res-group.com"]
+authors = ["Stephen Peters <stephen.peters@res-group.com>"]
 readme = "README.md"
 packages = [{ include = "wra_data_model_pydantic" }]
 package-mode = true
