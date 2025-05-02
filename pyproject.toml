@@ -2,24 +2,26 @@
 name = "digital_wra_data_standard"
 version = "0.0.1"
 description = ""
-authors = ["John Smith <john@example.com>"]
+authors = ["Stephen Peters <stephen.peters@res-group.com"]
 readme = "README.md"
-package-mode = false
+packages = [{ include = "wra_data_model_pydantic" }]
+package-mode = true
 
 [tool.poetry.dependencies]
 python = "^3.11, <4.0"
 pandas = "^2.2.3"
 requests = "^2.32.3"
-
+seaborn = "^0.13.2"
+pydantic = "^2.11.4"
+ipykernel = "^6.29.5"
 
 [tool.poetry.group.dev.dependencies]
 datamodel-code-generator = "^0.28.2"
 ruff = "^0.9.10"
-ipykernel = "^6.29.5"
+
 pytest = "^8.3.5"
 poethepoet = "^0.33.0"
 mypy = "^1.15.0"
-
 
 [build-system]
 requires = ["poetry-core"]
@@ -42,16 +44,16 @@ disallow_untyped_defs = true
 [tool.poe.tasks.lint]
 help = "Lint"
 sequence = [
-    { cmd = "poetry run ruff check src tests" },
-    { cmd = "poetry run ruff format --check src tests" },
-    { cmd = "poetry run mypy src tests" },
+    { cmd = "poetry run ruff check wra_data_model_pydantic tests" },
+    { cmd = "poetry run ruff format --check wra_data_model_pydantic tests" },
+    { cmd = "poetry run mypy wra_data_model_pydantic tests" },
 ]
 
 [tool.poe.tasks.fmt]
 help = "Format code"
 sequence = [
-    { cmd = "poetry run ruff format src tests" },
-    { cmd = "poetry run ruff check src tests --fix" },
+    { cmd = "poetry run ruff format wra_data_model_pydantic tests" },
+    { cmd = "poetry run ruff check wra_data_model_pydantic tests --fix" },
 ]
 
 [tool.poe.tasks.test]
