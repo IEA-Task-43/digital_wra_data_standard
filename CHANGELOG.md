@@ -29,6 +29,7 @@ Additional labels for pre-release and build metadata are available as extensions
    1. `deg_C/mV` (Issue [#260](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/260))
    1. `%/V` (Issue [#260](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/260))
    1. `%/mV` (Issue [#260](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/260))
+   1. `m^2/Hz` (Discussion [#268](https://github.com/IEA-Task-43/digital_wra_data_standard/discussions/268#discussioncomment-13236974))
 1. To `sensor_type` add:
    1. `calc` (Discussion [#268](https://github.com/IEA-Task-43/digital_wra_data_standard/discussions/268#discussioncomment-11257819))
    1. `fuel_gauge` (Discussion [#268](https://github.com/IEA-Task-43/digital_wra_data_standard/discussions/268#discussioncomment-11257819))
@@ -43,6 +44,8 @@ Additional labels for pre-release and build metadata are available as extensions
    1. `heading` (Discussion [#268](https://github.com/IEA-Task-43/digital_wra_data_standard/discussions/268#discussioncomment-12266281))
    1. `turbidity` (Discussion [#268](https://github.com/IEA-Task-43/digital_wra_data_standard/discussions/268#discussioncomment-12266281))
    1. `visibility_in_air` (Discussion [#268](https://github.com/IEA-Task-43/digital_wra_data_standard/discussions/268#discussioncomment-12266281))
+   1. `wave_energy_spectrum` (Discussion [#268](https://github.com/IEA-Task-43/digital_wra_data_standard/discussions/268#discussioncomment-13236974))
+   1. `wave_energy_spectrum_maximum` (Discussion [#268](https://github.com/IEA-Task-43/digital_wra_data_standard/discussions/268#discussioncomment-13236974))
 
 ## [1.3.0-2024.03]
 

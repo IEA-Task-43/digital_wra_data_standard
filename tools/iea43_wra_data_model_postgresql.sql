@@ -171,6 +171,8 @@ INSERT INTO measurement_type (id) VALUES
     ('wave_directional_spread'),
     ('wave_period'),
     ('wave_peak_period'),
+    ('wave_energy_spectrum'),
+    ('wave_energy_spectrum_maximum'),
     ('water_speed'),
     ('vertical_water_speed'),
     ('water_direction'),
@@ -270,6 +272,7 @@ INSERT INTO measurement_units (id) VALUES
     ('deg_C/mV'),
     ('%/V'),
     ('%/mV'),
+    ('m^2/Hz'),
     ('1'),
     ('-');
 
