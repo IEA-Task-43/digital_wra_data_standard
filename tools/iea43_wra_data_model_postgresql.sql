@@ -227,6 +227,7 @@ INSERT INTO measurement_units (id) VALUES
     ('mbar'),
     ('dbar'),
     ('hPa'),
+    ('Pa'),
     ('atm'),
     ('mmHg'),
     ('inHg'),

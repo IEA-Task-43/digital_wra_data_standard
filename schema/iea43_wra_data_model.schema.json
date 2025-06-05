@@ -275,6 +275,7 @@
         "mbar",
         "dbar",
         "hPa",
+        "Pa",
         "atm",
         "mmHg",
         "inHg",
