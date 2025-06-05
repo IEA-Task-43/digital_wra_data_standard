@@ -276,6 +276,7 @@ INSERT INTO measurement_units (id) VALUES
     ('%/V'),
     ('%/mV'),
     ('m^2/Hz'),
+    ('m^2_s'),
     ('1'),
     ('-');
 
