@@ -48,6 +48,7 @@ Additional labels for pre-release and build metadata are available as extensions
    1. `wave_energy_spectrum_maximum` (Discussion [#268](https://github.com/IEA-Task-43/digital_wra_data_standard/discussions/268#discussioncomment-13236974))
    1. `wave_period_first_frequency` (Discussion [#268](https://github.com/IEA-Task-43/digital_wra_data_standard/discussions/268#discussioncomment-13236974))
    1. `wave_period_second_frequency` (Discussion [#268](https://github.com/IEA-Task-43/digital_wra_data_standard/discussions/268#discussioncomment-13236974))
+   1. `wave_period_zero_crossing` (Discussion [#268](https://github.com/IEA-Task-43/digital_wra_data_standard/discussions/268#discussioncomment-13236974))
 
 ## [1.3.0-2024.03]
 

@@ -173,6 +173,7 @@ INSERT INTO measurement_type (id) VALUES
     ('wave_peak_period'),
     ('wave_period_first_frequency'),
     ('wave_period_second_frequency'),
+    ('wave_period_zero_crossing'),
     ('wave_energy_spectrum'),
     ('wave_energy_spectrum_maximum'),
     ('water_speed'),
