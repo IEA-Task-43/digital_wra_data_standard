@@ -1,0 +1,384 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$version": "1.0.0-2025.05",
+  "$id": "https://raw.githubusercontent.com/IEA-Task-43/digital_wra_data_standard/master/floating_lidar_file_format/floating_lidar_file_format_header_schema.json",
+  "definitions": {
+    "notes": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Notes",
+      "description": "Notes relating to these properties.",
+      "examples": [
+        "I can write anything I want here."
+      ]
+    },
+    "offset_from_utc_hrs": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "title": "Offset From UTC [hr]",
+      "description": "The number of hours that the resulting timeseries dataset is offset from UTC. E.g. -5 for Eastern Standard Time.",
+      "examples": [
+        "-5 (for Eastern Standard Time)",
+        "1 (for Central European Time)",
+        "5.5 (for India Standard Time)"
+      ]
+    },
+    "averaging_period_minutes": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "title": "Averaging Period [min]",
+      "description": "The number of minutes the model outputs the timeseries data at. Also known as 'time step' or 'averaging step'",
+      "examples": [
+        "10",
+        "60"
+      ]
+    },
+    "timestamp_is_end_of_period": {
+      "type": [
+        "boolean",
+        "null"
+      ],
+      "title": "Timestamp at End of Period",
+      "description": "Does the timestamp represent the end of the averaging period. True is for timestamp to represent the end of the averaging period and false is for timestamp to represent the start of the averaging period.",
+      "examples": [
+        "true (for timestamp to represent the end of the averaging period)",
+        "false (for timestamp to represent the start of the averaging period)"
+      ]
+    },
+    "orientation_reference": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Orientation Reference",
+      "description": "The orientation reference the item is measured against. E.g. magnetic north.",
+      "enum": [
+        "magnetic_north",
+        "true_north",
+        "grid_north",
+        null
+      ]
+    }
+  },
+  "type": "object",
+  "title": "IEA Wind Task 43 - Floating Lidar File Format Header",
+  "description": "This JSON Schema is used to validate the floating lidar file format header that is inserted at the top of the file. This is based on the IEA Task 43 Wind WRA Data Model where only the relevant parts are kept.",
+  "properties": {
+    "format_version": {
+      "type": "string",
+      "title": "Version",
+      "description": "The version of the IEA Wind Task 43 WRA Data Model Floating Lidar File Format this file is based on. The format of this follows Semantic Versioning with the year and month tagged on after. E.g. 1.1.1-2020.07",
+      "examples": [
+        "0.1.0-2020.06",
+        "1.1.1-2020.07"
+      ],
+      "pattern": "^([0-9]{1,2})[.]([0-9]{1,2})[.]([0-9]{1,2})-([0-9]{4})[.]([0-9]{2})$"
+    },
+    "station_serial_number": {
+      "type": "string",
+      "title": "Station Serial Number",
+      "description": "The station serial number that is usually created by the OEM.",
+      "examples": [
+        "FLS 01",
+        "XYZ_1234_DD"
+      ]
+    },
+    "name": {
+      "type": "string",
+      "title": "Name",
+      "description": "The name given to the measurement location i.e. to the met mast or remote sensing device. Unique names are recommended to avoid two locations in the same context being given the same name.",
+      "examples": [
+        "AName_MM1"
+      ]
+    },
+    "latitude_ddeg": {
+      "type": "number",
+      "title": "Latitude [ddeg]",
+      "description": "Latitude coordinate in the Geographic Coordinate System using the WGS84 reference coordinate system, [EPSG:4326](https://epsg.io/4326). Unit of measure is in decimal degrees. Latitude lines are parallel to the equator where their position ranges from -90 degrees at the south pole to 90 degrees at the north pole.",
+      "examples": [
+        52.973
+      ],
+      "minimum": -90,
+      "maximum": 90
+    },
+    "longitude_ddeg": {
+      "type": "number",
+      "title": "Longitude [ddeg]",
+      "description": "Longitude coordinate in the Geographic Coordinate System using the WGS84 reference coordinate system, [EPSG:4326](https://epsg.io/4326). Unit of measure is in decimal degrees. Longitude lines are perpendicular to the equator where their position ranges from 0° at Greenwich Mean Time increasing to +180° as you move eastward and decreasing to −180° as you move westward.",
+      "examples": [
+        -9.431
+      ],
+      "minimum": -180,
+      "maximum": 180
+    },
+    "measurement_station_type": {
+      "title": "Measurement Station Type",
+      "description": "The type of measurement station. This must be one of either met mast, lidar (a vertical profiler), sodar (also a vertical profiler), floating lidar (floating vertical profiler lidar), wave buoy, ADCP (Acoustic Doppler Current Profiler) or a solar measurement station.",
+      "type": "string",
+      "enum": [
+        "mast",
+        "lidar",
+        "sodar",
+        "floating_lidar",
+        "wave_buoy",
+        "adcp",
+        "solar",
+        "virtual_met_mast",
+        "reanalysis"
+      ]
+    },
+    "notes": {
+      "$ref": "#/definitions/notes"
+    },
+    "logger_main_config": {
+      "type": "array",
+      "title": "Logger Configuration",
+      "description": "This represents how the logger's main settings are configured. For example, it's sampling rate or averaging period. For remote sensing devices, such as lidar's, the device itself is considered as a logger and so these logger configuration attributes should be used to describe the lidar.",
+      "items": {
+        "type": "object",
+        "title": "Logger Configuration",
+        "properties": {
+          "logger_oem": {
+            "type": "string",
+            "title": "Logger OEM",
+            "description": "This is the logger or remote sensing device manufacturer id as defined by the IEA Wind Resource Assessment Data Model Schema.",
+            "enum": [
+              "NRG Systems",
+              "Ammonit",
+              "Campbell Scientific",
+              "Vaisala",
+              "SecondWind",
+              "Kintech",
+              "Wilmers",
+              "Unidata",
+              "WindLogger",
+              "Leosphere",
+              "ZX Lidars",
+              "AXYS Technologies",
+              "AQSystem",
+              "Pentaluum",
+              "Nortek",
+              "Teledyne RDI",
+              "Aanderaa",
+              "Other"
+            ]
+          },
+          "logger_model_name": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "title": "Logger Model Name",
+            "description": "This is the logger or remote sensing device model name. This is usually stated in the data files from the logger in either the header or footer.",
+            "examples": [
+              "Symphonie Plus3",
+              "CR1000",
+              "Meteo-40M",
+              "WindCube v2"
+            ]
+          },
+          "logger_serial_number": {
+            "type": "string",
+            "title": "Logger Serial Number",
+            "description": "The logger or remote sensing device serial number. This is sometimes different from the logger id."
+          },
+          "logger_firmware_version": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "title": "Logger Firmware Version",
+            "description": "The logger or remote sensing device's Firmware Version. This is the software version that is run on the logger at the time of data acquisition. This software can be updated and so can sometimes impact the results of the outputted data. E.g. NRG SymphoniePro, Firmware Version: 3.2.3. For loggers/devices that have multiple software programmes to process the outputted data the versions can be concatenated together."
+          },
+          "logger_id": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "title": "Logger Id",
+            "description": "This is the logger or remote sensing device id. It may be set by the logger programmer and may be different from the logger serial number.",
+            "examples": [
+              "4321",
+              "D123456",
+              "WLS7-999"
+            ]
+          },
+          "logger_name": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "title": "Logger Name",
+            "description": "The logger (or mast name) name assigned to the logger in the logger programme.",
+            "examples": [
+              "AName_MM1"
+            ]
+          },
+          "encryption_pin_or_key": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "title": "Encryption PIN or Key",
+            "description": "The encryption PIN or key used to encrypt the data.",
+            "examples": [
+              "9876",
+              "KkocDuSCk3v5tw4kRveHGQvuD1kYVVbU"
+            ]
+          },
+          "enclosure_lock_details": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "title": "Enclosure Lock Details",
+            "description": "Details about how to open the logger enclosure box when on site.",
+            "examples": [
+              "Combination lock PIN 54321.",
+              "Physical key has id 54321."
+            ]
+          },
+          "data_transfer_details": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "title": "Data Transfer Details",
+            "description": "Details about how the data is transferred from the logger to the recipient.",
+            "examples": [
+              "Logger emails to data@developername.com",
+              "Retrieve data via LoggerNet."
+            ]
+          },
+          "offset_from_utc_hrs": {
+            "$ref": "#/definitions/offset_from_utc_hrs"
+          },
+          "sampling_rate_sec": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "title": "Sampling Rate [s]",
+            "description": "The number of seconds the logger samples data.",
+            "examples": [
+              "1",
+              "2"
+            ]
+          },
+          "averaging_period_minutes": {
+            "$ref": "#/definitions/averaging_period_minutes"
+          },
+          "timestamp_is_end_of_period": {
+            "$ref": "#/definitions/timestamp_is_end_of_period"
+          },
+          "clock_is_auto_synced": {
+            "type": [
+              "boolean",
+              "null"
+            ],
+            "title": "Clock is Auto-Synced",
+            "description": "Is the logger clock auto-synced with an internet time server to keep accurate time. True is for when the logger clock is auto-synced and false is for when the logger clock is not auto-synced.",
+            "examples": [
+              "true (for when the logger clock is auto-synced)",
+              "false (for when the logger clock is not auto-synced)"
+            ]
+          },
+          "logger_acquisition_uncertainty": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "title": "Logger Acquisition Uncertainty [%]",
+            "description": "The uncertainty of the logger acquisition system as a percentage. This is also referred to as the uncertainty of the data acquisition system within IEC 61400-12-1. ",
+            "examples": [
+              "0.1"
+            ]
+          },
+          "uncertainty_k_factor": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "title": "Uncertainty K Factor",
+            "description": "Uncertainty k factor for Logger Acquisition Uncertainty as provided in logger documentation specification.",
+            "examples": [
+              "2"
+            ]
+          },
+          "notes": {
+            "$ref": "#/definitions/notes"
+          },
+          "lidar_config": {
+            "type": "object",
+            "title": "Lidar Specific Configuration",
+            "description": "The lidar specific configuration represents how the lidar's specific settings are configured. For example, if FCR is turned on.",
+            "properties": {
+              "flow_corrections_applied": {
+                "type": [
+                  "boolean",
+                  "null"
+                ],
+                "title": "Flow Corrections Applied",
+                "description": "Is there any flow corrections applied to the measured data by the lidar unit, e.g. Flow Complexity Recognition (FCR) for WindCubes?",
+                "examples": [
+                  "true (for any flow corrections applied)",
+                  "false (for no flow corrections applied)"
+                ]
+              },
+              "logger_stated_device_datum_plane_height_m": {
+                "type": [
+                  "number",
+                  "null"
+                ],
+                "title": "Logger Stated Device Datum Plane Height",
+                "description": "Height, in meters, of the datum plane as programmed into the logger where the datum feature is defined here: http://data.windenergy.dtu.dk/ontologies/view/ontolidar/en/page/DatumFeature . For lidars the datum feature is usually the window and for sodars it is usually the base of the device. These datum plane heights are also usually referred to as above ground level however it may be above sea level or above a platform level.",
+                "examples": [
+                  0.6,
+                  1
+                ]
+              },
+              "logger_stated_device_orientation_deg": {
+                "type": [
+                  "number",
+                  "null"
+                ],
+                "title": "Logger Stated Device Orientation Deg",
+                "description": "Device orientation relative to north, in degrees, as programmed into the logger.",
+                "minimum": 0,
+                "maximum": 360
+              },
+              "notes": {
+                  "$ref": "#/definitions/notes"
+                },
+              "additionalProperties": false
+            },
+            "additionalItems": false,
+            "uniqueItems": true
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "logger_oem",
+          "logger_serial_number"
+        ]
+      },
+      "additionalItems": false,
+      "uniqueItems": true
+    }
+  },
+  "additionalProperties": false,
+  "required": [
+    "format_version",
+    "station_serial_number",
+    "name",
+    "latitude_ddeg",
+    "longitude_ddeg",
+    "measurement_station_type"
+  ]
+}
