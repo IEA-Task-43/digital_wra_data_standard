@@ -34,6 +34,9 @@ Additional labels for pre-release and build metadata are available as extensions
    1. `fuel_gauge` (Discussion [#268](https://github.com/IEA-Task-43/digital_wra_data_standard/discussions/268#discussioncomment-11257819))
 1. To `measurement_type` add:
    1. `fuel_level` (Discussion [#268](https://github.com/IEA-Task-43/digital_wra_data_standard/discussions/268#discussioncomment-11257819))
+1. Bug fixes:
+   1. Add `null` to `license` type as it is optional (Issue [#269](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/269))
+
 
 ## [1.3.0-2024.03]
 
