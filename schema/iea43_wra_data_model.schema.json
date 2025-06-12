@@ -1502,6 +1502,7 @@
                           "microwave_temperature_profiler",
                           "nephelometer",
                           "transmissometer",
+                          "fluorometer",
                           "calc",
                           "other",
                           null

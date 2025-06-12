@@ -334,6 +334,7 @@ INSERT INTO sensor_type (id) VALUES
     ('microwave_temperature_profiler'),
     ('nephelometer'),
     ('transmissometer'),
+    ('fluorometer'),
     ('calc'),
     ('other');
 
