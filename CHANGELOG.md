@@ -34,6 +34,7 @@ Additional labels for pre-release and build metadata are available as extensions
    1. `Pa` (Issue [#279](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/279))
    1. `ppm` (Discussion [#268](https://github.com/IEA-Task-43/digital_wra_data_standard/discussions/268#discussioncomment-13450779))
    1. `ug/L` (Discussion [#268](https://github.com/IEA-Task-43/digital_wra_data_standard/discussions/268#discussioncomment-13450779))
+   1. `ntu`, `fnu` and `ftu` (Discussion [#268](https://github.com/IEA-Task-43/digital_wra_data_standard/discussions/268#discussioncomment-13450779))
 1. To `sensor_type` add:
    1. `calc` (Discussion [#268](https://github.com/IEA-Task-43/digital_wra_data_standard/discussions/268#discussioncomment-11257819))
    1. `fuel_gauge` (Discussion [#268](https://github.com/IEA-Task-43/digital_wra_data_standard/discussions/268#discussioncomment-11257819))
