@@ -43,6 +43,7 @@ Additional labels for pre-release and build metadata are available as extensions
    1. `wave_buoy` (Discussion [#268](https://github.com/IEA-Task-43/digital_wra_data_standard/discussions/268#discussioncomment-12716402))
    1. `transmissometer` (Discussion [#268](https://github.com/IEA-Task-43/digital_wra_data_standard/discussions/268#discussioncomment-12266281))
    1. `fluorometer` (Discussion [#268](https://github.com/IEA-Task-43/digital_wra_data_standard/discussions/268#discussioncomment-13450779))
+   1. `gps_motion_unit` (Discussion [#268](https://github.com/IEA-Task-43/digital_wra_data_standard/discussions/268#discussioncomment-13450779))
 1. To `measurement_type` add:
    1. `fuel_level` (Discussion [#268](https://github.com/IEA-Task-43/digital_wra_data_standard/discussions/268#discussioncomment-11257819))
    1. `pitch` (Discussion [#268](https://github.com/IEA-Task-43/digital_wra_data_standard/discussions/268#discussioncomment-12266281))
