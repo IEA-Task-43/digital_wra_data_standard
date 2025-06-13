@@ -54,6 +54,7 @@ Additional labels for pre-release and build metadata are available as extensions
    1. `wave_period_first_frequency` (Discussion [#268](https://github.com/IEA-Task-43/digital_wra_data_standard/discussions/268#discussioncomment-13236974))
    1. `wave_period_second_frequency` (Discussion [#268](https://github.com/IEA-Task-43/digital_wra_data_standard/discussions/268#discussioncomment-13236974))
    1. `wave_period_zero_crossing` (Discussion [#268](https://github.com/IEA-Task-43/digital_wra_data_standard/discussions/268#discussioncomment-13236974))
+   1. `mass_concentration` (Discussion [#268](https://github.com/IEA-Task-43/digital_wra_data_standard/discussions/268#discussioncomment-13450779))
 1. Bug fixes:
    1. Add `null` to `license` type as it is optional (Issue [#269](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/269))
 
