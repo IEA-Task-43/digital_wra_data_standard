@@ -255,6 +255,7 @@ INSERT INTO measurement_units (id) VALUES
     ('g/L'),
     ('g/kg'),
     ('ppt'),
+    ('ppm'),
     ('psu'),
     ('S/m'),
     ('km/h'),
