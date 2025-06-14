@@ -73,9 +73,11 @@ The following tools are part of this undertaking:
 ## Examples
 Example data files that are in accordance with the _WRA Data Model_ can be found in the [demo_data](./demo_data) folder. 
 
-Example usage of the _WRA Data Model_ can be found in Jupyter notebooks the [examples](./examples) folder. For example:
+Example usage of the _WRA Data Model_ can be found the [examples](./examples) folder in several Python Notebooks:
 - [Python Loading data Example](./examples/load_demo_schema.ipynb): This notebook shows how to read an example file that 
   uses the _WRA Data Model_ with Python. [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/IEA-Task-43/digital_wra_data_standard/master?filepath=.%examples%2Fload_demo_schema.ipynb)
+- [Python Loading data Example with Pydantic](./examples/load_demo_schema_to_model.ipynb): This notebook shows how to 
+  read an example file that uses the _WRA Data Model_ with Python and the Pydantic data model. 
 
 A python environment is provided via [Poetry](https://python-poetry.org/) to make it easy to install the required
 dependencies to use the example notebooks. To install the dependencies, run the following command from the root of 
