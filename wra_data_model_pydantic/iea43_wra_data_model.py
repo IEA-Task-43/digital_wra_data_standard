@@ -6,11 +6,24 @@ from __future__ import annotations
 
 import re
 import typing
+from collections.abc import Hashable
 from datetime import date, datetime
 from enum import Enum
+from typing import Annotated, TypeVar
 from uuid import UUID
 
-from pydantic import BaseModel, ConfigDict, Field, RootModel, field_validator
+from pydantic import AfterValidator, BaseModel, ConfigDict, Field, RootModel, field_validator
+from pydantic_core import PydanticCustomError
+
+T = TypeVar("T", bound=Hashable)
+
+
+def _validate_unique_list(v: list[T] | None) -> list[T] | None:
+    if v is None:
+        return None
+    elif len(v) != len(set(v)):
+        raise PydanticCustomError("unique_list", "List must be unique")
+    return v
 
 
 def get_hash_tuple(value: typing.Any, hash_tuple: tuple) -> tuple:
@@ -24,6 +37,11 @@ def get_hash_tuple(value: typing.Any, hash_tuple: tuple) -> tuple:
     else:
         raise TypeError(f"Cannot hash {type(value)}. Please ensure that all fields are hashable.")
     return hash_tuple
+
+
+class HashableRootModel(RootModel):
+    def __hash__(self) -> int:
+        return hash(self.root)
 
 
 class BaseModelWithHash(BaseModel):
@@ -153,7 +171,7 @@ class SensorTypeId(Enum):
     NoneType_None = None
 
 
-class CalibrationUncertaintyItem(BaseModelWithHash):
+class CalibrationUncertaintyItem(BaseModel):
     model_config = ConfigDict(extra="forbid")
     reference_bin: float | None = Field(
         None,
@@ -190,7 +208,7 @@ class StructureTypeId(Enum):
     other = "other"
 
 
-class DateFrom(RootModel):
+class DateFrom(HashableRootModel):
     root: datetime = Field(
         ...,
         description="The date from when these properties are active. If these properties follow a change, then this "
@@ -202,7 +220,7 @@ class DateFrom(RootModel):
     )
 
 
-class DateTo(RootModel):
+class DateTo(HashableRootModel):
     root: datetime | None = Field(
         ...,
         description="The final end date for when these properties are active. If these properties are currently "
@@ -214,7 +232,7 @@ class DateTo(RootModel):
     )
 
 
-class Notes(RootModel):
+class Notes(HashableRootModel):
     root: str | None = Field(
         ...,
         description="Notes relating to these properties.",
@@ -223,7 +241,7 @@ class Notes(RootModel):
     )
 
 
-class UpdateAt(RootModel):
+class UpdateAt(HashableRootModel):
     root: datetime | None = Field(
         ...,
         description="The date these properties were last updated.",
@@ -232,7 +250,7 @@ class UpdateAt(RootModel):
     )
 
 
-class OffsetFromUtcHrs(RootModel):
+class OffsetFromUtcHrs(HashableRootModel):
     root: float | None = Field(
         ...,
         description="The number of hours that the resulting timeseries dataset is offset from UTC. E.g. -5 for "
@@ -246,7 +264,7 @@ class OffsetFromUtcHrs(RootModel):
     )
 
 
-class AveragingPeriodMinutes(RootModel):
+class AveragingPeriodMinutes(HashableRootModel):
     root: int | None = Field(
         ...,
         description="The number of minutes the model outputs the timeseries data at. Also known as 'time step' "
@@ -256,7 +274,7 @@ class AveragingPeriodMinutes(RootModel):
     )
 
 
-class TimestampIsEndOfPeriod(RootModel):
+class TimestampIsEndOfPeriod(HashableRootModel):
     root: bool | None = Field(
         ...,
         description="Does the timestamp represent the end of the averaging period. True is for timestamp to represent "
@@ -454,16 +472,14 @@ class MastSectionGeometryItem(BaseModelWithHash):
     lattice_face_width_at_bottom_mm: float | None = Field(
         None,
         description="The lattice face width at the bottom of the mast section, as measured from leg centre to leg "
-        "centre as outlined in [IEC 61400-12-1 2017 Fig G.5](https://user-images.githubusercontent.com/25622575/160807405-24f8ec74-e93f-4454-b41d-92ea30ffeb15.png).",
-        # noqa: E501
+        "centre as outlined in [IEC 61400-12-1 2017 Fig G.5](https://user-images.githubusercontent.com/25622575/160807405-24f8ec74-e93f-4454-b41d-92ea30ffeb15.png).",  # noqa: E501
         examples=[500],
         title="Lattice Face Width at Bottom [mm]",
     )
     lattice_face_width_at_top_mm: float | None = Field(
         None,
         description="The lattice face width at the top of the mast section, as measured from leg centre to leg centre "
-        "as outlined in [IEC 61400-12-1 2017 Fig G.5](https://user-images.githubusercontent.com/25622575/160807405-24f8ec74-e93f-4454-b41d-92ea30ffeb15.png).",
-        # noqa: E501
+        "as outlined in [IEC 61400-12-1 2017 Fig G.5](https://user-images.githubusercontent.com/25622575/160807405-24f8ec74-e93f-4454-b41d-92ea30ffeb15.png).",  # noqa: E501
         examples=[500],
         title="Lattice Face Width at Top [mm]",
     )
@@ -519,8 +535,7 @@ class MastSectionGeometryItem(BaseModelWithHash):
         None,
         description="The number of repetitive patterns on tower face as in the image. Note that for this case the "
         "pattern in red repeats itself 6 times. "
-        "https://github.com/IEA-Task-43/digital_wra_data_standard/blob/master/images/number_of_repetitive_patterns_on_face.png.",
-        # noqa: E501
+        "https://github.com/IEA-Task-43/digital_wra_data_standard/blob/master/images/number_of_repetitive_patterns_on_face.png.",  # noqa: E501
         examples=[6],
         title="Number of Repetitive Patterns on Face",
     )
@@ -544,7 +559,7 @@ class MastSectionGeometryItem(BaseModelWithHash):
     update_at: UpdateAt | None = None
 
 
-class MastProperties(BaseModelWithHash):
+class MastProperties(BaseModel):
     model_config = ConfigDict(extra="allow")
     mast_geometry_id: MastGeometryId | None = Field(
         None,
@@ -588,16 +603,20 @@ class MastProperties(BaseModelWithHash):
     date_to: DateTo | None = None
     notes: Notes | None = None
     update_at: UpdateAt | None = None
-    mast_section_geometry: set[MastSectionGeometryItem] | None = Field(
-        None,
-        description="This contains the properties of each mast section. Additional properties can be added e.g. "
-        "'material' however this wouldn't be part of the Data Model. If an additional property is for "
-        "information purposes please consider using 'notes' instead.",
-        title="Mast Section Geometry",
-    )
+    mast_section_geometry: Annotated[
+        list[MastSectionGeometryItem] | None,
+        AfterValidator(_validate_unique_list),
+        Field(
+            description="This contains the properties of each mast section. Additional properties can be added e.g. "
+            "'material' however this wouldn't be part of the Data Model. If an additional property is for "
+            "information purposes please consider using 'notes' instead.",
+            title="Mast Section Geometry",
+            json_schema_extra={"uniqueItems": True},
+        ),
+    ] = None
 
 
-class VerticalProfilerProperty(BaseModelWithHash):
+class VerticalProfilerProperty(BaseModel):
     model_config = ConfigDict(extra="forbid")
     device_datum_plane_height_m: float | None = Field(
         None,
@@ -640,7 +659,7 @@ class VerticalProfilerProperty(BaseModelWithHash):
     update_at: UpdateAt | None = None
 
 
-class LidarConfigItem(BaseModelWithHash):
+class LidarConfigItem(BaseModel):
     model_config = ConfigDict(extra="forbid")
     flow_corrections_applied: bool | None = Field(
         None,
@@ -683,7 +702,7 @@ class LidarConfigItem(BaseModelWithHash):
     update_at: UpdateAt | None = None
 
 
-class LoggerMainConfigItem(BaseModelWithHash):
+class LoggerMainConfigItem(BaseModel):
     model_config = ConfigDict(extra="allow")
     logger_oem_id: LoggerOemId = Field(
         ...,
@@ -784,15 +803,20 @@ class LoggerMainConfigItem(BaseModelWithHash):
     )
     notes: Notes | None = None
     update_at: UpdateAt | None = None
-    lidar_config: set[LidarConfigItem] | None = Field(
-        None,
-        description="The lidar specific configuration represents how the lidar's specific settings are configured. "
-        "For example, if FCR is turned on.",
-        title="Lidar Specific Configuration",
-    )
+    lidar_config: Annotated[
+        list[LidarConfigItem] | None,
+        _validate_unique_list,
+        Field(
+            None,
+            description="The lidar specific configuration represents how the lidar's specific settings are configured. "
+            "For example, if FCR is turned on.",
+            title="Lidar Specific Configuration",
+            json_schema_extra={"uniqueItems": True},
+        ),
+    ] = None
 
 
-class ModelConfigItem(BaseModelWithHash):
+class ModelConfigItem(BaseModel):
     model_config = ConfigDict(extra="forbid")
     reanalysis: Reanalysis | None = Field(
         None,
@@ -823,7 +847,7 @@ class ModelConfigItem(BaseModelWithHash):
     update_at: UpdateAt | None = None
 
 
-class ColumnNameItem(BaseModelWithHash):
+class ColumnNameItem(BaseModel):
     model_config = ConfigDict(extra="forbid")
     column_name: str = Field(
         ...,
@@ -849,7 +873,7 @@ class ColumnNameItem(BaseModelWithHash):
     update_at: UpdateAt | None = None
 
 
-class LoggerMeasurementConfigItem(BaseModelWithHash):
+class LoggerMeasurementConfigItem(BaseModel):
     model_config = ConfigDict(extra="forbid")
     slope: float | None = Field(
         None,
@@ -904,14 +928,19 @@ class LoggerMeasurementConfigItem(BaseModelWithHash):
     date_to: DateTo | None
     notes: Notes | None = None
     update_at: UpdateAt | None = None
-    column_name: set[ColumnNameItem] = Field(
-        ...,
-        description="The group of column names in the data file which relates to this sensor configuration.",
-        title="Column Names",
-    )
+    column_name: Annotated[
+        list[ColumnNameItem],
+        _validate_unique_list,
+        Field(
+            ...,
+            description="The group of column names in the data file which relates to this sensor configuration.",
+            title="Column Names",
+            json_schema_extra={"uniqueItems": True},
+        ),
+    ]
 
 
-class CalibrationItem(BaseModelWithHash):
+class CalibrationItem(BaseModel):
     model_config = ConfigDict(extra="forbid")
     measurement_type_id: MeasurementType | None = None
     slope: float | None = Field(
@@ -1004,14 +1033,19 @@ class CalibrationItem(BaseModelWithHash):
     )
     notes: Notes | None = None
     update_at: UpdateAt | None = None
-    calibration_uncertainty: set[CalibrationUncertaintyItem] | None = Field(
-        None,
-        description="The sensor calibration details.",
-        title="Calibration Uncertainty",
-    )
+    calibration_uncertainty: Annotated[
+        list[CalibrationUncertaintyItem] | None,
+        _validate_unique_list,
+        Field(
+            None,
+            description="The sensor calibration details.",
+            title="Calibration Uncertainty",
+            json_schema_extra={"uniqueItems": True},
+        ),
+    ]
 
 
-class SensorItem(BaseModelWithHash):
+class SensorItem(BaseModel):
     model_config = ConfigDict(extra="forbid")
     oem: str | None = Field(
         None,
@@ -1080,12 +1114,17 @@ class SensorItem(BaseModelWithHash):
     date_to: DateTo | None
     notes: Notes | None = None
     update_at: UpdateAt | None = None
-    calibration: set[CalibrationItem] | None = Field(
-        None,
-        description="The sensor calibration details. This is typically expected for anemometers, but not necessarily "
-        "required for other sensor types.",
-        title="Calibration",
-    )
+    calibration: Annotated[
+        list[CalibrationItem] | None,
+        _validate_unique_list,
+        Field(
+            None,
+            description="The sensor calibration details. This is typically expected for anemometers, but not "
+            "necessarily required for other sensor types.",
+            title="Calibration",
+            json_schema_extra={"uniqueItems": True},
+        ),
+    ]
 
     @field_validator("classification")
     def validate_classification(cls, value: str) -> str:  # noqa: N805
@@ -1095,7 +1134,7 @@ class SensorItem(BaseModelWithHash):
         return value
 
 
-class MountingArrangementItem(BaseModelWithHash):
+class MountingArrangementItem(BaseModel):
     model_config = ConfigDict(extra="forbid")
     mast_section_geometry_uuid: UUID | None = Field(
         None,
@@ -1169,7 +1208,7 @@ class MountingArrangementItem(BaseModelWithHash):
     update_at: UpdateAt | None = None
 
 
-class InterferenceStructure(BaseModelWithHash):
+class InterferenceStructure(BaseModel):
     model_config = ConfigDict(extra="forbid")
     structure_type_id: StructureTypeId = Field(
         ...,
@@ -1206,7 +1245,7 @@ class InterferenceStructure(BaseModelWithHash):
     update_at: UpdateAt | None = None
 
 
-class MeasurementPointItem(BaseModelWithHash):
+class MeasurementPointItem(BaseModel):
     model_config = ConfigDict(extra="forbid")
     name: str = Field(
         ...,
@@ -1224,27 +1263,44 @@ class MeasurementPointItem(BaseModelWithHash):
     height_reference_id: HeightReference | None = HeightReference.ground_level
     notes: Notes | None = None
     update_at: UpdateAt | None = None
-    logger_measurement_config: set[LoggerMeasurementConfigItem] = Field(
-        ...,
-        description="The measurement configuration that is programmed into the logging device.",
-        title="Logger Measurement Configuration",
-    )
-    sensor: set[SensorItem] | None = Field(
-        None,
-        description="This represents information about the sensor taking the measurements.",
-        title="Sensor",
-    )
-    mounting_arrangement: set[MountingArrangementItem] | None = Field(
-        None,
-        description="This describes how the sensor is mounted onto the met mast.",
-        title="Mounting Arrangement",
-    )
-    interference_structures: set[InterferenceStructure] | None = Field(
-        None, description="", title="Interference Structures"
-    )
+    logger_measurement_config: Annotated[
+        list[LoggerMeasurementConfigItem],
+        _validate_unique_list,
+        Field(
+            ...,
+            description="The measurement configuration that is programmed into the logging device.",
+            title="Logger Measurement Configuration",
+            json_schema_extra={"uniqueItems": True},
+        ),
+    ]
+    sensor: Annotated[
+        list[SensorItem] | None,
+        _validate_unique_list,
+        Field(
+            None,
+            description="This represents information about the sensor taking the measurements.",
+            title="Sensor",
+            json_schema_extra={"uniqueItems": True},
+        ),
+    ]
+    mounting_arrangement: Annotated[
+        list[MountingArrangementItem] | None,
+        _validate_unique_list,
+        Field(
+            None,
+            description="This describes how the sensor is mounted onto the met mast.",
+            title="Mounting Arrangement",
+            json_schema_extra={"uniqueItems": True},
+        ),
+    ]
+    interference_structures: Annotated[
+        list[InterferenceStructure] | None,
+        _validate_unique_list,
+        Field(None, description="", title="Interference Structures", json_schema_extra={"uniqueItems": True}),
+    ]
 
 
-class MeasurementLocationItem(BaseModelWithHash):
+class MeasurementLocationItem(BaseModel):
     model_config = ConfigDict(extra="forbid")
     uuid: UUID | None = Field(
         None,
@@ -1299,31 +1355,51 @@ class MeasurementLocationItem(BaseModelWithHash):
         "information purposes please consider using 'notes' instead.",
         title="Mast Properties",
     )
-    vertical_profiler_properties: set[VerticalProfilerProperty] | None = Field(
-        None,
-        description="Vertical profiler remote sensing devices (e.g. lidar, sodar and floating lidar) installation "
-        "specific properties.",
-        title="Vertical Profiler Properties",
-    )
-    logger_main_config: set[LoggerMainConfigItem] | None = Field(
-        None,
-        description="This represents how the logger's main settings are configured. For example, it's sampling rate or "
-        "averaging period. For remote sensing devices, such as lidar's, the device itself is considered as "
-        "a logger and so these logger configuration attributes should be used to describe the lidar.",
-        title="Logger Configuration",
-    )
-    model_config_: set[ModelConfigItem] | None = Field(
-        None,
-        alias="model_config",
-        description="This represents how a simulation model or other model that produces a synthetic timeseries dataset"
-        " is configured. This also includes reanalysis datasets.",
-        title="Model Configuration",
-    )
-    measurement_point: set[MeasurementPointItem] = Field(
-        ...,
-        description="This represents a point in space where a measurement takes place.",
-        title="Measurement Point",
-    )
+    vertical_profiler_properties: Annotated[
+        list[VerticalProfilerProperty] | None,
+        _validate_unique_list,
+        Field(
+            None,
+            description="Vertical profiler remote sensing devices (e.g. lidar, sodar and floating lidar) installation "
+            "specific properties.",
+            title="Vertical Profiler Properties",
+            json_schema_extra={"uniqueItems": True},
+        ),
+    ]
+    logger_main_config: Annotated[
+        list[LoggerMainConfigItem] | None,
+        _validate_unique_list,
+        Field(
+            None,
+            description="This represents how the logger's main settings are configured. For example, it's sampling rate"
+            " or averaging period. For remote sensing devices, such as lidar's, the device itself is considered as "
+            "a logger and so these logger configuration attributes should be used to describe the lidar.",
+            title="Logger Configuration",
+            json_schema_extra={"uniqueItems": True},
+        ),
+    ]
+    model_config_: Annotated[
+        list[ModelConfigItem] | None,
+        _validate_unique_list,
+        Field(
+            None,
+            alias="model_config",
+            description="This represents how a simulation model or other model that produces a synthetic timeseries"
+            " dataset is configured. This also includes reanalysis datasets.",
+            title="Model Configuration",
+            json_schema_extra={"uniqueItems": True},
+        ),
+    ]
+    measurement_point: Annotated[
+        list[MeasurementPointItem],
+        _validate_unique_list,
+        Field(
+            ...,
+            description="This represents a point in space where a measurement takes place.",
+            title="Measurement Point",
+            json_schema_extra={"uniqueItems": True},
+        ),
+    ]
 
 
 class IeaWindResourceAssessmentDataModel(BaseModel):
@@ -1375,12 +1451,17 @@ class IeaWindResourceAssessmentDataModel(BaseModel):
         description="The type of renewable generation plant it is.",
         title="Plant Type",
     )
-    measurement_location: set[MeasurementLocationItem] = Field(
-        ...,
-        description="This is the geographic location of the meteorological measurement station i.e. a met mast/tower "
-        "or remote sensing device.",
-        title="Measurement Location",
-    )
+    measurement_location: Annotated[
+        list[MeasurementLocationItem],
+        _validate_unique_list,
+        Field(
+            ...,
+            description="This is the geographic location of the meteorological measurement station i.e. a met "
+            "mast/tower or remote sensing device.",
+            title="Measurement Location",
+            json_schema_extra={"uniqueItems": True},
+        ),
+    ]
 
     @field_validator("version")
     def validate_version(cls, value: str) -> str:  # noqa: N805
