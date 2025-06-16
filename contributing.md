@@ -104,5 +104,6 @@ added in the release.
 In the release description, include:
 - A brief paragraph summarising the main additions or changes in this release.
 - The full changelog content for the release (copied from the project changelog).
+- Include the changelog from the Digital Calibration Certificate or the Floating Lidar File Format if any changes were made since the last release.
 
 Finally, review all details to ensure accuracy, then publish the release.
