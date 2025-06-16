@@ -30,11 +30,37 @@ Additional labels for pre-release and build metadata are available as extensions
    1. `deg_C/mV` (Issue [#260](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/260))
    1. `%/V` (Issue [#260](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/260))
    1. `%/mV` (Issue [#260](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/260))
+   1. `m^2/Hz` (Discussion [#268](https://github.com/IEA-Task-43/digital_wra_data_standard/discussions/268#discussioncomment-13236974))
+   1. `m^2_s` (Discussion [#268](https://github.com/IEA-Task-43/digital_wra_data_standard/discussions/268#discussioncomment-13382090))
+   1. `Pa` (Issue [#279](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/279))
+   1. `ppm` (Discussion [#268](https://github.com/IEA-Task-43/digital_wra_data_standard/discussions/268#discussioncomment-13450779))
+   1. `ug/L` (Discussion [#268](https://github.com/IEA-Task-43/digital_wra_data_standard/discussions/268#discussioncomment-13450779))
+   1. `ntu`, `fnu` and `ftu` (Discussion [#268](https://github.com/IEA-Task-43/digital_wra_data_standard/discussions/268#discussioncomment-13450779))
 1. To `sensor_type` add:
    1. `calc` (Discussion [#268](https://github.com/IEA-Task-43/digital_wra_data_standard/discussions/268#discussioncomment-11257819))
    1. `fuel_gauge` (Discussion [#268](https://github.com/IEA-Task-43/digital_wra_data_standard/discussions/268#discussioncomment-11257819))
+   1. `microwave_temperature_profiler` (Discussion [#268](https://github.com/IEA-Task-43/digital_wra_data_standard/discussions/268#discussioncomment-12266281))
+   1. `nephelometer` (Discussion [#268](https://github.com/IEA-Task-43/digital_wra_data_standard/discussions/268#discussioncomment-12266281))
+   1. `wave_buoy` (Discussion [#268](https://github.com/IEA-Task-43/digital_wra_data_standard/discussions/268#discussioncomment-12716402))
+   1. `transmissometer` (Discussion [#268](https://github.com/IEA-Task-43/digital_wra_data_standard/discussions/268#discussioncomment-12266281))
+   1. `fluorometer` (Discussion [#268](https://github.com/IEA-Task-43/digital_wra_data_standard/discussions/268#discussioncomment-13450779))
+   1. `gps_motion_unit` (Discussion [#268](https://github.com/IEA-Task-43/digital_wra_data_standard/discussions/268#discussioncomment-13450779))
 1. To `measurement_type` add:
    1. `fuel_level` (Discussion [#268](https://github.com/IEA-Task-43/digital_wra_data_standard/discussions/268#discussioncomment-11257819))
+   1. `pitch` (Discussion [#268](https://github.com/IEA-Task-43/digital_wra_data_standard/discussions/268#discussioncomment-12266281))
+   1. `roll` (Discussion [#268](https://github.com/IEA-Task-43/digital_wra_data_standard/discussions/268#discussioncomment-12266281))
+   1. `heading` (Discussion [#268](https://github.com/IEA-Task-43/digital_wra_data_standard/discussions/268#discussioncomment-12266281))
+   1. `turbidity` (Discussion [#268](https://github.com/IEA-Task-43/digital_wra_data_standard/discussions/268#discussioncomment-12266281))
+   1. `visibility_in_air` (Discussion [#268](https://github.com/IEA-Task-43/digital_wra_data_standard/discussions/268#discussioncomment-12266281))
+   1. `wave_energy_spectrum` (Discussion [#268](https://github.com/IEA-Task-43/digital_wra_data_standard/discussions/268#discussioncomment-13236974))
+   1. `wave_energy_spectrum_maximum` (Discussion [#268](https://github.com/IEA-Task-43/digital_wra_data_standard/discussions/268#discussioncomment-13236974))
+   1. `wave_period_first_frequency` (Discussion [#268](https://github.com/IEA-Task-43/digital_wra_data_standard/discussions/268#discussioncomment-13236974))
+   1. `wave_period_second_frequency` (Discussion [#268](https://github.com/IEA-Task-43/digital_wra_data_standard/discussions/268#discussioncomment-13236974))
+   1. `wave_period_zero_crossing` (Discussion [#268](https://github.com/IEA-Task-43/digital_wra_data_standard/discussions/268#discussioncomment-13236974))
+   1. `mass_concentration` (Discussion [#268](https://github.com/IEA-Task-43/digital_wra_data_standard/discussions/268#discussioncomment-13450779))
+1. Bug fixes:
+   1. Add `null` to `license` type as it is optional (Issue [#269](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/269))
+
 
 ## [1.3.0-2024.03]
 
