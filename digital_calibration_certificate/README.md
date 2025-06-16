@@ -1,5 +1,5 @@
 
-# digital_calibration_certificate
+# digital_calibration_certificate (version 1.2.0-2025.06)
 
 This subdirectory contains the schema, examples, documentation and tools for the digital_calibration_certificate developed in conjunction with the *digital_wra_data_standard*.
 The digital_calibration_certificate itself is independent of the *digital_wra_data_standard*, but was designed for compatibility. 
