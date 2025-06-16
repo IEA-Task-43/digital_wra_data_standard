@@ -76,7 +76,16 @@ point to learn more via tutorials, recorded presentations, videos and more.
 
 As a requirement resulting from the development of the _WRA Data Model_, a 
 [digital calibration certificate](./digital_calibration_certificate) is introduced as a complementary standard. This 
-standard currently supports anemometer calibration certificates according to IEC 61400-12-1:2017. 
+standard currently supports anemometer calibration certificates according to IEC 61400-12-1:2017.
+
+<br>
+
+# Floating Lidar File Format
+
+The [floating lidar file format](./floating_lidar_file_format) section contains a proposed standardised file format for 
+floating lidar data delivery. Developed in collaboration with floating lidar OEMs, this format aims to support 
+consistent and efficient processing of floating lidar datasets from OEMs to data consumers. It defines a common 
+structure for specifying key measurements and metadata in a clear, machine-readable format.
 
 <br>
 
