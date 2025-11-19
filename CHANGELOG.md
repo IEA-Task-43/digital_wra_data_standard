@@ -9,6 +9,13 @@ Given a version number MAJOR.MINOR.PATCH, increment the:
 
 Additional labels for pre-release and build metadata are available as extensions to the MAJOR.MINOR.PATCH format.
 
+## [1.5.0-202X.XX]
+1. To `measurement_station_type` add 
+   1. `seabed_frame` (Issue [#294](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/294))
+
+       Note: `adcp` will be removed from this enum in version 2.0.0 release.
+
+
 ## [1.4.0-2025.06]
 1. Introduce the first release of the [Floating Lidar File Format](https://github.com/IEA-Task-43/digital_wra_data_standard/tree/master/floating_lidar_file_format) developed based on discussion [#268](https://github.com/IEA-Task-43/digital_wra_data_standard/discussions/268).
 1. To `lidar_config` add:
