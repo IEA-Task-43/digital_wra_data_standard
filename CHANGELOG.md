@@ -17,6 +17,7 @@ Additional labels for pre-release and build metadata are available as extensions
 1. To `measurement_type` add 
    1. `speed_of_sound_in_air` (Issue [#296](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/296))
    1. `speed_of_sound_in_water` (Issue [#296](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/296))
+   1. `water_pressure` (Issue [#296](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/296))
 
 
 ## [1.4.0-2025.06]

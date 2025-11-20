@@ -678,7 +678,7 @@
       }]
     },{
       "name": "Pressure_0m",
-      "measurement_type_id": "pressure",
+      "measurement_type_id": "water_pressure",
       "height_m": 0,
       "height_reference_id": "sea_floor",
       "notes": "Sea floor pressure.",
