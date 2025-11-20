@@ -14,6 +14,9 @@ Additional labels for pre-release and build metadata are available as extensions
    1. `seabed_frame` (Issue [#294](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/294))
 
        Note: `adcp` will be removed from this enum in version 2.0.0 release.
+1. To `measurement_type` add 
+   1. `speed_of_sound_in_air` (Issue [#296](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/296))
+   1. `speed_of_sound_in_water` (Issue [#296](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/296))
 
 
 ## [1.4.0-2025.06]

@@ -202,6 +202,8 @@ INSERT INTO measurement_type (id) VALUES
     ('fuel_level'),
     ('turbidity'),
     ('visibility_in_air'),
+    ('speed_of_sound_in_air'),
+    ('speed_of_sound_in_water'),
     ('mass_concentration'),
     ('timestamp'),
     ('obukhov_length'),
