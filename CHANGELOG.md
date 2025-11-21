@@ -17,6 +17,10 @@ Additional labels for pre-release and build metadata are available as extensions
        Note: `adcp` will be removed from this enum in version 2.0.0 release.
 
 
+1. To `statistic_type` add 
+   1. `value` (Issue [#295](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/295))
+
+
 ## [1.4.0-2025.06]
 1. Introduce the first release of the [Floating Lidar File Format](https://github.com/IEA-Task-43/digital_wra_data_standard/tree/master/floating_lidar_file_format) developed based on discussion [#268](https://github.com/IEA-Task-43/digital_wra_data_standard/discussions/268).
 1. To `lidar_config` add:
