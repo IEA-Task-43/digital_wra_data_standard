@@ -154,6 +154,7 @@ INSERT INTO measurement_type (id) VALUES
     ('salinity'),
     ('conductivity'),
     ('specific_conductivity'),
+    ('density_anomaly'),
     ('gps_coordinates'),
     ('status'),
     ('flag'),
