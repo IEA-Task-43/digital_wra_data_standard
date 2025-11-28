@@ -628,7 +628,14 @@ class VerticalProfilerProperty(BaseModel):
         examples=[0.5, 1],
         title="Device Datum Plane Height [m]",
     )
-    height_reference_id: HeightReference | None = HeightReference.ground_level
+    height_reference_id: HeightReference | None = Field(
+        HeightReference.ground_level,
+        description="The height reference frame that is used to measure the item height. E.g. onshore this is "
+        "'ground level' i.e. the item is 0.5 m above ground level. Offshore is a bit different as it can be 20 m "
+        "above 'mean sea level' or 20 m above 'lowest astronomical tide' for a fixed structure or 20 m above "
+        "'sea level' for a floating lidar.",
+        title="Height Reference",
+    )
     device_orientation_deg: float | None = Field(
         None,
         description="The orientation that the remote sensing device is installed relative to north.",
@@ -636,7 +643,11 @@ class VerticalProfilerProperty(BaseModel):
         ge=0.0,
         le=360.0,
     )
-    orientation_reference_id: OrientationReference | None = None
+    orientation_reference_id: OrientationReference | None = Field(
+        None,
+        description="The orientation reference the item is measured against. E.g. magnetic north.",
+        title="Orientation Reference",
+    )
     device_vertical_orientation: DeviceVerticalOrientation | None = Field(
         None,
         description="The vertical orientation that the remote sensing device is installed. E.g. an ADCP mounted on "
@@ -1127,9 +1138,11 @@ class SensorItem(BaseModel):
     ]
 
     @field_validator("classification")
-    def validate_classification(cls, value: str) -> str:  # noqa: N805
-        pattern = re.compile(r"^[0-9]\.[0-9][ABCDS]$")
-        if value and not pattern.match(value):
+    def validate_classification(cls, value: str | None) -> str | None:  # noqa: N805
+        if value is None:
+            return value
+        pattern = re.compile(r"^[0-9]{1,2}\.[0-9]{1,2}[ABCDS]$")
+        if not pattern.match(value):
             raise ValueError("Invalid classification format")
         return value
 
@@ -1162,7 +1175,11 @@ class MountingArrangementItem(BaseModel):
         ge=0.0,
         le=360.0,
     )
-    orientation_reference_id: OrientationReference | None = None
+    orientation_reference_id: OrientationReference | None = Field(
+        None,
+        description="The orientation reference the item is measured against. E.g. magnetic north.",
+        title="Orientation Reference",
+    )
     tilt_angle_deg: float | None = Field(
         None,
         description="The tilt angle of either the vertical upstand the sensor is mounted on.",
@@ -1223,7 +1240,11 @@ class InterferenceStructure(BaseModel):
         ge=0.0,
         le=360.0,
     )
-    orientation_reference_id: OrientationReference | None = None
+    orientation_reference_id: OrientationReference | None = Field(
+        None,
+        description="The orientation reference the item is measured against. E.g. magnetic north.",
+        title="Orientation Reference",
+    )
     distance_from_mast_centre_mm: float | None = Field(
         None,
         description="The distance from the mast centre to the interference structure causing an impact on the sensor's "
@@ -1260,7 +1281,14 @@ class MeasurementPointItem(BaseModel):
         "do not yet know the height please use null.",
         title="Height [m]",
     )
-    height_reference_id: HeightReference | None = HeightReference.ground_level
+    height_reference_id: HeightReference | None = Field(
+        HeightReference.ground_level,
+        description="The height reference frame that is used to measure the item height. E.g. onshore this is "
+        "'ground level' i.e. the item is 0.5 m above ground level. Offshore is a bit different as it can be 20 m "
+        "above 'mean sea level' or 20 m above 'lowest astronomical tide' for a fixed structure or 20 m above "
+        "'sea level' for a floating lidar.",
+        title="Height Reference",
+    )
     notes: Notes | None = None
     update_at: UpdateAt | None = None
     logger_measurement_config: Annotated[
