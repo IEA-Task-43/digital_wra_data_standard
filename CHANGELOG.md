@@ -16,6 +16,8 @@ Additional labels for pre-release and build metadata are available as extensions
 
        Note: `adcp` will be removed from this enum in version 2.0.0 release.
 
+1. To `statistic_type` add 
+   1. `value` (Issue [#295](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/295))
 1. To `measurement_type` add 
    1. `speed_of_sound_in_air` (Issue [#296](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/296))
    1. `speed_of_sound_in_water` (Issue [#296](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/296))

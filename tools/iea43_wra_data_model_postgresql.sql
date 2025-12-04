@@ -311,7 +311,8 @@ INSERT INTO statistic_type (id) VALUES
     ('gust'),
     ('ti'),
     ('ti30sec'),
-    ('text');
+    ('text'),
+    ('value');
 
 INSERT INTO sensor_type (id) VALUES
     ('anemometer'),
