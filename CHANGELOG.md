@@ -16,6 +16,16 @@ Additional labels for pre-release and build metadata are available as extensions
 
        Note: `adcp` will be removed from this enum in version 2.0.0 release.
 
+1. To `measurement_type` add 
+   1. `speed_of_sound_in_air` (Issue [#296](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/296))
+   1. `speed_of_sound_in_water` (Issue [#296](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/296))
+   1. `water_pressure` (Issue [#296](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/296))
+   1. `specific_conductivity` (Issue [#296](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/296))
+   1. `density_anomaly` (Issue [#296](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/296))
+1. To `measurement_units` add 
+   1. `mS/cm` (Issue [#296](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/296))
+   1. `μS/cm` (Issue [#296](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/296))
+
 
 ## [1.4.0-2025.06]
 1. Introduce the first release of the [Floating Lidar File Format](https://github.com/IEA-Task-43/digital_wra_data_standard/tree/master/floating_lidar_file_format) developed based on discussion [#268](https://github.com/IEA-Task-43/digital_wra_data_standard/discussions/268).
