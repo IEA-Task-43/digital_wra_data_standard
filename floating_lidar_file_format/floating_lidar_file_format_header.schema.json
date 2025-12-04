@@ -147,26 +147,33 @@
           "logger_oem": {
             "type": "string",
             "title": "Logger OEM",
-            "description": "This is the logger or remote sensing device manufacturer id as defined by the IEA Wind Resource Assessment Data Model Schema.",
-            "enum": [
-              "NRG Systems",
-              "Ammonit",
-              "Campbell Scientific",
-              "Vaisala",
-              "SecondWind",
-              "Kintech",
-              "Wilmers",
-              "Unidata",
-              "WindLogger",
-              "Leosphere",
-              "ZX Lidars",
-              "AXYS Technologies",
-              "AQSystem",
-              "Pentaluum",
-              "Nortek",
-              "Teledyne RDI",
-              "Aanderaa",
-              "Other"
+            "description": "This is the logger or remote sensing device manufacturer's name. In WRA Data Model versions 1.4.0 and before this was an id as defined by the IEA Wind Resource Assessment Data Model Schema. It is strongly advised to keep using values from this list. For floating lidars where the data is sometimes packaged together onshore, this value could be the floating lidar device OEM.",
+            "anyOf": [
+              {
+                "enum": [
+                  "NRG Systems",
+                  "Ammonit",
+                  "Campbell Scientific",
+                  "Vaisala",
+                  "SecondWind",
+                  "Kintech",
+                  "Wilmers",
+                  "Unidata",
+                  "WindLogger",
+                  "Leosphere",
+                  "ZX Lidars",
+                  "AXYS Technologies",
+                  "AQSystem",
+                  "Pentaluum",
+                  "Nortek",
+                  "Teledyne RDI",
+                  "Aanderaa",
+                  "Other"
+                ]
+              },
+              {
+                "type": "string"
+              }
             ]
           },
           "logger_model_name": {
