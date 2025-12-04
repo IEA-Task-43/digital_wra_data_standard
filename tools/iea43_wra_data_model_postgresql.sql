@@ -92,6 +92,7 @@ INSERT INTO mast_geometry (id) VALUES
     ('lattice_square_sharp_edges'),
     ('pole');
 
+-- ** This logger_oem table is not needed from version 1.5.0 onwards and will be removed in the version 2.0 release. **
 INSERT INTO logger_oem (id) VALUES
     ('NRG Systems'),
     ('Ammonit'),
@@ -480,8 +481,7 @@ CREATE TABLE IF NOT EXISTS logger_main_config(
     notes text,
     update_at timestamp WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
     updated_by UUID,
-    FOREIGN KEY (measurement_location_uuid) REFERENCES measurement_location (uuid),
-    FOREIGN KEY (logger_oem_id) REFERENCES logger_oem (id)
+    FOREIGN KEY (measurement_location_uuid) REFERENCES measurement_location (uuid)
 );
 
 CREATE TABLE IF NOT EXISTS lidar_config(
