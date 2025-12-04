@@ -81,6 +81,8 @@ INSERT INTO measurement_station_type (id) VALUES
     ('sodar'),
     ('floating_lidar'),
     ('wave_buoy'),
+    ('seabed_frame'),
+    ('moored'),
     ('adcp'),
     ('solar'),
     ('virtual_met_mast'),
