@@ -127,6 +127,8 @@
         "sodar",
         "floating_lidar",
         "wave_buoy",
+        "seabed_frame",
+        "moored",
         "adcp",
         "solar",
         "virtual_met_mast",
