@@ -27,6 +27,7 @@ Additional labels for pre-release and build metadata are available as extensions
 1. To `measurement_units` add 
    1. `mS/cm` (Issue [#296](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/296))
    1. `μS/cm` (Issue [#296](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/296))
+   1. `mL` (Issue [#306](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/306))
 
 
 ## [1.4.0-2025.06]
