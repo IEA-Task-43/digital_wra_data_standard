@@ -261,6 +261,7 @@ INSERT INTO measurement_units (id) VALUES
     ('lux'),
     ('dB'),
     ('L'),
+    ('mL'),
     ('g/L'),
     ('ug/L'),
     ('g/kg'),
