@@ -129,6 +129,7 @@ INSERT INTO measurement_type (id) VALUES
     ('air_temperature'),
     ('water_temperature'),
     ('temperature'),
+    ('dew_point_temperature'),
     ('air_pressure'),
     ('water_pressure'),
     ('pressure'),
