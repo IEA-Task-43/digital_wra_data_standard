@@ -917,7 +917,7 @@
                   "description": "This is the logger or remote sensing device manufacturer id as defined by the IEA Wind Resource Assessment Data Model Schema.",
                   "enum": [
                     "NRG Systems",
-                    "Ammonit",
+                    "Ammonit Measurement GmbH",
                     "Campbell Scientific",
                     "Vaisala",
                     "SecondWind",
