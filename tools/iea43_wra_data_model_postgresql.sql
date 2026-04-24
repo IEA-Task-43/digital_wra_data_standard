@@ -96,7 +96,7 @@ INSERT INTO mast_geometry (id) VALUES
 
 INSERT INTO logger_oem (id) VALUES
     ('NRG Systems'),
-    ('Ammonit'),
+    ('Ammonit Measurement GmbH'),
     ('Campbell Scientific'),
     ('Vaisala'),
     ('SecondWind'),
