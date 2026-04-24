@@ -496,7 +496,7 @@ CREATE TABLE IF NOT EXISTS logger_main_config(
     FOREIGN KEY (logger_oem_id) REFERENCES logger_oem (id)
 );
 
-CREATE TABLE IF NOT EXISTS lidar_config(
+CREATE TABLE IF NOT EXISTS remote_sensing_config(
     uuid UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
     logger_main_config_uuid UUID,
     flow_corrections_applied boolean,
