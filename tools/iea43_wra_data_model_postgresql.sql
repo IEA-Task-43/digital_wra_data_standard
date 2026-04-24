@@ -100,7 +100,7 @@ INSERT INTO logger_oem (id) VALUES
     ('Campbell Scientific'),
     ('Vaisala'),
     ('SecondWind'),
-    ('Kintech'),
+    ('Kintech Engineering'),
     ('Wilmers'),
     ('Unidata'),
     ('WindLogger'),
