@@ -316,10 +316,10 @@
           "notes": {
             "$ref": "#/definitions/notes"
           },
-          "lidar_config": {
+          "remote_sensing_config": {
             "type": "object",
-            "title": "Lidar Specific Configuration",
-            "description": "The lidar specific configuration represents how the lidar's specific settings are configured. For example, if FCR is turned on.",
+            "title": "Remote Sensing Device Configuration",
+            "description": "The remote sensing device configuration represents how the remote sensing device's specific settings are configured. For example, if FCR is turned on for a lidar.",
             "properties": {
               "flow_corrections_applied": {
                 "type": [

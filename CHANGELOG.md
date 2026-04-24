@@ -10,7 +10,7 @@ Given a version number MAJOR.MINOR.PATCH, increment the:
 Additional labels for pre-release and build metadata are available as extensions to the MAJOR.MINOR.PATCH format.
 
 ## [2.0.0-202X.XX]
-
+1. Rename `lidar_config` to `remote_sensing_config` (Issue [#259](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/259))
 
 
 ## [1.5.0-202X.XX]
