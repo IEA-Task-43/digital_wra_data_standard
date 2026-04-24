@@ -24,9 +24,11 @@ Additional labels for pre-release and build metadata are available as extensions
    1. `water_pressure` (Issue [#296](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/296))
    1. `specific_conductivity` (Issue [#296](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/296))
    1. `density_anomaly` (Issue [#296](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/296))
+   1. `dew_point_temperature` (Issue [#304](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/304))
 1. To `measurement_units` add 
    1. `mS/cm` (Issue [#296](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/296))
    1. `μS/cm` (Issue [#296](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/296))
+   1. `mL` (Issue [#306](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/306))
 1. In `logger_oem` rename `Kintech` to `Kintech Engineering` (Issue [#275](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/275))
 
 
