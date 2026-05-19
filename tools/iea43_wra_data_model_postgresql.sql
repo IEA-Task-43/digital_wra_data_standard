@@ -210,6 +210,7 @@ INSERT INTO measurement_type (id) VALUES
     ('speed_of_sound_in_air'),
     ('speed_of_sound_in_water'),
     ('mass_concentration'),
+    ('leaf_surface_wetness'),
     ('timestamp'),
     ('obukhov_length'),
     ('other');
@@ -336,6 +337,7 @@ INSERT INTO sensor_type (id) VALUES
     ('rain_gauge'),
     ('ice_detection_sensor'),
     ('fog_sensor'),
+    ('leaf_wetness_sensor'),
     ('gps'),
     ('illuminance_sensor'),
     ('compass'),

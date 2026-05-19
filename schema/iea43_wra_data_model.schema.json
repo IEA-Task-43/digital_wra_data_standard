@@ -176,6 +176,7 @@
         "speed_of_sound_in_air",
         "speed_of_sound_in_water",
         "mass_concentration",
+        "leaf_surface_wetness",
         "timestamp",
         "obukhov_length",
         "other"
@@ -265,6 +266,7 @@
         "speed_of_sound_in_air (the velocity at which acoustic waves move through the atmosphere.)",
         "speed_of_sound_in_water (the velocity at which acoustic waves move through water, such as sea water. In CF Conventions this is known as 'speed_of_sound_in_sea_water'.)",
         "mass_concentration (refers to the amount of mass of a substance (X) contained in a given volume of another substance (Y). It is expressed as mass per unit volume. In CF Conventions it typically appears in terms like mass_concentration_of_X_in_Y, where X is the material present in Y.)",
+        "leaf_surface_wetness (the presence and amount of moisture, such as dew, rain or fog, on the surface of a leaf or a leaf-like sensing element used as a proxy for vegetation wetness.)",
         "timestamp (the timestamp of when a measurement value was recorded)",
         "obukhov_length (a parameter with a dimension of length which, when used to scale the height above ground, gives a dimensionless stability parameter.)",
         "other"
@@ -1512,6 +1514,7 @@
                           "rain_gauge",
                           "ice_detection_sensor",
                           "fog_sensor",
+                          "leaf_wetness_sensor",
                           "gps",
                           "illuminance_sensor",
                           "compass",
