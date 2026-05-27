@@ -30,6 +30,8 @@ Additional labels for pre-release and build metadata are available as extensions
    1. `μS/cm` (Issue [#296](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/296))
    1. `mL` (Issue [#306](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/306))
 1. In `logger_oem`
+   1. remove the enum constraint. This allows more flexibility and the below renaming of existing entries without it been a breaking change. (Issue [#293](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/293))
+   1. add a significant number of additional entries (Issue [#293](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/293))
    1. rename `Kintech` to `Kintech Engineering` (Issue [#275](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/275))
    1. rename `Ammonit` to `Ammonit Measurement GmbH` (Issue [#292](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/292))
 
