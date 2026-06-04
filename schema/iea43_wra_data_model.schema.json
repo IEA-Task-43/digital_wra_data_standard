@@ -1348,6 +1348,61 @@
                         "title": "Connection Channel",
                         "description": "The connection channel the sensor is wired into on the logger."
                       },
+                      "digital_protocol_type": {
+                        "type": [
+                          "string",
+                          "null"
+                        ],
+                        "title": "Digital Protocol Type",
+                        "description": "The digital communication protocol used to connect the sensor to the logger.",
+                        "enum": [
+                          "RS-485",
+                          "RS-232",
+                          "SDI-12",
+                          "Modbus_RTU",
+                          "I2C",
+                          "SPI",
+                          "USB",
+                          "other",
+                          null
+                        ]
+                      },
+                      "digital_com_port": {
+                        "type": [
+                          "string",
+                          "null"
+                        ],
+                        "title": "Digital COM Port",
+                        "description": "The serial communication port the sensor is connected to on the logger.",
+                        "examples": [
+                          "SERIAL1",
+                          "SERIAL2"
+                        ]
+                      },
+                      "digital_bus_channel": {
+                        "type": [
+                          "string",
+                          "null"
+                        ],
+                        "title": "Digital Bus Channel",
+                        "description": "The channel within the serial bus the sensor occupies.",
+                        "examples": [
+                          "A",
+                          "C"
+                        ]
+                      },
+                      "digital_baud_rate": {
+                        "type": [
+                          "integer",
+                          "null"
+                        ],
+                        "title": "Digital Baud Rate",
+                        "description": "The baud rate of the serial communication between the sensor and the logger.",
+                        "examples": [
+                          9600,
+                          19200
+                        ]
+                      },
                       "logger_stated_boom_orientation_deg": {
                         "type": [
                           "number",

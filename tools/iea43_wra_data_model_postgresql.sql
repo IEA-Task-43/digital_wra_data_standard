@@ -69,6 +69,10 @@ CREATE TABLE IF NOT EXISTS structure_type (
     id text PRIMARY KEY
 );
 
+CREATE TABLE IF NOT EXISTS digital_protocol_type (
+    id text PRIMARY KEY
+);
+
 -- ** insert enum values **
 INSERT INTO plant_type (id) VALUES
     ('onshore_wind'),
@@ -377,6 +381,16 @@ INSERT INTO structure_type (id) VALUES
     ('guy_wires'),
     ('other');
 
+INSERT INTO digital_protocol_type (id) VALUES
+    ('RS-485'),
+    ('RS-232'),
+    ('SDI-12'),
+    ('Modbus_RTU'),
+    ('I2C'),
+    ('SPI'),
+    ('USB'),
+    ('other');
+
 
 -- ** Create main tables **
 CREATE TABLE IF NOT EXISTS plant (
@@ -553,6 +567,10 @@ CREATE TABLE IF NOT EXISTS logger_measurement_config(
     height_m decimal,
     serial_number text,
     connection_channel text,
+    digital_protocol_type text,
+    digital_com_port text,
+    digital_bus_channel text,
+    digital_baud_rate integer,
     logger_stated_boom_orientation_deg decimal CHECK (logger_stated_boom_orientation_deg >= 0 AND logger_stated_boom_orientation_deg <= 360),
     date_from timestamp WITHOUT TIME ZONE NOT NULL,
     date_to timestamp WITHOUT TIME ZONE,
@@ -560,7 +578,8 @@ CREATE TABLE IF NOT EXISTS logger_measurement_config(
     update_at timestamp WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
     updated_by UUID,
     FOREIGN KEY (measurement_point_uuid) REFERENCES measurement_point (uuid),
-    FOREIGN KEY (measurement_units_id) REFERENCES measurement_units (id)
+    FOREIGN KEY (measurement_units_id) REFERENCES measurement_units (id),
+    FOREIGN KEY (digital_protocol_type) REFERENCES digital_protocol_type (id)
 );
 
 CREATE TABLE IF NOT EXISTS column_name(

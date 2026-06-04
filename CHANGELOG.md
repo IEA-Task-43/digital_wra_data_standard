@@ -32,6 +32,11 @@ Additional labels for pre-release and build metadata are available as extensions
 1. In `logger_oem`
    1. rename `Kintech` to `Kintech Engineering` (Issue [#275](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/275))
    1. rename `Ammonit` to `Ammonit Measurement GmbH` (Issue [#292](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/292))
+1. To `logger_measurement_config` add
+   1. `digital_protocol_type` (Issue [#307](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/307))
+   1. `digital_com_port` (Issue [#307](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/307))
+   1. `digital_bus_channel` (Issue [#307](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/307))
+   1. `digital_baud_rate` (Issue [#307](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/307))
 
 
 ## [1.4.0-2025.06]
