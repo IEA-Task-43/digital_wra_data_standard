@@ -123,6 +123,8 @@ INSERT INTO logger_oem (id) VALUES
     ('SeaRoc Group'),
     ('Seatech'),
     ('SecondWind'),
+    ('Sonardyne'),
+    ('Star-Oddi'),
     ('Teledyne RDI'),
     ('Unidata'),
     ('Vaisala'),
