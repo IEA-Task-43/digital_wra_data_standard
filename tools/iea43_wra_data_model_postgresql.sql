@@ -29,6 +29,7 @@ CREATE TABLE IF NOT EXISTS logger_oem (
     id text PRIMARY KEY
 );
 
+-- ** This reanalysis table is not needed from version 1.5.0 onwards and will be removed in the version 2.0 release. **
 CREATE TABLE IF NOT EXISTS reanalysis (
     id text PRIMARY KEY
 );
@@ -524,8 +525,7 @@ CREATE TABLE IF NOT EXISTS model_config(
     notes text,
     update_at timestamp WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
     updated_by UUID,
-    FOREIGN KEY (measurement_location_uuid) REFERENCES measurement_location (uuid),
-    FOREIGN KEY (reanalysis_id) REFERENCES reanalysis (id)
+    FOREIGN KEY (measurement_location_uuid) REFERENCES measurement_location (uuid)
 );
 
 CREATE TABLE IF NOT EXISTS measurement_point(
