@@ -1197,12 +1197,18 @@
                   "anyOf": [
                     {
                       "enum": [
+                        "BARRA",
+                        "CERRA",
                         "CFSR",
+                        "EARS",
                         "ERA-Interim",
                         "ERA5",
+                        "ERA6",
+                        "JRA-3Q",
                         "JRA-55",
                         "MERRA-2",
                         "NCAR",
+                        "NORA3",
                         "Other",
                         null
                       ]

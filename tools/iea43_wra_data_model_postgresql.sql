@@ -116,12 +116,18 @@ INSERT INTO logger_oem (id) VALUES
     ('other');
 
 INSERT INTO reanalysis (id) VALUES
+    ('BARRA'),
+    ('CERRA'),
     ('CFSR'),
+    ('EARS'),
     ('ERA-Interim'),
     ('ERA5'),
+    ('ERA6'),
+    ('JRA-3Q'),
     ('JRA-55'),
     ('MERRA-2'),
     ('NCAR'),
+    ('NORA3'),
     ('Other');
 
 INSERT INTO measurement_type (id) VALUES
