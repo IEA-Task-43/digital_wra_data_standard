@@ -1193,7 +1193,7 @@
                     "null"
                   ],
                   "title": "Reanalysis",
-                  "description": "The name of the reanalysis dataset that is the source or the result of this model. In versions 1.5.0 and before this was an enum as defined by the IEA Wind Resource Assessment Data Model Schema. It is strongly advised to keep using values from this list.",
+                  "description": "The name of the reanalysis dataset that is the source or the result of this model. In WRA Data Model versions 1.4.0 and before this was an enum; it now accepts a free-text string for forward compatibility with newer datasets. It is strongly advised to use a value from the enum list, matching the dataset producer's official name, spelling and casing.",
                   "anyOf": [
                     {
                       "enum": [
@@ -1209,12 +1209,14 @@
                         "MERRA-2",
                         "NCAR",
                         "NORA3",
-                        "Other",
-                        null
+                        "Other"
                       ]
                     },
                     {
-                      "type": "string"
+                      "type": [
+                        "string",
+                        "null"
+                      ]
                     }
                   ]
                 },
