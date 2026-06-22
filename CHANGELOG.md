@@ -33,7 +33,7 @@ Additional labels for pre-release and build metadata are available as extensions
    1. rename `Kintech` to `Kintech Engineering` (Issue [#275](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/275))
    1. rename `Ammonit` to `Ammonit Measurement GmbH` (Issue [#292](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/292))
 1. In `model_config`
-   1. remove the enum constraint from `reanalysis`, allowing any string or null. The existing enum values are retained as suggested values. (Issue [#318](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/318))
+   1. remove the enum constraint from `reanalysis`, allowing any string or null. The existing enum values are retained as suggested values. `Other` has been removed as free-text input now serves this purpose. (Issue [#318](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/318))
 
 
 ## [1.4.0-2025.06]

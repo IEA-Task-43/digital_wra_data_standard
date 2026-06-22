@@ -127,8 +127,7 @@ INSERT INTO reanalysis (id) VALUES
     ('JRA-55'),
     ('MERRA-2'),
     ('NCAR'),
-    ('NORA3'),
-    ('Other');
+    ('NORA3');
 
 INSERT INTO measurement_type (id) VALUES
     ('wind_speed'),
