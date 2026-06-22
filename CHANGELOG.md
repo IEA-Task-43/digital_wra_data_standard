@@ -34,6 +34,7 @@ Additional labels for pre-release and build metadata are available as extensions
    1. add a significant number of additional entries (Issue [#293](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/293))
    1. rename `Kintech` to `Kintech Engineering` (Issue [#275](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/275))
    1. rename `Ammonit` to `Ammonit Measurement GmbH` (Issue [#292](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/292))
+   1. remove `Other` from the suggestion list as free-text input now serves this purpose.
 
 
 ## [1.4.0-2025.06]

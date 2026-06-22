@@ -134,8 +134,7 @@ INSERT INTO logger_oem (id) VALUES
     ('WindLogger'),
     ('WISE Group'),
     ('ZX Lidars'),
-    ('Unknown'),
-    ('Other');
+    ('Unknown');
 
 INSERT INTO reanalysis (id) VALUES
     ('CFSR'),

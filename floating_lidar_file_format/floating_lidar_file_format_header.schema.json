@@ -149,7 +149,7 @@
           "logger_oem": {
             "type": "string",
             "title": "Logger OEM",
-            "description": "This is the logger or remote sensing device manufacturer's name. In WRA Data Model versions 1.4.0 and before this was an id as defined by the IEA Wind Resource Assessment Data Model Schema. It is strongly advised to keep using values from this list. For floating lidars where the data is sometimes packaged together onshore, this value could be the floating lidar device OEM.",
+            "description": "The logger or remote sensing device manufacturer's name. In WRA Data Model versions 1.4.0 and before this was an enum; it now accepts a free-text string for forward compatibility. It is strongly advised to use a value from the suggestion list. If the manufacturer is not listed, use their official name, spelling and casing so it can be added to the list in a future release. For floating lidars where the data is sometimes packaged together onshore, this value could be the floating lidar device OEM.",
             "anyOf": [
               {
                 "enum": [
@@ -191,8 +191,7 @@
                   "WindLogger",
                   "WISE Group",
                   "ZX Lidars",
-                  "Unknown",
-                  "Other"
+                  "Unknown"
                 ]
               },
               {
