@@ -128,6 +128,7 @@ Column name examples:
 1. `wave_maximum_height__max__000__inertial_measurement_unit__xyz12__m`
 1. `wave_direction__avg__000__inertial_measurement_unit__xyz12__deg`
 1. `air_density__avg__002__calc__null__kg/m^3`
+1. `row_checksum__text__null__calc__null__null__sha256`
 
 
 It is not possible to capture all possible scenarios that might occur on a floating lidar device. Therefore, we have

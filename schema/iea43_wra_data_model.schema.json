@@ -178,6 +178,7 @@
         "mass_concentration",
         "timestamp",
         "obukhov_length",
+        "row_checksum",
         "other"
       ],
       "examples": [
@@ -267,6 +268,7 @@
         "mass_concentration (refers to the amount of mass of a substance (X) contained in a given volume of another substance (Y). It is expressed as mass per unit volume. In CF Conventions it typically appears in terms like mass_concentration_of_X_in_Y, where X is the material present in Y.)",
         "timestamp (the timestamp of when a measurement value was recorded)",
         "obukhov_length (a parameter with a dimension of length which, when used to scale the height above ground, gives a dimensionless stability parameter.)",
+        "row_checksum (a hash of all other fields in the row used for data integrity verification, e.g. computed using SHA-256)",
         "other"
       ]
     },
