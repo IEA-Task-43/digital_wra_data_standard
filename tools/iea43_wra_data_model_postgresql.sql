@@ -212,6 +212,7 @@ INSERT INTO measurement_type (id) VALUES
     ('mass_concentration'),
     ('timestamp'),
     ('obukhov_length'),
+    ('row_checksum'),
     ('other');
 
 INSERT INTO height_reference (id) VALUES
