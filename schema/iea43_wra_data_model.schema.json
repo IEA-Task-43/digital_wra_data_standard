@@ -1216,17 +1216,35 @@
               "title": "Model Configuration",
               "properties": {
                 "reanalysis": {
-                  "type": "string",
+                  "type": [
+                    "string",
+                    "null"
+                  ],
                   "title": "Reanalysis",
-                  "description": "The name of the reanalysis dataset that is the source or the result of this model.",
-                  "enum": [
-                    "CFSR",
-                    "ERA-Interim",
-                    "ERA5",
-                    "JRA-55",
-                    "MERRA-2",
-                    "NCAR",
-                    "Other"
+                  "description": "The name of the reanalysis dataset that is the source or the result of this model. In WRA Data Model versions 1.4.0 and before this was an enum; it now accepts a free-text string for forward compatibility with newer datasets. It is strongly advised to use a value from the enum list, matching the dataset producer's official name, spelling and casing.",
+                  "anyOf": [
+                    {
+                      "enum": [
+                        "BARRA",
+                        "CERRA",
+                        "CFSR",
+                        "EARS",
+                        "ERA-Interim",
+                        "ERA5",
+                        "ERA6",
+                        "JRA-3Q",
+                        "JRA-55",
+                        "MERRA-2",
+                        "NCAR",
+                        "NORA3"
+                      ]
+                    },
+                    {
+                      "type": [
+                        "string",
+                        "null"
+                      ]
+                    }
                   ]
                 },
                 "horizontal_grid_resolution_m": {
