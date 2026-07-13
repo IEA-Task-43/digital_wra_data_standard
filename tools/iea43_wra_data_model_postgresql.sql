@@ -29,6 +29,7 @@ CREATE TABLE IF NOT EXISTS logger_oem (
     id text PRIMARY KEY
 );
 
+-- ** This reanalysis table is not needed from version 1.5.0 onwards and will be removed in the version 2.0 release. **
 CREATE TABLE IF NOT EXISTS reanalysis (
     id text PRIMARY KEY
 );
@@ -98,34 +99,61 @@ INSERT INTO mast_geometry (id) VALUES
     ('lattice_square_sharp_edges'),
     ('pole');
 
+-- ** This logger_oem table is not needed from version 1.5.0 onwards and will be removed in the version 2.0 release. **
 INSERT INTO logger_oem (id) VALUES
-    ('NRG Systems'),
-    ('Ammonit Measurement GmbH'),
-    ('Campbell Scientific'),
-    ('Vaisala'),
-    ('SecondWind'),
-    ('Kintech Engineering'),
-    ('Wilmers'),
-    ('Unidata'),
-    ('WindLogger'),
-    ('Leosphere'),
-    ('ZX Lidars'),
-    ('AXYS Technologies'),
-    ('AQSystem'),
-    ('Pentaluum'),
-    ('Nortek'),
-    ('Teledyne RDI'),
     ('Aanderaa'),
-    ('other');
+    ('Accurasea (GEOxyz / Aqua Vision)'),
+    ('Akrocean'),
+    ('Ammonit Measurement GmbH'),
+    ('AQSystem'),
+    ('AXYS Technologies'),
+    ('Babcock International'),
+    ('Blue Aspirations'),
+    ('Campbell Scientific'),
+    ('CLS Group'),
+    ('Datawell'),
+    ('EOLOS Floating Lidar Solutions'),
+    ('Fraunhofer IWES'),
+    ('Fugro'),
+    ('Green Rebel'),
+    ('Kintech Engineering'),
+    ('Leosphere'),
+    ('Nortek'),
+    ('NRG Systems'),
+    ('Pentaluum'),
+    ('RBR'),
+    ('RPS (Tetra Tech)'),
+    ('Sea-Bird Scientific'),
+    ('seaLIDAR'),
+    ('SeaRoc Group'),
+    ('Seatech'),
+    ('SecondWind'),
+    ('Sonardyne'),
+    ('Star-Oddi'),
+    ('Teledyne RDI'),
+    ('Unidata'),
+    ('Vaisala'),
+    ('Valeport'),
+    ('Venterra Group (Partrac)'),
+    ('Wilmers'),
+    ('WindLogger'),
+    ('WISE Group'),
+    ('ZX Lidars'),
+    ('Unknown');
 
 INSERT INTO reanalysis (id) VALUES
+    ('BARRA'),
+    ('CERRA'),
     ('CFSR'),
+    ('EARS'),
     ('ERA-Interim'),
     ('ERA5'),
+    ('ERA6'),
+    ('JRA-3Q'),
     ('JRA-55'),
     ('MERRA-2'),
     ('NCAR'),
-    ('Other');
+    ('NORA3');
 
 INSERT INTO measurement_type (id) VALUES
     ('wind_speed'),
@@ -506,8 +534,7 @@ CREATE TABLE IF NOT EXISTS logger_main_config(
     notes text,
     update_at timestamp WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
     updated_by UUID,
-    FOREIGN KEY (measurement_location_uuid) REFERENCES measurement_location (uuid),
-    FOREIGN KEY (logger_oem_id) REFERENCES logger_oem (id)
+    FOREIGN KEY (measurement_location_uuid) REFERENCES measurement_location (uuid)
 );
 
 CREATE TABLE IF NOT EXISTS lidar_config(
@@ -538,8 +565,7 @@ CREATE TABLE IF NOT EXISTS model_config(
     notes text,
     update_at timestamp WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
     updated_by UUID,
-    FOREIGN KEY (measurement_location_uuid) REFERENCES measurement_location (uuid),
-    FOREIGN KEY (reanalysis_id) REFERENCES reanalysis (id)
+    FOREIGN KEY (measurement_location_uuid) REFERENCES measurement_location (uuid)
 );
 
 CREATE TABLE IF NOT EXISTS measurement_point(
