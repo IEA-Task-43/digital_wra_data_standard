@@ -29,6 +29,7 @@ CREATE TABLE IF NOT EXISTS logger_oem (
     id text PRIMARY KEY
 );
 
+-- ** This reanalysis table is not needed from version 1.5.0 onwards and will be removed in the version 2.0 release. **
 CREATE TABLE IF NOT EXISTS reanalysis (
     id text PRIMARY KEY
 );
@@ -69,6 +70,10 @@ CREATE TABLE IF NOT EXISTS structure_type (
     id text PRIMARY KEY
 );
 
+CREATE TABLE IF NOT EXISTS digital_protocol_type (
+    id text PRIMARY KEY
+);
+
 -- ** insert enum values **
 INSERT INTO plant_type (id) VALUES
     ('onshore_wind'),
@@ -94,34 +99,61 @@ INSERT INTO mast_geometry (id) VALUES
     ('lattice_square_sharp_edges'),
     ('pole');
 
+-- ** This logger_oem table is not needed from version 1.5.0 onwards and will be removed in the version 2.0 release. **
 INSERT INTO logger_oem (id) VALUES
-    ('NRG Systems'),
-    ('Ammonit Measurement GmbH'),
-    ('Campbell Scientific'),
-    ('Vaisala'),
-    ('SecondWind'),
-    ('Kintech Engineering'),
-    ('Wilmers'),
-    ('Unidata'),
-    ('WindLogger'),
-    ('Leosphere'),
-    ('ZX Lidars'),
-    ('AXYS Technologies'),
-    ('AQSystem'),
-    ('Pentaluum'),
-    ('Nortek'),
-    ('Teledyne RDI'),
     ('Aanderaa'),
-    ('other');
+    ('Accurasea (GEOxyz / Aqua Vision)'),
+    ('Akrocean'),
+    ('Ammonit Measurement GmbH'),
+    ('AQSystem'),
+    ('AXYS Technologies'),
+    ('Babcock International'),
+    ('Blue Aspirations'),
+    ('Campbell Scientific'),
+    ('CLS Group'),
+    ('Datawell'),
+    ('EOLOS Floating Lidar Solutions'),
+    ('Fraunhofer IWES'),
+    ('Fugro'),
+    ('Green Rebel'),
+    ('Kintech Engineering'),
+    ('Leosphere'),
+    ('Nortek'),
+    ('NRG Systems'),
+    ('Pentaluum'),
+    ('RBR'),
+    ('RPS (Tetra Tech)'),
+    ('Sea-Bird Scientific'),
+    ('seaLIDAR'),
+    ('SeaRoc Group'),
+    ('Seatech'),
+    ('SecondWind'),
+    ('Sonardyne'),
+    ('Star-Oddi'),
+    ('Teledyne RDI'),
+    ('Unidata'),
+    ('Vaisala'),
+    ('Valeport'),
+    ('Venterra Group (Partrac)'),
+    ('Wilmers'),
+    ('WindLogger'),
+    ('WISE Group'),
+    ('ZX Lidars'),
+    ('Unknown');
 
 INSERT INTO reanalysis (id) VALUES
+    ('BARRA'),
+    ('CERRA'),
     ('CFSR'),
+    ('EARS'),
     ('ERA-Interim'),
     ('ERA5'),
+    ('ERA6'),
+    ('JRA-3Q'),
     ('JRA-55'),
     ('MERRA-2'),
     ('NCAR'),
-    ('Other');
+    ('NORA3');
 
 INSERT INTO measurement_type (id) VALUES
     ('wind_speed'),
@@ -210,6 +242,7 @@ INSERT INTO measurement_type (id) VALUES
     ('speed_of_sound_in_air'),
     ('speed_of_sound_in_water'),
     ('mass_concentration'),
+    ('leaf_surface_wetness'),
     ('timestamp'),
     ('obukhov_length'),
     ('row_checksum'),
@@ -337,6 +370,7 @@ INSERT INTO sensor_type (id) VALUES
     ('rain_gauge'),
     ('ice_detection_sensor'),
     ('fog_sensor'),
+    ('leaf_wetness_sensor'),
     ('gps'),
     ('illuminance_sensor'),
     ('compass'),
@@ -376,6 +410,16 @@ INSERT INTO structure_type (id) VALUES
     ('lightning_finial'),
     ('aviation_light'),
     ('guy_wires'),
+    ('other');
+
+INSERT INTO digital_protocol_type (id) VALUES
+    ('RS-485'),
+    ('RS-232'),
+    ('SDI-12'),
+    ('Modbus_RTU'),
+    ('I2C'),
+    ('SPI'),
+    ('USB'),
     ('other');
 
 
@@ -493,8 +537,7 @@ CREATE TABLE IF NOT EXISTS logger_main_config(
     notes text,
     update_at timestamp WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
     updated_by UUID,
-    FOREIGN KEY (measurement_location_uuid) REFERENCES measurement_location (uuid),
-    FOREIGN KEY (logger_oem_id) REFERENCES logger_oem (id)
+    FOREIGN KEY (measurement_location_uuid) REFERENCES measurement_location (uuid)
 );
 
 CREATE TABLE IF NOT EXISTS lidar_config(
@@ -525,8 +568,7 @@ CREATE TABLE IF NOT EXISTS model_config(
     notes text,
     update_at timestamp WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
     updated_by UUID,
-    FOREIGN KEY (measurement_location_uuid) REFERENCES measurement_location (uuid),
-    FOREIGN KEY (reanalysis_id) REFERENCES reanalysis (id)
+    FOREIGN KEY (measurement_location_uuid) REFERENCES measurement_location (uuid)
 );
 
 CREATE TABLE IF NOT EXISTS measurement_point(
@@ -554,6 +596,10 @@ CREATE TABLE IF NOT EXISTS logger_measurement_config(
     height_m decimal,
     serial_number text,
     connection_channel text,
+    digital_protocol_type text,
+    digital_com_port text,
+    digital_bus_channel text,
+    digital_baud_rate integer,
     logger_stated_boom_orientation_deg decimal CHECK (logger_stated_boom_orientation_deg >= 0 AND logger_stated_boom_orientation_deg <= 360),
     date_from timestamp WITHOUT TIME ZONE NOT NULL,
     date_to timestamp WITHOUT TIME ZONE,
@@ -561,7 +607,8 @@ CREATE TABLE IF NOT EXISTS logger_measurement_config(
     update_at timestamp WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
     updated_by UUID,
     FOREIGN KEY (measurement_point_uuid) REFERENCES measurement_point (uuid),
-    FOREIGN KEY (measurement_units_id) REFERENCES measurement_units (id)
+    FOREIGN KEY (measurement_units_id) REFERENCES measurement_units (id),
+    FOREIGN KEY (digital_protocol_type) REFERENCES digital_protocol_type (id)
 );
 
 CREATE TABLE IF NOT EXISTS column_name(

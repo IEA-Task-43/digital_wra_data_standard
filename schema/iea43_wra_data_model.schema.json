@@ -176,6 +176,7 @@
         "speed_of_sound_in_air",
         "speed_of_sound_in_water",
         "mass_concentration",
+        "leaf_surface_wetness",
         "timestamp",
         "obukhov_length",
         "row_checksum",
@@ -266,6 +267,7 @@
         "speed_of_sound_in_air (the velocity at which acoustic waves move through the atmosphere.)",
         "speed_of_sound_in_water (the velocity at which acoustic waves move through water, such as sea water. In CF Conventions this is known as 'speed_of_sound_in_sea_water'.)",
         "mass_concentration (refers to the amount of mass of a substance (X) contained in a given volume of another substance (Y). It is expressed as mass per unit volume. In CF Conventions it typically appears in terms like mass_concentration_of_X_in_Y, where X is the material present in Y.)",
+        "leaf_surface_wetness (the presence and amount of moisture, such as dew, rain or fog, on the surface of a leaf or a leaf-like sensing element used as a proxy for vegetation wetness.)",
         "timestamp (the timestamp of when a measurement value was recorded)",
         "obukhov_length (a parameter with a dimension of length which, when used to scale the height above ground, gives a dimensionless stability parameter.)",
         "row_checksum (a hash of all other fields in the row used for data integrity verification, e.g. computed using SHA-256)",
@@ -919,26 +921,54 @@
                 "logger_oem_id": {
                   "type": "string",
                   "title": "Logger OEM",
-                  "description": "This is the logger or remote sensing device manufacturer id as defined by the IEA Wind Resource Assessment Data Model Schema.",
-                  "enum": [
-                    "NRG Systems",
-                    "Ammonit Measurement GmbH",
-                    "Campbell Scientific",
-                    "Vaisala",
-                    "SecondWind",
-                    "Kintech Engineering",
-                    "Wilmers",
-                    "Unidata",
-                    "WindLogger",
-                    "Leosphere",
-                    "ZX Lidars",
-                    "AXYS Technologies",
-                    "AQSystem",
-                    "Pentaluum",
-                    "Nortek",
-                    "Teledyne RDI",
-                    "Aanderaa",
-                    "Other"
+                  "description": "The logger or remote sensing device manufacturer's name. In WRA Data Model versions 1.4.0 and before this was an enum; it now accepts a free-text string for forward compatibility. It is strongly advised to use a value from the suggestion list. If the manufacturer is not listed, use their official name, spelling and casing so it can be added to the list in a future release. For floating lidars where the data is sometimes packaged together onshore, this value could be the floating lidar device OEM.",
+                  "anyOf": [
+                    {
+                      "enum": [
+                        "Aanderaa",
+                        "Accurasea (GEOxyz / Aqua Vision)",
+                        "Akrocean",
+                        "Ammonit Measurement GmbH",
+                        "AQSystem",
+                        "AXYS Technologies",
+                        "Babcock International",
+                        "Blue Aspirations",
+                        "Campbell Scientific",
+                        "CLS Group",
+                        "Datawell",
+                        "EOLOS Floating Lidar Solutions",
+                        "Fraunhofer IWES",
+                        "Fugro",
+                        "Green Rebel",
+                        "Kintech Engineering",
+                        "Leosphere",
+                        "Nortek",
+                        "NRG Systems",
+                        "Pentaluum",
+                        "RBR",
+                        "RPS (Tetra Tech)",
+                        "Sea-Bird Scientific",
+                        "seaLIDAR",
+                        "SeaRoc Group",
+                        "Seatech",
+                        "SecondWind",
+                        "Sonardyne",
+                        "Star-Oddi",
+                        "Teledyne RDI",
+                        "Unidata",
+                        "Vaisala",
+                        "Valeport",
+                        "Venterra Group (Partrac)",
+                        "Wilmers",
+                        "WindLogger",
+                        "WISE Group",
+                        "ZX Lidars",
+                        "Unknown"
+                      ]
+                    },
+                    {
+                      "type": "string"
+                    }
                   ]
                 },
                 "logger_model_name": {
@@ -1190,17 +1220,35 @@
               "title": "Model Configuration",
               "properties": {
                 "reanalysis": {
-                  "type": "string",
+                  "type": [
+                    "string",
+                    "null"
+                  ],
                   "title": "Reanalysis",
-                  "description": "The name of the reanalysis dataset that is the source or the result of this model.",
-                  "enum": [
-                    "CFSR",
-                    "ERA-Interim",
-                    "ERA5",
-                    "JRA-55",
-                    "MERRA-2",
-                    "NCAR",
-                    "Other"
+                  "description": "The name of the reanalysis dataset that is the source or the result of this model. In WRA Data Model versions 1.4.0 and before this was an enum; it now accepts a free-text string for forward compatibility with newer datasets. It is strongly advised to use a value from the enum list, matching the dataset producer's official name, spelling and casing.",
+                  "anyOf": [
+                    {
+                      "enum": [
+                        "BARRA",
+                        "CERRA",
+                        "CFSR",
+                        "EARS",
+                        "ERA-Interim",
+                        "ERA5",
+                        "ERA6",
+                        "JRA-3Q",
+                        "JRA-55",
+                        "MERRA-2",
+                        "NCAR",
+                        "NORA3"
+                      ]
+                    },
+                    {
+                      "type": [
+                        "string",
+                        "null"
+                      ]
+                    }
                   ]
                 },
                 "horizontal_grid_resolution_m": {
@@ -1349,6 +1397,61 @@
                         ],
                         "title": "Connection Channel",
                         "description": "The connection channel the sensor is wired into on the logger."
+                      },
+                      "digital_protocol_type": {
+                        "type": [
+                          "string",
+                          "null"
+                        ],
+                        "title": "Digital Protocol Type",
+                        "description": "The digital communication protocol used to connect the sensor to the logger.",
+                        "enum": [
+                          "RS-485",
+                          "RS-232",
+                          "SDI-12",
+                          "Modbus_RTU",
+                          "I2C",
+                          "SPI",
+                          "USB",
+                          "other",
+                          null
+                        ]
+                      },
+                      "digital_com_port": {
+                        "type": [
+                          "string",
+                          "null"
+                        ],
+                        "title": "Digital COM Port",
+                        "description": "The serial communication port the sensor is connected to on the logger.",
+                        "examples": [
+                          "SERIAL1",
+                          "SERIAL2"
+                        ]
+                      },
+                      "digital_bus_channel": {
+                        "type": [
+                          "string",
+                          "null"
+                        ],
+                        "title": "Digital Bus Channel",
+                        "description": "The channel within the serial bus the sensor occupies.",
+                        "examples": [
+                          "A",
+                          "C"
+                        ]
+                      },
+                      "digital_baud_rate": {
+                        "type": [
+                          "integer",
+                          "null"
+                        ],
+                        "title": "Digital Baud Rate",
+                        "description": "The baud rate of the serial communication between the sensor and the logger.",
+                        "examples": [
+                          9600,
+                          19200
+                        ]
                       },
                       "logger_stated_boom_orientation_deg": {
                         "type": [
@@ -1514,6 +1617,7 @@
                           "rain_gauge",
                           "ice_detection_sensor",
                           "fog_sensor",
+                          "leaf_wetness_sensor",
                           "gps",
                           "illuminance_sensor",
                           "compass",

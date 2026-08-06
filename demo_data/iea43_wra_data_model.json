@@ -1828,6 +1828,70 @@
         "calibration": null
       }],
       "mounting_arrangement": null
+    },{
+      "name": "Thies3D_WS_80m",
+      "measurement_type_id": "wind_speed",
+      "height_m": 80,
+      "height_reference_id": "ground_level",
+      "notes": "Thies Ultrasonic 3D anemometer connected via RS-485 serial bus.",
+      "update_at": "2020-04-18T18:13:00",
+      "logger_measurement_config": [{
+        "slope": null,
+        "offset": null,
+        "sensitivity": null,
+        "measurement_units_id": "m/s",
+        "height_m": 80,
+        "serial_number": null,
+        "connection_channel": null,
+        "digital_protocol_type": "RS-485",
+        "digital_com_port": "SERIAL1",
+        "digital_bus_channel": "A",
+        "digital_baud_rate": 9600,
+        "date_from": "2020-04-12T12:00:00",
+        "date_to": null,
+        "notes": null,
+        "update_at": "2020-04-18T18:13:00",
+        "column_name": [
+          {
+            "column_name": "Thies3D_WS_80m_Avg",
+            "statistic_type_id": "avg",
+            "is_ignored": false,
+            "notes": null,
+            "update_at": "2020-04-18T18:13:00"
+          },{
+            "column_name": "Thies3D_WS_80m_SD",
+            "statistic_type_id": "sd",
+            "is_ignored": false,
+            "notes": null,
+            "update_at": "2020-04-18T18:13:00"
+          },{
+            "column_name": "Thies3D_WS_80m_Min",
+            "statistic_type_id": "min",
+            "is_ignored": false,
+            "notes": null,
+            "update_at": "2020-04-18T18:13:00"
+          },{
+            "column_name": "Thies3D_WS_80m_Max",
+            "statistic_type_id": "max",
+            "is_ignored": false,
+            "notes": null,
+            "update_at": "2020-04-18T18:13:00"
+        }]
+      }],
+      "sensor": [{
+        "oem": "Thies",
+        "model": "Ultrasonic 3D",
+        "serial_number": null,
+        "sensor_type_id": "3d_ultrasonic",
+        "instrument_poi_height_mm": null,
+        "is_heated": false,
+        "date_from": "2020-04-12T12:00:00",
+        "date_to": null,
+        "update_at": "2020-04-18T18:13:00",
+        "notes": null,
+        "calibration": null
+      }],
+      "mounting_arrangement": null
     }]
   }]
 }

@@ -66,15 +66,20 @@ INSERT INTO measurement_point
     ('8b6d44ca-da42-400b-996f-d8567ef94d82', '7faab396-bc55-4732-a5c5-0254047ae5ed', 'Prs_76m', 'air_pressure',
      76, 'ground_level', null, 'be6f56e6-83f6-4460-a8b8-84c457238c86'),
     ('bfe53c3c-6196-400a-afef-f32aa936b375', '7faab396-bc55-4732-a5c5-0254047ae5ed', 'Logger_V', 'voltage',
-     null, 'ground_level', null, 'be6f56e6-83f6-4460-a8b8-84c457238c86');
+     null, 'ground_level', null, 'be6f56e6-83f6-4460-a8b8-84c457238c86'),
+    ('a1b2c3d4-e5f6-7890-abcd-ef1234567890', '7faab396-bc55-4732-a5c5-0254047ae5ed', 'Thies3D_WS_80m', 'wind_speed',
+     80, 'ground_level', 'Thies Ultrasonic 3D anemometer connected via RS-485 serial bus.', 'be6f56e6-83f6-4460-a8b8-84c457238c86');
 
 INSERT INTO logger_measurement_config
     (uuid, measurement_point_uuid, slope, "offset", sensitivity, measurement_units_id, height_m,
-     serial_number, connection_channel, date_from, date_to, notes, updated_by) VALUES
+     serial_number, connection_channel, digital_protocol_type, digital_com_port, digital_bus_channel,
+     digital_baud_rate, date_from, date_to, notes, updated_by) VALUES
     ('c48054d3-888a-405f-9009-6714e53a7fc2', '390bc20e-acb2-4ad2-adfa-65eadeb2346b', 0.04573, 0.2419, null,
-     'm/s', 80, '09183000', 'CH1', '2020-04-12T12:00:00', '2020-04-15T00:00:00', null, 'be6f56e6-83f6-4460-a8b8-84c457238c86'),
+     'm/s', 80, '09183000', 'CH1', null, null, null, null, '2020-04-12T12:00:00', '2020-04-15T00:00:00', null, 'be6f56e6-83f6-4460-a8b8-84c457238c86'),
     ('b08331bd-0dc3-44cf-86f8-7ca42735bb58', '390bc20e-acb2-4ad2-adfa-65eadeb2346b', 0.04573, 0.2491, null,
-     'm/s', 80, '09183000', 'CH1', '2020-04-15T00:00:00', null, null, 'be6f56e6-83f6-4460-a8b8-84c457238c86');
+     'm/s', 80, '09183000', 'CH1', null, null, null, null, '2020-04-15T00:00:00', null, null, 'be6f56e6-83f6-4460-a8b8-84c457238c86'),
+    ('f1e2d3c4-b5a6-7890-fedc-ba0987654321', 'a1b2c3d4-e5f6-7890-abcd-ef1234567890', null, null, null,
+     'm/s', 80, null, null, 'RS-485', 'SERIAL1', 'A', 9600, '2020-04-12T12:00:00', null, null, 'be6f56e6-83f6-4460-a8b8-84c457238c86');
 --    ('', '3f074548-aa9f-4e98-94c5-745ec2e26c73', 0.04568, 0.2487, null,
 --     'm/s', 80, '09183001', 'CH2', '2020-04-12T12:00:00', '2020-04-18T00:00:00', null, 'be6f56e6-83f6-4460-a8b8-84c457238c86'),
 --    ('', '3f074548-aa9f-4e98-94c5-745ec2e26c73', 0.04575, 0.2497, null,
