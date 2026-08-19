@@ -179,6 +179,7 @@
         "leaf_surface_wetness",
         "timestamp",
         "obukhov_length",
+        "row_checksum",
         "other"
       ],
       "examples": [
@@ -269,6 +270,7 @@
         "leaf_surface_wetness (the presence and amount of moisture, such as dew, rain or fog, on the surface of a leaf or a leaf-like sensing element used as a proxy for vegetation wetness.)",
         "timestamp (the timestamp of when a measurement value was recorded)",
         "obukhov_length (a parameter with a dimension of length which, when used to scale the height above ground, gives a dimensionless stability parameter.)",
+        "row_checksum (a hash of all other fields in the row used for data integrity verification, e.g. computed using SHA-256)",
         "other"
       ]
     },

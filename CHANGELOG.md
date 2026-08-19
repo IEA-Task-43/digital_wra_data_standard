@@ -25,6 +25,7 @@ Additional labels for pre-release and build metadata are available as extensions
    1. `specific_conductivity` (Issue [#296](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/296))
    1. `density_anomaly` (Issue [#296](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/296))
    1. `dew_point_temperature` (Issue [#304](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/304))
+   1. `row_checksum` (Issue [#305](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/305))
    1. `leaf_surface_wetness` (Issue [#274](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/274))
 1. To `sensor_type` add
    1. `leaf_wetness_sensor` (Issue [#274](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/274))

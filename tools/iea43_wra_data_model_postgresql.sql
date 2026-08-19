@@ -245,6 +245,7 @@ INSERT INTO measurement_type (id) VALUES
     ('leaf_surface_wetness'),
     ('timestamp'),
     ('obukhov_length'),
+    ('row_checksum'),
     ('other');
 
 INSERT INTO height_reference (id) VALUES
