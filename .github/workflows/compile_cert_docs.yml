@@ -1,4 +1,4 @@
-name: Compile Calibration Cert Documentation to Markdown
+name: Compile Calibration Cert Documentation to HTML
 
 on:
   push:
@@ -11,28 +11,28 @@ on:
 
 jobs:
   compile:
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v7
         with:
           ref: 'calibration_schema'
 
 #       - name: Copy schema
 #         run: cp ./schema/iea43_wra_data_model.schema.json ./app/src/schema.json
 
-      - name: Setup Node
-        uses: actions/setup-node@v2-beta
+      - name: Setup Python
+        uses: actions/setup-python@v7
         with:
-          node-version: '12'
+          python-version: '3.x'
 
-      - name: Install jsonschema2md
-        run: npm install -g @adobe/jsonschema2md
+      - name: Install json-schema-for-humans
+        run: pip install json-schema-for-humans
 
       - name: Clear docs folder
         run: rm -rf digital_calibration_certificate/docs
 
-      - name: Compile docs to Markdown
-        run: jsonschema2md -d digital_calibration_certificate/schema -o digital_calibration_certificate/docs -h false
+      - name: Compile docs to HTML
+        run: generate-schema-doc --expand-buttons digital_calibration_certificate/schema/iea43_digital_calibration_certificate.schema.json digital_calibration_certificate/docs/schema_doc.html
 
       - name: Commit files
         continue-on-error: true
@@ -41,10 +41,10 @@ jobs:
           git config --local user.name "GitHub Action"
           git add digital_calibration_certificate/docs
           git commit -m "Compile documentation"
-          
+
       - name: Push changes
         continue-on-error: true
-        uses: ad-m/github-push-action@master
+        uses: ad-m/github-push-action@v1.3.0
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
 #           branch: ${{ github.ref }}

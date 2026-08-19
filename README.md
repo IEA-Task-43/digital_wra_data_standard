@@ -55,7 +55,7 @@ The following tools are part of this undertaking:
 - [WRA Data Model](./schema/iea43_wra_data_model.schema.json): This JSON Schema file is the _WRA Data Model_. It describes 
   how a JSON file that describes wind resource measurement data should be composed.
 
-- [Documentation](./docs/README.md): Markdown documentation for the _WRA Data Model_ created directly from the JSON Schema.
+- [Documentation](./docs/schema_doc.html): HTML documentation for the _WRA Data Model_ created directly from the JSON Schema.
 
 - [Form App](https://iea-task-43.github.io/digital_wra_data_standard/): This app shows a form that is modeled after the 
   JSON Schema and can create JSON data out of your inputs that is in accordance with the _WRA Data Model_.
@@ -114,5 +114,5 @@ You can find out more about the IEA's Wind Task 43 working group at [ieawindtask
 ## Pipeline Status
 | Pipeline | Status | Result |
 |:---------|:-------|:-------|
-| Documentation | ![Compile Documentation to Markdown](https://github.com/IEA-Task-43/digital_wra_data_standard/workflows/Compile%20Documentation%20to%20Markdown/badge.svg) | [Documentation](./docs/README.md) |
+| Documentation | ![Compile Documentation to HTML](https://github.com/IEA-Task-43/digital_wra_data_standard/workflows/Compile%20Documentation%20to%20HTML/badge.svg) | [Documentation](./docs/schema_doc.html) |
 | Form App | ![Deploy Form App to GitHub Pages](https://github.com/IEA-Task-43/digital_wra_data_standard/workflows/Deploy%20Form%20App%20to%20GitHub%20Pages/badge.svg) | [Form App](https://iea-task-43.github.io/digital_wra_data_standard/) |
