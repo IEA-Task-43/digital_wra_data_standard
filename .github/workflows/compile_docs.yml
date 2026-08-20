@@ -27,7 +27,7 @@ jobs:
         run: pip install json-schema-for-humans
 
       - name: Clear docs folder
-        run: rm -rf docs
+        run: rm -rf docs && mkdir -p docs
 
       - name: Compile docs to HTML
         run: generate-schema-doc --expand-buttons schema/iea43_wra_data_model.schema.json docs/schema_doc.html

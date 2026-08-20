@@ -29,7 +29,7 @@ jobs:
         run: pip install json-schema-for-humans
 
       - name: Clear docs folder
-        run: rm -rf digital_calibration_certificate/docs
+        run: rm -rf digital_calibration_certificate/docs && mkdir -p digital_calibration_certificate/docs
 
       - name: Compile docs to HTML
         run: generate-schema-doc --expand-buttons digital_calibration_certificate/schema/iea43_digital_calibration_certificate.schema.json digital_calibration_certificate/docs/schema_doc.html
