@@ -3,7 +3,7 @@ name: Compile Calibration Cert Documentation to HTML
 on:
   push:
     branches:
-      - calibration_schema
+      - master
     paths:
       - 'schema/**'
       - '.github/workflows/compile_cert_docs.yml'
@@ -14,8 +14,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7
-        with:
-          ref: 'calibration_schema'
 
 #       - name: Copy schema
 #         run: cp ./schema/iea43_wra_data_model.schema.json ./app/src/schema.json
@@ -47,8 +45,7 @@ jobs:
         uses: ad-m/github-push-action@v1.3.0
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-#           branch: ${{ github.ref }}
-          branch: 'calibration_schema'
+          branch: ${{ github.ref }}
 
       - name: Deploy docs to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4.1.0
