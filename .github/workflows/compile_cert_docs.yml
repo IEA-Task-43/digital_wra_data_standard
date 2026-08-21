@@ -32,6 +32,11 @@ jobs:
       - name: Compile docs to HTML
         run: generate-schema-doc --expand-buttons digital_calibration_certificate/schema/iea43_digital_calibration_certificate.schema.json digital_calibration_certificate/docs/schema_doc.html
 
+      - name: Apply documentation style overrides
+        run: |
+          cat .github/doc_assets/schema_doc_overrides.css >> digital_calibration_certificate/docs/schema_doc.css
+          cat .github/doc_assets/schema_doc_type_annotations.js >> digital_calibration_certificate/docs/schema_doc.min.js
+
       - name: Commit files
         continue-on-error: true
         run: |
