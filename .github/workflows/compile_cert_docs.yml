@@ -53,7 +53,7 @@ jobs:
       - name: Deploy docs to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4.1.0
         with:
-          deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./digital_calibration_certificate/docs
           destination_dir: digital_calibration_certificate/docs
           keep_files: true
