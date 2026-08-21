@@ -179,3 +179,45 @@ body {
 .highlight .vi { color: #bb60d5 } /* Name.Variable.Instance */
 .highlight .vm { color: #bb60d5 } /* Name.Variable.Magic */
 .highlight .il { color: #40a070 } /* Literal.Number.Integer.Long */
+
+/*
+ * Appended to the generated schema_doc.css by the documentation
+ * workflows. json-schema-for-humans has no configuration options for
+ * type sizing or for surfacing property types in the collapsed list,
+ * so these rules are layered on after generation.
+ */
+
+/* The generated defaults are sized for a much larger viewport. */
+body { padding: 20px; font-size: 14px; line-height: 1.45; }
+h1 { font-size: 1.75rem; }
+/* "All of" / "Conditional Subschema" section headings. */
+h2.handle { font-size: 1.15rem; margin-bottom: 0.5rem; }
+h4 { font-size: 1rem; margin-top: 0.75rem; margin-bottom: 0.25rem; }
+.description { font-size: 0.9rem; }
+.badge.value-type, .badge.default-value { font-size: 85%; margin-bottom: 4px; }
+.btn.btn-link { font-size: 14px; }
+.card-header { padding: 0.4rem 1.25rem; }
+
+/*
+ * Type shown next to each property name in the collapsed list, so the
+ * structure of the schema is readable without expanding every row.
+ * Added by schema_doc_type_annotations.js.
+ */
+.property-type-annotation {
+    font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+    font-size: 12px;
+    font-weight: 400;
+    color: #6c757d;
+    margin-left: 0.5rem;
+    white-space: nowrap;
+}
+
+/*
+ * Arrays and objects carry a bracket glyph so container types are
+ * distinguishable from scalars without relying on colour.
+ */
+.property-type-annotation .type-glyph {
+    font-weight: 600;
+    color: #495057;
+    margin-right: 0.15rem;
+}
