@@ -182,6 +182,7 @@ INSERT INTO measurement_type (id) VALUES
     ('diffuse_horizontal_irradiance'),
     ('global_tilted_irradiance'),
     ('global_normal_irradiance'),
+    ('reflected_irradiance'),
     ('albedo'),
     ('soiling_loss_index'),
     ('illuminance'),
