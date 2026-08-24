@@ -1,39 +1,37 @@
 /**
- * Welcome to your Workbox-powered service worker!
+ * Tombstone service worker.
  *
- * You'll need to register this file in your web app and you should
- * disable HTTP caching for this file too.
- * See https://goo.gl/nhQhGp
+ * The Create React App build published before August 2026 registered a Workbox
+ * service worker that mapped every extension-less navigation under
+ * /digital_wra_data_standard/ to its own precached index.html. Returning
+ * visitors were therefore served the 2024 Form App, and the generated
+ * documentation under /docs/, from cache rather than from the site.
  *
- * The rest of the code is auto-generated. Please don't update this file
- * directly; instead, make changes to your Workbox build configuration
- * and re-run your build process.
- * See https://goo.gl/2aRDsh
+ * The deploy step sets keep_files, which is required so that the Form App and
+ * the documentation do not delete each other, but which also means the old
+ * worker cannot be removed simply by no longer building it. This file replaces
+ * it with one that clears the caches, unregisters itself, and reloads any open
+ * page so that the current build is fetched.
+ *
+ * Safe to delete once returning visitors have had time to pick it up.
  */
-
-importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
-
-importScripts(
-  "/digital_wra_data_standard/precache-manifest.983d1c45c0f5f9790bdad4ca02930563.js"
-);
-
-self.addEventListener('message', (event) => {
-  if (event.data && event.data.type === 'SKIP_WAITING') {
-    self.skipWaiting();
-  }
+self.addEventListener('install', () => {
+  self.skipWaiting();
 });
 
-workbox.core.clientsClaim();
+self.addEventListener('activate', (event) => {
+  event.waitUntil(
+    (async () => {
+      const cacheNames = await caches.keys();
+      await Promise.all(cacheNames.map((name) => caches.delete(name)));
 
-/**
- * The workboxSW.precacheAndRoute() method efficiently caches and responds to
- * requests for URLs in the manifest.
- * See https://goo.gl/S9QRab
- */
-self.__precacheManifest = [].concat(self.__precacheManifest || []);
-workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
+      await self.registration.unregister();
 
-workbox.routing.registerNavigationRoute(workbox.precaching.getCacheKeyForURL("/digital_wra_data_standard/index.html"), {
-  
-  blacklist: [/^\/_/,/\/[^/?]+\.[^/]+$/],
+      const clients = await self.clients.matchAll({
+        type: 'window',
+        includeUncontrolled: true,
+      });
+      clients.forEach((client) => client.navigate(client.url));
+    })()
+  );
 });
