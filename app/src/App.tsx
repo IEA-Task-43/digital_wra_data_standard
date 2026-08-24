@@ -1,134 +1,109 @@
-import React, { Fragment, useState, useEffect } from 'react';
-import {
-  JsonForms,
-  JsonFormsDispatch,
-  JsonFormsReduxContext
-} from '@jsonforms/react';
-import { Provider } from 'react-redux';
-import Grid from '@material-ui/core/Grid';
-import Typography from '@material-ui/core/Typography';
-import withStyles, { WithStyles } from '@material-ui/core/styles/withStyles';
-import createStyles from '@material-ui/core/styles/createStyles';
+import React, { useEffect, useState } from 'react';
+import Form from '@rjsf/core';
+import validator from '@rjsf/validator-ajv8';
+import type { RJSFSchema, UiSchema } from '@rjsf/utils';
 import './App.css';
-import schema from './schema.json';
-import uischema from './uischema.json';
-import {
-  materialCells,
-  materialRenderers
-} from '@jsonforms/material-renderers';
-import { Store } from 'redux';
-import { get } from 'lodash';
-import RatingControl from './RatingControl';
-import ratingControlTester from './ratingControlTester';
+import uiSchemaJson from './uischema.json';
 
-const styles = createStyles({
-  container: {
-    padding: '1em'
-  },
-  title: {
-    textAlign: 'center',
-    padding: '0.25em'
-  },
-  dataContent: {
-    display: 'flex',
-    justifyContent: 'center',
-    borderRadius: '0.25em',
-    backgroundColor: '#eeeeee'
-  },
-  demoform: {
-    margin: 'auto',
-    padding: '1rem'
-  }
-});
+const uiSchema = uiSchemaJson as UiSchema;
 
-export interface AppProps extends WithStyles<typeof styles> {
-  store: Store;
-}
+/**
+ * The schema is fetched at runtime rather than bundled, so that publishing a new
+ * release of the data model replaces a single static file instead of requiring
+ * the application to be rebuilt. `scripts/copy_schema.mjs` places it here.
+ */
+const schemaUrl = `${import.meta.env.BASE_URL}schema.json`;
 
-const data = {
-};
-
-const getDataAsStringFromStore = (store: Store) =>
-  store
-    ? JSON.stringify(
-        get(store.getState(), ['jsonforms', 'core', 'data']),
-        null,
-        2
-      )
-    : '';
-
-const App = ({ store, classes }: AppProps) => {
-  const [tabIdx] = useState(0);
-  const [displayDataAsString, setDisplayDataAsString] = useState('');
-  const [standaloneData, setStandaloneData] = useState(data);
+const App = () => {
+  const [schema, setSchema] = useState<RJSFSchema | null>(null);
+  const [loadError, setLoadError] = useState<string | null>(null);
+  const [formData, setFormData] = useState<unknown>({});
+  const [isValid, setIsValid] = useState(false);
 
   useEffect(() => {
-    const updateStringData = () => {
-      const stringData = getDataAsStringFromStore(store);
-      setDisplayDataAsString(stringData);
+    let cancelled = false;
+
+    const loadSchema = async () => {
+      try {
+        const response = await fetch(schemaUrl);
+        if (!response.ok) {
+          throw new Error(`${response.status} ${response.statusText}`);
+        }
+        const loaded: RJSFSchema = await response.json();
+        if (!cancelled) {
+          setSchema(loaded);
+        }
+      } catch (cause) {
+        if (!cancelled) {
+          setLoadError(cause instanceof Error ? cause.message : String(cause));
+        }
+      }
     };
-    store.subscribe(updateStringData);
-    updateStringData();
-  }, [store]);
 
-  useEffect(() => {
-    setDisplayDataAsString(JSON.stringify(standaloneData, null, 2));
-  }, [standaloneData]);
+    loadSchema();
+
+    return () => {
+      cancelled = true;
+    };
+  }, []);
+
+  const title = (schema?.title as string) ?? 'IEA Wind Task 43 WRA Data Model';
 
   return (
-    <Fragment>
-      <div className='App'>
-        <header className='App-header'>
-          <h1 className='App-title'>Form Prototype</h1>
-        </header>
-      </div>
+    <>
+      <header className='app-header'>
+        <h1 className='app-title'>{title}</h1>
+      </header>
 
-      <Grid
-        container
-        justify={'center'}
-        spacing={1}
-        className={classes.container}
-      >
-        <Grid item sm={12}>
-          {tabIdx === 0 && (
-            <div className={classes.demoform}>
-              <JsonForms
-                schema={schema}
-                uischema={uischema}
-                data={standaloneData}
-                renderers={[
-                  ...materialRenderers,
-                  //register custom renderer
-                  { tester: ratingControlTester, renderer: RatingControl }
-                ]}
-                cells={materialCells}
-                onChange={({ errors, data }) => setStandaloneData(data)}
-              />
-            </div>
-          )}
-          {tabIdx === 1 && (
-            <div className={classes.demoform} id='form'>
-              {store ? (
-                <Provider store={store}>
-                  <JsonFormsReduxContext>
-                    <JsonFormsDispatch />
-                  </JsonFormsReduxContext>
-                </Provider>
-              ) : null}
-            </div>
-          )}
-        </Grid>
-        <Grid item sm={12}>
-          <Typography variant={'h3'} className={classes.title}>
-            Rendered JSON
-          </Typography>
-          <div className={classes.dataContent}>
-            <pre id='boundData'>{displayDataAsString}</pre>
+      <main className='app-main'>
+        {loadError && (
+          <div className='app-message app-message-error'>
+            <p>The data model schema could not be loaded: {loadError}</p>
+            <p>
+              When running locally, <code>npm run copy-schema</code> copies it from{' '}
+              <code>schema/iea43_wra_data_model.schema.json</code> into{' '}
+              <code>app/public/schema.json</code>. This runs automatically before{' '}
+              <code>npm start</code> and <code>npm run build</code>.
+            </p>
           </div>
-        </Grid>
-      </Grid>
-    </Fragment>
+        )}
+
+        {!schema && !loadError && <p className='app-message'>Loading the schema…</p>}
+
+        {schema && (
+          <>
+            <Form
+              schema={schema}
+              uiSchema={uiSchema}
+              validator={validator}
+              formData={formData}
+              // Native browser validation would block submission on the first
+              // empty required field, before the schema is validated at all.
+              noHtml5Validate
+              showErrorList='top'
+              onChange={({ formData: changed }) => {
+                setFormData(changed);
+                setIsValid(false);
+              }}
+              onSubmit={() => setIsValid(true)}
+              onError={() => setIsValid(false)}
+            />
+
+            {isValid && (
+              <p className='app-message app-message-valid'>
+                The data below is valid against the data model.
+              </p>
+            )}
+
+            <h2 className='app-subtitle'>Data model JSON</h2>
+            <pre id='boundData' className='app-data'>
+              {JSON.stringify(formData, null, 2)}
+            </pre>
+          </>
+        )}
+      </main>
+    </>
   );
 };
 
-export default withStyles(styles)(App);
+export default App;

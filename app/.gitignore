@@ -60,3 +60,6 @@ typings/
 .idea
 
 build
+
+# Copied from schema/ by scripts/copy_schema.mjs at build time
+public/schema.json

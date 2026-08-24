@@ -1,74 +1,52 @@
-This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
-# JSON Forms React seed App
-This seed demonstrates how to use [JSON Forms](https://jsonforms.io) with React in order to render a simple form for displaying a task entity. It showcases both the redux variant and the React standalone component (without redux).
- 
-It is based on create-react-app and only contains minor modifications.
+# IEA Wind Task 43 WRA Data Model — Form App
 
- * Execute `npm ci` to install the prerequisites. If you want to have the latest released versions use `npm install`.
- * Execute `npm start` to start the application.
- 
- Browse to http://localhost:3000 to see the application in action.
+A form for creating and validating a WRA Data Model JSON file, generated directly from `schema/iea43_wra_data_model.schema.json`. The published form is at https://iea-task-43.github.io/digital_wra_data_standard/.
 
-## File Structure
-Let's briefly have a look at the most important files:
-* `src/schema.json` contains the JSON schema (also referred to as 'data schema')
-* `src/uischema.json` contains the UI schema
-* `src/index.js` is the entry point of the application and sets up the redux store that contains the data, the JSON and the UI schema necessary for JSON Forms.
-* `src/App.js` is the main React component and makes use of the core JSON Forms component or the React standalone component in order to render a form.
-  
-The [data schema](https://github.com/eclipsesource/jsonforms-react-seed/blob/master/src/schema.json) defines the structure of a Task: it contains attributes such as title, description, due date and so on.
+The form is built with [react-jsonschema-form](https://rjsf-team.github.io/react-jsonschema-form/), which renders the schema and validates against it with Ajv. No part of the form is hand-written per property, so a change to the schema is reflected without any change here.
 
-The [corresponding UI schema](https://github.com/eclipsesource/jsonforms-react-seed/blob/master/src/uischema.json) specifies controls for each property and puts them into a vertical layout that in turn contains two horizontal layouts.
+## Running locally
 
-Both the data schema and the UI schema are imported within `index.js` and are used to set up a redux store. We make use of a helper function exported by JSON Forms which expects the initial state. If you already have an existing redux store, you'll need to import the jsonforms reducer and add it to your store. Please refer to [the tutorial](https://jsonforms.io/docs/tutorial) for how to do this.
+Node.js 20.19 or later is required (Vite 8).
 
-## Setting up the store
-
-```js
-const store = createStore(
-  jsonformsReducer(),
-  {
-    jsonforms: {
-      common: {
-        data,
-        schema,
-        uischema
-      },
-      renderers: JsonForms.renderers,
-      cells: JsonForms.cells
-    },
-  },
-  applyMiddleware(thunk)
-);
-
-// initialize store
-store.dispatch({
-  type: Actions.INIT,
-  data,
-  schema,
-  uischema,
-});
-
-// trigger initial validation
-store.dispatch(Actions.validate());
+```
+npm install
+npm start
 ```
 
-We then use the `Provider` component provided by `react-redux` to provide the store to the JSON Forms redux component and all its children.
+The form is then served at http://localhost:5173/digital_wra_data_standard/.
 
-```js
-<Provider store={store}>
-  <JsonFormsReduxContext>
-    <JsonFormsDispatch />
-  </JsonFormsReduxContext>
-</Provider>
-```
+`npm install` and `npm start` are the whole procedure. In particular there is no manual step to prepare the schema: `npm start` and `npm run build` both run `scripts/copy_schema.mjs` beforehand, which copies `schema/iea43_wra_data_model.schema.json` from the repository root into `app/public/schema.json`. That copy is gitignored and is fetched by the app at runtime.
 
-## Rendering our form
-The `App` component is responsible for rendering our actual forms.
+To refresh the copy without starting the app, run `npm run copy-schema`.
 
-The redux form is rendered by importing and using `DispatchRenderer` from `@jsonforms/core`. `DispatchRenderer` expects `schema` and `uischema` props which define the form to be rendered but if those are omitted, they will be pulled from the store which was provided via `Provider` previously.
+## Scripts
 
-The standalone form is rendered by importing and using the `JsonForms` component and directly handing over the `schema`, `uischema`, `data`, `renderer` and `cell` props. We listen to changes in the form via the `onChange` callback .
+| Script | Purpose |
+|---|---|
+| `npm start` / `npm run dev` | Start the development server |
+| `npm run build` | Type-check and build into `app/build` |
+| `npm run preview` | Serve the contents of `app/build` locally |
+| `npm run copy-schema` | Copy the schema into `public/` |
+| `npm run typecheck` | Run TypeScript without emitting |
 
-## Custom renderers
-Please see [our corresponding tutorial](https://jsonforms.io/docs/tutorial) on how to add custom renderers.
+## File structure
+
+| Path | Purpose |
+|---|---|
+| `index.html` | Page shell and module entry point |
+| `src/index.tsx` | Mounts the React application |
+| `src/App.tsx` | Fetches the schema and renders the form |
+| `src/uischema.json` | react-jsonschema-form `uiSchema`, controlling presentation rather than structure |
+| `src/App.css`, `src/index.css` | Styling for the default form templates |
+| `scripts/copy_schema.mjs` | Copies the schema into `public/` |
+| `vite.config.ts` | Build configuration, including the GitHub Pages base path |
+
+## Deployment
+
+`.github/workflows/deploy_app.yml` builds the app and publishes `app/build` to the root of the `gh-pages` branch on a push to `master` that touches `schema/` or `app/`, or on manual dispatch.
+
+That deploy step sets `keep_files: true`, which is required: the app publishes to the root of `gh-pages`, alongside the generated documentation under `docs/` and `digital_calibration_certificate/docs/`. Removing it would delete both.
+
+## Notes on the schema
+
+The schema is consumed exactly as published — draft-07, `$ref`s into `definitions`, nullable `["string", "null"]` unions, and the `allOf` of `if`/`then` clauses making `logger_main_config` and `model_config` mutually exclusive. All of it is rendered and enforced, so no pre-processing step is needed.
