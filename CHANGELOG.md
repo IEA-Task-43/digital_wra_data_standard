@@ -28,6 +28,7 @@ Additional labels for pre-release and build metadata are available as extensions
    1. `row_checksum` (Issue [#305](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/305))
    1. `leaf_surface_wetness` (Issue [#274](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/274))
    1. `reflected_irradiance` (Issue [#270](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/270))
+   1. `upflow_angle` (Issue [#290](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/290))
 1. To `sensor_type` add
    1. `leaf_wetness_sensor` (Issue [#274](https://github.com/IEA-Task-43/digital_wra_data_standard/issues/274))
 1. To `measurement_units` add 

@@ -173,6 +173,7 @@ INSERT INTO measurement_type (id) VALUES
     ('power'),
     ('energy'),
     ('vertical_wind_speed'),
+    ('upflow_angle'),
     ('wind_speed_turbulence'),
     ('precipitation'),
     ('ice_detection'),
