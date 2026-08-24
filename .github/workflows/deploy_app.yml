@@ -6,53 +6,39 @@ on:
       - master
     paths:
       - 'schema/**'
+      - 'app/**'
       - '.github/workflows/deploy_app.yml'
   workflow_dispatch:
 
 jobs:
   deploy:
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-
-      - name: Copy schema
-        run: cp ./schema/iea43_wra_data_model.schema.json ./app/src/schema.json
-      
-      - name: Setup Python
-        uses: actions/setup-python@v2
-        with:
-          python-version: '3.x'
-        
-      - name: Clean up JSON schema for use with Form App
-        run: python ./app/transform_json_schema.py ./app/src/schema.json
-      
-      - name: Read schema
-        id: vars
-        run: echo ::set-output name=schema::$(cat ./app/src/schema.json)
-        
-      - name: Show schema
-        run: echo ${{ steps.vars.outputs.schema }}
+      - uses: actions/checkout@v7
 
       - name: Setup Node
-        uses: actions/setup-node@v2-beta
+        uses: actions/setup-node@v7
         with:
-          node-version: '12'
+          node-version: '22'
 
       - name: Cache dependencies
-        uses: actions/cache@v2
+        uses: actions/cache@v6
         with:
           path: ~/.npm
-          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          key: ${{ runner.os }}-node-${{ hashFiles('app/package-lock.json') }}
           restore-keys: |
             ${{ runner.os }}-node-
 
+      # 'npm run build' copies schema/iea43_wra_data_model.schema.json into
+      # app/public/schema.json first, via the prebuild script.
       - run: npm ci
         working-directory: ./app
       - run: npm run build
         working-directory: ./app
 
       - name: deploy
-        uses: peaceiris/actions-gh-pages@v3
+        uses: peaceiris/actions-gh-pages@v4.1.0
         with:
-          deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./app/build
+          keep_files: true

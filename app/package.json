@@ -1,45 +1,36 @@
 {
-  "name": "jsonforms-react-seed",
+  "name": "iea43-wra-data-model-form-app",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://iea-task-43.github.io/digital_wra_data_standard",
+  "type": "module",
   "dependencies": {
-    "@jsonforms/core": "^2.4.0",
-    "@jsonforms/material-renderers": "^2.4.0",
-    "@jsonforms/react": "^2.4.0",
-    "@material-ui/core": "^4.7.0",
-    "@material-ui/icons": "^4.5.1",
-    "@types/jest": "^24.0.23",
-    "@types/lodash": "^4.14.149",
-    "@types/node": "^12.12.14",
-    "@types/react": "^16.9.13",
-    "@types/react-dom": "^16.9.4",
-    "@types/react-redux": "^7.1.5",
-    "lodash": "^4.17.15",
-    "react": "^16.12.0",
-    "react-dom": "^16.12.0",
-    "react-redux": "^7.1.3",
-    "redux": "^4.0.4",
-    "redux-devtools-extension": "^2.13.8",
-    "typescript": "^3.7.2"
+    "@rjsf/core": "^6.8.0",
+    "@rjsf/utils": "^6.8.0",
+    "@rjsf/validator-ajv8": "^6.8.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
   },
   "devDependencies": {
-    "cypress": "^3.7.0",
-    "react-scripts": "^3.2.0",
-    "start-server-and-test": "^1.10.6"
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "@vitejs/plugin-react": "^6.1.0",
+    "typescript": "^5.9.2",
+    "vite": "^8.2.2"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "test-cypress": "start-server-and-test start http://localhost:3000 cypress",
-    "cypress": "cypress run",
-    "eject": "react-scripts eject"
+    "copy-schema": "node scripts/copy_schema.mjs",
+    "prestart": "npm run copy-schema",
+    "start": "vite",
+    "predev": "npm run copy-schema",
+    "dev": "vite",
+    "prebuild": "npm run copy-schema",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "typecheck": "tsc --noEmit"
   },
   "browserslist": [
     ">0.2%",
     "not dead",
-    "not ie <= 11",
     "not op_mini all"
   ]
 }

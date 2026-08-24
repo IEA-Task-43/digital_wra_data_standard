@@ -1,4 +1,5 @@
 {
-  "type": "Control",
-  "scope": "#"
+  "ui:submitButtonOptions": {
+    "submitText": "Validate"
+  }
 }
