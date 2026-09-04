@@ -8,7 +8,7 @@ Currently supported are anemometer calibration certificates with the option to e
 
 - [JSON Schema](./schema/iea43_digital_calibration_certificate.schema.json): This JSON schema is a work in progress and describes how a JSON file that describes an anemometer calibration certificate should be composed.
 
-- [Schema documentation](./docs/iea43_anemometer_calibration.md): Markdown documentation for the digital calibration certificate schema.
+- [Schema documentation](https://iea-task-43.github.io/digital_wra_data_standard/digital_calibration_certificate/docs/schema_doc.html): HTML documentation for the digital calibration certificate schema.
 
 - [Python Schema Loading Example](./tools/calibration_certificate_usage.ipynb): This notebook shows how to read an example file that uses the JSON schema with Python. 
 
